@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zachhhhh.github.io/tester-exchange-site/sitemap.xml

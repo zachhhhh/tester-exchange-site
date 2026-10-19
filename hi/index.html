@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Play क्लोज़्ड टेस्टिंग के लिए 12 टेस्टर कैसे पाएं (फ़्री गाइड, 2026)</title>
+<meta name="description" content="नए Google Play डेवलपर अकाउंट को प्रोडक्शन से पहले 14 दिनों तक 12 टेस्टर चाहिए। स्टेप-बाय-स्टेप: क्लोज़्ड टेस्ट सेट करें, फ़्री में असली टेस्टर ढूंढें, उन्हें एंगेज रखें, और Google के प्रोडक्शन वाले सवालों के जवाब दें।">
+<link rel="canonical" href="https://zachhhhh.github.io/tester-exchange-site/hi/">
+<link rel="alternate" hreflang="en" href="https://zachhhhh.github.io/tester-exchange-site/guide/">
+<link rel="alternate" hreflang="de" href="https://zachhhhh.github.io/tester-exchange-site/de/">
+<link rel="alternate" hreflang="es" href="https://zachhhhh.github.io/tester-exchange-site/es/">
+<link rel="alternate" hreflang="fr" href="https://zachhhhh.github.io/tester-exchange-site/fr/">
+<link rel="alternate" hreflang="hi" href="https://zachhhhh.github.io/tester-exchange-site/hi/">
+<link rel="alternate" hreflang="id" href="https://zachhhhh.github.io/tester-exchange-site/id/">
+<link rel="alternate" hreflang="ja" href="https://zachhhhh.github.io/tester-exchange-site/ja/">
+<link rel="alternate" hreflang="ko" href="https://zachhhhh.github.io/tester-exchange-site/ko/">
+<link rel="alternate" hreflang="pt" href="https://zachhhhh.github.io/tester-exchange-site/pt/">
+<link rel="alternate" hreflang="ru" href="https://zachhhhh.github.io/tester-exchange-site/ru/">
+<link rel="alternate" hreflang="tr" href="https://zachhhhh.github.io/tester-exchange-site/tr/">
+<link rel="alternate" hreflang="vi" href="https://zachhhhh.github.io/tester-exchange-site/vi/">
+<link rel="alternate" hreflang="zh-Hans" href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/">
+<link rel="alternate" hreflang="zh-Hant" href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/">
+<link rel="alternate" hreflang="x-default" href="https://zachhhhh.github.io/tester-exchange-site/guide/">
+<meta property="og:type" content="article"><meta property="og:title" content="Google Play क्लोज़्ड टेस्टिंग के लिए 12 टेस्टर कैसे पाएं (फ़्री गाइड, 2026)">
+<meta property="og:description" content="नए Google Play डेवलपर अकाउंट को प्रोडक्शन से पहले 14 दिनों तक 12 टेस्टर चाहिए। स्टेप-बाय-स्टेप: क्लोज़्ड टेस्ट सेट करें, फ़्री में असली टेस्टर ढूंढें, उन्हें एंगेज रखें, और Google के प्रोडक्शन वाले सवालों के जवाब दें।"><meta property="og:url" content="https://zachhhhh.github.io/tester-exchange-site/hi/">
+<meta property="og:image" content="https://zachhhhh.github.io/tester-exchange-site/store/feature-1024x500.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://zachhhhh.github.io/tester-exchange-site/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f6f5f1;--surface:#fff;--ink:#1c1d1a;--muted:#6d6f68;--line:#e3e1da;--accent:#1f7a4d;--accent-ink:#fff;--accent-soft:#e4f2ea}
+@media (prefers-color-scheme:dark){:root{--bg:#141513;--surface:#1d1f1c;--ink:#ecebe6;--muted:#9a9c94;--line:#30322e;--accent:#4cc38a;--accent-ink:#0d1f15;--accent-soft:#1d3327}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
+select{font:inherit;font-size:14px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:4px 8px;max-width:160px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
+.muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
+.cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px}
+ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+.toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Google Play क्लोज़्ड टेस्टिंग के लिए 12 टेस्टर कैसे पाएं","description":"नए Google Play डेवलपर अकाउंट को प्रोडक्शन से पहले 14 दिनों तक 12 टेस्टर चाहिए। स्टेप-बाय-स्टेप: क्लोज़्ड टेस्ट सेट करें, फ़्री में असली टेस्टर ढूंढें, उन्हें एंगेज रखें, और Google के प्रोडक्शन वाले सवालों के जवाब दें।","inLanguage":"hi","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/hi/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"क्या 12 टेस्टर को रोज़ ऐप इस्तेमाल करना ज़रूरी है?","acceptedAnswer":{"@type":"Answer","text":"Google चाहता है कि वे 14 दिनों तक ऑप्ट-इन रहें, और वह एंगेजमेंट भी रिव्यू करता है। नियमित, असली इस्तेमाल ही “अपर्याप्त टेस्टिंग” वाले रिजेक्शन से बचाता है।"}},{"@type":"Question","name":"क्या मैं अपने ही फ़ोन या अकाउंट को टेस्टर की तरह इस्तेमाल कर सकता हूं?","acceptedAnswer":{"@type":"Answer","text":"Google पहचान लेता है जब कई अकाउंट एक ही डिवाइस पर हों, और इसे असली टेस्टिंग नहीं माना जाता। अपने-अपने फ़ोन वाले असली लोगों को ही जोड़ें।"}},{"@type":"Question","name":"क्या किसी टेस्टर के छोड़ने से 14 दिन फिर से शुरू हो जाते हैं?","acceptedAnswer":{"@type":"Answer","text":"गिनती सिर्फ़ उन दिनों आगे बढ़ती है जब कम से कम 12 टेस्टर ऑप्ट-इन हों। कुछ एक्स्ट्रा टेस्टर जोड़ें ताकि छोड़ने वालों की वजह से आप अटकें नहीं।"}},{"@type":"Question","name":"क्या Tester Exchange फ़्री है?","acceptedAnswer":{"@type":"Answer","text":"हां। आप दूसरे ऐप टेस्ट करके क्रेडिट कमाते हैं। जिनके पास टेस्ट करने का समय नहीं है, उनके लिए क्रेडिट खरीदना वैकल्पिक है।"}}]}]}</script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://zachhhhh.github.io/tester-exchange-site/?lang=hi">Tester<span>Exchange</span></a><span class="grow"></span>
+<select aria-label="भाषा" onchange="location.href=this.value">
+<option value="https://zachhhhh.github.io/tester-exchange-site/guide/">English</option><option value="https://zachhhhh.github.io/tester-exchange-site/de/">Deutsch</option><option value="https://zachhhhh.github.io/tester-exchange-site/es/">Español</option><option value="https://zachhhhh.github.io/tester-exchange-site/fr/">Français</option><option value="https://zachhhhh.github.io/tester-exchange-site/hi/" selected>हिन्दी</option><option value="https://zachhhhh.github.io/tester-exchange-site/id/">Bahasa Indonesia</option><option value="https://zachhhhh.github.io/tester-exchange-site/ja/">日本語</option><option value="https://zachhhhh.github.io/tester-exchange-site/ko/">한국어</option><option value="https://zachhhhh.github.io/tester-exchange-site/pt/">Português</option><option value="https://zachhhhh.github.io/tester-exchange-site/ru/">Русский</option><option value="https://zachhhhh.github.io/tester-exchange-site/tr/">Türkçe</option><option value="https://zachhhhh.github.io/tester-exchange-site/vi/">Tiếng Việt</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-cn/">简体中文</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-tw/">繁體中文</option>
+</select>
+<a href="https://zachhhhh.github.io/tester-exchange-site/?lang=hi">Tester Exchange खोलें</a></header>
+<main>
+<h1>Google Play क्लोज़्ड टेस्टिंग के लिए 12 टेस्टर कैसे पाएं</h1>
+<p class="muted">अक्टूबर 2026 में अपडेट किया गया</p>
+<p class="lede">अगर आपने 13 नवंबर 2023 के बाद पर्सनल Google Play डेवलपर अकाउंट बनाया है, तो आप सीधे प्रोडक्शन में ऐप पब्लिश नहीं कर सकते। पहले आपको एक क्लोज़्ड टेस्ट चलाना होगा जिसमें कम से कम 12 टेस्टर लगातार 14 दिनों तक ऑप्ट-इन रहें। Google यह भी रिव्यू करता है कि उन टेस्टर ने सच में आपका ऐप इस्तेमाल किया या नहीं। यह गाइड पूरा प्रोसेस समझाती है और असली टेस्टर पाने का एक फ़्री तरीका बताती है।</p>
+<div class="cta"><span>फ़्री टेस्टर एक्सचेंज: दूसरे डेवलपर के ऐप टेस्ट करें, क्रेडिट कमाएं, और उन्हें अपने ऐप के टेस्टर पर खर्च करें। रोज़ाना इस्तेमाल असली फ़ोन पर वेरिफ़ाई होता है।</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=hi">अपने 12 टेस्टर फ़्री में पाएं</a></div>
+<nav class="toc"><b>इस पेज पर</b><ul><li><a href="#rule">नियम: 12 टेस्टर × 14 दिन</a></li><li><a href="#rejected">14 दिन के बाद ऐप रिजेक्ट क्यों होते हैं</a></li><li><a href="#setup">Play Console में क्लोज़्ड टेस्ट सेट करें</a></li><li><a href="#options">12 असली टेस्टर कहां मिलें</a></li><li><a href="#exchange">Tester Exchange कैसे काम करता है</a></li><li><a href="#engaged">14 दिनों तक टेस्टर को एंगेज रखें</a></li><li><a href="#production">प्रोडक्शन ऐक्सेस के लिए आवेदन करें</a></li><li><a href="#faq">अक्सर पूछे जाने वाले सवाल</a></li></ul></nav>
+
+<section id="rule">
+<h2>नियम: 12 टेस्टर × 14 दिन</h2>
+<p>Google Play नए पर्सनल डेवलपर अकाउंट से प्रोडक्शन ऐक्सेस के लिए आवेदन करने से पहले क्लोज़्ड टेस्ट चलाने को कहता है। शर्तें ये हैं:</p>
+<ul><li>आपके क्लोज़्ड टेस्टिंग ट्रैक में कम से कम 12 टेस्टर ऑप्ट-इन हों</li><li>वे लगातार कम से कम 14 दिन ऑप्ट-इन रहें</li><li>इसके बाद आप Play Console में प्रोडक्शन के लिए आवेदन करते हैं और अपने टेस्ट से जुड़े सवालों के जवाब देते हैं</li><li>ऑर्गनाइज़ेशन अकाउंट (D-U-N-S नंबर वाले) को इससे छूट है</li></ul>
+
+<p>दिसंबर 2024 तक यह संख्या 20 टेस्टर थी, फिर Google ने इसे घटाकर 12 कर दिया। 14 दिन की गिनती सिर्फ़ उन्हीं दिनों की होती है जब 12 या उससे ज़्यादा टेस्टर ऑप्ट-इन हों, इसलिए अगर टेस्टर छोड़कर 11 रह जाएं, तो आपकी प्रोग्रेस चली जाती है।</p>
+</section>
+
+<section id="rejected">
+<h2>14 दिन के बाद ऐप रिजेक्ट क्यों होते हैं</h2>
+<p>कई डेवलपर 14 दिन पूरे कर लेते हैं, फिर भी उन्हें अपर्याप्त टेस्टिंग या एंगेजमेंट का मैसेज देकर रिजेक्ट कर दिया जाता है। Google यह देखता है कि टेस्टर ने सच में ऐप खोला और इस्तेमाल किया या नहीं, सिर्फ़ यह नहीं कि उन्होंने ऑप्ट-इन किया।</p>
+<p>ऐसे लोगों के इंस्टॉल जो कभी ऐप नहीं खोलते, या एक ही फ़ोन पर कई अकाउंट, असली टेस्टिंग नहीं गिने जाते। जो मदद करता है: ऐसे टेस्टर जो 14 दिनों में नियमित रूप से ऐप खोलें, ऐसा फ़ीडबैक जिसे आप बता सकें, और नए बिल्ड जो दिखाएं कि आपने उस पर काम किया।</p>
+
+
+
+</section>
+
+<section id="setup">
+<h2>Play Console में क्लोज़्ड टेस्ट सेट करें</h2>
+
+
+<ol><li>Play Console → आपका ऐप → टेस्ट करें और रिलीज़ करें → टेस्टिंग → क्लोज़्ड टेस्टिंग खोलें, और एक ट्रैक बनाएं (या डिफ़ॉल्ट Alpha ट्रैक इस्तेमाल करें)।</li><li>टेस्टर सेक्शन में Google Group या ईमेल लिस्ट चुनें। Google Group सबसे आसान है: जो भी ग्रुप जॉइन करता है, वह ऑप्ट-इन कर सकता है।</li><li>ट्रैक पर app bundle अपलोड करें, देश चुनें, और रिलीज़ को रिव्यू के लिए भेजें।</li><li>अप्रूव होने के बाद ऑप्ट-इन लिंक कॉपी करें (https://play.google.com/apps/testing/your.package.name)। टेस्टर इसे खोलते हैं, टेस्टर बनें पर टैप करते हैं, फिर Google Play से इंस्टॉल करते हैं।</li><li>कितने लोगों ने ऑप्ट-इन किया है, यह देखने के लिए Play Console में टेस्टर टैब चेक करें।</li></ol>
+
+</section>
+
+<section id="options">
+<h2>12 असली टेस्टर कहां मिलें</h2>
+
+<ul><li><b>दोस्त और परिवार।</b> फ़्री है, लेकिन ज़्यादातर लोगों के पास ऐसे 12 Android यूज़र नहीं होते जो दो हफ़्ते तक रोज़ ऐप खोलें।</li><li><b>टेस्ट-फ़ॉर-टेस्ट कम्युनिटी।</b> डेवलपर एक-दूसरे के ऐप टेस्ट करते हैं। फ़्री है, और टेस्टर समझते हैं कि क्या चाहिए। रिस्क यह है कि लोग ऑप्ट-इन तो कर लेते हैं पर आपका ऐप कभी नहीं खोलते।</li><li><b>पेड टेस्टर सर्विस।</b> आमतौर पर हर ऐप के US$10–35। तेज़ है, लेकिन आपको भरोसा करना पड़ता है कि टेस्टर असली और एक्टिव हैं।</li><li><b>Tester Exchange।</b> एक फ़्री टेस्ट-फ़ॉर-टेस्ट एक्सचेंज, जहां हर टेस्टर के फ़ोन पर साथ वाला ऐप रोज़ाना इस्तेमाल वेरिफ़ाई करता है, और टेस्टर को सिर्फ़ वेरिफ़ाइड दिनों के क्रेडिट मिलते हैं।</li></ul>
+
+
+</section>
+
+<section id="exchange">
+<h2>Tester Exchange कैसे काम करता है</h2>
+
+
+<ol><li>उसी Google अकाउंट से साइन इन करें जो आपके Play Store में है। नए मेंबर को फ़्री शुरुआती क्रेडिट मिलते हैं।</li><li>साथ वाला Android ऐप इंस्टॉल करें और इस्तेमाल का ऐक्सेस दें। यह सिर्फ़ आपके जॉइन किए हुए ऐप चेक करता है।</li><li>दूसरे डेवलपर के टेस्ट जॉइन करें और हर ऐप को रोज़ कम से कम 30 सेकंड खोलें। हर वेरिफ़ाइड दिन का 1 क्रेडिट मिलता है।</li><li>अपना ऐप जोड़ें और कैंपेन शुरू करें। 12 टेस्टर × 14 दिन के 180 क्रेडिट लगते हैं, जो एस्क्रो में रहते हैं और सिर्फ़ वेरिफ़ाइड दिनों के लिए दिए जाते हैं।</li><li>जहां भी आप पहले से टेस्टर ढूंढते हैं, वहां अपने ऐप का पब्लिक पेज शेयर करें। इसके ज़रिए जुड़ने वाले लोग आपको बोनस क्रेडिट दिलाते हैं।</li><li>14 दिन पूरे होने पर अपनी रिपोर्ट खोलें: रोज़ के एक्टिव टेस्टर, फ़ीडबैक, और प्रोडक्शन वाले सवालों के ड्राफ़्ट जवाब।</li></ol>
+
+</section>
+
+<section id="engaged">
+<h2>14 दिनों तक टेस्टर को एंगेज रखें</h2>
+
+<ul><li>ठीक 12 नहीं, 14–15 टेस्टर जोड़ें, ताकि कुछ के छोड़ने से आपकी गिनती रीसेट न हो।</li><li>टेस्टर को बताएं कि क्या आज़माना है: एक-दो साफ़ टास्क, न कि सिर्फ़ “प्लीज़ मेरा ऐप टेस्ट करो”।</li><li>टेस्ट के दौरान कम से कम एक अपडेट रिलीज़ करें, और टेस्टर जो रिपोर्ट करें उसे ठीक करें।</li><li>लिखित फ़ीडबैक मांगें। प्रोडक्शन के लिए आवेदन करते समय आपको इसका सार देना होगा।</li></ul>
+
+
+</section>
+
+<section id="production">
+<h2>प्रोडक्शन ऐक्सेस के लिए आवेदन करें</h2>
+<p>14 दिनों के बाद Play Console → डैशबोर्ड → प्रोडक्शन के लिए आवेदन करें पर जाएं। Google पूछता है कि आपने टेस्टर कैसे जुटाए, उन्होंने आपके ऐप के साथ कैसे एंगेज किया, आपको क्या फ़ीडबैक मिला, आपने क्या बदला, और ऐप तैयार क्यों है। असली नंबरों के साथ जवाब दें: कितने टेस्टर, उन्होंने कितने दिन ऐप इस्तेमाल किया, उन्होंने क्या रिपोर्ट किया, और आपने कौन-से फ़िक्स रिलीज़ किए। रिव्यू में आमतौर पर 7 दिन तक लगते हैं।</p>
+
+
+
+</section>
+<section id="faq"><h2>अक्सर पूछे जाने वाले सवाल</h2>
+<details><summary>क्या 12 टेस्टर को रोज़ ऐप इस्तेमाल करना ज़रूरी है?</summary><p>Google चाहता है कि वे 14 दिनों तक ऑप्ट-इन रहें, और वह एंगेजमेंट भी रिव्यू करता है। नियमित, असली इस्तेमाल ही “अपर्याप्त टेस्टिंग” वाले रिजेक्शन से बचाता है।</p></details>
+<details><summary>क्या मैं अपने ही फ़ोन या अकाउंट को टेस्टर की तरह इस्तेमाल कर सकता हूं?</summary><p>Google पहचान लेता है जब कई अकाउंट एक ही डिवाइस पर हों, और इसे असली टेस्टिंग नहीं माना जाता। अपने-अपने फ़ोन वाले असली लोगों को ही जोड़ें।</p></details>
+<details><summary>क्या किसी टेस्टर के छोड़ने से 14 दिन फिर से शुरू हो जाते हैं?</summary><p>गिनती सिर्फ़ उन दिनों आगे बढ़ती है जब कम से कम 12 टेस्टर ऑप्ट-इन हों। कुछ एक्स्ट्रा टेस्टर जोड़ें ताकि छोड़ने वालों की वजह से आप अटकें नहीं।</p></details>
+<details><summary>क्या Tester Exchange फ़्री है?</summary><p>हां। आप दूसरे ऐप टेस्ट करके क्रेडिट कमाते हैं। जिनके पास टेस्ट करने का समय नहीं है, उनके लिए क्रेडिट खरीदना वैकल्पिक है।</p></details>
+</section>
+<div class="cta"><span>फ़्री टेस्टर एक्सचेंज: दूसरे डेवलपर के ऐप टेस्ट करें, क्रेडिट कमाएं, और उन्हें अपने ऐप के टेस्टर पर खर्च करें। रोज़ाना इस्तेमाल असली फ़ोन पर वेरिफ़ाई होता है।</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=hi">अपने 12 टेस्टर फ़्री में पाएं</a></div>
+</main>
+<footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
+<a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>
+</div></body></html>

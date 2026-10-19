@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>如何为 Google Play 封闭式测试找到 12 名测试人员（2026 免费指南）</title>
+<meta name="description" content="新的 Google Play 开发者账号在发布正式版前，需要 12 名测试人员连续测试 14 天。分步指南：设置封闭式测试、免费找到真实测试人员、保持他们的参与度，并回答 Google 的正式版申请问题。">
+<link rel="canonical" href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/">
+<link rel="alternate" hreflang="en" href="https://zachhhhh.github.io/tester-exchange-site/guide/">
+<link rel="alternate" hreflang="de" href="https://zachhhhh.github.io/tester-exchange-site/de/">
+<link rel="alternate" hreflang="es" href="https://zachhhhh.github.io/tester-exchange-site/es/">
+<link rel="alternate" hreflang="fr" href="https://zachhhhh.github.io/tester-exchange-site/fr/">
+<link rel="alternate" hreflang="hi" href="https://zachhhhh.github.io/tester-exchange-site/hi/">
+<link rel="alternate" hreflang="id" href="https://zachhhhh.github.io/tester-exchange-site/id/">
+<link rel="alternate" hreflang="ja" href="https://zachhhhh.github.io/tester-exchange-site/ja/">
+<link rel="alternate" hreflang="ko" href="https://zachhhhh.github.io/tester-exchange-site/ko/">
+<link rel="alternate" hreflang="pt" href="https://zachhhhh.github.io/tester-exchange-site/pt/">
+<link rel="alternate" hreflang="ru" href="https://zachhhhh.github.io/tester-exchange-site/ru/">
+<link rel="alternate" hreflang="tr" href="https://zachhhhh.github.io/tester-exchange-site/tr/">
+<link rel="alternate" hreflang="vi" href="https://zachhhhh.github.io/tester-exchange-site/vi/">
+<link rel="alternate" hreflang="zh-Hans" href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/">
+<link rel="alternate" hreflang="zh-Hant" href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/">
+<link rel="alternate" hreflang="x-default" href="https://zachhhhh.github.io/tester-exchange-site/guide/">
+<meta property="og:type" content="article"><meta property="og:title" content="如何为 Google Play 封闭式测试找到 12 名测试人员（2026 免费指南）">
+<meta property="og:description" content="新的 Google Play 开发者账号在发布正式版前，需要 12 名测试人员连续测试 14 天。分步指南：设置封闭式测试、免费找到真实测试人员、保持他们的参与度，并回答 Google 的正式版申请问题。"><meta property="og:url" content="https://zachhhhh.github.io/tester-exchange-site/zh-cn/">
+<meta property="og:image" content="https://zachhhhh.github.io/tester-exchange-site/store/feature-1024x500.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://zachhhhh.github.io/tester-exchange-site/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f6f5f1;--surface:#fff;--ink:#1c1d1a;--muted:#6d6f68;--line:#e3e1da;--accent:#1f7a4d;--accent-ink:#fff;--accent-soft:#e4f2ea}
+@media (prefers-color-scheme:dark){:root{--bg:#141513;--surface:#1d1f1c;--ink:#ecebe6;--muted:#9a9c94;--line:#30322e;--accent:#4cc38a;--accent-ink:#0d1f15;--accent-soft:#1d3327}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
+select{font:inherit;font-size:14px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:4px 8px;max-width:160px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
+.muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
+.cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px}
+ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+.toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"如何为 Google Play 封闭式测试找到 12 名测试人员","description":"新的 Google Play 开发者账号在发布正式版前，需要 12 名测试人员连续测试 14 天。分步指南：设置封闭式测试、免费找到真实测试人员、保持他们的参与度，并回答 Google 的正式版申请问题。","inLanguage":"zh-Hans","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/zh-cn/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"12 名测试人员需要每天使用应用吗？","acceptedAnswer":{"@type":"Answer","text":"Google 要求他们连续 14 天保持选择加入状态，并会审核参与度。经常真实地使用应用，才能避免因“测试不足”被拒。"}},{"@type":"Question","name":"可以用我自己的手机或账号当测试人员吗？","acceptedAnswer":{"@type":"Answer","text":"Google 能识别出多个账号共用一部设备的情况，这不算真正的测试。请找使用自己手机的真人。"}},{"@type":"Question","name":"有测试人员退出，14 天会重新计算吗？","acceptedAnswer":{"@type":"Answer","text":"只有在至少 12 名测试人员选择加入的日子，计时才会推进。多招募几名测试人员，避免有人退出导致进度停滞。"}},{"@type":"Question","name":"Tester Exchange 免费吗？","acceptedAnswer":{"@type":"Answer","text":"免费。你可以通过测试其他应用来赚取积分。购买积分是可选的，适合没时间测试的人。"}}]}]}</script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://zachhhhh.github.io/tester-exchange-site/?lang=zh-cn">Tester<span>Exchange</span></a><span class="grow"></span>
+<select aria-label="语言" onchange="location.href=this.value">
+<option value="https://zachhhhh.github.io/tester-exchange-site/guide/">English</option><option value="https://zachhhhh.github.io/tester-exchange-site/de/">Deutsch</option><option value="https://zachhhhh.github.io/tester-exchange-site/es/">Español</option><option value="https://zachhhhh.github.io/tester-exchange-site/fr/">Français</option><option value="https://zachhhhh.github.io/tester-exchange-site/hi/">हिन्दी</option><option value="https://zachhhhh.github.io/tester-exchange-site/id/">Bahasa Indonesia</option><option value="https://zachhhhh.github.io/tester-exchange-site/ja/">日本語</option><option value="https://zachhhhh.github.io/tester-exchange-site/ko/">한국어</option><option value="https://zachhhhh.github.io/tester-exchange-site/pt/">Português</option><option value="https://zachhhhh.github.io/tester-exchange-site/ru/">Русский</option><option value="https://zachhhhh.github.io/tester-exchange-site/tr/">Türkçe</option><option value="https://zachhhhh.github.io/tester-exchange-site/vi/">Tiếng Việt</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" selected>简体中文</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-tw/">繁體中文</option>
+</select>
+<a href="https://zachhhhh.github.io/tester-exchange-site/?lang=zh-cn">打开 Tester Exchange</a></header>
+<main>
+<h1>如何为 Google Play 封闭式测试找到 12 名测试人员</h1>
+<p class="muted">2026 年 10 月更新</p>
+<p class="lede">如果你的个人 Google Play 开发者账号是在 2023 年 11 月 13 日之后创建的，就不能直接发布正式版。你需要先进行封闭式测试，至少有 12 名测试人员连续 14 天保持选择加入状态。Google 还会审核这些测试人员是否真的使用了你的应用。本指南会带你走完整个流程，并介绍一种免费找到真实测试人员的方法。</p>
+<div class="cta"><span>免费互助测试平台：测试其他开发者的应用，赚取积分，再用积分为你的应用换取测试人员。每日使用情况均在真实手机上验证。</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=zh-cn">免费获得 12 名测试人员</a></div>
+<nav class="toc"><b>本页内容</b><ul><li><a href="#rule">规则：12 名测试人员 × 14 天</a></li><li><a href="#rejected">为什么 14 天后应用仍被拒绝</a></li><li><a href="#setup">在 Play Console 中设置封闭式测试</a></li><li><a href="#options">去哪里找 12 名真实测试人员</a></li><li><a href="#exchange">Tester Exchange 如何运作</a></li><li><a href="#engaged">让测试人员在 14 天内保持参与</a></li><li><a href="#production">申请正式版访问权限</a></li><li><a href="#faq">常见问题</a></li></ul></nav>
+
+<section id="rule">
+<h2>规则：12 名测试人员 × 14 天</h2>
+<p>Google Play 要求新的个人开发者账号在申请正式版访问权限前，先进行封闭式测试。具体要求如下：</p>
+<ul><li>至少 12 名测试人员选择加入你的封闭式测试轨道</li><li>他们需连续至少 14 天保持选择加入状态</li><li>之后，在 Play Console 中申请正式版，并回答有关测试的问题</li><li>组织账号（拥有邓白氏编码 D-U-N-S）不受此限制</li></ul>
+
+<p>在 2024 年 12 月之前，要求是 20 名测试人员，之后 Google 将其降到了 12 名。14 天的计时只计算有 12 名或以上测试人员选择加入的日子，所以如果有人退出、人数降到 11 名，进度就会受影响。</p>
+</section>
+
+<section id="rejected">
+<h2>为什么 14 天后应用仍被拒绝</h2>
+<p>许多开发者熬过了 14 天，却仍然收到测试或参与度不足的拒绝通知。Google 看的是测试人员是否真的打开并使用了应用，而不仅仅是是否选择加入。</p>
+<p>从不打开应用的安装，或者一部手机共用多个账号，都不算真正的测试。有帮助的做法是：测试人员在 14 天内经常打开应用、有可以具体描述的反馈，以及能体现你根据反馈做出改进的新版本。</p>
+
+
+
+</section>
+
+<section id="setup">
+<h2>在 Play Console 中设置封闭式测试</h2>
+
+
+<ol><li>打开 Play Console → 你的应用 → 测试和发布 → 测试 → 封闭式测试，然后创建一个轨道（或使用默认的 Alpha 轨道）。</li><li>在“测试人员”下选择 Google Group 或电子邮件列表。Google Group 最简单：任何加入该群组的人都可以选择加入测试。</li><li>将 app bundle 上传到该轨道，设置国家/地区，然后提交版本进行审核。</li><li>审核通过后，复制选择加入链接（https://play.google.com/apps/testing/your.package.name）。测试人员打开链接，点按“成为测试人员”，然后从 Google Play 安装。</li><li>在 Play Console 的“测试人员”标签页中查看已有多少人选择加入。</li></ol>
+
+</section>
+
+<section id="options">
+<h2>去哪里找 12 名真实测试人员</h2>
+
+<ul><li><b>亲友。</b>免费，但大多数人身边并没有 12 位愿意连续两周每天打开应用的 Android 用户。</li><li><b>互测社区。</b>开发者互相测试应用。免费，而且测试人员了解要求。风险是有人选择加入后从不打开你的应用。</li><li><b>付费测试服务。</b>通常每个应用 10–35 美元。速度快，但你只能相信测试人员是真实且活跃的。</li><li><b>Tester Exchange。</b>免费的互测平台，每位测试人员手机上的配套应用会验证每日使用情况，测试人员只有在已验证的天数才能获得积分。</li></ul>
+
+
+</section>
+
+<section id="exchange">
+<h2>Tester Exchange 如何运作</h2>
+
+
+<ol><li>使用 Play Store 登录的 Google 账号登录。新会员可获得免费的初始积分。</li><li>安装配套的 Android 应用并开启“使用情况访问权限”。它只检查你加入的应用。</li><li>加入其他开发者的测试，每天打开每个应用至少 30 秒。每个已验证的天数可获得 1 积分。</li><li>添加你的应用并发起测试活动。12 名测试人员 × 14 天需要 180 积分，由平台托管，只为已验证的天数支付。</li><li>在你平时招募测试人员的地方分享应用的公开页面。通过该页面加入的人会为你带来奖励积分。</li><li>14 天结束后，打开你的报告：每日活跃测试人员、反馈，以及正式版申请问题的回答草稿。</li></ol>
+
+</section>
+
+<section id="engaged">
+<h2>让测试人员在 14 天内保持参与</h2>
+
+<ul><li>招募 14–15 名测试人员，而不是刚好 12 名，这样少数人退出也不会让计时重来。</li><li>告诉测试人员要试什么：给出一两个具体任务，而不是“请测试我的应用”。</li><li>测试期间至少发布一次更新，并修复测试人员反馈的问题。</li><li>请测试人员提供书面反馈。申请正式版时你需要对其进行总结。</li></ul>
+
+
+</section>
+
+<section id="production">
+<h2>申请正式版访问权限</h2>
+<p>14 天后，前往 Play Console → 信息中心 → 申请正式版访问权限。Google 会询问你如何招募测试人员、他们如何使用你的应用、收到了哪些反馈、你做了哪些改动，以及为什么应用已经可以发布。请用真实数据回答：有多少测试人员、他们使用了多少天、报告了什么问题、你发布了哪些修复。审核通常最多需要 7 天。</p>
+
+
+
+</section>
+<section id="faq"><h2>常见问题</h2>
+<details><summary>12 名测试人员需要每天使用应用吗？</summary><p>Google 要求他们连续 14 天保持选择加入状态，并会审核参与度。经常真实地使用应用，才能避免因“测试不足”被拒。</p></details>
+<details><summary>可以用我自己的手机或账号当测试人员吗？</summary><p>Google 能识别出多个账号共用一部设备的情况，这不算真正的测试。请找使用自己手机的真人。</p></details>
+<details><summary>有测试人员退出，14 天会重新计算吗？</summary><p>只有在至少 12 名测试人员选择加入的日子，计时才会推进。多招募几名测试人员，避免有人退出导致进度停滞。</p></details>
+<details><summary>Tester Exchange 免费吗？</summary><p>免费。你可以通过测试其他应用来赚取积分。购买积分是可选的，适合没时间测试的人。</p></details>
+</section>
+<div class="cta"><span>免费互助测试平台：测试其他开发者的应用，赚取积分，再用积分为你的应用换取测试人员。每日使用情况均在真实手机上验证。</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=zh-cn">免费获得 12 名测试人员</a></div>
+</main>
+<footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
+<a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>
+</div></body></html>
