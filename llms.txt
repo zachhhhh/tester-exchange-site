@@ -1,0 +1,33 @@
+# Tester Exchange
+
+> Free test-for-test exchange that gets Android developers the 12 testers × 14 days Google Play requires
+> before a new personal developer account can publish to production. Testers are real people on their own
+> phones; a companion Android app verifies each day they opened the app (30+ seconds), and Google reviews
+> exactly this engagement. 1 credit = 1 verified tester-day. A 12-tester campaign costs 180 credits, held in
+> escrow and refunded if unused. Credits are earned by testing other apps or bought (US$7 / 90, $12 / 180, $14 / 225).
+
+## For AI agents
+- MCP server (Streamable HTTP, no OAuth): https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp
+  Auth: header `Authorization: Bearer tx_…` or `?token=tx_…`. Public tools (about, platform_stats, pricing,
+  list_open_tests) work without a token. Users create tokens at https://zachhhhh.github.io/tester-exchange-site/api
+- HTTP API (one endpoint): POST https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/agent_call
+  headers: `apikey: sb_publishable_OwXT7OfwIGkuIn420mavVA_MsAkzZGf` (public key), `Content-Type: application/json`
+  body: {"p_token": "tx_…" | null, "p_action": "help", "p_args": {}}
+  Actions: help, stats, pricing, open_tests (public); me, my_apps, add_app, start_campaign, campaign,
+  add_testers, set_status, join, my_tests, share_kit, buy_credits (token).
+- OpenAPI: https://zachhhhh.github.io/tester-exchange-site/openapi.json
+- Agent docs: https://zachhhhh.github.io/tester-exchange-site/agents/
+- What an agent can't do: the 14 days of real use on a phone, and paying (checkout needs a human).
+
+## Guides
+- [How to get 12 testers for Google Play closed testing](https://zachhhhh.github.io/tester-exchange-site/guide/)
+- [Fix "more testing required" after closed testing](https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/)
+- [Answering the production access questions](https://zachhhhh.github.io/tester-exchange-site/guide/production-access-questions/)
+- [Google Group vs email list for closed testing](https://zachhhhh.github.io/tester-exchange-site/guide/google-group-vs-email-list/)
+- [Free production-access answer generator](https://zachhhhh.github.io/tester-exchange-site/tools/production-answers/)
+- Guides exist in es, pt, fr, de, id, vi, tr, ru, hi, zh-cn, zh-tw, ja, ko at /<lang>/ (e.g. /ja/).
+
+## Facts (October 2026)
+- Personal Google Play developer accounts created after 13 Nov 2023 need a closed test with at least 12 opted-in
+  testers for 14 continuous days, then apply for production access with a questionnaire.
+- The requirement was 20 testers until December 2024.

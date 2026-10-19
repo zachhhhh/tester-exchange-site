@@ -1,0 +1,135 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Tester Exchange agent API",
+    "version": "1.0.0",
+    "description": "One endpoint for AI agents and scripts. Public actions need no token; others need a personal token (tx_\u2026) created at https://zachhhhh.github.io/tester-exchange-site/api. Call action 'help' for the full list. MCP server: https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp"
+  },
+  "servers": [
+    {
+      "url": "https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "apikey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "apikey",
+        "description": "Public key: sb_publishable_OwXT7OfwIGkuIn420mavVA_MsAkzZGf"
+      }
+    }
+  },
+  "security": [
+    {
+      "apikey": []
+    }
+  ],
+  "paths": {
+    "/rpc/agent_call": {
+      "post": {
+        "operationId": "agentCall",
+        "summary": "Run an action as the token's owner",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "p_action"
+                ],
+                "properties": {
+                  "p_token": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "pattern": "^tx_[0-9a-f]{48}$",
+                    "description": "Personal token; omit for public actions"
+                  },
+                  "p_action": {
+                    "type": "string",
+                    "enum": [
+                      "help",
+                      "stats",
+                      "pricing",
+                      "open_tests",
+                      "me",
+                      "my_apps",
+                      "add_app",
+                      "start_campaign",
+                      "campaign",
+                      "add_testers",
+                      "set_status",
+                      "join",
+                      "my_tests",
+                      "share_kit",
+                      "buy_credits"
+                    ]
+                  },
+                  "p_args": {
+                    "type": "object",
+                    "description": "Action arguments, e.g. {\"package_name\":\"com.example.app\",\"testers\":15}",
+                    "properties": {
+                      "package_name": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "instructions": {
+                        "type": "string"
+                      },
+                      "group_url": {
+                        "type": "string"
+                      },
+                      "testers": {
+                        "type": "integer",
+                        "minimum": 12,
+                        "maximum": 30
+                      },
+                      "count": {
+                        "type": "integer",
+                        "minimum": 1
+                      },
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "active",
+                          "paused",
+                          "closed"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "JSON result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing, malformed, invalid or revoked token (code 28000)"
+          },
+          "400": {
+            "description": "Business rule error (e.g. insufficient credits); message explains"
+          }
+        }
+      }
+    }
+  }
+}

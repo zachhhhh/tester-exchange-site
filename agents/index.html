@@ -1,0 +1,69 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tester Exchange for AI agents: MCP server and API</title>
+<meta name="description" content="Let Claude, ChatGPT, Cursor or any MCP client find Google Play closed-testing testers, start a campaign and read the report. Remote MCP server, one-endpoint HTTP API, OpenAPI and llms.txt.">
+<link rel="canonical" href="https://zachhhhh.github.io/tester-exchange-site/agents/"><link rel="icon" href="https://zachhhhh.github.io/tester-exchange-site/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Tester Exchange for AI agents"><meta property="og:image" content="https://zachhhhh.github.io/tester-exchange-site/store/feature-1024x500.png">
+<style>
+:root{--bg:#f6f5f1;--surface:#fff;--ink:#1c1d1a;--muted:#6d6f68;--line:#e3e1da;--accent:#1f7a4d;--accent-ink:#fff;--accent-soft:#e4f2ea}
+@media (prefers-color-scheme:dark){:root{--bg:#141513;--surface:#1d1f1c;--ink:#ecebe6;--muted:#9a9c94;--line:#30322e;--accent:#4cc38a;--accent-ink:#0d1f15;--accent-soft:#1d3327}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
+.muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
+.cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
+ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+.toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
+
+table{width:100%;border-collapse:collapse;font-size:15px;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+td,th{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+pre{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px;overflow-x:auto;font-size:13px}
+.tw{overflow-x:auto}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebAPI","name":"Tester Exchange agent API","description":"MCP server and HTTP API for Google Play closed-testing campaigns","documentation":"https://zachhhhh.github.io/tester-exchange-site/agents/","url":"https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp","provider":{"@type":"Organization","name":"Tester Exchange","url":"https://zachhhhh.github.io/tester-exchange-site/"}}</script>
+</head><body><div class="wrap">
+<header><a class="brand" href="https://zachhhhh.github.io/tester-exchange-site/">Tester<span>Exchange</span></a><span class="grow"></span><a href="https://zachhhhh.github.io/tester-exchange-site/api">Create a token</a></header>
+<main>
+<h1>Tester Exchange for AI agents</h1>
+<p class="lede">Your agent can do the paperwork of Google Play closed testing: find testers, list your app, start a campaign, watch daily activity and pull the numbers for the production-access questions. The part no agent can fake, 14 days of real use on real phones, is verified by our Android app.</p>
+<div class="cta"><span>1. Sign in and create a token. 2. Add the MCP server to your agent. 3. Ask: <i>"Get 15 testers for com.example.app and tell me when we reach 12 active."</i></span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/api">Create a token</a></div>
+<h2>MCP server</h2>
+<p>Remote MCP over Streamable HTTP (stateless, no OAuth). URL: <code>https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp</code></p>
+<p><b>Claude Code</b></p>
+<pre>claude mcp add --transport http tester-exchange https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp   --header "Authorization: Bearer tx_YOUR_TOKEN"</pre>
+<p><b>JSON config</b> (Claude Desktop, Cursor, VS Code and others)</p>
+<pre>{
+  "mcpServers": {
+    "tester-exchange": {
+      "type": "http",
+      "url": "https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp",
+      "headers": { "Authorization": "Bearer tx_YOUR_TOKEN" }
+    }
+  }
+}</pre>
+<p>Clients that only accept a URL: <code>https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp?token=tx_YOUR_TOKEN</code>. Without a token, the public tools still work.</p>
+<h2>Tools</h2>
+<div class="tw"><table><thead><tr><th>Tool</th><th>What it does</th><th>Auth</th></tr></thead><tbody><tr><td><code>about</code></td><td>What Tester Exchange is and every action</td><td>public</td></tr><tr><td><code>platform_stats</code></td><td>Members, apps testing, open slots, verified tester-days</td><td>public</td></tr><tr><td><code>pricing</code></td><td>How credits work, credit pack prices</td><td>public</td></tr><tr><td><code>list_open_tests</code></td><td>Apps looking for testers right now</td><td>public</td></tr><tr><td><code>my_account</code></td><td>Credits, invite link, phones linked</td><td>token</td></tr><tr><td><code>my_apps</code></td><td>Your apps and live campaign status</td><td>token</td></tr><tr><td><code>add_app</code></td><td>List an app in Google Play closed testing</td><td>token</td></tr><tr><td><code>start_campaign</code></td><td>Recruit 12–30 testers (15 credits each)</td><td>token</td></tr><tr><td><code>campaign_report</code></td><td>Testers, daily activity, feedback, production-access data</td><td>token</td></tr><tr><td><code>add_testers</code></td><td>Add tester slots</td><td>token</td></tr><tr><td><code>set_campaign_status</code></td><td>Pause, resume or close (refunds unused credits)</td><td>token</td></tr><tr><td><code>join_test</code></td><td>Join someone else&#x27;s test as a tester</td><td>token</td></tr><tr><td><code>my_tests</code></td><td>Your tests as a tester</td><td>token</td></tr><tr><td><code>share_kit</code></td><td>Share page, message and README badge</td><td>token</td></tr><tr><td><code>buy_credits_links</code></td><td>Checkout links (a human pays)</td><td>token</td></tr></tbody></table></div>
+<h2>HTTP API</h2>
+<p>One endpoint. The token is the credential; the <code>apikey</code> header is our public key.</p>
+<pre>curl -s https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/agent_call   -H "apikey: sb_publishable_OwXT7OfwIGkuIn420mavVA_MsAkzZGf" -H "Content-Type: application/json"   -d '{"p_token":"tx_YOUR_TOKEN","p_action":"start_campaign","p_args":{"package_name":"com.example.app","testers":15}}'</pre>
+<p>Call <code>"p_action":"help"</code> for every action and its arguments. Machine-readable: <a href="https://zachhhhh.github.io/tester-exchange-site/openapi.json">openapi.json</a> · <a href="https://zachhhhh.github.io/tester-exchange-site/llms.txt">llms.txt</a>.</p>
+<h2>Safety</h2>
+<ul><li>Tokens are stored only as SHA-256 hashes, can be revoked at any time, and are limited to 10 per account.</li>
+<li>A token can spend credits on campaigns but can't pay, withdraw, or delete the account. Payment always happens in a human's browser.</li>
+<li>All the normal rules still apply: one account per phone, escrow, verified daily use.</li></ul>
+</main>
+<footer><a href="https://zachhhhh.github.io/tester-exchange-site/">Home</a><a href="https://zachhhhh.github.io/tester-exchange-site/guide/">Guide</a><a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>
+</div></body></html>
