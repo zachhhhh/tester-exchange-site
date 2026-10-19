@@ -33,14 +33,23 @@
 a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
 header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
 .brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
-select{font:inherit;font-size:14px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:4px 8px;max-width:160px}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
 h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
 .muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
 .cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
-.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
 ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
 .toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
 summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Google Play kapalı testi için 12 test kullanıcısı nasıl bulunur","description":"Yeni Google Play geliştirici hesaplarının üretime geçmeden önce 14 gün boyunca 12 test kullanıcısına ihtiyacı var. Adım adım: kapalı testi kurun, ücretsiz gerçek test kullanıcıları bulun, onları etkin tutun ve Google'ın üretim sorularını yanıtlayın.","inLanguage":"tr","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/tr/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"12 test kullanıcısının uygulamayı her gün kullanması gerekiyor mu?","acceptedAnswer":{"@type":"Answer","text":"Google, 14 gün boyunca katılımda kalmalarını şart koşar ve etkileşimi inceler. “Yetersiz test” reddinden kaçınmanın yolu düzenli ve gerçek kullanımdır."}},{"@type":"Question","name":"Kendi telefonlarımı veya hesaplarımı test kullanıcısı olarak kullanabilir miyim?","acceptedAnswer":{"@type":"Answer","text":"Google birçok hesabın tek bir cihazı paylaştığını anlayabilir ve bu gerçek test sayılmaz. Kendi telefonlarını kullanan gerçek kişilerle çalışın."}},{"@type":"Question","name":"Ayrılan bir test kullanıcısı 14 günü sıfırlar mı?","acceptedAnswer":{"@type":"Answer","text":"Sayaç yalnızca en az 12 test kullanıcısının katılımda olduğu günlerde ilerler. Bırakanlar sizi yavaşlatmasın diye birkaç fazla test kullanıcısı bulun."}},{"@type":"Question","name":"Tester Exchange ücretsiz mi?","acceptedAnswer":{"@type":"Answer","text":"Evet. Diğer uygulamaları test ederek kredi kazanırsınız. Kredi satın almak, test etmeye vakti olmayanlar için isteğe bağlıdır."}}]}]}</script>
 </head>
@@ -51,6 +60,7 @@ summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);m
 </select>
 <a href="https://zachhhhh.github.io/tester-exchange-site/?lang=tr">Tester Exchange'i aç</a></header>
 <main>
+
 <h1>Google Play kapalı testi için 12 test kullanıcısı nasıl bulunur</h1>
 <p class="muted">Ekim 2026'da güncellendi</p>
 <p class="lede">Kişisel Google Play geliştirici hesabınızı 13 Kasım 2023'ten sonra oluşturduysanız uygulamanızı hemen üretimde yayınlayamazsınız. Önce en az 12 test kullanıcısının art arda 14 gün boyunca katılımda kaldığı bir kapalı test yapmanız gerekir. Google ayrıca bu kişilerin uygulamanızı gerçekten kullanıp kullanmadığını da inceler. Bu rehber tüm süreci adım adım anlatıyor ve gerçek test kullanıcıları bulmanın ücretsiz bir yolunu gösteriyor.</p>
@@ -120,6 +130,7 @@ summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);m
 <details><summary>Tester Exchange ücretsiz mi?</summary><p>Evet. Diğer uygulamaları test ederek kredi kazanırsınız. Kredi satın almak, test etmeye vakti olmayanlar için isteğe bağlıdır.</p></details>
 </section>
 <div class="cta"><span>Ücretsiz test kullanıcısı takası: diğer geliştiricilerin uygulamalarını test edin, kredi kazanın ve bunları kendi uygulamanızın test kullanıcılarına harcayın. Günlük kullanım gerçek telefonlarda doğrulanır.</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=tr">12 test kullanıcınızı ücretsiz bulun</a></div>
+<section><h2>Diğer rehberler</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/google-group-vs-email-list/" hreflang="tr">Kapalı testiniz için Google Group mu, e-posta listesi mi?</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/insufficient-testing-engagement/" hreflang="tr">Kapalı testten sonra reddedildiniz mi? “Daha fazla test gerekli” hatası nasıl düzeltilir</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/production-access-questions/" hreflang="tr">Google Play üretim erişimi sorularına nasıl yanıt verilir</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/tools/production-answers/" hreflang="tr">Üretim erişimi yanıt oluşturucu</a></li></ul></section>
 </main>
 <footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
 <a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>

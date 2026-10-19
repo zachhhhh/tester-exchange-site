@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Play पर closed testing: Google Group या email list (सेटअप गाइड)</title>
+<meta name="description" content="अपने Google Play closed test के लिए कौन-सी टेस्टर लिस्ट इस्तेमाल करें, दोनों को कैसे सेट करें, टेस्टर्स opt-in कैसे करते हैं, और वे गलतियाँ जिनकी वजह से टेस्टर्स को आपका ऐप नहीं दिखता।">
+<link rel="canonical" href="https://zachhhhh.github.io/tester-exchange-site/hi/google-group-vs-email-list/">
+<link rel="alternate" hreflang="en" href="https://zachhhhh.github.io/tester-exchange-site/guide/google-group-vs-email-list/">
+<link rel="alternate" hreflang="de" href="https://zachhhhh.github.io/tester-exchange-site/de/google-group-vs-email-list/">
+<link rel="alternate" hreflang="es" href="https://zachhhhh.github.io/tester-exchange-site/es/google-group-vs-email-list/">
+<link rel="alternate" hreflang="fr" href="https://zachhhhh.github.io/tester-exchange-site/fr/google-group-vs-email-list/">
+<link rel="alternate" hreflang="hi" href="https://zachhhhh.github.io/tester-exchange-site/hi/google-group-vs-email-list/">
+<link rel="alternate" hreflang="id" href="https://zachhhhh.github.io/tester-exchange-site/id/google-group-vs-email-list/">
+<link rel="alternate" hreflang="ja" href="https://zachhhhh.github.io/tester-exchange-site/ja/google-group-vs-email-list/">
+<link rel="alternate" hreflang="ko" href="https://zachhhhh.github.io/tester-exchange-site/ko/google-group-vs-email-list/">
+<link rel="alternate" hreflang="pt" href="https://zachhhhh.github.io/tester-exchange-site/pt/google-group-vs-email-list/">
+<link rel="alternate" hreflang="ru" href="https://zachhhhh.github.io/tester-exchange-site/ru/google-group-vs-email-list/">
+<link rel="alternate" hreflang="tr" href="https://zachhhhh.github.io/tester-exchange-site/tr/google-group-vs-email-list/">
+<link rel="alternate" hreflang="vi" href="https://zachhhhh.github.io/tester-exchange-site/vi/google-group-vs-email-list/">
+<link rel="alternate" hreflang="zh-Hans" href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/google-group-vs-email-list/">
+<link rel="alternate" hreflang="zh-Hant" href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/google-group-vs-email-list/">
+<link rel="alternate" hreflang="x-default" href="https://zachhhhh.github.io/tester-exchange-site/guide/google-group-vs-email-list/">
+<meta property="og:type" content="article"><meta property="og:title" content="Google Play पर closed testing: Google Group या email list (सेटअप गाइड)">
+<meta property="og:description" content="अपने Google Play closed test के लिए कौन-सी टेस्टर लिस्ट इस्तेमाल करें, दोनों को कैसे सेट करें, टेस्टर्स opt-in कैसे करते हैं, और वे गलतियाँ जिनकी वजह से टेस्टर्स को आपका ऐप नहीं दिखता।"><meta property="og:url" content="https://zachhhhh.github.io/tester-exchange-site/hi/google-group-vs-email-list/">
+<meta property="og:image" content="https://zachhhhh.github.io/tester-exchange-site/store/feature-1024x500.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://zachhhhh.github.io/tester-exchange-site/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f6f5f1;--surface:#fff;--ink:#1c1d1a;--muted:#6d6f68;--line:#e3e1da;--accent:#1f7a4d;--accent-ink:#fff;--accent-soft:#e4f2ea}
+@media (prefers-color-scheme:dark){:root{--bg:#141513;--surface:#1d1f1c;--ink:#ecebe6;--muted:#9a9c94;--line:#30322e;--accent:#4cc38a;--accent-ink:#0d1f15;--accent-soft:#1d3327}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
+.muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
+.cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
+ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+.toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"आपके closed test के लिए Google Group या email list?","description":"अपने Google Play closed test के लिए कौन-सी टेस्टर लिस्ट इस्तेमाल करें, दोनों को कैसे सेट करें, टेस्टर्स opt-in कैसे करते हैं, और वे गलतियाँ जिनकी वजह से टेस्टर्स को आपका ऐप नहीं दिखता।","inLanguage":"hi","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/hi/google-group-vs-email-list/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"क्या ग्रुप मेंबर्स 12 टेस्टर्स में गिने जाते हैं?","acceptedAnswer":{"@type":"Answer","text":"आप कोई भी लिस्ट टाइप इस्तेमाल करें, सिर्फ़ वही लोग गिने जाते हैं जिन्होंने opt-in लिंक से opt-in किया है।"}},{"@type":"Question","name":"क्या मैं दोनों इस्तेमाल कर सकता हूँ?","acceptedAnswer":{"@type":"Answer","text":"हाँ। एक ट्रैक में एक साथ email lists और Google Groups दोनों हो सकते हैं।"}},{"@type":"Question","name":"क्या टेस्टर्स गुमनाम रह सकते हैं?","acceptedAnswer":{"@type":"Answer","text":"Google Group के साथ आपको खुद कभी ईमेल इकट्ठा करने की ज़रूरत नहीं पड़ती। Email list के लिए आपको हर टेस्टर का Google अकाउंट ईमेल चाहिए।"}}]}]}</script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://zachhhhh.github.io/tester-exchange-site/?lang=hi">Tester<span>Exchange</span></a><span class="grow"></span>
+<select aria-label="भाषा" onchange="location.href=this.value">
+<option value="https://zachhhhh.github.io/tester-exchange-site/guide/google-group-vs-email-list/">English</option><option value="https://zachhhhh.github.io/tester-exchange-site/de/google-group-vs-email-list/">Deutsch</option><option value="https://zachhhhh.github.io/tester-exchange-site/es/google-group-vs-email-list/">Español</option><option value="https://zachhhhh.github.io/tester-exchange-site/fr/google-group-vs-email-list/">Français</option><option value="https://zachhhhh.github.io/tester-exchange-site/hi/google-group-vs-email-list/" selected>हिन्दी</option><option value="https://zachhhhh.github.io/tester-exchange-site/id/google-group-vs-email-list/">Bahasa Indonesia</option><option value="https://zachhhhh.github.io/tester-exchange-site/ja/google-group-vs-email-list/">日本語</option><option value="https://zachhhhh.github.io/tester-exchange-site/ko/google-group-vs-email-list/">한국어</option><option value="https://zachhhhh.github.io/tester-exchange-site/pt/google-group-vs-email-list/">Português</option><option value="https://zachhhhh.github.io/tester-exchange-site/ru/google-group-vs-email-list/">Русский</option><option value="https://zachhhhh.github.io/tester-exchange-site/tr/google-group-vs-email-list/">Türkçe</option><option value="https://zachhhhh.github.io/tester-exchange-site/vi/google-group-vs-email-list/">Tiếng Việt</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-cn/google-group-vs-email-list/">简体中文</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-tw/google-group-vs-email-list/">繁體中文</option>
+</select>
+<a href="https://zachhhhh.github.io/tester-exchange-site/?lang=hi">Tester Exchange खोलें</a></header>
+<main>
+
+<h1>आपके closed test के लिए Google Group या email list?</h1>
+<p class="muted">अक्टूबर 2026 में अपडेट किया गया</p>
+<p class="lede">हर closed testing ट्रैक को एक लिस्ट चाहिए कि ऐप कौन इंस्टॉल कर सकता है। Play Console आपको दो विकल्प देता है: एक email list जिसे आप Play Console में मैनेज करते हैं, या एक Google Group। 12 टेस्टर्स की शर्त के लिए दोनों चलते हैं। फ़र्क बस इतना है कि लोगों को जोड़ने में कितनी मेहनत लगती है।</p>
+<div class="cta"><span>Tester Exchange दोनों के साथ काम करता है: टेस्टर्स को उनकी टास्क लिस्ट में आपका ग्रुप लिंक मिलता है, या आप एक क्लिक में उनके ईमेल अपनी लिस्ट में कॉपी कर लेते हैं।</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=hi">मुफ़्त में टेस्टर्स पाएँ</a></div>
+<nav class="toc"><b>इस पेज पर</b><ul><li><a href="#compare">झटपट तुलना</a></li><li><a href="#group">Google Group सेट करें</a></li><li><a href="#email">Email list सेट करें</a></li><li><a href="#mistakes">वे गलतियाँ जिनसे टेस्टर्स को आपका ऐप नहीं दिखता</a></li><li><a href="#faq">अक्सर पूछे जाने वाले सवाल</a></li></ul></nav>
+
+<section id="compare">
+<h2>झटपट तुलना</h2>
+
+<ul><li><b>Google Group:</b> जिसके पास भी ग्रुप लिंक है वह जुड़ सकता है, इसलिए आपको एक-एक करके लोग नहीं जोड़ने पड़ते। तब सबसे अच्छा है जब टेस्टर्स अलग-अलग जगहों से आते हैं।</li><li><b>Email list:</b> आप हर टेस्टर का Google अकाउंट ईमेल Play Console में पेस्ट करते हैं। कौन जुड़ेगा इस पर पूरा कंट्रोल रहता है, लेकिन नए लोगों के जुड़ने पर लिस्ट अपडेट करते रहना पड़ता है।</li></ul>
+
+
+</section>
+
+<section id="group">
+<h2>Google Group सेट करें</h2>
+
+
+<ol><li>groups.google.com पर जाएँ और एक ग्रुप बनाएँ। “Who can join” को वेब पर कोई भी (anyone on the web) पर सेट करें, ताकि टेस्टर्स को अप्रूवल का इंतज़ार न करना पड़े।</li><li>Play Console → Testing → Closed testing → आपका ट्रैक → Testers में Google Groups चुनें और ग्रुप का ईमेल एड्रेस जोड़ें।</li><li>टेस्टर्स के साथ दो लिंक शेयर करें: ग्रुप लिंक (पहले जुड़ें) और opt-in लिंक (टेस्टर बनें)।</li><li>टेस्टर्स उसी Google अकाउंट से Google Play से ऐप इंस्टॉल करें जिससे वे ग्रुप में जुड़े थे।</li></ol>
+
+</section>
+
+<section id="email">
+<h2>Email list सेट करें</h2>
+
+
+<ol><li>Play Console → Testing → Closed testing → आपका ट्रैक → Testers में एक email list बनाएँ।</li><li>अपने टेस्टर्स के Google अकाउंट ईमेल कॉमा लगाकर पेस्ट करें और सेव करें।</li><li>Opt-in लिंक शेयर करें। टेस्टर्स को यह लिंक उसी ईमेल से साइन इन रहते हुए खोलना होगा जो आपने जोड़ा है।</li></ol>
+
+</section>
+
+<section id="mistakes">
+<h2>वे गलतियाँ जिनसे टेस्टर्स को आपका ऐप नहीं दिखता</h2>
+
+<ul><li>टेस्टर एक Google अकाउंट से जुड़ा, लेकिन उसके फ़ोन का Play Store दूसरा अकाउंट इस्तेमाल कर रहा है।</li><li>ग्रुप में जुड़ने के लिए अप्रूवल ज़रूरी है, इसलिए टेस्टर्स इंतज़ार में अटके रहते हैं।</li><li>टेस्टर ग्रुप में जुड़ गया, लेकिन उसने कभी opt-in लिंक खोलकर “Become a tester” पर टैप नहीं किया।</li><li>रिलीज़ अभी अप्रूव नहीं हुई है। जब तक closed ट्रैक लाइव नहीं होता, टेस्टर्स इंस्टॉल नहीं कर सकते।</li></ul>
+
+
+</section>
+<section id="faq"><h2>अक्सर पूछे जाने वाले सवाल</h2>
+<details><summary>क्या ग्रुप मेंबर्स 12 टेस्टर्स में गिने जाते हैं?</summary><p>आप कोई भी लिस्ट टाइप इस्तेमाल करें, सिर्फ़ वही लोग गिने जाते हैं जिन्होंने opt-in लिंक से opt-in किया है।</p></details>
+<details><summary>क्या मैं दोनों इस्तेमाल कर सकता हूँ?</summary><p>हाँ। एक ट्रैक में एक साथ email lists और Google Groups दोनों हो सकते हैं।</p></details>
+<details><summary>क्या टेस्टर्स गुमनाम रह सकते हैं?</summary><p>Google Group के साथ आपको खुद कभी ईमेल इकट्ठा करने की ज़रूरत नहीं पड़ती। Email list के लिए आपको हर टेस्टर का Google अकाउंट ईमेल चाहिए।</p></details>
+</section>
+<div class="cta"><span>Tester Exchange दोनों के साथ काम करता है: टेस्टर्स को उनकी टास्क लिस्ट में आपका ग्रुप लिंक मिलता है, या आप एक क्लिक में उनके ईमेल अपनी लिस्ट में कॉपी कर लेते हैं।</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=hi">मुफ़्त में टेस्टर्स पाएँ</a></div>
+<section><h2>और गाइड</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">Google Play क्लोज़्ड टेस्टिंग के लिए 12 टेस्टर कैसे पाएं</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/hi/insufficient-testing-engagement/" hreflang="hi">Closed testing के बाद रिजेक्ट हुए? “more testing required” ऐसे ठीक करें</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/hi/production-access-questions/" hreflang="hi">Google Play के production access सवालों के जवाब कैसे दें</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/hi/tools/production-answers/" hreflang="hi">Production access के जवाबों का जनरेटर</a></li></ul></section>
+</main>
+<footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
+<a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>
+</div></body></html>

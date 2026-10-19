@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Play 封閉測試後被拒「需要更多測試」怎麼辦（2026）</title>
+<meta name="description" content="14 天封閉測試後，Google 拒絕了你的正式版存取權申請？了解原因（測試人員沒有真正使用應用程式），以及下次順利通過的逐步計畫。">
+<link rel="canonical" href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="en" href="https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="de" href="https://zachhhhh.github.io/tester-exchange-site/de/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="es" href="https://zachhhhh.github.io/tester-exchange-site/es/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="fr" href="https://zachhhhh.github.io/tester-exchange-site/fr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="hi" href="https://zachhhhh.github.io/tester-exchange-site/hi/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="id" href="https://zachhhhh.github.io/tester-exchange-site/id/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ja" href="https://zachhhhh.github.io/tester-exchange-site/ja/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ko" href="https://zachhhhh.github.io/tester-exchange-site/ko/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="pt" href="https://zachhhhh.github.io/tester-exchange-site/pt/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ru" href="https://zachhhhh.github.io/tester-exchange-site/ru/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="tr" href="https://zachhhhh.github.io/tester-exchange-site/tr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="vi" href="https://zachhhhh.github.io/tester-exchange-site/vi/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="zh-Hans" href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="zh-Hant" href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="x-default" href="https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/">
+<meta property="og:type" content="article"><meta property="og:title" content="Google Play 封閉測試後被拒「需要更多測試」怎麼辦（2026）">
+<meta property="og:description" content="14 天封閉測試後，Google 拒絕了你的正式版存取權申請？了解原因（測試人員沒有真正使用應用程式），以及下次順利通過的逐步計畫。"><meta property="og:url" content="https://zachhhhh.github.io/tester-exchange-site/zh-tw/insufficient-testing-engagement/">
+<meta property="og:image" content="https://zachhhhh.github.io/tester-exchange-site/store/feature-1024x500.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://zachhhhh.github.io/tester-exchange-site/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f6f5f1;--surface:#fff;--ink:#1c1d1a;--muted:#6d6f68;--line:#e3e1da;--accent:#1f7a4d;--accent-ink:#fff;--accent-soft:#e4f2ea}
+@media (prefers-color-scheme:dark){:root{--bg:#141513;--surface:#1d1f1c;--ink:#ecebe6;--muted:#9a9c94;--line:#30322e;--accent:#4cc38a;--accent-ink:#0d1f15;--accent-soft:#1d3327}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
+.muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
+.cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
+ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+.toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"封閉測試後被拒？如何解決「需要更多測試」","description":"14 天封閉測試後，Google 拒絕了你的正式版存取權申請？了解原因（測試人員沒有真正使用應用程式），以及下次順利通過的逐步計畫。","inLanguage":"zh-Hant","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/zh-tw/insufficient-testing-engagement/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"需要重新計算 14 天嗎？","acceptedAnswer":{"@type":"Answer","text":"封閉測試可以保留，但 Google 希望在你再次申請前看到更多實際測試。請至少再安排 14 天的活躍使用。"}},{"@type":"Question","name":"測試人員應該多久開啟一次應用程式？","acceptedAnswer":{"@type":"Answer","text":"Google 沒有公布具體數字。大多數測試人員每天使用是最保險的模式，這也正是 Tester Exchange 所驗證的。"}},{"@type":"Question","name":"意見回饋重要嗎？","acceptedAnswer":{"@type":"Answer","text":"重要。問卷會問測試人員說了什麼、你改了什麼。真實的意見回饋和實際的修正會讓你的回答更可信。"}}]}]}</script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://zachhhhh.github.io/tester-exchange-site/?lang=zh-tw">Tester<span>Exchange</span></a><span class="grow"></span>
+<select aria-label="語言" onchange="location.href=this.value">
+<option value="https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/">English</option><option value="https://zachhhhh.github.io/tester-exchange-site/de/insufficient-testing-engagement/">Deutsch</option><option value="https://zachhhhh.github.io/tester-exchange-site/es/insufficient-testing-engagement/">Español</option><option value="https://zachhhhh.github.io/tester-exchange-site/fr/insufficient-testing-engagement/">Français</option><option value="https://zachhhhh.github.io/tester-exchange-site/hi/insufficient-testing-engagement/">हिन्दी</option><option value="https://zachhhhh.github.io/tester-exchange-site/id/insufficient-testing-engagement/">Bahasa Indonesia</option><option value="https://zachhhhh.github.io/tester-exchange-site/ja/insufficient-testing-engagement/">日本語</option><option value="https://zachhhhh.github.io/tester-exchange-site/ko/insufficient-testing-engagement/">한국어</option><option value="https://zachhhhh.github.io/tester-exchange-site/pt/insufficient-testing-engagement/">Português</option><option value="https://zachhhhh.github.io/tester-exchange-site/ru/insufficient-testing-engagement/">Русский</option><option value="https://zachhhhh.github.io/tester-exchange-site/tr/insufficient-testing-engagement/">Türkçe</option><option value="https://zachhhhh.github.io/tester-exchange-site/vi/insufficient-testing-engagement/">Tiếng Việt</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-cn/insufficient-testing-engagement/">简体中文</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-tw/insufficient-testing-engagement/" selected>繁體中文</option>
+</select>
+<a href="https://zachhhhh.github.io/tester-exchange-site/?lang=zh-tw">開啟 Tester Exchange</a></header>
+<main>
+
+<h1>封閉測試後被拒？如何解決「需要更多測試」</h1>
+<p class="muted">2026 年 10 月更新</p>
+<p class="lede">你找了 12 位測試人員進行 14 天封閉測試，申請了正式版，Google 卻說你的應用程式需要更多測試。這是新個人帳戶最常見的結果，通常代表 Google 在測試期間沒有看到足夠的實際使用。以下說明 Google 看重什麼，以及如何進行一次能通過的第二輪測試。</p>
+<div class="cta"><span>Tester Exchange 會在每位測試人員的手機上驗證他們每天都開啟了你的應用程式，並提供每日活躍報告，供你下次申請使用。</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=zh-tw">免費取得活躍測試人員</a></div>
+<nav class="toc"><b>本頁內容</b><ul><li><a href="#why">為什麼 Google 說你的應用程式需要更多測試</a></li><li><a href="#plan">第二次就能通過的計畫</a></li><li><a href="#proof">拿出參與度的證據</a></li><li><a href="#avoid">不該做的事</a></li><li><a href="#faq">常見問題</a></li></ul></nav>
+
+<section id="why">
+<h2>為什麼 Google 說你的應用程式需要更多測試</h2>
+<p>選擇加入不等於測試。Google 看得到有多少測試人員安裝了應用程式、開啟的頻率，以及你在測試期間是否發布了更新。如果大家只安裝一次就再也沒回來，看起來只是在交差，而不是真正的測試。</p>
+<ul><li><b>參與度低：</b>測試人員安裝了應用程式，但很少開啟或從未開啟。</li><li><b>活躍測試人員太少：</b>有人退出測試，選擇加入的測試人員不到 12 位。</li><li><b>沒有迭代：</b>14 天內沒有新版本，也看不出有回應任何意見回饋。</li><li><b>回答空泛：</b>正式版問卷的回答含糊，沒有數字，也沒有意見回饋的實例。</li></ul>
+
+
+</section>
+
+<section id="plan">
+<h2>第二次就能通過的計畫</h2>
+
+
+<ol><li>讓封閉測試持續進行。不要刪除測試群組，也不要移除仍在活躍的測試人員。</li><li>招募 14–15 位會每天開啟應用程式的真實測試人員，這樣就算有幾人退出也不會低於 12 位。</li><li>每週給測試人員一到兩個具體任務（「建立帳戶、新增一個項目、變更一項設定」）。</li><li>請測試人員提供書面意見回饋，至少修正幾個回報的問題，並在測試期間將新版本上傳到封閉測試群組。</li><li>做好紀錄：每日活躍測試人員、累計測試人天、收到的意見回饋，以及你做了哪些變更。</li><li>再經過 14 天實際使用後重新申請，並用這些數字回答每個問題。</li></ol>
+
+</section>
+
+<section id="proof">
+<h2>拿出參與度的證據</h2>
+<p>你的回答應該像一份簡短的測試報告：有多少測試人員、他們使用了幾天、回報了什麼，以及哪個版本修正了問題。Tester Exchange 會記錄每位測試人員經過驗證的每日使用情形，並根據你的真實資料草擬這些回答，不必憑記憶拼湊。</p>
+
+
+
+</section>
+
+<section id="avoid">
+<h2>不該做的事</h2>
+
+<ul><li>不要用自己的備用手機或帳戶充當測試人員。同一台裝置上的多個帳戶不算真正的測試。</li><li>不要花錢買只安裝、從不開啟應用程式的「測試人員」。這正是會被拒絕的情況。</li><li>不要照抄網路上的通用回答。請使用你自己的數字和自己收到的意見回饋。</li></ul>
+
+
+</section>
+<section id="faq"><h2>常見問題</h2>
+<details><summary>需要重新計算 14 天嗎？</summary><p>封閉測試可以保留，但 Google 希望在你再次申請前看到更多實際測試。請至少再安排 14 天的活躍使用。</p></details>
+<details><summary>測試人員應該多久開啟一次應用程式？</summary><p>Google 沒有公布具體數字。大多數測試人員每天使用是最保險的模式，這也正是 Tester Exchange 所驗證的。</p></details>
+<details><summary>意見回饋重要嗎？</summary><p>重要。問卷會問測試人員說了什麼、你改了什麼。真實的意見回饋和實際的修正會讓你的回答更可信。</p></details>
+</section>
+<div class="cta"><span>Tester Exchange 會在每位測試人員的手機上驗證他們每天都開啟了你的應用程式，並提供每日活躍報告，供你下次申請使用。</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=zh-tw">免費取得活躍測試人員</a></div>
+<section><h2>更多指南</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">如何為 Google Play 封閉測試找到 12 位測試人員</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/google-group-vs-email-list/" hreflang="zh-Hant">封閉測試該用 Google Group 還是電子郵件清單？</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/production-access-questions/" hreflang="zh-Hant">如何回答 Google Play 正式版存取權問卷</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/tools/production-answers/" hreflang="zh-Hant">正式版存取權回答產生器</a></li></ul></section>
+</main>
+<footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
+<a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>
+</div></body></html>

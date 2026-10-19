@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Play'de kapalı test: Google Group mu, e-posta listesi mi? (kurulum rehberi)</title>
+<meta name="description" content="Google Play kapalı testiniz için hangi test kullanıcısı listesini kullanmalısınız, her birini nasıl kurarsınız, test kullanıcıları nasıl katılır ve uygulamanızın görünmesini engelleyen hatalar.">
+<link rel="canonical" href="https://zachhhhh.github.io/tester-exchange-site/tr/google-group-vs-email-list/">
+<link rel="alternate" hreflang="en" href="https://zachhhhh.github.io/tester-exchange-site/guide/google-group-vs-email-list/">
+<link rel="alternate" hreflang="de" href="https://zachhhhh.github.io/tester-exchange-site/de/google-group-vs-email-list/">
+<link rel="alternate" hreflang="es" href="https://zachhhhh.github.io/tester-exchange-site/es/google-group-vs-email-list/">
+<link rel="alternate" hreflang="fr" href="https://zachhhhh.github.io/tester-exchange-site/fr/google-group-vs-email-list/">
+<link rel="alternate" hreflang="hi" href="https://zachhhhh.github.io/tester-exchange-site/hi/google-group-vs-email-list/">
+<link rel="alternate" hreflang="id" href="https://zachhhhh.github.io/tester-exchange-site/id/google-group-vs-email-list/">
+<link rel="alternate" hreflang="ja" href="https://zachhhhh.github.io/tester-exchange-site/ja/google-group-vs-email-list/">
+<link rel="alternate" hreflang="ko" href="https://zachhhhh.github.io/tester-exchange-site/ko/google-group-vs-email-list/">
+<link rel="alternate" hreflang="pt" href="https://zachhhhh.github.io/tester-exchange-site/pt/google-group-vs-email-list/">
+<link rel="alternate" hreflang="ru" href="https://zachhhhh.github.io/tester-exchange-site/ru/google-group-vs-email-list/">
+<link rel="alternate" hreflang="tr" href="https://zachhhhh.github.io/tester-exchange-site/tr/google-group-vs-email-list/">
+<link rel="alternate" hreflang="vi" href="https://zachhhhh.github.io/tester-exchange-site/vi/google-group-vs-email-list/">
+<link rel="alternate" hreflang="zh-Hans" href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/google-group-vs-email-list/">
+<link rel="alternate" hreflang="zh-Hant" href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/google-group-vs-email-list/">
+<link rel="alternate" hreflang="x-default" href="https://zachhhhh.github.io/tester-exchange-site/guide/google-group-vs-email-list/">
+<meta property="og:type" content="article"><meta property="og:title" content="Google Play'de kapalı test: Google Group mu, e-posta listesi mi? (kurulum rehberi)">
+<meta property="og:description" content="Google Play kapalı testiniz için hangi test kullanıcısı listesini kullanmalısınız, her birini nasıl kurarsınız, test kullanıcıları nasıl katılır ve uygulamanızın görünmesini engelleyen hatalar."><meta property="og:url" content="https://zachhhhh.github.io/tester-exchange-site/tr/google-group-vs-email-list/">
+<meta property="og:image" content="https://zachhhhh.github.io/tester-exchange-site/store/feature-1024x500.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://zachhhhh.github.io/tester-exchange-site/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f6f5f1;--surface:#fff;--ink:#1c1d1a;--muted:#6d6f68;--line:#e3e1da;--accent:#1f7a4d;--accent-ink:#fff;--accent-soft:#e4f2ea}
+@media (prefers-color-scheme:dark){:root{--bg:#141513;--surface:#1d1f1c;--ink:#ecebe6;--muted:#9a9c94;--line:#30322e;--accent:#4cc38a;--accent-ink:#0d1f15;--accent-soft:#1d3327}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
+.muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
+.cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
+ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+.toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Kapalı testiniz için Google Group mu, e-posta listesi mi?","description":"Google Play kapalı testiniz için hangi test kullanıcısı listesini kullanmalısınız, her birini nasıl kurarsınız, test kullanıcıları nasıl katılır ve uygulamanızın görünmesini engelleyen hatalar.","inLanguage":"tr","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/tr/google-group-vs-email-list/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Grup üyeleri 12 test kullanıcısına dahil edilir mi?","acceptedAnswer":{"@type":"Answer","text":"Hangi liste türünü kullanırsanız kullanın, yalnızca katılım bağlantısı üzerinden katılan kişiler sayılır."}},{"@type":"Question","name":"İkisini birlikte kullanabilir miyim?","acceptedAnswer":{"@type":"Answer","text":"Evet. Bir kanalda aynı anda hem e-posta listeleri hem de Google Groups olabilir."}},{"@type":"Question","name":"Test kullanıcıları anonim kalabilir mi?","acceptedAnswer":{"@type":"Answer","text":"Google Group ile e-postaları kendiniz toplamanız hiç gerekmez. E-posta listesinde ise her test kullanıcısının Google hesabı e-postasına ihtiyacınız vardır."}}]}]}</script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://zachhhhh.github.io/tester-exchange-site/?lang=tr">Tester<span>Exchange</span></a><span class="grow"></span>
+<select aria-label="Dil" onchange="location.href=this.value">
+<option value="https://zachhhhh.github.io/tester-exchange-site/guide/google-group-vs-email-list/">English</option><option value="https://zachhhhh.github.io/tester-exchange-site/de/google-group-vs-email-list/">Deutsch</option><option value="https://zachhhhh.github.io/tester-exchange-site/es/google-group-vs-email-list/">Español</option><option value="https://zachhhhh.github.io/tester-exchange-site/fr/google-group-vs-email-list/">Français</option><option value="https://zachhhhh.github.io/tester-exchange-site/hi/google-group-vs-email-list/">हिन्दी</option><option value="https://zachhhhh.github.io/tester-exchange-site/id/google-group-vs-email-list/">Bahasa Indonesia</option><option value="https://zachhhhh.github.io/tester-exchange-site/ja/google-group-vs-email-list/">日本語</option><option value="https://zachhhhh.github.io/tester-exchange-site/ko/google-group-vs-email-list/">한국어</option><option value="https://zachhhhh.github.io/tester-exchange-site/pt/google-group-vs-email-list/">Português</option><option value="https://zachhhhh.github.io/tester-exchange-site/ru/google-group-vs-email-list/">Русский</option><option value="https://zachhhhh.github.io/tester-exchange-site/tr/google-group-vs-email-list/" selected>Türkçe</option><option value="https://zachhhhh.github.io/tester-exchange-site/vi/google-group-vs-email-list/">Tiếng Việt</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-cn/google-group-vs-email-list/">简体中文</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-tw/google-group-vs-email-list/">繁體中文</option>
+</select>
+<a href="https://zachhhhh.github.io/tester-exchange-site/?lang=tr">Tester Exchange'i aç</a></header>
+<main>
+
+<h1>Kapalı testiniz için Google Group mu, e-posta listesi mi?</h1>
+<p class="muted">Ekim 2026'da güncellendi</p>
+<p class="lede">Her kapalı test kanalı, uygulamayı kimin yükleyebileceğini belirten bir listeye ihtiyaç duyar. Play Console size iki seçenek sunar: Play Console'da yönettiğiniz bir e-posta listesi ya da bir Google Group. İkisi de 12 test kullanıcısı şartı için geçerlidir. Fark, kişi eklemenin ne kadar zahmetli olduğudur.</p>
+<div class="cta"><span>Tester Exchange ikisiyle de çalışır: test kullanıcıları grup bağlantınızı görev listelerinde görür ya da siz e-postalarını tek tıkla listenize kopyalarsınız.</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=tr">Ücretsiz test kullanıcısı bulun</a></div>
+<nav class="toc"><b>Bu sayfada</b><ul><li><a href="#compare">Hızlı karşılaştırma</a></li><li><a href="#group">Google Group kurulumu</a></li><li><a href="#email">E-posta listesi kurulumu</a></li><li><a href="#mistakes">Test kullanıcılarının uygulamanızı görmesini engelleyen hatalar</a></li><li><a href="#faq">Sık sorulan sorular</a></li></ul></nav>
+
+<section id="compare">
+<h2>Hızlı karşılaştırma</h2>
+
+<ul><li><b>Google Group:</b> grup bağlantısına sahip herkes katılabilir, bu yüzden kişileri tek tek eklemeniz gerekmez. Test kullanıcıları farklı yerlerden geliyorsa en iyi seçenektir.</li><li><b>E-posta listesi:</b> her test kullanıcısının Google hesabı e-postasını Play Console'a yapıştırırsınız. Kimin gireceği üzerinde tam kontrol sağlar, ancak yeni kişiler katıldıkça listeyi güncel tutmanız gerekir.</li></ul>
+
+
+</section>
+
+<section id="group">
+<h2>Google Group kurulumu</h2>
+
+
+<ol><li>groups.google.com adresine gidin ve bir grup oluşturun. Test kullanıcıları onay beklemesin diye “Kimler katılabilir” ayarını web'deki herkes olarak belirleyin.</li><li>Play Console → Test → Kapalı test → kanalınız → Test kullanıcıları bölümünde Google Grupları'nı seçin ve grubun e-posta adresini ekleyin.</li><li>Test kullanıcılarıyla iki bağlantı paylaşın: grup bağlantısı (önce katılın) ve katılım bağlantısı (test kullanıcısı olun).</li><li>Test kullanıcıları uygulamayı, gruba katılırken kullandıkları aynı Google hesabıyla Google Play'den yükler.</li></ol>
+
+</section>
+
+<section id="email">
+<h2>E-posta listesi kurulumu</h2>
+
+
+<ol><li>Play Console → Test → Kapalı test → kanalınız → Test kullanıcıları bölümünde bir e-posta listesi oluşturun.</li><li>Test kullanıcılarınızın Google hesabı e-postalarını virgülle ayırarak yapıştırın ve kaydedin.</li><li>Katılım bağlantısını paylaşın. Test kullanıcıları bu bağlantıyı, eklediğiniz e-postayla oturum açmışken açmalıdır.</li></ol>
+
+</section>
+
+<section id="mistakes">
+<h2>Test kullanıcılarının uygulamanızı görmesini engelleyen hatalar</h2>
+
+<ul><li>Test kullanıcısı bir Google hesabıyla katıldı, ancak telefonundaki Play Store başka bir hesap kullanıyor.</li><li>Grup onay gerektiriyor, bu yüzden test kullanıcıları beklemede kalıyor.</li><li>Test kullanıcısı gruba katıldı ama katılım bağlantısını hiç açıp “Test kullanıcısı ol” düğmesine dokunmadı.</li><li>Sürüm henüz onaylanmadı. Kapalı kanal yayına girene kadar test kullanıcıları uygulamayı yükleyemez.</li></ul>
+
+
+</section>
+<section id="faq"><h2>Sık sorulan sorular</h2>
+<details><summary>Grup üyeleri 12 test kullanıcısına dahil edilir mi?</summary><p>Hangi liste türünü kullanırsanız kullanın, yalnızca katılım bağlantısı üzerinden katılan kişiler sayılır.</p></details>
+<details><summary>İkisini birlikte kullanabilir miyim?</summary><p>Evet. Bir kanalda aynı anda hem e-posta listeleri hem de Google Groups olabilir.</p></details>
+<details><summary>Test kullanıcıları anonim kalabilir mi?</summary><p>Google Group ile e-postaları kendiniz toplamanız hiç gerekmez. E-posta listesinde ise her test kullanıcısının Google hesabı e-postasına ihtiyacınız vardır.</p></details>
+</section>
+<div class="cta"><span>Tester Exchange ikisiyle de çalışır: test kullanıcıları grup bağlantınızı görev listelerinde görür ya da siz e-postalarını tek tıkla listenize kopyalarsınız.</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=tr">Ücretsiz test kullanıcısı bulun</a></div>
+<section><h2>Diğer rehberler</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Google Play kapalı testi için 12 test kullanıcısı nasıl bulunur</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/insufficient-testing-engagement/" hreflang="tr">Kapalı testten sonra reddedildiniz mi? “Daha fazla test gerekli” hatası nasıl düzeltilir</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/production-access-questions/" hreflang="tr">Google Play üretim erişimi sorularına nasıl yanıt verilir</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/tools/production-answers/" hreflang="tr">Üretim erişimi yanıt oluşturucu</a></li></ul></section>
+</main>
+<footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
+<a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>
+</div></body></html>

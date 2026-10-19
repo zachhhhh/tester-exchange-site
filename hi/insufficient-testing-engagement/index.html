@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Closed testing के बाद Google Play का “more testing required” रिजेक्शन कैसे ठीक करें (2026)</title>
+<meta name="description" content="14 दिन के closed test के बाद Google ने आपकी production access रिक्वेस्ट रिजेक्ट कर दी? ऐसा क्यों होता है (टेस्टर्स ने ऐप असल में इस्तेमाल नहीं किया) और अगली बार पास होने का स्टेप-बाय-स्टेप प्लान।">
+<link rel="canonical" href="https://zachhhhh.github.io/tester-exchange-site/hi/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="en" href="https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="de" href="https://zachhhhh.github.io/tester-exchange-site/de/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="es" href="https://zachhhhh.github.io/tester-exchange-site/es/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="fr" href="https://zachhhhh.github.io/tester-exchange-site/fr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="hi" href="https://zachhhhh.github.io/tester-exchange-site/hi/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="id" href="https://zachhhhh.github.io/tester-exchange-site/id/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ja" href="https://zachhhhh.github.io/tester-exchange-site/ja/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ko" href="https://zachhhhh.github.io/tester-exchange-site/ko/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="pt" href="https://zachhhhh.github.io/tester-exchange-site/pt/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ru" href="https://zachhhhh.github.io/tester-exchange-site/ru/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="tr" href="https://zachhhhh.github.io/tester-exchange-site/tr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="vi" href="https://zachhhhh.github.io/tester-exchange-site/vi/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="zh-Hans" href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="zh-Hant" href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="x-default" href="https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/">
+<meta property="og:type" content="article"><meta property="og:title" content="Closed testing के बाद Google Play का “more testing required” रिजेक्शन कैसे ठीक करें (2026)">
+<meta property="og:description" content="14 दिन के closed test के बाद Google ने आपकी production access रिक्वेस्ट रिजेक्ट कर दी? ऐसा क्यों होता है (टेस्टर्स ने ऐप असल में इस्तेमाल नहीं किया) और अगली बार पास होने का स्टेप-बाय-स्टेप प्लान।"><meta property="og:url" content="https://zachhhhh.github.io/tester-exchange-site/hi/insufficient-testing-engagement/">
+<meta property="og:image" content="https://zachhhhh.github.io/tester-exchange-site/store/feature-1024x500.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://zachhhhh.github.io/tester-exchange-site/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f6f5f1;--surface:#fff;--ink:#1c1d1a;--muted:#6d6f68;--line:#e3e1da;--accent:#1f7a4d;--accent-ink:#fff;--accent-soft:#e4f2ea}
+@media (prefers-color-scheme:dark){:root{--bg:#141513;--surface:#1d1f1c;--ink:#ecebe6;--muted:#9a9c94;--line:#30322e;--accent:#4cc38a;--accent-ink:#0d1f15;--accent-soft:#1d3327}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
+.muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
+.cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
+ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+.toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Closed testing के बाद रिजेक्ट हुए? “more testing required” ऐसे ठीक करें","description":"14 दिन के closed test के बाद Google ने आपकी production access रिक्वेस्ट रिजेक्ट कर दी? ऐसा क्यों होता है (टेस्टर्स ने ऐप असल में इस्तेमाल नहीं किया) और अगली बार पास होने का स्टेप-बाय-स्टेप प्लान।","inLanguage":"hi","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/hi/insufficient-testing-engagement/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"क्या मुझे 14 दिन फिर से शुरू करने होंगे?","acceptedAnswer":{"@type":"Answer","text":"आपका closed test बना रहता है, लेकिन दोबारा अप्लाई करने से पहले Google और असली टेस्टिंग देखना चाहता है। कम से कम 14 दिन और एक्टिव इस्तेमाल की योजना बनाएँ।"}},{"@type":"Question","name":"टेस्टर्स को ऐप कितनी बार खोलना चाहिए?","acceptedAnswer":{"@type":"Answer","text":"Google कोई नंबर पब्लिश नहीं करता। ज़्यादातर टेस्टर्स का रोज़ इस्तेमाल करना सबसे सुरक्षित तरीका है, और Tester Exchange यही वेरिफ़ाई करता है।"}},{"@type":"Question","name":"क्या फ़ीडबैक मायने रखता है?","acceptedAnswer":{"@type":"Answer","text":"हाँ। प्रश्नावली पूछती है कि टेस्टर्स ने क्या कहा और आपने क्या बदला। असली फ़ीडबैक और असली फ़िक्स आपके जवाबों को भरोसेमंद बनाते हैं।"}}]}]}</script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://zachhhhh.github.io/tester-exchange-site/?lang=hi">Tester<span>Exchange</span></a><span class="grow"></span>
+<select aria-label="भाषा" onchange="location.href=this.value">
+<option value="https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/">English</option><option value="https://zachhhhh.github.io/tester-exchange-site/de/insufficient-testing-engagement/">Deutsch</option><option value="https://zachhhhh.github.io/tester-exchange-site/es/insufficient-testing-engagement/">Español</option><option value="https://zachhhhh.github.io/tester-exchange-site/fr/insufficient-testing-engagement/">Français</option><option value="https://zachhhhh.github.io/tester-exchange-site/hi/insufficient-testing-engagement/" selected>हिन्दी</option><option value="https://zachhhhh.github.io/tester-exchange-site/id/insufficient-testing-engagement/">Bahasa Indonesia</option><option value="https://zachhhhh.github.io/tester-exchange-site/ja/insufficient-testing-engagement/">日本語</option><option value="https://zachhhhh.github.io/tester-exchange-site/ko/insufficient-testing-engagement/">한국어</option><option value="https://zachhhhh.github.io/tester-exchange-site/pt/insufficient-testing-engagement/">Português</option><option value="https://zachhhhh.github.io/tester-exchange-site/ru/insufficient-testing-engagement/">Русский</option><option value="https://zachhhhh.github.io/tester-exchange-site/tr/insufficient-testing-engagement/">Türkçe</option><option value="https://zachhhhh.github.io/tester-exchange-site/vi/insufficient-testing-engagement/">Tiếng Việt</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-cn/insufficient-testing-engagement/">简体中文</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-tw/insufficient-testing-engagement/">繁體中文</option>
+</select>
+<a href="https://zachhhhh.github.io/tester-exchange-site/?lang=hi">Tester Exchange खोलें</a></header>
+<main>
+
+<h1>Closed testing के बाद रिजेक्ट हुए? “more testing required” ऐसे ठीक करें</h1>
+<p class="muted">अक्टूबर 2026 में अपडेट किया गया</p>
+<p class="lede">आपने 12 टेस्टर्स के साथ 14 दिन closed test चलाया, production के लिए अप्लाई किया, और Google ने कहा कि आपके ऐप को और टेस्टिंग की ज़रूरत है। नए personal अकाउंट्स के साथ सबसे ज़्यादा यही होता है। आमतौर पर इसका मतलब है कि टेस्ट के दौरान Google को आपके ऐप का पर्याप्त असली इस्तेमाल नहीं दिखा। यहाँ जानिए कि Google क्या देखता है, और दूसरा टेस्ट कैसे चलाएँ जो पास हो जाए।</p>
+<div class="cta"><span>Tester Exchange हर टेस्टर के फ़ोन पर वेरिफ़ाई करता है कि उन्होंने रोज़ आपका ऐप खोला, और आपकी अगली एप्लिकेशन के लिए डेली एक्टिविटी रिपोर्ट देता है।</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=hi">एक्टिव टेस्टर्स मुफ़्त में पाएँ</a></div>
+<nav class="toc"><b>इस पेज पर</b><ul><li><a href="#why">Google क्यों कहता है कि आपके ऐप को और टेस्टिंग चाहिए</a></li><li><a href="#plan">दूसरी बार में पास होने का प्लान</a></li><li><a href="#proof">एंगेजमेंट का सबूत दिखाएँ</a></li><li><a href="#avoid">क्या न करें</a></li><li><a href="#faq">अक्सर पूछे जाने वाले सवाल</a></li></ul></nav>
+
+<section id="why">
+<h2>Google क्यों कहता है कि आपके ऐप को और टेस्टिंग चाहिए</h2>
+<p>Opt-in करना टेस्टिंग करने जैसा नहीं है। Google देख सकता है कि कितने टेस्टर्स ने ऐप इंस्टॉल किया, उन्होंने उसे कितनी बार खोला, और टेस्ट के दौरान आपने अपडेट्स भेजे या नहीं। जिस टेस्ट में लोगों ने एक बार इंस्टॉल किया और फिर कभी वापस नहीं आए, वह असली टेस्ट नहीं बल्कि सिर्फ़ खानापूर्ति लगता है।</p>
+<ul><li><b>कम एंगेजमेंट:</b> टेस्टर्स ने ऐप इंस्टॉल किया लेकिन कभी-कभार या कभी नहीं खोला।</li><li><b>बहुत कम एक्टिव टेस्टर्स:</b> कुछ लोग टेस्ट छोड़ गए, और opt-in किए हुए टेस्टर्स 12 से कम रह गए।</li><li><b>कोई सुधार नहीं:</b> 14 दिनों में न कोई नया बिल्ड, न फ़ीडबैक पर कोई दिखने वाला बदलाव।</li><li><b>कमज़ोर जवाब:</b> production प्रश्नावली में गोलमोल जवाब, न कोई नंबर और न फ़ीडबैक के उदाहरण।</li></ul>
+
+
+</section>
+
+<section id="plan">
+<h2>दूसरी बार में पास होने का प्लान</h2>
+
+
+<ol><li>Closed test चालू रखें। ट्रैक डिलीट न करें और जो टेस्टर्स अभी भी एक्टिव हैं उन्हें न हटाएँ।</li><li>14–15 असली टेस्टर्स जोड़ें जो रोज़ ऐप खोलेंगे, ताकि कुछ लोगों के छोड़ने पर भी आप 12 से नीचे न जाएँ।</li><li>टेस्टर्स को हर हफ़्ते एक-दो ठोस टास्क दें (“अकाउंट बनाएँ, एक आइटम जोड़ें, कोई सेटिंग बदलें”)।</li><li>लिखित फ़ीडबैक माँगें, रिपोर्ट की गई कम से कम कुछ समस्याएँ ठीक करें, और टेस्ट के दौरान closed ट्रैक पर नए बिल्ड अपलोड करें।</li><li>एक लॉग रखें: रोज़ के एक्टिव टेस्टर्स, कुल tester-days, मिला फ़ीडबैक, और आपने क्या बदला।</li><li>14 दिन और असली इस्तेमाल के बाद फिर से अप्लाई करें और हर सवाल का जवाब इन्हीं नंबरों के साथ दें।</li></ol>
+
+</section>
+
+<section id="proof">
+<h2>एंगेजमेंट का सबूत दिखाएँ</h2>
+<p>आपके जवाब एक छोटी टेस्ट रिपोर्ट जैसे होने चाहिए: कितने टेस्टर्स थे, उन्होंने कितने दिन ऐप इस्तेमाल किया, उन्होंने क्या रिपोर्ट किया, और किन बिल्ड्स में वह ठीक हुआ। Tester Exchange हर टेस्टर का वेरिफ़ाइड डेली इस्तेमाल रिकॉर्ड करता है और आपके असली डेटा से ये जवाब ड्राफ़्ट करता है, ताकि आपको सब कुछ याद करके न लिखना पड़े।</p>
+
+
+
+</section>
+
+<section id="avoid">
+<h2>क्या न करें</h2>
+
+<ul><li>अपने ही एक्स्ट्रा फ़ोन या अकाउंट्स को टेस्टर्स की तरह इस्तेमाल न करें। एक डिवाइस पर कई अकाउंट्स असली टेस्टिंग नहीं माने जाते।</li><li>ऐसे “टेस्टर्स” को पैसे न दें जो सिर्फ़ इंस्टॉल करते हैं और ऐप कभी नहीं खोलते। ठीक इसी वजह से रिजेक्शन होता है।</li><li>इंटरनेट से जेनेरिक जवाब कॉपी न करें। अपने नंबर और अपना फ़ीडबैक इस्तेमाल करें।</li></ul>
+
+
+</section>
+<section id="faq"><h2>अक्सर पूछे जाने वाले सवाल</h2>
+<details><summary>क्या मुझे 14 दिन फिर से शुरू करने होंगे?</summary><p>आपका closed test बना रहता है, लेकिन दोबारा अप्लाई करने से पहले Google और असली टेस्टिंग देखना चाहता है। कम से कम 14 दिन और एक्टिव इस्तेमाल की योजना बनाएँ।</p></details>
+<details><summary>टेस्टर्स को ऐप कितनी बार खोलना चाहिए?</summary><p>Google कोई नंबर पब्लिश नहीं करता। ज़्यादातर टेस्टर्स का रोज़ इस्तेमाल करना सबसे सुरक्षित तरीका है, और Tester Exchange यही वेरिफ़ाई करता है।</p></details>
+<details><summary>क्या फ़ीडबैक मायने रखता है?</summary><p>हाँ। प्रश्नावली पूछती है कि टेस्टर्स ने क्या कहा और आपने क्या बदला। असली फ़ीडबैक और असली फ़िक्स आपके जवाबों को भरोसेमंद बनाते हैं।</p></details>
+</section>
+<div class="cta"><span>Tester Exchange हर टेस्टर के फ़ोन पर वेरिफ़ाई करता है कि उन्होंने रोज़ आपका ऐप खोला, और आपकी अगली एप्लिकेशन के लिए डेली एक्टिविटी रिपोर्ट देता है।</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=hi">एक्टिव टेस्टर्स मुफ़्त में पाएँ</a></div>
+<section><h2>और गाइड</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">Google Play क्लोज़्ड टेस्टिंग के लिए 12 टेस्टर कैसे पाएं</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/hi/google-group-vs-email-list/" hreflang="hi">आपके closed test के लिए Google Group या email list?</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/hi/production-access-questions/" hreflang="hi">Google Play के production access सवालों के जवाब कैसे दें</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/hi/tools/production-answers/" hreflang="hi">Production access के जवाबों का जनरेटर</a></li></ul></section>
+</main>
+<footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
+<a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>
+</div></body></html>

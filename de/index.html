@@ -33,14 +33,23 @@
 a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
 header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
 .brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
-select{font:inherit;font-size:14px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:4px 8px;max-width:160px}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
 h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
 .muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
 .cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
-.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
 ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
 .toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
 summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"So bekommst du 12 Tester für geschlossene Tests bei Google Play","description":"Neue Google Play-Entwicklerkonten brauchen 12 Tester über 14 Tage, bevor es in die Produktion geht. Schritt für Schritt: geschlossenen Test einrichten, kostenlos echte Tester finden, sie aktiv halten und Googles Fragen zur Produktion beantworten.","inLanguage":"de","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/de/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Müssen die 12 Tester die App jeden Tag nutzen?","acceptedAnswer":{"@type":"Answer","text":"Google verlangt, dass sie 14 Tage lang teilnehmen, und prüft das Engagement. Regelmäßige echte Nutzung ist das, was eine Ablehnung wegen „unzureichender Tests“ verhindert."}},{"@type":"Question","name":"Kann ich eigene Smartphones oder Konten als Tester nutzen?","acceptedAnswer":{"@type":"Answer","text":"Google erkennt, wenn sich viele Konten ein Gerät teilen, und das zählt nicht als echtes Testen. Setz auf echte Menschen mit eigenen Smartphones."}},{"@type":"Question","name":"Setzt ein Tester, der aussteigt, die 14 Tage zurück?","acceptedAnswer":{"@type":"Answer","text":"Der Zähler läuft nur an Tagen mit mindestens 12 teilnehmenden Testern weiter. Gewinne ein paar zusätzliche Tester, damit Ausfälle dich nicht ausbremsen."}},{"@type":"Question","name":"Ist Tester Exchange kostenlos?","acceptedAnswer":{"@type":"Answer","text":"Ja. Du verdienst Credits, indem du andere Apps testest. Credits zu kaufen ist optional, für alle, die keine Zeit zum Testen haben."}}]}]}</script>
 </head>
@@ -51,6 +60,7 @@ summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);m
 </select>
 <a href="https://zachhhhh.github.io/tester-exchange-site/?lang=de">Tester Exchange öffnen</a></header>
 <main>
+
 <h1>So bekommst du 12 Tester für geschlossene Tests bei Google Play</h1>
 <p class="muted">Aktualisiert im Oktober 2026</p>
 <p class="lede">Wenn du dein privates Google Play-Entwicklerkonto nach dem 13. November 2023 erstellt hast, kannst du nicht sofort in der Produktion veröffentlichen. Zuerst brauchst du einen geschlossenen Test mit mindestens 12 Testern, die 14 Tage am Stück teilnehmen. Google prüft außerdem, ob diese Tester deine App wirklich genutzt haben. Diese Anleitung führt dich durch den ganzen Ablauf und zeigt einen kostenlosen Weg, echte Tester zu finden.</p>
@@ -120,6 +130,7 @@ summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);m
 <details><summary>Ist Tester Exchange kostenlos?</summary><p>Ja. Du verdienst Credits, indem du andere Apps testest. Credits zu kaufen ist optional, für alle, die keine Zeit zum Testen haben.</p></details>
 </section>
 <div class="cta"><span>Kostenloser Tester-Tausch: Teste Apps anderer Entwickler, sammle Credits und setze sie für Tester deiner App ein. Die tägliche Nutzung wird auf echten Smartphones verifiziert.</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=de">Hol dir deine 12 Tester kostenlos</a></div>
+<section><h2>Weitere Anleitungen</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/de/google-group-vs-email-list/" hreflang="de">Google Group oder E-Mail-Liste für deinen geschlossenen Test?</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/de/insufficient-testing-engagement/" hreflang="de">Nach dem geschlossenen Test abgelehnt? So behebst du „mehr Tests erforderlich“</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/de/production-access-questions/" hreflang="de">So beantwortest du die Fragen zum Produktionszugriff bei Google Play</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/de/tools/production-answers/" hreflang="de">Antwortgenerator für den Produktionszugriff</a></li></ul></section>
 </main>
 <footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
 <a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>

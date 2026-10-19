@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>免费 Google Play 正式版访问权限问卷回答生成器</title>
+<meta name="description" content="填写封闭式测试数据，即可为 Google Play 正式版访问权限的每个问题生成清晰的回答草稿。免费，在浏览器中运行，不存储任何数据。">
+<link rel="canonical" href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/tools/production-answers/">
+<link rel="alternate" hreflang="en" href="https://zachhhhh.github.io/tester-exchange-site/tools/production-answers/">
+<link rel="alternate" hreflang="de" href="https://zachhhhh.github.io/tester-exchange-site/de/tools/production-answers/">
+<link rel="alternate" hreflang="es" href="https://zachhhhh.github.io/tester-exchange-site/es/tools/production-answers/">
+<link rel="alternate" hreflang="fr" href="https://zachhhhh.github.io/tester-exchange-site/fr/tools/production-answers/">
+<link rel="alternate" hreflang="hi" href="https://zachhhhh.github.io/tester-exchange-site/hi/tools/production-answers/">
+<link rel="alternate" hreflang="id" href="https://zachhhhh.github.io/tester-exchange-site/id/tools/production-answers/">
+<link rel="alternate" hreflang="ja" href="https://zachhhhh.github.io/tester-exchange-site/ja/tools/production-answers/">
+<link rel="alternate" hreflang="ko" href="https://zachhhhh.github.io/tester-exchange-site/ko/tools/production-answers/">
+<link rel="alternate" hreflang="pt" href="https://zachhhhh.github.io/tester-exchange-site/pt/tools/production-answers/">
+<link rel="alternate" hreflang="ru" href="https://zachhhhh.github.io/tester-exchange-site/ru/tools/production-answers/">
+<link rel="alternate" hreflang="tr" href="https://zachhhhh.github.io/tester-exchange-site/tr/tools/production-answers/">
+<link rel="alternate" hreflang="vi" href="https://zachhhhh.github.io/tester-exchange-site/vi/tools/production-answers/">
+<link rel="alternate" hreflang="zh-Hans" href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/tools/production-answers/">
+<link rel="alternate" hreflang="zh-Hant" href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/tools/production-answers/">
+<link rel="alternate" hreflang="x-default" href="https://zachhhhh.github.io/tester-exchange-site/tools/production-answers/">
+<meta property="og:type" content="article"><meta property="og:title" content="免费 Google Play 正式版访问权限问卷回答生成器">
+<meta property="og:description" content="填写封闭式测试数据，即可为 Google Play 正式版访问权限的每个问题生成清晰的回答草稿。免费，在浏览器中运行，不存储任何数据。"><meta property="og:url" content="https://zachhhhh.github.io/tester-exchange-site/zh-cn/tools/production-answers/">
+<meta property="og:image" content="https://zachhhhh.github.io/tester-exchange-site/store/feature-1024x500.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://zachhhhh.github.io/tester-exchange-site/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f6f5f1;--surface:#fff;--ink:#1c1d1a;--muted:#6d6f68;--line:#e3e1da;--accent:#1f7a4d;--accent-ink:#fff;--accent-soft:#e4f2ea}
+@media (prefers-color-scheme:dark){:root{--bg:#141513;--surface:#1d1f1c;--ink:#ecebe6;--muted:#9a9c94;--line:#30322e;--accent:#4cc38a;--accent-ink:#0d1f15;--accent-soft:#1d3327}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
+.muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
+.cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
+ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+.toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"正式版访问权限回答生成器","description":"填写封闭式测试数据，即可为 Google Play 正式版访问权限的每个问题生成清晰的回答草稿。免费，在浏览器中运行，不存储任何数据。","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"zh-Hans","url":"https://zachhhhh.github.io/tester-exchange-site/zh-cn/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://zachhhhh.github.io/tester-exchange-site/?lang=zh-cn">Tester<span>Exchange</span></a><span class="grow"></span>
+<select aria-label="语言" onchange="location.href=this.value">
+<option value="https://zachhhhh.github.io/tester-exchange-site/tools/production-answers/">English</option><option value="https://zachhhhh.github.io/tester-exchange-site/de/tools/production-answers/">Deutsch</option><option value="https://zachhhhh.github.io/tester-exchange-site/es/tools/production-answers/">Español</option><option value="https://zachhhhh.github.io/tester-exchange-site/fr/tools/production-answers/">Français</option><option value="https://zachhhhh.github.io/tester-exchange-site/hi/tools/production-answers/">हिन्दी</option><option value="https://zachhhhh.github.io/tester-exchange-site/id/tools/production-answers/">Bahasa Indonesia</option><option value="https://zachhhhh.github.io/tester-exchange-site/ja/tools/production-answers/">日本語</option><option value="https://zachhhhh.github.io/tester-exchange-site/ko/tools/production-answers/">한국어</option><option value="https://zachhhhh.github.io/tester-exchange-site/pt/tools/production-answers/">Português</option><option value="https://zachhhhh.github.io/tester-exchange-site/ru/tools/production-answers/">Русский</option><option value="https://zachhhhh.github.io/tester-exchange-site/tr/tools/production-answers/">Türkçe</option><option value="https://zachhhhh.github.io/tester-exchange-site/vi/tools/production-answers/">Tiếng Việt</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-cn/tools/production-answers/" selected>简体中文</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-tw/tools/production-answers/">繁體中文</option>
+</select>
+<a href="https://zachhhhh.github.io/tester-exchange-site/?lang=zh-cn">打开 Tester Exchange</a></header>
+<main>
+
+<h1>正式版访问权限回答生成器</h1>
+<p class="lede">填写你的封闭式测试情况，即可获得申请正式版时 Play Console 所问每个问题的回答草稿。所有内容都在你的浏览器中运行，不会发送到任何地方。回答为英文，各地的审核人员都能看懂。</p>
+<form id="f" onsubmit="event.preventDefault();gen()">
+<label>应用名称<input name="app" required maxlength="80"></label>
+<label>你的测试人员来自哪里？<select name="source">
+<option value="exchange">测试人员互助平台（开发者互相测试应用）</option><option value="community">开发者社区或论坛</option><option value="friends">朋友、家人和同事</option>
+</select></label>
+<div class="grid2">
+<label>选择加入的测试人员<input name="joined" type="number" min="0" value="15"></label>
+<label>安装了应用的测试人员<input name="installed" type="number" min="0" value="14"></label>
+<label>测试持续天数<input name="days" type="number" min="1" value="14"></label>
+<label>平均每天活跃的测试人员<input name="daily" type="number" min="0" step="0.1" value="12"></label>
+<label>坚持到最后的测试人员<input name="completed" type="number" min="0" value="12"></label>
+<label>平均每次使用分钟数（可选）<input name="minutes" type="number" min="0" step="0.5"></label>
+<label>测试期间上传的新版本数<input name="builds" type="number" min="0" value="2"></label>
+<label>第一年预计安装量<input name="installs" placeholder="1,000–5,000"></label>
+</div>
+<label>主要反馈主题（每行一个）<textarea name="feedback" rows="3"></textarea></label>
+<label>你改动或修复了什么（每行一项）<textarea name="changes" rows="3"></textarea></label>
+<label>应用面向哪些用户？<input name="audience"></label>
+<label>它能让用户做什么？<input name="value"></label>
+<div><button class="btn">生成回答</button></div>
+</form>
+<section id="out" hidden><h2>你的回答草稿</h2><div id="answers"></div><p class="muted">请修改这些草稿，使其与实际情况完全一致。Google 能看到你真实的测试数据，所以诚实、具体的回答效果最好。</p></section>
+<div class="cta"><b>需要真正使用你应用的测试人员？</b><span>Tester Exchange 会在每位测试人员的手机上验证每日使用情况，并为你自动填好这些数据。</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=zh-cn">免费获取测试人员</a></div>
+<script>
+const COPY="复制",COPIED="已复制";
+function lines(s){return s.split('\n').map(x=>x.trim()).filter(Boolean)}
+function list(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]}
+function gen(){
+  const f=Object.fromEntries(new FormData(document.getElementById('f')));
+  const n=k=>Math.max(0,Number(f[k]||0)), app=f.app.trim()||'the app';
+  const src={exchange:'a developer tester exchange, where developers test each other\'s apps on their own phones and daily use is verified',
+    community:'a developer community, where I shared the opt-in link and explained what to test',
+    friends:'friends, family and colleagues who use Android phones'}[f.source];
+  const days=n('days'), daily=n('daily'), td=Math.round(days*daily), fb=lines(f.feedback), ch=lines(f.changes);
+  const mins=n('minutes')?' Sessions lasted about '+n('minutes')+' minutes on average.':'';
+  const A=[
+   ['How easy was it to recruit testers for your app?','I recruited testers through '+src+'. '+n('joined')+' people opted in to the closed test and '+n('installed')+' installed '+app+' from Google Play. [If you replaced testers who dropped out, say so here.]'],
+   ['Describe the engagement you received from testers during your closed test.','The closed test ran for '+days+' days. On average '+daily+' testers used '+app+' each day, about '+td+' tester-days in total.'+mins+' '+n('completed')+' testers stayed until the end of the test. [Add how you kept testers active, e.g. tasks you asked them to try.]'],
+   ['Summarize the feedback that you received from testers. Include how you collected the feedback.','I collected feedback through written notes from testers during the test'+(fb.length?'. The main themes were: '+list(fb)+'.':'. [Add the main themes testers reported.]')],
+   ['Who is the intended audience of your app?',f.audience.trim()||'[Describe who the app is for.]'],
+   ['Describe how your app provides value to users.',f.value.trim()||'[Describe what users can do with the app.]'],
+   ['How many installs do you expect your app to have in your first year?',f.installs.trim()||'[Give an honest range.]'],
+   ['What changes did you make to your app based on what you learned during closed testing?',(ch.length?'Based on tester feedback I '+list(ch.map(x=>x.charAt(0).toLowerCase()+x.slice(1)))+'.':'[List the fixes and changes you made.]')+(n('builds')?' I uploaded '+n('builds')+' new build'+(n('builds')>1?'s':'')+' to the closed track during the test.':'')],
+   ['How did you decide that your app is ready for production?','After '+days+' days of testing with about '+daily+' active testers a day, the main flows work reliably, the issues testers reported are fixed'+(n('builds')?' in the builds I shipped during the test':'')+', and testers kept using '+app+' until the end of the test.']
+  ];
+  const box=document.getElementById('answers');box.textContent='';
+  for(const [q,a] of A){const d=document.createElement('div');d.className='ans';
+    const b=document.createElement('b');b.textContent=q;const p=document.createElement('p');p.textContent=a;
+    const btn=document.createElement('button');btn.type='button';btn.textContent=COPY;
+    btn.onclick=()=>{navigator.clipboard.writeText(a);btn.textContent=COPIED;setTimeout(()=>btn.textContent=COPY,1500)};
+    d.append(b,p,btn);box.append(d)}
+  const o=document.getElementById('out');o.hidden=false;o.scrollIntoView({behavior:'smooth'});
+}
+</script>
+<section><h2>更多指南</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">如何为 Google Play 封闭式测试找到 12 名测试人员</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/google-group-vs-email-list/" hreflang="zh-Hans">封闭式测试用 Google Group 还是电子邮件列表？</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/insufficient-testing-engagement/" hreflang="zh-Hans">封闭式测试后被拒？如何解决“需要更多测试”</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/production-access-questions/" hreflang="zh-Hans">如何回答 Google Play 正式版访问权限问卷</a></li></ul></section>
+</main>
+<footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
+<a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>
+</div></body></html>

@@ -33,14 +33,23 @@
 a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
 header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
 .brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
-select{font:inherit;font-size:14px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:4px 8px;max-width:160px}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
 h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
 .muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
 .cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
-.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
 ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
 .toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
 summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Как найти 12 тестировщиков для закрытого тестирования в Google Play","description":"Новым аккаунтам разработчиков Google Play нужно 12 тестировщиков на 14 дней до выхода в рабочую версию. Пошагово: настройка закрытого теста, бесплатный поиск реальных тестировщиков, удержание их вовлечённости и ответы на вопросы Google.","inLanguage":"ru","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/ru/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Должны ли 12 тестировщиков пользоваться приложением каждый день?","acceptedAnswer":{"@type":"Answer","text":"Google требует, чтобы они оставались в тесте 14 дней, и оценивает вовлечённость. Регулярное реальное использование помогает избежать отказа из-за «недостаточного тестирования»."}},{"@type":"Question","name":"Можно ли использовать свои телефоны или аккаунты в качестве тестировщиков?","acceptedAnswer":{"@type":"Answer","text":"Google видит, когда много аккаунтов используют одно устройство, и это не считается реальным тестированием. Нужны реальные люди со своими телефонами."}},{"@type":"Question","name":"Сбрасывает ли уход тестировщика 14 дней?","acceptedAnswer":{"@type":"Answer","text":"Счётчик растёт только в дни, когда в тесте не меньше 12 участников. Наберите пару тестировщиков с запасом, чтобы выбывшие вас не тормозили."}},{"@type":"Question","name":"Tester Exchange бесплатный?","acceptedAnswer":{"@type":"Answer","text":"Да. Кредиты зарабатываются тестированием других приложений. Покупка кредитов — по желанию, для тех, у кого нет времени тестировать."}}]}]}</script>
 </head>
@@ -51,6 +60,7 @@ summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);m
 </select>
 <a href="https://zachhhhh.github.io/tester-exchange-site/?lang=ru">Открыть Tester Exchange</a></header>
 <main>
+
 <h1>Как найти 12 тестировщиков для закрытого тестирования в Google Play</h1>
 <p class="muted">Обновлено в октябре 2026 г.</p>
 <p class="lede">Если вы создали личный аккаунт разработчика Google Play после 13 ноября 2023 года, сразу опубликовать приложение в рабочей версии не получится. Сначала нужно провести закрытое тестирование, в котором не менее 12 тестировщиков участвуют 14 дней подряд. Кроме того, Google проверяет, действительно ли эти тестировщики пользовались вашим приложением. В этом руководстве разобран весь процесс и показан бесплатный способ найти реальных тестировщиков.</p>
@@ -120,6 +130,7 @@ summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);m
 <details><summary>Tester Exchange бесплатный?</summary><p>Да. Кредиты зарабатываются тестированием других приложений. Покупка кредитов — по желанию, для тех, у кого нет времени тестировать.</p></details>
 </section>
 <div class="cta"><span>Бесплатный обмен тестировщиками: тестируйте приложения других разработчиков, зарабатывайте кредиты и тратьте их на тестировщиков для своего. Ежедневное использование подтверждается на реальных телефонах.</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=ru">Получить 12 тестировщиков бесплатно</a></div>
+<section><h2>Другие руководства</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/ru/google-group-vs-email-list/" hreflang="ru">Google Group или список адресов для закрытого тестирования?</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/ru/insufficient-testing-engagement/" hreflang="ru">Отказ после закрытого тестирования? Как исправить «требуется больше тестирования»</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/ru/production-access-questions/" hreflang="ru">Как ответить на вопросы Google Play о доступе к рабочей версии</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/ru/tools/production-answers/" hreflang="ru">Генератор ответов для доступа к рабочей версии</a></li></ul></section>
 </main>
 <footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
 <a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>

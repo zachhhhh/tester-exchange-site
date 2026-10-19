@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thử nghiệm kín trên Google Play: Google Group hay danh sách email (hướng dẫn thiết lập)</title>
+<meta name="description" content="Nên dùng danh sách người thử nghiệm nào cho thử nghiệm kín trên Google Play, cách thiết lập từng loại, cách người thử nghiệm tham gia và những lỗi khiến họ không thấy ứng dụng của bạn.">
+<link rel="canonical" href="https://zachhhhh.github.io/tester-exchange-site/vi/google-group-vs-email-list/">
+<link rel="alternate" hreflang="en" href="https://zachhhhh.github.io/tester-exchange-site/guide/google-group-vs-email-list/">
+<link rel="alternate" hreflang="de" href="https://zachhhhh.github.io/tester-exchange-site/de/google-group-vs-email-list/">
+<link rel="alternate" hreflang="es" href="https://zachhhhh.github.io/tester-exchange-site/es/google-group-vs-email-list/">
+<link rel="alternate" hreflang="fr" href="https://zachhhhh.github.io/tester-exchange-site/fr/google-group-vs-email-list/">
+<link rel="alternate" hreflang="hi" href="https://zachhhhh.github.io/tester-exchange-site/hi/google-group-vs-email-list/">
+<link rel="alternate" hreflang="id" href="https://zachhhhh.github.io/tester-exchange-site/id/google-group-vs-email-list/">
+<link rel="alternate" hreflang="ja" href="https://zachhhhh.github.io/tester-exchange-site/ja/google-group-vs-email-list/">
+<link rel="alternate" hreflang="ko" href="https://zachhhhh.github.io/tester-exchange-site/ko/google-group-vs-email-list/">
+<link rel="alternate" hreflang="pt" href="https://zachhhhh.github.io/tester-exchange-site/pt/google-group-vs-email-list/">
+<link rel="alternate" hreflang="ru" href="https://zachhhhh.github.io/tester-exchange-site/ru/google-group-vs-email-list/">
+<link rel="alternate" hreflang="tr" href="https://zachhhhh.github.io/tester-exchange-site/tr/google-group-vs-email-list/">
+<link rel="alternate" hreflang="vi" href="https://zachhhhh.github.io/tester-exchange-site/vi/google-group-vs-email-list/">
+<link rel="alternate" hreflang="zh-Hans" href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/google-group-vs-email-list/">
+<link rel="alternate" hreflang="zh-Hant" href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/google-group-vs-email-list/">
+<link rel="alternate" hreflang="x-default" href="https://zachhhhh.github.io/tester-exchange-site/guide/google-group-vs-email-list/">
+<meta property="og:type" content="article"><meta property="og:title" content="Thử nghiệm kín trên Google Play: Google Group hay danh sách email (hướng dẫn thiết lập)">
+<meta property="og:description" content="Nên dùng danh sách người thử nghiệm nào cho thử nghiệm kín trên Google Play, cách thiết lập từng loại, cách người thử nghiệm tham gia và những lỗi khiến họ không thấy ứng dụng của bạn."><meta property="og:url" content="https://zachhhhh.github.io/tester-exchange-site/vi/google-group-vs-email-list/">
+<meta property="og:image" content="https://zachhhhh.github.io/tester-exchange-site/store/feature-1024x500.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://zachhhhh.github.io/tester-exchange-site/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f6f5f1;--surface:#fff;--ink:#1c1d1a;--muted:#6d6f68;--line:#e3e1da;--accent:#1f7a4d;--accent-ink:#fff;--accent-soft:#e4f2ea}
+@media (prefers-color-scheme:dark){:root{--bg:#141513;--surface:#1d1f1c;--ink:#ecebe6;--muted:#9a9c94;--line:#30322e;--accent:#4cc38a;--accent-ink:#0d1f15;--accent-soft:#1d3327}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
+.muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
+.cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
+ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+.toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Google Group hay danh sách email cho thử nghiệm kín?","description":"Nên dùng danh sách người thử nghiệm nào cho thử nghiệm kín trên Google Play, cách thiết lập từng loại, cách người thử nghiệm tham gia và những lỗi khiến họ không thấy ứng dụng của bạn.","inLanguage":"vi","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/vi/google-group-vs-email-list/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Thành viên nhóm có được tính vào 12 người thử nghiệm không?","acceptedAnswer":{"@type":"Answer","text":"Chỉ những người đã chọn tham gia qua đường liên kết chọn tham gia mới được tính, dù bạn dùng loại danh sách nào."}},{"@type":"Question","name":"Tôi có thể dùng cả hai không?","acceptedAnswer":{"@type":"Answer","text":"Có. Một kênh có thể có danh sách email và Google Groups cùng lúc."}},{"@type":"Question","name":"Người thử nghiệm có thể ẩn danh không?","acceptedAnswer":{"@type":"Answer","text":"Với Google Group, bạn không cần tự thu thập email. Với danh sách email, bạn cần email tài khoản Google của từng người thử nghiệm."}}]}]}</script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://zachhhhh.github.io/tester-exchange-site/?lang=vi">Tester<span>Exchange</span></a><span class="grow"></span>
+<select aria-label="Ngôn ngữ" onchange="location.href=this.value">
+<option value="https://zachhhhh.github.io/tester-exchange-site/guide/google-group-vs-email-list/">English</option><option value="https://zachhhhh.github.io/tester-exchange-site/de/google-group-vs-email-list/">Deutsch</option><option value="https://zachhhhh.github.io/tester-exchange-site/es/google-group-vs-email-list/">Español</option><option value="https://zachhhhh.github.io/tester-exchange-site/fr/google-group-vs-email-list/">Français</option><option value="https://zachhhhh.github.io/tester-exchange-site/hi/google-group-vs-email-list/">हिन्दी</option><option value="https://zachhhhh.github.io/tester-exchange-site/id/google-group-vs-email-list/">Bahasa Indonesia</option><option value="https://zachhhhh.github.io/tester-exchange-site/ja/google-group-vs-email-list/">日本語</option><option value="https://zachhhhh.github.io/tester-exchange-site/ko/google-group-vs-email-list/">한국어</option><option value="https://zachhhhh.github.io/tester-exchange-site/pt/google-group-vs-email-list/">Português</option><option value="https://zachhhhh.github.io/tester-exchange-site/ru/google-group-vs-email-list/">Русский</option><option value="https://zachhhhh.github.io/tester-exchange-site/tr/google-group-vs-email-list/">Türkçe</option><option value="https://zachhhhh.github.io/tester-exchange-site/vi/google-group-vs-email-list/" selected>Tiếng Việt</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-cn/google-group-vs-email-list/">简体中文</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-tw/google-group-vs-email-list/">繁體中文</option>
+</select>
+<a href="https://zachhhhh.github.io/tester-exchange-site/?lang=vi">Mở Tester Exchange</a></header>
+<main>
+
+<h1>Google Group hay danh sách email cho thử nghiệm kín?</h1>
+<p class="muted">Cập nhật tháng 10/2026</p>
+<p class="lede">Mỗi kênh thử nghiệm kín cần một danh sách những ai được phép cài ứng dụng. Play Console cho bạn hai lựa chọn: danh sách email do bạn quản lý trong Play Console, hoặc một Google Group. Cả hai đều đáp ứng yêu cầu 12 người thử nghiệm. Khác biệt nằm ở công sức thêm người.</p>
+<div class="cta"><span>Tester Exchange hỗ trợ cả hai: người thử nghiệm nhận đường liên kết nhóm của bạn trong danh sách nhiệm vụ, hoặc bạn sao chép email của họ vào danh sách chỉ với một cú nhấp.</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=vi">Tìm người thử nghiệm miễn phí</a></div>
+<nav class="toc"><b>Trên trang này</b><ul><li><a href="#compare">So sánh nhanh</a></li><li><a href="#group">Thiết lập Google Group</a></li><li><a href="#email">Thiết lập danh sách email</a></li><li><a href="#mistakes">Những lỗi khiến người thử nghiệm không thấy ứng dụng</a></li><li><a href="#faq">Câu hỏi thường gặp</a></li></ul></nav>
+
+<section id="compare">
+<h2>So sánh nhanh</h2>
+
+<ul><li><b>Google Group:</b> bất kỳ ai có đường liên kết nhóm đều có thể tham gia, nên bạn không phải thêm từng người. Phù hợp nhất khi người thử nghiệm đến từ nhiều nơi.</li><li><b>Danh sách email:</b> bạn dán email tài khoản Google của từng người thử nghiệm vào Play Console. Kiểm soát hoàn toàn ai được tham gia, nhưng bạn phải cập nhật danh sách mỗi khi có người mới.</li></ul>
+
+
+</section>
+
+<section id="group">
+<h2>Thiết lập Google Group</h2>
+
+
+<ol><li>Truy cập groups.google.com và tạo một nhóm. Đặt “Ai có thể tham gia” thành bất kỳ ai trên web, để người thử nghiệm không phải chờ phê duyệt.</li><li>Trong Play Console → Thử nghiệm → Thử nghiệm kín → kênh của bạn → Người thử nghiệm, chọn Google Groups và thêm địa chỉ email của nhóm.</li><li>Gửi cho người thử nghiệm hai đường liên kết: đường liên kết nhóm (tham gia trước) và đường liên kết chọn tham gia (trở thành người thử nghiệm).</li><li>Người thử nghiệm cài ứng dụng từ Google Play bằng chính tài khoản Google họ đã dùng để tham gia nhóm.</li></ol>
+
+</section>
+
+<section id="email">
+<h2>Thiết lập danh sách email</h2>
+
+
+<ol><li>Trong Play Console → Thử nghiệm → Thử nghiệm kín → kênh của bạn → Người thử nghiệm, tạo một danh sách email.</li><li>Dán email tài khoản Google của người thử nghiệm, phân tách bằng dấu phẩy, rồi lưu.</li><li>Chia sẻ đường liên kết chọn tham gia. Người thử nghiệm phải mở đường liên kết này khi đang đăng nhập bằng email bạn đã thêm.</li></ol>
+
+</section>
+
+<section id="mistakes">
+<h2>Những lỗi khiến người thử nghiệm không thấy ứng dụng</h2>
+
+<ul><li>Người thử nghiệm tham gia bằng một tài khoản Google nhưng Play Store trên điện thoại lại dùng tài khoản khác.</li><li>Nhóm yêu cầu phê duyệt, nên người thử nghiệm bị kẹt ở trạng thái chờ.</li><li>Người thử nghiệm đã tham gia nhóm nhưng chưa bao giờ mở đường liên kết chọn tham gia và nhấn “Trở thành người thử nghiệm”.</li><li>Bản phát hành chưa được duyệt. Người thử nghiệm không thể cài đặt cho đến khi kênh thử nghiệm kín được phát hành.</li></ul>
+
+
+</section>
+<section id="faq"><h2>Câu hỏi thường gặp</h2>
+<details><summary>Thành viên nhóm có được tính vào 12 người thử nghiệm không?</summary><p>Chỉ những người đã chọn tham gia qua đường liên kết chọn tham gia mới được tính, dù bạn dùng loại danh sách nào.</p></details>
+<details><summary>Tôi có thể dùng cả hai không?</summary><p>Có. Một kênh có thể có danh sách email và Google Groups cùng lúc.</p></details>
+<details><summary>Người thử nghiệm có thể ẩn danh không?</summary><p>Với Google Group, bạn không cần tự thu thập email. Với danh sách email, bạn cần email tài khoản Google của từng người thử nghiệm.</p></details>
+</section>
+<div class="cta"><span>Tester Exchange hỗ trợ cả hai: người thử nghiệm nhận đường liên kết nhóm của bạn trong danh sách nhiệm vụ, hoặc bạn sao chép email của họ vào danh sách chỉ với một cú nhấp.</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=vi">Tìm người thử nghiệm miễn phí</a></div>
+<section><h2>Hướng dẫn khác</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Cách có 12 người kiểm thử cho thử nghiệm kín trên Google Play</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/vi/insufficient-testing-engagement/" hreflang="vi">Bị từ chối sau thử nghiệm kín? Cách khắc phục “cần thử nghiệm thêm”</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/vi/production-access-questions/" hreflang="vi">Cách trả lời các câu hỏi xin quyền phát hành chính thức của Google Play</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/vi/tools/production-answers/" hreflang="vi">Công cụ tạo câu trả lời xin quyền phát hành chính thức</a></li></ul></section>
+</main>
+<footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
+<a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>
+</div></body></html>

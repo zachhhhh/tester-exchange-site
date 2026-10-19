@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Play üretim erişimi soruları: her birine nasıl yanıt verilir (örneklerle)</title>
+<meta name="description" content="Kapalı testten sonra Play Console; test kullanıcısı bulma, etkileşim, geri bildirim, uygulamanız ve hazırlık durumu hakkında sorular sorar. Her sorunun anlamı, örnek yanıtlar ve ücretsiz bir yanıt oluşturucu.">
+<link rel="canonical" href="https://zachhhhh.github.io/tester-exchange-site/tr/production-access-questions/">
+<link rel="alternate" hreflang="en" href="https://zachhhhh.github.io/tester-exchange-site/guide/production-access-questions/">
+<link rel="alternate" hreflang="de" href="https://zachhhhh.github.io/tester-exchange-site/de/production-access-questions/">
+<link rel="alternate" hreflang="es" href="https://zachhhhh.github.io/tester-exchange-site/es/production-access-questions/">
+<link rel="alternate" hreflang="fr" href="https://zachhhhh.github.io/tester-exchange-site/fr/production-access-questions/">
+<link rel="alternate" hreflang="hi" href="https://zachhhhh.github.io/tester-exchange-site/hi/production-access-questions/">
+<link rel="alternate" hreflang="id" href="https://zachhhhh.github.io/tester-exchange-site/id/production-access-questions/">
+<link rel="alternate" hreflang="ja" href="https://zachhhhh.github.io/tester-exchange-site/ja/production-access-questions/">
+<link rel="alternate" hreflang="ko" href="https://zachhhhh.github.io/tester-exchange-site/ko/production-access-questions/">
+<link rel="alternate" hreflang="pt" href="https://zachhhhh.github.io/tester-exchange-site/pt/production-access-questions/">
+<link rel="alternate" hreflang="ru" href="https://zachhhhh.github.io/tester-exchange-site/ru/production-access-questions/">
+<link rel="alternate" hreflang="tr" href="https://zachhhhh.github.io/tester-exchange-site/tr/production-access-questions/">
+<link rel="alternate" hreflang="vi" href="https://zachhhhh.github.io/tester-exchange-site/vi/production-access-questions/">
+<link rel="alternate" hreflang="zh-Hans" href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/production-access-questions/">
+<link rel="alternate" hreflang="zh-Hant" href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/production-access-questions/">
+<link rel="alternate" hreflang="x-default" href="https://zachhhhh.github.io/tester-exchange-site/guide/production-access-questions/">
+<meta property="og:type" content="article"><meta property="og:title" content="Google Play üretim erişimi soruları: her birine nasıl yanıt verilir (örneklerle)">
+<meta property="og:description" content="Kapalı testten sonra Play Console; test kullanıcısı bulma, etkileşim, geri bildirim, uygulamanız ve hazırlık durumu hakkında sorular sorar. Her sorunun anlamı, örnek yanıtlar ve ücretsiz bir yanıt oluşturucu."><meta property="og:url" content="https://zachhhhh.github.io/tester-exchange-site/tr/production-access-questions/">
+<meta property="og:image" content="https://zachhhhh.github.io/tester-exchange-site/store/feature-1024x500.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://zachhhhh.github.io/tester-exchange-site/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f6f5f1;--surface:#fff;--ink:#1c1d1a;--muted:#6d6f68;--line:#e3e1da;--accent:#1f7a4d;--accent-ink:#fff;--accent-soft:#e4f2ea}
+@media (prefers-color-scheme:dark){:root{--bg:#141513;--surface:#1d1f1c;--ink:#ecebe6;--muted:#9a9c94;--line:#30322e;--accent:#4cc38a;--accent-ink:#0d1f15;--accent-soft:#1d3327}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
+.muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
+.cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
+ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+.toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Google Play üretim erişimi sorularına nasıl yanıt verilir","description":"Kapalı testten sonra Play Console; test kullanıcısı bulma, etkileşim, geri bildirim, uygulamanız ve hazırlık durumu hakkında sorular sorar. Her sorunun anlamı, örnek yanıtlar ve ücretsiz bir yanıt oluşturucu.","inLanguage":"tr","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/tr/production-access-questions/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kendi dilimde yanıt verebilir miyim?","acceptedAnswer":{"@type":"Answer","text":"Evet, ancak açık ve sade İngilizce en güvenli seçenektir, çünkü inceleme yapanlar dilinizi okuyamayabilir."}},{"@type":"Question","name":"Yanıtlar ne kadar uzun olmalı?","acceptedAnswer":{"@type":"Answer","text":"Her biri için iki ila beş cümle yeterlidir. Somut olmak uzun olmaktan iyidir."}},{"@type":"Question","name":"Elimde sayı yoksa ne olacak?","acceptedAnswer":{"@type":"Answer","text":"O zaman muhtemelen daha fazla teste ihtiyacınız var. Başvurmadan önce günlük aktif test kullanıcılarını ve geri bildirimleri takip edin."}}]}]}</script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://zachhhhh.github.io/tester-exchange-site/?lang=tr">Tester<span>Exchange</span></a><span class="grow"></span>
+<select aria-label="Dil" onchange="location.href=this.value">
+<option value="https://zachhhhh.github.io/tester-exchange-site/guide/production-access-questions/">English</option><option value="https://zachhhhh.github.io/tester-exchange-site/de/production-access-questions/">Deutsch</option><option value="https://zachhhhh.github.io/tester-exchange-site/es/production-access-questions/">Español</option><option value="https://zachhhhh.github.io/tester-exchange-site/fr/production-access-questions/">Français</option><option value="https://zachhhhh.github.io/tester-exchange-site/hi/production-access-questions/">हिन्दी</option><option value="https://zachhhhh.github.io/tester-exchange-site/id/production-access-questions/">Bahasa Indonesia</option><option value="https://zachhhhh.github.io/tester-exchange-site/ja/production-access-questions/">日本語</option><option value="https://zachhhhh.github.io/tester-exchange-site/ko/production-access-questions/">한국어</option><option value="https://zachhhhh.github.io/tester-exchange-site/pt/production-access-questions/">Português</option><option value="https://zachhhhh.github.io/tester-exchange-site/ru/production-access-questions/">Русский</option><option value="https://zachhhhh.github.io/tester-exchange-site/tr/production-access-questions/" selected>Türkçe</option><option value="https://zachhhhh.github.io/tester-exchange-site/vi/production-access-questions/">Tiếng Việt</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-cn/production-access-questions/">简体中文</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-tw/production-access-questions/">繁體中文</option>
+</select>
+<a href="https://zachhhhh.github.io/tester-exchange-site/?lang=tr">Tester Exchange'i aç</a></header>
+<main>
+
+<h1>Google Play üretim erişimi sorularına nasıl yanıt verilir</h1>
+<p class="muted">Ekim 2026'da güncellendi</p>
+<p class="lede">Kapalı testiniz bittiğinde Play Console sizden üretim erişimi için başvurmanızı ve kısa bir anketi doldurmanızı ister. Yanıtlarınız, Google'ın görebildiği test verileriyle birlikte erişim alıp almayacağınızı belirler. İyi yanıtlar somuttur: gerçek sayılar, gerçek geri bildirimler ve gerçek değişiklikler.</p>
+<div class="cta"><span>Ücretsiz yanıt oluşturucuyu kullanın ya da testinizi Tester Exchange'de yürütün ve yanıtlarınızı doğrulanmış test verilerinden hazırlanmış olarak alın.</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/tr/tools/production-answers/">Yanıtlarınızı ücretsiz oluşturun</a></div>
+<nav class="toc"><b>Bu sayfada</b><ul><li><a href="#test">Kapalı testinizle ilgili sorular</a></li><li><a href="#app">Uygulamanızla ilgili sorular</a></li><li><a href="#ready">Üretime hazırlıkla ilgili sorular</a></li><li><a href="#example">Örnek yanıt (etkileşim)</a></li><li><a href="#faq">Sık sorulan sorular</a></li></ul></nav>
+
+<section id="test">
+<h2>Kapalı testinizle ilgili sorular</h2>
+
+<ul><li><b>Test kullanıcısı bulmak ne kadar kolaydı?</b> Nereden geldiklerini (arkadaşlar, bir geliştirici topluluğu, bir test kullanıcısı değişim platformu) ve kaç kişinin katıldığını, yüklediğini ve devam ettiğini belirtin.</li><li><b>Aldığınız etkileşimi açıklayın.</b> Sayı verin: günlük aktif test kullanıcısı, toplam test kullanıcısı-günü ve testin ne kadar sürdüğü. Test kullanıcılarını nasıl aktif tuttuğunuzu belirtin.</li><li><b>Geri bildirimleri özetleyin.</b> İki veya üç somut konu belirtin (“kayıt olmak kafa karıştırıcıydı”, “ekran döndürülünce uygulama çöküyor”) ve geri bildirimi nasıl topladığınızı söyleyin.</li></ul>
+
+
+</section>
+
+<section id="app">
+<h2>Uygulamanızla ilgili sorular</h2>
+
+<ul><li><b>Hedef kitle kim?</b> Net olun: kim olduklarını ve hangi sorunu yaşadıklarını yazın.</li><li><b>Uygulamanız nasıl değer sağlıyor?</b> Kullanıcıların daha önce yapamadığı neyi yapabildiğini bir iki cümleyle anlatın.</li><li><b>İlk yılda kaç yükleme bekliyorsunuz?</b> Dürüst bir aralık seçin. Yeni bir geliştiriciden kimse büyük bir sayı beklemez.</li></ul>
+
+
+</section>
+
+<section id="ready">
+<h2>Üretime hazırlıkla ilgili sorular</h2>
+
+<ul><li><b>Teste dayanarak hangi değişiklikleri yaptınız?</b> Düzeltmeleri ve iyileştirmeleri listeleyin, test süresince yüklediğiniz sürümleri belirtin.</li><li><b>Uygulamanızın hazır olduğuna nasıl karar verdiniz?</b> Ölçüt kullanın: temel akışlar çalışıyor, bildirilen çökmeler düzeltildi, test kullanıcıları uygulamayı tüm süre boyunca kullandı.</li></ul>
+
+
+</section>
+
+<section id="example">
+<h2>Örnek yanıt (etkileşim)</h2>
+<p>“14 test kullanıcısı uygulamayı kapalı kanaldan yükledi ve 15 gün boyunca kullandı. Her gün ortalama 12 test kullanıcısı aktifti; toplamda 186 test kullanıcısı-günü ve oturum başına yaklaşık 4 dakika. Test kullanıcılarına her hafta kısa bir görev listesi gönderdik ve kafa karıştırıcı bulduklarını bildirmelerini istedik. 13 test kullanıcısı tüm süreyi tamamladı.”</p>
+
+
+
+</section>
+<section id="faq"><h2>Sık sorulan sorular</h2>
+<details><summary>Kendi dilimde yanıt verebilir miyim?</summary><p>Evet, ancak açık ve sade İngilizce en güvenli seçenektir, çünkü inceleme yapanlar dilinizi okuyamayabilir.</p></details>
+<details><summary>Yanıtlar ne kadar uzun olmalı?</summary><p>Her biri için iki ila beş cümle yeterlidir. Somut olmak uzun olmaktan iyidir.</p></details>
+<details><summary>Elimde sayı yoksa ne olacak?</summary><p>O zaman muhtemelen daha fazla teste ihtiyacınız var. Başvurmadan önce günlük aktif test kullanıcılarını ve geri bildirimleri takip edin.</p></details>
+</section>
+<div class="cta"><span>Ücretsiz yanıt oluşturucuyu kullanın ya da testinizi Tester Exchange'de yürütün ve yanıtlarınızı doğrulanmış test verilerinden hazırlanmış olarak alın.</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=tr">Yanıtlarınızı ücretsiz oluşturun</a></div>
+<section><h2>Diğer rehberler</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Google Play kapalı testi için 12 test kullanıcısı nasıl bulunur</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/google-group-vs-email-list/" hreflang="tr">Kapalı testiniz için Google Group mu, e-posta listesi mi?</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/insufficient-testing-engagement/" hreflang="tr">Kapalı testten sonra reddedildiniz mi? “Daha fazla test gerekli” hatası nasıl düzeltilir</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/tools/production-answers/" hreflang="tr">Üretim erişimi yanıt oluşturucu</a></li></ul></section>
+</main>
+<footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
+<a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>
+</div></body></html>

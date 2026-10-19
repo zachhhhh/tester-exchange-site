@@ -33,14 +33,23 @@
 a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
 header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
 .brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
-select{font:inherit;font-size:14px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:4px 8px;max-width:160px}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
 h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
 .muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
 .cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
-.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
 ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
 .toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
 summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"如何為 Google Play 封閉測試找到 12 位測試人員","description":"新的 Google Play 開發人員帳戶在發布正式版前，需要 12 位測試人員連續測試 14 天。逐步教學：設定封閉測試、免費找到真實的測試人員、維持他們的參與度，並回答 Google 的正式版申請問題。","inLanguage":"zh-Hant","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/zh-tw/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"12 位測試人員需要每天使用應用程式嗎？","acceptedAnswer":{"@type":"Answer","text":"Google 要求他們連續 14 天維持選擇加入狀態，並會審查參與度。經常真實地使用，才能避免因「測試不足」遭拒。"}},{"@type":"Question","name":"可以用我自己的手機或帳戶當測試人員嗎？","acceptedAnswer":{"@type":"Answer","text":"Google 能辨識多個帳戶共用一部裝置的情況，這不算真正的測試。請找使用自己手機的真人。"}},{"@type":"Question","name":"有測試人員退出，14 天會重新計算嗎？","acceptedAnswer":{"@type":"Answer","text":"只有在至少 12 位測試人員選擇加入的日子，天數才會累計。多招募幾位測試人員，避免有人退出導致進度停滯。"}},{"@type":"Question","name":"Tester Exchange 免費嗎？","acceptedAnswer":{"@type":"Answer","text":"免費。你可以靠測試其他應用程式賺取點數。購買點數是選用的，適合沒時間測試的人。"}}]}]}</script>
 </head>
@@ -51,6 +60,7 @@ summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);m
 </select>
 <a href="https://zachhhhh.github.io/tester-exchange-site/?lang=zh-tw">開啟 Tester Exchange</a></header>
 <main>
+
 <h1>如何為 Google Play 封閉測試找到 12 位測試人員</h1>
 <p class="muted">2026 年 10 月更新</p>
 <p class="lede">如果你的個人 Google Play 開發人員帳戶是在 2023 年 11 月 13 日之後建立的，就無法直接發布正式版。你必須先進行封閉測試，至少有 12 位測試人員連續 14 天維持選擇加入狀態。Google 也會審查這些測試人員是否真的使用了你的應用程式。本指南會帶你走完整個流程，並介紹一種免費找到真實測試人員的方法。</p>
@@ -120,6 +130,7 @@ summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);m
 <details><summary>Tester Exchange 免費嗎？</summary><p>免費。你可以靠測試其他應用程式賺取點數。購買點數是選用的，適合沒時間測試的人。</p></details>
 </section>
 <div class="cta"><span>免費互助測試平台：測試其他開發人員的應用程式、賺取點數，再用點數為你的應用程式換取測試人員。每日使用情況都在真實手機上驗證。</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=zh-tw">免費取得 12 位測試人員</a></div>
+<section><h2>更多指南</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/google-group-vs-email-list/" hreflang="zh-Hant">封閉測試該用 Google Group 還是電子郵件清單？</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/insufficient-testing-engagement/" hreflang="zh-Hant">封閉測試後被拒？如何解決「需要更多測試」</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/production-access-questions/" hreflang="zh-Hant">如何回答 Google Play 正式版存取權問卷</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/tools/production-answers/" hreflang="zh-Hant">正式版存取權回答產生器</a></li></ul></section>
 </main>
 <footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
 <a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>

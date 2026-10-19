@@ -33,14 +33,23 @@
 a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
 header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
 .brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
-select{font:inherit;font-size:14px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:4px 8px;max-width:160px}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
 h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
 .muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
 .cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
-.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
 ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
 .toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
 summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Cómo conseguir 12 testers para las pruebas cerradas de Google Play","description":"Las cuentas nuevas de desarrollador de Google Play necesitan 12 testers durante 14 días antes de pasar a producción. Paso a paso: configura la prueba cerrada, encuentra testers reales gratis, mantenlos activos y responde las preguntas de producción de Google.","inLanguage":"es","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/es/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Los 12 testers tienen que usar la app todos los días?","acceptedAnswer":{"@type":"Answer","text":"Google exige que permanezcan inscritos durante 14 días y revisa la interacción. Un uso real y regular es lo que evita un rechazo por “pruebas insuficientes”."}},{"@type":"Question","name":"¿Puedo usar mis propios teléfonos o cuentas como testers?","acceptedAnswer":{"@type":"Answer","text":"Google detecta cuando muchas cuentas comparten un mismo dispositivo, y eso no cuenta como pruebas reales. Usa personas reales con sus propios teléfonos."}},{"@type":"Question","name":"¿Si un tester se va, se reinician los 14 días?","acceptedAnswer":{"@type":"Answer","text":"El conteo solo avanza los días con al menos 12 testers inscritos. Recluta un par de testers extra para que las bajas no te frenen."}},{"@type":"Question","name":"¿Tester Exchange es gratis?","acceptedAnswer":{"@type":"Answer","text":"Sí. Ganas créditos probando otras apps. Comprar créditos es opcional, para quienes no tienen tiempo de probar."}}]}]}</script>
 </head>
@@ -51,6 +60,7 @@ summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);m
 </select>
 <a href="https://zachhhhh.github.io/tester-exchange-site/?lang=es">Abrir Tester Exchange</a></header>
 <main>
+
 <h1>Cómo conseguir 12 testers para las pruebas cerradas de Google Play</h1>
 <p class="muted">Actualizado en octubre de 2026</p>
 <p class="lede">Si creaste una cuenta de desarrollador personal de Google Play después del 13 de noviembre de 2023, no puedes publicar en producción de inmediato. Primero necesitas una prueba cerrada con al menos 12 testers que permanezcan inscritos durante 14 días seguidos. Además, Google revisa si esos testers de verdad usaron tu app. Esta guía recorre todo el proceso y muestra una forma gratuita de encontrar testers reales.</p>
@@ -120,6 +130,7 @@ summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);m
 <details><summary>¿Tester Exchange es gratis?</summary><p>Sí. Ganas créditos probando otras apps. Comprar créditos es opcional, para quienes no tienen tiempo de probar.</p></details>
 </section>
 <div class="cta"><span>Intercambio gratuito de testers: prueba apps de otros desarrolladores, gana créditos y úsalos en testers para la tuya. El uso diario se verifica en teléfonos reales.</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=es">Consigue tus 12 testers gratis</a></div>
+<section><h2>Más guías</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/es/google-group-vs-email-list/" hreflang="es">¿Google Group o lista de correos para tu prueba cerrada?</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/es/insufficient-testing-engagement/" hreflang="es">¿Rechazado tras la prueba cerrada? Cómo solucionar &quot;se requieren más pruebas&quot;</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/es/production-access-questions/" hreflang="es">Cómo responder las preguntas de acceso a producción de Google Play</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/es/tools/production-answers/" hreflang="es">Generador de respuestas para el acceso a producción</a></li></ul></section>
 </main>
 <footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
 <a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>

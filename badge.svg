@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="208" height="28" viewBox="0 0 208 28" role="img" aria-label="Help test this app on Tester Exchange">
+  <title>Help test this app on Tester Exchange</title>
+  <rect width="208" height="28" rx="6" fill="#1f7a4d"/>
+  <rect x="1" y="1" width="26" height="26" rx="5" fill="#fff" fill-opacity=".14"/>
+  <path d="M8 14.5l4 4 8-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="36" y="18.5" fill="#fff" font-family="Inter,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" font-weight="600">Help test this app · Tester Exchange</text>
+</svg>

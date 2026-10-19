@@ -33,14 +33,23 @@
 a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
 header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
 .brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
-select{font:inherit;font-size:14px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:4px 8px;max-width:160px}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
 h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
 .muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
 .cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
-.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
 ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
 .toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
 summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Cách có 12 người kiểm thử cho thử nghiệm kín trên Google Play","description":"Tài khoản nhà phát triển Google Play mới cần 12 người kiểm thử trong 14 ngày trước khi lên phiên bản chính thức. Từng bước: thiết lập thử nghiệm kín, tìm người kiểm thử thật miễn phí, giữ họ tương tác và trả lời các câu hỏi của Google.","inLanguage":"vi","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/vi/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"12 người kiểm thử có cần dùng ứng dụng mỗi ngày không?","acceptedAnswer":{"@type":"Answer","text":"Google yêu cầu họ duy trì tham gia trong 14 ngày và có xem xét mức độ tương tác. Sử dụng thật và đều đặn là cách tránh bị từ chối vì “thử nghiệm chưa đủ”."}},{"@type":"Question","name":"Tôi có thể dùng điện thoại hoặc tài khoản của chính mình làm người kiểm thử không?","acceptedAnswer":{"@type":"Answer","text":"Google nhận biết được khi nhiều tài khoản dùng chung một thiết bị, và điều đó không được tính là thử nghiệm thật. Hãy dùng người thật với điện thoại của riêng họ."}},{"@type":"Question","name":"Người kiểm thử rời đi có làm 14 ngày bị đếm lại không?","acceptedAnswer":{"@type":"Answer","text":"Bộ đếm chỉ tăng vào những ngày có ít nhất 12 người kiểm thử đang tham gia. Hãy tuyển thêm vài người để việc bỏ ngang không làm bạn bị đình trệ."}},{"@type":"Question","name":"Tester Exchange có miễn phí không?","acceptedAnswer":{"@type":"Answer","text":"Có. Bạn kiếm tín dụng bằng cách thử các ứng dụng khác. Mua tín dụng là tùy chọn cho những ai không có thời gian thử ứng dụng."}}]}]}</script>
 </head>
@@ -51,6 +60,7 @@ summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);m
 </select>
 <a href="https://zachhhhh.github.io/tester-exchange-site/?lang=vi">Mở Tester Exchange</a></header>
 <main>
+
 <h1>Cách có 12 người kiểm thử cho thử nghiệm kín trên Google Play</h1>
 <p class="muted">Cập nhật tháng 10/2026</p>
 <p class="lede">Nếu bạn tạo tài khoản nhà phát triển Google Play cá nhân sau ngày 13/11/2023, bạn không thể phát hành phiên bản chính thức ngay. Trước tiên, bạn cần chạy thử nghiệm kín với ít nhất 12 người kiểm thử tham gia liên tục trong 14 ngày. Google cũng xem xét liệu những người đó có thật sự dùng ứng dụng của bạn hay không. Hướng dẫn này đi qua toàn bộ quy trình và chỉ cho bạn một cách miễn phí để tìm người kiểm thử thật.</p>
@@ -120,6 +130,7 @@ summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);m
 <details><summary>Tester Exchange có miễn phí không?</summary><p>Có. Bạn kiếm tín dụng bằng cách thử các ứng dụng khác. Mua tín dụng là tùy chọn cho những ai không có thời gian thử ứng dụng.</p></details>
 </section>
 <div class="cta"><span>Trao đổi người kiểm thử miễn phí: thử ứng dụng của các nhà phát triển khác, kiếm tín dụng, rồi dùng chúng để có người kiểm thử cho ứng dụng của bạn. Việc sử dụng hằng ngày được xác minh trên điện thoại thật.</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=vi">Có 12 người kiểm thử miễn phí</a></div>
+<section><h2>Hướng dẫn khác</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/vi/google-group-vs-email-list/" hreflang="vi">Google Group hay danh sách email cho thử nghiệm kín?</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/vi/insufficient-testing-engagement/" hreflang="vi">Bị từ chối sau thử nghiệm kín? Cách khắc phục “cần thử nghiệm thêm”</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/vi/production-access-questions/" hreflang="vi">Cách trả lời các câu hỏi xin quyền phát hành chính thức của Google Play</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/vi/tools/production-answers/" hreflang="vi">Công cụ tạo câu trả lời xin quyền phát hành chính thức</a></li></ul></section>
 </main>
 <footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
 <a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>

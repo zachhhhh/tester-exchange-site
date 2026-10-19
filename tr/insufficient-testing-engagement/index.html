@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kapalı test sonrası Google Play'in “daha fazla test gerekli” reddini düzeltme (2026)</title>
+<meta name="description" content="Google, 14 günlük kapalı testten sonra üretim erişimi isteğinizi reddetti mi? Bunun nedeni (uygulamayı gerçekten kullanmayan test kullanıcıları) ve bir sonraki denemede onay almak için adım adım plan.">
+<link rel="canonical" href="https://zachhhhh.github.io/tester-exchange-site/tr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="en" href="https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="de" href="https://zachhhhh.github.io/tester-exchange-site/de/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="es" href="https://zachhhhh.github.io/tester-exchange-site/es/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="fr" href="https://zachhhhh.github.io/tester-exchange-site/fr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="hi" href="https://zachhhhh.github.io/tester-exchange-site/hi/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="id" href="https://zachhhhh.github.io/tester-exchange-site/id/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ja" href="https://zachhhhh.github.io/tester-exchange-site/ja/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ko" href="https://zachhhhh.github.io/tester-exchange-site/ko/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="pt" href="https://zachhhhh.github.io/tester-exchange-site/pt/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ru" href="https://zachhhhh.github.io/tester-exchange-site/ru/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="tr" href="https://zachhhhh.github.io/tester-exchange-site/tr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="vi" href="https://zachhhhh.github.io/tester-exchange-site/vi/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="zh-Hans" href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="zh-Hant" href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="x-default" href="https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/">
+<meta property="og:type" content="article"><meta property="og:title" content="Kapalı test sonrası Google Play'in “daha fazla test gerekli” reddini düzeltme (2026)">
+<meta property="og:description" content="Google, 14 günlük kapalı testten sonra üretim erişimi isteğinizi reddetti mi? Bunun nedeni (uygulamayı gerçekten kullanmayan test kullanıcıları) ve bir sonraki denemede onay almak için adım adım plan."><meta property="og:url" content="https://zachhhhh.github.io/tester-exchange-site/tr/insufficient-testing-engagement/">
+<meta property="og:image" content="https://zachhhhh.github.io/tester-exchange-site/store/feature-1024x500.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://zachhhhh.github.io/tester-exchange-site/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f6f5f1;--surface:#fff;--ink:#1c1d1a;--muted:#6d6f68;--line:#e3e1da;--accent:#1f7a4d;--accent-ink:#fff;--accent-soft:#e4f2ea}
+@media (prefers-color-scheme:dark){:root{--bg:#141513;--surface:#1d1f1c;--ink:#ecebe6;--muted:#9a9c94;--line:#30322e;--accent:#4cc38a;--accent-ink:#0d1f15;--accent-soft:#1d3327}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
+.muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
+.cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
+ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+.toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Kapalı testten sonra reddedildiniz mi? “Daha fazla test gerekli” hatası nasıl düzeltilir","description":"Google, 14 günlük kapalı testten sonra üretim erişimi isteğinizi reddetti mi? Bunun nedeni (uygulamayı gerçekten kullanmayan test kullanıcıları) ve bir sonraki denemede onay almak için adım adım plan.","inLanguage":"tr","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/tr/insufficient-testing-engagement/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"14 günü baştan mı başlatmam gerekiyor?","acceptedAnswer":{"@type":"Answer","text":"Kapalı testiniz devam eder, ancak Google yeniden başvurmadan önce daha fazla gerçek test görmek ister. En az 14 gün daha aktif kullanım planlayın."}},{"@type":"Question","name":"Test kullanıcıları uygulamayı ne sıklıkla açmalı?","acceptedAnswer":{"@type":"Answer","text":"Google bir sayı yayınlamıyor. Test kullanıcılarının çoğunun her gün kullanması en güvenli yoldur ve Tester Exchange'in doğruladığı da budur."}},{"@type":"Question","name":"Geri bildirim önemli mi?","acceptedAnswer":{"@type":"Answer","text":"Evet. Anket, test kullanıcılarının ne söylediğini ve sizin neyi değiştirdiğinizi sorar. Gerçek geri bildirimler ve gerçek düzeltmeler yanıtlarınızı inandırıcı kılar."}}]}]}</script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://zachhhhh.github.io/tester-exchange-site/?lang=tr">Tester<span>Exchange</span></a><span class="grow"></span>
+<select aria-label="Dil" onchange="location.href=this.value">
+<option value="https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/">English</option><option value="https://zachhhhh.github.io/tester-exchange-site/de/insufficient-testing-engagement/">Deutsch</option><option value="https://zachhhhh.github.io/tester-exchange-site/es/insufficient-testing-engagement/">Español</option><option value="https://zachhhhh.github.io/tester-exchange-site/fr/insufficient-testing-engagement/">Français</option><option value="https://zachhhhh.github.io/tester-exchange-site/hi/insufficient-testing-engagement/">हिन्दी</option><option value="https://zachhhhh.github.io/tester-exchange-site/id/insufficient-testing-engagement/">Bahasa Indonesia</option><option value="https://zachhhhh.github.io/tester-exchange-site/ja/insufficient-testing-engagement/">日本語</option><option value="https://zachhhhh.github.io/tester-exchange-site/ko/insufficient-testing-engagement/">한국어</option><option value="https://zachhhhh.github.io/tester-exchange-site/pt/insufficient-testing-engagement/">Português</option><option value="https://zachhhhh.github.io/tester-exchange-site/ru/insufficient-testing-engagement/">Русский</option><option value="https://zachhhhh.github.io/tester-exchange-site/tr/insufficient-testing-engagement/" selected>Türkçe</option><option value="https://zachhhhh.github.io/tester-exchange-site/vi/insufficient-testing-engagement/">Tiếng Việt</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-cn/insufficient-testing-engagement/">简体中文</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-tw/insufficient-testing-engagement/">繁體中文</option>
+</select>
+<a href="https://zachhhhh.github.io/tester-exchange-site/?lang=tr">Tester Exchange'i aç</a></header>
+<main>
+
+<h1>Kapalı testten sonra reddedildiniz mi? “Daha fazla test gerekli” hatası nasıl düzeltilir</h1>
+<p class="muted">Ekim 2026'da güncellendi</p>
+<p class="lede">12 test kullanıcısıyla 14 gün boyunca kapalı test yaptınız, üretim için başvurdunuz ve Google uygulamanızın daha fazla teste ihtiyacı olduğunu söyledi. Yeni kişisel hesaplarda en sık görülen sonuç budur. Genellikle Google'ın test süresince uygulamanızın yeterince gerçek kullanımını görmediği anlamına gelir. Google'ın neye baktığını ve onay alacak ikinci bir testi nasıl yürüteceğinizi aşağıda bulabilirsiniz.</p>
+<div class="cta"><span>Tester Exchange, her test kullanıcısının telefonunda uygulamanızı her gün açtığını doğrular ve bir sonraki başvurunuz için günlük etkinlik raporu sunar.</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=tr">Aktif test kullanıcılarını ücretsiz bulun</a></div>
+<nav class="toc"><b>Bu sayfada</b><ul><li><a href="#why">Google neden uygulamanızın daha fazla teste ihtiyacı olduğunu söylüyor</a></li><li><a href="#plan">İkinci denemede onay getiren plan</a></li><li><a href="#proof">Etkileşimin kanıtını gösterin</a></li><li><a href="#avoid">Yapılmaması gerekenler</a></li><li><a href="#faq">Sık sorulan sorular</a></li></ul></nav>
+
+<section id="why">
+<h2>Google neden uygulamanızın daha fazla teste ihtiyacı olduğunu söylüyor</h2>
+<p>Teste katılmak, test etmekle aynı şey değildir. Google, uygulamayı kaç test kullanıcısının yüklediğini, ne sıklıkla açtıklarını ve test süresince güncelleme yayınlayıp yayınlamadığınızı görebilir. İnsanların bir kez yükleyip bir daha hiç geri dönmediği bir test, gerçek bir test değil, sadece formalite gibi görünür.</p>
+<ul><li><b>Düşük etkileşim:</b> test kullanıcıları uygulamayı yükledi ama nadiren açtı ya da hiç açmadı.</li><li><b>Çok az aktif test kullanıcısı:</b> bazı kişiler testten ayrıldı ve katılan test kullanıcısı sayınız 12'nin altına düştü.</li><li><b>Geliştirme yok:</b> 14 gün boyunca yeni sürüm yok ve geri bildirime görünür bir yanıt yok.</li><li><b>Zayıf yanıtlar:</b> üretim anketinde sayı ve geri bildirim örneği içermeyen belirsiz cevaplar.</li></ul>
+
+
+</section>
+
+<section id="plan">
+<h2>İkinci denemede onay getiren plan</h2>
+
+
+<ol><li>Kapalı testi çalışır durumda tutun. Kanalı silmeyin ve hâlâ aktif olan test kullanıcılarını çıkarmayın.</li><li>Uygulamayı her gün açacak 14–15 gerçek test kullanıcısı bulun; böylece birkaç kişi ayrılsa bile 12'nin altına düşmezsiniz.</li><li>Test kullanıcılarına her hafta bir veya iki somut görev verin (“hesap oluştur, bir öğe ekle, bir ayarı değiştir”).</li><li>Yazılı geri bildirim isteyin, bildirilen sorunlardan en azından birkaçını düzeltin ve test süresince kapalı kanala yeni sürümler yükleyin.</li><li>Kayıt tutun: günlük aktif test kullanıcıları, toplam test kullanıcısı-günü, alınan geri bildirimler ve yaptığınız değişiklikler.</li><li>14 gün daha gerçek kullanımın ardından yeniden başvurun ve her soruyu bu sayılarla yanıtlayın.</li></ol>
+
+</section>
+
+<section id="proof">
+<h2>Etkileşimin kanıtını gösterin</h2>
+<p>Yanıtlarınız kısa bir test raporu gibi okunmalı: kaç test kullanıcısı vardı, uygulamayı kaç gün kullandılar, neler bildirdiler ve hangi sürümler bunları düzeltti. Tester Exchange her test kullanıcısının doğrulanmış günlük kullanımını kaydeder ve bu yanıtların taslağını gerçek verilerinizden hazırlar; böylece her şeyi hafızanızdan yeniden kurmak zorunda kalmazsınız.</p>
+
+
+
+</section>
+
+<section id="avoid">
+<h2>Yapılmaması gerekenler</h2>
+
+<ul><li>Kendi yedek telefonlarınızı veya hesaplarınızı test kullanıcısı olarak kullanmayın. Tek bir cihazdaki çok sayıda hesap gerçek test sayılmaz.</li><li>Uygulamayı yalnızca yükleyip hiç açmayan “test kullanıcılarına” para ödemeyin. Reddedilmenin tam nedeni budur.</li><li>İnternetten genel yanıtlar kopyalamayın. Kendi sayılarınızı ve kendi geri bildirimlerinizi kullanın.</li></ul>
+
+
+</section>
+<section id="faq"><h2>Sık sorulan sorular</h2>
+<details><summary>14 günü baştan mı başlatmam gerekiyor?</summary><p>Kapalı testiniz devam eder, ancak Google yeniden başvurmadan önce daha fazla gerçek test görmek ister. En az 14 gün daha aktif kullanım planlayın.</p></details>
+<details><summary>Test kullanıcıları uygulamayı ne sıklıkla açmalı?</summary><p>Google bir sayı yayınlamıyor. Test kullanıcılarının çoğunun her gün kullanması en güvenli yoldur ve Tester Exchange'in doğruladığı da budur.</p></details>
+<details><summary>Geri bildirim önemli mi?</summary><p>Evet. Anket, test kullanıcılarının ne söylediğini ve sizin neyi değiştirdiğinizi sorar. Gerçek geri bildirimler ve gerçek düzeltmeler yanıtlarınızı inandırıcı kılar.</p></details>
+</section>
+<div class="cta"><span>Tester Exchange, her test kullanıcısının telefonunda uygulamanızı her gün açtığını doğrular ve bir sonraki başvurunuz için günlük etkinlik raporu sunar.</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=tr">Aktif test kullanıcılarını ücretsiz bulun</a></div>
+<section><h2>Diğer rehberler</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Google Play kapalı testi için 12 test kullanıcısı nasıl bulunur</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/google-group-vs-email-list/" hreflang="tr">Kapalı testiniz için Google Group mu, e-posta listesi mi?</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/production-access-questions/" hreflang="tr">Google Play üretim erişimi sorularına nasıl yanıt verilir</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/tr/tools/production-answers/" hreflang="tr">Üretim erişimi yanıt oluşturucu</a></li></ul></section>
+</main>
+<footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
+<a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>
+</div></body></html>

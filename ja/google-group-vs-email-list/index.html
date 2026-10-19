@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Play のクローズド テスト：Google Group とメーリング リストの比較（設定ガイド）</title>
+<meta name="description" content="Google Play のクローズド テストで使うテスター リストの選び方、それぞれの設定方法、テスターのオプトイン手順、テスターにアプリが表示されなくなるミスを解説します。">
+<link rel="canonical" href="https://zachhhhh.github.io/tester-exchange-site/ja/google-group-vs-email-list/">
+<link rel="alternate" hreflang="en" href="https://zachhhhh.github.io/tester-exchange-site/guide/google-group-vs-email-list/">
+<link rel="alternate" hreflang="de" href="https://zachhhhh.github.io/tester-exchange-site/de/google-group-vs-email-list/">
+<link rel="alternate" hreflang="es" href="https://zachhhhh.github.io/tester-exchange-site/es/google-group-vs-email-list/">
+<link rel="alternate" hreflang="fr" href="https://zachhhhh.github.io/tester-exchange-site/fr/google-group-vs-email-list/">
+<link rel="alternate" hreflang="hi" href="https://zachhhhh.github.io/tester-exchange-site/hi/google-group-vs-email-list/">
+<link rel="alternate" hreflang="id" href="https://zachhhhh.github.io/tester-exchange-site/id/google-group-vs-email-list/">
+<link rel="alternate" hreflang="ja" href="https://zachhhhh.github.io/tester-exchange-site/ja/google-group-vs-email-list/">
+<link rel="alternate" hreflang="ko" href="https://zachhhhh.github.io/tester-exchange-site/ko/google-group-vs-email-list/">
+<link rel="alternate" hreflang="pt" href="https://zachhhhh.github.io/tester-exchange-site/pt/google-group-vs-email-list/">
+<link rel="alternate" hreflang="ru" href="https://zachhhhh.github.io/tester-exchange-site/ru/google-group-vs-email-list/">
+<link rel="alternate" hreflang="tr" href="https://zachhhhh.github.io/tester-exchange-site/tr/google-group-vs-email-list/">
+<link rel="alternate" hreflang="vi" href="https://zachhhhh.github.io/tester-exchange-site/vi/google-group-vs-email-list/">
+<link rel="alternate" hreflang="zh-Hans" href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/google-group-vs-email-list/">
+<link rel="alternate" hreflang="zh-Hant" href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/google-group-vs-email-list/">
+<link rel="alternate" hreflang="x-default" href="https://zachhhhh.github.io/tester-exchange-site/guide/google-group-vs-email-list/">
+<meta property="og:type" content="article"><meta property="og:title" content="Google Play のクローズド テスト：Google Group とメーリング リストの比較（設定ガイド）">
+<meta property="og:description" content="Google Play のクローズド テストで使うテスター リストの選び方、それぞれの設定方法、テスターのオプトイン手順、テスターにアプリが表示されなくなるミスを解説します。"><meta property="og:url" content="https://zachhhhh.github.io/tester-exchange-site/ja/google-group-vs-email-list/">
+<meta property="og:image" content="https://zachhhhh.github.io/tester-exchange-site/store/feature-1024x500.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://zachhhhh.github.io/tester-exchange-site/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f6f5f1;--surface:#fff;--ink:#1c1d1a;--muted:#6d6f68;--line:#e3e1da;--accent:#1f7a4d;--accent-ink:#fff;--accent-soft:#e4f2ea}
+@media (prefers-color-scheme:dark){:root{--bg:#141513;--surface:#1d1f1c;--ink:#ecebe6;--muted:#9a9c94;--line:#30322e;--accent:#4cc38a;--accent-ink:#0d1f15;--accent-soft:#1d3327}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
+.muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
+.cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
+ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+.toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"クローズド テストには Google Group とメーリング リストのどちらを使う？","description":"Google Play のクローズド テストで使うテスター リストの選び方、それぞれの設定方法、テスターのオプトイン手順、テスターにアプリが表示されなくなるミスを解説します。","inLanguage":"ja","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/ja/google-group-vs-email-list/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"グループのメンバーは 12 人のテスターに数えられますか？","acceptedAnswer":{"@type":"Answer","text":"どちらのリストを使っても、カウントされるのはオプトイン URL からオプトインした人だけです。"}},{"@type":"Question","name":"両方を使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい。1 つのトラックでメーリング リストと Google Groups を同時に使えます。"}},{"@type":"Question","name":"テスターは匿名のままでいられますか？","acceptedAnswer":{"@type":"Answer","text":"Google Group なら、自分でメールアドレスを集める必要はありません。メーリング リストの場合は、各テスターの Google アカウントのメールアドレスが必要です。"}}]}]}</script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://zachhhhh.github.io/tester-exchange-site/?lang=ja">Tester<span>Exchange</span></a><span class="grow"></span>
+<select aria-label="言語" onchange="location.href=this.value">
+<option value="https://zachhhhh.github.io/tester-exchange-site/guide/google-group-vs-email-list/">English</option><option value="https://zachhhhh.github.io/tester-exchange-site/de/google-group-vs-email-list/">Deutsch</option><option value="https://zachhhhh.github.io/tester-exchange-site/es/google-group-vs-email-list/">Español</option><option value="https://zachhhhh.github.io/tester-exchange-site/fr/google-group-vs-email-list/">Français</option><option value="https://zachhhhh.github.io/tester-exchange-site/hi/google-group-vs-email-list/">हिन्दी</option><option value="https://zachhhhh.github.io/tester-exchange-site/id/google-group-vs-email-list/">Bahasa Indonesia</option><option value="https://zachhhhh.github.io/tester-exchange-site/ja/google-group-vs-email-list/" selected>日本語</option><option value="https://zachhhhh.github.io/tester-exchange-site/ko/google-group-vs-email-list/">한국어</option><option value="https://zachhhhh.github.io/tester-exchange-site/pt/google-group-vs-email-list/">Português</option><option value="https://zachhhhh.github.io/tester-exchange-site/ru/google-group-vs-email-list/">Русский</option><option value="https://zachhhhh.github.io/tester-exchange-site/tr/google-group-vs-email-list/">Türkçe</option><option value="https://zachhhhh.github.io/tester-exchange-site/vi/google-group-vs-email-list/">Tiếng Việt</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-cn/google-group-vs-email-list/">简体中文</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-tw/google-group-vs-email-list/">繁體中文</option>
+</select>
+<a href="https://zachhhhh.github.io/tester-exchange-site/?lang=ja">Tester Exchange を開く</a></header>
+<main>
+
+<h1>クローズド テストには Google Group とメーリング リストのどちらを使う？</h1>
+<p class="muted">2026 年 10 月更新</p>
+<p class="lede">クローズド テストのトラックには、アプリをインストールできる人のリストが必要です。Play Console には 2 つの方法があります：Play Console で管理するメーリング リスト、または Google Group です。どちらでも 12 人のテスター要件を満たせます。違いは、人を追加する手間です。</p>
+<div class="cta"><span>Tester Exchange はどちらにも対応しています：テスターはタスクリストでグループのリンクを受け取ります。または、ワンクリックでテスターのメールアドレスをあなたのリストにコピーできます。</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=ja">テスターを無料で見つける</a></div>
+<nav class="toc"><b>このページの内容</b><ul><li><a href="#compare">かんたん比較</a></li><li><a href="#group">Google Group を設定する</a></li><li><a href="#email">メーリング リストを設定する</a></li><li><a href="#mistakes">テスターにアプリが表示されなくなるミス</a></li><li><a href="#faq">よくある質問</a></li></ul></nav>
+
+<section id="compare">
+<h2>かんたん比較</h2>
+
+<ul><li><b>Google Group：</b>グループのリンクを知っていれば誰でも参加できるので、1 人ずつ追加する必要はありません。テスターがさまざまな場所から集まる場合に最適です。</li><li><b>メーリング リスト：</b>各テスターの Google アカウントのメールアドレスを Play Console に貼り付けます。誰が参加できるかを完全に管理できますが、参加者が増えるたびに更新が必要です。</li></ul>
+
+
+</section>
+
+<section id="group">
+<h2>Google Group を設定する</h2>
+
+
+<ol><li>groups.google.com にアクセスしてグループを作成します。「グループに参加できるユーザー」をウェブ上の全員に設定すると、テスターは承認を待たずに済みます。</li><li>Play Console → テスト → クローズド テスト → 対象のトラック → テスター で Google Groups を選び、グループのメールアドレスを追加します。</li><li>テスターに 2 つのリンクを共有します：グループのリンク（先に参加）とオプトイン URL（テスターになる）。</li><li>テスターは、グループに参加したのと同じ Google アカウントで Google Play からアプリをインストールします。</li></ol>
+
+</section>
+
+<section id="email">
+<h2>メーリング リストを設定する</h2>
+
+
+<ol><li>Play Console → テスト → クローズド テスト → 対象のトラック → テスター で、メーリング リストを作成します。</li><li>テスターの Google アカウントのメールアドレスをカンマ区切りで貼り付けて保存します。</li><li>オプトイン URL を共有します。テスターは、追加したメールアドレスでログインした状態で開く必要があります。</li></ol>
+
+</section>
+
+<section id="mistakes">
+<h2>テスターにアプリが表示されなくなるミス</h2>
+
+<ul><li>テスターが参加に使った Google アカウントと、スマートフォンの Play Store で使っているアカウントが違う。</li><li>グループが承認制になっていて、テスターが承認待ちのまま止まっている。</li><li>テスターはグループに参加したが、オプトイン URL を開いて「テスターになる」をタップしていない。</li><li>リリースがまだ承認されていない。クローズド トラックが公開されるまで、テスターはインストールできません。</li></ul>
+
+
+</section>
+<section id="faq"><h2>よくある質問</h2>
+<details><summary>グループのメンバーは 12 人のテスターに数えられますか？</summary><p>どちらのリストを使っても、カウントされるのはオプトイン URL からオプトインした人だけです。</p></details>
+<details><summary>両方を使えますか？</summary><p>はい。1 つのトラックでメーリング リストと Google Groups を同時に使えます。</p></details>
+<details><summary>テスターは匿名のままでいられますか？</summary><p>Google Group なら、自分でメールアドレスを集める必要はありません。メーリング リストの場合は、各テスターの Google アカウントのメールアドレスが必要です。</p></details>
+</section>
+<div class="cta"><span>Tester Exchange はどちらにも対応しています：テスターはタスクリストでグループのリンクを受け取ります。または、ワンクリックでテスターのメールアドレスをあなたのリストにコピーできます。</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=ja">テスターを無料で見つける</a></div>
+<section><h2>その他のガイド</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">Google Play のクローズド テストで 12 人のテスターを集める方法</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/ja/insufficient-testing-engagement/" hreflang="ja">クローズド テスト後に不承認？「さらなるテストが必要」の解決方法</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/ja/production-access-questions/" hreflang="ja">Google Play の製品版アクセスの質問への答え方</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/ja/tools/production-answers/" hreflang="ja">製品版アクセス 回答ジェネレーター</a></li></ul></section>
+</main>
+<footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
+<a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>
+</div></body></html>

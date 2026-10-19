@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fix Google Play's &quot;more testing required&quot; rejection after closed testing (2026)</title>
+<meta name="description" content="Google rejected your production access request after the 14-day closed test? Why it happens (testers who didn't really use the app), and a step-by-step plan to pass on the next try.">
+<link rel="canonical" href="https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="en" href="https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="de" href="https://zachhhhh.github.io/tester-exchange-site/de/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="es" href="https://zachhhhh.github.io/tester-exchange-site/es/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="fr" href="https://zachhhhh.github.io/tester-exchange-site/fr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="hi" href="https://zachhhhh.github.io/tester-exchange-site/hi/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="id" href="https://zachhhhh.github.io/tester-exchange-site/id/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ja" href="https://zachhhhh.github.io/tester-exchange-site/ja/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ko" href="https://zachhhhh.github.io/tester-exchange-site/ko/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="pt" href="https://zachhhhh.github.io/tester-exchange-site/pt/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ru" href="https://zachhhhh.github.io/tester-exchange-site/ru/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="tr" href="https://zachhhhh.github.io/tester-exchange-site/tr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="vi" href="https://zachhhhh.github.io/tester-exchange-site/vi/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="zh-Hans" href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="zh-Hant" href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="x-default" href="https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/">
+<meta property="og:type" content="article"><meta property="og:title" content="Fix Google Play's &quot;more testing required&quot; rejection after closed testing (2026)">
+<meta property="og:description" content="Google rejected your production access request after the 14-day closed test? Why it happens (testers who didn't really use the app), and a step-by-step plan to pass on the next try."><meta property="og:url" content="https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/">
+<meta property="og:image" content="https://zachhhhh.github.io/tester-exchange-site/store/feature-1024x500.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://zachhhhh.github.io/tester-exchange-site/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f6f5f1;--surface:#fff;--ink:#1c1d1a;--muted:#6d6f68;--line:#e3e1da;--accent:#1f7a4d;--accent-ink:#fff;--accent-soft:#e4f2ea}
+@media (prefers-color-scheme:dark){:root{--bg:#141513;--surface:#1d1f1c;--ink:#ecebe6;--muted:#9a9c94;--line:#30322e;--accent:#4cc38a;--accent-ink:#0d1f15;--accent-soft:#1d3327}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif}
+a{color:var(--accent)}p,li{overflow-wrap:anywhere}.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px}
+header{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:28px}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.brand span{color:var(--accent)}.grow{flex:1}
+select,input,textarea{font:inherit;font-size:15px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+header select{font-size:14px;padding:4px 8px;max-width:160px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;letter-spacing:-.02em;margin:0 0 8px}h2{font-size:22px;margin:36px 0 10px;line-height:1.3}
+.muted{color:var(--muted);font-size:14px}.lede{font-size:18px}
+.cta{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-size:16px}
+ol,ul{padding-left:1.3em}li{margin:6px 0}.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+.toc ul{margin:6px 0;padding-left:1.1em}details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
+summary{cursor:pointer;font-weight:600}footer{border-top:1px solid var(--line);margin-top:40px;padding-top:16px;font-size:14px;display:flex;gap:14px;flex-wrap:wrap}
+.related{display:grid;gap:8px;padding:0;list-style:none}.related a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;color:var(--ink)}
+.related a:hover{border-color:var(--accent)}
+form{display:grid;gap:14px;min-width:0}label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:15px;min-width:0}
+form select,form input,form textarea{width:100%;max-width:100%;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ans{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.ans b{display:block;font-size:15px;margin-bottom:4px}.ans p{margin:0 0 8px;white-space:pre-wrap}
+.ans button{font:inherit;font-size:14px;background:transparent;border:1px solid var(--line);border-radius:8px;padding:3px 10px;color:var(--ink);cursor:pointer}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Rejected after closed testing? How to fix \"more testing required\"","description":"Google rejected your production access request after the 14-day closed test? Why it happens (testers who didn't really use the app), and a step-by-step plan to pass on the next try.","inLanguage":"en","dateModified":"2026-10-19","url":"https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I have to restart the 14 days?","acceptedAnswer":{"@type":"Answer","text":"You keep your closed test, but Google wants to see more real testing before you apply again. Plan for at least another 14 days of active use."}},{"@type":"Question","name":"How often should testers open the app?","acceptedAnswer":{"@type":"Answer","text":"Google doesn't publish a number. Daily use by most testers is the safest pattern, and it's what Tester Exchange verifies."}},{"@type":"Question","name":"Does feedback matter?","acceptedAnswer":{"@type":"Answer","text":"Yes. The questionnaire asks what testers said and what you changed. Real feedback and real fixes make your answers credible."}}]}]}</script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://zachhhhh.github.io/tester-exchange-site/?lang=en">Tester<span>Exchange</span></a><span class="grow"></span>
+<select aria-label="Language" onchange="location.href=this.value">
+<option value="https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/" selected>English</option><option value="https://zachhhhh.github.io/tester-exchange-site/de/insufficient-testing-engagement/">Deutsch</option><option value="https://zachhhhh.github.io/tester-exchange-site/es/insufficient-testing-engagement/">Español</option><option value="https://zachhhhh.github.io/tester-exchange-site/fr/insufficient-testing-engagement/">Français</option><option value="https://zachhhhh.github.io/tester-exchange-site/hi/insufficient-testing-engagement/">हिन्दी</option><option value="https://zachhhhh.github.io/tester-exchange-site/id/insufficient-testing-engagement/">Bahasa Indonesia</option><option value="https://zachhhhh.github.io/tester-exchange-site/ja/insufficient-testing-engagement/">日本語</option><option value="https://zachhhhh.github.io/tester-exchange-site/ko/insufficient-testing-engagement/">한국어</option><option value="https://zachhhhh.github.io/tester-exchange-site/pt/insufficient-testing-engagement/">Português</option><option value="https://zachhhhh.github.io/tester-exchange-site/ru/insufficient-testing-engagement/">Русский</option><option value="https://zachhhhh.github.io/tester-exchange-site/tr/insufficient-testing-engagement/">Türkçe</option><option value="https://zachhhhh.github.io/tester-exchange-site/vi/insufficient-testing-engagement/">Tiếng Việt</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-cn/insufficient-testing-engagement/">简体中文</option><option value="https://zachhhhh.github.io/tester-exchange-site/zh-tw/insufficient-testing-engagement/">繁體中文</option>
+</select>
+<a href="https://zachhhhh.github.io/tester-exchange-site/?lang=en">Open Tester Exchange</a></header>
+<main>
+
+<h1>Rejected after closed testing? How to fix &quot;more testing required&quot;</h1>
+<p class="muted">Updated October 2026</p>
+<p class="lede">You ran a closed test with 12 testers for 14 days, applied for production, and Google said your app needs more testing. This is the most common outcome for new personal accounts. It usually means Google didn't see enough real use of your app during the test. Here's what Google looks at, and how to run a second test that passes.</p>
+<div class="cta"><span>Tester Exchange verifies on each tester's phone that they opened your app every day, and gives you a daily-activity report for your next application.</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=en">Get engaged testers free</a></div>
+<nav class="toc"><b>On this page</b><ul><li><a href="#why">Why Google says your app needs more testing</a></li><li><a href="#plan">A plan that passes on the second try</a></li><li><a href="#proof">Show proof of engagement</a></li><li><a href="#avoid">What not to do</a></li><li><a href="#faq">Frequently asked questions</a></li></ul></nav>
+
+<section id="why">
+<h2>Why Google says your app needs more testing</h2>
+<p>Opting in is not the same as testing. Google can see how many testers installed the app, how often they opened it, and whether you shipped updates during the test. A test where people installed once and never came back looks like a box being ticked, not a real test.</p>
+<ul><li><b>Low engagement:</b> testers installed the app but rarely or never opened it.</li><li><b>Too few active testers:</b> people left the test, and you dropped below 12 opted-in testers.</li><li><b>No iteration:</b> no new builds and no visible response to feedback during the 14 days.</li><li><b>Weak answers:</b> vague replies in the production questionnaire, with no numbers and no examples of feedback.</li></ul>
+
+
+</section>
+
+<section id="plan">
+<h2>A plan that passes on the second try</h2>
+
+
+<ol><li>Keep the closed test running. Don't delete the track or remove testers who are still active.</li><li>Recruit 14–15 real testers who will open the app daily, so a few dropouts don't push you under 12.</li><li>Give testers one or two concrete tasks per week (&quot;create an account, add an item, change a setting&quot;).</li><li>Ask for written feedback, fix at least a few reported issues, and upload new builds to the closed track during the test.</li><li>Keep a log: daily active testers, total tester-days, feedback received, and what you changed.</li><li>After 14 more days of real use, apply again and answer every question with those numbers.</li></ol>
+
+</section>
+
+<section id="proof">
+<h2>Show proof of engagement</h2>
+<p>Your answers should read like a short test report: how many testers, how many days they used the app, what they reported, and which builds fixed it. Tester Exchange records verified daily use for every tester and drafts these answers from your real data, so you don't have to reconstruct them from memory.</p>
+
+
+
+</section>
+
+<section id="avoid">
+<h2>What not to do</h2>
+
+<ul><li>Don't use your own spare phones or accounts as testers. Many accounts on one device don't count as real testing.</li><li>Don't pay for &quot;testers&quot; who only install and never open the app. That's exactly what gets rejected.</li><li>Don't copy generic answers from the internet. Use your own numbers and your own feedback.</li></ul>
+
+
+</section>
+<section id="faq"><h2>Frequently asked questions</h2>
+<details><summary>Do I have to restart the 14 days?</summary><p>You keep your closed test, but Google wants to see more real testing before you apply again. Plan for at least another 14 days of active use.</p></details>
+<details><summary>How often should testers open the app?</summary><p>Google doesn't publish a number. Daily use by most testers is the safest pattern, and it's what Tester Exchange verifies.</p></details>
+<details><summary>Does feedback matter?</summary><p>Yes. The questionnaire asks what testers said and what you changed. Real feedback and real fixes make your answers credible.</p></details>
+</section>
+<div class="cta"><span>Tester Exchange verifies on each tester's phone that they opened your app every day, and gives you a daily-activity report for your next application.</span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/?lang=en">Get engaged testers free</a></div>
+<section><h2>More guides</h2><ul class="related"><li><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">How to get 12 testers for Google Play closed testing</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/guide/google-group-vs-email-list/" hreflang="en">Google Group or email list for your closed test?</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/guide/production-access-questions/" hreflang="en">How to answer Google Play's production access questions</a></li><li><a href="https://zachhhhh.github.io/tester-exchange-site/tools/production-answers/" hreflang="en">Production access answer generator</a></li></ul></section>
+</main>
+<footer><a href="https://zachhhhh.github.io/tester-exchange-site/guide/" hreflang="en">English</a><a href="https://zachhhhh.github.io/tester-exchange-site/de/" hreflang="de">Deutsch</a><a href="https://zachhhhh.github.io/tester-exchange-site/es/" hreflang="es">Español</a><a href="https://zachhhhh.github.io/tester-exchange-site/fr/" hreflang="fr">Français</a><a href="https://zachhhhh.github.io/tester-exchange-site/hi/" hreflang="hi">हिन्दी</a><a href="https://zachhhhh.github.io/tester-exchange-site/id/" hreflang="id">Bahasa Indonesia</a><a href="https://zachhhhh.github.io/tester-exchange-site/ja/" hreflang="ja">日本語</a><a href="https://zachhhhh.github.io/tester-exchange-site/ko/" hreflang="ko">한국어</a><a href="https://zachhhhh.github.io/tester-exchange-site/pt/" hreflang="pt">Português</a><a href="https://zachhhhh.github.io/tester-exchange-site/ru/" hreflang="ru">Русский</a><a href="https://zachhhhh.github.io/tester-exchange-site/tr/" hreflang="tr">Türkçe</a><a href="https://zachhhhh.github.io/tester-exchange-site/vi/" hreflang="vi">Tiếng Việt</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://zachhhhh.github.io/tester-exchange-site/zh-tw/" hreflang="zh-Hant">繁體中文</a>
+<a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>
+</div></body></html>
