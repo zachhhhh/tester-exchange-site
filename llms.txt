@@ -6,6 +6,10 @@
 > exactly this engagement. 1 credit = 1 verified tester-day. A 12-tester campaign costs 180 credits, held in
 > escrow and refunded if unused. Credits are earned by testing other apps or bought (US$7 / 90, $12 / 180, $14 / 225).
 
+## Pages
+- Live list of open closed tests: https://zachhhhh.github.io/tester-exchange-site/tests/
+- Closed testing guide (14 languages): https://zachhhhh.github.io/tester-exchange-site/guide/
+
 ## For AI agents
 - MCP server (Streamable HTTP, no OAuth): https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp
   Auth: header `Authorization: Bearer tx_…` or `?token=tx_…`. Public tools (about, platform_stats, pricing,
