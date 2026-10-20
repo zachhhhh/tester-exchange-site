@@ -1,16 +1,16 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Tester Exchange for AI agents: MCP server and API</title>
 <meta name="description" content="Let Claude, ChatGPT, Cursor or any MCP client find Google Play closed-testing testers, start a campaign and read the report. Remote MCP server, one-endpoint HTTP API, OpenAPI and llms.txt.">
-<link rel="canonical" href="https://zachhhhh.github.io/tester-exchange-site/agents/"><link rel="icon" href="https://zachhhhh.github.io/tester-exchange-site/favicon.svg" type="image/svg+xml">
-<meta property="og:title" content="Tester Exchange for AI agents"><meta property="og:image" content="https://zachhhhh.github.io/tester-exchange-site/store/social/og-1200x630.png">
-<link rel="stylesheet" href="/tester-exchange-site/static.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebAPI","name":"Tester Exchange agent API","description":"MCP server and HTTP API for Google Play closed-testing campaigns","documentation":"https://zachhhhh.github.io/tester-exchange-site/agents/","url":"https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp","provider":{"@type":"Organization","name":"Tester Exchange","url":"https://zachhhhh.github.io/tester-exchange-site/"}}</script>
+<link rel="canonical" href="https://testerexchange.com/agents/"><link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Tester Exchange for AI agents"><meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebAPI","name":"Tester Exchange agent API","description":"MCP server and HTTP API for Google Play closed-testing campaigns","documentation":"https://testerexchange.com/agents/","url":"https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp","provider":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}}</script>
 </head><body><div class="wrap">
-<header><a class="brand" href="https://zachhhhh.github.io/tester-exchange-site/">Tester Exchange</a><span class="grow"></span><a href="https://zachhhhh.github.io/tester-exchange-site/api">Create a token</a></header>
+<header><a class="brand" href="https://testerexchange.com/">Tester Exchange</a><span class="grow"></span><a href="https://testerexchange.com/api">Create a token</a></header>
 <main>
 <h1>Tester Exchange for AI agents</h1>
 <p class="lede">Your agent can do the paperwork of Google Play closed testing: find testers, list your app, start a campaign, watch daily activity and pull the numbers for the production-access questions. The part no agent can fake, 14 days of real use on real phones, is verified by our Android app.</p>
-<div class="cta"><span>1. Sign in and create a token. 2. Add the MCP server to your agent. 3. Ask: <i>"Get 15 testers for com.example.app and tell me when we reach 12 active."</i></span><a class="btn" href="https://zachhhhh.github.io/tester-exchange-site/api">Create a token</a></div>
+<div class="cta"><span>1. Sign in and create a token. 2. Add the MCP server to your agent. 3. Ask: <i>"Get 15 testers for com.example.app and tell me when we reach 12 active."</i></span><a class="btn" href="https://testerexchange.com/api">Create a token</a></div>
 <h2>MCP server</h2>
 <p>Remote MCP over Streamable HTTP (stateless, no OAuth). URL: <code>https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp</code></p>
 <p><b>Claude Code</b></p>
@@ -31,11 +31,11 @@
 <h2>HTTP API</h2>
 <p>One endpoint. The token is the credential; the <code>apikey</code> header is our public key.</p>
 <pre>curl -s https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/agent_call   -H "apikey: sb_publishable_OwXT7OfwIGkuIn420mavVA_MsAkzZGf" -H "Content-Type: application/json"   -d '{"p_token":"tx_YOUR_TOKEN","p_action":"start_campaign","p_args":{"package_name":"com.example.app","testers":15}}'</pre>
-<p>Call <code>"p_action":"help"</code> for every action and its arguments. Machine-readable: <a href="https://zachhhhh.github.io/tester-exchange-site/openapi.json">openapi.json</a> · <a href="https://zachhhhh.github.io/tester-exchange-site/llms.txt">llms.txt</a>.</p>
+<p>Call <code>"p_action":"help"</code> for every action and its arguments. Machine-readable: <a href="https://testerexchange.com/openapi.json">openapi.json</a> · <a href="https://testerexchange.com/llms.txt">llms.txt</a>.</p>
 <h2>Safety</h2>
 <ul><li>Tokens are stored only as SHA-256 hashes, can be revoked at any time, and are limited to 10 per account.</li>
 <li>A token can spend credits on campaigns but can't pay, withdraw, or delete the account. Payment always happens in a human's browser.</li>
 <li>All the normal rules still apply: one account per phone, escrow, verified daily use.</li></ul>
 </main>
-<footer><a href="https://zachhhhh.github.io/tester-exchange-site/">Home</a><a href="https://zachhhhh.github.io/tester-exchange-site/guide/">Guide</a><a href="https://zachhhhh.github.io/tester-exchange-site/privacy.html">Privacy</a></footer>
+<footer><a href="https://testerexchange.com/">Home</a><a href="https://testerexchange.com/guide/">Guide</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
 </div></body></html>

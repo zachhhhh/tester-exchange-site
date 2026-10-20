@@ -7,28 +7,28 @@
 > escrow and refunded if unused. Credits are earned by testing other apps or bought (US$7 / 90, $12 / 180, $14 / 225).
 
 ## Pages
-- Live list of open closed tests: https://zachhhhh.github.io/tester-exchange-site/tests/
-- Closed testing guide (14 languages): https://zachhhhh.github.io/tester-exchange-site/guide/
+- Live list of open closed tests: https://testerexchange.com/tests/
+- Closed testing guide (14 languages): https://testerexchange.com/guide/
 
 ## For AI agents
 - MCP server (Streamable HTTP, no OAuth): https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp
   Auth: header `Authorization: Bearer tx_…` or `?token=tx_…`. Public tools (about, platform_stats, pricing,
-  list_open_tests) work without a token. Users create tokens at https://zachhhhh.github.io/tester-exchange-site/api
+  list_open_tests) work without a token. Users create tokens at https://testerexchange.com/api
 - HTTP API (one endpoint): POST https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/agent_call
   headers: `apikey: sb_publishable_OwXT7OfwIGkuIn420mavVA_MsAkzZGf` (public key), `Content-Type: application/json`
   body: {"p_token": "tx_…" | null, "p_action": "help", "p_args": {}}
   Actions: help, stats, pricing, open_tests (public); me, my_apps, add_app, start_campaign, campaign,
   add_testers, set_status, join, my_tests, share_kit, buy_credits (token).
-- OpenAPI: https://zachhhhh.github.io/tester-exchange-site/openapi.json
-- Agent docs: https://zachhhhh.github.io/tester-exchange-site/agents/
+- OpenAPI: https://testerexchange.com/openapi.json
+- Agent docs: https://testerexchange.com/agents/
 - What an agent can't do: the 14 days of real use on a phone, and paying (checkout needs a human).
 
 ## Guides
-- [How to get 12 testers for Google Play closed testing](https://zachhhhh.github.io/tester-exchange-site/guide/)
-- [Fix "more testing required" after closed testing](https://zachhhhh.github.io/tester-exchange-site/guide/insufficient-testing-engagement/)
-- [Answering the production access questions](https://zachhhhh.github.io/tester-exchange-site/guide/production-access-questions/)
-- [Google Group vs email list for closed testing](https://zachhhhh.github.io/tester-exchange-site/guide/google-group-vs-email-list/)
-- [Free production-access answer generator](https://zachhhhh.github.io/tester-exchange-site/tools/production-answers/)
+- [How to get 12 testers for Google Play closed testing](https://testerexchange.com/guide/)
+- [Fix "more testing required" after closed testing](https://testerexchange.com/guide/insufficient-testing-engagement/)
+- [Answering the production access questions](https://testerexchange.com/guide/production-access-questions/)
+- [Google Group vs email list for closed testing](https://testerexchange.com/guide/google-group-vs-email-list/)
+- [Free production-access answer generator](https://testerexchange.com/tools/production-answers/)
 - Guides exist in es, pt, fr, de, id, vi, tr, ru, hi, zh-cn, zh-tw, ja, ko at /<lang>/ (e.g. /ja/).
 
 ## Facts (October 2026)

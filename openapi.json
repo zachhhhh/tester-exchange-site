@@ -3,7 +3,7 @@
   "info": {
     "title": "Tester Exchange agent API",
     "version": "1.0.0",
-    "description": "One endpoint for AI agents and scripts. Public actions need no token; others need a personal token (tx_\u2026) created at https://zachhhhh.github.io/tester-exchange-site/api. Call action 'help' for the full list. MCP server: https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp"
+    "description": "One endpoint for AI agents and scripts. Public actions need no token; others need a personal token (tx_\u2026) created at https://testerexchange.com/api. Call action 'help' for the full list. MCP server: https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp"
   },
   "servers": [
     {
