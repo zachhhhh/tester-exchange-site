@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>แก้ปัญหา Google Play ปฏิเสธเพราะ “ต้องทดสอบเพิ่ม” (2026)</title>
+<meta name="description" content="Google ปฏิเสธคำขอสิทธิ์ Production หลังทดสอบแบบปิด 14 วัน? สาเหตุ (ผู้ทดสอบไม่ได้ใช้แอปจริง) และแผนทีละขั้นเพื่อให้ผ่านในครั้งถัดไป">
+<link rel="canonical" href="https://testerexchange.com/th/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ar" href="https://testerexchange.com/ar/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="bn" href="https://testerexchange.com/bn/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="de" href="https://testerexchange.com/de/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="hi" href="https://testerexchange.com/hi/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ja" href="https://testerexchange.com/ja/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ko" href="https://testerexchange.com/ko/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="th" href="https://testerexchange.com/th/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ur" href="https://testerexchange.com/ur/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="zh-Hans" href="https://testerexchange.com/zh-cn/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="zh-Hant" href="https://testerexchange.com/zh-tw/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/insufficient-testing-engagement/">
+<meta property="og:type" content="article"><meta property="og:title" content="แก้ปัญหา Google Play ปฏิเสธเพราะ “ต้องทดสอบเพิ่ม” (2026)">
+<meta property="og:description" content="Google ปฏิเสธคำขอสิทธิ์ Production หลังทดสอบแบบปิด 14 วัน? สาเหตุ (ผู้ทดสอบไม่ได้ใช้แอปจริง) และแผนทีละขั้นเพื่อให้ผ่านในครั้งถัดไป"><meta property="og:url" content="https://testerexchange.com/th/insufficient-testing-engagement/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"ถูกปฏิเสธหลังทดสอบแบบปิด? วิธีแก้ “ต้องทดสอบเพิ่มเติม”","description":"Google ปฏิเสธคำขอสิทธิ์ Production หลังทดสอบแบบปิด 14 วัน? สาเหตุ (ผู้ทดสอบไม่ได้ใช้แอปจริง) และแผนทีละขั้นเพื่อให้ผ่านในครั้งถัดไป","inLanguage":"th","dateModified":"2026-10-21","url":"https://testerexchange.com/th/insufficient-testing-engagement/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ต้องเริ่มนับ 14 วันใหม่ไหม?","acceptedAnswer":{"@type":"Answer","text":"คุณยังเก็บการทดสอบแบบปิดไว้ได้ แต่ Google ต้องการเห็นการทดสอบจริงมากขึ้นก่อนที่คุณจะยื่นขอใหม่ วางแผนให้มีการใช้งานจริงอีกอย่างน้อย 14 วัน"}},{"@type":"Question","name":"ผู้ทดสอบควรเปิดแอปบ่อยแค่ไหน?","acceptedAnswer":{"@type":"Answer","text":"Google ไม่ได้เปิดเผยตัวเลข การที่ผู้ทดสอบส่วนใหญ่ใช้งานทุกวันคือรูปแบบที่ปลอดภัยที่สุด และเป็นสิ่งที่ Tester Exchange ยืนยัน"}},{"@type":"Question","name":"ฟีดแบ็กสำคัญไหม?","acceptedAnswer":{"@type":"Answer","text":"สำคัญ แบบสอบถามจะถามว่าผู้ทดสอบพูดว่าอะไร และคุณเปลี่ยนอะไรบ้าง ฟีดแบ็กจริงและการแก้ไขจริงทำให้คำตอบของคุณน่าเชื่อถือ"}}]}]}</script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=th">Tester Exchange</a><span class="grow"></span>
+<select aria-label="ภาษา" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/insufficient-testing-engagement/">English</option><option value="https://testerexchange.com/ar/insufficient-testing-engagement/">العربية</option><option value="https://testerexchange.com/bn/insufficient-testing-engagement/">বাংলা</option><option value="https://testerexchange.com/de/insufficient-testing-engagement/">Deutsch</option><option value="https://testerexchange.com/es/insufficient-testing-engagement/">Español</option><option value="https://testerexchange.com/fr/insufficient-testing-engagement/">Français</option><option value="https://testerexchange.com/hi/insufficient-testing-engagement/">हिन्दी</option><option value="https://testerexchange.com/id/insufficient-testing-engagement/">Bahasa Indonesia</option><option value="https://testerexchange.com/ja/insufficient-testing-engagement/">日本語</option><option value="https://testerexchange.com/ko/insufficient-testing-engagement/">한국어</option><option value="https://testerexchange.com/pt/insufficient-testing-engagement/">Português</option><option value="https://testerexchange.com/ru/insufficient-testing-engagement/">Русский</option><option value="https://testerexchange.com/th/insufficient-testing-engagement/" selected>ไทย</option><option value="https://testerexchange.com/tr/insufficient-testing-engagement/">Türkçe</option><option value="https://testerexchange.com/ur/insufficient-testing-engagement/">اردو</option><option value="https://testerexchange.com/vi/insufficient-testing-engagement/">Tiếng Việt</option><option value="https://testerexchange.com/zh-cn/insufficient-testing-engagement/">简体中文</option><option value="https://testerexchange.com/zh-tw/insufficient-testing-engagement/">繁體中文</option>
+</select>
+<a href="https://testerexchange.com/?lang=th">เปิด Tester Exchange</a></header>
+<main>
+
+<h1>ถูกปฏิเสธหลังทดสอบแบบปิด? วิธีแก้ “ต้องทดสอบเพิ่มเติม”</h1>
+<p class="muted">อัปเดตตุลาคม 2026</p>
+<p class="lede">คุณทำการทดสอบแบบปิดกับผู้ทดสอบ 12 คนนาน 14 วัน ขอสิทธิ์ Production แล้ว Google บอกว่าแอปของคุณต้องทดสอบเพิ่มเติม นี่คือผลลัพธ์ที่พบบ่อยที่สุดสำหรับบัญชีส่วนตัวใหม่ โดยมากหมายความว่า Google ไม่เห็นการใช้งานจริงมากพอระหว่างการทดสอบ ต่อไปนี้คือสิ่งที่ Google ดู และวิธีทำการทดสอบรอบที่สองให้ผ่าน</p>
+<div class="cta"><span>Tester Exchange ยืนยันบนโทรศัพท์ของผู้ทดสอบแต่ละคนว่าเปิดแอปของคุณทุกวัน และให้รายงานกิจกรรมรายวันสำหรับการยื่นขอครั้งถัดไป</span><a class="btn" href="https://testerexchange.com/?lang=th">รับผู้ทดสอบที่ใช้งานจริงฟรี</a></div>
+<nav class="toc"><b>ในหน้านี้</b><ul><li><a href="#why">ทำไม Google บอกว่าแอปของคุณต้องทดสอบเพิ่ม</a></li><li><a href="#plan">แผนที่ผ่านได้ในรอบที่สอง</a></li><li><a href="#proof">แสดงหลักฐานการมีส่วนร่วม</a></li><li><a href="#avoid">สิ่งที่ไม่ควรทำ</a></li><li><a href="#faq">คำถามที่พบบ่อย</a></li></ul></nav>
+
+<section id="why">
+<h2>ทำไม Google บอกว่าแอปของคุณต้องทดสอบเพิ่ม</h2>
+<p>การเข้าร่วมไม่ได้แปลว่าทดสอบแล้ว Google เห็นได้ว่ามีผู้ทดสอบติดตั้งแอปกี่คน เปิดแอปบ่อยแค่ไหน และคุณปล่อยอัปเดตระหว่างการทดสอบหรือไม่ การทดสอบที่คนติดตั้งครั้งเดียวแล้วไม่กลับมาอีกเลย ดูเหมือนแค่การทำให้ครบเงื่อนไข ไม่ใช่การทดสอบจริง</p>
+<ul><li><b>การมีส่วนร่วมต่ำ:</b> ผู้ทดสอบติดตั้งแอปแต่แทบไม่เคยหรือไม่เคยเปิดเลย</li><li><b>ผู้ทดสอบที่ใช้งานอยู่น้อยเกินไป:</b> มีคนออกจากการทดสอบ จนผู้ทดสอบที่เข้าร่วมเหลือต่ำกว่า 12 คน</li><li><b>ไม่มีการพัฒนาต่อ:</b> ไม่มีบิลด์ใหม่ และไม่มีการตอบสนองต่อฟีดแบ็กให้เห็นตลอด 14 วัน</li><li><b>คำตอบไม่หนักแน่น:</b> ตอบแบบสอบถาม Production อย่างคลุมเครือ ไม่มีตัวเลขและไม่มีตัวอย่างฟีดแบ็ก</li></ul>
+
+
+</section>
+
+<section id="plan">
+<h2>แผนที่ผ่านได้ในรอบที่สอง</h2>
+
+
+<ol><li>ให้การทดสอบแบบปิดดำเนินต่อไป อย่าลบแทร็กหรือนำผู้ทดสอบที่ยังใช้งานอยู่ออก</li><li>หาผู้ทดสอบจริง 14-15 คนที่จะเปิดแอปทุกวัน เพื่อให้มีคนออกไปบ้างแล้วจำนวนไม่ลดต่ำกว่า 12</li><li>ให้งานที่ชัดเจนหนึ่งหรือสองอย่างต่อสัปดาห์แก่ผู้ทดสอบ (“สร้างบัญชี เพิ่มรายการ เปลี่ยนการตั้งค่า”)</li><li>ขอฟีดแบ็กเป็นลายลักษณ์อักษร แก้ไขปัญหาที่ได้รับรายงานอย่างน้อยสองสามข้อ และอัปโหลดบิลด์ใหม่ไปยังแทร็กทดสอบแบบปิดระหว่างการทดสอบ</li><li>จดบันทึก: จำนวนผู้ทดสอบที่ใช้งานรายวัน จำนวนวันทดสอบรวมของผู้ทดสอบทุกคน ฟีดแบ็กที่ได้รับ และสิ่งที่คุณเปลี่ยน</li><li>หลังมีการใช้งานจริงอีก 14 วัน ให้ยื่นขอใหม่และตอบทุกคำถามด้วยตัวเลขเหล่านั้น</li></ol>
+
+</section>
+
+<section id="proof">
+<h2>แสดงหลักฐานการมีส่วนร่วม</h2>
+<p>คำตอบของคุณควรอ่านเหมือนรายงานการทดสอบสั้น ๆ: ผู้ทดสอบกี่คน ใช้แอปกี่วัน รายงานอะไรมา และบิลด์ไหนแก้ไขปัญหานั้น Tester Exchange บันทึกการใช้งานรายวันที่ยืนยันแล้วของผู้ทดสอบทุกคน และร่างคำตอบเหล่านี้จากข้อมูลจริงของคุณ คุณจึงไม่ต้องนั่งนึกย้อนจากความจำ</p>
+
+
+
+</section>
+
+<section id="avoid">
+<h2>สิ่งที่ไม่ควรทำ</h2>
+
+<ul><li>อย่าใช้โทรศัพท์สำรองหรือบัญชีของตัวเองเป็นผู้ทดสอบ หลายบัญชีบนอุปกรณ์เครื่องเดียวไม่นับเป็นการทดสอบจริง</li><li>อย่าจ่ายเงินให้ “ผู้ทดสอบ” ที่แค่ติดตั้งแต่ไม่เคยเปิดแอป นั่นคือสิ่งที่ถูกปฏิเสธพอดี</li><li>อย่าคัดลอกคำตอบทั่วไปจากอินเทอร์เน็ต ใช้ตัวเลขและฟีดแบ็กของคุณเอง</li></ul>
+
+
+</section>
+<section id="faq"><h2>คำถามที่พบบ่อย</h2>
+<details><summary>ต้องเริ่มนับ 14 วันใหม่ไหม?</summary><p>คุณยังเก็บการทดสอบแบบปิดไว้ได้ แต่ Google ต้องการเห็นการทดสอบจริงมากขึ้นก่อนที่คุณจะยื่นขอใหม่ วางแผนให้มีการใช้งานจริงอีกอย่างน้อย 14 วัน</p></details>
+<details><summary>ผู้ทดสอบควรเปิดแอปบ่อยแค่ไหน?</summary><p>Google ไม่ได้เปิดเผยตัวเลข การที่ผู้ทดสอบส่วนใหญ่ใช้งานทุกวันคือรูปแบบที่ปลอดภัยที่สุด และเป็นสิ่งที่ Tester Exchange ยืนยัน</p></details>
+<details><summary>ฟีดแบ็กสำคัญไหม?</summary><p>สำคัญ แบบสอบถามจะถามว่าผู้ทดสอบพูดว่าอะไร และคุณเปลี่ยนอะไรบ้าง ฟีดแบ็กจริงและการแก้ไขจริงทำให้คำตอบของคุณน่าเชื่อถือ</p></details>
+</section>
+<div class="cta"><span>Tester Exchange ยืนยันบนโทรศัพท์ของผู้ทดสอบแต่ละคนว่าเปิดแอปของคุณทุกวัน และให้รายงานกิจกรรมรายวันสำหรับการยื่นขอครั้งถัดไป</span><a class="btn" href="https://testerexchange.com/?lang=th">รับผู้ทดสอบที่ใช้งานจริงฟรี</a></div>
+<section><h2>คู่มืออื่น ๆ</h2><ul class="related"><li><a href="https://testerexchange.com/th/" hreflang="th">วิธีหาผู้ทดสอบ 12 คนสำหรับการทดสอบแบบปิดบน Google Play</a></li><li><a href="https://testerexchange.com/th/12-testers-app-builders/" hreflang="th">ผู้ทดสอบ 12 คนของ Google Play สำหรับแอปที่สร้างด้วย App Inventor, Kodular, Flutter, Unity และเครื่องมืออื่น ๆ</a></li><li><a href="https://testerexchange.com/th/free-closed-testing-testers/" hreflang="th">วิธีหาผู้ทดสอบ 12 คนสำหรับการทดสอบแบบปิดบน Google Play แบบฟรี</a></li><li><a href="https://testerexchange.com/th/google-group-vs-email-list/" hreflang="th">ใช้ Google Group หรือรายชื่ออีเมลสำหรับการทดสอบแบบปิด?</a></li><li><a href="https://testerexchange.com/th/keep-testers-active-14-days/" hreflang="th">วิธีทำให้ผู้ทดสอบแบบปิดใช้งานต่อเนื่องครบทั้ง 14 วัน</a></li><li><a href="https://testerexchange.com/th/production-access-questions/" hreflang="th">วิธีตอบคำถามขอสิทธิ์ Production ของ Google Play</a></li><li><a href="https://testerexchange.com/th/tools/production-answers/" hreflang="th">ตัวช่วยร่างคำตอบขอสิทธิ์ Production</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a>
+<a href="https://testerexchange.com/tests/">Open tests</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>
