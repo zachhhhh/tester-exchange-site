@@ -4,8 +4,8 @@
 > before a new personal developer account can publish to production. Testers are real people on their own
 > phones; a companion Android app verifies each day they opened the app (30+ seconds), and Google reviews
 > exactly this engagement. 1 credit = 1 verified tester-day. A 12-tester campaign costs 180 credits, held in
-> escrow and refunded if unused. Credits are earned by testing other apps or bought (US$7 / 6 testers, $12 / 12 testers,
-> $14 / 15 testers; card, PayPal, Apple Pay, Google Pay).
+> escrow and refunded if unused. Credits are earned by testing other apps or bought (US$9.99 / 12 testers, $12.99 / 15 testers,
+> $19.99 / 25 testers; card, PayPal, Apple Pay, Google Pay).
 
 ## Fastest path for a developer (3 steps)
 1. Paste the Google Play link at https://testerexchange.com/ and pick a pack (or test other apps for free).
