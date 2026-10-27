@@ -9,18 +9,19 @@
 ## Bring your own testers (free)
 - A developer shares https://testerexchange.com/t/<package> with friends. Friends who sign up there, install the app
   and the Tester Exchange companion app are verified like any tester and fill the 12 seats; no credits move.
-  Credits pay only for the seats friends don't fill ("fill from exchange" on /start or /apps).
-- MCP tools: get_testers (start here), friends_status, start_friends_test, fill_from_exchange (token).
+  Credits pay only for the seats friends and the circle don't fill ("fill from exchange" on /start or /apps).
+- MCP tools: friends_status, start_friends_test, fill_from_exchange (token).
   agent_call actions: friends, start_friends_test, fill_from_exchange (token).
 
-## Autopilot (how it works now)
-- Nobody browses or picks apps. A developer adds their app and adds testerexchange-testers@googlegroups.com to the
-  closed track once. Free: link a phone with the Tester Exchange app; it is given apps to test automatically (paid apps
-  first) and the credits earned flow into the developer's own test. Free apps get exchange testers while their owner tests.
-  Paid: buy credits and skip testing; paid apps get testers before anyone else. Google's 14 days apply to everyone.
-- Agents: one MCP tool / action does the whole setup: get_testers (package_name, name?). Call it again to check progress.
+## Swap circles (free)
+- Developers join a circle; it starts at 6 members, or on Monday 01:05 UTC with at least 3, whichever comes first.
+  Everyone tests everyone else's app for 14 days, free; friends and credits fill the rest of the 12.
+  Needs the Tester Exchange Android app on the phone. Start at https://testerexchange.com/start
+- MCP tools: swap_circle_status (public), join_swap_circle, my_swap_circle, leave_swap_circle.
+  agent_call actions: circle (public), join_circle, my_circle, leave_circle.
 
 ## Pages
+- Live list of open closed tests: https://testerexchange.com/tests/
 - Closed testing guide (14 languages): https://testerexchange.com/guide/
 
 ## For AI agents
@@ -30,7 +31,7 @@
 - HTTP API (one endpoint): POST https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/agent_call
   headers: `apikey: sb_publishable_OwXT7OfwIGkuIn420mavVA_MsAkzZGf` (public key), `Content-Type: application/json`
   body: {"p_token": "tx_…" | null, "p_action": "help", "p_args": {}}
-  Actions: help, stats, pricing, open_tests (public); get_testers (start here), me, my_apps, add_app, start_campaign, campaign,
+  Actions: help, stats, pricing, open_tests (public); me, my_apps, add_app, start_campaign, campaign,
   add_testers, set_status, join, my_tests, share_kit, buy_credits (token).
 - OpenAPI: https://testerexchange.com/openapi.json
 - Agent docs: https://testerexchange.com/agents/
