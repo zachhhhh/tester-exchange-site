@@ -60,3 +60,8 @@ pre{background:var(--surface);border:1px solid var(--line);border-radius:10px;pa
 .stats{display:flex;gap:28px;flex-wrap:wrap;font-size:14px;color:var(--muted)}.stats b{font-size:26px;display:block;color:var(--ink);font-variant-numeric:tabular-nums;font-weight:600;letter-spacing:-.02em}
 @media (max-width:560px){body{font-size:16px}.wrap{padding:0 16px 56px}header{padding:16px 0;margin-bottom:20px}header select{max-width:104px}.lede{font-size:17px}}
 @media (max-width:480px){header>a:last-child:not(.brand){display:none}}
+.offer{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:24px 0}
+.offer h2{margin:0 0 6px}.offer .packs{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
+.offer .packs a{display:flex;flex-direction:column;gap:2px;border:1px solid var(--line);border-radius:12px;padding:10px 14px;text-decoration:none;color:var(--ink)}
+.offer .packs .best a{border-color:var(--accent);background:var(--accent-soft)}.offer .price{font-size:22px;font-weight:650}.offer small{color:var(--muted)}
+.offer .how{margin:8px 0 14px}.offer .row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
