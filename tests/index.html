@@ -21,7 +21,7 @@
 <footer><a href="https://testerexchange.com/guide/">Closed testing guide</a><a href="https://testerexchange.com/tools/production-answers/">Production-access answers</a><a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
 </div>
 <script>
-const U="https://vvrlxzbngxfxddywidoq.supabase.co",K="sb_publishable_OwXT7OfwIGkuIn420mavVA_MsAkzZGf",SITE="https://testerexchange.com/";
+const U="",K="",SITE="https://testerexchange.com/";
 const H={apikey:K,'Content-Type':'application/json'};
 const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
 async function rpc(fn,body){const r=await fetch(U+'/rest/v1/rpc/'+fn,{method:'POST',headers:H,body:JSON.stringify(body||{})});if(!r.ok)throw new Error(r.status);return r.json()}
