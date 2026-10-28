@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="kn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>closed testing ನಂತರ Google Play ನ &quot;more testing required&quot; ಸರಿಪಡಿಸುವುದು ಹೇಗೆ</title>
+<meta name="description" content="14 ದಿನದ closed test ನಂತರ Google ನಿಮ್ಮ production access ವಿನಂತಿಯನ್ನು ರಿಜೆಕ್ಟ್ ಮಾಡಿದೆಯೇ? ಅದು ಏಕೆ ಆಗುತ್ತದೆ (testers ನಿಜವಾಗಿ ಆ್ಯಪ್ ಬಳಸಲಿಲ್ಲ), ಮತ್ತು ಮುಂದಿನ ಪ್ರಯತ್ನದಲ್ಲಿ ಪಾಸ್ ಆಗಲು ಹಂತ ಹಂತದ ಯೋಜನೆ.">
+<link rel="canonical" href="https://testerexchange.com/kn/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="am" href="https://testerexchange.com/am/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ar" href="https://testerexchange.com/ar/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="az" href="https://testerexchange.com/az/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="bg" href="https://testerexchange.com/bg/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="bn" href="https://testerexchange.com/bn/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="cs" href="https://testerexchange.com/cs/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="de" href="https://testerexchange.com/de/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="el" href="https://testerexchange.com/el/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="fa" href="https://testerexchange.com/fa/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="fil" href="https://testerexchange.com/fil/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="gu" href="https://testerexchange.com/gu/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ha" href="https://testerexchange.com/ha/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="he" href="https://testerexchange.com/he/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="hi" href="https://testerexchange.com/hi/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="hr" href="https://testerexchange.com/hr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="hu" href="https://testerexchange.com/hu/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ig" href="https://testerexchange.com/ig/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="it" href="https://testerexchange.com/it/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ja" href="https://testerexchange.com/ja/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="kk" href="https://testerexchange.com/kk/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="km" href="https://testerexchange.com/km/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="kn" href="https://testerexchange.com/kn/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ko" href="https://testerexchange.com/ko/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ml" href="https://testerexchange.com/ml/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="mr" href="https://testerexchange.com/mr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ms" href="https://testerexchange.com/ms/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="my" href="https://testerexchange.com/my/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ne" href="https://testerexchange.com/ne/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="nl" href="https://testerexchange.com/nl/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="pa" href="https://testerexchange.com/pa/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="pl" href="https://testerexchange.com/pl/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ro" href="https://testerexchange.com/ro/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="si" href="https://testerexchange.com/si/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="sk" href="https://testerexchange.com/sk/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="sr" href="https://testerexchange.com/sr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="sv" href="https://testerexchange.com/sv/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="sw" href="https://testerexchange.com/sw/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ta" href="https://testerexchange.com/ta/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="te" href="https://testerexchange.com/te/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="th" href="https://testerexchange.com/th/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="uk" href="https://testerexchange.com/uk/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="ur" href="https://testerexchange.com/ur/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="uz" href="https://testerexchange.com/uz/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="yo" href="https://testerexchange.com/yo/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="zh-Hans" href="https://testerexchange.com/zh-cn/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="zh-Hant" href="https://testerexchange.com/zh-tw/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/insufficient-testing-engagement/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/insufficient-testing-engagement/">
+<meta property="og:type" content="article"><meta property="og:title" content="closed testing ನಂತರ Google Play ನ &quot;more testing required&quot; ಸರಿಪಡಿಸುವುದು ಹೇಗೆ">
+<meta property="og:description" content="14 ದಿನದ closed test ನಂತರ Google ನಿಮ್ಮ production access ವಿನಂತಿಯನ್ನು ರಿಜೆಕ್ಟ್ ಮಾಡಿದೆಯೇ? ಅದು ಏಕೆ ಆಗುತ್ತದೆ (testers ನಿಜವಾಗಿ ಆ್ಯಪ್ ಬಳಸಲಿಲ್ಲ), ಮತ್ತು ಮುಂದಿನ ಪ್ರಯತ್ನದಲ್ಲಿ ಪಾಸ್ ಆಗಲು ಹಂತ ಹಂತದ ಯೋಜನೆ."><meta property="og:url" content="https://testerexchange.com/kn/insufficient-testing-engagement/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"closed testing ನಂತರ ರಿಜೆಕ್ಟ್ ಆಯಿತೇ? \"more testing required\" ಸರಿಪಡಿಸುವುದು ಹೇಗೆ","description":"14 ದಿನದ closed test ನಂತರ Google ನಿಮ್ಮ production access ವಿನಂತಿಯನ್ನು ರಿಜೆಕ್ಟ್ ಮಾಡಿದೆಯೇ? ಅದು ಏಕೆ ಆಗುತ್ತದೆ (testers ನಿಜವಾಗಿ ಆ್ಯಪ್ ಬಳಸಲಿಲ್ಲ), ಮತ್ತು ಮುಂದಿನ ಪ್ರಯತ್ನದಲ್ಲಿ ಪಾಸ್ ಆಗಲು ಹಂತ ಹಂತದ ಯೋಜನೆ.","inLanguage":"kn","dateModified":"2026-10-28","url":"https://testerexchange.com/kn/insufficient-testing-engagement/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ನಾನು 14 ದಿನಗಳನ್ನು ಮತ್ತೆ ಶುರುಮಾಡಬೇಕೇ?","acceptedAnswer":{"@type":"Answer","text":"ನಿಮ್ಮ closed test ಉಳಿಯುತ್ತದೆ, ಆದರೆ ಮತ್ತೆ ಅರ್ಜಿ ಹಾಕುವ ಮೊದಲು Google ಇನ್ನಷ್ಟು ನಿಜವಾದ ಟೆಸ್ಟಿಂಗ್ ನೋಡಲು ಬಯಸುತ್ತದೆ. ಕನಿಷ್ಠ ಇನ್ನೂ 14 ದಿನ ಸಕ್ರಿಯ ಬಳಕೆಗೆ ಯೋಜಿಸಿ."}},{"@type":"Question","name":"Testers ಎಷ್ಟು ಬಾರಿ ಆ್ಯಪ್ ತೆರೆಯಬೇಕು?","acceptedAnswer":{"@type":"Answer","text":"Google ಯಾವುದೇ ಸಂಖ್ಯೆ ಪ್ರಕಟಿಸುವುದಿಲ್ಲ. ಹೆಚ್ಚಿನ testers ನ ದಿನನಿತ್ಯದ ಬಳಕೆ ಅತ್ಯಂತ ಸುರಕ್ಷಿತ ಮಾದರಿ, ಮತ್ತು Tester Exchange ಪರಿಶೀಲಿಸುವುದೂ ಅದನ್ನೇ."}},{"@type":"Question","name":"Feedback ಮುಖ್ಯವೇ?","acceptedAnswer":{"@type":"Answer","text":"ಹೌದು. testers ಏನು ಹೇಳಿದರು ಮತ್ತು ನೀವು ಏನು ಬದಲಾಯಿಸಿದಿರಿ ಎಂದು ಪ್ರಶ್ನಾವಳಿ ಕೇಳುತ್ತದೆ. ನಿಜವಾದ feedback ಮತ್ತು ನಿಜವಾದ ಸರಿಪಡಿಕೆಗಳು ನಿಮ್ಮ ಉತ್ತರಗಳನ್ನು ವಿಶ್ವಾಸಾರ್ಹವಾಗಿಸುತ್ತವೆ."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=kn">Tester Exchange</a><span class="grow"></span>
+<select aria-label="ಭಾಷೆ" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/insufficient-testing-engagement/">English</option><option value="https://testerexchange.com/am/insufficient-testing-engagement/">አማርኛ</option><option value="https://testerexchange.com/ar/insufficient-testing-engagement/">العربية</option><option value="https://testerexchange.com/az/insufficient-testing-engagement/">Azərbaycanca</option><option value="https://testerexchange.com/bg/insufficient-testing-engagement/">Български</option><option value="https://testerexchange.com/bn/insufficient-testing-engagement/">বাংলা</option><option value="https://testerexchange.com/cs/insufficient-testing-engagement/">Čeština</option><option value="https://testerexchange.com/de/insufficient-testing-engagement/">Deutsch</option><option value="https://testerexchange.com/el/insufficient-testing-engagement/">Ελληνικά</option><option value="https://testerexchange.com/es/insufficient-testing-engagement/">Español</option><option value="https://testerexchange.com/fa/insufficient-testing-engagement/">فارسی</option><option value="https://testerexchange.com/fil/insufficient-testing-engagement/">Filipino</option><option value="https://testerexchange.com/fr/insufficient-testing-engagement/">Français</option><option value="https://testerexchange.com/gu/insufficient-testing-engagement/">ગુજરાતી</option><option value="https://testerexchange.com/ha/insufficient-testing-engagement/">Hausa</option><option value="https://testerexchange.com/he/insufficient-testing-engagement/">עברית</option><option value="https://testerexchange.com/hi/insufficient-testing-engagement/">हिन्दी</option><option value="https://testerexchange.com/hr/insufficient-testing-engagement/">Hrvatski</option><option value="https://testerexchange.com/hu/insufficient-testing-engagement/">Magyar</option><option value="https://testerexchange.com/id/insufficient-testing-engagement/">Bahasa Indonesia</option><option value="https://testerexchange.com/ig/insufficient-testing-engagement/">Igbo</option><option value="https://testerexchange.com/it/insufficient-testing-engagement/">Italiano</option><option value="https://testerexchange.com/ja/insufficient-testing-engagement/">日本語</option><option value="https://testerexchange.com/kk/insufficient-testing-engagement/">Қазақша</option><option value="https://testerexchange.com/km/insufficient-testing-engagement/">ខ្មែរ</option><option value="https://testerexchange.com/kn/insufficient-testing-engagement/" selected>ಕನ್ನಡ</option><option value="https://testerexchange.com/ko/insufficient-testing-engagement/">한국어</option><option value="https://testerexchange.com/ml/insufficient-testing-engagement/">മലയാളം</option><option value="https://testerexchange.com/mr/insufficient-testing-engagement/">मराठी</option><option value="https://testerexchange.com/ms/insufficient-testing-engagement/">Bahasa Melayu</option><option value="https://testerexchange.com/my/insufficient-testing-engagement/">မြန်မာ</option><option value="https://testerexchange.com/ne/insufficient-testing-engagement/">नेपाली</option><option value="https://testerexchange.com/nl/insufficient-testing-engagement/">Nederlands</option><option value="https://testerexchange.com/pa/insufficient-testing-engagement/">ਪੰਜਾਬੀ</option><option value="https://testerexchange.com/pl/insufficient-testing-engagement/">Polski</option><option value="https://testerexchange.com/pt/insufficient-testing-engagement/">Português</option><option value="https://testerexchange.com/ro/insufficient-testing-engagement/">Română</option><option value="https://testerexchange.com/ru/insufficient-testing-engagement/">Русский</option><option value="https://testerexchange.com/si/insufficient-testing-engagement/">සිංහල</option><option value="https://testerexchange.com/sk/insufficient-testing-engagement/">Slovenčina</option><option value="https://testerexchange.com/sr/insufficient-testing-engagement/">Српски</option><option value="https://testerexchange.com/sv/insufficient-testing-engagement/">Svenska</option><option value="https://testerexchange.com/sw/insufficient-testing-engagement/">Kiswahili</option><option value="https://testerexchange.com/ta/insufficient-testing-engagement/">தமிழ்</option><option value="https://testerexchange.com/te/insufficient-testing-engagement/">తెలుగు</option><option value="https://testerexchange.com/th/insufficient-testing-engagement/">ไทย</option><option value="https://testerexchange.com/tr/insufficient-testing-engagement/">Türkçe</option><option value="https://testerexchange.com/uk/insufficient-testing-engagement/">Українська</option><option value="https://testerexchange.com/ur/insufficient-testing-engagement/">اردو</option><option value="https://testerexchange.com/uz/insufficient-testing-engagement/">Oʻzbekcha</option><option value="https://testerexchange.com/vi/insufficient-testing-engagement/">Tiếng Việt</option><option value="https://testerexchange.com/yo/insufficient-testing-engagement/">Yorùbá</option><option value="https://testerexchange.com/zh-cn/insufficient-testing-engagement/">简体中文</option><option value="https://testerexchange.com/zh-tw/insufficient-testing-engagement/">繁體中文</option><option value="https://testerexchange.com/zu/insufficient-testing-engagement/">isiZulu</option>
+</select>
+<a href="https://testerexchange.com/?lang=kn">Tester Exchange ತೆರೆಯಿರಿ</a></header>
+<main>
+
+<h1>closed testing ನಂತರ ರಿಜೆಕ್ಟ್ ಆಯಿತೇ? &quot;more testing required&quot; ಸರಿಪಡಿಸುವುದು ಹೇಗೆ</h1>
+<p class="muted">ಅಕ್ಟೋಬರ್ 2026 ರಲ್ಲಿ ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗಿದೆ</p>
+<p class="lede">ನೀವು 12 testers ಜೊತೆ 14 ದಿನ closed test ನಡೆಸಿ, production ಗೆ ಅರ್ಜಿ ಹಾಕಿದಿರಿ, ಮತ್ತು ನಿಮ್ಮ ಆ್ಯಪ್‌ಗೆ ಇನ್ನಷ್ಟು ಟೆಸ್ಟಿಂಗ್ ಬೇಕು ಎಂದು Google ಹೇಳಿತು. ಹೊಸ personal ಖಾತೆಗಳಿಗೆ ಇದು ಅತ್ಯಂತ ಸಾಮಾನ್ಯ ಫಲಿತಾಂಶ. ಸಾಮಾನ್ಯವಾಗಿ ಇದರ ಅರ್ಥ ಟೆಸ್ಟ್ ಸಮಯದಲ್ಲಿ ನಿಮ್ಮ ಆ್ಯಪ್‌ನ ಸಾಕಷ್ಟು ನಿಜವಾದ ಬಳಕೆ Google ಗೆ ಕಾಣಲಿಲ್ಲ. Google ಏನನ್ನು ನೋಡುತ್ತದೆ, ಮತ್ತು ಪಾಸ್ ಆಗುವ ಎರಡನೇ ಟೆಸ್ಟ್ ಹೇಗೆ ನಡೆಸುವುದು ಎಂಬುದು ಇಲ್ಲಿದೆ.</p>
+<div class="cta"><span>ನಿಜವಾದ ಜನರು 14 ದಿನ ತಮ್ಮದೇ ಫೋನ್‌ಗಳಲ್ಲಿ ನಿಮ್ಮ ಆ್ಯಪ್ ತೆರೆಯುತ್ತಾರೆ. ಒಮ್ಮೆ ಪಾವತಿಸಿ, ಅಥವಾ ಇತರ ಆ್ಯಪ್‌ಗಳನ್ನು ಟೆಸ್ಟ್ ಮಾಡಿ ಉಚಿತವಾಗಿ ಪಡೆಯಿರಿ.</span><a class="btn" href="https://testerexchange.com/?lang=kn#buy">12 testers ಪಡೆಯಿರಿ</a></div>
+<nav class="toc"><b>ಈ ಪುಟದಲ್ಲಿ</b><ul><li><a href="#why">ನಿಮ್ಮ ಆ್ಯಪ್‌ಗೆ ಇನ್ನಷ್ಟು ಟೆಸ್ಟಿಂಗ್ ಬೇಕು ಎಂದು Google ಏಕೆ ಹೇಳುತ್ತದೆ</a></li><li><a href="#plan">ಎರಡನೇ ಪ್ರಯತ್ನದಲ್ಲಿ ಪಾಸ್ ಆಗುವ ಯೋಜನೆ</a></li><li><a href="#proof">engagement ನ ಪುರಾವೆ ತೋರಿಸಿ</a></li><li><a href="#avoid">ಏನು ಮಾಡಬಾರದು</a></li><li><a href="#faq">ಪದೇ ಪದೇ ಕೇಳುವ ಪ್ರಶ್ನೆಗಳು</a></li></ul></nav>
+
+<section id="why">
+<h2>ನಿಮ್ಮ ಆ್ಯಪ್‌ಗೆ ಇನ್ನಷ್ಟು ಟೆಸ್ಟಿಂಗ್ ಬೇಕು ಎಂದು Google ಏಕೆ ಹೇಳುತ್ತದೆ</h2>
+<p>opt-in ಆಗುವುದು ಟೆಸ್ಟಿಂಗ್ ಮಾಡಿದಂತಲ್ಲ. ಎಷ್ಟು testers ಆ್ಯಪ್ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿದರು, ಎಷ್ಟು ಬಾರಿ ತೆರೆದರು, ಮತ್ತು ಟೆಸ್ಟ್ ಸಮಯದಲ್ಲಿ ನೀವು ಅಪ್‌ಡೇಟ್ ಕಳುಹಿಸಿದಿರೇ ಎಂದು Google ನೋಡಬಲ್ಲದು. ಜನರು ಒಮ್ಮೆ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ ಮತ್ತೆ ಬರದ ಟೆಸ್ಟ್, ನಿಜವಾದ ಟೆಸ್ಟ್‌ಗಿಂತ ಕೇವಲ ಬಾಕ್ಸ್ ಟಿಕ್ ಮಾಡಿದಂತೆ ಕಾಣುತ್ತದೆ.</p>
+<ul><li><b>ಕಡಿಮೆ engagement:</b> testers ಆ್ಯಪ್ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿದರು ಆದರೆ ಅಪರೂಪಕ್ಕೆ ಅಥವಾ ಎಂದಿಗೂ ತೆರೆಯಲಿಲ್ಲ.</li><li><b>ತುಂಬಾ ಕಡಿಮೆ ಸಕ್ರಿಯ testers:</b> ಜನರು ಟೆಸ್ಟ್ ಬಿಟ್ಟರು, ಮತ್ತು ನೀವು 12 opt-in testers ಗಿಂತ ಕೆಳಗೆ ಇಳಿದಿರಿ.</li><li><b>ಸುಧಾರಣೆ ಇಲ್ಲ:</b> 14 ದಿನಗಳಲ್ಲಿ ಹೊಸ builds ಇಲ್ಲ ಮತ್ತು feedback ಗೆ ಕಾಣುವ ಪ್ರತಿಕ್ರಿಯೆ ಇಲ್ಲ.</li><li><b>ದುರ್ಬಲ ಉತ್ತರಗಳು:</b> production ಪ್ರಶ್ನಾವಳಿಯಲ್ಲಿ ಅಸ್ಪಷ್ಟ ಉತ್ತರಗಳು, ಸಂಖ್ಯೆಗಳಿಲ್ಲ ಮತ್ತು feedback ನ ಉದಾಹರಣೆಗಳಿಲ್ಲ.</li></ul>
+
+
+</section>
+
+<section id="plan">
+<h2>ಎರಡನೇ ಪ್ರಯತ್ನದಲ್ಲಿ ಪಾಸ್ ಆಗುವ ಯೋಜನೆ</h2>
+
+
+<ol><li>Closed test ನಡೆಯುತ್ತಿರಲಿ. Track ಅಳಿಸಬೇಡಿ ಅಥವಾ ಇನ್ನೂ ಸಕ್ರಿಯವಾಗಿರುವ testers ಅನ್ನು ತೆಗೆಯಬೇಡಿ.</li><li>ಪ್ರತಿದಿನ ಆ್ಯಪ್ ತೆರೆಯುವ 14–15 ನಿಜವಾದ testers ಸೇರಿಸಿ, ಕೆಲವರು ಬಿಟ್ಟರೂ ನೀವು 12 ಕ್ಕಿಂತ ಕೆಳಗೆ ಹೋಗದಂತೆ.</li><li>Testers ಗೆ ವಾರಕ್ಕೆ ಒಂದೆರಡು ನಿರ್ದಿಷ್ಟ ಕೆಲಸ ಕೊಡಿ (&quot;ಖಾತೆ ರಚಿಸಿ, ಒಂದು ಐಟಮ್ ಸೇರಿಸಿ, ಒಂದು ಸೆಟ್ಟಿಂಗ್ ಬದಲಿಸಿ&quot;).</li><li>ಬರವಣಿಗೆಯ feedback ಕೇಳಿ, ವರದಿಯಾದ ಕನಿಷ್ಠ ಕೆಲವು ಸಮಸ್ಯೆಗಳನ್ನು ಸರಿಪಡಿಸಿ, ಮತ್ತು ಟೆಸ್ಟ್ ಸಮಯದಲ್ಲಿ closed track ಗೆ ಹೊಸ builds ಅಪ್‌ಲೋಡ್ ಮಾಡಿ.</li><li>ಲಾಗ್ ಇಡಿ: ದಿನನಿತ್ಯದ ಸಕ್ರಿಯ testers, ಒಟ್ಟು tester-ದಿನಗಳು, ಸಿಕ್ಕ feedback, ಮತ್ತು ನೀವು ಏನು ಬದಲಾಯಿಸಿದಿರಿ.</li><li>ಇನ್ನೂ 14 ದಿನ ನಿಜವಾದ ಬಳಕೆಯ ನಂತರ ಮತ್ತೆ ಅರ್ಜಿ ಹಾಕಿ ಮತ್ತು ಪ್ರತಿ ಪ್ರಶ್ನೆಗೆ ಆ ಸಂಖ್ಯೆಗಳೊಂದಿಗೆ ಉತ್ತರಿಸಿ.</li></ol>
+
+</section>
+
+<section id="proof">
+<h2>engagement ನ ಪುರಾವೆ ತೋರಿಸಿ</h2>
+<p>ನಿಮ್ಮ ಉತ್ತರಗಳು ಚಿಕ್ಕ ಟೆಸ್ಟ್ ರಿಪೋರ್ಟ್‌ನಂತೆ ಓದಬೇಕು: ಎಷ್ಟು testers, ಅವರು ಎಷ್ಟು ದಿನ ಆ್ಯಪ್ ಬಳಸಿದರು, ಏನು ವರದಿ ಮಾಡಿದರು, ಮತ್ತು ಯಾವ builds ಅದನ್ನು ಸರಿಪಡಿಸಿದವು. Tester Exchange ಪ್ರತಿ tester ನ ಪರಿಶೀಲಿಸಿದ ದಿನನಿತ್ಯದ ಬಳಕೆಯನ್ನು ದಾಖಲಿಸುತ್ತದೆ ಮತ್ತು ನಿಮ್ಮ ನಿಜವಾದ ಡೇಟಾದಿಂದ ಈ ಉತ್ತರಗಳನ್ನು ಡ್ರಾಫ್ಟ್ ಮಾಡುತ್ತದೆ, ಹಾಗಾಗಿ ನೆನಪಿನಿಂದ ಮತ್ತೆ ಕಟ್ಟಬೇಕಿಲ್ಲ.</p>
+
+
+
+</section>
+
+<section id="avoid">
+<h2>ಏನು ಮಾಡಬಾರದು</h2>
+
+<ul><li>ನಿಮ್ಮದೇ ಹೆಚ್ಚುವರಿ ಫೋನ್‌ಗಳು ಅಥವಾ ಖಾತೆಗಳನ್ನು testers ಆಗಿ ಬಳಸಬೇಡಿ. ಒಂದೇ ಸಾಧನದಲ್ಲಿ ಹಲವು ಖಾತೆಗಳು ನಿಜವಾದ ಟೆಸ್ಟಿಂಗ್ ಎಂದು ಎಣಿಕೆಯಾಗುವುದಿಲ್ಲ.</li><li>ಕೇವಲ ಇನ್‌ಸ್ಟಾಲ್ ಮಾಡಿ ಆ್ಯಪ್ ಎಂದಿಗೂ ತೆರೆಯದ &quot;testers&quot; ಗೆ ಹಣ ಕೊಡಬೇಡಿ. ರಿಜೆಕ್ಟ್ ಆಗುವುದು ಅದೇ.</li><li>ಇಂಟರ್ನೆಟ್‌ನಿಂದ ಸಾಮಾನ್ಯ ಉತ್ತರಗಳನ್ನು ಕಾಪಿ ಮಾಡಬೇಡಿ. ನಿಮ್ಮದೇ ಸಂಖ್ಯೆಗಳು ಮತ್ತು ನಿಮ್ಮದೇ feedback ಬಳಸಿ.</li></ul>
+
+
+</section>
+<section id="faq"><h2>ಪದೇ ಪದೇ ಕೇಳುವ ಪ್ರಶ್ನೆಗಳು</h2>
+<details><summary>ನಾನು 14 ದಿನಗಳನ್ನು ಮತ್ತೆ ಶುರುಮಾಡಬೇಕೇ?</summary><p>ನಿಮ್ಮ closed test ಉಳಿಯುತ್ತದೆ, ಆದರೆ ಮತ್ತೆ ಅರ್ಜಿ ಹಾಕುವ ಮೊದಲು Google ಇನ್ನಷ್ಟು ನಿಜವಾದ ಟೆಸ್ಟಿಂಗ್ ನೋಡಲು ಬಯಸುತ್ತದೆ. ಕನಿಷ್ಠ ಇನ್ನೂ 14 ದಿನ ಸಕ್ರಿಯ ಬಳಕೆಗೆ ಯೋಜಿಸಿ.</p></details>
+<details><summary>Testers ಎಷ್ಟು ಬಾರಿ ಆ್ಯಪ್ ತೆರೆಯಬೇಕು?</summary><p>Google ಯಾವುದೇ ಸಂಖ್ಯೆ ಪ್ರಕಟಿಸುವುದಿಲ್ಲ. ಹೆಚ್ಚಿನ testers ನ ದಿನನಿತ್ಯದ ಬಳಕೆ ಅತ್ಯಂತ ಸುರಕ್ಷಿತ ಮಾದರಿ, ಮತ್ತು Tester Exchange ಪರಿಶೀಲಿಸುವುದೂ ಅದನ್ನೇ.</p></details>
+<details><summary>Feedback ಮುಖ್ಯವೇ?</summary><p>ಹೌದು. testers ಏನು ಹೇಳಿದರು ಮತ್ತು ನೀವು ಏನು ಬದಲಾಯಿಸಿದಿರಿ ಎಂದು ಪ್ರಶ್ನಾವಳಿ ಕೇಳುತ್ತದೆ. ನಿಜವಾದ feedback ಮತ್ತು ನಿಜವಾದ ಸರಿಪಡಿಕೆಗಳು ನಿಮ್ಮ ಉತ್ತರಗಳನ್ನು ವಿಶ್ವಾಸಾರ್ಹವಾಗಿಸುತ್ತವೆ.</p></details>
+</section>
+<div class="cta"><span>ನಿಜವಾದ ಜನರು 14 ದಿನ ತಮ್ಮದೇ ಫೋನ್‌ಗಳಲ್ಲಿ ನಿಮ್ಮ ಆ್ಯಪ್ ತೆರೆಯುತ್ತಾರೆ. ಒಮ್ಮೆ ಪಾವತಿಸಿ, ಅಥವಾ ಇತರ ಆ್ಯಪ್‌ಗಳನ್ನು ಟೆಸ್ಟ್ ಮಾಡಿ ಉಚಿತವಾಗಿ ಪಡೆಯಿರಿ.</span><a class="btn" href="https://testerexchange.com/?lang=kn#buy">12 testers ಪಡೆಯಿರಿ</a></div>
+<section><h2>ಇನ್ನಷ್ಟು ಗೈಡ್‌ಗಳು</h2><ul class="related"><li><a href="https://testerexchange.com/kn/" hreflang="kn">Google Play closed testing ಗಾಗಿ 12 testers ಪಡೆಯುವುದು ಹೇಗೆ</a></li><li><a href="https://testerexchange.com/kn/12-testers-app-builders/" hreflang="kn">App Inventor, Kodular, Flutter, Unity ಮತ್ತು ಇತರ builders ನಿಂದ ಮಾಡಿದ ಆ್ಯಪ್‌ಗಳಿಗೆ Google Play 12 testers</a></li><li><a href="https://testerexchange.com/kn/free-closed-testing-testers/" hreflang="kn">Google Play closed testing ಗೆ 12 testers ಅನ್ನು ಉಚಿತವಾಗಿ ಪಡೆಯುವುದು ಹೇಗೆ</a></li><li><a href="https://testerexchange.com/kn/friends-family-closed-testers/" hreflang="kn">ನಿಮ್ಮ 12 Google Play testers ಆಗಿ ಸ್ನೇಹಿತರು ಮತ್ತು ಕುಟುಂಬವನ್ನು ಬಳಸುವುದು</a></li><li><a href="https://testerexchange.com/kn/google-group-vs-email-list/" hreflang="kn">ನಿಮ್ಮ closed test ಗೆ Google Group ಅಥವಾ ಇಮೇಲ್ ಲಿಸ್ಟ್?</a></li><li><a href="https://testerexchange.com/kn/keep-testers-active-14-days/" hreflang="kn">closed testers ಅನ್ನು ಎಲ್ಲಾ 14 ದಿನ ಸಕ್ರಿಯವಾಗಿಡುವುದು ಹೇಗೆ</a></li><li><a href="https://testerexchange.com/kn/production-access-questions/" hreflang="kn">Google Play ನ production access ಪ್ರಶ್ನೆಗಳಿಗೆ ಉತ್ತರಿಸುವುದು ಹೇಗೆ</a></li><li><a href="https://testerexchange.com/kn/tools/production-answers/" hreflang="kn">Production access ಉತ್ತರ ಜನರೇಟರ್</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

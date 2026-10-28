@@ -4,7 +4,7 @@
 > account can publish to production. Testers are real people on their own phones; a companion Android app verifies
 > each day they opened the app, which is the engagement Google reviews. Pay once (US$9.99 for 12 testers,
 > $12.99 for 15, $19.99 for 25; card, PayPal, Apple Pay, Google Pay) or get testers free by testing other apps.
-> Prices are shown in the visitor's own currency. Site and guides in 18 languages.
+> Prices are shown in the visitor's own currency. Site and every guide in 55 languages.
 
 ## Fastest path for a developer (3 steps)
 1. Paste the Google Play link at https://testerexchange.com/ and pick a pack (or test other apps for free).
@@ -37,7 +37,7 @@
 - OpenAPI: https://testerexchange.com/openapi.json · Agent docs: https://testerexchange.com/agents/
 - What an agent can't do: the 14 days of real use on a phone, and paying (checkout needs a human).
 
-## Guides (English; every guide is also in es, pt, fr, de, id, vi, tr, ru, hi, zh-cn, zh-tw, ja, ko, ar, bn, ur, th at /<lang>/; the main guide and answer tool also in sw, fil, ms, it, pl, uk, nl, ro, fa, ta, te, mr, ne, my, uz, ha, am)
+## Guides (English; every guide below is also in all 54 other site languages at /<lang>/, e.g. /es/, /hi/, /id/, /pt/, /ar/, /zh-cn/)
 - [How to get 12 testers for Google Play closed testing](https://testerexchange.com/guide/)
 - [Fix "more testing required" after closed testing](https://testerexchange.com/guide/insufficient-testing-engagement/)
 - [Answering the production access questions](https://testerexchange.com/guide/production-access-questions/)
