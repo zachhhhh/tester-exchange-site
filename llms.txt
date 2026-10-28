@@ -1,49 +1,56 @@
 # Tester Exchange
 
-> Free test-for-test exchange that gets Android developers the 12 testers × 14 days Google Play requires
-> before a new personal developer account can publish to production. Testers are real people on their own
-> phones; a companion Android app verifies each day they opened the app (30+ seconds), and Google reviews
-> exactly this engagement. 1 credit = 1 verified tester-day. A 12-tester campaign costs 180 credits, held in
-> escrow and refunded if unused. Credits are earned by testing other apps or bought (US$7 / 90, $12 / 180, $14 / 225).
+> Gets Android developers the 12 testers × 14 days that Google Play requires before a new personal developer
+> account can publish to production. Testers are real people on their own phones; a companion Android app verifies
+> each day they opened the app, which is the engagement Google reviews. Pay once (US$9.99 for 12 testers,
+> $12.99 for 15, $19.99 for 25; card, PayPal, Apple Pay, Google Pay) or get testers free by testing other apps.
+> Prices are shown in the visitor's own currency. Site and guides in 18 languages.
 
-## Bring your own testers (free)
-- A developer shares https://testerexchange.com/t/<package> with friends. Friends who sign up there, install the app
-  and the Tester Exchange companion app are verified like any tester and fill the 12 seats; no credits move.
-  Credits pay only for the seats friends don't fill ("fill from exchange" on /start or /apps).
-- MCP tools: get_testers (start here), friends_status, start_friends_test, fill_from_exchange (token).
-  agent_call actions: friends, start_friends_test, fill_from_exchange (token).
+## Fastest path for a developer (3 steps)
+1. Paste the Google Play link at https://testerexchange.com/ and pick a pack (or test other apps for free).
+2. Pay. The test starts automatically when the payment lands.
+3. Tap "Connect Google Play": we add our testers group to the app's closed testing track through the Play Developer
+   API. Or add it by hand (Play Console → Closed testing → Testers → Google Groups), or use an email list instead:
+   we show the tester emails to paste.
 
-## Autopilot (how it works now)
-- Nobody browses or picks apps. A developer adds their app and adds testerexchange-testers@googlegroups.com to the
-  closed track once. Free: link a phone with the Tester Exchange app; it is given apps to test automatically (paid apps
-  first) and the credits earned flow into the developer's own test. Free apps get exchange testers while their owner tests.
-  Paid: buy credits and skip testing; paid apps get testers before anyone else. Google's 14 days apply to everyone.
-- Agents: one MCP tool / action does the whole setup: get_testers (package_name, name?). Call it again to check progress.
-
-## Pages
-- Closed testing guide (14 languages): https://testerexchange.com/guide/
+## How testers are found (autopilot)
+- Nobody browses or picks apps. Free: link a phone with the Tester Exchange app; it is given apps to test
+  automatically (paid apps first), and each app you test brings a tester to yours. Paid: skip testing; paid apps get
+  testers before anyone else. Google's 14 days apply to everyone.
+- Dropouts are replaced automatically; you only pay for verified tester-days and unused credits are refunded.
+- After 14 days: a test report with daily activity, tester feedback and draft answers for Google's
+  production-access questions.
+- Bring your own testers: share https://testerexchange.com/t/<package> with friends; they join free and fill seats.
 
 ## For AI agents
+- One call does the whole setup: `get_testers` (package_name, name?). It adds the app, opens its test, applies
+  credits, and returns the only steps a human must do (add the group in Play Console; pay or link a phone).
+  Call it again any time to check progress.
 - MCP server (Streamable HTTP, no OAuth): https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp
-  Auth: header `Authorization: Bearer tx_…` or `?token=tx_…`. Public tools (about, platform_stats, pricing) work without a token. Users create tokens at https://testerexchange.com/api
+  Auth: header `Authorization: Bearer tx_…` or `?token=tx_…`. Public tools (about, platform_stats, pricing) work
+  without a token. Users create tokens at https://testerexchange.com/api
 - HTTP API (one endpoint): POST https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/agent_call
   headers: `apikey: sb_publishable_OwXT7OfwIGkuIn420mavVA_MsAkzZGf` (public key), `Content-Type: application/json`
   body: {"p_token": "tx_…" | null, "p_action": "help", "p_args": {}}
   Actions: help, stats, pricing (public); get_testers (start here), me, my_apps, add_app, start_campaign, campaign,
-  add_testers, set_status, join, my_tests, share_kit, buy_credits (token).
-- OpenAPI: https://testerexchange.com/openapi.json
-- Agent docs: https://testerexchange.com/agents/
+  add_testers, set_status, friends, start_friends_test, fill_from_exchange, join, my_tests, share_kit, buy_credits (token).
+- OpenAPI: https://testerexchange.com/openapi.json · Agent docs: https://testerexchange.com/agents/
 - What an agent can't do: the 14 days of real use on a phone, and paying (checkout needs a human).
 
-## Guides
+## Guides (English; every guide is also in es, pt, fr, de, id, vi, tr, ru, hi, zh-cn, zh-tw, ja, ko, ar, bn, ur, th at /<lang>/)
 - [How to get 12 testers for Google Play closed testing](https://testerexchange.com/guide/)
 - [Fix "more testing required" after closed testing](https://testerexchange.com/guide/insufficient-testing-engagement/)
 - [Answering the production access questions](https://testerexchange.com/guide/production-access-questions/)
+- [Keep testers active for all 14 days](https://testerexchange.com/guide/keep-testers-active-14-days/)
 - [Google Group vs email list for closed testing](https://testerexchange.com/guide/google-group-vs-email-list/)
+- [Free ways to find closed testers](https://testerexchange.com/guide/free-closed-testing-testers/)
+- [Friends and family as closed testers](https://testerexchange.com/guide/friends-family-closed-testers/)
+- [12 testers for apps made with App Inventor, Kodular, Flutter, Unity and other builders](https://testerexchange.com/guide/12-testers-app-builders/)
 - [Free production-access answer generator](https://testerexchange.com/tools/production-answers/)
-- Guides exist in es, pt, fr, de, id, vi, tr, ru, hi, zh-cn, zh-tw, ja, ko at /<lang>/ (e.g. /ja/).
+- Full text of every guide in one file: https://testerexchange.com/llms-full.txt
 
 ## Facts (October 2026)
 - Personal Google Play developer accounts created after 13 Nov 2023 need a closed test with at least 12 opted-in
   testers for 14 continuous days, then apply for production access with a questionnaire.
 - The requirement was 20 testers until December 2024.
+- Organization (company) developer accounts are exempt.
