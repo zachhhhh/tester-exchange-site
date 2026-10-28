@@ -1,44 +1,4 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Open Google Play closed tests: join one, earn credits</title><meta name="description" content="Live list of Android apps looking for closed testers right now. Join a test, use the app daily on your phone, earn credits, and get 12 testers for your own app.">
-<link rel="canonical" href="https://testerexchange.com/tests/">
-<meta property="og:type" content="website"><meta property="og:title" content="Open Google Play closed tests: join one, earn credits"><meta property="og:description" content="Live list of Android apps looking for closed testers right now. Join a test, use the app daily on your phone, earn credits, and get 12 testers for your own app.">
-<meta property="og:url" content="https://testerexchange.com/tests/"><meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png"><meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/static.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Open Google Play closed tests: join one, earn credits","description":"Live list of Android apps looking for closed testers right now. Join a test, use the app daily on your phone, earn credits, and get 12 testers for your own app.","url":"https://testerexchange.com/tests/"}</script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
-</head><body><div class="wrap">
-<header><a class="brand" href="https://testerexchange.com/">Tester Exchange</a><span class="grow"></span><a href="https://testerexchange.com/">Open Tester Exchange</a></header>
-<main>
-<h1>Open closed tests</h1>
-<p class="lede">These Android apps need testers for Google Play's closed-testing rule (12 testers for 14 days). Join one, open the app once a day on your phone, and earn credits you can spend on testers for your own app.</p>
-<div class="stats" id="stats"></div>
-<ul class="tests" id="list"><li class="muted">Loading open tests…</li></ul>
-<div class="cta"><span>Need testers for your own app? List it free and spend the credits you earn.</span><a class="btn" href="https://testerexchange.com/">Get 12 testers</a></div>
-<noscript><p>Turn on JavaScript to see the live list, or <a href="https://testerexchange.com/">open Tester Exchange</a>.</p></noscript>
-</main>
-<footer><a href="https://testerexchange.com/guide/">Closed testing guide</a><a href="https://testerexchange.com/tools/production-answers/">Production-access answers</a><a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
-</div>
-<script>
-const U="",K="",SITE="https://testerexchange.com/";
-const H={apikey:K,'Content-Type':'application/json'};
-const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
-async function rpc(fn,body){const r=await fetch(U+'/rest/v1/rpc/'+fn,{method:'POST',headers:H,body:JSON.stringify(body||{})});if(!r.ok)throw new Error(r.status);return r.json()}
-(async()=>{
-  const list=document.getElementById('list');
-  try{
-    const [tests,stats]=await Promise.all([rpc('public_campaigns',{p_limit:100}),rpc('public_stats')]);
-    const s=document.getElementById('stats');
-    for(const [k,label] of [['apps_testing','apps testing'],['open_slots','open tester slots'],['members','members']]){const d=el('div');d.append(el('b',null,String(stats[k]??'–')),label);s.append(d)}
-    list.textContent='';
-    if(!tests.length){list.append(el('li','muted','No open tests right now. Check back soon.'));return}
-    for(const t of tests){
-      const li=el('li'),a=el('a','t');a.href=SITE+'t/'+encodeURIComponent(t.package_name);
-      if(t.icon_url&&/^https:/.test(t.icon_url)){const i=el('img');i.src=t.icon_url;i.alt='';i.loading='lazy';a.append(i)}else a.append(el('span','ph'));
-      const d=el('div');d.append(el('b',null,t.name),el('small',null,t.description||t.package_name));
-      a.append(d,el('span','slots',t.open_slots+' open'));li.append(a);list.append(li)
-    }
-  }catch(e){list.textContent='';list.append(el('li','muted','Could not load the list. Open Tester Exchange to see open tests.'))}
-})();
-</script></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=https://testerexchange.com/"><link rel="canonical" href="https://testerexchange.com/"><title>Tester Exchange</title><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><a href="https://testerexchange.com/">Tester Exchange</a></body></html>
