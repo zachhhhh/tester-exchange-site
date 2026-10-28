@@ -37,7 +37,7 @@
 - OpenAPI: https://testerexchange.com/openapi.json · Agent docs: https://testerexchange.com/agents/
 - What an agent can't do: the 14 days of real use on a phone, and paying (checkout needs a human).
 
-## Guides (English; every guide is also in es, pt, fr, de, id, vi, tr, ru, hi, zh-cn, zh-tw, ja, ko, ar, bn, ur, th at /<lang>/)
+## Guides (English; every guide is also in es, pt, fr, de, id, vi, tr, ru, hi, zh-cn, zh-tw, ja, ko, ar, bn, ur, th at /<lang>/; the main guide and answer tool also in sw, fil, ms)
 - [How to get 12 testers for Google Play closed testing](https://testerexchange.com/guide/)
 - [Fix "more testing required" after closed testing](https://testerexchange.com/guide/insufficient-testing-engagement/)
 - [Answering the production access questions](https://testerexchange.com/guide/production-access-questions/)
