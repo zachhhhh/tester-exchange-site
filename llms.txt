@@ -17,7 +17,8 @@
 - Nobody browses or picks apps. Free: link a phone with the Tester Exchange app; it is given apps to test
   automatically (paid apps first), and each app you test brings a tester to yours. Paid: skip testing; paid apps get
   testers before anyone else. Google's 14 days apply to everyone.
-- Dropouts are replaced automatically; you only pay for verified tester-days and unused credits are refunded.
+- Dropouts are replaced automatically; you only pay for verified tester-days, and unused credits go back to your credit balance.
+- Purchases are final: credits don't convert back to money.
 - After 14 days: a test report with daily activity, tester feedback and draft answers for Google's
   production-access questions.
 - Bring your own testers: share https://testerexchange.com/t/<package> with friends; they join free and fill seats.

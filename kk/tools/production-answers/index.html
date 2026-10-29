@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Google Play production қолжетімділігі сұрақтарына тегін жауап генераторы</title>
-<meta name="description" content="Жабық тестіңіздің сандарын енгізіп, Google Play-дің әр production қолжетімділігі сұрағына анық жауап жобаларын алыңыз. Тегін, браузеріңізде жұмыс істейді, ештеңе сақталмайды.">
+<meta name="description" content="Play Console-дағы «Өндірістік нұсқаға қолжетімділік сұрау» формасына, оның үш бөлімінің ретімен жауап жобалары. Жабық тестіңізде не болғанын енгізіңіз. Тегін, браузерде жұмыс істейді, ештеңе сақталмайды.">
 <link rel="canonical" href="https://testerexchange.com/kk/tools/production-answers/">
 <link rel="alternate" hreflang="en" href="https://testerexchange.com/tools/production-answers/">
 <link rel="alternate" hreflang="am" href="https://testerexchange.com/am/tools/production-answers/">
@@ -63,12 +63,12 @@
 <link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/tools/production-answers/">
 <link rel="alternate" hreflang="x-default" href="https://testerexchange.com/tools/production-answers/">
 <meta property="og:type" content="article"><meta property="og:title" content="Google Play production қолжетімділігі сұрақтарына тегін жауап генераторы">
-<meta property="og:description" content="Жабық тестіңіздің сандарын енгізіп, Google Play-дің әр production қолжетімділігі сұрағына анық жауап жобаларын алыңыз. Тегін, браузеріңізде жұмыс істейді, ештеңе сақталмайды."><meta property="og:url" content="https://testerexchange.com/kk/tools/production-answers/">
+<meta property="og:description" content="Play Console-дағы «Өндірістік нұсқаға қолжетімділік сұрау» формасына, оның үш бөлімінің ретімен жауап жобалары. Жабық тестіңізде не болғанын енгізіңіз. Тегін, браузерде жұмыс істейді, ештеңе сақталмайды."><meta property="og:url" content="https://testerexchange.com/kk/tools/production-answers/">
 <meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/static.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Production қолжетімділігі жауаптарының генераторы","description":"Жабық тестіңіздің сандарын енгізіп, Google Play-дің әр production қолжетімділігі сұрағына анық жауап жобаларын алыңыз. Тегін, браузеріңізде жұмыс істейді, ештеңе сақталмайды.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"kk","url":"https://testerexchange.com/kk/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Production қолжетімділігі жауаптарының генераторы","description":"Play Console-дағы «Өндірістік нұсқаға қолжетімділік сұрау» формасына, оның үш бөлімінің ретімен жауап жобалары. Жабық тестіңізде не болғанын енгізіңіз. Тегін, браузерде жұмыс істейді, ештеңе сақталмайды.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"kk","url":"https://testerexchange.com/kk/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
 </head>
 <body><div class="wrap">
@@ -80,58 +80,68 @@
 <main>
 
 <h1>Production қолжетімділігі жауаптарының генераторы</h1>
-<p class="lede">Жабық тестіңізде не болғанын енгізіңіз. Production-ға өтінім бергенде Play Console қоятын әр сұраққа жауап жобасын аласыз. Бәрі браузеріңізде жұмыс істейді және ештеңе ешқайда жіберілмейді. Жауаптар ағылшын тілінде, өйткені тексерушілер оны барлық жерде оқиды.</p>
+<p class="lede">Play Console-дағы «Өндірістік нұсқаға қолжетімділік сұрау» формасы үш бөлімнен тұрады: жабық тестіңіз, қолданбаңыз және өндіріске дайындық. Тестте не болғанын енгізіңіз — әр жазбаша сұраққа жоба, ал нұсқа таңдайтын екі сұраққа нұсқаулық аласыз. Жобалар тек сіз енгізгенді пайдаланады; бос қалдырғаныңыз толтыруға арналған [жақшаға] айналады. Барлығы браузеріңізде жұмыс істейді, ештеңе жіберілмейді. Жобалар тексерушілер барлық жерде оқитын ағылшын тілінде.</p>
 <form id="f" onsubmit="event.preventDefault();gen()">
-<label>Қолданба атауы<input name="app" required maxlength="80"></label>
-<label>Тестерлеріңіз қайдан келді?<select name="source">
-<option value="exchange">Тестер алмасуы (бір-бірінің қолданбасын тестілейтін әзірлеушілер)</option><option value="community">Әзірлеушілер қауымдастығы немесе форум</option><option value="friends">Достар, отбасы және әріптестер</option>
-</select></label>
+<label>Қолданба атауы<input name="app" dir="auto" maxlength="80"></label>
 <div class="grid2">
-<label>Қосылған (opt-in) тестерлер<input name="joined" type="number" min="0" value="15"></label>
-<label>Орнатқан тестерлер<input name="installed" type="number" min="0" value="14"></label>
-<label>Тест неше күн жүрді<input name="days" type="number" min="1" value="14"></label>
-<label>Күніне орташа белсенді тестерлер<input name="daily" type="number" min="0" step="0.1" value="12"></label>
-<label>Соңына дейін қалған тестерлер<input name="completed" type="number" min="0" value="12"></label>
-<label>Бір сеанстың орташа ұзақтығы, минут (міндетті емес)<input name="minutes" type="number" min="0" step="0.5"></label>
-<label>Тест кезінде жүктелген жаңа build-тер<input name="builds" type="number" min="0" value="2"></label>
-<label>Бірінші жылғы күтілетін орнатулар<input name="installs" placeholder="1,000–5,000"></label>
+<label>Орнатқан тестерлер<input name="installed" dir="auto" type="number" min="0"></label>
+<label>14 күн қатарынан тіркеліп тұрған тестерлер<input name="stayed" dir="auto" type="number" min="0"></label>
+<label>Тест неше күн жүрді<input name="days" dir="auto" type="number" min="1"></label>
+<label>Тест кезінде жүктелген жаңа build-тер<input name="builds" dir="auto" type="number" min="0"></label>
 </div>
-<label>Негізгі пікір тақырыптары (әр жолға біреу)<textarea name="feedback" rows="3"></textarea></label>
-<label>Не өзгерттіңіз немесе түзеттіңіз (әр жолға біреу)<textarea name="changes" rows="3"></textarea></label>
-<label>Қолданба кімге арналған?<input name="audience"></label>
-<label>Ол оларға не істеуге мүмкіндік береді?<input name="value"></label>
+<label>Тестерлер қолданған функциялар және олар жетпегендері<textarea name="features" rows="3" dir="auto"></textarea></label>
+<label>Тестерлердің қолдануы нақты пайдаланушылармен қалай салыстырылады<textarea name="compare" rows="3" dir="auto"></textarea></label>
+<label>Негізгі пікір тақырыптары (әр жолға біреу)<textarea name="feedback" rows="3" dir="auto"></textarea></label>
+<label>Пікірлерді қалай жинадыңыз<input name="collect" dir="auto" ></label>
+<label>Қолданба кімге арналған?<input name="audience" dir="auto" ></label>
+<label>Ол оларға не істеуге мүмкіндік береді?<textarea name="value" rows="3" dir="auto"></textarea></label>
+<label>Не өзгерттіңіз немесе түзеттіңіз (әр жолға біреу)<textarea name="changes" rows="3" dir="auto"></textarea></label>
+<label>Қолданба дайын екенін қалай шештіңіз<textarea name="ready" rows="3" dir="auto"></textarea></label>
 <div><button class="btn">Жауаптарды жасау</button></div>
 </form>
-<section id="out" hidden><h2>Жауап жобаларыңыз</h2><div id="answers"></div><p class="muted">Бұл жобаларды не болғанымен дәл сәйкес келетіндей өңдеңіз. Google нақты тест деректеріңізді көре алады, сондықтан шынайы әрі нақты жауаптар ең жақсы нәтиже береді.</p></section>
-<div class="cta"><b>Қолданбаңызды шынымен пайдаланатын тестерлер керек пе?</b><span>Tester Exchange әр тестердің телефонында күнделікті пайдалануды растап, осы сандарды сіз үшін толтырады.</span><a class="btn" href="https://testerexchange.com/?lang=kk">Тегін тестер алу</a></div>
+<section id="out" hidden><h2>Жауап жобаларыңыз</h2><p class="muted">Бұл жобаларды не болғанымен дәл сәйкес келетіндей өңдеңіз. Google нақты тест деректеріңізді көре алады, сондықтан шынайы әрі нақты жауаптар ең жақсы нәтиже береді.</p>
+<p><button type="button" class="ghost" id="all">Барлық жауапты көшіру</button></p>
+<h3>1-бөлім: Жабық тестіңіз туралы</h3><div class="ans" data-q="recruit"><b>Тестер табу қаншалықты оңай болды?</b><p class="hint">Мұнда Play Console мәтін емес, нұсқа таңдауды сұрайды. Шындыққа сәйкесін таңдаңыз.</p></div><div class="ans" data-q="engage"><b>Жабық тест кезіндегі тестерлердің белсенділігі</b><p class="hint">Google тестерлер барлық функцияларды қолданды ма және олардың қолдануы нақты пайдаланушыларға сәйкес пе — соны білгісі келеді.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Көшіру</button></div><div class="ans" data-q="feedback"><b>Тестер пікірлерінің қорытындысы және оларды қалай жинадыңыз</b><p class="hint">Тестерлер көтерген негізгі тақырыптарды атап, пікірлерді қалай жинағаныңызды айтыңыз.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Көшіру</button></div><h3>2-бөлім: Қолданбаңыз не ойыныңыз туралы</h3><div class="ans" data-q="audience"><b>Мақсатты аудитория</b><p class="hint">Нақты жазыңыз: кімге, қай жерде және қандай қажеттілікті өтейді. Бұл жауап көпшілікке көрсетілмейді.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Көшіру</button></div><div class="ans" data-q="value"><b>Қолданбаңыз қандай пайда береді (ойындар үшін: оны ерекше ететін не)</b><p class="hint">Пайдаланушылар қолданбамен не істей алатынын және оның неге пайдалы екенін жазыңыз.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Көшіру</button></div><div class="ans" data-q="installs"><b>Бірінші жылғы болжамды орнату саны</b><p class="hint">Мұнда Play Console ауқым таңдауды сұрайды. Адал әрі сабырлы болжам жеткілікті.</p></div><h3>3-бөлім: Өндіріске дайындық туралы</h3><div class="ans" data-q="changes"><b>Жабық тест нәтижесінде енгізген өзгерістер</b><p class="hint">Нақты түзетулерді атап, жабық трекке жүктеген жаңа нұсқаларды айтыңыз.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Көшіру</button></div><div class="ans" data-q="ready"><b>Қолданбаның дайын екенін қалай шештіңіз</b><p class="hint">Өтінім алдында не тексергеніңізді жазыңыз: қателер түзетілді, құлау жоқ, негізгі әрекеттер жұмыс істейді.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Көшіру</button></div>
+</section>
+<section><h2>Өтінім бермес бұрын</h2><ul><li>Google жабық тестіңізде қатарынан 14 күн тіркелген күйде қалған тестерлерді санайды; шығып, қайта қосылған тестер басынан бастайды. Қашан өтінім беруге болатынын Play Console бақылау тақтасы көрсетеді.</li><li>Алдымен құлауларды, бұзылған мүмкіндіктерді және жетіспейтін экрандарды түзетіңіз: Google тексеру ақауларды іздеу кезеңі емес дейді.</li><li>Қолданба кіруді талап етсе, тексерушілер әр мүмкіндікті аша алуы үшін Play Console-ға жұмыс істейтін сынақ кіру деректерін қосыңыз.</li><li>Мақсатты жас тобы мен дүкендегі бет қолданбаның нақты мазмұнына сай екенін тексеріңіз.</li><li>Тексеру әдетте 7 күн не одан аз уақыт алады. Google көбірек тест сұраса, жабық тестті жалғастырып, қайта өтінім беріңіз.</li></ul></section>
+<section class="offer" id="get-testers" aria-labelledby="offer-h">
+<h2 id="offer-h">Google Play талап ететін 12 тестерді алыңыз</h2>
+<p>Нақты адамдар қолданбаңызды 14 күн бойы өз телефондарында ашады. Бір рет төлеңіз немесе басқа қолданбаларды тегін тестілеңіз.</p>
+<ul class="packs"><li><a href="https://testerexchange.com/?lang=kk#buy"><b>12 тестер</b><span class="price">$9.99</span><small>Google-дың минимумы</small></a></li><li class="best"><a href="https://testerexchange.com/?lang=kk#buy"><b>15 тестер</b><span class="price">$12.99</span><small>Ұсынылады: шығып кететіндерге қор</small></a></li><li><a href="https://testerexchange.com/?lang=kk#buy"><b>25 тестер</b><span class="price">$19.99</span><small>Ең сенімді</small></a></li></ul>
+<ol class="how"><li><b>Қолданба сілтемеңізді қойыңыз</b> Google Play сілтемеңіз немесе пакет атауыңыз.</li><li><b>Төлеңіз немесе тегін тестілеңіз</b> Бір рет төлеңіз немесе басқа қолданбаларды тестілеп кредит табыңыз.</li><li><b>Google Play-ді қосыңыз</b> Бір түйме тестерлерімізді жабық тестіңізге қосады. Олар орнатады да, 14 күн басталады.</li></ol>
+<p class="row"><a class="btn" href="https://testerexchange.com/?lang=kk#buy">12 тестер алу</a> <a href="https://testerexchange.com/get/?lang=kk">Қолданбаларды тегін тестілеу</a></p>
+<p class="muted">Карталар (UnionPay қоса), PayPal, Apple Pay, Google Pay, Alipay және WeChat Pay. Lemon Squeezy арқылы қауіпсіз төлем. Сатып алулар түпкілікті: кредиттер қайтадан ақшаға айналмайды.</p>
+</section>
 <script>
 const COPY="Көшіру",COPIED="Көшірілді";
-function lines(s){return s.split('\n').map(x=>x.trim()).filter(Boolean)}
-function list(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]}
+function lines(s){return String(s||'').split('\n').map(x=>x.trim().replace(/[.;,]+$/,'')).filter(Boolean)}
+function one(s){return String(s||'').trim().replace(/\s+/g,' ').replace(/[.;,]+$/,'')}
+function cnt(k,w){return k+' '+w+(k===1?'':'s')}
+function copy(btn,text){navigator.clipboard&&navigator.clipboard.writeText(text).catch(()=>{});btn.textContent=COPIED;setTimeout(()=>btn.textContent=btn.dataset.l||COPY,1500)}
 function gen(){
+  // Drafts only state what was entered; anything only the developer knows stays a [bracket].
   const f=Object.fromEntries(new FormData(document.getElementById('f')));
-  const n=k=>Math.max(0,Number(f[k]||0)), app=f.app.trim()||'the app';
-  const src={exchange:'a developer tester exchange, where developers test each other\'s apps on their own phones and daily use is verified',
-    community:'a developer community, where I shared the opt-in link and explained what to test',
-    friends:'friends, family and colleagues who use Android phones'}[f.source];
-  const days=n('days'), daily=n('daily'), td=Math.round(days*daily), fb=lines(f.feedback), ch=lines(f.changes);
-  const mins=n('minutes')?' Sessions lasted about '+n('minutes')+' minutes on average.':'';
-  const A=[
-   ['How easy was it to recruit testers for your app?','I recruited testers through '+src+'. '+n('joined')+' people opted in to the closed test and '+n('installed')+' installed '+app+' from Google Play. [If you replaced testers who dropped out, say so here.]'],
-   ['Describe the engagement you received from testers during your closed test.','The closed test ran for '+days+' days. On average '+daily+' testers used '+app+' each day, about '+td+' tester-days in total.'+mins+' '+n('completed')+' testers stayed until the end of the test. [Add how you kept testers active, e.g. tasks you asked them to try.]'],
-   ['Summarize the feedback that you received from testers. Include how you collected the feedback.','I collected feedback through written notes from testers during the test'+(fb.length?'. The main themes were: '+list(fb)+'.':'. [Add the main themes testers reported.]')],
-   ['Who is the intended audience of your app?',f.audience.trim()||'[Describe who the app is for.]'],
-   ['Describe how your app provides value to users.',f.value.trim()||'[Describe what users can do with the app.]'],
-   ['How many installs do you expect your app to have in your first year?',f.installs.trim()||'[Give an honest range.]'],
-   ['What changes did you make to your app based on what you learned during closed testing?',(ch.length?'Based on tester feedback I '+list(ch.map(x=>x.charAt(0).toLowerCase()+x.slice(1)))+'.':'[List the fixes and changes you made.]')+(n('builds')?' I uploaded '+n('builds')+' new build'+(n('builds')>1?'s':'')+' to the closed track during the test.':'')],
-   ['How did you decide that your app is ready for production?','After '+days+' days of testing with about '+daily+' active testers a day, the main flows work reliably, the issues testers reported are fixed'+(n('builds')?' in the builds I shipped during the test':'')+', and testers kept using '+app+' until the end of the test.']
-  ];
-  const box=document.getElementById('answers');box.textContent='';
-  for(const [q,a] of A){const d=document.createElement('div');d.className='ans';
-    const b=document.createElement('b');b.textContent=q;const p=document.createElement('p');p.textContent=a;
-    const btn=document.createElement('button');btn.type='button';btn.textContent=COPY;
-    btn.onclick=()=>{navigator.clipboard.writeText(a);btn.textContent=COPIED;setTimeout(()=>btn.textContent=COPY,1500)};
-    d.append(b,p,btn);box.append(d)}
+  const n=k=>String(f[k]||'').trim()===''?null:Math.max(0,Math.round(Number(f[k])||0));
+  const app=one(f.app)||'the app', days=n('days'), inst=n('installed'), stayed=n('stayed'), builds=n('builds');
+  const fb=lines(f.feedback), ch=lines(f.changes), B=x=>'['+x+']';
+  const D={
+    engage:[
+      'The closed test ran for '+(days!=null?cnt(days,'day'):B('number of')+' days')+', and '+(inst!=null?cnt(inst,'tester'):B('number of')+' testers')+' installed '+app+' from Google Play on their own Android phones.',
+      (stayed!=null?cnt(stayed,'tester'):B('Number of')+' testers')+' stayed opted in for 14 days in a row.',
+      'Features used: '+(one(f.features)||B('which features testers used, and any they did not reach'))+'.',
+      'Compared with production: '+(one(f.compare)||B('how real users will use the app, and any differences from how testers used it'))+'.'
+    ].join(' '),
+    feedback:'How I collected feedback: '+(one(f.collect)||B('e.g. a feedback form, email, a chat group, or private feedback on Google Play'))+'. Main themes: '+(fb.length?fb.join('; '):B('sum up what testers reported in 1–2 sentences'))+'.',
+    audience:one(f.audience)?one(f.audience)+'.':B('Who the app is for, as specifically as possible: age group, country or region, and the need it serves.'),
+    value:one(f.value)?one(f.value)+'.':B('What users can do with the app and why it is useful to them, in 2–3 sentences. For a game: what makes it unique.'),
+    changes:'During the closed test I made these changes: '+(ch.length?ch.join('; '):B('list the fixes and changes you made'))+'. I uploaded '+(builds!=null?cnt(builds,'new build'):B('number of')+' new builds')+' to the closed testing track.',
+    ready:(days!=null&&inst!=null?'The closed test ran for '+cnt(days,'day')+' with '+cnt(inst,'tester')+'. ':'')+(one(f.ready)?one(f.ready)+'.':B('What you checked before applying, e.g. the issues testers reported are fixed, no crashes in Android vitals, the main flows work end to end.'))
+  };
+  const all=[];
+  for(const d of document.querySelectorAll('#out .ans')){const id=d.dataset.q,a=D[id];if(!a)continue;
+    d.querySelector('.draft').textContent=a;all.push(d.querySelector('b').textContent+'\n'+a);
+    const btn=d.querySelector('button');btn.onclick=()=>copy(btn,a)}
+  const ab=document.getElementById('all');ab.dataset.l=ab.dataset.l||ab.textContent;ab.onclick=()=>copy(ab,all.join('\n\n'));
   const o=document.getElementById('out');o.hidden=false;o.scrollIntoView({behavior:'smooth'});
 }
 </script>

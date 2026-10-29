@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Gratis antwoordgenerator voor productietoegang op Google Play</title>
-<meta name="description" content="Vul de cijfers van je gesloten test in en krijg duidelijke conceptantwoorden op elke vraag van Google Play over productietoegang. Gratis, werkt in je browser en er wordt niets opgeslagen.">
+<meta name="description" content="Conceptantwoorden voor het formulier 'Productietoegang aanvragen' in Play Console, in de volgorde van de drie onderdelen. Vul in wat er in je gesloten test gebeurde. Gratis, draait in je browser, niets wordt opgeslagen.">
 <link rel="canonical" href="https://testerexchange.com/nl/tools/production-answers/">
 <link rel="alternate" hreflang="en" href="https://testerexchange.com/tools/production-answers/">
 <link rel="alternate" hreflang="am" href="https://testerexchange.com/am/tools/production-answers/">
@@ -63,12 +63,12 @@
 <link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/tools/production-answers/">
 <link rel="alternate" hreflang="x-default" href="https://testerexchange.com/tools/production-answers/">
 <meta property="og:type" content="article"><meta property="og:title" content="Gratis antwoordgenerator voor productietoegang op Google Play">
-<meta property="og:description" content="Vul de cijfers van je gesloten test in en krijg duidelijke conceptantwoorden op elke vraag van Google Play over productietoegang. Gratis, werkt in je browser en er wordt niets opgeslagen."><meta property="og:url" content="https://testerexchange.com/nl/tools/production-answers/">
+<meta property="og:description" content="Conceptantwoorden voor het formulier 'Productietoegang aanvragen' in Play Console, in de volgorde van de drie onderdelen. Vul in wat er in je gesloten test gebeurde. Gratis, draait in je browser, niets wordt opgeslagen."><meta property="og:url" content="https://testerexchange.com/nl/tools/production-answers/">
 <meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/static.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Antwoordgenerator voor productietoegang","description":"Vul de cijfers van je gesloten test in en krijg duidelijke conceptantwoorden op elke vraag van Google Play over productietoegang. Gratis, werkt in je browser en er wordt niets opgeslagen.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"nl","url":"https://testerexchange.com/nl/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Antwoordgenerator voor productietoegang","description":"Conceptantwoorden voor het formulier 'Productietoegang aanvragen' in Play Console, in de volgorde van de drie onderdelen. Vul in wat er in je gesloten test gebeurde. Gratis, draait in je browser, niets wordt opgeslagen.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"nl","url":"https://testerexchange.com/nl/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
 </head>
 <body><div class="wrap">
@@ -80,58 +80,68 @@
 <main>
 
 <h1>Antwoordgenerator voor productietoegang</h1>
-<p class="lede">Vul in wat er tijdens je gesloten test is gebeurd. Je krijgt conceptantwoorden op elke vraag die Play Console stelt als je productietoegang aanvraagt. Alles draait in je browser en er wordt niets verstuurd. De antwoorden zijn in het Engels, dat beoordelaars overal lezen.</p>
+<p class="lede">Het formulier 'Productietoegang aanvragen' in Play Console heeft drie onderdelen: je gesloten test, je app en of je klaar bent voor productie. Vul in wat er in je test gebeurde en je krijgt een concept voor elke open vraag, plus uitleg bij de twee vragen waar je een optie kiest. De concepten gebruiken alleen wat jij invult; wat je leeg laat, wordt een [haakje] om zelf in te vullen. Alles draait in je browser en er wordt niets verstuurd. De concepten zijn in het Engels, dat beoordelaars overal lezen.</p>
 <form id="f" onsubmit="event.preventDefault();gen()">
-<label>Naam van de app<input name="app" required maxlength="80"></label>
-<label>Waar kwamen je testers vandaan?<select name="source">
-<option value="exchange">Een testersuitwisseling (ontwikkelaars die elkaars apps testen)</option><option value="community">Een ontwikkelaarscommunity of forum</option><option value="friends">Vrienden, familie en collega's</option>
-</select></label>
+<label>Naam van de app<input name="app" dir="auto" maxlength="80"></label>
 <div class="grid2">
-<label>Testers die zich hebben aangemeld<input name="joined" type="number" min="0" value="15"></label>
-<label>Testers die hebben geïnstalleerd<input name="installed" type="number" min="0" value="14"></label>
-<label>Aantal dagen dat de test liep<input name="days" type="number" min="1" value="14"></label>
-<label>Gemiddeld aantal actieve testers per dag<input name="daily" type="number" min="0" step="0.1" value="12"></label>
-<label>Testers die tot het einde bleven<input name="completed" type="number" min="0" value="12"></label>
-<label>Gemiddeld aantal minuten per sessie (optioneel)<input name="minutes" type="number" min="0" step="0.5"></label>
-<label>Nieuwe builds geüpload tijdens de test<input name="builds" type="number" min="0" value="2"></label>
-<label>Verwachte installaties in het eerste jaar<input name="installs" placeholder="1,000–5,000"></label>
+<label>Testers die hebben geïnstalleerd<input name="installed" dir="auto" type="number" min="0"></label>
+<label>Testers die 14 dagen achter elkaar aangemeld bleven<input name="stayed" dir="auto" type="number" min="0"></label>
+<label>Aantal dagen dat de test liep<input name="days" dir="auto" type="number" min="1"></label>
+<label>Nieuwe builds geüpload tijdens de test<input name="builds" dir="auto" type="number" min="0"></label>
 </div>
-<label>Belangrijkste feedbackthema's (één per regel)<textarea name="feedback" rows="3"></textarea></label>
-<label>Wat je hebt veranderd of opgelost (één per regel)<textarea name="changes" rows="3"></textarea></label>
-<label>Voor wie is de app?<input name="audience"></label>
-<label>Wat kunnen mensen ermee?<input name="value"></label>
+<label>Functies die testers gebruikten, en welke ze niet bereikten<textarea name="features" rows="3" dir="auto"></textarea></label>
+<label>Hoe het gebruik door testers zich verhoudt tot dat van echte gebruikers<textarea name="compare" rows="3" dir="auto"></textarea></label>
+<label>Belangrijkste feedbackthema's (één per regel)<textarea name="feedback" rows="3" dir="auto"></textarea></label>
+<label>Hoe je feedback hebt verzameld<input name="collect" dir="auto" ></label>
+<label>Voor wie is de app?<input name="audience" dir="auto" ></label>
+<label>Wat kunnen mensen ermee?<textarea name="value" rows="3" dir="auto"></textarea></label>
+<label>Wat je hebt veranderd of opgelost (één per regel)<textarea name="changes" rows="3" dir="auto"></textarea></label>
+<label>Hoe je hebt besloten dat de app klaar is<textarea name="ready" rows="3" dir="auto"></textarea></label>
 <div><button class="btn">Antwoorden genereren</button></div>
 </form>
-<section id="out" hidden><h2>Je conceptantwoorden</h2><div id="answers"></div><p class="muted">Pas deze concepten aan zodat ze precies kloppen met wat er is gebeurd. Google kan je echte testgegevens zien, dus eerlijke, specifieke antwoorden werken het best.</p></section>
-<div class="cta"><b>Testers nodig die je app echt gebruiken?</b><span>Tester Exchange verifieert dagelijks gebruik op de telefoon van elke tester en vult deze cijfers voor je in.</span><a class="btn" href="https://testerexchange.com/?lang=nl">Gratis testers krijgen</a></div>
+<section id="out" hidden><h2>Je conceptantwoorden</h2><p class="muted">Pas deze concepten aan zodat ze precies kloppen met wat er is gebeurd. Google kan je echte testgegevens zien, dus eerlijke, specifieke antwoorden werken het best.</p>
+<p><button type="button" class="ghost" id="all">Alle antwoorden kopiëren</button></p>
+<h3>Deel 1: Over je gesloten test</h3><div class="ans" data-q="recruit"><b>Hoe makkelijk was het om testers te vinden?</b><p class="hint">Hier vraagt Play Console je een optie te kiezen, geen tekst. Kies de optie die klopt.</p></div><div class="ans" data-q="engage"><b>Betrokkenheid van testers tijdens de gesloten test</b><p class="hint">Google wil weten of testers alle functies gebruikten en of hun gebruik overeenkomt met dat van echte gebruikers.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiëren</button></div><div class="ans" data-q="feedback"><b>Samenvatting van de feedback en hoe je die verzamelde</b><p class="hint">Noem de belangrijkste punten die testers aankaartten en vertel hoe je de feedback hebt verzameld.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiëren</button></div><h3>Deel 2: Over je app of game</h3><div class="ans" data-q="audience"><b>Doelgroep</b><p class="hint">Wees specifiek: voor wie, waar en welke behoefte de app vervult. Dit antwoord is niet openbaar.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiëren</button></div><div class="ans" data-q="value"><b>Welke waarde je app biedt (bij games: wat hem uniek maakt)</b><p class="hint">Zeg wat gebruikers met de app kunnen en waarom het hen helpt.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiëren</button></div><div class="ans" data-q="installs"><b>Geschatte installaties in het eerste jaar</b><p class="hint">Hier vraagt Play Console je een bereik te kiezen. Een eerlijke, bescheiden schatting is prima.</p></div><h3>Deel 3: Over je productiegereedheid</h3><div class="ans" data-q="changes"><b>Wijzigingen op basis van de gesloten test</b><p class="hint">Noem echte verbeteringen en de nieuwe builds die je naar het gesloten kanaal uploadde.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiëren</button></div><div class="ans" data-q="ready"><b>Hoe je besloot dat de app klaar is voor productie</b><p class="hint">Zeg wat je vóór de aanvraag controleerde: opgeloste bugs, geen crashes, werkende hoofdfuncties.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiëren</button></div>
+</section>
+<section><h2>Voordat je aanvraagt</h2><ul><li>Google telt testers die 14 dagen achter elkaar aangemeld blijven voor je gesloten test; wie stopt en opnieuw meedoet, begint opnieuw. Het dashboard van Play Console laat zien wanneer je kunt aanvragen.</li><li>Los eerst crashes, kapotte functies en ontbrekende schermen op: volgens Google is de review geen stap om fouten te zoeken.</li><li>Vraagt je app om in te loggen, zet dan werkende testinloggegevens in Play Console zodat reviewers elke functie kunnen openen.</li><li>Controleer of de doelleeftijdsgroep en de winkelvermelding passen bij de echte inhoud van de app.</li><li>Een review duurt meestal 7 dagen of korter. Vraagt Google om meer testen, laat de gesloten test dan doorlopen en vraag opnieuw aan.</li></ul></section>
+<section class="offer" id="get-testers" aria-labelledby="offer-h">
+<h2 id="offer-h">Krijg de 12 testers die Google Play vereist</h2>
+<p>Echte mensen openen je app 14 dagen lang op hun eigen telefoon. Betaal één keer, of test gratis andere apps.</p>
+<ul class="packs"><li><a href="https://testerexchange.com/?lang=nl#buy"><b>12 testers</b><span class="price">$9.99</span><small>Het minimum van Google</small></a></li><li class="best"><a href="https://testerexchange.com/?lang=nl#buy"><b>15 testers</b><span class="price">$12.99</span><small>Aanbevolen: ruimte voor afhakers</small></a></li><li><a href="https://testerexchange.com/?lang=nl#buy"><b>25 testers</b><span class="price">$19.99</span><small>Veiligst</small></a></li></ul>
+<ol class="how"><li><b>Plak de link van je app</b> Je Google Play-link of pakketnaam.</li><li><b>Betaal of test gratis</b> Betaal één keer, of verdien credits door andere apps te testen.</li><li><b>Koppel Google Play</b> Eén knop voegt onze testers toe aan je gesloten test. Zij installeren, en de 14 dagen beginnen.</li></ol>
+<p class="row"><a class="btn" href="https://testerexchange.com/?lang=nl#buy">Krijg 12 testers</a> <a href="https://testerexchange.com/get/?lang=nl">Gratis apps testen</a></p>
+<p class="muted">Kaarten (incl. UnionPay), PayPal, Apple Pay, Google Pay, Alipay en WeChat Pay. Veilig afrekenen via Lemon Squeezy. Aankopen zijn definitief: credits worden niet omgezet in geld.</p>
+</section>
 <script>
 const COPY="Kopiëren",COPIED="Gekopieerd";
-function lines(s){return s.split('\n').map(x=>x.trim()).filter(Boolean)}
-function list(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]}
+function lines(s){return String(s||'').split('\n').map(x=>x.trim().replace(/[.;,]+$/,'')).filter(Boolean)}
+function one(s){return String(s||'').trim().replace(/\s+/g,' ').replace(/[.;,]+$/,'')}
+function cnt(k,w){return k+' '+w+(k===1?'':'s')}
+function copy(btn,text){navigator.clipboard&&navigator.clipboard.writeText(text).catch(()=>{});btn.textContent=COPIED;setTimeout(()=>btn.textContent=btn.dataset.l||COPY,1500)}
 function gen(){
+  // Drafts only state what was entered; anything only the developer knows stays a [bracket].
   const f=Object.fromEntries(new FormData(document.getElementById('f')));
-  const n=k=>Math.max(0,Number(f[k]||0)), app=f.app.trim()||'the app';
-  const src={exchange:'a developer tester exchange, where developers test each other\'s apps on their own phones and daily use is verified',
-    community:'a developer community, where I shared the opt-in link and explained what to test',
-    friends:'friends, family and colleagues who use Android phones'}[f.source];
-  const days=n('days'), daily=n('daily'), td=Math.round(days*daily), fb=lines(f.feedback), ch=lines(f.changes);
-  const mins=n('minutes')?' Sessions lasted about '+n('minutes')+' minutes on average.':'';
-  const A=[
-   ['How easy was it to recruit testers for your app?','I recruited testers through '+src+'. '+n('joined')+' people opted in to the closed test and '+n('installed')+' installed '+app+' from Google Play. [If you replaced testers who dropped out, say so here.]'],
-   ['Describe the engagement you received from testers during your closed test.','The closed test ran for '+days+' days. On average '+daily+' testers used '+app+' each day, about '+td+' tester-days in total.'+mins+' '+n('completed')+' testers stayed until the end of the test. [Add how you kept testers active, e.g. tasks you asked them to try.]'],
-   ['Summarize the feedback that you received from testers. Include how you collected the feedback.','I collected feedback through written notes from testers during the test'+(fb.length?'. The main themes were: '+list(fb)+'.':'. [Add the main themes testers reported.]')],
-   ['Who is the intended audience of your app?',f.audience.trim()||'[Describe who the app is for.]'],
-   ['Describe how your app provides value to users.',f.value.trim()||'[Describe what users can do with the app.]'],
-   ['How many installs do you expect your app to have in your first year?',f.installs.trim()||'[Give an honest range.]'],
-   ['What changes did you make to your app based on what you learned during closed testing?',(ch.length?'Based on tester feedback I '+list(ch.map(x=>x.charAt(0).toLowerCase()+x.slice(1)))+'.':'[List the fixes and changes you made.]')+(n('builds')?' I uploaded '+n('builds')+' new build'+(n('builds')>1?'s':'')+' to the closed track during the test.':'')],
-   ['How did you decide that your app is ready for production?','After '+days+' days of testing with about '+daily+' active testers a day, the main flows work reliably, the issues testers reported are fixed'+(n('builds')?' in the builds I shipped during the test':'')+', and testers kept using '+app+' until the end of the test.']
-  ];
-  const box=document.getElementById('answers');box.textContent='';
-  for(const [q,a] of A){const d=document.createElement('div');d.className='ans';
-    const b=document.createElement('b');b.textContent=q;const p=document.createElement('p');p.textContent=a;
-    const btn=document.createElement('button');btn.type='button';btn.textContent=COPY;
-    btn.onclick=()=>{navigator.clipboard.writeText(a);btn.textContent=COPIED;setTimeout(()=>btn.textContent=COPY,1500)};
-    d.append(b,p,btn);box.append(d)}
+  const n=k=>String(f[k]||'').trim()===''?null:Math.max(0,Math.round(Number(f[k])||0));
+  const app=one(f.app)||'the app', days=n('days'), inst=n('installed'), stayed=n('stayed'), builds=n('builds');
+  const fb=lines(f.feedback), ch=lines(f.changes), B=x=>'['+x+']';
+  const D={
+    engage:[
+      'The closed test ran for '+(days!=null?cnt(days,'day'):B('number of')+' days')+', and '+(inst!=null?cnt(inst,'tester'):B('number of')+' testers')+' installed '+app+' from Google Play on their own Android phones.',
+      (stayed!=null?cnt(stayed,'tester'):B('Number of')+' testers')+' stayed opted in for 14 days in a row.',
+      'Features used: '+(one(f.features)||B('which features testers used, and any they did not reach'))+'.',
+      'Compared with production: '+(one(f.compare)||B('how real users will use the app, and any differences from how testers used it'))+'.'
+    ].join(' '),
+    feedback:'How I collected feedback: '+(one(f.collect)||B('e.g. a feedback form, email, a chat group, or private feedback on Google Play'))+'. Main themes: '+(fb.length?fb.join('; '):B('sum up what testers reported in 1–2 sentences'))+'.',
+    audience:one(f.audience)?one(f.audience)+'.':B('Who the app is for, as specifically as possible: age group, country or region, and the need it serves.'),
+    value:one(f.value)?one(f.value)+'.':B('What users can do with the app and why it is useful to them, in 2–3 sentences. For a game: what makes it unique.'),
+    changes:'During the closed test I made these changes: '+(ch.length?ch.join('; '):B('list the fixes and changes you made'))+'. I uploaded '+(builds!=null?cnt(builds,'new build'):B('number of')+' new builds')+' to the closed testing track.',
+    ready:(days!=null&&inst!=null?'The closed test ran for '+cnt(days,'day')+' with '+cnt(inst,'tester')+'. ':'')+(one(f.ready)?one(f.ready)+'.':B('What you checked before applying, e.g. the issues testers reported are fixed, no crashes in Android vitals, the main flows work end to end.'))
+  };
+  const all=[];
+  for(const d of document.querySelectorAll('#out .ans')){const id=d.dataset.q,a=D[id];if(!a)continue;
+    d.querySelector('.draft').textContent=a;all.push(d.querySelector('b').textContent+'\n'+a);
+    const btn=d.querySelector('button');btn.onclick=()=>copy(btn,a)}
+  const ab=document.getElementById('all');ab.dataset.l=ab.dataset.l||ab.textContent;ab.onclick=()=>copy(ab,all.join('\n\n'));
   const o=document.getElementById('out');o.hidden=false;o.scrollIntoView({behavior:'smooth'});
 }
 </script>

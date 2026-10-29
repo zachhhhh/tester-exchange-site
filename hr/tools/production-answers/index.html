@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Besplatni generator odgovora za pristup produkciji na Google Playu</title>
-<meta name="description" content="Unesite brojke iz zatvorenog testa i dobijte jasne nacrte odgovora na sva pitanja o pristupu produkciji na Google Playu. Besplatno, radi u pregledniku, ništa se ne sprema.">
+<meta name="description" content="Nacrti odgovora za obrazac „Zatraži pristup produkciji” u Play Consoleu, redoslijedom njegova tri dijela. Upišite što se dogodilo u vašem zatvorenom testu. Besplatno, radi u pregledniku, ništa se ne sprema.">
 <link rel="canonical" href="https://testerexchange.com/hr/tools/production-answers/">
 <link rel="alternate" hreflang="en" href="https://testerexchange.com/tools/production-answers/">
 <link rel="alternate" hreflang="am" href="https://testerexchange.com/am/tools/production-answers/">
@@ -63,12 +63,12 @@
 <link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/tools/production-answers/">
 <link rel="alternate" hreflang="x-default" href="https://testerexchange.com/tools/production-answers/">
 <meta property="og:type" content="article"><meta property="og:title" content="Besplatni generator odgovora za pristup produkciji na Google Playu">
-<meta property="og:description" content="Unesite brojke iz zatvorenog testa i dobijte jasne nacrte odgovora na sva pitanja o pristupu produkciji na Google Playu. Besplatno, radi u pregledniku, ništa se ne sprema."><meta property="og:url" content="https://testerexchange.com/hr/tools/production-answers/">
+<meta property="og:description" content="Nacrti odgovora za obrazac „Zatraži pristup produkciji” u Play Consoleu, redoslijedom njegova tri dijela. Upišite što se dogodilo u vašem zatvorenom testu. Besplatno, radi u pregledniku, ništa se ne sprema."><meta property="og:url" content="https://testerexchange.com/hr/tools/production-answers/">
 <meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/static.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Generator odgovora za pristup produkciji","description":"Unesite brojke iz zatvorenog testa i dobijte jasne nacrte odgovora na sva pitanja o pristupu produkciji na Google Playu. Besplatno, radi u pregledniku, ništa se ne sprema.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"hr","url":"https://testerexchange.com/hr/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Generator odgovora za pristup produkciji","description":"Nacrti odgovora za obrazac „Zatraži pristup produkciji” u Play Consoleu, redoslijedom njegova tri dijela. Upišite što se dogodilo u vašem zatvorenom testu. Besplatno, radi u pregledniku, ništa se ne sprema.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"hr","url":"https://testerexchange.com/hr/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
 </head>
 <body><div class="wrap">
@@ -80,58 +80,68 @@
 <main>
 
 <h1>Generator odgovora za pristup produkciji</h1>
-<p class="lede">Unesite što se dogodilo u vašem zatvorenom testu. Dobit ćete nacrte odgovora na svako pitanje koje Play Console postavlja kad tražite pristup produkciji. Sve radi u vašem pregledniku i ništa se nikamo ne šalje. Odgovori su na engleskom, koji recenzenti čitaju svugdje.</p>
+<p class="lede">Obrazac „Zatraži pristup produkciji” u Play Consoleu ima tri dijela: vaš zatvoreni test, vašu aplikaciju i spremnost za produkciju. Upišite što se dogodilo u testu i dobit ćete nacrt za svako pitanje s pisanim odgovorom, uz upute za dva pitanja u kojima birate opciju. Nacrti koriste samo ono što upišete; što ostavite prazno postaje [zagrada] za dopunu. Sve radi u vašem pregledniku i ništa se ne šalje. Nacrti su na engleskom, koji recenzenti čitaju svugdje.</p>
 <form id="f" onsubmit="event.preventDefault();gen()">
-<label>Naziv aplikacije<input name="app" required maxlength="80"></label>
-<label>Odakle su došli vaši testeri?<select name="source">
-<option value="exchange">Razmjena testera (developeri testiraju aplikacije jedni drugima)</option><option value="community">Zajednica ili forum developera</option><option value="friends">Prijatelji, obitelj i kolege</option>
-</select></label>
+<label>Naziv aplikacije<input name="app" dir="auto" maxlength="80"></label>
 <div class="grid2">
-<label>Testeri koji su se prijavili<input name="joined" type="number" min="0" value="15"></label>
-<label>Testeri koji su instalirali aplikaciju<input name="installed" type="number" min="0" value="14"></label>
-<label>Koliko je dana trajao test<input name="days" type="number" min="1" value="14"></label>
-<label>Prosječan broj aktivnih testera dnevno<input name="daily" type="number" min="0" step="0.1" value="12"></label>
-<label>Testeri koji su ostali do kraja<input name="completed" type="number" min="0" value="12"></label>
-<label>Prosječno minuta po sesiji (neobavezno)<input name="minutes" type="number" min="0" step="0.5"></label>
-<label>Nove verzije učitane tijekom testa<input name="builds" type="number" min="0" value="2"></label>
-<label>Očekivani broj instalacija u prvoj godini<input name="installs" placeholder="1,000–5,000"></label>
+<label>Testeri koji su instalirali aplikaciju<input name="installed" dir="auto" type="number" min="0"></label>
+<label>Testeri prijavljeni 14 dana zaredom<input name="stayed" dir="auto" type="number" min="0"></label>
+<label>Koliko je dana trajao test<input name="days" dir="auto" type="number" min="1"></label>
+<label>Nove verzije učitane tijekom testa<input name="builds" dir="auto" type="number" min="0"></label>
 </div>
-<label>Glavne teme povratnih informacija (jedna po retku)<textarea name="feedback" rows="3"></textarea></label>
-<label>Što ste promijenili ili ispravili (jedno po retku)<textarea name="changes" rows="3"></textarea></label>
-<label>Kome je aplikacija namijenjena?<input name="audience"></label>
-<label>Što im omogućuje?<input name="value"></label>
+<label>Značajke koje su testeri koristili i one do kojih nisu došli<textarea name="features" rows="3" dir="auto"></textarea></label>
+<label>Kako se korištenje testera uspoređuje s korištenjem stvarnih korisnika<textarea name="compare" rows="3" dir="auto"></textarea></label>
+<label>Glavne teme povratnih informacija (jedna po retku)<textarea name="feedback" rows="3" dir="auto"></textarea></label>
+<label>Kako ste prikupljali povratne informacije<input name="collect" dir="auto" ></label>
+<label>Kome je aplikacija namijenjena?<input name="audience" dir="auto" ></label>
+<label>Što im omogućuje?<textarea name="value" rows="3" dir="auto"></textarea></label>
+<label>Što ste promijenili ili ispravili (jedno po retku)<textarea name="changes" rows="3" dir="auto"></textarea></label>
+<label>Kako ste odlučili da je aplikacija spremna<textarea name="ready" rows="3" dir="auto"></textarea></label>
 <div><button class="btn">Generiraj odgovore</button></div>
 </form>
-<section id="out" hidden><h2>Vaši nacrti odgovora</h2><div id="answers"></div><p class="muted">Uredite ove nacrte tako da točno odgovaraju onome što se dogodilo. Google vidi vaše stvarne podatke testa, pa najbolje prolaze iskreni, konkretni odgovori.</p></section>
-<div class="cta"><b>Trebaju vam testeri koji stvarno koriste vašu aplikaciju?</b><span>Tester Exchange potvrđuje svakodnevno korištenje na mobitelu svakog testera i umjesto vas popunjava ove brojke.</span><a class="btn" href="https://testerexchange.com/?lang=hr">Nabavi testere besplatno</a></div>
+<section id="out" hidden><h2>Vaši nacrti odgovora</h2><p class="muted">Uredite ove nacrte tako da točno odgovaraju onome što se dogodilo. Google vidi vaše stvarne podatke testa, pa najbolje prolaze iskreni, konkretni odgovori.</p>
+<p><button type="button" class="ghost" id="all">Kopiraj sve odgovore</button></p>
+<h3>Dio 1: O tvom zatvorenom testu</h3><div class="ans" data-q="recruit"><b>Koliko je bilo lako pronaći testere?</b><p class="hint">Ovdje Play Console traži da odabereš opciju, ne da pišeš tekst. Odaberi onu koja je točna.</p></div><div class="ans" data-q="engage"><b>Angažman testera tijekom zatvorenog testa</b><p class="hint">Google želi znati jesu li testeri koristili sve značajke i odgovara li njihovo korištenje onome kako će aplikaciju koristiti stvarni korisnici.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiraj</button></div><div class="ans" data-q="feedback"><b>Sažetak povratnih informacija i kako si ih prikupio</b><p class="hint">Navedite glavne teme koje su testeri istaknuli i kako ste prikupljali povratne informacije.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiraj</button></div><h3>Dio 2: O tvojoj aplikaciji ili igri</h3><div class="ans" data-q="audience"><b>Ciljana publika</b><p class="hint">Budi konkretan: za koga, gdje i koju potrebu aplikacija rješava. Ovaj odgovor nije javan.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiraj</button></div><div class="ans" data-q="value"><b>Koju vrijednost pruža tvoja aplikacija (za igre: što je čini jedinstvenom)</b><p class="hint">Reci što korisnici mogu raditi u aplikaciji i zašto im pomaže.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiraj</button></div><div class="ans" data-q="installs"><b>Procjena instalacija u prvoj godini</b><p class="hint">Ovdje Play Console traži da odabereš raspon. Dovoljna je iskrena, skromna procjena.</p></div><h3>Dio 3: O spremnosti za produkciju</h3><div class="ans" data-q="changes"><b>Izmjene na temelju zatvorenog testa</b><p class="hint">Navedi stvarne ispravke i spomeni nove verzije koje si prenio na zatvoreni kanal.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiraj</button></div><div class="ans" data-q="ready"><b>Kako si odlučio da je aplikacija spremna</b><p class="hint">Reci što si provjerio prije prijave: ispravljene pogreške, bez rušenja, glavni tokovi rade.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiraj</button></div>
+</section>
+<section><h2>Prije prijave</h2><ul><li>Google broji testere koji ostanu prijavljeni na tvoj zatvoreni test 14 dana zaredom; tko izađe i vrati se, kreće ispočetka. Nadzorna ploča u Play Consoleu pokazuje kada se možeš prijaviti.</li><li>Najprije ispravi rušenja, pokvarene značajke i zaslone koji nedostaju: Google kaže da pregled nije korak za otklanjanje pogrešaka.</li><li>Ako aplikacija traži prijavu, dodaj u Play Console ispravne testne podatke za prijavu kako bi recenzenti otvorili svaku značajku.</li><li>Provjeri odgovaraju li ciljana dobna skupina i stranica u trgovini stvarnom sadržaju aplikacije.</li><li>Pregled obično traje 7 dana ili manje. Ako Google zatraži još testiranja, nastavi zatvoreni test i prijavi se ponovno.</li></ul></section>
+<section class="offer" id="get-testers" aria-labelledby="offer-h">
+<h2 id="offer-h">Nabavite 12 testera koje Google Play traži</h2>
+<p>Pravi ljudi otvaraju vašu aplikaciju na vlastitim mobitelima kroz 14 dana. Platite jednom ili besplatno testirajte druge aplikacije.</p>
+<ul class="packs"><li><a href="https://testerexchange.com/?lang=hr#buy"><b>12 testera</b><span class="price">$9.99</span><small>Googleov minimum</small></a></li><li class="best"><a href="https://testerexchange.com/?lang=hr#buy"><b>15 testera</b><span class="price">$12.99</span><small>Preporučeno: rezerva za odustajanja</small></a></li><li><a href="https://testerexchange.com/?lang=hr#buy"><b>25 testera</b><span class="price">$19.99</span><small>Najsigurnije</small></a></li></ul>
+<ol class="how"><li><b>Zalijepite poveznicu aplikacije</b> Vaša poveznica na Google Play ili naziv paketa.</li><li><b>Platite ili testirajte besplatno</b> Platite jednom ili zaradite kredite testiranjem drugih aplikacija.</li><li><b>Povežite Google Play</b> Jedan gumb dodaje naše testere u vaš zatvoreni test. Oni instaliraju aplikaciju i 14 dana počinje.</li></ol>
+<p class="row"><a class="btn" href="https://testerexchange.com/?lang=hr#buy">Nabavi 12 testera</a> <a href="https://testerexchange.com/get/?lang=hr">Testiraj aplikacije besplatno</a></p>
+<p class="muted">Kartice (uklj. UnionPay), PayPal, Apple Pay, Google Pay, Alipay i WeChat Pay. Sigurno plaćanje preko Lemon Squeezyja. Kupnje su konačne: krediti se ne mogu pretvoriti natrag u novac.</p>
+</section>
 <script>
 const COPY="Kopiraj",COPIED="Kopirano";
-function lines(s){return s.split('\n').map(x=>x.trim()).filter(Boolean)}
-function list(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]}
+function lines(s){return String(s||'').split('\n').map(x=>x.trim().replace(/[.;,]+$/,'')).filter(Boolean)}
+function one(s){return String(s||'').trim().replace(/\s+/g,' ').replace(/[.;,]+$/,'')}
+function cnt(k,w){return k+' '+w+(k===1?'':'s')}
+function copy(btn,text){navigator.clipboard&&navigator.clipboard.writeText(text).catch(()=>{});btn.textContent=COPIED;setTimeout(()=>btn.textContent=btn.dataset.l||COPY,1500)}
 function gen(){
+  // Drafts only state what was entered; anything only the developer knows stays a [bracket].
   const f=Object.fromEntries(new FormData(document.getElementById('f')));
-  const n=k=>Math.max(0,Number(f[k]||0)), app=f.app.trim()||'the app';
-  const src={exchange:'a developer tester exchange, where developers test each other\'s apps on their own phones and daily use is verified',
-    community:'a developer community, where I shared the opt-in link and explained what to test',
-    friends:'friends, family and colleagues who use Android phones'}[f.source];
-  const days=n('days'), daily=n('daily'), td=Math.round(days*daily), fb=lines(f.feedback), ch=lines(f.changes);
-  const mins=n('minutes')?' Sessions lasted about '+n('minutes')+' minutes on average.':'';
-  const A=[
-   ['How easy was it to recruit testers for your app?','I recruited testers through '+src+'. '+n('joined')+' people opted in to the closed test and '+n('installed')+' installed '+app+' from Google Play. [If you replaced testers who dropped out, say so here.]'],
-   ['Describe the engagement you received from testers during your closed test.','The closed test ran for '+days+' days. On average '+daily+' testers used '+app+' each day, about '+td+' tester-days in total.'+mins+' '+n('completed')+' testers stayed until the end of the test. [Add how you kept testers active, e.g. tasks you asked them to try.]'],
-   ['Summarize the feedback that you received from testers. Include how you collected the feedback.','I collected feedback through written notes from testers during the test'+(fb.length?'. The main themes were: '+list(fb)+'.':'. [Add the main themes testers reported.]')],
-   ['Who is the intended audience of your app?',f.audience.trim()||'[Describe who the app is for.]'],
-   ['Describe how your app provides value to users.',f.value.trim()||'[Describe what users can do with the app.]'],
-   ['How many installs do you expect your app to have in your first year?',f.installs.trim()||'[Give an honest range.]'],
-   ['What changes did you make to your app based on what you learned during closed testing?',(ch.length?'Based on tester feedback I '+list(ch.map(x=>x.charAt(0).toLowerCase()+x.slice(1)))+'.':'[List the fixes and changes you made.]')+(n('builds')?' I uploaded '+n('builds')+' new build'+(n('builds')>1?'s':'')+' to the closed track during the test.':'')],
-   ['How did you decide that your app is ready for production?','After '+days+' days of testing with about '+daily+' active testers a day, the main flows work reliably, the issues testers reported are fixed'+(n('builds')?' in the builds I shipped during the test':'')+', and testers kept using '+app+' until the end of the test.']
-  ];
-  const box=document.getElementById('answers');box.textContent='';
-  for(const [q,a] of A){const d=document.createElement('div');d.className='ans';
-    const b=document.createElement('b');b.textContent=q;const p=document.createElement('p');p.textContent=a;
-    const btn=document.createElement('button');btn.type='button';btn.textContent=COPY;
-    btn.onclick=()=>{navigator.clipboard.writeText(a);btn.textContent=COPIED;setTimeout(()=>btn.textContent=COPY,1500)};
-    d.append(b,p,btn);box.append(d)}
+  const n=k=>String(f[k]||'').trim()===''?null:Math.max(0,Math.round(Number(f[k])||0));
+  const app=one(f.app)||'the app', days=n('days'), inst=n('installed'), stayed=n('stayed'), builds=n('builds');
+  const fb=lines(f.feedback), ch=lines(f.changes), B=x=>'['+x+']';
+  const D={
+    engage:[
+      'The closed test ran for '+(days!=null?cnt(days,'day'):B('number of')+' days')+', and '+(inst!=null?cnt(inst,'tester'):B('number of')+' testers')+' installed '+app+' from Google Play on their own Android phones.',
+      (stayed!=null?cnt(stayed,'tester'):B('Number of')+' testers')+' stayed opted in for 14 days in a row.',
+      'Features used: '+(one(f.features)||B('which features testers used, and any they did not reach'))+'.',
+      'Compared with production: '+(one(f.compare)||B('how real users will use the app, and any differences from how testers used it'))+'.'
+    ].join(' '),
+    feedback:'How I collected feedback: '+(one(f.collect)||B('e.g. a feedback form, email, a chat group, or private feedback on Google Play'))+'. Main themes: '+(fb.length?fb.join('; '):B('sum up what testers reported in 1–2 sentences'))+'.',
+    audience:one(f.audience)?one(f.audience)+'.':B('Who the app is for, as specifically as possible: age group, country or region, and the need it serves.'),
+    value:one(f.value)?one(f.value)+'.':B('What users can do with the app and why it is useful to them, in 2–3 sentences. For a game: what makes it unique.'),
+    changes:'During the closed test I made these changes: '+(ch.length?ch.join('; '):B('list the fixes and changes you made'))+'. I uploaded '+(builds!=null?cnt(builds,'new build'):B('number of')+' new builds')+' to the closed testing track.',
+    ready:(days!=null&&inst!=null?'The closed test ran for '+cnt(days,'day')+' with '+cnt(inst,'tester')+'. ':'')+(one(f.ready)?one(f.ready)+'.':B('What you checked before applying, e.g. the issues testers reported are fixed, no crashes in Android vitals, the main flows work end to end.'))
+  };
+  const all=[];
+  for(const d of document.querySelectorAll('#out .ans')){const id=d.dataset.q,a=D[id];if(!a)continue;
+    d.querySelector('.draft').textContent=a;all.push(d.querySelector('b').textContent+'\n'+a);
+    const btn=d.querySelector('button');btn.onclick=()=>copy(btn,a)}
+  const ab=document.getElementById('all');ab.dataset.l=ab.dataset.l||ab.textContent;ab.onclick=()=>copy(ab,all.join('\n\n'));
   const o=document.getElementById('out');o.hidden=false;o.scrollIntoView({behavior:'smooth'});
 }
 </script>
