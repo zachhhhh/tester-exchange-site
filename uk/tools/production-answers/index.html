@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Безкоштовний генератор відповідей для доступу до робочої версії в Google Play</title>
-<meta name="description" content="Введіть показники свого закритого тесту й отримайте чіткі чернетки відповідей на кожне запитання Google Play щодо доступу до робочої версії. Безкоштовно, працює у браузері, нічого не зберігається.">
+<meta name="description" content="Чернетки відповідей для форми «Подати заявку на доступ до робочої версії» в Play Console, у порядку її трьох частин. Укажіть, як пройшло ваше закрите тестування. Безкоштовно, працює в браузері, нічого не зберігається.">
 <link rel="canonical" href="https://testerexchange.com/uk/tools/production-answers/">
 <link rel="alternate" hreflang="en" href="https://testerexchange.com/tools/production-answers/">
 <link rel="alternate" hreflang="am" href="https://testerexchange.com/am/tools/production-answers/">
@@ -63,12 +63,12 @@
 <link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/tools/production-answers/">
 <link rel="alternate" hreflang="x-default" href="https://testerexchange.com/tools/production-answers/">
 <meta property="og:type" content="article"><meta property="og:title" content="Безкоштовний генератор відповідей для доступу до робочої версії в Google Play">
-<meta property="og:description" content="Введіть показники свого закритого тесту й отримайте чіткі чернетки відповідей на кожне запитання Google Play щодо доступу до робочої версії. Безкоштовно, працює у браузері, нічого не зберігається."><meta property="og:url" content="https://testerexchange.com/uk/tools/production-answers/">
+<meta property="og:description" content="Чернетки відповідей для форми «Подати заявку на доступ до робочої версії» в Play Console, у порядку її трьох частин. Укажіть, як пройшло ваше закрите тестування. Безкоштовно, працює в браузері, нічого не зберігається."><meta property="og:url" content="https://testerexchange.com/uk/tools/production-answers/">
 <meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/static.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Генератор відповідей для доступу до робочої версії","description":"Введіть показники свого закритого тесту й отримайте чіткі чернетки відповідей на кожне запитання Google Play щодо доступу до робочої версії. Безкоштовно, працює у браузері, нічого не зберігається.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"uk","url":"https://testerexchange.com/uk/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Генератор відповідей для доступу до робочої версії","description":"Чернетки відповідей для форми «Подати заявку на доступ до робочої версії» в Play Console, у порядку її трьох частин. Укажіть, як пройшло ваше закрите тестування. Безкоштовно, працює в браузері, нічого не зберігається.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"uk","url":"https://testerexchange.com/uk/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
 </head>
 <body><div class="wrap">
@@ -80,58 +80,68 @@
 <main>
 
 <h1>Генератор відповідей для доступу до робочої версії</h1>
-<p class="lede">Опишіть, як пройшов ваш закритий тест. Ви отримаєте чернетки відповідей на кожне запитання, яке Play Console ставить, коли ви подаєте заявку на доступ до робочої версії. Усе працює у вашому браузері, і нічого нікуди не надсилається. Відповіді англійською — цю мову читають рецензенти по всьому світу.</p>
+<p class="lede">Форма «Подати заявку на доступ до робочої версії» в Play Console має три частини: ваше закрите тестування, ваш застосунок і готовність до робочої версії. Укажіть, як пройшло тестування, і отримаєте чернетку для кожного питання з письмовою відповіддю, а також підказки до двох питань, де потрібно вибрати варіант. Чернетки містять лише те, що ви ввели; порожні поля стають [дужками], які треба заповнити. Усе працює у вашому браузері, нічого не надсилається. Чернетки англійською, яку рецензенти читають скрізь.</p>
 <form id="f" onsubmit="event.preventDefault();gen()">
-<label>Назва застосунку<input name="app" required maxlength="80"></label>
-<label>Звідки прийшли ваші тестувальники?<select name="source">
-<option value="exchange">Обмін тестувальниками (розробники тестують застосунки одне одного)</option><option value="community">Спільнота або форум розробників</option><option value="friends">Друзі, родина й колеги</option>
-</select></label>
+<label>Назва застосунку<input name="app" dir="auto" maxlength="80"></label>
 <div class="grid2">
-<label>Тестувальники, які погодилися на участь<input name="joined" type="number" min="0" value="15"></label>
-<label>Тестувальники, які встановили застосунок<input name="installed" type="number" min="0" value="14"></label>
-<label>Скільки днів тривав тест<input name="days" type="number" min="1" value="14"></label>
-<label>У середньому активних тестувальників на день<input name="daily" type="number" min="0" step="0.1" value="12"></label>
-<label>Тестувальники, які залишилися до кінця<input name="completed" type="number" min="0" value="12"></label>
-<label>Середня тривалість сеансу в хвилинах (необов'язково)<input name="minutes" type="number" min="0" step="0.5"></label>
-<label>Нові збірки, завантажені під час тесту<input name="builds" type="number" min="0" value="2"></label>
-<label>Очікувана кількість установлень за перший рік<input name="installs" placeholder="1,000–5,000"></label>
+<label>Тестувальники, які встановили застосунок<input name="installed" dir="auto" type="number" min="0"></label>
+<label>Тестувальники, які були записані 14 днів поспіль<input name="stayed" dir="auto" type="number" min="0"></label>
+<label>Скільки днів тривав тест<input name="days" dir="auto" type="number" min="1"></label>
+<label>Нові збірки, завантажені під час тесту<input name="builds" dir="auto" type="number" min="0"></label>
 </div>
-<label>Основні теми відгуків (по одній у рядку)<textarea name="feedback" rows="3"></textarea></label>
-<label>Що ви змінили чи виправили (по одному в рядку)<textarea name="changes" rows="3"></textarea></label>
-<label>Для кого цей застосунок?<input name="audience"></label>
-<label>Що він дає змогу робити?<input name="value"></label>
+<label>Функції, якими користувалися тестувальники, і ті, до яких вони не дійшли<textarea name="features" rows="3" dir="auto"></textarea></label>
+<label>Як використання тестувальниками порівнюється з використанням реальними користувачами<textarea name="compare" rows="3" dir="auto"></textarea></label>
+<label>Основні теми відгуків (по одній у рядку)<textarea name="feedback" rows="3" dir="auto"></textarea></label>
+<label>Як ви збирали відгуки<input name="collect" dir="auto" ></label>
+<label>Для кого цей застосунок?<input name="audience" dir="auto" ></label>
+<label>Що він дає змогу робити?<textarea name="value" rows="3" dir="auto"></textarea></label>
+<label>Що ви змінили чи виправили (по одному в рядку)<textarea name="changes" rows="3" dir="auto"></textarea></label>
+<label>Як ви вирішили, що застосунок готовий<textarea name="ready" rows="3" dir="auto"></textarea></label>
 <div><button class="btn">Згенерувати відповіді</button></div>
 </form>
-<section id="out" hidden><h2>Ваші чернетки відповідей</h2><div id="answers"></div><p class="muted">Відредагуйте ці чернетки, щоб вони точно відповідали тому, що відбувалося. Google бачить реальні дані вашого тесту, тож найкраще працюють чесні й конкретні відповіді.</p></section>
-<div class="cta"><b>Потрібні тестувальники, які справді користуються вашим застосунком?</b><span>Tester Exchange перевіряє щоденне використання на телефоні кожного тестувальника й заповнює ці показники за вас.</span><a class="btn" href="https://testerexchange.com/?lang=uk">Отримати тестувальників безкоштовно</a></div>
+<section id="out" hidden><h2>Ваші чернетки відповідей</h2><p class="muted">Відредагуйте ці чернетки, щоб вони точно відповідали тому, що відбувалося. Google бачить реальні дані вашого тесту, тож найкраще працюють чесні й конкретні відповіді.</p>
+<p><button type="button" class="ghost" id="all">Скопіювати всі відповіді</button></p>
+<h3>Частина 1: Про закрите тестування</h3><div class="ans" data-q="recruit"><b>Наскільки легко було знайти тестувальників?</b><p class="hint">Тут Play Console просить вибрати варіант, а не писати текст. Виберіть той, що відповідає правді.</p></div><div class="ans" data-q="engage"><b>Залученість тестувальників у закритому тесті</b><p class="hint">Google хоче знати, чи тестувальники користувалися всіма функціями і чи їхнє використання відповідає тому, як застосунком користуватимуться реальні користувачі.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Копіювати</button></div><div class="ans" data-q="feedback"><b>Підсумок відгуків тестувальників і як ви їх збирали</b><p class="hint">Назвіть головні теми, які порушували тестувальники, і як ви збирали відгуки.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Копіювати</button></div><h3>Частина 2: Про застосунок або гру</h3><div class="ans" data-q="audience"><b>Цільова аудиторія</b><p class="hint">Будьте конкретні: для кого, де і яку потребу закриває застосунок. Ця відповідь не публікується.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Копіювати</button></div><div class="ans" data-q="value"><b>Чим корисний ваш застосунок (для ігор: чим вона унікальна)</b><p class="hint">Скажіть, що користувачі можуть робити в застосунку і чим він їм допомагає.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Копіювати</button></div><div class="ans" data-q="installs"><b>Очікувана кількість встановлень за перший рік</b><p class="hint">Тут Play Console просить вибрати діапазон. Чесна й скромна оцінка підійде.</p></div><h3>Частина 3: Про готовність до випуску</h3><div class="ans" data-q="changes"><b>Зміни за підсумками закритого тесту</b><p class="hint">Перелічіть реальні виправлення й згадайте нові збірки, завантажені в закритий трек.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Копіювати</button></div><div class="ans" data-q="ready"><b>Як ви вирішили, що застосунок готовий до випуску</b><p class="hint">Скажіть, що ви перевірили перед заявкою: виправлені помилки, відсутність збоїв, роботу основних сценаріїв.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Копіювати</button></div>
+</section>
+<section><h2>Перед заявкою</h2><ul><li>Google зараховує тестувальників, які залишаються в закритому тесті 14 днів поспіль; якщо тестувальник вийшов і повернувся, відлік починається заново. Коли можна подавати заявку, показує Панель Play Console.</li><li>Спершу виправте збої, зламані функції та відсутні екрани: Google пише, що перевірка — не етап налагодження.</li><li>Якщо застосунок вимагає входу, додайте в Play Console робочі тестові облікові дані, щоб рецензенти могли відкрити всі функції.</li><li>Перевірте, що цільова вікова група й сторінка в магазині відповідають реальному вмісту застосунку.</li><li>Перевірка зазвичай триває до 7 днів. Якщо Google попросить більше тестування, продовжуйте закритий тест і подайте заявку знову.</li></ul></section>
+<section class="offer" id="get-testers" aria-labelledby="offer-h">
+<h2 id="offer-h">Отримайте 12 тестувальників, яких вимагає Google Play</h2>
+<p>Справжні люди відкривають ваш застосунок на своїх телефонах протягом 14 днів. Оплатіть один раз або тестуйте інші застосунки безкоштовно.</p>
+<ul class="packs"><li><a href="https://testerexchange.com/?lang=uk#buy"><b>Тестувальників: 12</b><span class="price">$9.99</span><small>Мінімум Google</small></a></li><li class="best"><a href="https://testerexchange.com/?lang=uk#buy"><b>Тестувальників: 15</b><span class="price">$12.99</span><small>Рекомендовано: запас на тих, хто вибуде</small></a></li><li><a href="https://testerexchange.com/?lang=uk#buy"><b>Тестувальників: 25</b><span class="price">$19.99</span><small>Найнадійніше</small></a></li></ul>
+<ol class="how"><li><b>Вставте посилання на застосунок</b> Посилання на Google Play або назва пакета.</li><li><b>Оплатіть або тестуйте безкоштовно</b> Оплатіть один раз або заробляйте кредити, тестуючи інші застосунки.</li><li><b>Підключіть Google Play</b> Одна кнопка додає наших тестувальників до вашого закритого тесту. Вони встановлюють застосунок, і стартують 14 днів.</li></ol>
+<p class="row"><a class="btn" href="https://testerexchange.com/?lang=uk#buy">Отримати 12 тестувальників</a> <a href="https://testerexchange.com/get/?lang=uk">Тестувати безкоштовно</a></p>
+<p class="muted">Картки (зокрема UnionPay), PayPal, Apple Pay, Google Pay, Alipay і WeChat Pay. Безпечна оплата через Lemon Squeezy. Покупки остаточні: кредити не обмінюються назад на гроші.</p>
+</section>
 <script>
 const COPY="Копіювати",COPIED="Скопійовано";
-function lines(s){return s.split('\n').map(x=>x.trim()).filter(Boolean)}
-function list(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]}
+function lines(s){return String(s||'').split('\n').map(x=>x.trim().replace(/[.;,]+$/,'')).filter(Boolean)}
+function one(s){return String(s||'').trim().replace(/\s+/g,' ').replace(/[.;,]+$/,'')}
+function cnt(k,w){return k+' '+w+(k===1?'':'s')}
+function copy(btn,text){navigator.clipboard&&navigator.clipboard.writeText(text).catch(()=>{});btn.textContent=COPIED;setTimeout(()=>btn.textContent=btn.dataset.l||COPY,1500)}
 function gen(){
+  // Drafts only state what was entered; anything only the developer knows stays a [bracket].
   const f=Object.fromEntries(new FormData(document.getElementById('f')));
-  const n=k=>Math.max(0,Number(f[k]||0)), app=f.app.trim()||'the app';
-  const src={exchange:'a developer tester exchange, where developers test each other\'s apps on their own phones and daily use is verified',
-    community:'a developer community, where I shared the opt-in link and explained what to test',
-    friends:'friends, family and colleagues who use Android phones'}[f.source];
-  const days=n('days'), daily=n('daily'), td=Math.round(days*daily), fb=lines(f.feedback), ch=lines(f.changes);
-  const mins=n('minutes')?' Sessions lasted about '+n('minutes')+' minutes on average.':'';
-  const A=[
-   ['How easy was it to recruit testers for your app?','I recruited testers through '+src+'. '+n('joined')+' people opted in to the closed test and '+n('installed')+' installed '+app+' from Google Play. [If you replaced testers who dropped out, say so here.]'],
-   ['Describe the engagement you received from testers during your closed test.','The closed test ran for '+days+' days. On average '+daily+' testers used '+app+' each day, about '+td+' tester-days in total.'+mins+' '+n('completed')+' testers stayed until the end of the test. [Add how you kept testers active, e.g. tasks you asked them to try.]'],
-   ['Summarize the feedback that you received from testers. Include how you collected the feedback.','I collected feedback through written notes from testers during the test'+(fb.length?'. The main themes were: '+list(fb)+'.':'. [Add the main themes testers reported.]')],
-   ['Who is the intended audience of your app?',f.audience.trim()||'[Describe who the app is for.]'],
-   ['Describe how your app provides value to users.',f.value.trim()||'[Describe what users can do with the app.]'],
-   ['How many installs do you expect your app to have in your first year?',f.installs.trim()||'[Give an honest range.]'],
-   ['What changes did you make to your app based on what you learned during closed testing?',(ch.length?'Based on tester feedback I '+list(ch.map(x=>x.charAt(0).toLowerCase()+x.slice(1)))+'.':'[List the fixes and changes you made.]')+(n('builds')?' I uploaded '+n('builds')+' new build'+(n('builds')>1?'s':'')+' to the closed track during the test.':'')],
-   ['How did you decide that your app is ready for production?','After '+days+' days of testing with about '+daily+' active testers a day, the main flows work reliably, the issues testers reported are fixed'+(n('builds')?' in the builds I shipped during the test':'')+', and testers kept using '+app+' until the end of the test.']
-  ];
-  const box=document.getElementById('answers');box.textContent='';
-  for(const [q,a] of A){const d=document.createElement('div');d.className='ans';
-    const b=document.createElement('b');b.textContent=q;const p=document.createElement('p');p.textContent=a;
-    const btn=document.createElement('button');btn.type='button';btn.textContent=COPY;
-    btn.onclick=()=>{navigator.clipboard.writeText(a);btn.textContent=COPIED;setTimeout(()=>btn.textContent=COPY,1500)};
-    d.append(b,p,btn);box.append(d)}
+  const n=k=>String(f[k]||'').trim()===''?null:Math.max(0,Math.round(Number(f[k])||0));
+  const app=one(f.app)||'the app', days=n('days'), inst=n('installed'), stayed=n('stayed'), builds=n('builds');
+  const fb=lines(f.feedback), ch=lines(f.changes), B=x=>'['+x+']';
+  const D={
+    engage:[
+      'The closed test ran for '+(days!=null?cnt(days,'day'):B('number of')+' days')+', and '+(inst!=null?cnt(inst,'tester'):B('number of')+' testers')+' installed '+app+' from Google Play on their own Android phones.',
+      (stayed!=null?cnt(stayed,'tester'):B('Number of')+' testers')+' stayed opted in for 14 days in a row.',
+      'Features used: '+(one(f.features)||B('which features testers used, and any they did not reach'))+'.',
+      'Compared with production: '+(one(f.compare)||B('how real users will use the app, and any differences from how testers used it'))+'.'
+    ].join(' '),
+    feedback:'How I collected feedback: '+(one(f.collect)||B('e.g. a feedback form, email, a chat group, or private feedback on Google Play'))+'. Main themes: '+(fb.length?fb.join('; '):B('sum up what testers reported in 1–2 sentences'))+'.',
+    audience:one(f.audience)?one(f.audience)+'.':B('Who the app is for, as specifically as possible: age group, country or region, and the need it serves.'),
+    value:one(f.value)?one(f.value)+'.':B('What users can do with the app and why it is useful to them, in 2–3 sentences. For a game: what makes it unique.'),
+    changes:'During the closed test I made these changes: '+(ch.length?ch.join('; '):B('list the fixes and changes you made'))+'. I uploaded '+(builds!=null?cnt(builds,'new build'):B('number of')+' new builds')+' to the closed testing track.',
+    ready:(days!=null&&inst!=null?'The closed test ran for '+cnt(days,'day')+' with '+cnt(inst,'tester')+'. ':'')+(one(f.ready)?one(f.ready)+'.':B('What you checked before applying, e.g. the issues testers reported are fixed, no crashes in Android vitals, the main flows work end to end.'))
+  };
+  const all=[];
+  for(const d of document.querySelectorAll('#out .ans')){const id=d.dataset.q,a=D[id];if(!a)continue;
+    d.querySelector('.draft').textContent=a;all.push(d.querySelector('b').textContent+'\n'+a);
+    const btn=d.querySelector('button');btn.onclick=()=>copy(btn,a)}
+  const ab=document.getElementById('all');ab.dataset.l=ab.dataset.l||ab.textContent;ab.onclick=()=>copy(ab,all.join('\n\n'));
   const o=document.getElementById('out');o.hidden=false;o.scrollIntoView({behavior:'smooth'});
 }
 </script>

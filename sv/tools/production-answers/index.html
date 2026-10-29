@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Gratis svarsgenerator för produktionsåtkomst på Google Play</title>
-<meta name="description" content="Fyll i siffrorna från ditt slutna test och få tydliga utkast till svar på alla frågor om produktionsåtkomst på Google Play. Gratis, körs i din webbläsare, inget sparas.">
+<meta name="description" content="Svarsutkast till formuläret ”Ansök om produktionsåtkomst” i Play Console, i ordningen för dess tre delar. Fyll i vad som hände i ditt slutna test. Gratis, körs i webbläsaren, inget sparas.">
 <link rel="canonical" href="https://testerexchange.com/sv/tools/production-answers/">
 <link rel="alternate" hreflang="en" href="https://testerexchange.com/tools/production-answers/">
 <link rel="alternate" hreflang="am" href="https://testerexchange.com/am/tools/production-answers/">
@@ -63,12 +63,12 @@
 <link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/tools/production-answers/">
 <link rel="alternate" hreflang="x-default" href="https://testerexchange.com/tools/production-answers/">
 <meta property="og:type" content="article"><meta property="og:title" content="Gratis svarsgenerator för produktionsåtkomst på Google Play">
-<meta property="og:description" content="Fyll i siffrorna från ditt slutna test och få tydliga utkast till svar på alla frågor om produktionsåtkomst på Google Play. Gratis, körs i din webbläsare, inget sparas."><meta property="og:url" content="https://testerexchange.com/sv/tools/production-answers/">
+<meta property="og:description" content="Svarsutkast till formuläret ”Ansök om produktionsåtkomst” i Play Console, i ordningen för dess tre delar. Fyll i vad som hände i ditt slutna test. Gratis, körs i webbläsaren, inget sparas."><meta property="og:url" content="https://testerexchange.com/sv/tools/production-answers/">
 <meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/static.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Svarsgenerator för produktionsåtkomst","description":"Fyll i siffrorna från ditt slutna test och få tydliga utkast till svar på alla frågor om produktionsåtkomst på Google Play. Gratis, körs i din webbläsare, inget sparas.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"sv","url":"https://testerexchange.com/sv/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Svarsgenerator för produktionsåtkomst","description":"Svarsutkast till formuläret ”Ansök om produktionsåtkomst” i Play Console, i ordningen för dess tre delar. Fyll i vad som hände i ditt slutna test. Gratis, körs i webbläsaren, inget sparas.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"sv","url":"https://testerexchange.com/sv/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
 </head>
 <body><div class="wrap">
@@ -80,58 +80,68 @@
 <main>
 
 <h1>Svarsgenerator för produktionsåtkomst</h1>
-<p class="lede">Ange vad som hände i ditt slutna test. Du får utkast till svar på varje fråga som Play Console ställer när du ansöker om produktion. Allt körs i din webbläsare och inget skickas någonstans. Svaren är på engelska, som granskare läser överallt.</p>
+<p class="lede">Formuläret ”Ansök om produktionsåtkomst” i Play Console har tre delar: ditt slutna test, din app och produktionsberedskap. Fyll i vad som hände i testet så får du ett utkast till varje skrivfråga, plus vägledning för de två frågor där du väljer ett alternativ. Utkasten använder bara det du fyller i; det du lämnar tomt blir en [hakparentes] att fylla i. Allt körs i din webbläsare och inget skickas. Utkasten är på engelska, som granskarna läser överallt.</p>
 <form id="f" onsubmit="event.preventDefault();gen()">
-<label>Appnamn<input name="app" required maxlength="80"></label>
-<label>Var kom dina testare ifrån?<select name="source">
-<option value="exchange">Ett testarutbyte (utvecklare som testar varandras appar)</option><option value="community">En utvecklarcommunity eller ett forum</option><option value="friends">Vänner, familj och kollegor</option>
-</select></label>
+<label>Appnamn<input name="app" dir="auto" maxlength="80"></label>
 <div class="grid2">
-<label>Testare som anmälde sig<input name="joined" type="number" min="0" value="15"></label>
-<label>Testare som installerade<input name="installed" type="number" min="0" value="14"></label>
-<label>Dagar som testet pågick<input name="days" type="number" min="1" value="14"></label>
-<label>Genomsnittligt antal aktiva testare per dag<input name="daily" type="number" min="0" step="0.1" value="12"></label>
-<label>Testare som stannade till slutet<input name="completed" type="number" min="0" value="12"></label>
-<label>Genomsnittliga minuter per session (valfritt)<input name="minutes" type="number" min="0" step="0.5"></label>
-<label>Nya byggen som laddades upp under testet<input name="builds" type="number" min="0" value="2"></label>
-<label>Förväntade installationer första året<input name="installs" placeholder="1,000–5,000"></label>
+<label>Testare som installerade<input name="installed" dir="auto" type="number" min="0"></label>
+<label>Testare som var anmälda 14 dagar i följd<input name="stayed" dir="auto" type="number" min="0"></label>
+<label>Dagar som testet pågick<input name="days" dir="auto" type="number" min="1"></label>
+<label>Nya byggen som laddades upp under testet<input name="builds" dir="auto" type="number" min="0"></label>
 </div>
-<label>Huvudteman i feedbacken (ett per rad)<textarea name="feedback" rows="3"></textarea></label>
-<label>Vad du ändrade eller åtgärdade (en per rad)<textarea name="changes" rows="3"></textarea></label>
-<label>Vem är appen till för?<input name="audience"></label>
-<label>Vad låter den dem göra?<input name="value"></label>
+<label>Funktioner som testarna använde, och de de inte nådde<textarea name="features" rows="3" dir="auto"></textarea></label>
+<label>Hur testarnas användning jämförs med hur riktiga användare kommer att använda appen<textarea name="compare" rows="3" dir="auto"></textarea></label>
+<label>Huvudteman i feedbacken (ett per rad)<textarea name="feedback" rows="3" dir="auto"></textarea></label>
+<label>Hur du samlade in feedback<input name="collect" dir="auto" ></label>
+<label>Vem är appen till för?<input name="audience" dir="auto" ></label>
+<label>Vad låter den dem göra?<textarea name="value" rows="3" dir="auto"></textarea></label>
+<label>Vad du ändrade eller åtgärdade (en per rad)<textarea name="changes" rows="3" dir="auto"></textarea></label>
+<label>Hur du avgjorde att appen är klar<textarea name="ready" rows="3" dir="auto"></textarea></label>
 <div><button class="btn">Skapa svar</button></div>
 </form>
-<section id="out" hidden><h2>Dina utkast till svar</h2><div id="answers"></div><p class="muted">Redigera utkasten så att de stämmer exakt med vad som hände. Google kan se din riktiga testdata, så ärliga och konkreta svar fungerar bäst.</p></section>
-<div class="cta"><b>Behöver du testare som verkligen använder din app?</b><span>Tester Exchange verifierar daglig användning på varje testares telefon och fyller i de här siffrorna åt dig.</span><a class="btn" href="https://testerexchange.com/?lang=sv">Få testare gratis</a></div>
+<section id="out" hidden><h2>Dina utkast till svar</h2><p class="muted">Redigera utkasten så att de stämmer exakt med vad som hände. Google kan se din riktiga testdata, så ärliga och konkreta svar fungerar bäst.</p>
+<p><button type="button" class="ghost" id="all">Kopiera alla svar</button></p>
+<h3>Del 1: Om ditt slutna test</h3><div class="ans" data-q="recruit"><b>Hur lätt var det att hitta testare?</b><p class="hint">Här ber Play Console dig välja ett alternativ, inte skriva text. Välj det som stämmer.</p></div><div class="ans" data-q="engage"><b>Testarnas engagemang under det slutna testet</b><p class="hint">Google vill veta om testarna använde alla funktioner och om deras användning motsvarar hur riktiga användare kommer att använda appen.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiera</button></div><div class="ans" data-q="feedback"><b>Sammanfattning av testarnas feedback och hur du samlade in den</b><p class="hint">Nämn huvudtemana som testarna tog upp och berätta hur du samlade in feedbacken.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiera</button></div><h3>Del 2: Om din app eller ditt spel</h3><div class="ans" data-q="audience"><b>Målgrupp</b><p class="hint">Var konkret: för vem, var och vilket behov appen fyller. Svaret visas inte offentligt.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiera</button></div><div class="ans" data-q="value"><b>Vilket värde appen ger (för spel: vad som gör det unikt)</b><p class="hint">Berätta vad användarna kan göra med appen och varför den hjälper dem.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiera</button></div><div class="ans" data-q="installs"><b>Uppskattade installationer första året</b><p class="hint">Här ber Play Console dig välja ett intervall. En ärlig, försiktig uppskattning räcker.</p></div><h3>Del 3: Om din beredskap för produktion</h3><div class="ans" data-q="changes"><b>Ändringar du gjorde efter det slutna testet</b><p class="hint">Lista verkliga korrigeringar och nämn de nya versionerna du laddade upp till det slutna spåret.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiera</button></div><div class="ans" data-q="ready"><b>Hur du avgjorde att appen är redo</b><p class="hint">Berätta vad du kontrollerade innan du ansökte: rättade buggar, inga krascher, huvudflödena fungerar.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Kopiera</button></div>
+</section>
+<section><h2>Innan du ansöker</h2><ul><li>Google räknar testare som är anmälda till ditt slutna test 14 dagar i rad; den som lämnar och går med igen börjar om. Översikten i Play Console visar när du kan ansöka.</li><li>Åtgärda krascher, trasiga funktioner och saknade skärmar först: Google säger att granskningen inte är ett felsökningssteg.</li><li>Kräver appen inloggning, lägg in fungerande testinloggning i Play Console så att granskarna kan öppna alla funktioner.</li><li>Kontrollera att målåldersgruppen och butiksinformationen stämmer med appens faktiska innehåll.</li><li>Granskningen tar oftast 7 dagar eller mindre. Ber Google om mer testning, låt det slutna testet fortsätta och ansök igen.</li></ul></section>
+<section class="offer" id="get-testers" aria-labelledby="offer-h">
+<h2 id="offer-h">Få de 12 testare som Google Play kräver</h2>
+<p>Riktiga människor öppnar din app på sina egna telefoner i 14 dagar. Betala en gång, eller testa andra appar gratis.</p>
+<ul class="packs"><li><a href="https://testerexchange.com/?lang=sv#buy"><b>12 testare</b><span class="price">$9.99</span><small>Googles minimum</small></a></li><li class="best"><a href="https://testerexchange.com/?lang=sv#buy"><b>15 testare</b><span class="price">$12.99</span><small>Rekommenderas: marginal för avhopp</small></a></li><li><a href="https://testerexchange.com/?lang=sv#buy"><b>25 testare</b><span class="price">$19.99</span><small>Säkrast</small></a></li></ul>
+<ol class="how"><li><b>Klistra in din applänk</b> Din Google Play-länk eller ditt paketnamn.</li><li><b>Betala eller testa gratis</b> Betala en gång, eller tjäna krediter genom att testa andra appar.</li><li><b>Anslut Google Play</b> En knapp lägger till våra testare i ditt slutna test. De installerar och de 14 dagarna börjar.</li></ol>
+<p class="row"><a class="btn" href="https://testerexchange.com/?lang=sv#buy">Skaffa 12 testare</a> <a href="https://testerexchange.com/get/?lang=sv">Testa appar gratis</a></p>
+<p class="muted">Kort (inkl. UnionPay), PayPal, Apple Pay, Google Pay, Alipay och WeChat Pay. Säker betalning via Lemon Squeezy. Köp är slutgiltiga: krediter kan inte växlas tillbaka till pengar.</p>
+</section>
 <script>
 const COPY="Kopiera",COPIED="Kopierat";
-function lines(s){return s.split('\n').map(x=>x.trim()).filter(Boolean)}
-function list(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]}
+function lines(s){return String(s||'').split('\n').map(x=>x.trim().replace(/[.;,]+$/,'')).filter(Boolean)}
+function one(s){return String(s||'').trim().replace(/\s+/g,' ').replace(/[.;,]+$/,'')}
+function cnt(k,w){return k+' '+w+(k===1?'':'s')}
+function copy(btn,text){navigator.clipboard&&navigator.clipboard.writeText(text).catch(()=>{});btn.textContent=COPIED;setTimeout(()=>btn.textContent=btn.dataset.l||COPY,1500)}
 function gen(){
+  // Drafts only state what was entered; anything only the developer knows stays a [bracket].
   const f=Object.fromEntries(new FormData(document.getElementById('f')));
-  const n=k=>Math.max(0,Number(f[k]||0)), app=f.app.trim()||'the app';
-  const src={exchange:'a developer tester exchange, where developers test each other\'s apps on their own phones and daily use is verified',
-    community:'a developer community, where I shared the opt-in link and explained what to test',
-    friends:'friends, family and colleagues who use Android phones'}[f.source];
-  const days=n('days'), daily=n('daily'), td=Math.round(days*daily), fb=lines(f.feedback), ch=lines(f.changes);
-  const mins=n('minutes')?' Sessions lasted about '+n('minutes')+' minutes on average.':'';
-  const A=[
-   ['How easy was it to recruit testers for your app?','I recruited testers through '+src+'. '+n('joined')+' people opted in to the closed test and '+n('installed')+' installed '+app+' from Google Play. [If you replaced testers who dropped out, say so here.]'],
-   ['Describe the engagement you received from testers during your closed test.','The closed test ran for '+days+' days. On average '+daily+' testers used '+app+' each day, about '+td+' tester-days in total.'+mins+' '+n('completed')+' testers stayed until the end of the test. [Add how you kept testers active, e.g. tasks you asked them to try.]'],
-   ['Summarize the feedback that you received from testers. Include how you collected the feedback.','I collected feedback through written notes from testers during the test'+(fb.length?'. The main themes were: '+list(fb)+'.':'. [Add the main themes testers reported.]')],
-   ['Who is the intended audience of your app?',f.audience.trim()||'[Describe who the app is for.]'],
-   ['Describe how your app provides value to users.',f.value.trim()||'[Describe what users can do with the app.]'],
-   ['How many installs do you expect your app to have in your first year?',f.installs.trim()||'[Give an honest range.]'],
-   ['What changes did you make to your app based on what you learned during closed testing?',(ch.length?'Based on tester feedback I '+list(ch.map(x=>x.charAt(0).toLowerCase()+x.slice(1)))+'.':'[List the fixes and changes you made.]')+(n('builds')?' I uploaded '+n('builds')+' new build'+(n('builds')>1?'s':'')+' to the closed track during the test.':'')],
-   ['How did you decide that your app is ready for production?','After '+days+' days of testing with about '+daily+' active testers a day, the main flows work reliably, the issues testers reported are fixed'+(n('builds')?' in the builds I shipped during the test':'')+', and testers kept using '+app+' until the end of the test.']
-  ];
-  const box=document.getElementById('answers');box.textContent='';
-  for(const [q,a] of A){const d=document.createElement('div');d.className='ans';
-    const b=document.createElement('b');b.textContent=q;const p=document.createElement('p');p.textContent=a;
-    const btn=document.createElement('button');btn.type='button';btn.textContent=COPY;
-    btn.onclick=()=>{navigator.clipboard.writeText(a);btn.textContent=COPIED;setTimeout(()=>btn.textContent=COPY,1500)};
-    d.append(b,p,btn);box.append(d)}
+  const n=k=>String(f[k]||'').trim()===''?null:Math.max(0,Math.round(Number(f[k])||0));
+  const app=one(f.app)||'the app', days=n('days'), inst=n('installed'), stayed=n('stayed'), builds=n('builds');
+  const fb=lines(f.feedback), ch=lines(f.changes), B=x=>'['+x+']';
+  const D={
+    engage:[
+      'The closed test ran for '+(days!=null?cnt(days,'day'):B('number of')+' days')+', and '+(inst!=null?cnt(inst,'tester'):B('number of')+' testers')+' installed '+app+' from Google Play on their own Android phones.',
+      (stayed!=null?cnt(stayed,'tester'):B('Number of')+' testers')+' stayed opted in for 14 days in a row.',
+      'Features used: '+(one(f.features)||B('which features testers used, and any they did not reach'))+'.',
+      'Compared with production: '+(one(f.compare)||B('how real users will use the app, and any differences from how testers used it'))+'.'
+    ].join(' '),
+    feedback:'How I collected feedback: '+(one(f.collect)||B('e.g. a feedback form, email, a chat group, or private feedback on Google Play'))+'. Main themes: '+(fb.length?fb.join('; '):B('sum up what testers reported in 1–2 sentences'))+'.',
+    audience:one(f.audience)?one(f.audience)+'.':B('Who the app is for, as specifically as possible: age group, country or region, and the need it serves.'),
+    value:one(f.value)?one(f.value)+'.':B('What users can do with the app and why it is useful to them, in 2–3 sentences. For a game: what makes it unique.'),
+    changes:'During the closed test I made these changes: '+(ch.length?ch.join('; '):B('list the fixes and changes you made'))+'. I uploaded '+(builds!=null?cnt(builds,'new build'):B('number of')+' new builds')+' to the closed testing track.',
+    ready:(days!=null&&inst!=null?'The closed test ran for '+cnt(days,'day')+' with '+cnt(inst,'tester')+'. ':'')+(one(f.ready)?one(f.ready)+'.':B('What you checked before applying, e.g. the issues testers reported are fixed, no crashes in Android vitals, the main flows work end to end.'))
+  };
+  const all=[];
+  for(const d of document.querySelectorAll('#out .ans')){const id=d.dataset.q,a=D[id];if(!a)continue;
+    d.querySelector('.draft').textContent=a;all.push(d.querySelector('b').textContent+'\n'+a);
+    const btn=d.querySelector('button');btn.onclick=()=>copy(btn,a)}
+  const ab=document.getElementById('all');ab.dataset.l=ab.dataset.l||ab.textContent;ab.onclick=()=>copy(ab,all.join('\n\n'));
   const o=document.getElementById('out');o.hidden=false;o.scrollIntoView({behavior:'smooth'});
 }
 </script>

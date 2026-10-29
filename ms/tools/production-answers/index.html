@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Penjana jawapan akses pengeluaran Google Play percuma</title>
-<meta name="description" content="Isi angka ujian tertutup anda dan dapatkan draf jawapan yang jelas untuk setiap soalan akses pengeluaran Google Play. Percuma, berjalan dalam pelayar anda, tiada apa-apa yang disimpan.">
+<meta name="description" content="Draf jawapan untuk borang &quot;Mohon akses pengeluaran&quot; dalam Play Console, mengikut susunan tiga bahagiannya. Masukkan apa yang berlaku dalam ujian tertutup anda. Percuma, berjalan dalam pelayar, tiada apa-apa disimpan.">
 <link rel="canonical" href="https://testerexchange.com/ms/tools/production-answers/">
 <link rel="alternate" hreflang="en" href="https://testerexchange.com/tools/production-answers/">
 <link rel="alternate" hreflang="am" href="https://testerexchange.com/am/tools/production-answers/">
@@ -63,12 +63,12 @@
 <link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/tools/production-answers/">
 <link rel="alternate" hreflang="x-default" href="https://testerexchange.com/tools/production-answers/">
 <meta property="og:type" content="article"><meta property="og:title" content="Penjana jawapan akses pengeluaran Google Play percuma">
-<meta property="og:description" content="Isi angka ujian tertutup anda dan dapatkan draf jawapan yang jelas untuk setiap soalan akses pengeluaran Google Play. Percuma, berjalan dalam pelayar anda, tiada apa-apa yang disimpan."><meta property="og:url" content="https://testerexchange.com/ms/tools/production-answers/">
+<meta property="og:description" content="Draf jawapan untuk borang &quot;Mohon akses pengeluaran&quot; dalam Play Console, mengikut susunan tiga bahagiannya. Masukkan apa yang berlaku dalam ujian tertutup anda. Percuma, berjalan dalam pelayar, tiada apa-apa disimpan."><meta property="og:url" content="https://testerexchange.com/ms/tools/production-answers/">
 <meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/static.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Penjana jawapan akses pengeluaran","description":"Isi angka ujian tertutup anda dan dapatkan draf jawapan yang jelas untuk setiap soalan akses pengeluaran Google Play. Percuma, berjalan dalam pelayar anda, tiada apa-apa yang disimpan.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"ms","url":"https://testerexchange.com/ms/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Penjana jawapan akses pengeluaran","description":"Draf jawapan untuk borang \"Mohon akses pengeluaran\" dalam Play Console, mengikut susunan tiga bahagiannya. Masukkan apa yang berlaku dalam ujian tertutup anda. Percuma, berjalan dalam pelayar, tiada apa-apa disimpan.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"ms","url":"https://testerexchange.com/ms/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
 </head>
 <body><div class="wrap">
@@ -80,58 +80,68 @@
 <main>
 
 <h1>Penjana jawapan akses pengeluaran</h1>
-<p class="lede">Masukkan apa yang berlaku dalam ujian tertutup anda. Anda akan mendapat draf jawapan untuk setiap soalan yang Play Console tanya apabila anda memohon akses pengeluaran. Semuanya berjalan dalam pelayar anda dan tiada apa-apa dihantar ke mana-mana. Jawapan dalam bahasa Inggeris, bahasa yang dibaca oleh penyemak di semua tempat.</p>
+<p class="lede">Borang &quot;Mohon akses pengeluaran&quot; dalam Play Console ada tiga bahagian: ujian tertutup anda, apl anda dan kesediaan untuk pengeluaran. Masukkan apa yang berlaku dalam ujian anda untuk mendapat draf bagi setiap soalan bertulis, serta panduan untuk dua soalan yang anda pilih satu pilihan. Draf hanya menggunakan apa yang anda masukkan; apa-apa yang dibiarkan kosong menjadi [kurungan] untuk diisi. Semuanya berjalan dalam pelayar anda dan tiada apa-apa dihantar. Draf dalam bahasa Inggeris, yang dibaca oleh penyemak di mana-mana.</p>
 <form id="f" onsubmit="event.preventDefault();gen()">
-<label>Nama aplikasi<input name="app" required maxlength="80"></label>
-<label>Dari mana penguji anda datang?<select name="source">
-<option value="exchange">Pertukaran penguji (pembangun menguji aplikasi satu sama lain)</option><option value="community">Komuniti atau forum pembangun</option><option value="friends">Kawan, keluarga dan rakan sekerja</option>
-</select></label>
+<label>Nama aplikasi<input name="app" dir="auto" maxlength="80"></label>
 <div class="grid2">
-<label>Penguji yang menyertai (opt in)<input name="joined" type="number" min="0" value="15"></label>
-<label>Penguji yang memasang<input name="installed" type="number" min="0" value="14"></label>
-<label>Bilangan hari ujian berjalan<input name="days" type="number" min="1" value="14"></label>
-<label>Purata penguji aktif sehari<input name="daily" type="number" min="0" step="0.1" value="12"></label>
-<label>Penguji yang kekal hingga akhir<input name="completed" type="number" min="0" value="12"></label>
-<label>Purata minit setiap sesi (pilihan)<input name="minutes" type="number" min="0" step="0.5"></label>
-<label>Binaan baharu yang dimuat naik semasa ujian<input name="builds" type="number" min="0" value="2"></label>
-<label>Jangkaan pemasangan dalam tahun pertama<input name="installs" placeholder="1,000–5,000"></label>
+<label>Penguji yang memasang<input name="installed" dir="auto" type="number" min="0"></label>
+<label>Penguji yang kekal mendaftar 14 hari berturut-turut<input name="stayed" dir="auto" type="number" min="0"></label>
+<label>Bilangan hari ujian berjalan<input name="days" dir="auto" type="number" min="1"></label>
+<label>Binaan baharu yang dimuat naik semasa ujian<input name="builds" dir="auto" type="number" min="0"></label>
 </div>
-<label>Tema maklum balas utama (satu setiap baris)<textarea name="feedback" rows="3"></textarea></label>
-<label>Apa yang anda ubah atau betulkan (satu setiap baris)<textarea name="changes" rows="3"></textarea></label>
-<label>Untuk siapa aplikasi ini?<input name="audience"></label>
-<label>Apa yang ia bantu mereka lakukan?<input name="value"></label>
+<label>Ciri yang digunakan penguji, dan yang tidak sempat mereka cuba<textarea name="features" rows="3" dir="auto"></textarea></label>
+<label>Perbandingan penggunaan penguji dengan cara pengguna sebenar akan menggunakan apl<textarea name="compare" rows="3" dir="auto"></textarea></label>
+<label>Tema maklum balas utama (satu setiap baris)<textarea name="feedback" rows="3" dir="auto"></textarea></label>
+<label>Cara anda mengumpul maklum balas<input name="collect" dir="auto" ></label>
+<label>Untuk siapa aplikasi ini?<input name="audience" dir="auto" ></label>
+<label>Apa yang ia bantu mereka lakukan?<textarea name="value" rows="3" dir="auto"></textarea></label>
+<label>Apa yang anda ubah atau betulkan (satu setiap baris)<textarea name="changes" rows="3" dir="auto"></textarea></label>
+<label>Cara anda memutuskan apl sudah sedia<textarea name="ready" rows="3" dir="auto"></textarea></label>
 <div><button class="btn">Jana jawapan</button></div>
 </form>
-<section id="out" hidden><h2>Draf jawapan anda</h2><div id="answers"></div><p class="muted">Sunting draf ini supaya tepat dengan apa yang berlaku. Google boleh melihat data ujian sebenar anda, jadi jawapan yang jujur dan khusus paling berkesan.</p></section>
-<div class="cta"><b>Perlukan penguji yang benar-benar menggunakan aplikasi anda?</b><span>Tester Exchange mengesahkan penggunaan harian pada telefon setiap penguji dan mengisi angka-angka ini untuk anda.</span><a class="btn" href="https://testerexchange.com/?lang=ms">Dapatkan penguji percuma</a></div>
+<section id="out" hidden><h2>Draf jawapan anda</h2><p class="muted">Sunting draf ini supaya tepat dengan apa yang berlaku. Google boleh melihat data ujian sebenar anda, jadi jawapan yang jujur dan khusus paling berkesan.</p>
+<p><button type="button" class="ghost" id="all">Salin semua jawapan</button></p>
+<h3>Bahagian 1: Tentang ujian tertutup anda</h3><div class="ans" data-q="recruit"><b>Sejauh mana mudahnya mencari penguji?</b><p class="hint">Di sini Play Console meminta anda memilih satu pilihan, bukan menulis teks. Pilih yang benar.</p></div><div class="ans" data-q="engage"><b>Penglibatan penguji semasa ujian tertutup</b><p class="hint">Google mahu tahu sama ada penguji menggunakan semua ciri, dan sama ada penggunaan mereka sepadan dengan cara pengguna sebenar akan menggunakan apl.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Salin</button></div><div class="ans" data-q="feedback"><b>Ringkasan maklum balas penguji dan cara anda mengumpulnya</b><p class="hint">Namakan tema utama yang dibangkitkan penguji, dan nyatakan cara anda mengumpul maklum balas.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Salin</button></div><h3>Bahagian 2: Tentang aplikasi atau permainan anda</h3><div class="ans" data-q="audience"><b>Khalayak sasaran</b><p class="hint">Nyatakan dengan jelas: untuk siapa, di mana, dan keperluan apa yang dipenuhi aplikasi. Jawapan ini tidak dipaparkan secara umum.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Salin</button></div><div class="ans" data-q="value"><b>Nilai yang diberikan aplikasi anda (untuk permainan: apa yang menjadikannya unik)</b><p class="hint">Nyatakan apa yang boleh dilakukan pengguna dengan aplikasi dan mengapa ia membantu mereka.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Salin</button></div><div class="ans" data-q="installs"><b>Anggaran pemasangan pada tahun pertama</b><p class="hint">Di sini Play Console meminta anda memilih julat. Anggaran yang jujur dan sederhana sudah memadai.</p></div><h3>Bahagian 3: Tentang kesediaan pengeluaran</h3><div class="ans" data-q="changes"><b>Perubahan yang dibuat berdasarkan ujian tertutup</b><p class="hint">Senaraikan pembaikan sebenar, dan sebut binaan baharu yang anda muat naik ke trek tertutup.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Salin</button></div><div class="ans" data-q="ready"><b>Cara anda memutuskan aplikasi sedia untuk pengeluaran</b><p class="hint">Nyatakan apa yang anda semak sebelum memohon: pepijat dibaiki, tiada ranap, aliran utama berfungsi.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Salin</button></div>
+</section>
+<section><h2>Sebelum anda memohon</h2><ul><li>Google mengira penguji yang kekal menyertai ujian tertutup anda selama 14 hari berturut-turut; penguji yang keluar lalu masuk semula bermula dari awal. Papan pemuka Play Console menunjukkan bila anda boleh memohon.</li><li>Baiki dahulu ranap, ciri rosak dan skrin yang tiada: Google menyatakan semakan bukan langkah penyelesaian masalah.</li><li>Jika aplikasi anda memerlukan log masuk, tambahkan butiran log masuk ujian yang berfungsi dalam Play Console supaya penyemak boleh membuka setiap ciri.</li><li>Pastikan kumpulan umur sasaran dan penyenaraian kedai sepadan dengan kandungan sebenar aplikasi.</li><li>Semakan biasanya mengambil 7 hari atau kurang. Jika Google meminta lebih banyak ujian, teruskan ujian tertutup dan mohon semula.</li></ul></section>
+<section class="offer" id="get-testers" aria-labelledby="offer-h">
+<h2 id="offer-h">Dapatkan 12 penguji yang Google Play perlukan</h2>
+<p>Orang sebenar membuka aplikasi anda pada telefon mereka sendiri selama 14 hari. Bayar sekali, atau uji aplikasi lain secara percuma.</p>
+<ul class="packs"><li><a href="https://testerexchange.com/?lang=ms#buy"><b>12 penguji</b><span class="price">$9.99</span><small>Minimum Google</small></a></li><li class="best"><a href="https://testerexchange.com/?lang=ms#buy"><b>15 penguji</b><span class="price">$12.99</span><small>Disyorkan: ada ruang jika penguji berhenti</small></a></li><li><a href="https://testerexchange.com/?lang=ms#buy"><b>25 penguji</b><span class="price">$19.99</span><small>Paling selamat</small></a></li></ul>
+<ol class="how"><li><b>Tampal pautan aplikasi anda</b> Pautan Google Play atau nama pakej anda.</li><li><b>Bayar atau uji secara percuma</b> Bayar sekali, atau kumpul kredit dengan menguji aplikasi lain.</li><li><b>Sambungkan Google Play</b> Satu butang menambah penguji kami ke ujian tertutup anda. Mereka memasang aplikasi, dan 14 hari pun bermula.</li></ol>
+<p class="row"><a class="btn" href="https://testerexchange.com/?lang=ms#buy">Dapatkan 12 penguji</a> <a href="https://testerexchange.com/get/?lang=ms">Uji aplikasi secara percuma</a></p>
+<p class="muted">Kad (termasuk UnionPay), PayPal, Apple Pay, Google Pay, Alipay dan WeChat Pay. Pembayaran selamat oleh Lemon Squeezy. Pembelian adalah muktamad: kredit tidak boleh ditukar semula kepada wang.</p>
+</section>
 <script>
 const COPY="Salin",COPIED="Disalin";
-function lines(s){return s.split('\n').map(x=>x.trim()).filter(Boolean)}
-function list(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]}
+function lines(s){return String(s||'').split('\n').map(x=>x.trim().replace(/[.;,]+$/,'')).filter(Boolean)}
+function one(s){return String(s||'').trim().replace(/\s+/g,' ').replace(/[.;,]+$/,'')}
+function cnt(k,w){return k+' '+w+(k===1?'':'s')}
+function copy(btn,text){navigator.clipboard&&navigator.clipboard.writeText(text).catch(()=>{});btn.textContent=COPIED;setTimeout(()=>btn.textContent=btn.dataset.l||COPY,1500)}
 function gen(){
+  // Drafts only state what was entered; anything only the developer knows stays a [bracket].
   const f=Object.fromEntries(new FormData(document.getElementById('f')));
-  const n=k=>Math.max(0,Number(f[k]||0)), app=f.app.trim()||'the app';
-  const src={exchange:'a developer tester exchange, where developers test each other\'s apps on their own phones and daily use is verified',
-    community:'a developer community, where I shared the opt-in link and explained what to test',
-    friends:'friends, family and colleagues who use Android phones'}[f.source];
-  const days=n('days'), daily=n('daily'), td=Math.round(days*daily), fb=lines(f.feedback), ch=lines(f.changes);
-  const mins=n('minutes')?' Sessions lasted about '+n('minutes')+' minutes on average.':'';
-  const A=[
-   ['How easy was it to recruit testers for your app?','I recruited testers through '+src+'. '+n('joined')+' people opted in to the closed test and '+n('installed')+' installed '+app+' from Google Play. [If you replaced testers who dropped out, say so here.]'],
-   ['Describe the engagement you received from testers during your closed test.','The closed test ran for '+days+' days. On average '+daily+' testers used '+app+' each day, about '+td+' tester-days in total.'+mins+' '+n('completed')+' testers stayed until the end of the test. [Add how you kept testers active, e.g. tasks you asked them to try.]'],
-   ['Summarize the feedback that you received from testers. Include how you collected the feedback.','I collected feedback through written notes from testers during the test'+(fb.length?'. The main themes were: '+list(fb)+'.':'. [Add the main themes testers reported.]')],
-   ['Who is the intended audience of your app?',f.audience.trim()||'[Describe who the app is for.]'],
-   ['Describe how your app provides value to users.',f.value.trim()||'[Describe what users can do with the app.]'],
-   ['How many installs do you expect your app to have in your first year?',f.installs.trim()||'[Give an honest range.]'],
-   ['What changes did you make to your app based on what you learned during closed testing?',(ch.length?'Based on tester feedback I '+list(ch.map(x=>x.charAt(0).toLowerCase()+x.slice(1)))+'.':'[List the fixes and changes you made.]')+(n('builds')?' I uploaded '+n('builds')+' new build'+(n('builds')>1?'s':'')+' to the closed track during the test.':'')],
-   ['How did you decide that your app is ready for production?','After '+days+' days of testing with about '+daily+' active testers a day, the main flows work reliably, the issues testers reported are fixed'+(n('builds')?' in the builds I shipped during the test':'')+', and testers kept using '+app+' until the end of the test.']
-  ];
-  const box=document.getElementById('answers');box.textContent='';
-  for(const [q,a] of A){const d=document.createElement('div');d.className='ans';
-    const b=document.createElement('b');b.textContent=q;const p=document.createElement('p');p.textContent=a;
-    const btn=document.createElement('button');btn.type='button';btn.textContent=COPY;
-    btn.onclick=()=>{navigator.clipboard.writeText(a);btn.textContent=COPIED;setTimeout(()=>btn.textContent=COPY,1500)};
-    d.append(b,p,btn);box.append(d)}
+  const n=k=>String(f[k]||'').trim()===''?null:Math.max(0,Math.round(Number(f[k])||0));
+  const app=one(f.app)||'the app', days=n('days'), inst=n('installed'), stayed=n('stayed'), builds=n('builds');
+  const fb=lines(f.feedback), ch=lines(f.changes), B=x=>'['+x+']';
+  const D={
+    engage:[
+      'The closed test ran for '+(days!=null?cnt(days,'day'):B('number of')+' days')+', and '+(inst!=null?cnt(inst,'tester'):B('number of')+' testers')+' installed '+app+' from Google Play on their own Android phones.',
+      (stayed!=null?cnt(stayed,'tester'):B('Number of')+' testers')+' stayed opted in for 14 days in a row.',
+      'Features used: '+(one(f.features)||B('which features testers used, and any they did not reach'))+'.',
+      'Compared with production: '+(one(f.compare)||B('how real users will use the app, and any differences from how testers used it'))+'.'
+    ].join(' '),
+    feedback:'How I collected feedback: '+(one(f.collect)||B('e.g. a feedback form, email, a chat group, or private feedback on Google Play'))+'. Main themes: '+(fb.length?fb.join('; '):B('sum up what testers reported in 1–2 sentences'))+'.',
+    audience:one(f.audience)?one(f.audience)+'.':B('Who the app is for, as specifically as possible: age group, country or region, and the need it serves.'),
+    value:one(f.value)?one(f.value)+'.':B('What users can do with the app and why it is useful to them, in 2–3 sentences. For a game: what makes it unique.'),
+    changes:'During the closed test I made these changes: '+(ch.length?ch.join('; '):B('list the fixes and changes you made'))+'. I uploaded '+(builds!=null?cnt(builds,'new build'):B('number of')+' new builds')+' to the closed testing track.',
+    ready:(days!=null&&inst!=null?'The closed test ran for '+cnt(days,'day')+' with '+cnt(inst,'tester')+'. ':'')+(one(f.ready)?one(f.ready)+'.':B('What you checked before applying, e.g. the issues testers reported are fixed, no crashes in Android vitals, the main flows work end to end.'))
+  };
+  const all=[];
+  for(const d of document.querySelectorAll('#out .ans')){const id=d.dataset.q,a=D[id];if(!a)continue;
+    d.querySelector('.draft').textContent=a;all.push(d.querySelector('b').textContent+'\n'+a);
+    const btn=d.querySelector('button');btn.onclick=()=>copy(btn,a)}
+  const ab=document.getElementById('all');ab.dataset.l=ab.dataset.l||ab.textContent;ab.onclick=()=>copy(ab,all.join('\n\n'));
   const o=document.getElementById('out');o.hidden=false;o.scrollIntoView({behavior:'smooth'});
 }
 </script>

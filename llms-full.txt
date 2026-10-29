@@ -374,8 +374,8 @@ When your closed test is done, Play Console asks you to apply for production and
 
 ### Questions about your closed test
 
-- How easy was it to recruit testers? Say where they came from (friends, a developer community, a tester exchange) and how many joined, installed and stayed.
-- Describe the engagement you received. Give numbers: testers active per day, total tester-days, and how long the test ran. Mention how you kept testers active.
+- How easy was it to recruit testers? Play Console asks you to pick an option here, not to write text. Choose the one that honestly fits: Google can see how your test went.
+- Describe the engagement you received. Give numbers: how many testers installed, how many stayed opted in for 14 days in a row, and how long the test ran. Also say whether testers used all the features, and whether their use matched how real users will use the app, including any differences.
 - Summarize the feedback. Name two or three concrete themes ("sign-up was confusing", "crash when rotating the screen") and say how you collected it.
 
 ### Questions about your app

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Free Google Play production access answer generator</title>
-<meta name="description" content="Fill in your closed test numbers and get clear draft answers for every Google Play production access question. Free, runs in your browser, nothing is stored.">
+<meta name="description" content="Draft answers for Play Console's &quot;Apply for production&quot; form, in the order of its three parts. Enter what happened in your closed test. Free, runs in your browser, nothing is stored.">
 <link rel="canonical" href="https://testerexchange.com/tools/production-answers/">
 <link rel="alternate" hreflang="en" href="https://testerexchange.com/tools/production-answers/">
 <link rel="alternate" hreflang="am" href="https://testerexchange.com/am/tools/production-answers/">
@@ -63,12 +63,12 @@
 <link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/tools/production-answers/">
 <link rel="alternate" hreflang="x-default" href="https://testerexchange.com/tools/production-answers/">
 <meta property="og:type" content="article"><meta property="og:title" content="Free Google Play production access answer generator">
-<meta property="og:description" content="Fill in your closed test numbers and get clear draft answers for every Google Play production access question. Free, runs in your browser, nothing is stored."><meta property="og:url" content="https://testerexchange.com/tools/production-answers/">
+<meta property="og:description" content="Draft answers for Play Console's &quot;Apply for production&quot; form, in the order of its three parts. Enter what happened in your closed test. Free, runs in your browser, nothing is stored."><meta property="og:url" content="https://testerexchange.com/tools/production-answers/">
 <meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/static.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Production access answer generator","description":"Fill in your closed test numbers and get clear draft answers for every Google Play production access question. Free, runs in your browser, nothing is stored.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"en","url":"https://testerexchange.com/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Production access answer generator","description":"Draft answers for Play Console's \"Apply for production\" form, in the order of its three parts. Enter what happened in your closed test. Free, runs in your browser, nothing is stored.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"en","url":"https://testerexchange.com/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
 </head>
 <body><div class="wrap">
@@ -80,58 +80,68 @@
 <main>
 
 <h1>Production access answer generator</h1>
-<p class="lede">Enter what happened in your closed test. You'll get draft answers for each question Play Console asks when you apply for production. Everything runs in your browser and nothing is sent anywhere. Answers are in English, which reviewers read everywhere.</p>
+<p class="lede">Play Console's &quot;Apply for production&quot; form has three parts: your closed test, your app, and production readiness. Enter what happened in your test to get a draft for each written question, plus guidance for the two questions where you pick an option. Drafts only use what you enter; anything you leave blank becomes a [bracket] to fill in. Everything runs in your browser and nothing is sent anywhere. Drafts are in English, which reviewers read everywhere.</p>
 <form id="f" onsubmit="event.preventDefault();gen()">
-<label>App name<input name="app" required maxlength="80"></label>
-<label>Where did your testers come from?<select name="source">
-<option value="exchange">A tester exchange (developers testing each other's apps)</option><option value="community">A developer community or forum</option><option value="friends">Friends, family and colleagues</option>
-</select></label>
+<label>App name<input name="app" dir="auto" maxlength="80"></label>
 <div class="grid2">
-<label>Testers who opted in<input name="joined" type="number" min="0" value="15"></label>
-<label>Testers who installed<input name="installed" type="number" min="0" value="14"></label>
-<label>Days the test ran<input name="days" type="number" min="1" value="14"></label>
-<label>Average testers active per day<input name="daily" type="number" min="0" step="0.1" value="12"></label>
-<label>Testers who stayed until the end<input name="completed" type="number" min="0" value="12"></label>
-<label>Average minutes per session (optional)<input name="minutes" type="number" min="0" step="0.5"></label>
-<label>New builds uploaded during the test<input name="builds" type="number" min="0" value="2"></label>
-<label>Expected installs in the first year<input name="installs" placeholder="1,000–5,000"></label>
+<label>Testers who installed<input name="installed" dir="auto" type="number" min="0"></label>
+<label>Testers who stayed opted in for 14 days in a row<input name="stayed" dir="auto" type="number" min="0"></label>
+<label>Days the test ran<input name="days" dir="auto" type="number" min="1"></label>
+<label>New builds uploaded during the test<input name="builds" dir="auto" type="number" min="0"></label>
 </div>
-<label>Main feedback themes (one per line)<textarea name="feedback" rows="3"></textarea></label>
-<label>What you changed or fixed (one per line)<textarea name="changes" rows="3"></textarea></label>
-<label>Who is the app for?<input name="audience"></label>
-<label>What does it let them do?<input name="value"></label>
+<label>Features testers used, and any they didn't reach<textarea name="features" rows="3" dir="auto"></textarea></label>
+<label>How testers' use compared with how real users will use the app<textarea name="compare" rows="3" dir="auto"></textarea></label>
+<label>Main feedback themes (one per line)<textarea name="feedback" rows="3" dir="auto"></textarea></label>
+<label>How you collected feedback<input name="collect" dir="auto" ></label>
+<label>Who is the app for?<input name="audience" dir="auto" ></label>
+<label>What does it let them do?<textarea name="value" rows="3" dir="auto"></textarea></label>
+<label>What you changed or fixed (one per line)<textarea name="changes" rows="3" dir="auto"></textarea></label>
+<label>How you decided the app is ready<textarea name="ready" rows="3" dir="auto"></textarea></label>
 <div><button class="btn">Generate answers</button></div>
 </form>
-<section id="out" hidden><h2>Your draft answers</h2><div id="answers"></div><p class="muted">Edit these drafts so they match exactly what happened. Google can see your real test data, so honest, specific answers work best.</p></section>
-<div class="cta"><b>Need testers who really use your app?</b><span>Tester Exchange verifies daily use on each tester's phone and fills these numbers in for you.</span><a class="btn" href="https://testerexchange.com/?lang=en">Get testers free</a></div>
+<section id="out" hidden><h2>Your draft answers</h2><p class="muted">Edit these drafts so they match exactly what happened. Google can see your real test data, so honest, specific answers work best.</p>
+<p><button type="button" class="ghost" id="all">Copy all answers</button></p>
+<h3>Part 1: About your closed test</h3><div class="ans" data-q="recruit"><b>How easy was it to recruit testers?</b><p class="hint">Here Play Console asks you to pick an option, not to write text. Choose the one that honestly fits.</p></div><div class="ans" data-q="engage"><b>Tester engagement during your closed test</b><p class="hint">Google wants to know whether testers used all the features, and whether their use matched how real users will use the app.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Copy</button></div><div class="ans" data-q="feedback"><b>Summary of tester feedback, and how you collected it</b><p class="hint">Name the main themes testers raised, and say how you collected the feedback.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Copy</button></div><h3>Part 2: About your app or game</h3><div class="ans" data-q="audience"><b>Target audience</b><p class="hint">Be specific: who, where, and what need the app serves. This answer isn't shown publicly.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Copy</button></div><div class="ans" data-q="value"><b>How your app provides value (for games: what makes it unique)</b><p class="hint">Say what users can do with the app and why it helps them.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Copy</button></div><div class="ans" data-q="installs"><b>Estimated installs in the first year</b><p class="hint">Here Play Console asks you to pick a range. An honest, modest estimate is fine.</p></div><h3>Part 3: About your production readiness</h3><div class="ans" data-q="changes"><b>Changes you made based on the closed test</b><p class="hint">List real fixes, and mention the new builds you uploaded to the closed track.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Copy</button></div><div class="ans" data-q="ready"><b>How you decided the app is ready for production</b><p class="hint">Say what you checked before applying, such as fixed bugs, no crashes and the main flows working.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Copy</button></div>
+</section>
+<section><h2>Before you apply</h2><ul><li>Google counts testers who stay opted in to your closed test for 14 days in a row; a tester who leaves and rejoins starts over. Your Play Console Dashboard shows when you can apply.</li><li>Fix crashes, broken features and missing screens first: Google says review is not a troubleshooting step.</li><li>If your app needs a login, add working test credentials in Play Console so reviewers can open every feature.</li><li>Check that your target age group and store listing match the app's real content.</li><li>Review usually takes 7 days or less. If Google asks for more testing, keep the closed test running and apply again.</li></ul></section>
+<section class="offer" id="get-testers" aria-labelledby="offer-h">
+<h2 id="offer-h">Get the 12 testers Google Play requires</h2>
+<p>Real people open your app on their own phones for 14 days. Pay once, or test other apps for free.</p>
+<ul class="packs"><li><a href="https://testerexchange.com/?lang=en#buy"><b>12 testers</b><span class="price">$9.99</span><small>Google's minimum</small></a></li><li class="best"><a href="https://testerexchange.com/?lang=en#buy"><b>15 testers</b><span class="price">$12.99</span><small>Recommended: room for dropouts</small></a></li><li><a href="https://testerexchange.com/?lang=en#buy"><b>25 testers</b><span class="price">$19.99</span><small>Safest</small></a></li></ul>
+<ol class="how"><li><b>Paste your app link</b> Your Google Play link or package name.</li><li><b>Pay or test for free</b> Pay once, or earn credits by testing other apps.</li><li><b>Connect Google Play</b> One button adds our testers to your closed test. They install, and the 14 days start.</li></ol>
+<p class="row"><a class="btn" href="https://testerexchange.com/?lang=en#buy">Get 12 testers</a> <a href="https://testerexchange.com/get/?lang=en">Test apps for free</a></p>
+<p class="muted">Cards (incl. UnionPay), PayPal, Apple Pay, Google Pay, Alipay and WeChat Pay. Secure checkout by Lemon Squeezy. Purchases are final: credits don't convert back to money.</p>
+</section>
 <script>
 const COPY="Copy",COPIED="Copied";
-function lines(s){return s.split('\n').map(x=>x.trim()).filter(Boolean)}
-function list(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]}
+function lines(s){return String(s||'').split('\n').map(x=>x.trim().replace(/[.;,]+$/,'')).filter(Boolean)}
+function one(s){return String(s||'').trim().replace(/\s+/g,' ').replace(/[.;,]+$/,'')}
+function cnt(k,w){return k+' '+w+(k===1?'':'s')}
+function copy(btn,text){navigator.clipboard&&navigator.clipboard.writeText(text).catch(()=>{});btn.textContent=COPIED;setTimeout(()=>btn.textContent=btn.dataset.l||COPY,1500)}
 function gen(){
+  // Drafts only state what was entered; anything only the developer knows stays a [bracket].
   const f=Object.fromEntries(new FormData(document.getElementById('f')));
-  const n=k=>Math.max(0,Number(f[k]||0)), app=f.app.trim()||'the app';
-  const src={exchange:'a developer tester exchange, where developers test each other\'s apps on their own phones and daily use is verified',
-    community:'a developer community, where I shared the opt-in link and explained what to test',
-    friends:'friends, family and colleagues who use Android phones'}[f.source];
-  const days=n('days'), daily=n('daily'), td=Math.round(days*daily), fb=lines(f.feedback), ch=lines(f.changes);
-  const mins=n('minutes')?' Sessions lasted about '+n('minutes')+' minutes on average.':'';
-  const A=[
-   ['How easy was it to recruit testers for your app?','I recruited testers through '+src+'. '+n('joined')+' people opted in to the closed test and '+n('installed')+' installed '+app+' from Google Play. [If you replaced testers who dropped out, say so here.]'],
-   ['Describe the engagement you received from testers during your closed test.','The closed test ran for '+days+' days. On average '+daily+' testers used '+app+' each day, about '+td+' tester-days in total.'+mins+' '+n('completed')+' testers stayed until the end of the test. [Add how you kept testers active, e.g. tasks you asked them to try.]'],
-   ['Summarize the feedback that you received from testers. Include how you collected the feedback.','I collected feedback through written notes from testers during the test'+(fb.length?'. The main themes were: '+list(fb)+'.':'. [Add the main themes testers reported.]')],
-   ['Who is the intended audience of your app?',f.audience.trim()||'[Describe who the app is for.]'],
-   ['Describe how your app provides value to users.',f.value.trim()||'[Describe what users can do with the app.]'],
-   ['How many installs do you expect your app to have in your first year?',f.installs.trim()||'[Give an honest range.]'],
-   ['What changes did you make to your app based on what you learned during closed testing?',(ch.length?'Based on tester feedback I '+list(ch.map(x=>x.charAt(0).toLowerCase()+x.slice(1)))+'.':'[List the fixes and changes you made.]')+(n('builds')?' I uploaded '+n('builds')+' new build'+(n('builds')>1?'s':'')+' to the closed track during the test.':'')],
-   ['How did you decide that your app is ready for production?','After '+days+' days of testing with about '+daily+' active testers a day, the main flows work reliably, the issues testers reported are fixed'+(n('builds')?' in the builds I shipped during the test':'')+', and testers kept using '+app+' until the end of the test.']
-  ];
-  const box=document.getElementById('answers');box.textContent='';
-  for(const [q,a] of A){const d=document.createElement('div');d.className='ans';
-    const b=document.createElement('b');b.textContent=q;const p=document.createElement('p');p.textContent=a;
-    const btn=document.createElement('button');btn.type='button';btn.textContent=COPY;
-    btn.onclick=()=>{navigator.clipboard.writeText(a);btn.textContent=COPIED;setTimeout(()=>btn.textContent=COPY,1500)};
-    d.append(b,p,btn);box.append(d)}
+  const n=k=>String(f[k]||'').trim()===''?null:Math.max(0,Math.round(Number(f[k])||0));
+  const app=one(f.app)||'the app', days=n('days'), inst=n('installed'), stayed=n('stayed'), builds=n('builds');
+  const fb=lines(f.feedback), ch=lines(f.changes), B=x=>'['+x+']';
+  const D={
+    engage:[
+      'The closed test ran for '+(days!=null?cnt(days,'day'):B('number of')+' days')+', and '+(inst!=null?cnt(inst,'tester'):B('number of')+' testers')+' installed '+app+' from Google Play on their own Android phones.',
+      (stayed!=null?cnt(stayed,'tester'):B('Number of')+' testers')+' stayed opted in for 14 days in a row.',
+      'Features used: '+(one(f.features)||B('which features testers used, and any they did not reach'))+'.',
+      'Compared with production: '+(one(f.compare)||B('how real users will use the app, and any differences from how testers used it'))+'.'
+    ].join(' '),
+    feedback:'How I collected feedback: '+(one(f.collect)||B('e.g. a feedback form, email, a chat group, or private feedback on Google Play'))+'. Main themes: '+(fb.length?fb.join('; '):B('sum up what testers reported in 1–2 sentences'))+'.',
+    audience:one(f.audience)?one(f.audience)+'.':B('Who the app is for, as specifically as possible: age group, country or region, and the need it serves.'),
+    value:one(f.value)?one(f.value)+'.':B('What users can do with the app and why it is useful to them, in 2–3 sentences. For a game: what makes it unique.'),
+    changes:'During the closed test I made these changes: '+(ch.length?ch.join('; '):B('list the fixes and changes you made'))+'. I uploaded '+(builds!=null?cnt(builds,'new build'):B('number of')+' new builds')+' to the closed testing track.',
+    ready:(days!=null&&inst!=null?'The closed test ran for '+cnt(days,'day')+' with '+cnt(inst,'tester')+'. ':'')+(one(f.ready)?one(f.ready)+'.':B('What you checked before applying, e.g. the issues testers reported are fixed, no crashes in Android vitals, the main flows work end to end.'))
+  };
+  const all=[];
+  for(const d of document.querySelectorAll('#out .ans')){const id=d.dataset.q,a=D[id];if(!a)continue;
+    d.querySelector('.draft').textContent=a;all.push(d.querySelector('b').textContent+'\n'+a);
+    const btn=d.querySelector('button');btn.onclick=()=>copy(btn,a)}
+  const ab=document.getElementById('all');ab.dataset.l=ab.dataset.l||ab.textContent;ab.onclick=()=>copy(ab,all.join('\n\n'));
   const o=document.getElementById('out');o.hidden=false;o.scrollIntoView({behavior:'smooth'});
 }
 </script>

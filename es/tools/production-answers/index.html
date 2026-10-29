@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Generador gratis de respuestas para el acceso a producción de Google Play</title>
-<meta name="description" content="Ingresa las cifras de tu prueba cerrada y obtén borradores claros para cada pregunta de acceso a producción de Google Play. Gratis, funciona en tu navegador y no se guarda nada.">
+<meta name="description" content="Borradores de respuestas para el formulario «Solicitar acceso a producción» de Play Console, en el orden de sus tres partes. Indica qué pasó en tu prueba cerrada. Gratis, funciona en tu navegador y no guarda nada.">
 <link rel="canonical" href="https://testerexchange.com/es/tools/production-answers/">
 <link rel="alternate" hreflang="en" href="https://testerexchange.com/tools/production-answers/">
 <link rel="alternate" hreflang="am" href="https://testerexchange.com/am/tools/production-answers/">
@@ -63,12 +63,12 @@
 <link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/tools/production-answers/">
 <link rel="alternate" hreflang="x-default" href="https://testerexchange.com/tools/production-answers/">
 <meta property="og:type" content="article"><meta property="og:title" content="Generador gratis de respuestas para el acceso a producción de Google Play">
-<meta property="og:description" content="Ingresa las cifras de tu prueba cerrada y obtén borradores claros para cada pregunta de acceso a producción de Google Play. Gratis, funciona en tu navegador y no se guarda nada."><meta property="og:url" content="https://testerexchange.com/es/tools/production-answers/">
+<meta property="og:description" content="Borradores de respuestas para el formulario «Solicitar acceso a producción» de Play Console, en el orden de sus tres partes. Indica qué pasó en tu prueba cerrada. Gratis, funciona en tu navegador y no guarda nada."><meta property="og:url" content="https://testerexchange.com/es/tools/production-answers/">
 <meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/static.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Generador de respuestas para el acceso a producción","description":"Ingresa las cifras de tu prueba cerrada y obtén borradores claros para cada pregunta de acceso a producción de Google Play. Gratis, funciona en tu navegador y no se guarda nada.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"es","url":"https://testerexchange.com/es/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Generador de respuestas para el acceso a producción","description":"Borradores de respuestas para el formulario «Solicitar acceso a producción» de Play Console, en el orden de sus tres partes. Indica qué pasó en tu prueba cerrada. Gratis, funciona en tu navegador y no guarda nada.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"es","url":"https://testerexchange.com/es/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
 </head>
 <body><div class="wrap">
@@ -80,58 +80,68 @@
 <main>
 
 <h1>Generador de respuestas para el acceso a producción</h1>
-<p class="lede">Ingresa lo que pasó en tu prueba cerrada. Obtendrás borradores de respuesta para cada pregunta que hace Play Console cuando solicitas acceso a producción. Todo se ejecuta en tu navegador y no se envía nada a ningún lado. Las respuestas están en inglés, que los revisores leen en todo el mundo.</p>
+<p class="lede">El formulario «Solicitar acceso a producción» de Play Console tiene tres partes: tu prueba cerrada, tu app y si está lista para producción. Indica qué pasó en tu prueba y obtendrás un borrador para cada pregunta escrita, además de orientación para las dos preguntas en las que eliges una opción. Los borradores solo usan lo que escribes; lo que dejes en blanco aparece como [corchete] para que lo completes. Todo funciona en tu navegador y no se envía nada. Los borradores están en inglés, que los revisores leen en todas partes.</p>
 <form id="f" onsubmit="event.preventDefault();gen()">
-<label>Nombre de la app<input name="app" required maxlength="80"></label>
-<label>¿De dónde vinieron tus testers?<select name="source">
-<option value="exchange">Un intercambio de testers (desarrolladores que prueban las apps de otros)</option><option value="community">Una comunidad o foro de desarrolladores</option><option value="friends">Amigos, familia y compañeros de trabajo</option>
-</select></label>
+<label>Nombre de la app<input name="app" dir="auto" maxlength="80"></label>
 <div class="grid2">
-<label>Testers que se inscribieron<input name="joined" type="number" min="0" value="15"></label>
-<label>Testers que instalaron la app<input name="installed" type="number" min="0" value="14"></label>
-<label>Días que duró la prueba<input name="days" type="number" min="1" value="14"></label>
-<label>Promedio de testers activos por día<input name="daily" type="number" min="0" step="0.1" value="12"></label>
-<label>Testers que se quedaron hasta el final<input name="completed" type="number" min="0" value="12"></label>
-<label>Promedio de minutos por sesión (opcional)<input name="minutes" type="number" min="0" step="0.5"></label>
-<label>Compilaciones nuevas subidas durante la prueba<input name="builds" type="number" min="0" value="2"></label>
-<label>Instalaciones esperadas en el primer año<input name="installs" placeholder="1,000–5,000"></label>
+<label>Testers que instalaron la app<input name="installed" dir="auto" type="number" min="0"></label>
+<label>Testers que siguieron inscritos 14 días seguidos<input name="stayed" dir="auto" type="number" min="0"></label>
+<label>Días que duró la prueba<input name="days" dir="auto" type="number" min="1"></label>
+<label>Compilaciones nuevas subidas durante la prueba<input name="builds" dir="auto" type="number" min="0"></label>
 </div>
-<label>Temas principales de los comentarios (uno por línea)<textarea name="feedback" rows="3"></textarea></label>
-<label>Qué cambiaste o corregiste (uno por línea)<textarea name="changes" rows="3"></textarea></label>
-<label>¿Para quién es la app?<input name="audience"></label>
-<label>¿Qué les permite hacer?<input name="value"></label>
+<label>Funciones que usaron los testers y las que no llegaron a usar<textarea name="features" rows="3" dir="auto"></textarea></label>
+<label>Cómo se compara el uso de los testers con el de los usuarios reales<textarea name="compare" rows="3" dir="auto"></textarea></label>
+<label>Temas principales de los comentarios (uno por línea)<textarea name="feedback" rows="3" dir="auto"></textarea></label>
+<label>Cómo recogiste los comentarios<input name="collect" dir="auto" ></label>
+<label>¿Para quién es la app?<input name="audience" dir="auto" ></label>
+<label>¿Qué les permite hacer?<textarea name="value" rows="3" dir="auto"></textarea></label>
+<label>Qué cambiaste o corregiste (uno por línea)<textarea name="changes" rows="3" dir="auto"></textarea></label>
+<label>Cómo decidiste que la app está lista<textarea name="ready" rows="3" dir="auto"></textarea></label>
 <div><button class="btn">Generar respuestas</button></div>
 </form>
-<section id="out" hidden><h2>Tus borradores de respuesta</h2><div id="answers"></div><p class="muted">Edita estos borradores para que coincidan exactamente con lo que pasó. Google puede ver tus datos reales de la prueba, así que las respuestas honestas y específicas funcionan mejor.</p></section>
-<div class="cta"><b>¿Necesitas testers que de verdad usen tu app?</b><span>Tester Exchange verifica el uso diario en el teléfono de cada tester y completa estas cifras por ti.</span><a class="btn" href="https://testerexchange.com/?lang=es">Consigue testers gratis</a></div>
+<section id="out" hidden><h2>Tus borradores de respuesta</h2><p class="muted">Edita estos borradores para que coincidan exactamente con lo que pasó. Google puede ver tus datos reales de la prueba, así que las respuestas honestas y específicas funcionan mejor.</p>
+<p><button type="button" class="ghost" id="all">Copiar todas las respuestas</button></p>
+<h3>Parte 1: Sobre tu prueba cerrada</h3><div class="ans" data-q="recruit"><b>¿Qué tan fácil fue reclutar testers?</b><p class="hint">Aquí Play Console te pide elegir una opción, no escribir texto. Elige la que sea verdad para ti.</p></div><div class="ans" data-q="engage"><b>Participación de los testers durante la prueba cerrada</b><p class="hint">Google quiere saber si los testers usaron todas las funciones y si su uso se parece al de los usuarios reales.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Copiar</button></div><div class="ans" data-q="feedback"><b>Resumen de los comentarios de los testers y cómo los recopilaste</b><p class="hint">Nombra los temas principales que plantearon los testers y explica cómo recogiste los comentarios.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Copiar</button></div><h3>Parte 2: Sobre tu app o juego</h3><div class="ans" data-q="audience"><b>Público objetivo</b><p class="hint">Sé concreto: quién, dónde y qué necesidad cubre la app. Esta respuesta no se muestra en público.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Copiar</button></div><div class="ans" data-q="value"><b>Qué valor aporta tu app (en juegos: qué la hace única)</b><p class="hint">Di qué pueden hacer los usuarios con la app y por qué les ayuda.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Copiar</button></div><div class="ans" data-q="installs"><b>Instalaciones estimadas el primer año</b><p class="hint">Aquí Play Console te pide elegir un rango. Una estimación honesta y modesta está bien.</p></div><h3>Parte 3: Sobre si está lista para producción</h3><div class="ans" data-q="changes"><b>Cambios que hiciste a partir de la prueba cerrada</b><p class="hint">Enumera arreglos reales y menciona las nuevas versiones que subiste al canal cerrado.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Copiar</button></div><div class="ans" data-q="ready"><b>Cómo decidiste que la app está lista para producción</b><p class="hint">Di qué comprobaste antes de solicitar: errores corregidos, sin cierres inesperados, los flujos principales funcionan.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Copiar</button></div>
+</section>
+<section><h2>Antes de solicitar</h2><ul><li>Google cuenta a los testers que siguen inscritos en tu prueba cerrada durante 14 días seguidos; si alguien sale y vuelve a entrar, empieza de cero. El Panel de Play Console muestra cuándo puedes solicitar.</li><li>Arregla primero los cierres inesperados, las funciones rotas y las pantallas que faltan: Google dice que la revisión no sirve para depurar.</li><li>Si tu app requiere iniciar sesión, añade credenciales de prueba que funcionen en Play Console para que los revisores puedan abrir todas las funciones.</li><li>Comprueba que el grupo de edad objetivo y la ficha de la tienda coincidan con el contenido real de la app.</li><li>La revisión suele tardar 7 días o menos. Si Google pide más pruebas, mantén la prueba cerrada en marcha y vuelve a solicitar.</li></ul></section>
+<section class="offer" id="get-testers" aria-labelledby="offer-h">
+<h2 id="offer-h">Consigue los 12 testers que exige Google Play</h2>
+<p>Personas reales abren tu app en su propio teléfono durante 14 días. Paga una vez o prueba otras apps gratis.</p>
+<ul class="packs"><li><a href="https://testerexchange.com/?lang=es#buy"><b>12 testers</b><span class="price">$9.99</span><small>Mínimo de Google</small></a></li><li class="best"><a href="https://testerexchange.com/?lang=es#buy"><b>15 testers</b><span class="price">$12.99</span><small>Recomendado: margen para bajas</small></a></li><li><a href="https://testerexchange.com/?lang=es#buy"><b>25 testers</b><span class="price">$19.99</span><small>Más seguro</small></a></li></ul>
+<ol class="how"><li><b>Pega el enlace de tu app</b> Tu enlace de Google Play o el nombre del paquete.</li><li><b>Paga o prueba gratis</b> Paga una vez o gana créditos probando otras apps.</li><li><b>Conecta Google Play</b> Un botón agrega nuestros testers a tu prueba cerrada. Ellos instalan y empiezan los 14 días.</li></ol>
+<p class="row"><a class="btn" href="https://testerexchange.com/?lang=es#buy">Consigue 12 testers</a> <a href="https://testerexchange.com/get/?lang=es">Prueba apps gratis</a></p>
+<p class="muted">Tarjetas (incl. UnionPay), PayPal, Apple Pay, Google Pay, Alipay y WeChat Pay. Pago seguro con Lemon Squeezy. Las compras son definitivas: los créditos no se convierten en dinero.</p>
+</section>
 <script>
 const COPY="Copiar",COPIED="Copiado";
-function lines(s){return s.split('\n').map(x=>x.trim()).filter(Boolean)}
-function list(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]}
+function lines(s){return String(s||'').split('\n').map(x=>x.trim().replace(/[.;,]+$/,'')).filter(Boolean)}
+function one(s){return String(s||'').trim().replace(/\s+/g,' ').replace(/[.;,]+$/,'')}
+function cnt(k,w){return k+' '+w+(k===1?'':'s')}
+function copy(btn,text){navigator.clipboard&&navigator.clipboard.writeText(text).catch(()=>{});btn.textContent=COPIED;setTimeout(()=>btn.textContent=btn.dataset.l||COPY,1500)}
 function gen(){
+  // Drafts only state what was entered; anything only the developer knows stays a [bracket].
   const f=Object.fromEntries(new FormData(document.getElementById('f')));
-  const n=k=>Math.max(0,Number(f[k]||0)), app=f.app.trim()||'the app';
-  const src={exchange:'a developer tester exchange, where developers test each other\'s apps on their own phones and daily use is verified',
-    community:'a developer community, where I shared the opt-in link and explained what to test',
-    friends:'friends, family and colleagues who use Android phones'}[f.source];
-  const days=n('days'), daily=n('daily'), td=Math.round(days*daily), fb=lines(f.feedback), ch=lines(f.changes);
-  const mins=n('minutes')?' Sessions lasted about '+n('minutes')+' minutes on average.':'';
-  const A=[
-   ['How easy was it to recruit testers for your app?','I recruited testers through '+src+'. '+n('joined')+' people opted in to the closed test and '+n('installed')+' installed '+app+' from Google Play. [If you replaced testers who dropped out, say so here.]'],
-   ['Describe the engagement you received from testers during your closed test.','The closed test ran for '+days+' days. On average '+daily+' testers used '+app+' each day, about '+td+' tester-days in total.'+mins+' '+n('completed')+' testers stayed until the end of the test. [Add how you kept testers active, e.g. tasks you asked them to try.]'],
-   ['Summarize the feedback that you received from testers. Include how you collected the feedback.','I collected feedback through written notes from testers during the test'+(fb.length?'. The main themes were: '+list(fb)+'.':'. [Add the main themes testers reported.]')],
-   ['Who is the intended audience of your app?',f.audience.trim()||'[Describe who the app is for.]'],
-   ['Describe how your app provides value to users.',f.value.trim()||'[Describe what users can do with the app.]'],
-   ['How many installs do you expect your app to have in your first year?',f.installs.trim()||'[Give an honest range.]'],
-   ['What changes did you make to your app based on what you learned during closed testing?',(ch.length?'Based on tester feedback I '+list(ch.map(x=>x.charAt(0).toLowerCase()+x.slice(1)))+'.':'[List the fixes and changes you made.]')+(n('builds')?' I uploaded '+n('builds')+' new build'+(n('builds')>1?'s':'')+' to the closed track during the test.':'')],
-   ['How did you decide that your app is ready for production?','After '+days+' days of testing with about '+daily+' active testers a day, the main flows work reliably, the issues testers reported are fixed'+(n('builds')?' in the builds I shipped during the test':'')+', and testers kept using '+app+' until the end of the test.']
-  ];
-  const box=document.getElementById('answers');box.textContent='';
-  for(const [q,a] of A){const d=document.createElement('div');d.className='ans';
-    const b=document.createElement('b');b.textContent=q;const p=document.createElement('p');p.textContent=a;
-    const btn=document.createElement('button');btn.type='button';btn.textContent=COPY;
-    btn.onclick=()=>{navigator.clipboard.writeText(a);btn.textContent=COPIED;setTimeout(()=>btn.textContent=COPY,1500)};
-    d.append(b,p,btn);box.append(d)}
+  const n=k=>String(f[k]||'').trim()===''?null:Math.max(0,Math.round(Number(f[k])||0));
+  const app=one(f.app)||'the app', days=n('days'), inst=n('installed'), stayed=n('stayed'), builds=n('builds');
+  const fb=lines(f.feedback), ch=lines(f.changes), B=x=>'['+x+']';
+  const D={
+    engage:[
+      'The closed test ran for '+(days!=null?cnt(days,'day'):B('number of')+' days')+', and '+(inst!=null?cnt(inst,'tester'):B('number of')+' testers')+' installed '+app+' from Google Play on their own Android phones.',
+      (stayed!=null?cnt(stayed,'tester'):B('Number of')+' testers')+' stayed opted in for 14 days in a row.',
+      'Features used: '+(one(f.features)||B('which features testers used, and any they did not reach'))+'.',
+      'Compared with production: '+(one(f.compare)||B('how real users will use the app, and any differences from how testers used it'))+'.'
+    ].join(' '),
+    feedback:'How I collected feedback: '+(one(f.collect)||B('e.g. a feedback form, email, a chat group, or private feedback on Google Play'))+'. Main themes: '+(fb.length?fb.join('; '):B('sum up what testers reported in 1–2 sentences'))+'.',
+    audience:one(f.audience)?one(f.audience)+'.':B('Who the app is for, as specifically as possible: age group, country or region, and the need it serves.'),
+    value:one(f.value)?one(f.value)+'.':B('What users can do with the app and why it is useful to them, in 2–3 sentences. For a game: what makes it unique.'),
+    changes:'During the closed test I made these changes: '+(ch.length?ch.join('; '):B('list the fixes and changes you made'))+'. I uploaded '+(builds!=null?cnt(builds,'new build'):B('number of')+' new builds')+' to the closed testing track.',
+    ready:(days!=null&&inst!=null?'The closed test ran for '+cnt(days,'day')+' with '+cnt(inst,'tester')+'. ':'')+(one(f.ready)?one(f.ready)+'.':B('What you checked before applying, e.g. the issues testers reported are fixed, no crashes in Android vitals, the main flows work end to end.'))
+  };
+  const all=[];
+  for(const d of document.querySelectorAll('#out .ans')){const id=d.dataset.q,a=D[id];if(!a)continue;
+    d.querySelector('.draft').textContent=a;all.push(d.querySelector('b').textContent+'\n'+a);
+    const btn=d.querySelector('button');btn.onclick=()=>copy(btn,a)}
+  const ab=document.getElementById('all');ab.dataset.l=ab.dataset.l||ab.textContent;ab.onclick=()=>copy(ab,all.join('\n\n'));
   const o=document.getElementById('out');o.hidden=false;o.scrollIntoView({behavior:'smooth'});
 }
 </script>

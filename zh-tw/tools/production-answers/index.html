@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>免費 Google Play 正式版存取權問卷回答產生器</title>
-<meta name="description" content="填入封閉測試數字，即可為 Google Play 正式版存取權的每個問題產生清楚的回答草稿。免費、在瀏覽器中執行，不會儲存任何資料。">
+<meta name="description" content="依照 Play 管理中心「申請正式版存取權」表單的三個部分，產生回答草稿。填寫你的封閉測試情況即可。免費，在瀏覽器中執行，不會儲存任何內容。">
 <link rel="canonical" href="https://testerexchange.com/zh-tw/tools/production-answers/">
 <link rel="alternate" hreflang="en" href="https://testerexchange.com/tools/production-answers/">
 <link rel="alternate" hreflang="am" href="https://testerexchange.com/am/tools/production-answers/">
@@ -63,12 +63,12 @@
 <link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/tools/production-answers/">
 <link rel="alternate" hreflang="x-default" href="https://testerexchange.com/tools/production-answers/">
 <meta property="og:type" content="article"><meta property="og:title" content="免費 Google Play 正式版存取權問卷回答產生器">
-<meta property="og:description" content="填入封閉測試數字，即可為 Google Play 正式版存取權的每個問題產生清楚的回答草稿。免費、在瀏覽器中執行，不會儲存任何資料。"><meta property="og:url" content="https://testerexchange.com/zh-tw/tools/production-answers/">
+<meta property="og:description" content="依照 Play 管理中心「申請正式版存取權」表單的三個部分，產生回答草稿。填寫你的封閉測試情況即可。免費，在瀏覽器中執行，不會儲存任何內容。"><meta property="og:url" content="https://testerexchange.com/zh-tw/tools/production-answers/">
 <meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/static.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"正式版存取權回答產生器","description":"填入封閉測試數字，即可為 Google Play 正式版存取權的每個問題產生清楚的回答草稿。免費、在瀏覽器中執行，不會儲存任何資料。","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"zh-Hant","url":"https://testerexchange.com/zh-tw/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"正式版存取權回答產生器","description":"依照 Play 管理中心「申請正式版存取權」表單的三個部分，產生回答草稿。填寫你的封閉測試情況即可。免費，在瀏覽器中執行，不會儲存任何內容。","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"zh-Hant","url":"https://testerexchange.com/zh-tw/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
 </head>
 <body><div class="wrap">
@@ -80,58 +80,68 @@
 <main>
 
 <h1>正式版存取權回答產生器</h1>
-<p class="lede">輸入你的封閉測試情形，即可取得申請正式版時 Play Console 所問每個問題的回答草稿。所有內容都在你的瀏覽器中執行，不會傳送到任何地方。回答為英文，各地的審查人員都看得懂。</p>
+<p class="lede">Play 管理中心的「申請正式版存取權」表單分為三部分：你的封閉測試、你的應用程式，以及正式發布的準備情況。填寫測試的實際情況，就能為每個需要書寫的問題產生草稿，另外兩個需要選擇選項的問題則會提供填寫指引。草稿只使用你填寫的內容；留白的地方會變成 [方括號]，由你自行補上。所有內容都在你的瀏覽器中執行，不會傳送到任何地方。草稿為英文，審查人員在各地都能閱讀。</p>
 <form id="f" onsubmit="event.preventDefault();gen()">
-<label>應用程式名稱<input name="app" required maxlength="80"></label>
-<label>你的測試人員來自哪裡？<select name="source">
-<option value="exchange">測試人員互助平台（開發者互相測試應用程式）</option><option value="community">開發者社群或論壇</option><option value="friends">朋友、家人和同事</option>
-</select></label>
+<label>應用程式名稱<input name="app" dir="auto" maxlength="80"></label>
 <div class="grid2">
-<label>選擇加入的測試人員<input name="joined" type="number" min="0" value="15"></label>
-<label>安裝了應用程式的測試人員<input name="installed" type="number" min="0" value="14"></label>
-<label>測試進行天數<input name="days" type="number" min="1" value="14"></label>
-<label>平均每天活躍的測試人員<input name="daily" type="number" min="0" step="0.1" value="12"></label>
-<label>留到最後的測試人員<input name="completed" type="number" min="0" value="12"></label>
-<label>平均每次使用分鐘數（選填）<input name="minutes" type="number" min="0" step="0.5"></label>
-<label>測試期間上傳的新版本數<input name="builds" type="number" min="0" value="2"></label>
-<label>第一年預計安裝次數<input name="installs" placeholder="1,000–5,000"></label>
+<label>安裝了應用程式的測試人員<input name="installed" dir="auto" type="number" min="0"></label>
+<label>連續 14 天保持加入的測試人員數<input name="stayed" dir="auto" type="number" min="0"></label>
+<label>測試進行天數<input name="days" dir="auto" type="number" min="1"></label>
+<label>測試期間上傳的新版本數<input name="builds" dir="auto" type="number" min="0"></label>
 </div>
-<label>主要意見回饋主題（每行一個）<textarea name="feedback" rows="3"></textarea></label>
-<label>你變更或修正了什麼（每行一項）<textarea name="changes" rows="3"></textarea></label>
-<label>應用程式的目標對象是誰？<input name="audience"></label>
-<label>它能讓使用者做什麼？<input name="value"></label>
+<label>測試人員用過的功能，以及沒用到的功能<textarea name="features" rows="3" dir="auto"></textarea></label>
+<label>測試人員的使用方式與真實使用者相比如何<textarea name="compare" rows="3" dir="auto"></textarea></label>
+<label>主要意見回饋主題（每行一個）<textarea name="feedback" rows="3" dir="auto"></textarea></label>
+<label>你如何收集意見回饋<input name="collect" dir="auto" ></label>
+<label>應用程式的目標對象是誰？<input name="audience" dir="auto" ></label>
+<label>它能讓使用者做什麼？<textarea name="value" rows="3" dir="auto"></textarea></label>
+<label>你變更或修正了什麼（每行一項）<textarea name="changes" rows="3" dir="auto"></textarea></label>
+<label>你如何判斷應用程式已可發布<textarea name="ready" rows="3" dir="auto"></textarea></label>
 <div><button class="btn">產生回答</button></div>
 </form>
-<section id="out" hidden><h2>你的回答草稿</h2><div id="answers"></div><p class="muted">請修改這些草稿，讓內容與實際情形完全一致。Google 看得到你真實的測試資料，所以誠實、具體的回答效果最好。</p></section>
-<div class="cta"><b>需要真正使用你應用程式的測試人員嗎？</b><span>Tester Exchange 會在每位測試人員的手機上驗證每日使用情形，並幫你自動填好這些數字。</span><a class="btn" href="https://testerexchange.com/?lang=zh-tw">免費取得測試人員</a></div>
+<section id="out" hidden><h2>你的回答草稿</h2><p class="muted">請修改這些草稿，讓內容與實際情形完全一致。Google 看得到你真實的測試資料，所以誠實、具體的回答效果最好。</p>
+<p><button type="button" class="ghost" id="all">複製所有回答</button></p>
+<h3>第 1 部分：關於你的封閉測試</h3><div class="ans" data-q="recruit"><b>招募測試人員有多容易？</b><p class="hint">這裡 Play 管理中心要你選一個選項，不用寫文字。請如實選擇。</p></div><div class="ans" data-q="engage"><b>封閉測試期間測試人員的參與度</b><p class="hint">Google 想知道測試人員是否用過所有功能，以及他們的使用方式是否與真實使用者一致。</p><p class="draft" lang="en" dir="ltr"></p><button type="button">複製</button></div><div class="ans" data-q="feedback"><b>測試人員意見摘要及收集方式</b><p class="hint">列出測試人員提出的主要問題，並說明你如何收集意見回饋。</p><p class="draft" lang="en" dir="ltr"></p><button type="button">複製</button></div><h3>第 2 部分：關於你的應用程式或遊戲</h3><div class="ans" data-q="audience"><b>目標對象</b><p class="hint">寫得具體一點：給誰用、在哪裡、滿足什麼需求。這個回答不會公開顯示。</p><p class="draft" lang="en" dir="ltr"></p><button type="button">複製</button></div><div class="ans" data-q="value"><b>你的應用程式提供什麼價值（遊戲：有何獨特之處）</b><p class="hint">說明使用者能用這個應用程式做什麼，以及它如何幫到他們。</p><p class="draft" lang="en" dir="ltr"></p><button type="button">複製</button></div><div class="ans" data-q="installs"><b>第一年預估安裝次數</b><p class="hint">這裡 Play 管理中心要你選一個範圍。誠實、保守的估計就可以。</p></div><h3>第 3 部分：關於正式版準備狀況</h3><div class="ans" data-q="changes"><b>根據封閉測試所做的變更</b><p class="hint">列出實際的修正，並提到你上傳到封閉測試群組的新版本。</p><p class="draft" lang="en" dir="ltr"></p><button type="button">複製</button></div><div class="ans" data-q="ready"><b>你如何判斷應用程式已可正式發布</b><p class="hint">說明申請前你檢查了什麼：錯誤已修正、沒有當機、主要流程正常。</p><p class="draft" lang="en" dir="ltr"></p><button type="button">複製</button></div>
+</section>
+<section><h2>申請之前</h2><ul><li>Google 計算的是連續 14 天保持加入封閉測試的測試人員；退出後重新加入的測試人員會從頭計算。Play 管理中心的資訊主頁會顯示你何時可以申請。</li><li>先修正當機、故障的功能和缺少的畫面：Google 表示審查不是排解問題的步驟。</li><li>如果應用程式需要登入，請在 Play 管理中心加入可用的測試帳號，讓審查人員能開啟每項功能。</li><li>確認目標年齡層和商店資訊與應用程式的實際內容相符。</li><li>審查通常需要 7 天以內。如果 Google 要求更多測試，請讓封閉測試繼續進行，再重新申請。</li></ul></section>
+<section class="offer" id="get-testers" aria-labelledby="offer-h">
+<h2 id="offer-h">湊齊 Google Play 要求的 12 位測試人員</h2>
+<p>真人在自己的手機上開啟你的應用程式，持續 14 天。付一次費，或免費測試其他應用程式。</p>
+<ul class="packs"><li><a href="https://testerexchange.com/?lang=zh-tw#buy"><b>12 位測試人員</b><span class="price">$9.99</span><small>Google 最低要求</small></a></li><li class="best"><a href="https://testerexchange.com/?lang=zh-tw#buy"><b>15 位測試人員</b><span class="price">$12.99</span><small>推薦：為中途退出留餘量</small></a></li><li><a href="https://testerexchange.com/?lang=zh-tw#buy"><b>25 位測試人員</b><span class="price">$19.99</span><small>最穩妥</small></a></li></ul>
+<ol class="how"><li><b>貼上你的應用程式連結</b> 你的 Google Play 連結或套件名稱。</li><li><b>付費或免費測試</b> 付一次費，或透過測試其他應用程式賺取點數。</li><li><b>連結 Google Play</b> 一個按鈕就能把我們的測試人員加入你的封閉測試。他們安裝應用程式後，14 天開始計時。</li></ol>
+<p class="row"><a class="btn" href="https://testerexchange.com/?lang=zh-tw#buy">取得 12 位測試人員</a> <a href="https://testerexchange.com/get/?lang=zh-tw">免費測試應用程式</a></p>
+<p class="muted">支援信用卡（含銀聯）、PayPal、Apple Pay、Google Pay、支付寶和微信支付。由 Lemon Squeezy 提供安全付款。購買後不可退回：點數無法換回現金。</p>
+</section>
 <script>
 const COPY="複製",COPIED="已複製";
-function lines(s){return s.split('\n').map(x=>x.trim()).filter(Boolean)}
-function list(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]}
+function lines(s){return String(s||'').split('\n').map(x=>x.trim().replace(/[.;,]+$/,'')).filter(Boolean)}
+function one(s){return String(s||'').trim().replace(/\s+/g,' ').replace(/[.;,]+$/,'')}
+function cnt(k,w){return k+' '+w+(k===1?'':'s')}
+function copy(btn,text){navigator.clipboard&&navigator.clipboard.writeText(text).catch(()=>{});btn.textContent=COPIED;setTimeout(()=>btn.textContent=btn.dataset.l||COPY,1500)}
 function gen(){
+  // Drafts only state what was entered; anything only the developer knows stays a [bracket].
   const f=Object.fromEntries(new FormData(document.getElementById('f')));
-  const n=k=>Math.max(0,Number(f[k]||0)), app=f.app.trim()||'the app';
-  const src={exchange:'a developer tester exchange, where developers test each other\'s apps on their own phones and daily use is verified',
-    community:'a developer community, where I shared the opt-in link and explained what to test',
-    friends:'friends, family and colleagues who use Android phones'}[f.source];
-  const days=n('days'), daily=n('daily'), td=Math.round(days*daily), fb=lines(f.feedback), ch=lines(f.changes);
-  const mins=n('minutes')?' Sessions lasted about '+n('minutes')+' minutes on average.':'';
-  const A=[
-   ['How easy was it to recruit testers for your app?','I recruited testers through '+src+'. '+n('joined')+' people opted in to the closed test and '+n('installed')+' installed '+app+' from Google Play. [If you replaced testers who dropped out, say so here.]'],
-   ['Describe the engagement you received from testers during your closed test.','The closed test ran for '+days+' days. On average '+daily+' testers used '+app+' each day, about '+td+' tester-days in total.'+mins+' '+n('completed')+' testers stayed until the end of the test. [Add how you kept testers active, e.g. tasks you asked them to try.]'],
-   ['Summarize the feedback that you received from testers. Include how you collected the feedback.','I collected feedback through written notes from testers during the test'+(fb.length?'. The main themes were: '+list(fb)+'.':'. [Add the main themes testers reported.]')],
-   ['Who is the intended audience of your app?',f.audience.trim()||'[Describe who the app is for.]'],
-   ['Describe how your app provides value to users.',f.value.trim()||'[Describe what users can do with the app.]'],
-   ['How many installs do you expect your app to have in your first year?',f.installs.trim()||'[Give an honest range.]'],
-   ['What changes did you make to your app based on what you learned during closed testing?',(ch.length?'Based on tester feedback I '+list(ch.map(x=>x.charAt(0).toLowerCase()+x.slice(1)))+'.':'[List the fixes and changes you made.]')+(n('builds')?' I uploaded '+n('builds')+' new build'+(n('builds')>1?'s':'')+' to the closed track during the test.':'')],
-   ['How did you decide that your app is ready for production?','After '+days+' days of testing with about '+daily+' active testers a day, the main flows work reliably, the issues testers reported are fixed'+(n('builds')?' in the builds I shipped during the test':'')+', and testers kept using '+app+' until the end of the test.']
-  ];
-  const box=document.getElementById('answers');box.textContent='';
-  for(const [q,a] of A){const d=document.createElement('div');d.className='ans';
-    const b=document.createElement('b');b.textContent=q;const p=document.createElement('p');p.textContent=a;
-    const btn=document.createElement('button');btn.type='button';btn.textContent=COPY;
-    btn.onclick=()=>{navigator.clipboard.writeText(a);btn.textContent=COPIED;setTimeout(()=>btn.textContent=COPY,1500)};
-    d.append(b,p,btn);box.append(d)}
+  const n=k=>String(f[k]||'').trim()===''?null:Math.max(0,Math.round(Number(f[k])||0));
+  const app=one(f.app)||'the app', days=n('days'), inst=n('installed'), stayed=n('stayed'), builds=n('builds');
+  const fb=lines(f.feedback), ch=lines(f.changes), B=x=>'['+x+']';
+  const D={
+    engage:[
+      'The closed test ran for '+(days!=null?cnt(days,'day'):B('number of')+' days')+', and '+(inst!=null?cnt(inst,'tester'):B('number of')+' testers')+' installed '+app+' from Google Play on their own Android phones.',
+      (stayed!=null?cnt(stayed,'tester'):B('Number of')+' testers')+' stayed opted in for 14 days in a row.',
+      'Features used: '+(one(f.features)||B('which features testers used, and any they did not reach'))+'.',
+      'Compared with production: '+(one(f.compare)||B('how real users will use the app, and any differences from how testers used it'))+'.'
+    ].join(' '),
+    feedback:'How I collected feedback: '+(one(f.collect)||B('e.g. a feedback form, email, a chat group, or private feedback on Google Play'))+'. Main themes: '+(fb.length?fb.join('; '):B('sum up what testers reported in 1–2 sentences'))+'.',
+    audience:one(f.audience)?one(f.audience)+'.':B('Who the app is for, as specifically as possible: age group, country or region, and the need it serves.'),
+    value:one(f.value)?one(f.value)+'.':B('What users can do with the app and why it is useful to them, in 2–3 sentences. For a game: what makes it unique.'),
+    changes:'During the closed test I made these changes: '+(ch.length?ch.join('; '):B('list the fixes and changes you made'))+'. I uploaded '+(builds!=null?cnt(builds,'new build'):B('number of')+' new builds')+' to the closed testing track.',
+    ready:(days!=null&&inst!=null?'The closed test ran for '+cnt(days,'day')+' with '+cnt(inst,'tester')+'. ':'')+(one(f.ready)?one(f.ready)+'.':B('What you checked before applying, e.g. the issues testers reported are fixed, no crashes in Android vitals, the main flows work end to end.'))
+  };
+  const all=[];
+  for(const d of document.querySelectorAll('#out .ans')){const id=d.dataset.q,a=D[id];if(!a)continue;
+    d.querySelector('.draft').textContent=a;all.push(d.querySelector('b').textContent+'\n'+a);
+    const btn=d.querySelector('button');btn.onclick=()=>copy(btn,a)}
+  const ab=document.getElementById('all');ab.dataset.l=ab.dataset.l||ab.textContent;ab.onclick=()=>copy(ab,all.join('\n\n'));
   const o=document.getElementById('out');o.hidden=false;o.scrollIntoView({behavior:'smooth'});
 }
 </script>

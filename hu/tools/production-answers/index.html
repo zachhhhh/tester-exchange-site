@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ingyenes válaszgenerátor a Google Play éles hozzáféréséhez</title>
-<meta name="description" content="Add meg a zárt teszted számait, és kapj világos válaszvázlatokat a Google Play éles hozzáférésre vonatkozó összes kérdésére. Ingyenes, a böngésződben fut, semmit sem tárolunk.">
+<meta name="description" content="Válaszvázlatok a Play Console „Hozzáférés kérése az éles verzióhoz” űrlapjához, a három rész sorrendjében. Add meg, mi történt a zárt tesztedben. Ingyenes, a böngésződben fut, semmit nem ment el.">
 <link rel="canonical" href="https://testerexchange.com/hu/tools/production-answers/">
 <link rel="alternate" hreflang="en" href="https://testerexchange.com/tools/production-answers/">
 <link rel="alternate" hreflang="am" href="https://testerexchange.com/am/tools/production-answers/">
@@ -63,12 +63,12 @@
 <link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/tools/production-answers/">
 <link rel="alternate" hreflang="x-default" href="https://testerexchange.com/tools/production-answers/">
 <meta property="og:type" content="article"><meta property="og:title" content="Ingyenes válaszgenerátor a Google Play éles hozzáféréséhez">
-<meta property="og:description" content="Add meg a zárt teszted számait, és kapj világos válaszvázlatokat a Google Play éles hozzáférésre vonatkozó összes kérdésére. Ingyenes, a böngésződben fut, semmit sem tárolunk."><meta property="og:url" content="https://testerexchange.com/hu/tools/production-answers/">
+<meta property="og:description" content="Válaszvázlatok a Play Console „Hozzáférés kérése az éles verzióhoz” űrlapjához, a három rész sorrendjében. Add meg, mi történt a zárt tesztedben. Ingyenes, a böngésződben fut, semmit nem ment el."><meta property="og:url" content="https://testerexchange.com/hu/tools/production-answers/">
 <meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/static.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Válaszgenerátor az éles hozzáféréshez","description":"Add meg a zárt teszted számait, és kapj világos válaszvázlatokat a Google Play éles hozzáférésre vonatkozó összes kérdésére. Ingyenes, a böngésződben fut, semmit sem tárolunk.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"hu","url":"https://testerexchange.com/hu/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Válaszgenerátor az éles hozzáféréshez","description":"Válaszvázlatok a Play Console „Hozzáférés kérése az éles verzióhoz” űrlapjához, a három rész sorrendjében. Add meg, mi történt a zárt tesztedben. Ingyenes, a böngésződben fut, semmit nem ment el.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","inLanguage":"hu","url":"https://testerexchange.com/hu/tools/production-answers/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
 </head>
 <body><div class="wrap">
@@ -80,58 +80,68 @@
 <main>
 
 <h1>Válaszgenerátor az éles hozzáféréshez</h1>
-<p class="lede">Add meg, mi történt a zárt tesztedben. Válaszvázlatokat kapsz minden kérdésre, amelyet a Play Console feltesz, amikor éles hozzáférést kérsz. Minden a böngésződben fut, és semmi sem kerül el sehová. A válaszok angolul készülnek, ezt az ellenőrök mindenhol olvassák.</p>
+<p class="lede">A Play Console „Hozzáférés kérése az éles verzióhoz” űrlapja három részből áll: a zárt teszted, az alkalmazásod és az éles verzióra való felkészültség. Add meg, mi történt a tesztben, és minden szöveges kérdéshez kapsz egy vázlatot, valamint útmutatást a két kérdéshez, ahol egy lehetőséget kell választani. A vázlatok csak azt használják, amit beírsz; amit üresen hagysz, az kitöltendő [zárójel] lesz. Minden a böngésződben fut, semmit nem küld el. A vázlatok angolul vannak, amit az ellenőrök mindenhol olvasnak.</p>
 <form id="f" onsubmit="event.preventDefault();gen()">
-<label>App neve<input name="app" required maxlength="80"></label>
-<label>Honnan jöttek a tesztelőid?<select name="source">
-<option value="exchange">Tesztelőcsere (fejlesztők, akik egymás appjait tesztelik)</option><option value="community">Fejlesztői közösség vagy fórum</option><option value="friends">Barátok, család és kollégák</option>
-</select></label>
+<label>App neve<input name="app" dir="auto" maxlength="80"></label>
 <div class="grid2">
-<label>Feliratkozott tesztelők<input name="joined" type="number" min="0" value="15"></label>
-<label>Telepítő tesztelők<input name="installed" type="number" min="0" value="14"></label>
-<label>A teszt napjainak száma<input name="days" type="number" min="1" value="14"></label>
-<label>Átlagosan napi aktív tesztelők<input name="daily" type="number" min="0" step="0.1" value="12"></label>
-<label>A végéig kitartó tesztelők<input name="completed" type="number" min="0" value="12"></label>
-<label>Átlagos munkamenet percben (nem kötelező)<input name="minutes" type="number" min="0" step="0.5"></label>
-<label>A teszt alatt feltöltött új buildek<input name="builds" type="number" min="0" value="2"></label>
-<label>Várható telepítések az első évben<input name="installs" placeholder="1,000–5,000"></label>
+<label>Telepítő tesztelők<input name="installed" dir="auto" type="number" min="0"></label>
+<label>Tesztelők, akik 14 egymást követő napig feliratkozva maradtak<input name="stayed" dir="auto" type="number" min="0"></label>
+<label>A teszt napjainak száma<input name="days" dir="auto" type="number" min="1"></label>
+<label>A teszt alatt feltöltött új buildek<input name="builds" dir="auto" type="number" min="0"></label>
 </div>
-<label>A visszajelzések fő témái (soronként egy)<textarea name="feedback" rows="3"></textarea></label>
-<label>Mit változtattál vagy javítottál (soronként egy)<textarea name="changes" rows="3"></textarea></label>
-<label>Kinek szól az app?<input name="audience"></label>
-<label>Mit tesz lehetővé számukra?<input name="value"></label>
+<label>Funkciók, amelyeket a tesztelők használtak, és amelyekig nem jutottak el<textarea name="features" rows="3" dir="auto"></textarea></label>
+<label>Hogyan viszonyul a tesztelők használata a valódi felhasználókéhoz<textarea name="compare" rows="3" dir="auto"></textarea></label>
+<label>A visszajelzések fő témái (soronként egy)<textarea name="feedback" rows="3" dir="auto"></textarea></label>
+<label>Hogyan gyűjtötted a visszajelzéseket<input name="collect" dir="auto" ></label>
+<label>Kinek szól az app?<input name="audience" dir="auto" ></label>
+<label>Mit tesz lehetővé számukra?<textarea name="value" rows="3" dir="auto"></textarea></label>
+<label>Mit változtattál vagy javítottál (soronként egy)<textarea name="changes" rows="3" dir="auto"></textarea></label>
+<label>Hogyan döntötted el, hogy az alkalmazás kész<textarea name="ready" rows="3" dir="auto"></textarea></label>
 <div><button class="btn">Válaszok generálása</button></div>
 </form>
-<section id="out" hidden><h2>A válaszvázlataid</h2><div id="answers"></div><p class="muted">Szerkeszd úgy ezeket a vázlatokat, hogy pontosan azt tükrözzék, ami történt. A Google látja a valódi tesztadataidat, ezért az őszinte, konkrét válaszok működnek a legjobban.</p></section>
-<div class="cta"><b>Olyan tesztelők kellenek, akik tényleg használják az appodat?</b><span>A Tester Exchange minden tesztelő telefonján igazolja a napi használatot, és kitölti helyetted ezeket a számokat.</span><a class="btn" href="https://testerexchange.com/?lang=hu">Ingyen tesztelők</a></div>
+<section id="out" hidden><h2>A válaszvázlataid</h2><p class="muted">Szerkeszd úgy ezeket a vázlatokat, hogy pontosan azt tükrözzék, ami történt. A Google látja a valódi tesztadataidat, ezért az őszinte, konkrét válaszok működnek a legjobban.</p>
+<p><button type="button" class="ghost" id="all">Összes válasz másolása</button></p>
+<h3>1. rész: A zárt tesztedről</h3><div class="ans" data-q="recruit"><b>Mennyire volt könnyű tesztelőket találni?</b><p class="hint">Itt a Play Console egy opció kiválasztását kéri, nem szöveget. Válaszd azt, ami igaz.</p></div><div class="ans" data-q="engage"><b>A tesztelők aktivitása a zárt teszt során</b><p class="hint">A Google tudni akarja, hogy a tesztelők minden funkciót használtak-e, és hogy a használatuk megfelel-e annak, ahogy a valódi felhasználók fogják használni az alkalmazást.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Másolás</button></div><div class="ans" data-q="feedback"><b>A visszajelzések összefoglalása és gyűjtésük módja</b><p class="hint">Nevezd meg a tesztelők fő témáit, és írd le, hogyan gyűjtötted a visszajelzéseket.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Másolás</button></div><h3>2. rész: Az alkalmazásodról vagy játékodról</h3><div class="ans" data-q="audience"><b>Célközönség</b><p class="hint">Légy konkrét: kinek, hol, és milyen igényre szól az alkalmazás. Ez a válasz nem nyilvános.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Másolás</button></div><div class="ans" data-q="value"><b>Milyen értéket ad az alkalmazásod (játéknál: mitől egyedi)</b><p class="hint">Írd le, mit tehetnek a felhasználók az alkalmazással, és miért segít nekik.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Másolás</button></div><div class="ans" data-q="installs"><b>Becsült telepítések az első évben</b><p class="hint">Itt a Play Console egy tartomány kiválasztását kéri. Egy őszinte, visszafogott becslés megfelel.</p></div><h3>3. rész: Az éles kiadásra való felkészültségről</h3><div class="ans" data-q="changes"><b>A zárt teszt alapján végzett változtatások</b><p class="hint">Sorold fel a valódi javításokat, és említsd a zárt sávba feltöltött új buildeket.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Másolás</button></div><div class="ans" data-q="ready"><b>Hogyan döntötted el, hogy az alkalmazás kész</b><p class="hint">Írd le, mit ellenőriztél jelentkezés előtt: javított hibák, nincs összeomlás, működő fő folyamatok.</p><p class="draft" lang="en" dir="ltr"></p><button type="button">Másolás</button></div>
+</section>
+<section><h2>Mielőtt jelentkezel</h2><ul><li>A Google azokat a tesztelőket számolja, akik 14 napig folyamatosan feliratkozva maradnak a zárt tesztedben; aki kilép és visszajön, elölről kezdi. A Play Console Irányítópultja mutatja, mikor jelentkezhetsz.</li><li>Előbb javítsd az összeomlásokat, a hibás funkciókat és a hiányzó képernyőket: a Google szerint a bírálat nem hibakeresési lépés.</li><li>Ha az alkalmazás bejelentkezést kér, adj meg a Play Console-ban működő teszt-belépési adatokat, hogy a bírálók minden funkciót megnyithassanak.</li><li>Ellenőrizd, hogy a célkorcsoport és az áruházi adatlap megfelel az alkalmazás valódi tartalmának.</li><li>A bírálat általában legfeljebb 7 nap. Ha a Google több tesztelést kér, folytasd a zárt tesztet, és jelentkezz újra.</li></ul></section>
+<section class="offer" id="get-testers" aria-labelledby="offer-h">
+<h2 id="offer-h">Szerezd meg a 12 tesztelőt, amit a Google Play megkövetel</h2>
+<p>Valódi emberek nyitják meg az appodat a saját telefonjukon 14 napig. Fizess egyszer, vagy tesztelj más appokat ingyen.</p>
+<ul class="packs"><li><a href="https://testerexchange.com/?lang=hu#buy"><b>12 tesztelő</b><span class="price">$9.99</span><small>A Google minimuma</small></a></li><li class="best"><a href="https://testerexchange.com/?lang=hu#buy"><b>15 tesztelő</b><span class="price">$12.99</span><small>Ajánlott: tartalék a kiesőkre</small></a></li><li><a href="https://testerexchange.com/?lang=hu#buy"><b>25 tesztelő</b><span class="price">$19.99</span><small>A legbiztosabb</small></a></li></ul>
+<ol class="how"><li><b>Illeszd be az appod linkjét</b> A Google Play-linked vagy a csomagnév.</li><li><b>Fizess, vagy tesztelj ingyen</b> Fizess egyszer, vagy szerezz krediteket más appok tesztelésével.</li><li><b>Kapcsold össze a Google Playt</b> Egy gomb hozzáadja a tesztelőinket a zárt tesztedhez. Telepítik az appot, és indul a 14 nap.</li></ol>
+<p class="row"><a class="btn" href="https://testerexchange.com/?lang=hu#buy">12 tesztelőt kérek</a> <a href="https://testerexchange.com/get/?lang=hu">Appok tesztelése ingyen</a></p>
+<p class="muted">Kártyák (UnionPay is), PayPal, Apple Pay, Google Pay, Alipay és WeChat Pay. Biztonságos fizetés a Lemon Squeezyn keresztül. A vásárlások véglegesek: a kreditek nem válthatók vissza pénzre.</p>
+</section>
 <script>
 const COPY="Másolás",COPIED="Másolva";
-function lines(s){return s.split('\n').map(x=>x.trim()).filter(Boolean)}
-function list(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]}
+function lines(s){return String(s||'').split('\n').map(x=>x.trim().replace(/[.;,]+$/,'')).filter(Boolean)}
+function one(s){return String(s||'').trim().replace(/\s+/g,' ').replace(/[.;,]+$/,'')}
+function cnt(k,w){return k+' '+w+(k===1?'':'s')}
+function copy(btn,text){navigator.clipboard&&navigator.clipboard.writeText(text).catch(()=>{});btn.textContent=COPIED;setTimeout(()=>btn.textContent=btn.dataset.l||COPY,1500)}
 function gen(){
+  // Drafts only state what was entered; anything only the developer knows stays a [bracket].
   const f=Object.fromEntries(new FormData(document.getElementById('f')));
-  const n=k=>Math.max(0,Number(f[k]||0)), app=f.app.trim()||'the app';
-  const src={exchange:'a developer tester exchange, where developers test each other\'s apps on their own phones and daily use is verified',
-    community:'a developer community, where I shared the opt-in link and explained what to test',
-    friends:'friends, family and colleagues who use Android phones'}[f.source];
-  const days=n('days'), daily=n('daily'), td=Math.round(days*daily), fb=lines(f.feedback), ch=lines(f.changes);
-  const mins=n('minutes')?' Sessions lasted about '+n('minutes')+' minutes on average.':'';
-  const A=[
-   ['How easy was it to recruit testers for your app?','I recruited testers through '+src+'. '+n('joined')+' people opted in to the closed test and '+n('installed')+' installed '+app+' from Google Play. [If you replaced testers who dropped out, say so here.]'],
-   ['Describe the engagement you received from testers during your closed test.','The closed test ran for '+days+' days. On average '+daily+' testers used '+app+' each day, about '+td+' tester-days in total.'+mins+' '+n('completed')+' testers stayed until the end of the test. [Add how you kept testers active, e.g. tasks you asked them to try.]'],
-   ['Summarize the feedback that you received from testers. Include how you collected the feedback.','I collected feedback through written notes from testers during the test'+(fb.length?'. The main themes were: '+list(fb)+'.':'. [Add the main themes testers reported.]')],
-   ['Who is the intended audience of your app?',f.audience.trim()||'[Describe who the app is for.]'],
-   ['Describe how your app provides value to users.',f.value.trim()||'[Describe what users can do with the app.]'],
-   ['How many installs do you expect your app to have in your first year?',f.installs.trim()||'[Give an honest range.]'],
-   ['What changes did you make to your app based on what you learned during closed testing?',(ch.length?'Based on tester feedback I '+list(ch.map(x=>x.charAt(0).toLowerCase()+x.slice(1)))+'.':'[List the fixes and changes you made.]')+(n('builds')?' I uploaded '+n('builds')+' new build'+(n('builds')>1?'s':'')+' to the closed track during the test.':'')],
-   ['How did you decide that your app is ready for production?','After '+days+' days of testing with about '+daily+' active testers a day, the main flows work reliably, the issues testers reported are fixed'+(n('builds')?' in the builds I shipped during the test':'')+', and testers kept using '+app+' until the end of the test.']
-  ];
-  const box=document.getElementById('answers');box.textContent='';
-  for(const [q,a] of A){const d=document.createElement('div');d.className='ans';
-    const b=document.createElement('b');b.textContent=q;const p=document.createElement('p');p.textContent=a;
-    const btn=document.createElement('button');btn.type='button';btn.textContent=COPY;
-    btn.onclick=()=>{navigator.clipboard.writeText(a);btn.textContent=COPIED;setTimeout(()=>btn.textContent=COPY,1500)};
-    d.append(b,p,btn);box.append(d)}
+  const n=k=>String(f[k]||'').trim()===''?null:Math.max(0,Math.round(Number(f[k])||0));
+  const app=one(f.app)||'the app', days=n('days'), inst=n('installed'), stayed=n('stayed'), builds=n('builds');
+  const fb=lines(f.feedback), ch=lines(f.changes), B=x=>'['+x+']';
+  const D={
+    engage:[
+      'The closed test ran for '+(days!=null?cnt(days,'day'):B('number of')+' days')+', and '+(inst!=null?cnt(inst,'tester'):B('number of')+' testers')+' installed '+app+' from Google Play on their own Android phones.',
+      (stayed!=null?cnt(stayed,'tester'):B('Number of')+' testers')+' stayed opted in for 14 days in a row.',
+      'Features used: '+(one(f.features)||B('which features testers used, and any they did not reach'))+'.',
+      'Compared with production: '+(one(f.compare)||B('how real users will use the app, and any differences from how testers used it'))+'.'
+    ].join(' '),
+    feedback:'How I collected feedback: '+(one(f.collect)||B('e.g. a feedback form, email, a chat group, or private feedback on Google Play'))+'. Main themes: '+(fb.length?fb.join('; '):B('sum up what testers reported in 1–2 sentences'))+'.',
+    audience:one(f.audience)?one(f.audience)+'.':B('Who the app is for, as specifically as possible: age group, country or region, and the need it serves.'),
+    value:one(f.value)?one(f.value)+'.':B('What users can do with the app and why it is useful to them, in 2–3 sentences. For a game: what makes it unique.'),
+    changes:'During the closed test I made these changes: '+(ch.length?ch.join('; '):B('list the fixes and changes you made'))+'. I uploaded '+(builds!=null?cnt(builds,'new build'):B('number of')+' new builds')+' to the closed testing track.',
+    ready:(days!=null&&inst!=null?'The closed test ran for '+cnt(days,'day')+' with '+cnt(inst,'tester')+'. ':'')+(one(f.ready)?one(f.ready)+'.':B('What you checked before applying, e.g. the issues testers reported are fixed, no crashes in Android vitals, the main flows work end to end.'))
+  };
+  const all=[];
+  for(const d of document.querySelectorAll('#out .ans')){const id=d.dataset.q,a=D[id];if(!a)continue;
+    d.querySelector('.draft').textContent=a;all.push(d.querySelector('b').textContent+'\n'+a);
+    const btn=d.querySelector('button');btn.onclick=()=>copy(btn,a)}
+  const ab=document.getElementById('all');ab.dataset.l=ab.dataset.l||ab.textContent;ab.onclick=()=>copy(ab,all.join('\n\n'));
   const o=document.getElementById('out');o.hidden=false;o.scrollIntoView({behavior:'smooth'});
 }
 </script>
