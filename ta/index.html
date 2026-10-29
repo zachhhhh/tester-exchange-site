@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Play closed testing-க்கு 12 tester-களை எப்படிப் பெறுவது</title>
+<meta name="description" content="புதிய Google Play developer கணக்குகளுக்கு production-க்கு முன் 14 நாட்களுக்கு 12 tester-கள் தேவை. படிப்படியாக: closed test அமைப்பது, இலவசமாக உண்மையான tester-களைக் கண்டுபிடிப்பது, அவர்களை ஈடுபாட்டுடன் வைத்திருப்பது, Google-ன் production கேள்விகளுக்குப் பதில் அளிப்பது.">
+<link rel="canonical" href="https://testerexchange.com/ta/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/">
+<link rel="alternate" hreflang="am" href="https://testerexchange.com/am/">
+<link rel="alternate" hreflang="ar" href="https://testerexchange.com/ar/">
+<link rel="alternate" hreflang="az" href="https://testerexchange.com/az/">
+<link rel="alternate" hreflang="bg" href="https://testerexchange.com/bg/">
+<link rel="alternate" hreflang="bn" href="https://testerexchange.com/bn/">
+<link rel="alternate" hreflang="cs" href="https://testerexchange.com/cs/">
+<link rel="alternate" hreflang="de" href="https://testerexchange.com/de/">
+<link rel="alternate" hreflang="el" href="https://testerexchange.com/el/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/">
+<link rel="alternate" hreflang="fa" href="https://testerexchange.com/fa/">
+<link rel="alternate" hreflang="fil" href="https://testerexchange.com/fil/">
+<link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/">
+<link rel="alternate" hreflang="gu" href="https://testerexchange.com/gu/">
+<link rel="alternate" hreflang="ha" href="https://testerexchange.com/ha/">
+<link rel="alternate" hreflang="he" href="https://testerexchange.com/he/">
+<link rel="alternate" hreflang="hi" href="https://testerexchange.com/hi/">
+<link rel="alternate" hreflang="hr" href="https://testerexchange.com/hr/">
+<link rel="alternate" hreflang="hu" href="https://testerexchange.com/hu/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/">
+<link rel="alternate" hreflang="ig" href="https://testerexchange.com/ig/">
+<link rel="alternate" hreflang="it" href="https://testerexchange.com/it/">
+<link rel="alternate" hreflang="ja" href="https://testerexchange.com/ja/">
+<link rel="alternate" hreflang="kk" href="https://testerexchange.com/kk/">
+<link rel="alternate" hreflang="km" href="https://testerexchange.com/km/">
+<link rel="alternate" hreflang="kn" href="https://testerexchange.com/kn/">
+<link rel="alternate" hreflang="ko" href="https://testerexchange.com/ko/">
+<link rel="alternate" hreflang="ml" href="https://testerexchange.com/ml/">
+<link rel="alternate" hreflang="mr" href="https://testerexchange.com/mr/">
+<link rel="alternate" hreflang="ms" href="https://testerexchange.com/ms/">
+<link rel="alternate" hreflang="my" href="https://testerexchange.com/my/">
+<link rel="alternate" hreflang="ne" href="https://testerexchange.com/ne/">
+<link rel="alternate" hreflang="nl" href="https://testerexchange.com/nl/">
+<link rel="alternate" hreflang="pa" href="https://testerexchange.com/pa/">
+<link rel="alternate" hreflang="pl" href="https://testerexchange.com/pl/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/">
+<link rel="alternate" hreflang="ro" href="https://testerexchange.com/ro/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/">
+<link rel="alternate" hreflang="si" href="https://testerexchange.com/si/">
+<link rel="alternate" hreflang="sk" href="https://testerexchange.com/sk/">
+<link rel="alternate" hreflang="sr" href="https://testerexchange.com/sr/">
+<link rel="alternate" hreflang="sv" href="https://testerexchange.com/sv/">
+<link rel="alternate" hreflang="sw" href="https://testerexchange.com/sw/">
+<link rel="alternate" hreflang="ta" href="https://testerexchange.com/ta/">
+<link rel="alternate" hreflang="te" href="https://testerexchange.com/te/">
+<link rel="alternate" hreflang="th" href="https://testerexchange.com/th/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/">
+<link rel="alternate" hreflang="uk" href="https://testerexchange.com/uk/">
+<link rel="alternate" hreflang="ur" href="https://testerexchange.com/ur/">
+<link rel="alternate" hreflang="uz" href="https://testerexchange.com/uz/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/">
+<link rel="alternate" hreflang="yo" href="https://testerexchange.com/yo/">
+<link rel="alternate" hreflang="zh-Hans" href="https://testerexchange.com/zh-cn/">
+<link rel="alternate" hreflang="zh-Hant" href="https://testerexchange.com/zh-tw/">
+<link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/">
+<meta property="og:type" content="article"><meta property="og:title" content="Google Play closed testing-க்கு 12 tester-களை எப்படிப் பெறுவது">
+<meta property="og:description" content="புதிய Google Play developer கணக்குகளுக்கு production-க்கு முன் 14 நாட்களுக்கு 12 tester-கள் தேவை. படிப்படியாக: closed test அமைப்பது, இலவசமாக உண்மையான tester-களைக் கண்டுபிடிப்பது, அவர்களை ஈடுபாட்டுடன் வைத்திருப்பது, Google-ன் production கேள்விகளுக்குப் பதில் அளிப்பது."><meta property="og:url" content="https://testerexchange.com/ta/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Google Play closed testing-க்கு 12 tester-களை எப்படிப் பெறுவது","description":"புதிய Google Play developer கணக்குகளுக்கு production-க்கு முன் 14 நாட்களுக்கு 12 tester-கள் தேவை. படிப்படியாக: closed test அமைப்பது, இலவசமாக உண்மையான tester-களைக் கண்டுபிடிப்பது, அவர்களை ஈடுபாட்டுடன் வைத்திருப்பது, Google-ன் production கேள்விகளுக்குப் பதில் அளிப்பது.","inLanguage":"ta","dateModified":"2026-10-28","url":"https://testerexchange.com/ta/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"12 tester-களும் தினமும் ஆப்பைப் பயன்படுத்த வேண்டுமா?","acceptedAnswer":{"@type":"Answer","text":"அவர்கள் 14 நாட்கள் opt-in-ல் இருக்க வேண்டும் என்று Google கேட்கிறது, engagement-ஐயும் review செய்கிறது. தொடர்ச்சியான உண்மையான பயன்பாடுதான் \"insufficient testing\" நிராகரிப்பைத் தவிர்க்கும்."}},{"@type":"Question","name":"என் சொந்த போன்கள் அல்லது கணக்குகளை tester-களாகப் பயன்படுத்தலாமா?","acceptedAnswer":{"@type":"Answer","text":"பல கணக்குகள் ஒரே சாதனத்தைப் பகிர்வதை Google கண்டுபிடிக்க முடியும், அது உண்மையான testing-ஆகக் கணக்கிடப்படாது. தங்கள் சொந்த போன்களில் உள்ள உண்மையான மனிதர்களைப் பயன்படுத்துங்கள்."}},{"@type":"Question","name":"ஒரு tester விலகினால் 14 நாட்கள் மீண்டும் தொடங்குமா?","acceptedAnswer":{"@type":"Answer","text":"குறைந்தது 12 tester-கள் opt-in-ல் உள்ள நாட்களில் மட்டுமே கணக்கு முன்னேறும். விலகல்கள் உங்களைத் தடுக்காமல் இருக்க இரண்டு கூடுதல் tester-களைச் சேருங்கள்."}},{"@type":"Question","name":"Tester Exchange இலவசமா?","acceptedAnswer":{"@type":"Answer","text":"ஆம். Testing இலவசம்: உங்கள் போனில் நீங்கள் டெஸ்ட் செய்யும் ஒவ்வொரு ஆப்பும் உங்கள் ஆப்புக்கு ஒரு tester-ஐக் கொண்டுவரும். புதிய உறுப்பினர்களுக்கு இலவசத் தொடக்க கிரெடிட்கள் கிடைக்கும். கிரெடிட் வாங்குவது விருப்பமானது, அது testing-ஐத் தவிர்க்க உதவும்; கட்டண ஆப்களுக்கு முதலில் tester-கள் கிடைப்பார்கள்."}}]},{"@type":"Service","name":"Google Play கேட்கும் 12 tester-களைப் பெறுங்கள்","description":"உண்மையான மனிதர்கள் தங்கள் சொந்த போன்களில் 14 நாட்கள் உங்கள் ஆப்பைத் திறக்கிறார்கள். ஒருமுறை பணம் செலுத்துங்கள், அல்லது மற்ற ஆப்களை டெஸ்ட் செய்து இலவசமாகப் பெறுங்கள்.","serviceType":"Google Play closed testing testers","provider":{"@id":"https://testerexchange.com/#org"},"areaServed":"Worldwide","availableLanguage":["en","es","pt","fr","de","id","vi","tr","ru","hi","zh-Hans","zh-Hant","ja","ko","ar","bn","ur","th","sw","fil","ms","it","pl","uk","nl","ro","fa","ta","te","mr","ne","my","uz","ha","am","gu","kn","ml","pa","si","km","kk","az","he","el","cs","hu","sv","sr","bg","sk","hr","yo","zu","ig"],"url":"https://testerexchange.com/ta/","offers":[{"@type":"Offer","name":"12 tester-கள்","price":"9.99","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://testerexchange.com/?lang=ta#buy"},{"@type":"Offer","name":"15 tester-கள்","price":"12.99","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://testerexchange.com/?lang=ta#buy"},{"@type":"Offer","name":"25 tester-கள்","price":"19.99","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://testerexchange.com/?lang=ta#buy"}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=ta">Tester Exchange</a><span class="grow"></span>
+<select aria-label="மொழி" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/">English</option><option value="https://testerexchange.com/am/">አማርኛ</option><option value="https://testerexchange.com/ar/">العربية</option><option value="https://testerexchange.com/az/">Azərbaycanca</option><option value="https://testerexchange.com/bg/">Български</option><option value="https://testerexchange.com/bn/">বাংলা</option><option value="https://testerexchange.com/cs/">Čeština</option><option value="https://testerexchange.com/de/">Deutsch</option><option value="https://testerexchange.com/el/">Ελληνικά</option><option value="https://testerexchange.com/es/">Español</option><option value="https://testerexchange.com/fa/">فارسی</option><option value="https://testerexchange.com/fil/">Filipino</option><option value="https://testerexchange.com/fr/">Français</option><option value="https://testerexchange.com/gu/">ગુજરાતી</option><option value="https://testerexchange.com/ha/">Hausa</option><option value="https://testerexchange.com/he/">עברית</option><option value="https://testerexchange.com/hi/">हिन्दी</option><option value="https://testerexchange.com/hr/">Hrvatski</option><option value="https://testerexchange.com/hu/">Magyar</option><option value="https://testerexchange.com/id/">Bahasa Indonesia</option><option value="https://testerexchange.com/ig/">Igbo</option><option value="https://testerexchange.com/it/">Italiano</option><option value="https://testerexchange.com/ja/">日本語</option><option value="https://testerexchange.com/kk/">Қазақша</option><option value="https://testerexchange.com/km/">ខ្មែរ</option><option value="https://testerexchange.com/kn/">ಕನ್ನಡ</option><option value="https://testerexchange.com/ko/">한국어</option><option value="https://testerexchange.com/ml/">മലയാളം</option><option value="https://testerexchange.com/mr/">मराठी</option><option value="https://testerexchange.com/ms/">Bahasa Melayu</option><option value="https://testerexchange.com/my/">မြန်မာ</option><option value="https://testerexchange.com/ne/">नेपाली</option><option value="https://testerexchange.com/nl/">Nederlands</option><option value="https://testerexchange.com/pa/">ਪੰਜਾਬੀ</option><option value="https://testerexchange.com/pl/">Polski</option><option value="https://testerexchange.com/pt/">Português</option><option value="https://testerexchange.com/ro/">Română</option><option value="https://testerexchange.com/ru/">Русский</option><option value="https://testerexchange.com/si/">සිංහල</option><option value="https://testerexchange.com/sk/">Slovenčina</option><option value="https://testerexchange.com/sr/">Српски</option><option value="https://testerexchange.com/sv/">Svenska</option><option value="https://testerexchange.com/sw/">Kiswahili</option><option value="https://testerexchange.com/ta/" selected>தமிழ்</option><option value="https://testerexchange.com/te/">తెలుగు</option><option value="https://testerexchange.com/th/">ไทย</option><option value="https://testerexchange.com/tr/">Türkçe</option><option value="https://testerexchange.com/uk/">Українська</option><option value="https://testerexchange.com/ur/">اردو</option><option value="https://testerexchange.com/uz/">Oʻzbekcha</option><option value="https://testerexchange.com/vi/">Tiếng Việt</option><option value="https://testerexchange.com/yo/">Yorùbá</option><option value="https://testerexchange.com/zh-cn/">简体中文</option><option value="https://testerexchange.com/zh-tw/">繁體中文</option><option value="https://testerexchange.com/zu/">isiZulu</option>
+</select>
+<a href="https://testerexchange.com/?lang=ta">Tester Exchange-ஐத் திற</a></header>
+<main>
+
+<h1>Google Play closed testing-க்கு 12 tester-களை எப்படிப் பெறுவது</h1>
+<p class="muted">அக்டோபர் 2026-ல் புதுப்பிக்கப்பட்டது</p>
+<p class="lede">13 நவம்பர் 2023-க்குப் பிறகு personal Google Play developer கணக்கை உருவாக்கியிருந்தால், உடனே production-ல் publish செய்ய முடியாது. முதலில் குறைந்தது 12 tester-கள் தொடர்ந்து 14 நாட்கள் opt-in-ல் இருக்கும் closed test ஒன்றை நடத்த வேண்டும். அந்த tester-கள் உண்மையில் உங்கள் ஆப்பைப் பயன்படுத்தினார்களா என்றும் Google பார்க்கிறது. இந்த வழிகாட்டி முழு செயல்முறையையும் விளக்கி, உண்மையான tester-களை இலவசமாகக் கண்டுபிடிக்கும் ஒரு வழியையும் காட்டுகிறது.</p>
+<section class="offer" id="get-testers" aria-labelledby="offer-h">
+<h2 id="offer-h">Google Play கேட்கும் 12 tester-களைப் பெறுங்கள்</h2>
+<p>உண்மையான மனிதர்கள் தங்கள் சொந்த போன்களில் 14 நாட்கள் உங்கள் ஆப்பைத் திறக்கிறார்கள். ஒருமுறை பணம் செலுத்துங்கள், அல்லது மற்ற ஆப்களை டெஸ்ட் செய்து இலவசமாகப் பெறுங்கள்.</p>
+<ul class="packs"><li><a href="https://testerexchange.com/?lang=ta#buy"><b>12 tester-கள்</b><span class="price">$9.99</span><small>Google-ன் குறைந்தபட்சம்</small></a></li><li class="best"><a href="https://testerexchange.com/?lang=ta#buy"><b>15 tester-கள்</b><span class="price">$12.99</span><small>பரிந்துரை: விலகுபவர்களுக்கு இடம் உண்டு</small></a></li><li><a href="https://testerexchange.com/?lang=ta#buy"><b>25 tester-கள்</b><span class="price">$19.99</span><small>மிகப் பாதுகாப்பானது</small></a></li></ul>
+<ol class="how"><li><b>உங்கள் ஆப் லிங்க்கை paste செய்யுங்கள்</b> உங்கள் Google Play லிங்க் அல்லது package name.</li><li><b>பணம் செலுத்துங்கள் அல்லது இலவசமாக டெஸ்ட் செய்யுங்கள்</b> ஒருமுறை பணம் செலுத்துங்கள், அல்லது மற்ற ஆப்களை டெஸ்ட் செய்து கிரெடிட்கள் சம்பாதியுங்கள்.</li><li><b>Google Play-ஐ இணையுங்கள்</b> ஒரே பட்டன் எங்கள் tester-களை உங்கள் closed test-ல் சேர்க்கும். அவர்கள் install செய்கிறார்கள், 14 நாட்கள் தொடங்கும்.</li></ol>
+<p class="row"><a class="btn" href="https://testerexchange.com/?lang=ta#buy">12 tester-களைப் பெறு</a> <a href="https://testerexchange.com/get/?lang=ta">இலவசமாக ஆப்களை டெஸ்ட் செய்</a></p>
+<p class="muted">கார்டுகள் (UnionPay உட்பட), PayPal, Apple Pay, Google Pay, Alipay மற்றும் WeChat Pay. Lemon Squeezy மூலம் பாதுகாப்பான checkout.</p>
+</section>
+<nav class="toc"><b>இந்தப் பக்கத்தில்</b><ul><li><a href="#rule">விதி: 12 tester-கள் × 14 நாட்கள்</a></li><li><a href="#rejected">14 நாட்களுக்குப் பிறகு ஆப்கள் ஏன் நிராகரிக்கப்படுகின்றன</a></li><li><a href="#setup">Play Console-ல் closed test அமைத்தல்</a></li><li><a href="#options">12 உண்மையான tester-களை எங்கே கண்டுபிடிப்பது</a></li><li><a href="#exchange">Tester Exchange எப்படி வேலை செய்கிறது</a></li><li><a href="#engaged">14 நாட்கள் tester-களை ஈடுபாட்டுடன் வைத்திருங்கள்</a></li><li><a href="#production">Production access-க்கு விண்ணப்பியுங்கள்</a></li><li><a href="#faq">அடிக்கடி கேட்கப்படும் கேள்விகள்</a></li></ul></nav>
+
+<section id="rule">
+<h2>விதி: 12 tester-கள் × 14 நாட்கள்</h2>
+<p>புதிய personal developer கணக்குகள் production access-க்கு விண்ணப்பிக்கும் முன் closed test நடத்த வேண்டும் என்று Google Play கேட்கிறது. தேவைகள்:</p>
+<ul><li>உங்கள் closed testing track-ல் குறைந்தது 12 tester-கள் opt-in செய்திருக்க வேண்டும்</li><li>அவர்கள் குறைந்தது 14 தொடர்ச்சியான நாட்கள் opt-in-ல் இருக்க வேண்டும்</li><li>அதன் பிறகு, Play Console-ல் production-க்கு விண்ணப்பித்து உங்கள் டெஸ்ட் பற்றிய கேள்விகளுக்குப் பதில் அளிக்கிறீர்கள்</li><li>நிறுவனக் கணக்குகளுக்கு (D-U-N-S எண்ணுடன்) இது பொருந்தாது</li></ul>
+
+<p>டிசம்பர் 2024 வரை இந்த எண்ணிக்கை 20 tester-களாக இருந்தது, பிறகு Google அதை 12-ஆகக் குறைத்தது. 14 நாள் கணக்கு 12 அல்லது அதற்கு மேற்பட்ட tester-கள் opt-in-ல் உள்ள நாட்களை மட்டுமே எண்ணும், அதனால் tester-கள் விலகி 11-ஆகக் குறைந்தால் உங்கள் முன்னேற்றத்தை இழப்பீர்கள்.</p>
+</section>
+
+<section id="rejected">
+<h2>14 நாட்களுக்குப் பிறகு ஆப்கள் ஏன் நிராகரிக்கப்படுகின்றன</h2>
+<p>பல developer-கள் 14 நாட்களை முடித்த பிறகும் போதுமான testing அல்லது engagement இல்லை என்ற செய்தியுடன் நிராகரிக்கப்படுகிறார்கள். Tester-கள் opt-in செய்தார்களா என்பதை மட்டுமல்ல, உண்மையில் ஆப்பைத் திறந்து பயன்படுத்தினார்களா என்பதையும் Google பார்க்கிறது.</p>
+<p>ஒருபோதும் ஆப்பைத் திறக்காதவர்களின் install-கள், அல்லது பல கணக்குகளுடன் ஒரே பகிரப்பட்ட போன், உண்மையான testing-ஆகக் கணக்கிடப்படாது. உதவுபவை: 14 நாட்களில் தொடர்ந்து ஆப்பைத் திறக்கும் tester-கள், நீங்கள் விவரிக்கக்கூடிய feedback, அதன் அடிப்படையில் நீங்கள் செயல்பட்டதைக் காட்டும் புதிய build-கள்.</p>
+
+
+
+</section>
+
+<section id="setup">
+<h2>Play Console-ல் closed test அமைத்தல்</h2>
+
+
+<ol><li>Play Console → உங்கள் ஆப் → Test and release → Testing → Closed testing திறந்து ஒரு track உருவாக்குங்கள் (அல்லது இயல்பான Alpha track-ஐப் பயன்படுத்துங்கள்).</li><li>Testers பகுதியில் Google Group அல்லது email பட்டியலைத் தேர்ந்தெடுங்கள். Google Group மிக எளிது: group-ல் சேரும் எவரும் opt-in செய்யலாம்.</li><li>Track-ல் ஒரு app bundle-ஐ upload செய்து, நாடுகளை அமைத்து, release-ஐ review-க்கு அனுப்புங்கள்.</li><li>அங்கீகரிக்கப்பட்டதும், opt-in லிங்க்கை copy செய்யுங்கள் (https://play.google.com/apps/testing/your.package.name). Tester-கள் அதைத் திறந்து Become a tester தட்டி, பிறகு Google Play-லிருந்து install செய்வார்கள்.</li><li>எத்தனை பேர் opt-in செய்துள்ளனர் என்று பார்க்க Play Console-ல் Testers tab-ஐச் சரிபாருங்கள்.</li></ol>
+
+</section>
+
+<section id="options">
+<h2>12 உண்மையான tester-களை எங்கே கண்டுபிடிப்பது</h2>
+
+<ul><li><b>நண்பர்கள் மற்றும் குடும்பம்.</b> இலவசம், ஆனால் இரண்டு வாரங்கள் தினமும் ஒரு ஆப்பைத் திறக்கத் தயாரான 12 Android பயனர்கள் பெரும்பாலானோருக்கு இருப்பதில்லை.</li><li><b>Test-for-test communities.</b> Developer-கள் ஒருவர் ஆப்பை மற்றவர் டெஸ்ட் செய்கிறார்கள். இலவசம், tester-களுக்கு என்ன தேவை என்று புரியும். அபாயம்: opt-in செய்துவிட்டு உங்கள் ஆப்பை ஒருபோதும் திறக்காதவர்கள்.</li><li><b>கட்டண tester சேவைகள்.</b> பொதுவாக ஒரு ஆப்புக்கு US$10–35. வேகமானது, ஆனால் tester-கள் உண்மையானவர்கள், செயலில் இருப்பவர்கள் என்று நம்ப வேண்டும்.</li><li><b>Tester Exchange.</b> ஒரு இலவச test-for-test பரிமாற்றம்; ஒவ்வொரு tester-ன் போனிலும் உள்ள companion ஆப் மூலம் தினசரி பயன்பாடு சரிபார்க்கப்படுகிறது, சரிபார்க்கப்பட்ட நாட்களுக்கு மட்டுமே tester-களுக்குக் கிரெடிட்கள் வழங்கப்படுகின்றன.</li></ul>
+
+
+</section>
+
+<section id="exchange">
+<h2>Tester Exchange எப்படி வேலை செய்கிறது</h2>
+
+
+<ol><li>உங்கள் ஆப்பைச் சேருங்கள்: அதன் Google Play லிங்க்கை /start-ல் paste செய்யுங்கள்.</li><li>Tester-களைப் பெறும் வழியைத் தேர்ந்தெடுங்கள்: இலவசம் (உங்கள் போனுக்கு டெஸ்ட் செய்ய ஆப்கள் வழங்கப்படும், தினமும் ஒரு நிமிடம், நீங்கள் டெஸ்ட் செய்யும் ஒவ்வொரு ஆப்பும் உங்களுக்கு ஒரு tester-ஐக் கொண்டுவரும்) அல்லது கிரெடிட்கள் மூலம் testing-ஐத் தவிர்க்கலாம் (கட்டண ஆப்களுக்கு முதலில் tester-கள் கிடைப்பார்கள்).</li><li>உங்கள் போனில் Tester Exchange Android ஆப்பை install செய்து Usage access-ஐ அனுமதியுங்கள். நீங்கள் சேர்ந்த ஆப்களை மட்டுமே அது சரிபார்க்கும்.</li><li>Play Console-ல் உங்கள் closed test-ல் tester-களைச் சேருங்கள்.</li><li>Tester-கள் 14 நாட்கள் தினமும் உங்கள் ஆப்பைத் திறக்கிறார்கள், அவர்களின் போனில் உள்ள companion ஆப் ஒவ்வொரு நாளையும் உறுதிசெய்கிறது.</li><li>14 நாட்களுக்குப் பிறகு உங்கள் report-ஐத் திறங்கள்: தினசரி செயலில் உள்ள tester-கள், feedback, Play Console-ன் production access கேள்விகளுக்கான வரைவு பதில்கள்.</li></ol>
+
+</section>
+
+<section id="engaged">
+<h2>14 நாட்கள் tester-களை ஈடுபாட்டுடன் வைத்திருங்கள்</h2>
+
+<ul><li>சரியாக 12 அல்ல, 14–15 tester-களைச் சேருங்கள், அப்போது சிலர் விலகினாலும் உங்கள் கணக்கு மீண்டும் தொடங்காது.</li><li>என்ன முயற்சிக்க வேண்டும் என்று tester-களிடம் சொல்லுங்கள்: &quot;என் ஆப்பை டெஸ்ட் செய்யுங்கள்&quot; என்பதல்ல, ஒன்றிரண்டு குறிப்பிட்ட பணிகள்.</li><li>டெஸ்டின் போது குறைந்தது ஒரு update வெளியிடுங்கள், tester-கள் சொல்வதைச் சரிசெய்யுங்கள்.</li><li>எழுத்து வடிவில் feedback கேளுங்கள். Production-க்கு விண்ணப்பிக்கும்போது அதைச் சுருக்கமாக எழுத வேண்டியிருக்கும்.</li></ul>
+
+
+</section>
+
+<section id="production">
+<h2>Production access-க்கு விண்ணப்பியுங்கள்</h2>
+<p>14 நாட்களுக்குப் பிறகு Play Console → Dashboard → Apply for production செல்லுங்கள். Tester-களை எப்படிச் சேர்த்தீர்கள், அவர்கள் உங்கள் ஆப்புடன் எப்படி ஈடுபட்டார்கள், என்ன feedback கிடைத்தது, என்ன மாற்றினீர்கள், ஆப் ஏன் தயாராக உள்ளது என்று Google கேட்கும். உண்மையான எண்களுடன் பதில் சொல்லுங்கள்: எத்தனை tester-கள், அவர்கள் எத்தனை நாட்கள் ஆப்பைப் பயன்படுத்தினார்கள், என்ன தெரிவித்தார்கள், எந்தத் திருத்தங்களை வெளியிட்டீர்கள். Review பொதுவாக 7 நாட்கள் வரை ஆகும்.</p>
+
+
+
+</section>
+<section id="faq"><h2>அடிக்கடி கேட்கப்படும் கேள்விகள்</h2>
+<details><summary>12 tester-களும் தினமும் ஆப்பைப் பயன்படுத்த வேண்டுமா?</summary><p>அவர்கள் 14 நாட்கள் opt-in-ல் இருக்க வேண்டும் என்று Google கேட்கிறது, engagement-ஐயும் review செய்கிறது. தொடர்ச்சியான உண்மையான பயன்பாடுதான் &quot;insufficient testing&quot; நிராகரிப்பைத் தவிர்க்கும்.</p></details>
+<details><summary>என் சொந்த போன்கள் அல்லது கணக்குகளை tester-களாகப் பயன்படுத்தலாமா?</summary><p>பல கணக்குகள் ஒரே சாதனத்தைப் பகிர்வதை Google கண்டுபிடிக்க முடியும், அது உண்மையான testing-ஆகக் கணக்கிடப்படாது. தங்கள் சொந்த போன்களில் உள்ள உண்மையான மனிதர்களைப் பயன்படுத்துங்கள்.</p></details>
+<details><summary>ஒரு tester விலகினால் 14 நாட்கள் மீண்டும் தொடங்குமா?</summary><p>குறைந்தது 12 tester-கள் opt-in-ல் உள்ள நாட்களில் மட்டுமே கணக்கு முன்னேறும். விலகல்கள் உங்களைத் தடுக்காமல் இருக்க இரண்டு கூடுதல் tester-களைச் சேருங்கள்.</p></details>
+<details><summary>Tester Exchange இலவசமா?</summary><p>ஆம். Testing இலவசம்: உங்கள் போனில் நீங்கள் டெஸ்ட் செய்யும் ஒவ்வொரு ஆப்பும் உங்கள் ஆப்புக்கு ஒரு tester-ஐக் கொண்டுவரும். புதிய உறுப்பினர்களுக்கு இலவசத் தொடக்க கிரெடிட்கள் கிடைக்கும். கிரெடிட் வாங்குவது விருப்பமானது, அது testing-ஐத் தவிர்க்க உதவும்; கட்டண ஆப்களுக்கு முதலில் tester-கள் கிடைப்பார்கள்.</p></details>
+</section>
+<div class="cta"><span>உண்மையான மனிதர்கள் தங்கள் சொந்த போன்களில் 14 நாட்கள் உங்கள் ஆப்பைத் திறக்கிறார்கள். ஒருமுறை பணம் செலுத்துங்கள், அல்லது மற்ற ஆப்களை டெஸ்ட் செய்து இலவசமாகப் பெறுங்கள்.</span><a class="btn" href="https://testerexchange.com/?lang=ta#buy">12 tester-களைப் பெறு</a></div>
+<section><h2>மேலும் வழிகாட்டிகள்</h2><ul class="related"><li><a href="https://testerexchange.com/ta/12-testers-app-builders/" hreflang="ta">App Inventor, Kodular, Flutter, Unity மற்றும் பிற builder-களில் உருவான ஆப்களுக்கு Google Play 12 tester-கள்</a></li><li><a href="https://testerexchange.com/ta/free-closed-testing-testers/" hreflang="ta">Google Play closed testing-க்கு 12 tester-களை இலவசமாகப் பெறுவது எப்படி</a></li><li><a href="https://testerexchange.com/ta/friends-family-closed-testers/" hreflang="ta">நண்பர்களையும் குடும்பத்தினரையும் உங்கள் 12 Google Play tester-களாகப் பயன்படுத்துதல்</a></li><li><a href="https://testerexchange.com/ta/google-group-vs-email-list/" hreflang="ta">உங்கள் closed test-க்கு Google Group-ஆ, email பட்டியலா?</a></li><li><a href="https://testerexchange.com/ta/insufficient-testing-engagement/" hreflang="ta">Closed testing-க்குப் பிறகு நிராகரிக்கப்பட்டதா? “more testing required”-ஐச் சரிசெய்வது எப்படி</a></li><li><a href="https://testerexchange.com/ta/keep-testers-active-14-days/" hreflang="ta">Closed tester-களை 14 நாட்களும் active-ஆக வைப்பது எப்படி</a></li><li><a href="https://testerexchange.com/ta/production-access-questions/" hreflang="ta">Google Play-ன் production access கேள்விகளுக்குப் பதில் அளிப்பது எப்படி</a></li><li><a href="https://testerexchange.com/ta/tools/production-answers/" hreflang="ta">Production access பதில் உருவாக்கி</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

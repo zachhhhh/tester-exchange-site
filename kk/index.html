@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Play жабық тестілеуіне 12 тестерді қалай табуға болады</title>
+<meta name="description" content="Жаңа Google Play әзірлеуші аккаунттарына production алдында 14 күнге 12 тестер керек. Қадамдап: жабық тестті баптаңыз, нақты тестерлерді тегін табыңыз, оларды белсенді ұстаңыз және Google-дың production сұрақтарына жауап беріңіз.">
+<link rel="canonical" href="https://testerexchange.com/kk/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/">
+<link rel="alternate" hreflang="am" href="https://testerexchange.com/am/">
+<link rel="alternate" hreflang="ar" href="https://testerexchange.com/ar/">
+<link rel="alternate" hreflang="az" href="https://testerexchange.com/az/">
+<link rel="alternate" hreflang="bg" href="https://testerexchange.com/bg/">
+<link rel="alternate" hreflang="bn" href="https://testerexchange.com/bn/">
+<link rel="alternate" hreflang="cs" href="https://testerexchange.com/cs/">
+<link rel="alternate" hreflang="de" href="https://testerexchange.com/de/">
+<link rel="alternate" hreflang="el" href="https://testerexchange.com/el/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/">
+<link rel="alternate" hreflang="fa" href="https://testerexchange.com/fa/">
+<link rel="alternate" hreflang="fil" href="https://testerexchange.com/fil/">
+<link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/">
+<link rel="alternate" hreflang="gu" href="https://testerexchange.com/gu/">
+<link rel="alternate" hreflang="ha" href="https://testerexchange.com/ha/">
+<link rel="alternate" hreflang="he" href="https://testerexchange.com/he/">
+<link rel="alternate" hreflang="hi" href="https://testerexchange.com/hi/">
+<link rel="alternate" hreflang="hr" href="https://testerexchange.com/hr/">
+<link rel="alternate" hreflang="hu" href="https://testerexchange.com/hu/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/">
+<link rel="alternate" hreflang="ig" href="https://testerexchange.com/ig/">
+<link rel="alternate" hreflang="it" href="https://testerexchange.com/it/">
+<link rel="alternate" hreflang="ja" href="https://testerexchange.com/ja/">
+<link rel="alternate" hreflang="kk" href="https://testerexchange.com/kk/">
+<link rel="alternate" hreflang="km" href="https://testerexchange.com/km/">
+<link rel="alternate" hreflang="kn" href="https://testerexchange.com/kn/">
+<link rel="alternate" hreflang="ko" href="https://testerexchange.com/ko/">
+<link rel="alternate" hreflang="ml" href="https://testerexchange.com/ml/">
+<link rel="alternate" hreflang="mr" href="https://testerexchange.com/mr/">
+<link rel="alternate" hreflang="ms" href="https://testerexchange.com/ms/">
+<link rel="alternate" hreflang="my" href="https://testerexchange.com/my/">
+<link rel="alternate" hreflang="ne" href="https://testerexchange.com/ne/">
+<link rel="alternate" hreflang="nl" href="https://testerexchange.com/nl/">
+<link rel="alternate" hreflang="pa" href="https://testerexchange.com/pa/">
+<link rel="alternate" hreflang="pl" href="https://testerexchange.com/pl/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/">
+<link rel="alternate" hreflang="ro" href="https://testerexchange.com/ro/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/">
+<link rel="alternate" hreflang="si" href="https://testerexchange.com/si/">
+<link rel="alternate" hreflang="sk" href="https://testerexchange.com/sk/">
+<link rel="alternate" hreflang="sr" href="https://testerexchange.com/sr/">
+<link rel="alternate" hreflang="sv" href="https://testerexchange.com/sv/">
+<link rel="alternate" hreflang="sw" href="https://testerexchange.com/sw/">
+<link rel="alternate" hreflang="ta" href="https://testerexchange.com/ta/">
+<link rel="alternate" hreflang="te" href="https://testerexchange.com/te/">
+<link rel="alternate" hreflang="th" href="https://testerexchange.com/th/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/">
+<link rel="alternate" hreflang="uk" href="https://testerexchange.com/uk/">
+<link rel="alternate" hreflang="ur" href="https://testerexchange.com/ur/">
+<link rel="alternate" hreflang="uz" href="https://testerexchange.com/uz/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/">
+<link rel="alternate" hreflang="yo" href="https://testerexchange.com/yo/">
+<link rel="alternate" hreflang="zh-Hans" href="https://testerexchange.com/zh-cn/">
+<link rel="alternate" hreflang="zh-Hant" href="https://testerexchange.com/zh-tw/">
+<link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/">
+<meta property="og:type" content="article"><meta property="og:title" content="Google Play жабық тестілеуіне 12 тестерді қалай табуға болады">
+<meta property="og:description" content="Жаңа Google Play әзірлеуші аккаунттарына production алдында 14 күнге 12 тестер керек. Қадамдап: жабық тестті баптаңыз, нақты тестерлерді тегін табыңыз, оларды белсенді ұстаңыз және Google-дың production сұрақтарына жауап беріңіз."><meta property="og:url" content="https://testerexchange.com/kk/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Google Play жабық тестілеуіне 12 тестерді қалай табуға болады","description":"Жаңа Google Play әзірлеуші аккаунттарына production алдында 14 күнге 12 тестер керек. Қадамдап: жабық тестті баптаңыз, нақты тестерлерді тегін табыңыз, оларды белсенді ұстаңыз және Google-дың production сұрақтарына жауап беріңіз.","inLanguage":"kk","dateModified":"2026-10-28","url":"https://testerexchange.com/kk/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"12 тестер қолданбаны күн сайын пайдалануы керек пе?","acceptedAnswer":{"@type":"Answer","text":"Google олардың 14 күн бойы қосылған күйде қалуын талап етеді және белсенділікті тексереді. «Тестілеу жеткіліксіз» деген бас тартудан сақтайтын нәрсе — үнемі нақты пайдалану."}},{"@type":"Question","name":"Өз телефондарымды немесе аккаунттарымды тестер ретінде пайдалана аламын ба?","acceptedAnswer":{"@type":"Answer","text":"Google көп аккаунттың бір құрылғыны бөлісетінін біле алады, және бұл нақты тестілеу болып саналмайды. Өз телефондарындағы нақты адамдарды пайдаланыңыз."}},{"@type":"Question","name":"Тестер шығып кетсе, 14 күн қайтадан басталады ма?","acceptedAnswer":{"@type":"Answer","text":"Есептегіш тек кемінде 12 қосылған тестер бар күндері ғана алға жылжиды. Шығып кетушілер сізді тоқтатпауы үшін бір-екі қосымша тестер тартыңыз."}},{"@type":"Question","name":"Tester Exchange тегін бе?","acceptedAnswer":{"@type":"Answer","text":"Иә. Тестілеу тегін: телефоныңызда тестілеген әр қолданба сіздікіне бір тестер әкеледі. Жаңа мүшелер тегін бастапқы кредит алады. Кредит сатып алу міндетті емес және тестілеуді өткізіп жіберуге мүмкіндік береді; ақылы қолданбалар тестерлерді бірінші алады."}}]},{"@type":"Service","name":"Google Play талап ететін 12 тестерді алыңыз","description":"Нақты адамдар қолданбаңызды 14 күн бойы өз телефондарында ашады. Бір рет төлеңіз немесе басқа қолданбаларды тегін тестілеңіз.","serviceType":"Google Play closed testing testers","provider":{"@id":"https://testerexchange.com/#org"},"areaServed":"Worldwide","availableLanguage":["en","es","pt","fr","de","id","vi","tr","ru","hi","zh-Hans","zh-Hant","ja","ko","ar","bn","ur","th","sw","fil","ms","it","pl","uk","nl","ro","fa","ta","te","mr","ne","my","uz","ha","am","gu","kn","ml","pa","si","km","kk","az","he","el","cs","hu","sv","sr","bg","sk","hr","yo","zu","ig"],"url":"https://testerexchange.com/kk/","offers":[{"@type":"Offer","name":"12 тестер","price":"9.99","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://testerexchange.com/?lang=kk#buy"},{"@type":"Offer","name":"15 тестер","price":"12.99","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://testerexchange.com/?lang=kk#buy"},{"@type":"Offer","name":"25 тестер","price":"19.99","priceCurrency":"USD","availability":"https://schema.org/InStock","url":"https://testerexchange.com/?lang=kk#buy"}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=kk">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Тіл" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/">English</option><option value="https://testerexchange.com/am/">አማርኛ</option><option value="https://testerexchange.com/ar/">العربية</option><option value="https://testerexchange.com/az/">Azərbaycanca</option><option value="https://testerexchange.com/bg/">Български</option><option value="https://testerexchange.com/bn/">বাংলা</option><option value="https://testerexchange.com/cs/">Čeština</option><option value="https://testerexchange.com/de/">Deutsch</option><option value="https://testerexchange.com/el/">Ελληνικά</option><option value="https://testerexchange.com/es/">Español</option><option value="https://testerexchange.com/fa/">فارسی</option><option value="https://testerexchange.com/fil/">Filipino</option><option value="https://testerexchange.com/fr/">Français</option><option value="https://testerexchange.com/gu/">ગુજરાતી</option><option value="https://testerexchange.com/ha/">Hausa</option><option value="https://testerexchange.com/he/">עברית</option><option value="https://testerexchange.com/hi/">हिन्दी</option><option value="https://testerexchange.com/hr/">Hrvatski</option><option value="https://testerexchange.com/hu/">Magyar</option><option value="https://testerexchange.com/id/">Bahasa Indonesia</option><option value="https://testerexchange.com/ig/">Igbo</option><option value="https://testerexchange.com/it/">Italiano</option><option value="https://testerexchange.com/ja/">日本語</option><option value="https://testerexchange.com/kk/" selected>Қазақша</option><option value="https://testerexchange.com/km/">ខ្មែរ</option><option value="https://testerexchange.com/kn/">ಕನ್ನಡ</option><option value="https://testerexchange.com/ko/">한국어</option><option value="https://testerexchange.com/ml/">മലയാളം</option><option value="https://testerexchange.com/mr/">मराठी</option><option value="https://testerexchange.com/ms/">Bahasa Melayu</option><option value="https://testerexchange.com/my/">မြန်မာ</option><option value="https://testerexchange.com/ne/">नेपाली</option><option value="https://testerexchange.com/nl/">Nederlands</option><option value="https://testerexchange.com/pa/">ਪੰਜਾਬੀ</option><option value="https://testerexchange.com/pl/">Polski</option><option value="https://testerexchange.com/pt/">Português</option><option value="https://testerexchange.com/ro/">Română</option><option value="https://testerexchange.com/ru/">Русский</option><option value="https://testerexchange.com/si/">සිංහල</option><option value="https://testerexchange.com/sk/">Slovenčina</option><option value="https://testerexchange.com/sr/">Српски</option><option value="https://testerexchange.com/sv/">Svenska</option><option value="https://testerexchange.com/sw/">Kiswahili</option><option value="https://testerexchange.com/ta/">தமிழ்</option><option value="https://testerexchange.com/te/">తెలుగు</option><option value="https://testerexchange.com/th/">ไทย</option><option value="https://testerexchange.com/tr/">Türkçe</option><option value="https://testerexchange.com/uk/">Українська</option><option value="https://testerexchange.com/ur/">اردو</option><option value="https://testerexchange.com/uz/">Oʻzbekcha</option><option value="https://testerexchange.com/vi/">Tiếng Việt</option><option value="https://testerexchange.com/yo/">Yorùbá</option><option value="https://testerexchange.com/zh-cn/">简体中文</option><option value="https://testerexchange.com/zh-tw/">繁體中文</option><option value="https://testerexchange.com/zu/">isiZulu</option>
+</select>
+<a href="https://testerexchange.com/?lang=kk">Tester Exchange-ті ашу</a></header>
+<main>
+
+<h1>Google Play жабық тестілеуіне 12 тестерді қалай табуға болады</h1>
+<p class="muted">2026 жылғы қазанда жаңартылды</p>
+<p class="lede">Егер жеке Google Play әзірлеуші аккаунтын 2023 жылғы 13 қарашадан кейін ашсаңыз, қолданбаны бірден production-ға жариялай алмайсыз. Алдымен кемінде 12 тестер қатарынан 14 күн қосылған (opt-in) күйде қалатын жабық тест өткізуіңіз керек. Google сондай-ақ сол тестерлердің қолданбаңызды шынымен пайдаланғанын тексереді. Бұл нұсқаулық бүкіл процесті түсіндіріп, нақты тестерлерді тегін табудың жолын көрсетеді.</p>
+<section class="offer" id="get-testers" aria-labelledby="offer-h">
+<h2 id="offer-h">Google Play талап ететін 12 тестерді алыңыз</h2>
+<p>Нақты адамдар қолданбаңызды 14 күн бойы өз телефондарында ашады. Бір рет төлеңіз немесе басқа қолданбаларды тегін тестілеңіз.</p>
+<ul class="packs"><li><a href="https://testerexchange.com/?lang=kk#buy"><b>12 тестер</b><span class="price">$9.99</span><small>Google-дың минимумы</small></a></li><li class="best"><a href="https://testerexchange.com/?lang=kk#buy"><b>15 тестер</b><span class="price">$12.99</span><small>Ұсынылады: шығып кететіндерге қор</small></a></li><li><a href="https://testerexchange.com/?lang=kk#buy"><b>25 тестер</b><span class="price">$19.99</span><small>Ең сенімді</small></a></li></ul>
+<ol class="how"><li><b>Қолданба сілтемеңізді қойыңыз</b> Google Play сілтемеңіз немесе пакет атауыңыз.</li><li><b>Төлеңіз немесе тегін тестілеңіз</b> Бір рет төлеңіз немесе басқа қолданбаларды тестілеп кредит табыңыз.</li><li><b>Google Play-ді қосыңыз</b> Бір түйме тестерлерімізді жабық тестіңізге қосады. Олар орнатады да, 14 күн басталады.</li></ol>
+<p class="row"><a class="btn" href="https://testerexchange.com/?lang=kk#buy">12 тестер алу</a> <a href="https://testerexchange.com/get/?lang=kk">Қолданбаларды тегін тестілеу</a></p>
+<p class="muted">Карталар (UnionPay қоса), PayPal, Apple Pay, Google Pay, Alipay және WeChat Pay. Lemon Squeezy арқылы қауіпсіз төлем.</p>
+</section>
+<nav class="toc"><b>Осы бетте</b><ul><li><a href="#rule">Ереже: 12 тестер × 14 күн</a></li><li><a href="#rejected">Қолданбалар 14 күннен кейін неге қабылданбайды</a></li><li><a href="#setup">Play Console-да жабық тестті баптаңыз</a></li><li><a href="#options">12 нақты тестерді қайдан табуға болады</a></li><li><a href="#exchange">Tester Exchange қалай жұмыс істейді</a></li><li><a href="#engaged">Тестерлерді 14 күн белсенді ұстаңыз</a></li><li><a href="#production">Production қолжетімділігіне өтінім беріңіз</a></li><li><a href="#faq">Жиі қойылатын сұрақтар</a></li></ul></nav>
+
+<section id="rule">
+<h2>Ереже: 12 тестер × 14 күн</h2>
+<p>Google Play жаңа жеке әзірлеуші аккаунттарынан production қолжетімділігіне өтінім берместен бұрын жабық тест өткізуді талап етеді. Талап мынадай:</p>
+<ul><li>Жабық тестілеу трегіңізге кемінде 12 тестер қосылған (opt-in)</li><li>Олар кемінде 14 күн қатарынан қосылған күйде қалады</li><li>Осыдан кейін Play Console-да production-ға өтінім беріп, тестіңіз туралы сұрақтарға жауап бересіз</li><li>Ұйым аккаунттары (D-U-N-S нөмірі бар) бұл талаптан босатылған</li></ul>
+
+<p>2024 жылғы желтоқсанға дейін бұл сан 20 тестер болатын, кейін Google оны 12-ге дейін азайтты. 14 күндік есептегіш тек 12 немесе одан көп тестер қосылған күндерді ғана санайды, сондықтан тестерлер шығып, 11-ге түсіп қалсаңыз, прогресті жоғалтасыз.</p>
+</section>
+
+<section id="rejected">
+<h2>Қолданбалар 14 күннен кейін неге қабылданбайды</h2>
+<p>Көптеген әзірлеушілер 14 күнге жетеді, бірақ бәрібір тестілеу немесе белсенділік жеткіліксіз деген хабармен бас тарту алады. Google тек тестерлердің қосылғанына ғана емес, олардың қолданбаны шынымен ашып, пайдаланғанына қарайды.</p>
+<p>Қолданбаны ешқашан ашпаған адамдардың орнатулары немесе бір телефондағы көп аккаунт нақты тестілеу болып саналмайды. Көмектесетіні: 14 күн бойы қолданбаны үнемі ашатын тестерлер, сипаттай алатын пікірлер және соларға сай әрекет еткеніңізді көрсететін жаңа build-тер.</p>
+
+
+
+</section>
+
+<section id="setup">
+<h2>Play Console-да жабық тестті баптаңыз</h2>
+
+
+<ol><li>Play Console → қолданбаңыз → Test and release → Testing → Closed testing ашып, трек жасаңыз (немесе әдепкі Alpha трегін пайдаланыңыз).</li><li>Testers бөлімінде Google Group немесе email тізімін таңдаңыз. Google Group ең оңайы: топқа қосылған кез келген адам opt-in жасай алады.</li><li>Трекке app bundle жүктеп, елдерді белгілеп, релизді тексеруге жіберіңіз.</li><li>Мақұлданғаннан кейін opt-in сілтемесін көшіріңіз (https://play.google.com/apps/testing/your.package.name). Тестерлер оны ашып, Become a tester түймесін басады да, Google Play-ден орнатады.</li><li>Қанша адам қосылғанын көру үшін Play Console-дағы Testers қойындысын тексеріңіз.</li></ol>
+
+</section>
+
+<section id="options">
+<h2>12 нақты тестерді қайдан табуға болады</h2>
+
+<ul><li><b>Достар мен отбасы.</b> Тегін, бірақ көпшілікте екі апта бойы күн сайын қолданба ашуға дайын 12 Android пайдаланушысы жоқ.</li><li><b>Тест-тестке қауымдастықтары.</b> Әзірлеушілер бір-бірінің қолданбаларын тестілейді. Тегін, және тестерлер не керек екенін түсінеді. Қаупі: қосылып, қолданбаңызды ешқашан ашпайтын адамдар.</li><li><b>Ақылы тестер сервистері.</b> Әдетте бір қолданбаға US$10–35. Жылдам, бірақ тестерлердің нақты және белсенді екеніне сенуге тура келеді.</li><li><b>Tester Exchange.</b> Тегін тест-тестке алмасуы: күнделікті пайдалану әр тестердің телефонындағы көмекші қолданба арқылы расталады, ал тестерлерге тек расталған күндер үшін кредитпен төленеді.</li></ul>
+
+
+</section>
+
+<section id="exchange">
+<h2>Tester Exchange қалай жұмыс істейді</h2>
+
+
+<ol><li>Қолданбаңызды қосыңыз: оның Google Play сілтемесін /start бетіне қойыңыз.</li><li>Тестерлерді қалай алатыныңызды таңдаңыз: тегін (телефоныңызға тестілеуге қолданбалар беріледі, күніне бір минут, ал сіз тестілеген әр қолданба сіздікіне бір тестер әкеледі) немесе кредитпен тестілеуді өткізіп жіберу (ақылы қолданбалар тестерлерді бірінші алады).</li><li>Телефоныңызға Tester Exchange Android қолданбасын орнатып, Usage access рұқсатын беріңіз. Ол тек сіз қосылған қолданбаларды тексереді.</li><li>Тестерлеріңізді Play Console-дағы жабық тестіңізге қосыңыз.</li><li>Тестерлер 14 күн бойы қолданбаңызды күн сайын ашады, ал олардың телефонындағы көмекші қолданба әр күнді растайды.</li><li>14 күннен кейін есебіңізді ашыңыз: күнделікті белсенді тестерлер, пікірлер және Play Console-дағы production қолжетімділігі сұрақтарына жауап жобалары.</li></ol>
+
+</section>
+
+<section id="engaged">
+<h2>Тестерлерді 14 күн белсенді ұстаңыз</h2>
+
+<ul><li>Дәл 12 емес, 14–15 тестер тартыңыз, сонда бірнеше адамның шығуы есептегішті тоқтатпайды.</li><li>Тестерлерге нені байқау керек екенін айтыңыз: &quot;қолданбамды тестілеп беріңізші&quot; емес, бір-екі нақты тапсырма.</li><li>Тест кезінде кемінде бір жаңарту шығарып, тестерлер хабарлаған мәселелерді түзетіңіз.</li><li>Жазбаша пікір сұраңыз. Production-ға өтінім бергенде оны қорытындылауыңыз керек болады.</li></ul>
+
+
+</section>
+
+<section id="production">
+<h2>Production қолжетімділігіне өтінім беріңіз</h2>
+<p>14 күннен кейін Play Console → Dashboard → Apply for production бөліміне өтіңіз. Google тестерлерді қалай тартқаныңызды, олардың қолданбаңызды қалай пайдаланғанын, қандай пікір алғаныңызды, нені өзгерткеніңізді және қолданбаның неге дайын екенін сұрайды. Нақты сандармен жауап беріңіз: қанша тестер, қолданбаны неше күн пайдаланды, не хабарлады және қандай түзетулер шығардыңыз. Тексеру әдетте 7 күнге дейін созылады.</p>
+
+
+
+</section>
+<section id="faq"><h2>Жиі қойылатын сұрақтар</h2>
+<details><summary>12 тестер қолданбаны күн сайын пайдалануы керек пе?</summary><p>Google олардың 14 күн бойы қосылған күйде қалуын талап етеді және белсенділікті тексереді. «Тестілеу жеткіліксіз» деген бас тартудан сақтайтын нәрсе — үнемі нақты пайдалану.</p></details>
+<details><summary>Өз телефондарымды немесе аккаунттарымды тестер ретінде пайдалана аламын ба?</summary><p>Google көп аккаунттың бір құрылғыны бөлісетінін біле алады, және бұл нақты тестілеу болып саналмайды. Өз телефондарындағы нақты адамдарды пайдаланыңыз.</p></details>
+<details><summary>Тестер шығып кетсе, 14 күн қайтадан басталады ма?</summary><p>Есептегіш тек кемінде 12 қосылған тестер бар күндері ғана алға жылжиды. Шығып кетушілер сізді тоқтатпауы үшін бір-екі қосымша тестер тартыңыз.</p></details>
+<details><summary>Tester Exchange тегін бе?</summary><p>Иә. Тестілеу тегін: телефоныңызда тестілеген әр қолданба сіздікіне бір тестер әкеледі. Жаңа мүшелер тегін бастапқы кредит алады. Кредит сатып алу міндетті емес және тестілеуді өткізіп жіберуге мүмкіндік береді; ақылы қолданбалар тестерлерді бірінші алады.</p></details>
+</section>
+<div class="cta"><span>Нақты адамдар қолданбаңызды 14 күн бойы өз телефондарында ашады. Бір рет төлеңіз немесе басқа қолданбаларды тегін тестілеңіз.</span><a class="btn" href="https://testerexchange.com/?lang=kk#buy">12 тестер алу</a></div>
+<section><h2>Басқа нұсқаулықтар</h2><ul class="related"><li><a href="https://testerexchange.com/kk/12-testers-app-builders/" hreflang="kk">App Inventor, Kodular, Flutter, Unity және басқа құралдармен жасалған қолданбаларға Google Play 12 тестер</a></li><li><a href="https://testerexchange.com/kk/free-closed-testing-testers/" hreflang="kk">Google Play жабық тестілеуіне 12 тестерді тегін қалай алуға болады</a></li><li><a href="https://testerexchange.com/kk/friends-family-closed-testers/" hreflang="kk">Достар мен отбасыны 12 Google Play тестеріңіз ретінде пайдалану</a></li><li><a href="https://testerexchange.com/kk/google-group-vs-email-list/" hreflang="kk">Жабық тестіңізге Google Group па, әлде email тізімі ме?</a></li><li><a href="https://testerexchange.com/kk/insufficient-testing-engagement/" hreflang="kk">Жабық тестілеуден кейін бас тарту алдыңыз ба? &quot;More testing required&quot; мәселесін қалай шешуге болады</a></li><li><a href="https://testerexchange.com/kk/keep-testers-active-14-days/" hreflang="kk">Жабық тестерлерді барлық 14 күн бойы қалай белсенді ұстауға болады</a></li><li><a href="https://testerexchange.com/kk/production-access-questions/" hreflang="kk">Google Play-дің production қолжетімділігі сұрақтарына қалай жауап беру керек</a></li><li><a href="https://testerexchange.com/kk/tools/production-answers/" hreflang="kk">Production қолжетімділігі жауаптарының генераторы</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>
