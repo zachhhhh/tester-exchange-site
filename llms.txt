@@ -7,11 +7,11 @@
 > Prices are shown in the visitor's own currency. Site and every guide in 55 languages.
 
 ## Fastest path for a developer (3 steps)
-1. Paste the Google Play link at https://testerexchange.com/ and pick a pack (or test other apps for free).
-2. Pay. The test starts automatically when the payment lands.
-3. Tap "Connect Google Play": we add our testers group to the app's closed testing track through the Play Developer
-   API. Or add it by hand (Play Console → Closed testing → Testers → Google Groups), or use an email list instead:
-   we show the tester emails to paste.
+1. Pick a pack at https://testerexchange.com/ (or test other apps for free).
+2. Tap "Connect Google Play": one Google screen signs you in, and we add our testers group to the app's closed
+   testing track through the Play Developer API. Or add it by hand (Play Console → Closed testing → Testers →
+   Google Groups), or use an email list instead: we show the tester emails to paste.
+3. Pay. The test starts automatically when the payment lands.
 
 ## How testers are found (autopilot)
 - Nobody browses or picks apps. Free: link a phone with the Tester Exchange app; it is given apps to test
