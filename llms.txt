@@ -3,7 +3,8 @@
 > Gets Android developers the 12 testers × 14 days that Google Play requires before a new personal developer
 > account can publish to production. Testers are real people on their own phones; a companion Android app verifies
 > each day they opened the app, which is the engagement Google reviews. Pay once (US$9.99 for 12 testers,
-> $12.99 for 15, $19.99 for 25; card, PayPal, Apple Pay, Google Pay) or get testers free by testing other apps.
+> $12.99 for 15, $19.99 for 25; card, PayPal, Apple Pay, Google Pay, local methods such as UPI and Pix, or USDT/USDC on BNB Chain, Polygon,
+> Arbitrum or Base sent straight to our wallet with no fee) or get testers free by testing other apps.
 > Prices are shown in the visitor's own currency. Site and every guide in 55 languages.
 
 ## Fastest path for a developer (3 steps)

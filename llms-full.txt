@@ -1,6 +1,6 @@
 # Tester Exchange: Google Play closed testing guides (full text)
 
-> Source: https://testerexchange.com/. Updated 2026-10-29. The short index is https://testerexchange.com/llms.txt.
+> Source: https://testerexchange.com/. Updated 2026-10-31. The short index is https://testerexchange.com/llms.txt.
 
 ---
 
