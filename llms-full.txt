@@ -1,6 +1,6 @@
 # Tester Exchange: Google Play closed testing guides (full text)
 
-> Source: https://testerexchange.com/. Updated 2026-11-02. The short index is https://testerexchange.com/llms.txt.
+> Source: https://testerexchange.com/. Updated 2026-11-04. The short index is https://testerexchange.com/llms.txt.
 
 ---
 
@@ -364,6 +364,53 @@ Google still makes the final decision on production access. These tools help you
 **Should I really release an update during the test?** Yes. A new build that fixes reported issues shows Google that you used the test to improve the app, and it gives testers a reason to open it again.
 
 **Is written feedback required?** The production questionnaire asks what testers told you and what you changed. Written feedback gives you real examples to point to.
+
+---
+
+## What to check before you pay for Google Play closed testers
+URL: https://testerexchange.com/guide/paid-closed-testers-checklist/
+
+If your personal Google Play developer account was created after 13 November 2023, you need a closed test with at least 12 testers opted in continuously for 14 days before you can apply for production access. Many developers pay someone to supply those testers. Paying is fine, but the test only helps you if the testers are real and stay opted in. Use this checklist before you hand over money.
+
+### What Google actually requires
+
+Google's Play Console Help states that personal accounts created after 13 November 2023 must run a closed test with a minimum of 12 testers who have been opted in continuously for at least 14 days. When you meet this, you can apply for production access from the Dashboard and answer questions about your app, your testing and your readiness.
+
+Nothing in that rule is about how you found the testers. What matters is that the opt-ins are real and continuous, and that your answers describe a test you really ran.
+
+### Seven things to check before you buy
+
+1. Real people on real phones. Ask whether each tester uses their own Android device. Emulators and shared devices make for a weak test and a weak production answer.
+2. More than 12. The 14 days only count while at least 12 testers stay opted in. A service that gives you exactly 12 leaves no room for one person to leave. Ask for 14 or 15.
+3. Continuous opt-in. Google's rule says continuously. Ask how the service keeps testers opted in for the full period.
+4. Proof of daily use. You should be able to see, day by day, that the app was opened. If you can't see it, you can't describe it in the production questions.
+5. Replacements for dropouts. Ask what happens when a tester leaves on day 6. A good answer is a replacement, not silence.
+6. Your account, your control. You add testers through your own Google Group or email list. Never share your Play Console login.
+7. Honest wording. No one can promise Google's decision. Be cautious of guarantees of production access.
+
+### After you pay: keep the test honest
+
+Open the app yourself, read the feedback testers send, and ship at least one update that fixes something they reported. The production questions ask what testers told you and what you changed, so real answers are easy to write when the test was real.
+
+### How Tester Exchange works
+
+- Real testers: people with their own Android phones install your app from your closed test.
+- Daily use checked on the phone: the Tester Exchange app verifies that your app was opened each day.
+- Daily report: see how many testers were active, plus their feedback.
+
+Google makes the final decision on production access. This gives you a test that reflects real use and the data to explain it.
+
+### Frequently asked questions
+
+**Is it allowed to pay for closed testers?** Google's requirement is 12 testers opted in continuously for 14 days. The help page does not say how you must find them, but the test should reflect real use of your app.
+
+**How many testers should I get?** Get 14 or 15. The 14 days only count while at least 12 testers are opted in.
+
+**Do testers need to open the app every day?** Google doesn't publish a number. Regular use across all 14 days is the safest pattern.
+
+**Can anyone guarantee production access?** No. Google decides. Treat any guarantee with caution.
+
+**Do organization accounts need this?** The requirement applies to personal accounts created after 13 November 2023, according to Google's help page.
 
 ---
 

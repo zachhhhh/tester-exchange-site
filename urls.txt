@@ -385,6 +385,12 @@ https://testerexchange.com/yo/keep-testers-active-14-days/
 https://testerexchange.com/zh-cn/keep-testers-active-14-days/
 https://testerexchange.com/zh-tw/keep-testers-active-14-days/
 https://testerexchange.com/zu/keep-testers-active-14-days/
+https://testerexchange.com/guide/paid-closed-testers-checklist/
+https://testerexchange.com/es/paid-closed-testers-checklist/
+https://testerexchange.com/id/paid-closed-testers-checklist/
+https://testerexchange.com/pt/paid-closed-testers-checklist/
+https://testerexchange.com/ru/paid-closed-testers-checklist/
+https://testerexchange.com/tr/paid-closed-testers-checklist/
 https://testerexchange.com/guide/production-access-questions/
 https://testerexchange.com/am/production-access-questions/
 https://testerexchange.com/ar/production-access-questions/
