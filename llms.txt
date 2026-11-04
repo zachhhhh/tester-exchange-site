@@ -1,9 +1,9 @@
 # Tester Exchange
 
 > Gets Android developers the 12 testers × 14 days that Google Play requires before a new personal developer
-> account can publish to production. Testers are real people on their own phones; a companion Android app verifies
-> each day they opened the app, which is the engagement Google reviews. Pay once (US$9.99 for 12 testers,
-> $12.99 for 15, $19.99 for 25; card, PayPal, Apple Pay, Google Pay, local methods such as UPI and Pix, or USDT/USDC on BNB Chain, Polygon,
+> account can publish to production. Testers are real people on their own phones, and each day they open the app is
+> recorded, which is the engagement Google reviews. Pay once (US$12.99 for 12 testers,
+> $14.99 for 15, $22.99 for 25; card, PayPal, Apple Pay, Google Pay, local methods such as UPI and Pix, or USDT/USDC on BNB Chain, Polygon,
 > Arbitrum or Base sent straight to our wallet with no fee) or get testers free by testing other apps.
 > Prices are shown in the visitor's own currency. Site and every guide in 55 languages.
 
@@ -15,8 +15,9 @@
 3. Pay. The test starts automatically when the payment lands.
 
 ## How testers are found (autopilot)
-- Nobody browses or picks apps. Free: link a phone with the Tester Exchange app; it is given apps to test
-  automatically (paid apps first), and each app you test brings a tester to yours. Paid: skip testing; paid apps get
+- Nobody browses or picks apps. Free: open https://testerexchange.com/earn in your phone's browser (no app needed);
+  you are given apps to test automatically (paid apps first), one tap per app per day, and each app you test brings a
+  tester to yours. Developers can also join free swap circles where members test each other's apps. Paid: skip testing; paid apps get
   testers before anyone else. Google's 14 days apply to everyone.
 - Dropouts are replaced automatically; you only pay for verified tester-days, and unused credits go back to your credit balance.
 - Purchases are final: credits don't convert back to money.
@@ -45,13 +46,15 @@
 - [Answering the production access questions](https://testerexchange.com/guide/production-access-questions/)
 - [Keep testers active for all 14 days](https://testerexchange.com/guide/keep-testers-active-14-days/)
 - [Google Group vs email list for closed testing](https://testerexchange.com/guide/google-group-vs-email-list/)
+- [Best way to get 12 testers: free exchange vs paid service vs Fiverr](https://testerexchange.com/guide/best-way-to-get-12-testers/)
+- [Paid closed testers checklist](https://testerexchange.com/guide/paid-closed-testers-checklist/)
 - [Free ways to find closed testers](https://testerexchange.com/guide/free-closed-testing-testers/)
 - [Friends and family as closed testers](https://testerexchange.com/guide/friends-family-closed-testers/)
 - [12 testers for apps made with App Inventor, Kodular, Flutter, Unity and other builders](https://testerexchange.com/guide/12-testers-app-builders/)
 - [Free production-access answer generator](https://testerexchange.com/tools/production-answers/)
 - Full text of every guide in one file: https://testerexchange.com/llms-full.txt
 
-## Facts (October 2026)
+## Facts (November 2026)
 - Personal Google Play developer accounts created after 13 Nov 2023 need a closed test with at least 12 opted-in
   testers for 14 continuous days, then apply for production access with a questionnaire.
 - The requirement was 20 testers until December 2024.
