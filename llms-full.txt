@@ -470,7 +470,7 @@ Things to avoid: removing the email list or Google Group from the track, or dele
 
 ### How Tester Exchange handles dropouts
 
-On Tester Exchange, testers are real people on their own Android phones and you see daily use for each one. If a tester stops, a new one takes the seat, and you only pay for verified days. Unused credits stay on your balance. You can pay once for 12, 15 or 25 testers, or get testers free by testing other developers' apps at https://testerexchange.com/earn in your phone's browser.
+On Tester Exchange, testers are real people on their own Android phones and you see daily use for each one. If a tester stops, a new one takes the seat, and you only pay for days testers actually open your app. Unused credits stay on your balance. You can pay once for 12, 15 or 25 testers, or get testers free by testing other developers' apps at https://testerexchange.com/earn in your phone's browser.
 
 ### Frequently asked questions
 

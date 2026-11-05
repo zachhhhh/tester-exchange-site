@@ -19,7 +19,7 @@
   you are given apps to test automatically (paid apps first), one tap per app per day, and each app you test brings a
   tester to yours. Developers can also join free swap circles where members test each other's apps. Paid: skip testing; paid apps get
   testers before anyone else. Google's 14 days apply to everyone.
-- Dropouts are replaced automatically; you only pay for verified tester-days, and unused credits go back to your credit balance.
+- Dropouts are replaced automatically; you only pay for days testers actually open the app, and unused credits go back to your credit balance.
 - Purchases are final: credits don't convert back to money.
 - After 14 days: a test report with daily activity, tester feedback and draft answers for Google's
   production-access questions.
