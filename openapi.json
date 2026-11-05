@@ -2,8 +2,8 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Tester Exchange agent API",
-    "version": "1.0.0",
-    "description": "One endpoint for AI agents and scripts. Public actions need no token; others need a personal token (tx_\u2026) created at https://testerexchange.com/api. Call action 'help' for the full list. MCP server: https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp"
+    "version": "1.1.0",
+    "description": "One endpoint for AI agents and scripts. Start with action get_testers (p_args.package_name): it adds the app, opens its test, applies credits and returns the steps only a human can do. Public actions (help, stats, pricing, open_tests) need no key; others need a personal API key (tx_…) created at https://testerexchange.com/api, sent as p_token. Call action 'help' for the full list. MCP server: https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp · A2A agent card: https://testerexchange.com/.well-known/agent-card.json"
   },
   "servers": [
     {
@@ -46,11 +46,12 @@
                       "null"
                     ],
                     "pattern": "^tx_[0-9a-f]{48}$",
-                    "description": "Personal token; omit for public actions"
+                    "description": "Personal API key (tx_…) from https://testerexchange.com/api; omit for public actions"
                   },
                   "p_action": {
                     "type": "string",
                     "enum": [
+                      "get_testers",
                       "help",
                       "stats",
                       "pricing",
@@ -65,7 +66,10 @@
                       "join",
                       "my_tests",
                       "share_kit",
-                      "buy_credits"
+                      "buy_credits",
+                      "friends",
+                      "start_friends_test",
+                      "fill_from_exchange"
                     ]
                   },
                   "p_args": {

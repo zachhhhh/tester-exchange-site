@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to set up a closed testing track in Google Play Console</title>
+<meta name="description" content="Step-by-step: create a closed testing track in Play Console, add testers with an email list or Google Group, publish the release, and share the opt-in link so the 14 days can start.">
+<link rel="canonical" href="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<meta property="og:type" content="article"><meta property="og:title" content="How to set up a closed testing track in Google Play Console">
+<meta property="og:description" content="Step-by-step: create a closed testing track in Play Console, add testers with an email list or Google Group, publish the release, and share the opt-in link so the 14 days can start."><meta property="og:url" content="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"How to set up a closed testing track in Play Console, step by step","description":"Step-by-step: create a closed testing track in Play Console, add testers with an email list or Google Group, publish the release, and share the opt-in link so the 14 days can start.","inLanguage":"en","dateModified":"2026-11-05","url":"https://testerexchange.com/guide/set-up-closed-testing-track/","publisher":{"@type":"Organization","name":"Tester Exchange"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I use internal testing instead?","acceptedAnswer":{"@type":"Answer","text":"No. The requirement needs a closed test. Google also says people opted into your internal test can't join a closed test until they leave the internal one."}},{"@type":"Question","name":"Should I use an email list or a Google Group?","acceptedAnswer":{"@type":"Answer","text":"A Google Group is easier when testers come and go, because you never edit the track. An email list is fine for a fixed group of friends. You can use both."}},{"@type":"Question","name":"Why don't I see the opt-in link?","acceptedAnswer":{"@type":"Answer","text":"It only shows once the release on the closed track is published. Check Publishing overview for pending review or changes not yet sent."}},{"@type":"Question","name":"Does a tester need a Google Account?","acceptedAnswer":{"@type":"Answer","text":"Yes. Google says users need a Google Account or Google Workspace account to join a test, and it must be the account on their phone's Play Store."}},{"@type":"Question","name":"Can I make the closed test app paid?","acceptedAnswer":{"@type":"Answer","text":"You can, but Google says testers must buy paid apps in closed tests. Keep the test app free to avoid losing testers."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=en">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Language" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/set-up-closed-testing-track/" selected>English</option>
+</select>
+<a href="https://testerexchange.com/?lang=en">Open Tester Exchange</a></header>
+<main>
+
+<h1>How to set up a closed testing track in Play Console, step by step</h1>
+<p class="muted">Updated November 2026</p>
+<p class="lede">Before your 14-day clock can start, you need a closed testing track that is published, has testers attached, and gives you an opt-in link that works. Most problems later on, such as testers seeing &quot;app not available&quot;, come from a step missed here. This guide follows the current Play Console menus (Test and release, then Testing, then Closed testing) and Google's Help Center.</p>
+<div class="cta"><span>Real people open your app on their own phones for 14 days. Pay once, or test other apps for free.</span><a class="btn" href="https://testerexchange.com/?lang=en#buy">Get 12 testers</a></div>
+<nav class="toc"><b>On this page</b><ul><li><a href="#before">Before you start</a></li><li><a href="#track">1. Open or create the closed track</a></li><li><a href="#countries">2. Choose countries and regions</a></li><li><a href="#testers">3. Add testers: email list or Google Group</a></li><li><a href="#feedback">4. Add a feedback channel</a></li><li><a href="#release">5. Create the release and send it for review</a></li><li><a href="#link">6. Share the opt-in link</a></li><li><a href="#check">7. Check that the 14 days are counting</a></li><li><a href="#faq">Frequently asked questions</a></li></ul></nav>
+
+<section id="before">
+<h2>Before you start</h2>
+
+<ul><li>A Play Console developer account with identity verification finished.</li><li>Your app created in Play Console, with the store listing, content rating, target audience, data safety and other App content declarations filled in. Play Console won't let you send a release for review while required items are missing.</li><li>A signed Android App Bundle (.aab) with a package name you are happy to keep forever. You can't change it later.</li><li>A plan for your testers: at least 12, ideally 15, real people with Android phones and Google Accounts.</li></ul>
+
+
+</section>
+
+<section id="track">
+<h2>1. Open or create the closed track</h2>
+
+
+<ol><li>In Play Console, pick your app.</li><li>Go to Test and release, then Testing, then Closed testing.</li><li>Play Console gives you a default closed track (often called Alpha). Use it. You can create extra closed tracks, but one is all you need for the requirement.</li><li>Click Manage track.</li></ol>
+
+</section>
+
+<section id="countries">
+<h2>2. Choose countries and regions</h2>
+<p>Open the Countries / regions tab and add the countries where your testers live. A tester in a country you didn't select will not be able to install the app.</p>
+<p>Google notes that changes to distributed countries apply across tracks, and that additional closed tracks don't support their own country targeting. If your testers are spread around the world, the simplest choice is to add every country you can legally ship to.</p>
+
+
+
+</section>
+
+<section id="testers">
+<h2>3. Add testers: email list or Google Group</h2>
+<p>Open the Testers tab. You have two options, and you can use both on one track.</p>
+<ul><li><b>Email list:</b> click Create email list, name it, then type addresses or upload a CSV. Google allows up to 2,000 users per list. Uploading a CSV overwrites the addresses already in that list. Every address must be the Google Account the tester uses on their phone's Play Store.</li><li><b>Google Group:</b> enter the group's address, such as yourgroup@googlegroups.com. Only members of the group can join your test, and they must join the group before they opt in. Adding someone to the group is all you do; you don't touch Play Console again.</li></ul>
+
+<p>If you use Tester Exchange, add the group testerexchange-testers@googlegroups.com under Google Groups and save. That one address lets every tester we send install your app. See also the guide on Google Group vs email list.</p>
+</section>
+
+<section id="feedback">
+<h2>4. Add a feedback channel</h2>
+<p>On the same Testers tab, add a feedback URL or an email address. Testers see it when they join. You will need to summarize tester feedback in the production access form, so make it easy: a short Google Form or a dedicated email address works.</p>
+
+
+
+</section>
+
+<section id="release">
+<h2>5. Create the release and send it for review</h2>
+
+
+<ol><li>On the closed track, click Create new release.</li><li>Upload your .aab. Let Play App Signing manage your key unless you have a reason not to.</li><li>Add a release name and short release notes, for example &quot;First closed test build&quot;.</li><li>Click Next, fix any errors, then Save.</li><li>Go to Publishing overview and send the changes for review. If managed publishing is on, you also have to click Publish after approval.</li></ol>
+<p>Closed test releases on new accounts are reviewed before they go live. Times vary from hours to several days.</p>
+</section>
+
+<section id="link">
+<h2>6. Share the opt-in link</h2>
+<p>Google says the opt-in link appears only once the app status is Published. Copy it from the Testers tab. It looks like https://play.google.com/apps/testing/your.package.name.</p>
+<p>The first time you publish, the link can take several hours to start working. Testers can't find closed tests by searching Google Play, so they need either this link or the Play Store link to your app.</p>
+
+<ol><li>The tester signs in to the same Google Account you added (or that is in your Google Group).</li><li>They open the opt-in link and tap to become a tester.</li><li>They install your app from Google Play using the link on that page.</li><li>They open it, and keep opening it during the 14 days.</li></ol>
+
+</section>
+
+<section id="check">
+<h2>7. Check that the 14 days are counting</h2>
+<p>Your Dashboard shows the closed testing requirement and how many testers are opted in. Check it every couple of days. If the number falls under 12, recruit replacements straight away, because the requirement counts 12 testers opted in continuously.</p>
+<p>During the test, upload at least one new build to the same track. It shows Google you acted on feedback, and testers on the track get the update automatically.</p>
+
+
+
+</section>
+<section id="faq"><h2>Frequently asked questions</h2>
+<details><summary>Can I use internal testing instead?</summary><p>No. The requirement needs a closed test. Google also says people opted into your internal test can't join a closed test until they leave the internal one.</p></details>
+<details><summary>Should I use an email list or a Google Group?</summary><p>A Google Group is easier when testers come and go, because you never edit the track. An email list is fine for a fixed group of friends. You can use both.</p></details>
+<details><summary>Why don't I see the opt-in link?</summary><p>It only shows once the release on the closed track is published. Check Publishing overview for pending review or changes not yet sent.</p></details>
+<details><summary>Does a tester need a Google Account?</summary><p>Yes. Google says users need a Google Account or Google Workspace account to join a test, and it must be the account on their phone's Play Store.</p></details>
+<details><summary>Can I make the closed test app paid?</summary><p>You can, but Google says testers must buy paid apps in closed tests. Keep the test app free to avoid losing testers.</p></details>
+</section>
+<div class="cta"><span>Real people open your app on their own phones for 14 days. Pay once, or test other apps for free.</span><a class="btn" href="https://testerexchange.com/?lang=en#buy">Get 12 testers</a></div>
+<section><h2>More guides</h2><ul class="related"><li><a href="https://testerexchange.com/guide/" hreflang="en">How to get 12 testers for Google Play closed testing</a></li><li><a href="https://testerexchange.com/guide/12-testers-app-builders/" hreflang="en">Google Play 12 testers for apps made with App Inventor, Kodular, Flutter, Unity and other builders</a></li><li><a href="https://testerexchange.com/guide/app-not-available-for-testers/" hreflang="en">Fix &quot;app not available&quot; for Google Play closed testers</a></li><li><a href="https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/" hreflang="en">Automate Google Play closed testing with AI agents</a></li><li><a href="https://testerexchange.com/guide/best-way-to-get-12-testers/" hreflang="en">The best way to get 12 testers for Google Play closed testing</a></li><li><a href="https://testerexchange.com/guide/closed-testing-for-games/" hreflang="en">Closed testing for games on Google Play: a guide for Unity, Unreal and Godot</a></li><li><a href="https://testerexchange.com/guide/does-14-day-closed-test-reset/" hreflang="en">Does the 14-day closed test reset when testers drop out?</a></li><li><a href="https://testerexchange.com/guide/earn-money-testing-android-apps/" hreflang="en">Earn money testing Android apps: an honest guide</a></li><li><a href="https://testerexchange.com/guide/free-closed-testing-testers/" hreflang="en">How to get 12 testers for Google Play closed testing for free</a></li><li><a href="https://testerexchange.com/guide/friends-family-closed-testers/" hreflang="en">Using friends and family as your 12 Google Play testers</a></li><li><a href="https://testerexchange.com/guide/google-group-vs-email-list/" hreflang="en">Google Group or email list for your closed test?</a></li><li><a href="https://testerexchange.com/guide/google-play-closed-testing-requirements/" hreflang="en">Google Play closed testing requirements: the complete 2026 guide</a></li><li><a href="https://testerexchange.com/guide/google-play-review-time-after-closed-testing/" hreflang="en">After the 14 days: production access review time and your first release</a></li><li><a href="https://testerexchange.com/guide/insufficient-testing-engagement/" hreflang="en">Rejected after closed testing? How to fix &quot;more testing required&quot;</a></li><li><a href="https://testerexchange.com/guide/keep-testers-active-14-days/" hreflang="en">How to keep closed testers active for all 14 days</a></li><li><a href="https://testerexchange.com/guide/organization-vs-personal-developer-account/" hreflang="en">Organization vs personal Google Play developer account</a></li><li><a href="https://testerexchange.com/guide/paid-closed-testers-checklist/" hreflang="en">What to check before you pay for Google Play closed testers</a></li><li><a href="https://testerexchange.com/guide/production-access-questions/" hreflang="en">How to answer Google Play's production access questions</a></li><li><a href="https://testerexchange.com/guide/production-access-rejected/" hreflang="en">Production access rejected: what to do next</a></li><li><a href="https://testerexchange.com/tools/production-answers/" hreflang="en">Production access answer generator</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

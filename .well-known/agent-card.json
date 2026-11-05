@@ -1,0 +1,130 @@
+{
+    "protocolVersion": "0.3.0",
+    "name": "Tester Exchange",
+    "description": "Gets Android developers the 12 testers \u00d7 14 days Google Play requires for closed testing. Real people test on their own phones; pay once or test other apps for free.",
+    "url": "https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/a2a",
+    "preferredTransport": "JSONRPC",
+    "additionalInterfaces": [
+        {
+            "url": "https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/a2a",
+            "transport": "JSONRPC"
+        }
+    ],
+    "provider": {
+        "organization": "Tester Exchange",
+        "url": "https://testerexchange.com/"
+    },
+    "iconUrl": "https://testerexchange.com/favicon.svg",
+    "version": "1.0.0",
+    "documentationUrl": "https://testerexchange.com/agents/",
+    "capabilities": {
+        "streaming": false,
+        "pushNotifications": false,
+        "stateTransitionHistory": false
+    },
+    "securitySchemes": {
+        "bearer": {
+            "type": "http",
+            "scheme": "bearer",
+            "bearerFormat": "tx_ token",
+            "description": "Create a token at https://testerexchange.com/api"
+        }
+    },
+    "security": [
+        {
+            "bearer": []
+        }
+    ],
+    "defaultInputModes": [
+        "text/plain",
+        "application/json"
+    ],
+    "defaultOutputModes": [
+        "application/json",
+        "text/plain"
+    ],
+    "skills": [
+        {
+            "id": "get_testers",
+            "name": "Get 12 testers for an Android app",
+            "description": "Gets an Android app the 12 testers \u00d7 14 days Google Play requires for closed testing: adds the app, opens its test, applies credits, and returns progress plus the steps only a human can do (add our Google Group in Play Console; pay, or test other apps free). Send again to check progress. Needs a token.",
+            "examples": [
+                "Get 12 testers for com.example.app",
+                "{\"skill\":\"get_testers\",\"package_name\":\"com.example.app\",\"name\":\"My App\"}"
+            ],
+            "tags": [
+                "google play",
+                "closed testing",
+                "android",
+                "testers"
+            ]
+        },
+        {
+            "id": "campaign_report",
+            "name": "Closed-test report",
+            "description": "Testers, daily activity, feedback and the data for Play Console's production-access questions for one app. Needs a token.",
+            "examples": [
+                "Report for com.example.app"
+            ],
+            "tags": [
+                "report",
+                "production access"
+            ]
+        },
+        {
+            "id": "my_apps",
+            "name": "My apps",
+            "description": "The user's apps and the live status of each test. Needs a token.",
+            "examples": [
+                "List my apps"
+            ],
+            "tags": [
+                "status"
+            ]
+        },
+        {
+            "id": "buy_credits",
+            "name": "Checkout links",
+            "description": "Checkout links for credit packs; a human completes payment. Needs a token.",
+            "examples": [
+                "How do I pay?"
+            ],
+            "tags": [
+                "payment"
+            ]
+        },
+        {
+            "id": "pricing",
+            "name": "Pricing",
+            "description": "Credit packs and what a test costs.",
+            "examples": [
+                "How much does it cost?"
+            ],
+            "tags": [
+                "pricing"
+            ]
+        },
+        {
+            "id": "platform_stats",
+            "name": "Platform stats",
+            "description": "Members, apps testing, open tester slots, verified tester-days.",
+            "examples": [
+                "Platform stats"
+            ],
+            "tags": [
+                "stats"
+            ]
+        },
+        {
+            "id": "about",
+            "name": "About Tester Exchange",
+            "description": "What Tester Exchange is and every available action.",
+            "examples": [
+                "What can you do?"
+            ],
+            "tags": [
+                "help"
+            ]
+        }
+    ]
+}

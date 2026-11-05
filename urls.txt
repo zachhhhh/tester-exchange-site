@@ -110,6 +110,8 @@ https://testerexchange.com/yo/12-testers-app-builders/
 https://testerexchange.com/zh-cn/12-testers-app-builders/
 https://testerexchange.com/zh-tw/12-testers-app-builders/
 https://testerexchange.com/zu/12-testers-app-builders/
+https://testerexchange.com/guide/app-not-available-for-testers/
+https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/
 https://testerexchange.com/guide/best-way-to-get-12-testers/
 https://testerexchange.com/am/best-way-to-get-12-testers/
 https://testerexchange.com/ar/best-way-to-get-12-testers/
@@ -165,6 +167,9 @@ https://testerexchange.com/yo/best-way-to-get-12-testers/
 https://testerexchange.com/zh-cn/best-way-to-get-12-testers/
 https://testerexchange.com/zh-tw/best-way-to-get-12-testers/
 https://testerexchange.com/zu/best-way-to-get-12-testers/
+https://testerexchange.com/guide/closed-testing-for-games/
+https://testerexchange.com/guide/does-14-day-closed-test-reset/
+https://testerexchange.com/guide/earn-money-testing-android-apps/
 https://testerexchange.com/guide/free-closed-testing-testers/
 https://testerexchange.com/am/free-closed-testing-testers/
 https://testerexchange.com/ar/free-closed-testing-testers/
@@ -330,6 +335,8 @@ https://testerexchange.com/yo/google-group-vs-email-list/
 https://testerexchange.com/zh-cn/google-group-vs-email-list/
 https://testerexchange.com/zh-tw/google-group-vs-email-list/
 https://testerexchange.com/zu/google-group-vs-email-list/
+https://testerexchange.com/guide/google-play-closed-testing-requirements/
+https://testerexchange.com/guide/google-play-review-time-after-closed-testing/
 https://testerexchange.com/guide/insufficient-testing-engagement/
 https://testerexchange.com/am/insufficient-testing-engagement/
 https://testerexchange.com/ar/insufficient-testing-engagement/
@@ -440,6 +447,7 @@ https://testerexchange.com/yo/keep-testers-active-14-days/
 https://testerexchange.com/zh-cn/keep-testers-active-14-days/
 https://testerexchange.com/zh-tw/keep-testers-active-14-days/
 https://testerexchange.com/zu/keep-testers-active-14-days/
+https://testerexchange.com/guide/organization-vs-personal-developer-account/
 https://testerexchange.com/guide/paid-closed-testers-checklist/
 https://testerexchange.com/es/paid-closed-testers-checklist/
 https://testerexchange.com/id/paid-closed-testers-checklist/
@@ -501,6 +509,8 @@ https://testerexchange.com/yo/production-access-questions/
 https://testerexchange.com/zh-cn/production-access-questions/
 https://testerexchange.com/zh-tw/production-access-questions/
 https://testerexchange.com/zu/production-access-questions/
+https://testerexchange.com/guide/production-access-rejected/
+https://testerexchange.com/guide/set-up-closed-testing-track/
 https://testerexchange.com/tools/production-answers/
 https://testerexchange.com/am/tools/production-answers/
 https://testerexchange.com/ar/tools/production-answers/

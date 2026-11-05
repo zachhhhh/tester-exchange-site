@@ -26,21 +26,27 @@
 - Bring your own testers: share https://testerexchange.com/t/<package> with friends; they join free and fill seats.
 
 ## For AI agents
+- API keys: the user signs in at https://testerexchange.com/api and taps "Create API key" (format `tx_` + 48 hex).
+  The key acts as that user: it can spend their credits but can't pay or delete the account.
 - One call does the whole setup: `get_testers` (package_name, name?). It adds the app, opens its test, applies
-  credits, and returns the only steps a human must do (add the group in Play Console; pay or link a phone).
-  Call it again any time to check progress.
+  credits, and returns `human_steps` (add our Google Group in Play Console; pay with one of `buy_links`, or test other
+  apps free at https://testerexchange.com/earn). Call it again any time to check progress.
 - MCP server (Streamable HTTP, no OAuth): https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp
   Auth: header `Authorization: Bearer tx_…` or `?token=tx_…`. Public tools (about, platform_stats, pricing) work
-  without a token. Users create tokens at https://testerexchange.com/api
+  without a key.
+  Claude Code: `claude mcp add --transport http tester-exchange https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp --header "Authorization: Bearer tx_…"`
+- A2A (Agent2Agent 0.3, JSON-RPC): agent card https://testerexchange.com/.well-known/agent-card.json, endpoint
+  https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/a2a. `message/send` with text ("get 12 testers for
+  com.example.app") or a data part {"skill": "get_testers", "package_name": "com.example.app"}; same Bearer key.
 - HTTP API (one endpoint): POST https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/agent_call
   headers: `apikey: sb_publishable_OwXT7OfwIGkuIn420mavVA_MsAkzZGf` (public key), `Content-Type: application/json`
-  body: {"p_token": "tx_…" | null, "p_action": "help", "p_args": {}}
-  Actions: help, stats, pricing (public); get_testers (start here), me, my_apps, add_app, start_campaign, campaign,
-  add_testers, set_status, friends, start_friends_test, fill_from_exchange, join, my_tests, share_kit, buy_credits (token).
+  body: {"p_token": "tx_…" | null, "p_action": "get_testers", "p_args": {"package_name": "com.example.app"}}
+  Actions: help, stats, pricing, open_tests (public); get_testers (start here), me, my_apps, add_app, start_campaign,
+  campaign, add_testers, set_status, friends, start_friends_test, fill_from_exchange, join, my_tests, share_kit, buy_credits (key).
 - OpenAPI: https://testerexchange.com/openapi.json · Agent docs: https://testerexchange.com/agents/
 - What an agent can't do: the 14 days of real use on a phone, and paying (checkout needs a human).
 
-## Guides (English; every guide below is also in all 54 other site languages at /<lang>/, e.g. /es/, /hi/, /id/, /pt/, /ar/, /zh-cn/)
+## Guides (English; the first nine are also in all 54 other site languages at /<lang>/, e.g. /es/, /hi/, /id/, /pt/, /ar/, /zh-cn/)
 - [How to get 12 testers for Google Play closed testing](https://testerexchange.com/guide/)
 - [Fix "more testing required" after closed testing](https://testerexchange.com/guide/insufficient-testing-engagement/)
 - [Answering the production access questions](https://testerexchange.com/guide/production-access-questions/)
@@ -51,6 +57,16 @@
 - [Free ways to find closed testers](https://testerexchange.com/guide/free-closed-testing-testers/)
 - [Friends and family as closed testers](https://testerexchange.com/guide/friends-family-closed-testers/)
 - [12 testers for apps made with App Inventor, Kodular, Flutter, Unity and other builders](https://testerexchange.com/guide/12-testers-app-builders/)
+- [Google Play closed testing requirements: the complete 2026 guide](https://testerexchange.com/guide/google-play-closed-testing-requirements/)
+- [How to set up a closed testing track in Play Console, step by step](https://testerexchange.com/guide/set-up-closed-testing-track/)
+- [Fix "app not available" for Google Play closed testers](https://testerexchange.com/guide/app-not-available-for-testers/)
+- [Production access rejected: what to do next](https://testerexchange.com/guide/production-access-rejected/)
+- [Organization vs personal Google Play developer account](https://testerexchange.com/guide/organization-vs-personal-developer-account/)
+- [Automate Google Play closed testing with AI agents](https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/)
+- [Does the 14-day closed test reset when testers drop out?](https://testerexchange.com/guide/does-14-day-closed-test-reset/)
+- [Earn money testing Android apps: an honest guide](https://testerexchange.com/guide/earn-money-testing-android-apps/)
+- [Closed testing for games on Google Play: a guide for Unity, Unreal and Godot](https://testerexchange.com/guide/closed-testing-for-games/)
+- [After the 14 days: production access review time and your first release](https://testerexchange.com/guide/google-play-review-time-after-closed-testing/)
 - [Free production-access answer generator](https://testerexchange.com/tools/production-answers/)
 - Full text of every guide in one file: https://testerexchange.com/llms-full.txt
 

@@ -39,15 +39,15 @@ Installs from people who never open the app, or one shared phone with many accou
 - Friends and family. Free, but most people don't have 12 Android users willing to open an app daily for two weeks.
 - Test-for-test communities. Developers test each other's apps. Free, and testers understand what's needed. The risk is people who opt in and never open your app.
 - Paid tester services. Usually US$10–35 per app. Fast, but you're trusting that the testers are real and active.
-- Tester Exchange. A free test-for-test exchange where daily use is verified by a companion app on each tester's phone, and testers are paid in credits only for verified days.
+- Tester Exchange. A free test-for-test exchange: testers open each app once a day from their phone's browser, every day is recorded, and testers are paid in credits only for the days they actually opened the app.
 
 ### How Tester Exchange works
 
 1. Add your app: paste its Google Play link at /start.
 2. Choose how to get testers: free (your phone is given apps to test, a minute a day, and each app you test brings a tester to yours) or skip testing with credits (paid apps get testers first).
-3. Install the Tester Exchange Android app on your phone and allow Usage access. It only checks the apps you joined.
+3. Open testerexchange.com/earn in your Android phone's browser and sign in with Google. There's no app to install.
 4. Add your testers to your closed test in Play Console.
-5. Testers open your app every day for 14 days, and the companion app on their phones confirms each day.
+5. Testers open your app every day for 14 days, and each day they open it is recorded.
 6. After 14 days, open your report: daily active testers, feedback, and draft answers for Play Console's production-access questions.
 
 ### Keep testers engaged for 14 days
@@ -128,6 +128,165 @@ After 14 days, apply for production access in the Play Console dashboard. Google
 
 ---
 
+## Fix "app not available" for Google Play closed testers
+URL: https://testerexchange.com/guide/app-not-available-for-testers/
+
+Your testers open the link and Google Play says the app isn't available, can't be found, or isn't compatible. Every day this lasts is a day your 14-day clock isn't running. Almost always the cause is one of a handful of setup problems, and you can check them all in about ten minutes. Work through this list in order.
+
+### Quick checklist
+
+- Is the release on the closed track Published, not In review or Draft?
+- Is the tester's email (or your Google Group) on that same closed track?
+- Did the tester open the opt-in link and tap to become a tester?
+- Is the tester signed in to Google Play with that same Google Account?
+- Is the tester's country selected for the app?
+- Does the tester's phone meet your minimum Android version and device requirements?
+- Has it been a few hours since the first publish?
+- Is the tester also opted into your internal test?
+
+### 1. The track isn't published yet
+
+Google says the opt-in link displays only when the app status is Published. If your first closed release is still in review, or saved but never sent for review, testers will see nothing useful.
+
+Open Publishing overview. If there are changes waiting to be sent, send them. If managed publishing is on, approved changes wait until you click Publish. Also check the Inbox and Policy status pages for rejections.
+
+### 2. It was published minutes ago
+
+Google notes that after the first publish the test link can take several hours to become available, and later changes can also take several hours. If everything else is right, wait half a day before changing anything. Changing settings repeatedly can trigger new reviews and add delay.
+
+### 3. The tester isn't on the track
+
+Being invited is not the same as being on the track. Open Test and release, then Testing, then Closed testing, then Manage track, then Testers. Make sure the email list with the tester's address is ticked for this track and saved, or that your Google Group address is entered under Google Groups.
+
+With a Google Group, the tester also has to be a member of the group before opting in. Google says only members of the specified groups can join the test. If you use Tester Exchange, the group to add is testerexchange-testers@googlegroups.com, and we add our testers to it.
+
+### 4. Wrong Google Account on the phone
+
+This is the most common cause with friends and family. The tester gave you their work email, or the phone has two Google Accounts and the Play Store is using the other one.
+
+Ask the tester to open the Play Store, tap their profile picture and check which account is active. The opt-in link must be opened while signed in to the account on your list, in the same browser profile. Then they install from the Play Store on the phone with that account. If needed, add their other address to your list too.
+
+### 5. The tester never opted in
+
+Each tester must open the opt-in link and accept, one by one. Sending them the Play Store link alone isn't enough. After they accept, Google shows a link to download the app from Google Play. Testers can't find a closed test by searching the Play Store.
+
+### 6. Country or device not supported
+
+If the tester's country isn't in your Countries / regions list, the app won't be available to them. Add the country; Google says country changes apply across all tracks.
+
+"Your device isn't compatible" usually means your minimum SDK, required features (for example a camera or specific CPU architecture) or device exclusions rule out that phone. Check the Device catalog in Play Console. Games built only for 64-bit ARM, or with high minimum Android versions, often hit this.
+
+### 7. They're in your internal test
+
+Google says users who opt into internal testing aren't eligible for open and closed testing. If a tester joined your internal test earlier, they must leave it first (open the internal opt-in link and leave the program), then opt into the closed test.
+
+### 8. Play Store is showing an old state
+
+If all of the above is right, ask the tester to close the Play Store, clear its cache in Android Settings, and try again. Opening the opt-in link in Chrome on the phone rather than inside another app's built-in browser also helps.
+
+### Protect your 14 days while you fix it
+
+The requirement counts 12 testers opted in continuously for 14 days, so testers who can't get in don't help. Recruit a few extra (15 is a good target) so one stuck tester doesn't delay the whole test. Tester Exchange replaces testers who stop, and its setup screen tells you exactly which Play Console step to take if our testers can't install your app.
+
+### Frequently asked questions
+
+**Why does the Play Store say "item not found"?** Usually the release isn't published yet, the tester is signed in with a different Google Account, or they aren't on the track's email list or Google Group.
+
+**How long after publishing can testers install?** Google says the first test link can take several hours to become available.
+
+**Do testers who can't install count toward 12?** Only opted-in testers count. Someone who never managed to opt in doesn't help your 14 days.
+
+**Can testers find my app by searching Google Play?** No. Closed tests don't appear in search. Share the opt-in link or the Play Store link.
+
+**Do I need to republish after adding testers?** Adding emails to a list or members to a Google Group doesn't need a new release. Save the Testers tab changes and send them if Publishing overview asks.
+
+---
+
+## Automate Google Play closed testing with AI agents
+URL: https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/
+
+If you already ship code with an AI agent, you can hand it most of the busywork of Google Play's closed testing requirement too: listing your app, recruiting testers, checking progress and pulling numbers for the production access form. Tester Exchange has an MCP server, a one-endpoint HTTP API and an A2A agent card for this. This guide shows how to connect Claude Code, Claude Desktop, Cursor and other clients, what to ask, and the parts no agent can do for you.
+
+### What an agent can and can't do
+
+Google requires personal developer accounts created after 13 November 2023 to run a closed test with at least 12 testers opted in for 14 continuous days before applying for production. Most of the work around that is coordination, which agents handle well.
+
+- An agent can: add your app, open a tester campaign, apply your credits, check how many testers are active, pause or close a campaign, fetch the daily-activity report and help draft production access answers from it.
+- A human must: add the testers' Google Group to the closed track in Play Console, publish the release, pay for credits (checkout always happens in a person's browser) and click Apply for production.
+- Nobody can automate: the 14 days of real use. That is done by real people on their own Android phones, which is the whole point of Google's rule.
+
+### 1. Create a token
+
+1. Sign in at https://testerexchange.com/api.
+2. Create a personal token. It starts with tx_. Copy it now and store it like a password.
+3. Tokens can be revoked at any time. A token can spend credits on campaigns, but it can't pay, withdraw money or delete your account.
+
+### 2. Connect the MCP server
+
+The MCP server uses Streamable HTTP at https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp. Send your token in the header Authorization: Bearer tx_YOUR_TOKEN.
+
+Claude Code: run this once in your terminal.
+
+claude mcp add --transport http tester-exchange https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp --header "Authorization: Bearer tx_YOUR_TOKEN"
+
+Claude Desktop, Cursor, VS Code and other clients with a JSON config: add a server named tester-exchange with type http, the URL above, and a headers entry with Authorization set to Bearer tx_YOUR_TOKEN. The exact config file location depends on your client; check its MCP documentation.
+
+Clients that only take a URL (some ChatGPT and web connectors): the docs at https://testerexchange.com/agents/ list a URL form for them. Without a token, the public tools (what Tester Exchange is, pricing, platform stats) still work.
+
+### 3. The one tool to start with: get_testers
+
+You don't need to learn the whole tool list. The main tool is get_testers(package_name, name?). One call adds your app, opens its test, applies your credits and returns your progress plus the steps only a human can do, such as adding the Google Group in Play Console. Call it again any time to check progress.
+
+Other tools cover the details: my_apps, campaign_report (testers, daily activity, feedback and production-access data), add_testers, set_campaign_status (pause, resume or close; unused credits go back to your balance), share_kit and buy_credits_links, which returns checkout links for a human to pay.
+
+### Prompts that work
+
+- "Get 15 testers for com.example.app and tell me what I need to do in Play Console."
+- "Check my Tester Exchange campaign for com.example.app. How many testers were active each day this week?"
+- "Pull the campaign report and draft my production access answers. Use only the real numbers."
+- "Close the campaign for com.example.app now that production access is approved."
+
+Ask for 15 testers rather than 12, so a dropout can't take you under Google's minimum.
+
+### HTTP API for scripts and CI
+
+If your tool doesn't speak MCP, use the HTTP endpoint: POST https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/agent_call. The body is JSON with p_token (your tx_ token), p_action (for example help, my_apps or start_campaign) and p_args (for example a package_name and a tester count). Send the public apikey header shown in the docs.
+
+Call the help action first: it returns every action and its arguments. The full schema is at https://testerexchange.com/openapi.json, which works with ChatGPT custom GPT actions and other OpenAPI tools.
+
+### A2A agent card
+
+For agent-to-agent setups, Tester Exchange publishes an A2A agent card at https://testerexchange.com/.well-known/agent-card.json. Orchestrators that support the A2A protocol can discover what the agent offers and how to call it. Use the same tx_ token for anything tied to your account.
+
+### A full run, start to finish
+
+1. You upload your first .aab to the closed track in Play Console.
+2. Your agent calls get_testers for your package name and tells you to add testerexchange-testers@googlegroups.com under Google Groups on the closed track.
+3. You add the group, save, and make sure the release is published.
+4. If you lack credits, the agent gives you a checkout link. You pay ($12.99 for 12 testers, $14.99 for 15, $22.99 for 25) or earn credits free by testing other apps at https://testerexchange.com/earn.
+5. Real testers install and use your app for 14 days. Your agent checks progress daily and warns you if active testers fall.
+6. On day 15, the agent pulls the campaign report and drafts your production access answers. You review them and click Apply for production.
+
+### Safety notes
+
+- Keep tokens out of git. Put them in your client's secret store or an environment variable.
+- Tokens are stored only as hashes on our side and are limited to 10 per account. Revoke any token you no longer use.
+- Read what the agent writes in your production form before you submit. Google asks you to describe your test truthfully.
+
+### Frequently asked questions
+
+**Can an AI agent complete the 14-day test for me?** No. The 14 days need real people using your app on their own phones. Agents handle setup, monitoring and reporting.
+
+**Can the agent pay for testers?** No. It can return checkout links, but payment always happens in a human's browser.
+
+**Which clients work with the MCP server?** Any client that supports remote MCP over Streamable HTTP with a custom header, including Claude Code, Claude Desktop, Cursor and VS Code. Others can use the HTTP API.
+
+**Where do I get a token?** At https://testerexchange.com/api after signing in. Tokens start with tx_ and can be revoked at any time.
+
+**Does the agent change anything in my Play Console?** No. It has no access to your Play Console. It tells you the steps to do there.
+
+---
+
 ## The best way to get 12 testers for Google Play closed testing
 URL: https://testerexchange.com/guide/best-way-to-get-12-testers/
 
@@ -185,6 +344,219 @@ Google's minimum is 12, and every tester must stay opted in for 14 days in a row
 
 ---
 
+## Closed testing for games on Google Play: a guide for Unity, Unreal and Godot
+URL: https://testerexchange.com/guide/closed-testing-for-games/
+
+Games go through the same closed testing requirement as any other app: if your personal developer account was created after 13 November 2023, you need at least 12 testers opted in for 14 days in a row before you can apply for production. Games have their own pitfalls, though: big downloads, devices that can't run the build, and testers who open the game once and never come back. This guide covers what game developers should set up and what to ask testers to do.
+
+### The same rule, with game-specific risks
+
+Google treats games and apps alike here. Run a closed test with at least 12 testers who stay opted in continuously for 14 days, then apply for production. The production form asks about tester engagement, feedback and what you changed, so a test where nobody played past the tutorial makes for weak answers.
+
+The risks that hit games more than other apps:
+
+- Device compatibility: testers see "your device isn't compatible" and can't install.
+- Download size: a large first download on mobile data puts testers off.
+- Session length: people won't play a 20-minute level every day for two weeks.
+- Content gaps: a vertical slice with one level runs out of things to do by day three.
+
+### Build settings to check first
+
+- Unity: build an Android App Bundle (.aab), use IL2CPP with ARM64 enabled (Google Play requires 64-bit support), and set a minimum API level that doesn't exclude more phones than you need to. If your build is large, use Play Asset Delivery rather than one huge download.
+- Unreal Engine: package for Android as an App Bundle with arm64, check the target and minimum SDK levels in Project Settings, and keep the first download small by moving optional content into asset packs.
+- Godot: use the Android export template with Gradle build enabled and export as AAB. Make sure arm64-v8a is included, and test the renderer on a low-end phone, because some devices handle the Compatibility renderer better than Forward+ or Mobile.
+- All engines: target the API level Google Play currently requires for new apps, and sign with Play App Signing.
+
+After uploading, open the Device catalog in Play Console to see how many devices your build supports. If a big share is excluded, fix it before testers arrive.
+
+### Set up the test
+
+1. Create or open the closed track: Test and release, then Testing, then Closed testing.
+2. Add countries where your testers live.
+3. Add testers with an email list or a Google Group. With Tester Exchange, add testerexchange-testers@googlegroups.com.
+4. Upload the .aab, send the release for review and wait until it shows Published.
+5. Share the opt-in link. The first time, it can take several hours to start working.
+
+If testers report "app not available", see the guide on fixing that. It covers wrong accounts, countries and unpublished tracks.
+
+### What to ask testers to play
+
+Give testers small daily goals that fit into a couple of minutes. Real, varied play is what helps you, and it's what you'll describe later in the production form.
+
+- Days 1 to 3: finish the tutorial and the first level. Report anything confusing.
+- Days 4 to 7: play one short session a day; try settings, sound, controls and pausing.
+- Days 8 to 11: try a new build with fixes; replay a level to see if it feels better.
+- Days 12 to 14: play the hardest content available and report crashes, lag or battery drain.
+
+If your game has daily rewards, a short daily challenge or a quick mode, point testers at it. It fits the daily rhythm naturally.
+
+### Show engagement
+
+- Ship at least one update during the test, ideally two. Fixing a reported crash is the best story for the production form.
+- Use Android vitals and the pre-launch report in Play Console to find crashes and ANRs on real devices.
+- Collect written feedback in a simple form: device model, what they did, what happened.
+- Keep a log of daily active testers, sessions, bugs found and builds shipped.
+
+### Multiplayer and online games
+
+If your game needs a server, keep it running for all 14 days, and make sure the game is still playable when testers are alone. A lobby that never fills looks like an empty test. Add bots or a solo mode for the test period if you can.
+
+If you need sign-in, give testers a working guest mode or clear instructions. Sign-in walls lose testers on day one.
+
+### Getting enough players
+
+Ask for 15 testers rather than 12, because some players drop out of games quickly. Tester Exchange sends real people who play on their own Android phones and shows daily use for each tester: $12.99 for 12, $14.99 for 15 or $22.99 for 25, paid once. You can also earn testers free by testing other developers' apps and games at https://testerexchange.com/earn.
+
+### Frequently asked questions
+
+**Do games need closed testing too?** Yes. The requirement applies to all apps from personal accounts created after 13 November 2023, including games.
+
+**Can my game still be unfinished during closed testing?** Yes, a closed test is for a work in progress. But testers need enough content to play for two weeks, and you should keep improving it during the test.
+
+**Why can't some testers install my game?** Usually device compatibility: a high minimum Android version, missing 64-bit support, or required hardware features. Check the Device catalog in Play Console.
+
+**How long should testers play each day?** Google doesn't set a number. A short real session every day is better than one long session and then nothing.
+
+**Should I use Play Asset Delivery for the test?** If your game is large, yes. Smaller first downloads mean more testers actually install and start playing.
+
+---
+
+## Does the 14-day closed test reset when testers drop out?
+URL: https://testerexchange.com/guide/does-14-day-closed-test-reset/
+
+Short answer: one tester leaving doesn't reset anything by itself, but falling below 12 opted-in testers does break your progress. Google counts testers who have been opted in continuously, so the people who leave, and the people who replace them, change the math. This guide explains how the count works according to Google's Help Center, what to do mid-test, and why 15 is the number to aim for.
+
+### What Google actually counts
+
+Google's requirement for personal accounts created after 13 November 2023 is a closed test with at least 12 testers who have been opted in continuously for at least 14 days. Three details in Google's wording matter here:
+
+- The 14 days must be consecutive. There is no pausing and resuming.
+- Testers who opt in, test for fewer than 14 days and then opt out don't count toward the requirement.
+- At least 12 testers must be opted in when you apply for production access.
+
+Think of it per tester: each person has their own clock that starts when they opt in. You qualify when at least 12 people have each been opted in for 14 days in a row, and are still opted in.
+
+### Common scenarios
+
+- You had 15, one leaves on day 8. The other 14 keep counting. On day 14 you still have 14 qualifying testers. No problem.
+- You had exactly 12, one leaves on day 8. Now only 11 people can reach 14 days. You need a replacement, and that person's 14 days start on the day they opt in. Your earliest apply date moves back about a week.
+- A tester opts out and back in. Google says opting out and back in restarts that tester's consecutive count.
+- A tester stays opted in but stops opening the app. They still count toward 12 for the opt-in rule, but they hurt you on engagement, which Google asks about in the production form.
+- A tester uninstalls the app but doesn't opt out. They are probably still opted in, but they aren't testing. Treat them like the previous case.
+
+### Why ask for 15 testers, not 12
+
+Dropouts are normal. People change phones, forget, run out of storage or lose interest. With exactly 12, any single dropout before day 14 pushes your apply date back. With 15, you can lose three people and still apply on time.
+
+It also helps engagement. Google looks at how testers used the app. If three of fifteen are quiet, the other twelve still show steady use. If three of twelve are quiet, a quarter of your test looks inactive.
+
+On Tester Exchange, 15 testers cost $14.99 compared with $12.99 for 12, which is cheap insurance against an extra week of waiting.
+
+### What to do mid-test
+
+1. Check the opted-in tester count in Play Console every two or three days.
+2. If you see a drop, add replacements at once. Every day you wait is a day added to their 14.
+3. Message quiet testers with one concrete task ("try the new search screen in build 1.0.3") rather than a general reminder.
+4. Ship an update during the test. A fresh build gives testers a reason to open the app again.
+5. Don't apply until you have at least 12 testers who have each passed 14 consecutive days and are still opted in. A margin of two or three is safer.
+
+### Things that don't reset your progress
+
+- Uploading new builds to the same closed track. Testers stay opted in and get the update.
+- Adding more testers. New people start their own 14 days; existing testers keep theirs.
+- Editing the store listing or release notes.
+
+Things to avoid: removing the email list or Google Group from the track, or deleting the track. Testers may lose access, and it's unclear how Google then treats their opt-in, so don't risk it.
+
+### How Tester Exchange handles dropouts
+
+On Tester Exchange, testers are real people on their own Android phones and you see daily use for each one. If a tester stops, a new one takes the seat, and you only pay for verified days. Unused credits stay on your balance. You can pay once for 12, 15 or 25 testers, or get testers free by testing other developers' apps at https://testerexchange.com/earn in your phone's browser.
+
+### Frequently asked questions
+
+**If one tester leaves, does my 14 days start over?** Not for the others. Each tester's clock is separate. You only lose time if you fall below 12 testers who can complete 14 consecutive days.
+
+**Does a replacement tester start at day 1?** Yes. Their 14 consecutive days start when they opt in.
+
+**What if a tester opts out by mistake and rejoins?** Google says opting out and back in restarts their consecutive count.
+
+**Do inactive testers count?** If they stay opted in, they count toward the 12. But low engagement is a common reason Google asks for more testing.
+
+**How many spare testers should I have?** Aim for 15 in total, three above Google's minimum.
+
+---
+
+## Earn money testing Android apps: an honest guide
+URL: https://testerexchange.com/guide/earn-money-testing-android-apps/
+
+Developers with new Google Play accounts need real people to test their apps for 14 days before they can publish. You can be one of those people from your Android phone's browser at https://testerexchange.com/earn, with no extra app to install. You get paid a small amount for each test you finish. Let's be clear up front: this is pocket money, not an income. This guide explains how it works, what you have to do, and how much you can realistically expect.
+
+### Why developers need testers
+
+Google requires personal developer accounts created after 13 November 2023 to run a closed test with at least 12 testers who stay opted in for 14 days in a row before the app can go public. Many solo developers don't know 12 Android users who will do that, so they look for testers.
+
+Google also checks whether testers actually used the app. That's why the work is simple but needs to be real: open the app and use it, every day, on your own phone.
+
+### What you earn
+
+- US$0.50 for each finished 14-day test. A test counts as finished when you stayed in it and used the app for the full 14 days.
+- Cash out from US$3. That's six finished tests.
+- Payout methods: PayPal, Binance Pay or Payoneer.
+
+You can be in several tests at the same time, because each one only takes a minute or two a day. If you run five tests at once, you might finish five tests in about two weeks and earn US$2.50. Treat it as a small bonus for a few minutes a day, not a job.
+
+### How it works, step by step
+
+1. On your Android phone, open https://testerexchange.com/earn in your browser and sign in.
+2. Pick an app to test. You'll be asked to join the developer's test through Google Play, using the Google Account on your phone.
+3. Install the app from Google Play through the test link.
+4. Open the app and actually use it for a minute or two every day for 14 days. Try the main features, and send feedback if something breaks or confuses you.
+5. Stay in the test for all 14 days. Don't leave the test or uninstall the app early.
+6. When the test is finished, the reward is added to your balance. Cash out once you reach US$3.
+
+### The rules
+
+- Real phone only. Use your own Android phone. Emulators, cloud phones and device farms are not allowed.
+- One account per person. Don't create extra accounts or use family members' accounts to collect more tests.
+- Use the app for real. Opening and closing it instantly doesn't help the developer and isn't real testing.
+- Finish what you start. Leaving early can hurt the developer, because Google counts testers who stay opted in for 14 continuous days.
+- Don't leave public reviews for test versions. Google doesn't allow public reviews of test builds anyway; send feedback to the developer instead.
+
+Accounts that break these rules may be removed from testing. The rules exist because developers are relying on you to be a real tester.
+
+### How to be a good tester
+
+- Set a daily reminder at the same time, for example with your morning coffee.
+- Spend a minute on a different screen each day, not just the opening screen.
+- Write short, specific feedback: what you did, what you expected, what happened.
+- Keep the apps until the 14 days are over, even if you don't love them.
+
+### Is it safe?
+
+You install apps from Google Play, not from random files, so they go through Google's normal protections. You don't need to install any Tester Exchange app; everything runs in your browser. Still, use common sense: don't give a test app permissions it obviously doesn't need, and don't enter real payment details or sensitive personal information into an app you're testing.
+
+### Who this is for
+
+It suits people who already spend time on their phone and like trying new apps, students who want a little extra, and developers who want testers for their own app. Developers can test other apps free in exchange for testers on theirs, which is often worth more than the cash.
+
+If you need real income, this isn't it. The pay is small and depends on how many tests are open. But it's honest, flexible and takes very little time.
+
+### Frequently asked questions
+
+**How much can I earn testing apps?** US$0.50 for each finished 14-day test. Running several tests at once, most people earn a few dollars a month.
+
+**What is the minimum payout?** US$3, paid to PayPal, Binance Pay or Payoneer.
+
+**Do I need to install a Tester Exchange app?** No. You use https://testerexchange.com/earn in your Android phone's browser. You only install the apps you test, from Google Play.
+
+**Can I use an iPhone?** No. These are Google Play closed tests, so you need an Android phone with a Google Account.
+
+**Can I have two accounts?** No. One account per person, on a real phone.
+
+**What if I stop before day 14?** The test isn't finished, so it doesn't pay. It also hurts the developer, so only join tests you plan to finish.
+
+---
+
 ## How to get 12 testers for Google Play closed testing for free
 URL: https://testerexchange.com/guide/free-closed-testing-testers/
 
@@ -206,7 +578,7 @@ Tester Exchange turns the test-for-test swap into something you can rely on. You
 - Bring your own testers: share your app's link with friends and family. They install the free Tester Exchange app, which checks each of their 14 days for you, so you don't have to chase anyone.
 - Free test exchange: link your phone and Tester Exchange gives you other developers' apps to test, a minute a day. Every app you test brings a tester to yours, and friends you invite fill seats too.
 - Skip testing: buy a credit pack instead. Paid apps get testers before anyone else.
-- Verified daily use: the Tester Exchange Android app checks on each tester's real phone that your app was opened every day, so you know who is actually testing.
+- Verified daily use: each day a tester opens your app on their own phone is recorded, so you know who is actually testing.
 
 ### How to choose
 
@@ -264,7 +636,7 @@ Yes. Google doesn't say who your testers must be. What it reviews is whether rea
 Friends mean well and still forget by day four. Give them a reason and a reminder to open the app every day.
 
 - A tiny daily task: "tap one thing and tell me if it was confusing" beats "please test my app".
-- Automatic reminders: the Tester Exchange Android app checks each day on the tester's phone whether your app was opened, and reminds them in the evening if it wasn't.
+- Automatic reminders: testers get a daily email with the apps they still need to open that day.
 - A progress view for you: you see who is on day 6 and who stopped, so you know whom to nudge before the clock resets.
 - Ship an update in week two: it gives everyone a new reason to open the app and shows Google an active test.
 
@@ -327,6 +699,161 @@ Every closed testing track needs a list of who may install the app. Play Console
 **Can I use both?** Yes. A track can have email lists and Google Groups at the same time.
 
 **Can testers stay anonymous?** With a Google Group you never need to collect emails yourself. With an email list you need each tester's Google account email.
+
+---
+
+## Google Play closed testing requirements: the complete 2026 guide
+URL: https://testerexchange.com/guide/google-play-closed-testing-requirements/
+
+If you opened a personal Google Play developer account after 13 November 2023, you can't publish straight to production. Google first wants a closed test with at least 12 testers who stay opted in for at least 14 days in a row. Then you fill in a short production access form and wait for Google's review. This guide explains every part of the rule as Google states it in the Play Console Help Center, what actually trips developers up, and a realistic timeline from first upload to public release.
+
+### Who has to do closed testing
+
+Google's Help Center says the requirement applies to personal developer accounts created after 13 November 2023. Until those apps pass it, they are not eligible for distribution on Google Play.
+
+If your account was created before that date, or it is an organization account (a business verified with a D-U-N-S number), the closed testing requirement does not apply to you. Each app on an affected personal account goes through the process before it gets production access.
+
+- Personal account, created after 13 Nov 2023: closed test required.
+- Personal account, created before 13 Nov 2023: not required.
+- Organization account: not required, but you need a D-U-N-S number and a verified organization website. See the guide on organization vs personal accounts.
+
+### The rule in one sentence
+
+Run a closed test with at least 12 testers who have been opted in continuously for at least 14 days, then apply for production access from the Play Console Dashboard.
+
+Google's wording matters. The 14 days must be consecutive. Testers who opt in, test for fewer than 14 days and then opt out do not count. And at least 12 testers must still be opted in on the day you apply.
+
+The number was 20 testers until December 2024, when Google lowered it to 12. The 14 days did not change.
+
+### What counts as a tester
+
+- A real Google Account that opted in. Being on your email list or in your Google Group is not enough. Each person has to open the opt-in link and tap to become a tester.
+- On the closed track. People who opted into your internal test are not eligible for closed tests until they leave the internal test. Internal testing does not count toward the requirement.
+- Opted in the whole time. If someone leaves and rejoins, their consecutive count starts again.
+- Using the app. Google does not publish a minimum number of opens, but the production form asks how testers engaged and whether usage matched what you expect in production. Testers who install once and disappear are the main reason applications fail.
+
+### A realistic timeline
+
+1. Day 0: create the closed track, add testers (an email list or a Google Group), upload an app bundle and send the release for review.
+2. Hours to a few days later: the release is published and the opt-in link works. Google notes the first test link can take several hours to become available.
+3. Days 1 to 14: at least 12 testers stay opted in and use the app. Ship at least one update based on their feedback.
+4. Day 15 or later: click Apply for production on the Dashboard and answer the questions.
+5. About a week later: Google says the review usually takes seven days or less, but can occasionally take longer. You get an email when it's done.
+6. After approval: the Production page unlocks. Your first production release still goes through normal app review.
+
+Plan for roughly three to four weeks from your first closed-test upload to a public listing, if nothing goes wrong.
+
+### The production access form
+
+Google's form has three parts. Part one is about your closed test: how easy it was to recruit testers, how they engaged, and a summary of their feedback and how you collected it. Part two is about your app: target audience, what value it gives users, and how many installs you expect in the first year. Part three is about production readiness: what you changed after the test and how you decided the app was ready.
+
+Write the answers before you open the form. Google warns that your answers are lost if you leave the page before clicking Next or Apply. Our guide to the production access questions and the free answer tool at https://testerexchange.com/tools/production-answers/ help you draft them from real numbers.
+
+### Why apps don't pass
+
+Google's Help Center lists two reasons you may need to keep running your closed test: fewer than 12 opted-in testers, or not enough engagement from testers. In practice developers hit these problems:
+
+- Asking exactly 12 people. One dropout on day 10 and you are at 11.
+- Testers who install and never open the app again.
+- Many accounts on one phone, or accounts that are not real people.
+- No updates and no feedback during the 14 days, so there is nothing to describe in the form.
+- Short, generic answers in the questionnaire.
+
+If you already got a "more testing required" reply, read the guide on insufficient testing engagement and the guide on what to do when production access is rejected.
+
+### Where to get 12 testers
+
+Google does not say where testers must come from. Friends and family work if you know enough Android users who will open your app daily for two weeks. Test-for-test communities are free but need your time. Paid services are faster.
+
+Tester Exchange does both. Pay once ($12.99 for 12 testers, $14.99 for 15, $22.99 for 25), or get testers free by testing other developers' apps at https://testerexchange.com/earn in your Android phone's browser. Every tester is a real person on their own phone, and you see daily use for each one. We recommend 15 testers so a dropout or two can't push you under 12.
+
+### Frequently asked questions
+
+**Is it 12 or 20 testers?** 12. Google lowered it from 20 to 12 in December 2024. The 14 continuous days stayed the same.
+
+**Does the requirement apply to my old account?** Only personal accounts created after 13 November 2023 must run the closed test. Older personal accounts and organization accounts are not covered by it.
+
+**Do I need to repeat closed testing for every app?** Production access is granted per app on affected personal accounts, so plan a closed test for each new app.
+
+**Does internal testing count?** No. It has to be a closed test. Google also says people opted into your internal test can't join your closed test until they leave the internal one.
+
+**Do testers have to use the app every day?** Google doesn't publish a minimum. It asks about engagement in the production form, so regular real use by most testers is the safest pattern.
+
+**How long does Google take to review production access?** Google says usually seven days or less, but it can occasionally take longer.
+
+---
+
+## After the 14 days: production access review time and your first release
+URL: https://testerexchange.com/guide/google-play-review-time-after-closed-testing/
+
+Your closed test has had at least 12 testers opted in for 14 days in a row. The Apply for production button is waiting. What happens next, and how long until your app is actually on Google Play? There are two separate waits: Google's review of your production access application, then the normal review of your first production release. This guide walks through both, using Google's Help Center for the official parts.
+
+### Before you click Apply
+
+- At least 12 testers are opted in right now. Google requires this on the day you apply, not just at some point.
+- Those testers have been opted in for at least 14 consecutive days.
+- Testers actually used the app, and you can describe how.
+- You have feedback to summarize and at least one change you made because of it.
+- Your App content declarations, store listing and Policy status have no open issues.
+
+Don't close the closed test or remove testers when you apply. If Google wants more testing, you'll need them.
+
+### Applying for production access
+
+1. Open Play Console and go to your app's Dashboard.
+2. Click Apply for production. Google shows this once the closed testing requirement is met.
+3. Answer the three parts: about your closed test (recruiting, engagement, feedback), about your app (audience, value, expected installs in year one) and about production readiness (what you changed and how you know it's ready).
+4. Click Apply. Google warns that answers are lost if you leave the page before Next or Apply, so draft them elsewhere first.
+
+The guide on production access questions explains each question, and the free tool at https://testerexchange.com/tools/production-answers/ drafts answers from your real numbers.
+
+### How long the review takes
+
+Google's Help Center says the review of a production access application usually takes seven days or less, but can occasionally take longer. The account owner gets an email when the review is complete.
+
+Google doesn't publish a way to speed this up. Waiting a few extra days past a week is not unusual, and contacting support usually won't change the timing. Use the time to keep testing and fixing bugs; testers stay on your closed track.
+
+### The two possible outcomes
+
+- Approved: you can access the Production page and publish your app on Google Play. Open testing also becomes available.
+- More testing needed: Google says you may need to continue running your closed test, for example if you had fewer than 12 opted-in testers or not enough engagement. See the guide on what to do when production access is rejected.
+
+### Your first production release
+
+Production access is not the same as being live. You still need to create a production release, and it goes through Google's normal app review like any other app. Google doesn't promise a fixed time for this review. New apps from new accounts often take longer than updates from established ones, so allow several days and plan your launch date with margin.
+
+1. Go to Test and release, then Production, then Create new release.
+2. Promote the build from your closed track, or upload a new .aab. Using the build your testers already ran is the safer choice.
+3. Write release notes and choose countries.
+4. Consider a staged rollout (for example 20% of users) so you can catch problems early.
+5. Send the changes for review in Publishing overview. If managed publishing is on, click Publish after approval to go live when you choose.
+6. Once approved and published, the app can take a little while to appear in Play Store search. Share the direct link in the meantime.
+
+### Full timeline from the first upload
+
+- Closed track setup and first review: hours to a few days.
+- Closed test: at least 14 days once 12 testers are opted in.
+- Production access review: usually seven days or less, according to Google.
+- First production release review: often a few days; can be longer.
+- Total: plan on about four weeks from first closed-test upload to public listing, and more if anything needs fixing.
+
+### After launch
+
+Google advises continuing to test your app before publishing production updates. Keep the closed track as a beta channel for your early testers, and consider open testing for a larger audience.
+
+If you haven't reached day 14 yet, the biggest time saver is starting with enough testers. Tester Exchange sends real people on their own Android phones: $12.99 for 12, $14.99 for 15 or $22.99 for 25, paid once, or free if you test other developers' apps at https://testerexchange.com/earn. We recommend 15 so a dropout can't push you under 12 right before you apply.
+
+### Frequently asked questions
+
+**How long does Google take to approve production access?** Google says the review usually takes seven days or less, but can occasionally take longer.
+
+**Is my app live once production access is approved?** No. You still create a production release, which goes through normal app review before it's published.
+
+**Can testers leave once I've applied?** Keep them until you're approved. Google requires at least 12 opted-in testers when you apply, and you may need to continue the test.
+
+**Why is the Apply for production button missing?** It appears once you meet the requirement: at least 12 testers opted in continuously for 14 days. Check the Dashboard for your current count.
+
+**Can I speed up the review?** Google doesn't offer a way to. Make sure there are no policy or declaration issues so the review isn't held up.
 
 ---
 
@@ -404,7 +931,7 @@ A list of 12 opted-in testers who stopped opening the app after day two meets th
 
 ### How Tester Exchange helps
 
-- Daily use verified on phones: the Tester Exchange Android app checks on each tester's own phone that your app was opened that day.
+- Daily use verified on phones: each day a tester opens your app on their own phone is recorded.
 - Daily report: see how many testers were active each day, plus the feedback they sent, so you spot dropouts early.
 - Production answers: get draft answers for the production-access questions based on your real test data.
 
@@ -421,6 +948,87 @@ Google still makes the final decision on production access. These tools help you
 **Should I really release an update during the test?** Yes. A new build that fixes reported issues shows Google that you used the test to improve the app, and it gives testers a reason to open it again.
 
 **Is written feedback required?** The production questionnaire asks what testers told you and what you changed. Written feedback gives you real examples to point to.
+
+---
+
+## Organization vs personal Google Play developer account
+URL: https://testerexchange.com/guide/organization-vs-personal-developer-account/
+
+The 12 testers, 14 days rule applies to personal developer accounts created after 13 November 2023. Organization accounts are not covered by it. That makes many solo developers ask whether they should register as a business instead. Sometimes that's the right call, but an organization account needs a real legal entity, a D-U-N-S number and a verified website. This guide compares both, using Google's Help Center as the source.
+
+### The two account types
+
+- Personal: Google describes it as meant for personal use, such as students, hobbyists and amateur developers. You verify your own legal name and address.
+- Organization: for businesses and organizations, including commercial, professional and government activity. You verify the organization with a D-U-N-S number, an official phone number and an organization website.
+
+Google says both account types have the same core functionality. Both can sell apps and in-app products once a payments profile is set up.
+
+### The testing difference
+
+Google requires personal accounts created after 13 November 2023 to run a closed test with at least 12 testers opted in continuously for at least 14 days, then apply for production access. Organization accounts don't have this step: they can release to production once the app passes normal review.
+
+That saves about three weeks per app. But it is the only real advantage for most indie developers, and getting an organization account can take longer than three weeks if you don't already have a company and a D-U-N-S number.
+
+### When an organization account is required
+
+Google says some kinds of apps must be published from an organization account. These include:
+
+- Financial products and services, such as banking, loans, stock trading and crypto wallets or exchanges.
+- Health apps, such as medical apps and human subjects research apps.
+- Apps approved to use Android's VpnService class.
+- Government apps, made by or for a government agency.
+
+If your app is in one of these categories, you need an organization account regardless of testing.
+
+### What an organization account needs
+
+- A D-U-N-S number for your legal entity from Dun & Bradstreet. Google says you can't create an organization account without a valid one. Applying is free; Google warns about third-party services that charge high fees for it. It can take days to weeks to arrive.
+- A legal entity whose name and address match the D-U-N-S record and your Google payments profile.
+- An organization website that you verify in Play Console.
+- An official organization phone number, plus contact and public developer email addresses and phone numbers, each verified with a one-time code.
+- The one-time registration fee that every new developer account pays.
+
+### Converting a personal account
+
+Google's Help Center describes a way to change a personal account into an organization account. In outline:
+
+1. Make sure your personal account is fully verified, with no pending warnings on the Play Console home page.
+2. Go to Manage account, then Account details, then About you, and verify your organization's website.
+3. Click Change account type and choose or create an organization payments profile with your D-U-N-S number.
+4. Enter organization details and contacts, and verify each email and phone.
+5. Complete any identity verification Google asks for, then link the payments profile and save.
+
+Google says you can't change an organization account back to personal, and that you should wait at least 72 hours after switching before submitting new apps. Google's page on converting doesn't spell out how apps already in closed testing are treated, so check your Dashboard after the switch before you stop a running test.
+
+### Trade-offs
+
+- Cost: forming a company can mean registration fees, an accountant and yearly filings, depending on your country. Twelve testers cost far less.
+- Time: D-U-N-S plus website verification plus organization checks can take longer than a 14-day test.
+- Credibility: a company name can look more trustworthy to users and partners.
+- No way back: you can't convert an organization account to personal.
+
+### Which should you choose?
+
+1. Your app is finance, health, VPN or government: organization account.
+2. You already have a company with a D-U-N-S number: organization account. It skips the test.
+3. You're a solo developer or hobbyist without a company: stay personal and run the closed test. It's faster and cheaper than forming a company only to skip it.
+4. You plan many apps and a business anyway: start the company and D-U-N-S process, and run closed tests on your personal account while you wait.
+
+### If you stay personal
+
+You need at least 12 real testers for 14 days, and we recommend 15. Tester Exchange sends real people on their own Android phones: $12.99 for 12, $14.99 for 15, or $22.99 for 25 testers, paid once. Or get testers free by testing other developers' apps at https://testerexchange.com/earn.
+
+### Frequently asked questions
+
+**Do organization accounts need 12 testers?** No. The closed testing requirement applies to personal accounts created after 13 November 2023.
+
+**Can I get a D-U-N-S number as an individual?** D-U-N-S numbers are issued to business entities. Sole proprietorships can be registered in some countries; check with Dun & Bradstreet for yours. Applying is free.
+
+**Can I switch from personal to organization?** Yes. Google describes a Change account type option under Manage account, Account details. It needs a verified organization website and a D-U-N-S number.
+
+**Can I switch back to personal later?** No. Google says organization accounts can't be changed to personal. You would need a new account and an app transfer.
+
+**Is an organization account worth it just to skip testing?** Usually not for a solo developer. Forming a company and getting verified often costs more time and money than a 14-day closed test.
 
 ---
 
@@ -504,4 +1112,154 @@ When your closed test is done, Play Console asks you to apply for production and
 **How long are the answers?** Two to five sentences each is enough. Specific beats long.
 
 **What if I don't have numbers?** Then you probably need more testing. Track daily active testers and feedback before you apply.
+
+---
+
+## Production access rejected: what to do next
+URL: https://testerexchange.com/guide/production-access-rejected/
+
+You ran your closed test, applied for production, waited about a week, and Google said no. It feels like starting over, but usually it isn't. In most cases your closed track, your testers and your app all stay in place, and Google simply wants to see more or better testing before it lets the app go public. This guide explains what the decision means and gives you a plan for the next application.
+
+### What a rejection means
+
+Google's Help Center says you may need to keep running your closed test before getting production access. The reasons it lists include having fewer than 12 opted-in testers and testers not being engaged enough with your app during the test.
+
+So a rejection is usually not a policy strike against your account. It's Google saying the evidence from your test wasn't convincing yet. Read the email and the message in Play Console carefully: it usually points at testing, engagement or the answers you gave.
+
+- "More testing required" or similar: keep the closed test running and collect more real use.
+- Fewer than 12 opted-in testers: some testers left. Recruit more before applying again.
+- Policy or content problems: a separate issue. Check the Policy status page and fix those first, or a new application won't help.
+
+### First, don't do these
+
+- Don't delete the closed track or remove testers who are still active. You need them.
+- Don't create a new app with a new package name to "start fresh". You would have to run a whole new closed test anyway.
+- Don't apply again the next day with the same answers. Nothing has changed, so expect the same outcome.
+- Don't fill seats with your own spare phones or fake accounts. Google can see when many accounts share one device.
+
+### Find the weak spot
+
+Open your closed track in Play Console and the statistics for the test period. Ask yourself honestly:
+
+- How many testers were still opted in on the day you applied? Was it comfortably over 12?
+- How many of them opened the app on most days, not just on day one?
+- Did you upload at least one new build during the test?
+- Can you quote real feedback from testers and name what you changed because of it?
+- Did your answers in the form include numbers, or were they a sentence or two of general text?
+
+Most rejected applications fail on engagement and on vague answers. Both are fixable in two weeks.
+
+### A plan for the next application
+
+1. Fix any policy issues first, if the email mentioned them.
+2. Check your tester count. Recruit until you have 15 or more real testers opted in, so dropouts can't take you under 12.
+3. Give testers concrete tasks each week, such as "sign up, create your first item, try the settings screen". Vague requests produce vague use.
+4. Collect written feedback with a simple form or email address, and keep a log.
+5. Fix several reported issues and upload new builds to the closed track during the test.
+6. Run the test for at least another 14 days with real daily use. Google doesn't publish a fixed waiting period, so let the evidence build up rather than watching the calendar.
+7. Rewrite your answers with numbers: testers opted in, how many used the app regularly, tester-days, bugs found and fixed, builds shipped.
+8. Apply again from the Dashboard. Google says review usually takes seven days or less.
+
+### Write better answers
+
+Google's form asks how easy recruiting was, how testers engaged, what feedback you got and how you collected it, who the app is for, its value, expected installs, what you changed after testing and how you know it's ready.
+
+Treat it like a short test report. "15 testers, 13 used the app on at least 10 of 14 days, 21 feedback messages, 3 crashes fixed in builds 1.0.2 and 1.0.3, onboarding shortened from 4 screens to 2" is far stronger than "testers liked the app". Our free tool at https://testerexchange.com/tools/production-answers/ turns your numbers into draft answers, and the guide on production access questions covers each question.
+
+### If your testers were the problem
+
+If most of your first testers installed once and disappeared, a second round with the same people will look the same. Replace them with people who will open the app daily.
+
+Tester Exchange sends real people who use your app on their own Android phones and shows daily use for each tester, so you can see engagement while the test runs rather than finding out from a rejection. You can pay once ($12.99 for 12, $14.99 for 15, $22.99 for 25 testers) or earn testers free by testing other apps at https://testerexchange.com/earn. If a tester stops, a new one takes the seat.
+
+### Frequently asked questions
+
+**Do I have to restart the 14 days from zero?** Google says you may need to continue running your closed test. Keep the existing track and testers, and plan for at least another two weeks of real use before reapplying.
+
+**How long must I wait before reapplying?** Google's Help Center doesn't state a fixed waiting period. Apply again when you have clearly more and better testing to show.
+
+**Will a rejection hurt my developer account?** A production access decision about testing is not the same as a policy violation. Policy problems are shown separately on the Policy status page.
+
+**Can I appeal instead?** For a testing decision, the practical route is more testing and a stronger application. For policy enforcement, follow the appeal link in that specific email.
+
+**Should I switch to an organization account?** Only if you are a real business with a D-U-N-S number. Organization accounts aren't subject to the closed testing requirement, but converting takes verification and time. See the guide on organization vs personal accounts.
+
+---
+
+## How to set up a closed testing track in Play Console, step by step
+URL: https://testerexchange.com/guide/set-up-closed-testing-track/
+
+Before your 14-day clock can start, you need a closed testing track that is published, has testers attached, and gives you an opt-in link that works. Most problems later on, such as testers seeing "app not available", come from a step missed here. This guide follows the current Play Console menus (Test and release, then Testing, then Closed testing) and Google's Help Center.
+
+### Before you start
+
+- A Play Console developer account with identity verification finished.
+- Your app created in Play Console, with the store listing, content rating, target audience, data safety and other App content declarations filled in. Play Console won't let you send a release for review while required items are missing.
+- A signed Android App Bundle (.aab) with a package name you are happy to keep forever. You can't change it later.
+- A plan for your testers: at least 12, ideally 15, real people with Android phones and Google Accounts.
+
+### 1. Open or create the closed track
+
+1. In Play Console, pick your app.
+2. Go to Test and release, then Testing, then Closed testing.
+3. Play Console gives you a default closed track (often called Alpha). Use it. You can create extra closed tracks, but one is all you need for the requirement.
+4. Click Manage track.
+
+### 2. Choose countries and regions
+
+Open the Countries / regions tab and add the countries where your testers live. A tester in a country you didn't select will not be able to install the app.
+
+Google notes that changes to distributed countries apply across tracks, and that additional closed tracks don't support their own country targeting. If your testers are spread around the world, the simplest choice is to add every country you can legally ship to.
+
+### 3. Add testers: email list or Google Group
+
+Open the Testers tab. You have two options, and you can use both on one track.
+
+- Email list: click Create email list, name it, then type addresses or upload a CSV. Google allows up to 2,000 users per list. Uploading a CSV overwrites the addresses already in that list. Every address must be the Google Account the tester uses on their phone's Play Store.
+- Google Group: enter the group's address, such as yourgroup@googlegroups.com. Only members of the group can join your test, and they must join the group before they opt in. Adding someone to the group is all you do; you don't touch Play Console again.
+
+If you use Tester Exchange, add the group testerexchange-testers@googlegroups.com under Google Groups and save. That one address lets every tester we send install your app. See also the guide on Google Group vs email list.
+
+### 4. Add a feedback channel
+
+On the same Testers tab, add a feedback URL or an email address. Testers see it when they join. You will need to summarize tester feedback in the production access form, so make it easy: a short Google Form or a dedicated email address works.
+
+### 5. Create the release and send it for review
+
+1. On the closed track, click Create new release.
+2. Upload your .aab. Let Play App Signing manage your key unless you have a reason not to.
+3. Add a release name and short release notes, for example "First closed test build".
+4. Click Next, fix any errors, then Save.
+5. Go to Publishing overview and send the changes for review. If managed publishing is on, you also have to click Publish after approval.
+
+Closed test releases on new accounts are reviewed before they go live. Times vary from hours to several days.
+
+### 6. Share the opt-in link
+
+Google says the opt-in link appears only once the app status is Published. Copy it from the Testers tab. It looks like https://play.google.com/apps/testing/your.package.name.
+
+The first time you publish, the link can take several hours to start working. Testers can't find closed tests by searching Google Play, so they need either this link or the Play Store link to your app.
+
+1. The tester signs in to the same Google Account you added (or that is in your Google Group).
+2. They open the opt-in link and tap to become a tester.
+3. They install your app from Google Play using the link on that page.
+4. They open it, and keep opening it during the 14 days.
+
+### 7. Check that the 14 days are counting
+
+Your Dashboard shows the closed testing requirement and how many testers are opted in. Check it every couple of days. If the number falls under 12, recruit replacements straight away, because the requirement counts 12 testers opted in continuously.
+
+During the test, upload at least one new build to the same track. It shows Google you acted on feedback, and testers on the track get the update automatically.
+
+### Frequently asked questions
+
+**Can I use internal testing instead?** No. The requirement needs a closed test. Google also says people opted into your internal test can't join a closed test until they leave the internal one.
+
+**Should I use an email list or a Google Group?** A Google Group is easier when testers come and go, because you never edit the track. An email list is fine for a fixed group of friends. You can use both.
+
+**Why don't I see the opt-in link?** It only shows once the release on the closed track is published. Check Publishing overview for pending review or changes not yet sent.
+
+**Does a tester need a Google Account?** Yes. Google says users need a Google Account or Google Workspace account to join a test, and it must be the account on their phone's Play Store.
+
+**Can I make the closed test app paid?** You can, but Google says testers must buy paid apps in closed tests. Keep the test app free to avoid losing testers.
 
