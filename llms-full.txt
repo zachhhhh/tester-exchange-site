@@ -104,7 +104,7 @@ Twelve names on a list isn't enough. Google reviews whether testers really used 
 
 - Friends and family with Android phones: free, but they often stop opening the app after a few days.
 - Builder communities and forums: fellow builders understand the rule, and many swap tests.
-- A test exchange: on Tester Exchange your phone is given other developers' apps to test, a minute a day, and each one you test brings a tester to your app.
+- A test exchange: on Tester Exchange you open other developers' apps in your phone's browser, about a minute a day, and each day you test earns credits toward testers for your own app.
 
 ### Step 4: keep testers active and ship an update
 
@@ -124,7 +124,7 @@ After 14 days, apply for production access in the Play Console dashboard. Google
 
 **Do I need a new build to start the closed test?** You need at least one build uploaded to the closed track. Uploading a second build during the test with fixes from tester feedback is a good idea.
 
-**Is there a free way to get 12 testers?** Yes. Test swaps are free: you test other developers' apps and they test yours. Tester Exchange verifies daily use on each tester's phone, so the testing is real.
+**Is there a free way to get 12 testers?** Yes. Test swaps are free: you test other developers' apps and they test yours. On Tester Exchange each day a tester opens your app is recorded, so you can see who is really testing.
 
 ---
 
@@ -296,14 +296,14 @@ Short answer: if you have time and no budget, join a free tester exchange and te
 
 Costs are one-time per app unless noted.
 
-- Free exchange (Tester Exchange swap circles, Testers Community app): $0. You test other developers' apps and they test yours. Cost is your time, about a minute a day per app. Speed depends on how many developers are active.
+- Free exchange (Tester Exchange free testing, Testers Community app): $0. You test other developers' apps and earn credits toward testers for yours. Cost is your time, about a minute a day per app. Speed depends on how many developers are active.
 - Paid service (Tester Exchange, Testers Community paid plan): Tester Exchange charges $12.99 for 12 testers, $14.99 for 15 or $22.99 for 25. Testers Community lists its paid plan from $15. Testers start within hours to a day or two.
 - Fiverr or Freelancer gig: gig pages we looked at list prices up to about $50 for 12 testers and two weeks of delivery. Quality varies by seller and is hard to verify.
 - Reddit, Discord, Telegram and "test for test" posts: $0, but you chase every tester yourself and many drop out before day 14.
 
 ### Free exchanges: how they work
 
-In a free exchange every developer is also a tester. Testers Community describes a credit system where you test three apps to earn credits, then spend them to get testers for yours, and groups developers into packs that run together for about two weeks. Tester Exchange runs swap circles: when enough developers join, each member becomes a tester of every other member's app, and members also test a few apps from paying customers.
+In a free exchange every developer is also a tester. Testers Community describes a credit system where you test three apps to earn credits, then spend them to get testers for yours, and groups developers into packs that run together for about two weeks. On Tester Exchange you open other developers' apps each day and earn credits; developers who test others get testers for their own app sooner.
 
 Free exchanges work best when you start early, because you earn testers by testing and the 14 days only start once all your testers are in. Expect to open each assigned app once a day.
 
@@ -499,20 +499,20 @@ Google also checks whether testers actually used the app. That's why the work is
 
 ### What you earn
 
-- US$0.50 for each finished 14-day test. A test counts as finished when you stayed in it and used the app for the full 14 days.
+- US$0.50 for each finished 14-day test on an app marked 💵. These are paying customers' apps that still need testers. Other apps earn credits, which get testers for your own app.
 - Cash out from US$3. That's six finished tests.
 - Payout methods: PayPal, Binance Pay or Payoneer.
 
-You can be in several tests at the same time, because each one only takes a minute or two a day. If you run five tests at once, you might finish five tests in about two weeks and earn US$2.50. Treat it as a small bonus for a few minutes a day, not a job.
+You can be in several tests at the same time, because each one only takes a minute or two a day. How many cash apps you get depends on how many paying customers need testers that week. If five of your tests pay cash, you might earn US$2.50 in about two weeks. Treat it as a small bonus for a few minutes a day, not a job.
 
 ### How it works, step by step
 
 1. On your Android phone, open https://testerexchange.com/earn in your browser and sign in.
-2. Pick an app to test. You'll be asked to join the developer's test through Google Play, using the Google Account on your phone.
+2. Your list of apps fills itself. Tap the green button: the first time, it asks you to join the testers group (once), then to become a tester on Google Play.
 3. Install the app from Google Play through the test link.
 4. Open the app and actually use it for a minute or two every day for 14 days. Try the main features, and send feedback if something breaks or confuses you.
 5. Stay in the test for all 14 days. Don't leave the test or uninstall the app early.
-6. When the test is finished, the reward is added to your balance. Cash out once you reach US$3.
+6. When a test on a 💵 app is finished, US$0.50 is added to your balance. Cash out once you reach US$3.
 
 ### The rules
 
@@ -543,7 +543,7 @@ If you need real income, this isn't it. The pay is small and depends on how many
 
 ### Frequently asked questions
 
-**How much can I earn testing apps?** US$0.50 for each finished 14-day test. Running several tests at once, most people earn a few dollars a month.
+**How much can I earn testing apps?** US$0.50 for each finished 14-day test on an app marked 💵, and credits on the others. Running several tests at once, most people earn a few dollars a month.
 
 **What is the minimum payout?** US$3, paid to PayPal, Binance Pay or Payoneer.
 
@@ -571,14 +571,14 @@ Every option below can get you to 12 names on a list. The real question is wheth
 - Paid tester services: fast, typically about US$10–35 per app. The risk is testers who opt in but never really open the app, which is exactly what Google flags. Ask how daily use is checked before you pay.
 - Cheap freelance gigs: the lowest price, the highest risk. Fake or inactive accounts and many accounts on one shared device are common, and Google checks engagement, so these testers may not count at all.
 
-### Tester Exchange: a free swap that keeps everyone honest
+### Tester Exchange: pay once, or test for free
 
-Tester Exchange turns the test-for-test swap into something you can rely on. You can use either path, or both at once.
+Tester Exchange gives you three ways to fill your 12 seats, and you can mix them.
 
-- Bring your own testers: share your app's link with friends and family. They install the free Tester Exchange app, which checks each of their 14 days for you, so you don't have to chase anyone.
-- Free test exchange: link your phone and Tester Exchange gives you other developers' apps to test, a minute a day. Every app you test brings a tester to yours, and friends you invite fill seats too.
-- Skip testing: buy a credit pack instead. Paid apps get testers before anyone else.
-- Verified daily use: each day a tester opens your app on their own phone is recorded, so you know who is actually testing.
+- Bring your own testers: share your app's link with friends and family. They test in their phone's browser with one tap a day, and each of their days is recorded, so you can see who is keeping up.
+- Free testing: open other developers' apps in your phone's browser, about a minute a day. Each day you test earns credits toward testers for your own app.
+- Pay once: buy 12, 15 or 25 testers. Paid apps get testers before anyone else.
+- Daily use you can see: each day a tester opens your app is recorded on your app page, so you know who is actually testing.
 
 ### How to choose
 
@@ -644,9 +644,9 @@ Friends mean well and still forget by day four. Give them a reason and a reminde
 
 Most developers have three to eight people they can ask. You don't need to find the rest among strangers on forums.
 
-- Free test exchange: on Tester Exchange your phone gets other developers' apps to test automatically, and every app you test brings a tester to yours.
+- Free testing: on Tester Exchange you get other developers' apps to open each day, and every day you test earns credits toward testers for yours.
 - Skip testing: credits cover the seats your friends leave open, and paid apps get testers first. Members earn credits by testing, or you can buy a small pack.
-- Same rules for everyone: every tester, friend or not, is a real person on their own phone, and every day is verified the same way.
+- Same rules for everyone: every tester, friend or not, is a real person on their own phone, and every day they open your app is recorded the same way.
 
 ### Frequently asked questions
 
@@ -882,7 +882,7 @@ Opting in is not the same as testing. Google can see how many testers installed 
 
 ### Show proof of engagement
 
-Your answers should read like a short test report: how many testers, how many days they used the app, what they reported, and which builds fixed it. Tester Exchange records verified daily use for every tester and drafts these answers from your real data, so you don't have to reconstruct them from memory.
+Your answers should read like a short test report: how many testers, how many days they used the app, what they reported, and which builds fixed it. Tester Exchange records each day every tester opens your app and drafts these answers from that data, so you don't have to reconstruct them from memory.
 
 ### What not to do
 
@@ -894,7 +894,7 @@ Your answers should read like a short test report: how many testers, how many da
 
 **Do I have to restart the 14 days?** You keep your closed test, but Google wants to see more real testing before you apply again. Plan for at least another 14 days of active use.
 
-**How often should testers open the app?** Google doesn't publish a number. Daily use by most testers is the safest pattern, and it's what Tester Exchange verifies.
+**How often should testers open the app?** Google doesn't publish a number. Daily use by most testers is the safest pattern, and it's what Tester Exchange records for every tester.
 
 **Does feedback matter?** Yes. The questionnaire asks what testers said and what you changed. Real feedback and real fixes make your answers credible.
 
@@ -931,7 +931,7 @@ A list of 12 opted-in testers who stopped opening the app after day two meets th
 
 ### How Tester Exchange helps
 
-- Daily use verified on phones: each day a tester opens your app on their own phone is recorded.
+- Daily use recorded: each day a tester opens your app is shown on your app page.
 - Daily report: see how many testers were active each day, plus the feedback they sent, so you spot dropouts early.
 - Production answers: get draft answers for the production-access questions based on your real test data.
 
@@ -1060,7 +1060,7 @@ Open the app yourself, read the feedback testers send, and ship at least one upd
 ### How Tester Exchange works
 
 - Real testers: people with their own Android phones install your app from your closed test.
-- Daily use checked on the phone: the Tester Exchange app verifies that your app was opened each day.
+- Daily use recorded: each day a tester opens your app is logged, and seats a tester stops using go to a new tester.
 - Daily report: see how many testers were active, plus their feedback.
 
 Google makes the final decision on production access. This gives you a test that reflects real use and the data to explain it.
