@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Oyunlar için Google Play kapalı testi: Unity, Unreal, Godot</title>
+<meta name="description" content="Oyun geliştiricileri Google Play'in 12 test kullanıcı × 14 gün kapalı testini nasıl geçer: Unity, Unreal ve Godot derleme ayarları, cihaz uyumluluğu, test kullanıcılarına ne oynatılacağı ve etkileşim nasıl gösterilir.">
+<link rel="canonical" href="https://testerexchange.com/tr/closed-testing-for-games/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/closed-testing-for-games/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/closed-testing-for-games/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/closed-testing-for-games/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/closed-testing-for-games/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/closed-testing-for-games/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/closed-testing-for-games/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/closed-testing-for-games/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/closed-testing-for-games/">
+<meta property="og:type" content="article"><meta property="og:title" content="Oyunlar için Google Play kapalı testi: Unity, Unreal, Godot">
+<meta property="og:description" content="Oyun geliştiricileri Google Play'in 12 test kullanıcı × 14 gün kapalı testini nasıl geçer: Unity, Unreal ve Godot derleme ayarları, cihaz uyumluluğu, test kullanıcılarına ne oynatılacağı ve etkileşim nasıl gösterilir."><meta property="og:url" content="https://testerexchange.com/tr/closed-testing-for-games/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Google Play'de oyunlar için kapalı test: Unity, Unreal ve Godot rehberi","description":"Oyun geliştiricileri Google Play'in 12 test kullanıcı × 14 gün kapalı testini nasıl geçer: Unity, Unreal ve Godot derleme ayarları, cihaz uyumluluğu, test kullanıcılarına ne oynatılacağı ve etkileşim nasıl gösterilir.","inLanguage":"tr","dateModified":"2026-11-05","url":"https://testerexchange.com/tr/closed-testing-for-games/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/tr/"},{"@type":"ListItem","position":3,"name":"Google Play'de oyunlar için kapalı test: Unity, Unreal ve Godot rehberi","item":"https://testerexchange.com/tr/closed-testing-for-games/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Oyunların da kapalı teste ihtiyacı var mı?","acceptedAnswer":{"@type":"Answer","text":"Evet. Şart, 13 Kasım 2023'ten sonra oluşturulan kişisel hesaplardaki oyunlar dahil tüm uygulamalar için geçerlidir."}},{"@type":"Question","name":"Oyunum kapalı test sırasında hâlâ bitmemiş olabilir mi?","acceptedAnswer":{"@type":"Answer","text":"Evet, kapalı test devam eden bir çalışma içindir. Ancak test kullanıcılarının iki hafta oynayacak kadar içeriğe ihtiyacı var ve test sırasında oyunu geliştirmeye devam etmelisiniz."}},{"@type":"Question","name":"Bazı test kullanıcıları oyunumu neden yükleyemiyor?","acceptedAnswer":{"@type":"Answer","text":"Genellikle cihaz uyumluluğu yüzünden: yüksek bir en düşük Android sürümü, eksik 64 bit desteği veya gerekli donanım özellikleri. Play Console'daki Device catalog'a bakın."}},{"@type":"Question","name":"Test kullanıcıları her gün ne kadar oynamalı?","acceptedAnswer":{"@type":"Answer","text":"Google bir sayı belirlemiyor. Her gün kısa ve gerçek bir oturum, bir uzun oturum ve sonra hiçbir şeyden daha iyidir."}},{"@type":"Question","name":"Test için Play Asset Delivery kullanmalı mıyım?","acceptedAnswer":{"@type":"Answer","text":"Oyununuz büyükse evet. Daha küçük ilk indirmeler, daha fazla test kullanıcısının gerçekten yükleyip oynamaya başlaması demektir."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=tr">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Dil" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/closed-testing-for-games/">English</option><option value="https://testerexchange.com/es/closed-testing-for-games/">Español</option><option value="https://testerexchange.com/id/closed-testing-for-games/">Bahasa Indonesia</option><option value="https://testerexchange.com/pt/closed-testing-for-games/">Português</option><option value="https://testerexchange.com/ru/closed-testing-for-games/">Русский</option><option value="https://testerexchange.com/tr/closed-testing-for-games/" selected>Türkçe</option><option value="https://testerexchange.com/vi/closed-testing-for-games/">Tiếng Việt</option>
+</select>
+<a href="https://testerexchange.com/?lang=tr">Tester Exchange'i aç</a></header>
+<main>
+
+<h1>Google Play'de oyunlar için kapalı test: Unity, Unreal ve Godot rehberi</h1>
+<p class="muted">Kasım 2026'da güncellendi</p>
+<p class="lede">Oyunlar da diğer uygulamalarla aynı kapalı test şartından geçer: kişisel geliştirici hesabınız 13 Kasım 2023'ten sonra oluşturulduysa, üretime başvurmadan önce art arda 14 gün boyunca katılmış en az 12 test kullanıcısına ihtiyacınız var. Ancak oyunların kendine özgü tuzakları da var: büyük indirmeler, derlemeyi çalıştıramayan cihazlar ve oyunu bir kez açıp bir daha dönmeyen test kullanıcıları. Bu rehber oyun geliştiricilerinin neleri kurması gerektiğini ve test kullanıcılarından ne yapmalarını isteyeceklerini anlatır.</p>
+<div class="cta"><span>Gerçek insanlar 14 gün boyunca uygulamanızı kendi telefonlarında açar. Bir kez ödeyin ya da başka uygulamaları ücretsiz test edin.</span><a class="btn" href="https://testerexchange.com/?lang=tr#buy">12 test kullanıcısı al</a></div>
+<nav class="toc"><b>Bu sayfada</b><ul><li><a href="#same">Aynı kural, oyunlara özgü riskler</a></li><li><a href="#build">Önce kontrol edilecek derleme ayarları</a></li><li><a href="#setup">Testi kurun</a></li><li><a href="#players">Test kullanıcılarına ne oynatmalı</a></li><li><a href="#engage">Etkileşimi gösterin</a></li><li><a href="#online">Çok oyunculu ve çevrimiçi oyunlar</a></li><li><a href="#testers">Yeterli oyuncuyu bulmak</a></li><li><a href="#faq">Sık sorulan sorular</a></li></ul></nav>
+
+<section id="same">
+<h2>Aynı kural, oyunlara özgü riskler</h2>
+<p>Google burada oyunlara ve uygulamalara aynı davranır. 14 gün boyunca kesintisiz katılmış en az 12 test kullanıcısıyla kapalı test yapın, sonra üretime başvurun. Üretim formu test kullanıcısı etkileşimini, geri bildirimi ve neleri değiştirdiğinizi sorar; bu yüzden kimsenin eğitim bölümünün ötesine geçmediği bir test zayıf cevaplar ortaya çıkarır.</p>
+<p>Oyunları diğer uygulamalardan daha çok etkileyen riskler:</p>
+<ul><li><b>Cihaz uyumluluğu:</b> test kullanıcıları “your device isn't compatible” (cihazınız uyumlu değil) mesajını görür ve yükleyemez.</li><li><b>İndirme boyutu:</b> mobil veride büyük bir ilk indirme test kullanıcılarını soğutur.</li><li><b>Oturum uzunluğu:</b> insanlar iki hafta boyunca her gün 20 dakikalık bir bölüm oynamaz.</li><li><b>İçerik boşlukları:</b> tek bölümlük bir dikey dilim üçüncü güne kadar yapacak bir şey bırakmaz.</li></ul>
+
+
+</section>
+
+<section id="build">
+<h2>Önce kontrol edilecek derleme ayarları</h2>
+
+<ul><li><b>Unity:</b> Android App Bundle (.aab) derleyin, ARM64 etkin IL2CPP kullanın (Google Play 64 bit desteği şart koşar) ve gereğinden fazla telefonu dışarıda bırakmayan bir en düşük API düzeyi belirleyin. Derlemeniz büyükse tek bir dev indirme yerine Play Asset Delivery kullanın.</li><li><b>Unreal Engine:</b> Android için arm64 ile App Bundle olarak paketleyin, Project Settings'te hedef ve en düşük SDK düzeylerini kontrol edin ve isteğe bağlı içeriği varlık paketlerine taşıyarak ilk indirmeyi küçük tutun.</li><li><b>Godot:</b> Gradle derlemesi etkin Android dışa aktarma şablonunu kullanın ve AAB olarak dışa aktarın. arm64-v8a'nın dahil olduğundan emin olun ve oluşturucuyu (renderer) düşük seviye bir telefonda test edin; çünkü bazı cihazlar Compatibility oluşturucusunu Forward+ veya Mobile'dan daha iyi çalıştırır.</li><li><b>Tüm motorlar:</b> Google Play'in yeni uygulamalar için şu anda şart koştuğu API düzeyini hedefleyin ve Play App Signing ile imzalayın.</li></ul>
+
+<p>Yükledikten sonra derlemenizin kaç cihazı desteklediğini görmek için Play Console'daki Device catalog'u açın. Büyük bir kısım dışarıda kalıyorsa test kullanıcıları gelmeden önce düzeltin.</p>
+</section>
+
+<section id="setup">
+<h2>Testi kurun</h2>
+
+
+<ol><li>Kapalı test kanalını oluşturun veya açın: Test and release, ardından Testing, Closed testing.</li><li>Test kullanıcılarınızın yaşadığı ülkeleri ekleyin.</li><li>Test kullanıcılarını bir e-posta listesi veya Google Group ile ekleyin. Tester Exchange ile testerexchange-testers@googlegroups.com adresini ekleyin.</li><li>.aab dosyasını yükleyin, sürümü incelemeye gönderin ve Published görünene kadar bekleyin.</li><li>Katılım bağlantısını paylaşın. İlk seferde çalışmaya başlaması birkaç saat sürebilir.</li></ol>
+<p>Test kullanıcıları “app not available” bildirirse bunu çözme rehberine bakın. Yanlış hesapları, ülkeleri ve yayınlanmamış kanalları kapsar.</p>
+</section>
+
+<section id="players">
+<h2>Test kullanıcılarına ne oynatmalı</h2>
+<p>Test kullanıcılarına birkaç dakikaya sığan küçük günlük hedefler verin. Size yarayan gerçek ve çeşitli oyundur; üretim formunda daha sonra anlatacağınız da budur.</p>
+<ul><li><b>1. ile 3. günler:</b> eğitimi ve ilk bölümü bitirsinler. Kafa karıştıran her şeyi bildirsinler.</li><li><b>4. ile 7. günler:</b> günde bir kısa oturum oynasınlar; ayarları, sesi, kontrolleri ve duraklatmayı denesinler.</li><li><b>8. ile 11. günler:</b> düzeltmeler içeren yeni bir derlemeyi denesinler; daha iyi hissettirip hissettirmediğini görmek için bir bölümü yeniden oynasınlar.</li><li><b>12. ile 14. günler:</b> mevcut en zor içeriği oynasınlar ve çökmeleri, takılmaları veya pil tüketimini bildirsinler.</li></ul>
+
+<p>Oyununuzda günlük ödüller, kısa bir günlük görev veya hızlı bir mod varsa test kullanıcılarını oraya yönlendirin. Günlük ritme doğal olarak uyar.</p>
+</section>
+
+<section id="engage">
+<h2>Etkileşimi gösterin</h2>
+
+<ul><li>Test sırasında en az bir, tercihen iki güncelleme yayınlayın. Bildirilen bir çökmeyi düzeltmek, üretim formu için en iyi hikâyedir.</li><li>Gerçek cihazlardaki çökmeleri ve ANR'leri bulmak için Play Console'daki Android vitals'ı ve pre-launch raporunu kullanın.</li><li>Yazılı geri bildirimi basit bir formla toplayın: cihaz modeli, ne yaptıkları, ne olduğu.</li><li>Günlük aktif test kullanıcılarının, oturumların, bulunan hataların ve yayınlanan derlemelerin kaydını tutun.</li></ul>
+
+
+</section>
+
+<section id="online">
+<h2>Çok oyunculu ve çevrimiçi oyunlar</h2>
+<p>Oyununuz bir sunucuya ihtiyaç duyuyorsa 14 günün tamamında çalışır durumda tutun ve test kullanıcıları yalnızken de oyunun oynanabilir olduğundan emin olun. Hiç dolmayan bir lobi, boş bir test gibi görünür. Mümkünse test süresince botlar veya tek kişilik bir mod ekleyin.</p>
+<p>Oturum açma gerekiyorsa test kullanıcılarına çalışan bir misafir modu veya net talimatlar verin. Oturum açma duvarları test kullanıcılarını ilk günde kaybettirir.</p>
+
+
+
+</section>
+
+<section id="testers">
+<h2>Yeterli oyuncuyu bulmak</h2>
+<p>12 yerine 15 test kullanıcısı isteyin; çünkü bazı oyuncular oyunları hızla bırakır. Tester Exchange, kendi Android telefonlarında oynayan gerçek insanlar gönderir ve her test kullanıcısının günlük kullanımını gösterir: 12 için 12,99 dolar, 15 için 14,99 dolar veya 25 için 22,99 dolar, bir kez ödenir. Ayrıca https://testerexchange.com/earn adresinde diğer geliştiricilerin uygulamalarını ve oyunlarını test ederek ücretsiz test kullanıcısı kazanabilirsiniz.</p>
+
+
+
+</section>
+<section id="faq"><h2>Sık sorulan sorular</h2>
+<details><summary>Oyunların da kapalı teste ihtiyacı var mı?</summary><p>Evet. Şart, 13 Kasım 2023'ten sonra oluşturulan kişisel hesaplardaki oyunlar dahil tüm uygulamalar için geçerlidir.</p></details>
+<details><summary>Oyunum kapalı test sırasında hâlâ bitmemiş olabilir mi?</summary><p>Evet, kapalı test devam eden bir çalışma içindir. Ancak test kullanıcılarının iki hafta oynayacak kadar içeriğe ihtiyacı var ve test sırasında oyunu geliştirmeye devam etmelisiniz.</p></details>
+<details><summary>Bazı test kullanıcıları oyunumu neden yükleyemiyor?</summary><p>Genellikle cihaz uyumluluğu yüzünden: yüksek bir en düşük Android sürümü, eksik 64 bit desteği veya gerekli donanım özellikleri. Play Console'daki Device catalog'a bakın.</p></details>
+<details><summary>Test kullanıcıları her gün ne kadar oynamalı?</summary><p>Google bir sayı belirlemiyor. Her gün kısa ve gerçek bir oturum, bir uzun oturum ve sonra hiçbir şeyden daha iyidir.</p></details>
+<details><summary>Test için Play Asset Delivery kullanmalı mıyım?</summary><p>Oyununuz büyükse evet. Daha küçük ilk indirmeler, daha fazla test kullanıcısının gerçekten yükleyip oynamaya başlaması demektir.</p></details>
+</section>
+<div class="cta"><span>Gerçek insanlar 14 gün boyunca uygulamanızı kendi telefonlarında açar. Bir kez ödeyin ya da başka uygulamaları ücretsiz test edin.</span><a class="btn" href="https://testerexchange.com/?lang=tr#buy">12 test kullanıcısı al</a></div>
+<section><h2>Diğer rehberler</h2><ul class="related"><li><a href="https://testerexchange.com/tr/" hreflang="tr">Google Play kapalı testi için 12 test kullanıcısı nasıl bulunur</a></li><li><a href="https://testerexchange.com/tr/12-testers-app-builders/" hreflang="tr">App Inventor, Kodular, Flutter, Unity ve diğer araçlarla yapılan uygulamalar için Google Play 12 test kullanıcısı</a></li><li><a href="https://testerexchange.com/tr/app-not-available-for-testers/" hreflang="tr">Google Play kapalı test kullanıcıları için “app not available” hatasını giderme</a></li><li><a href="https://testerexchange.com/tr/automate-closed-testing-with-ai-agents/" hreflang="tr">Google Play kapalı testini yapay zeka ajanlarıyla otomatikleştirin</a></li><li><a href="https://testerexchange.com/tr/best-way-to-get-12-testers/" hreflang="tr">Google Play kapalı testi için 12 test kullanıcısı bulmanın en iyi yolu</a></li><li><a href="https://testerexchange.com/tr/does-14-day-closed-test-reset/" hreflang="tr">Test kullanıcıları ayrılınca 14 günlük kapalı test sıfırlanır mı?</a></li><li><a href="https://testerexchange.com/tr/earn-money-testing-android-apps/" hreflang="tr">Android uygulamaları test ederek para kazanın: dürüst bir rehber</a></li><li><a href="https://testerexchange.com/tr/free-closed-testing-testers/" hreflang="tr">Google Play kapalı testi için 12 test kullanıcısını ücretsiz bulma</a></li><li><a href="https://testerexchange.com/tr/friends-family-closed-testers/" hreflang="tr">Arkadaşlarınızı ve ailenizi 12 Google Play test kullanıcınız yapmak</a></li><li><a href="https://testerexchange.com/tr/google-group-vs-email-list/" hreflang="tr">Kapalı testiniz için Google Group mu, e-posta listesi mi?</a></li><li><a href="https://testerexchange.com/tr/google-play-closed-testing-requirements/" hreflang="tr">Google Play kapalı test şartları: eksiksiz 2026 rehberi</a></li><li><a href="https://testerexchange.com/tr/google-play-review-time-after-closed-testing/" hreflang="tr">14 günden sonra: üretim erişimi inceleme süresi ve ilk sürümünüz</a></li><li><a href="https://testerexchange.com/tr/insufficient-testing-engagement/" hreflang="tr">Kapalı testten sonra reddedildiniz mi? “Daha fazla test gerekli” hatası nasıl düzeltilir</a></li><li><a href="https://testerexchange.com/tr/keep-testers-active-14-days/" hreflang="tr">Kapalı test kullanıcılarını 14 gün boyunca aktif tutma</a></li><li><a href="https://testerexchange.com/tr/organization-vs-personal-developer-account/" hreflang="tr">Kurumsal ve kişisel Google Play geliştirici hesabı</a></li><li><a href="https://testerexchange.com/tr/paid-closed-testers-checklist/" hreflang="tr">Google Play kapalı test için test kullanıcısı satın almadan önce neleri kontrol etmeli</a></li><li><a href="https://testerexchange.com/tr/production-access-questions/" hreflang="tr">Google Play üretim erişimi sorularına nasıl yanıt verilir</a></li><li><a href="https://testerexchange.com/tr/production-access-rejected/" hreflang="tr">Üretim erişimi reddedildi: sonra ne yapmalı</a></li><li><a href="https://testerexchange.com/tr/set-up-closed-testing-track/" hreflang="tr">Play Console'da kapalı test kanalı adım adım nasıl kurulur</a></li><li><a href="https://testerexchange.com/tr/tools/production-answers/" hreflang="tr">Üretim erişimi yanıt oluşturucu</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

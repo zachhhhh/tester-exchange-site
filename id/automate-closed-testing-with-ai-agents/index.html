@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Otomatiskan uji tertutup Google Play dengan agen AI (MCP, API)</title>
+<meta name="description" content="Biarkan Claude, ChatGPT, atau Cursor mengurus administrasi uji tertutup 12 tester Google Play: server MCP, API HTTP, dan agen A2A Tester Exchange, lengkap dengan perintah setup dan hal yang tetap perlu manusia.">
+<link rel="canonical" href="https://testerexchange.com/id/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/">
+<meta property="og:type" content="article"><meta property="og:title" content="Otomatiskan uji tertutup Google Play dengan agen AI (MCP, API)">
+<meta property="og:description" content="Biarkan Claude, ChatGPT, atau Cursor mengurus administrasi uji tertutup 12 tester Google Play: server MCP, API HTTP, dan agen A2A Tester Exchange, lengkap dengan perintah setup dan hal yang tetap perlu manusia."><meta property="og:url" content="https://testerexchange.com/id/automate-closed-testing-with-ai-agents/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Otomatiskan uji tertutup Google Play dengan agen AI","description":"Biarkan Claude, ChatGPT, atau Cursor mengurus administrasi uji tertutup 12 tester Google Play: server MCP, API HTTP, dan agen A2A Tester Exchange, lengkap dengan perintah setup dan hal yang tetap perlu manusia.","inLanguage":"id","dateModified":"2026-11-05","url":"https://testerexchange.com/id/automate-closed-testing-with-ai-agents/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/id/"},{"@type":"ListItem","position":3,"name":"Otomatiskan uji tertutup Google Play dengan agen AI","item":"https://testerexchange.com/id/automate-closed-testing-with-ai-agents/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Bisakah agen AI menyelesaikan uji 14 hari untuk saya?","acceptedAnswer":{"@type":"Answer","text":"Tidak. 14 hari itu membutuhkan orang sungguhan yang memakai aplikasi Anda di ponsel mereka sendiri. Agen menangani setup, pemantauan, dan pelaporan."}},{"@type":"Question","name":"Bisakah agen membayar tester?","acceptedAnswer":{"@type":"Answer","text":"Tidak. Agen bisa mengembalikan tautan checkout, tetapi pembayaran selalu dilakukan di browser manusia."}},{"@type":"Question","name":"Klien mana yang bisa dipakai dengan server MCP?","acceptedAnswer":{"@type":"Answer","text":"Klien apa pun yang mendukung MCP jarak jauh lewat Streamable HTTP dengan header kustom, termasuk Claude Code, Claude Desktop, Cursor, dan VS Code. Klien lain bisa memakai API HTTP."}},{"@type":"Question","name":"Di mana saya mendapatkan token?","acceptedAnswer":{"@type":"Answer","text":"Di https://testerexchange.com/api setelah masuk. Token diawali dengan tx_ dan bisa dicabut kapan saja."}},{"@type":"Question","name":"Apakah agen mengubah sesuatu di Play Console saya?","acceptedAnswer":{"@type":"Answer","text":"Tidak. Agen tidak punya akses ke Play Console Anda. Ia hanya memberi tahu langkah yang harus Anda lakukan di sana."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=id">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Bahasa" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/">English</option><option value="https://testerexchange.com/es/automate-closed-testing-with-ai-agents/">Español</option><option value="https://testerexchange.com/id/automate-closed-testing-with-ai-agents/" selected>Bahasa Indonesia</option><option value="https://testerexchange.com/pt/automate-closed-testing-with-ai-agents/">Português</option><option value="https://testerexchange.com/ru/automate-closed-testing-with-ai-agents/">Русский</option><option value="https://testerexchange.com/tr/automate-closed-testing-with-ai-agents/">Türkçe</option><option value="https://testerexchange.com/vi/automate-closed-testing-with-ai-agents/">Tiếng Việt</option>
+</select>
+<a href="https://testerexchange.com/?lang=id">Buka Tester Exchange</a></header>
+<main>
+
+<h1>Otomatiskan uji tertutup Google Play dengan agen AI</h1>
+<p class="muted">Diperbarui November 2026</p>
+<p class="lede">Jika Anda sudah merilis kode dengan agen AI, Anda juga bisa menyerahkan sebagian besar pekerjaan rutin persyaratan uji tertutup Google Play kepadanya: mendaftarkan aplikasi, merekrut tester, memeriksa progres, dan mengambil angka untuk formulir akses produksi. Tester Exchange menyediakan server MCP, API HTTP satu endpoint, dan kartu agen A2A untuk keperluan ini. Panduan ini menunjukkan cara menghubungkan Claude Code, Claude Desktop, Cursor, dan klien lain, apa yang bisa diminta, serta bagian yang tidak bisa dikerjakan agen mana pun untuk Anda.</p>
+<div class="cta"><span>Orang sungguhan membuka aplikasimu di ponsel mereka selama 14 hari. Bayar sekali, atau uji aplikasi lain secara gratis.</span><a class="btn" href="https://testerexchange.com/?lang=id#buy">Dapatkan 12 penguji</a></div>
+<nav class="toc"><b>Di halaman ini</b><ul><li><a href="#what">Apa yang bisa dan tidak bisa dilakukan agen</a></li><li><a href="#token">1. Buat token</a></li><li><a href="#mcp">2. Hubungkan server MCP</a></li><li><a href="#tool">3. Satu alat untuk memulai: get_testers</a></li><li><a href="#prompts">Prompt yang efektif</a></li><li><a href="#http">API HTTP untuk skrip dan CI</a></li><li><a href="#a2a">Kartu agen A2A</a></li><li><a href="#flow">Satu alur lengkap, dari awal sampai akhir</a></li><li><a href="#safety">Catatan keamanan</a></li><li><a href="#faq">Pertanyaan yang sering diajukan</a></li></ul></nav>
+
+<section id="what">
+<h2>Apa yang bisa dan tidak bisa dilakukan agen</h2>
+<p>Google mewajibkan akun developer pribadi yang dibuat setelah 13 November 2023 menjalankan uji tertutup dengan minimal 12 tester yang ikut serta selama 14 hari berturut-turut sebelum mengajukan akses produksi. Sebagian besar pekerjaan di sekitarnya adalah koordinasi, yang bisa ditangani agen dengan baik.</p>
+<ul><li><b>Agen bisa:</b> menambahkan aplikasi Anda, membuka kampanye tester, menerapkan kredit Anda, memeriksa berapa tester yang aktif, menjeda atau menutup kampanye, mengambil laporan aktivitas harian, dan membantu menyusun draf jawaban akses produksi dari laporan tersebut.</li><li><b>Manusia harus:</b> menambahkan Google Group tester ke track uji tertutup di Play Console, mempublikasikan rilis, membayar kredit (checkout selalu dilakukan di browser seseorang), dan mengklik Apply for production.</li><li><b>Tidak ada yang bisa mengotomatiskan:</b> 14 hari penggunaan nyata. Itu dilakukan oleh orang sungguhan di ponsel Android mereka sendiri, dan itulah inti aturan Google.</li></ul>
+
+
+</section>
+
+<section id="token">
+<h2>1. Buat token</h2>
+
+
+<ol><li>Masuk di https://testerexchange.com/api.</li><li>Buat token pribadi. Token diawali dengan tx_. Salin sekarang dan simpan seperti kata sandi.</li><li>Token bisa dicabut kapan saja. Token bisa dipakai untuk membelanjakan kredit pada kampanye, tetapi tidak bisa membayar, menarik uang, atau menghapus akun Anda.</li></ol>
+
+</section>
+
+<section id="mcp">
+<h2>2. Hubungkan server MCP</h2>
+<p>Server MCP memakai Streamable HTTP di https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp. Kirim token Anda di header Authorization: Bearer tx_YOUR_TOKEN.</p>
+<p><b>Claude Code:</b> jalankan sekali di terminal Anda.</p>
+<p>claude mcp add --transport http tester-exchange https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp --header &quot;Authorization: Bearer tx_YOUR_TOKEN&quot;</p>
+<p><b>Claude Desktop, Cursor, VS Code, dan klien lain dengan konfigurasi JSON:</b> tambahkan server bernama tester-exchange dengan type http, URL di atas, dan entri headers dengan Authorization diatur ke Bearer tx_YOUR_TOKEN. Lokasi file konfigurasi bergantung pada klien Anda; periksa dokumentasi MCP-nya.</p>
+<p><b>Klien yang hanya menerima URL</b> (sebagian konektor ChatGPT dan web): dokumentasi di https://testerexchange.com/agents/ menyediakan bentuk URL untuk mereka. Tanpa token, alat publik (apa itu Tester Exchange, harga, statistik platform) tetap berfungsi.</p>
+
+
+
+</section>
+
+<section id="tool">
+<h2>3. Satu alat untuk memulai: get_testers</h2>
+<p>Anda tidak perlu mempelajari seluruh daftar alat. Alat utamanya adalah <b>get_testers(package_name, name?)</b>. Satu panggilan menambahkan aplikasi Anda, membuka pengujiannya, menerapkan kredit Anda, dan mengembalikan progres beserta langkah yang hanya bisa dilakukan manusia, seperti menambahkan Google Group di Play Console. Panggil lagi kapan saja untuk memeriksa progres.</p>
+<p>Alat lain mencakup detailnya: my_apps, campaign_report (tester, aktivitas harian, umpan balik, dan data akses produksi), add_testers, set_campaign_status (jeda, lanjutkan, atau tutup; kredit yang tidak terpakai kembali ke saldo Anda), share_kit, dan buy_credits_links, yang mengembalikan tautan checkout untuk dibayar oleh manusia.</p>
+
+
+
+</section>
+
+<section id="prompts">
+<h2>Prompt yang efektif</h2>
+
+<ul><li>&quot;Get 15 testers for com.example.app and tell me what I need to do in Play Console.&quot;</li><li>&quot;Check my Tester Exchange campaign for com.example.app. How many testers were active each day this week?&quot;</li><li>&quot;Pull the campaign report and draft my production access answers. Use only the real numbers.&quot;</li><li>&quot;Close the campaign for com.example.app now that production access is approved.&quot;</li></ul>
+
+<p>Minta 15 tester, bukan 12, agar satu tester yang berhenti tidak membuat Anda di bawah batas minimum Google.</p>
+</section>
+
+<section id="http">
+<h2>API HTTP untuk skrip dan CI</h2>
+<p>Jika alat Anda tidak mendukung MCP, gunakan endpoint HTTP: POST https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/agent_call. Isinya JSON dengan p_token (token tx_ Anda), p_action (misalnya help, my_apps, atau start_campaign), dan p_args (misalnya package_name dan jumlah tester). Kirim header apikey publik yang tercantum di dokumentasi.</p>
+<p>Panggil action help terlebih dahulu: ia mengembalikan semua action beserta argumennya. Skema lengkapnya ada di https://testerexchange.com/openapi.json, yang bisa dipakai dengan action GPT kustom ChatGPT dan alat OpenAPI lainnya.</p>
+
+
+
+</section>
+
+<section id="a2a">
+<h2>Kartu agen A2A</h2>
+<p>Untuk skenario agen-ke-agen, Tester Exchange menerbitkan kartu agen A2A di https://testerexchange.com/.well-known/agent-card.json. Orkestrator yang mendukung protokol A2A bisa menemukan apa yang ditawarkan agen dan cara memanggilnya. Gunakan token tx_ yang sama untuk hal apa pun yang terkait dengan akun Anda.</p>
+
+
+
+</section>
+
+<section id="flow">
+<h2>Satu alur lengkap, dari awal sampai akhir</h2>
+
+
+<ol><li>Anda mengunggah .aab pertama ke track uji tertutup di Play Console.</li><li>Agen Anda memanggil get_testers untuk nama paket Anda dan memberi tahu Anda untuk menambahkan testerexchange-testers@googlegroups.com di Google Groups pada track uji tertutup.</li><li>Anda menambahkan grup, menyimpan, dan memastikan rilis sudah dipublikasikan.</li><li>Jika kredit Anda kurang, agen memberi Anda tautan checkout. Anda membayar ($12.99 untuk 12 tester, $14.99 untuk 15, $22.99 untuk 25) atau mendapatkan kredit gratis dengan menguji aplikasi lain di https://testerexchange.com/earn.</li><li>Tester sungguhan menginstal dan memakai aplikasi Anda selama 14 hari. Agen Anda memeriksa progres setiap hari dan memperingatkan Anda jika jumlah tester aktif turun.</li><li>Pada hari ke-15, agen mengambil laporan kampanye dan menyusun draf jawaban akses produksi Anda. Anda memeriksanya lalu mengklik Apply for production.</li></ol>
+
+</section>
+
+<section id="safety">
+<h2>Catatan keamanan</h2>
+
+<ul><li>Jauhkan token dari git. Simpan di penyimpanan rahasia klien Anda atau di variabel lingkungan.</li><li>Di sisi kami, token hanya disimpan dalam bentuk hash dan dibatasi 10 per akun. Cabut token yang tidak lagi Anda pakai.</li><li>Baca apa yang ditulis agen di formulir produksi Anda sebelum mengirim. Google meminta Anda menjelaskan pengujian Anda dengan jujur.</li></ul>
+
+
+</section>
+<section id="faq"><h2>Pertanyaan yang sering diajukan</h2>
+<details><summary>Bisakah agen AI menyelesaikan uji 14 hari untuk saya?</summary><p>Tidak. 14 hari itu membutuhkan orang sungguhan yang memakai aplikasi Anda di ponsel mereka sendiri. Agen menangani setup, pemantauan, dan pelaporan.</p></details>
+<details><summary>Bisakah agen membayar tester?</summary><p>Tidak. Agen bisa mengembalikan tautan checkout, tetapi pembayaran selalu dilakukan di browser manusia.</p></details>
+<details><summary>Klien mana yang bisa dipakai dengan server MCP?</summary><p>Klien apa pun yang mendukung MCP jarak jauh lewat Streamable HTTP dengan header kustom, termasuk Claude Code, Claude Desktop, Cursor, dan VS Code. Klien lain bisa memakai API HTTP.</p></details>
+<details><summary>Di mana saya mendapatkan token?</summary><p>Di https://testerexchange.com/api setelah masuk. Token diawali dengan tx_ dan bisa dicabut kapan saja.</p></details>
+<details><summary>Apakah agen mengubah sesuatu di Play Console saya?</summary><p>Tidak. Agen tidak punya akses ke Play Console Anda. Ia hanya memberi tahu langkah yang harus Anda lakukan di sana.</p></details>
+</section>
+<div class="cta"><span>Orang sungguhan membuka aplikasimu di ponsel mereka selama 14 hari. Bayar sekali, atau uji aplikasi lain secara gratis.</span><a class="btn" href="https://testerexchange.com/?lang=id#buy">Dapatkan 12 penguji</a></div>
+<section><h2>Panduan lainnya</h2><ul class="related"><li><a href="https://testerexchange.com/id/" hreflang="id">Cara mendapatkan 12 penguji untuk pengujian tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/12-testers-app-builders/" hreflang="id">12 penguji Google Play untuk aplikasi buatan App Inventor, Kodular, Flutter, Unity, dan builder lainnya</a></li><li><a href="https://testerexchange.com/id/app-not-available-for-testers/" hreflang="id">Atasi &quot;app not available&quot; untuk tester uji tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/best-way-to-get-12-testers/" hreflang="id">Cara terbaik mendapatkan 12 tester untuk uji tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/closed-testing-for-games/" hreflang="id">Uji tertutup untuk game di Google Play: panduan untuk Unity, Unreal, dan Godot</a></li><li><a href="https://testerexchange.com/id/does-14-day-closed-test-reset/" hreflang="id">Apakah uji tertutup 14 hari diulang saat tester berhenti?</a></li><li><a href="https://testerexchange.com/id/earn-money-testing-android-apps/" hreflang="id">Dapat uang dari menguji aplikasi Android: panduan jujur</a></li><li><a href="https://testerexchange.com/id/free-closed-testing-testers/" hreflang="id">Cara mendapatkan 12 penguji gratis untuk pengujian tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/friends-family-closed-testers/" hreflang="id">Teman dan keluarga sebagai 12 penguji Google Play Anda</a></li><li><a href="https://testerexchange.com/id/google-group-vs-email-list/" hreflang="id">Google Group atau daftar email untuk pengujian tertutup Anda?</a></li><li><a href="https://testerexchange.com/id/google-play-closed-testing-requirements/" hreflang="id">Persyaratan uji tertutup Google Play: panduan lengkap 2026</a></li><li><a href="https://testerexchange.com/id/google-play-review-time-after-closed-testing/" hreflang="id">Setelah 14 hari: waktu review akses produksi dan rilis pertama Anda</a></li><li><a href="https://testerexchange.com/id/insufficient-testing-engagement/" hreflang="id">Ditolak setelah pengujian tertutup? Cara mengatasi &quot;perlu pengujian lebih lanjut&quot;</a></li><li><a href="https://testerexchange.com/id/keep-testers-active-14-days/" hreflang="id">Cara menjaga penguji tertutup tetap aktif selama 14 hari penuh</a></li><li><a href="https://testerexchange.com/id/organization-vs-personal-developer-account/" hreflang="id">Akun developer Google Play organisasi vs pribadi</a></li><li><a href="https://testerexchange.com/id/paid-closed-testers-checklist/" hreflang="id">Apa yang perlu dicek sebelum membayar tester uji tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/production-access-questions/" hreflang="id">Cara menjawab pertanyaan akses produksi Google Play</a></li><li><a href="https://testerexchange.com/id/production-access-rejected/" hreflang="id">Akses produksi ditolak: apa yang harus dilakukan selanjutnya</a></li><li><a href="https://testerexchange.com/id/set-up-closed-testing-track/" hreflang="id">Cara menyiapkan track uji tertutup di Play Console, langkah demi langkah</a></li><li><a href="https://testerexchange.com/id/tools/production-answers/" hreflang="id">Generator jawaban akses produksi</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

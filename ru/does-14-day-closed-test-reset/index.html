@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Сбрасываются ли 14 дней закрытого теста, если тестировщик ушёл?</title>
+<meta name="description" content="Что происходит с 14-дневным отсчётом закрытого теста Google Play, когда тестировщики выходят из теста или перестают пользоваться приложением, и почему лучше набрать 15, а не 12.">
+<link rel="canonical" href="https://testerexchange.com/ru/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/does-14-day-closed-test-reset/">
+<meta property="og:type" content="article"><meta property="og:title" content="Сбрасываются ли 14 дней закрытого теста, если тестировщик ушёл?">
+<meta property="og:description" content="Что происходит с 14-дневным отсчётом закрытого теста Google Play, когда тестировщики выходят из теста или перестают пользоваться приложением, и почему лучше набрать 15, а не 12."><meta property="og:url" content="https://testerexchange.com/ru/does-14-day-closed-test-reset/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Сбрасываются ли 14 дней закрытого теста, если тестировщики выбывают?","description":"Что происходит с 14-дневным отсчётом закрытого теста Google Play, когда тестировщики выходят из теста или перестают пользоваться приложением, и почему лучше набрать 15, а не 12.","inLanguage":"ru","dateModified":"2026-11-05","url":"https://testerexchange.com/ru/does-14-day-closed-test-reset/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/ru/"},{"@type":"ListItem","position":3,"name":"Сбрасываются ли 14 дней закрытого теста, если тестировщики выбывают?","item":"https://testerexchange.com/ru/does-14-day-closed-test-reset/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Если один тестировщик ушёл, мои 14 дней начинаются заново?","acceptedAnswer":{"@type":"Answer","text":"Не для остальных. У каждого тестировщика свой отсчёт. Вы теряете время, только если опускаетесь ниже 12 тестировщиков, которые могут завершить 14 дней подряд."}},{"@type":"Question","name":"Начинает ли тестировщик-замена с первого дня?","acceptedAnswer":{"@type":"Answer","text":"Да. Его 14 дней подряд начинаются, когда он вступает в тест."}},{"@type":"Question","name":"Что, если тестировщик случайно вышел из теста и вернулся?","acceptedAnswer":{"@type":"Answer","text":"Google сообщает, что выход и повторный вход перезапускают его непрерывный счёт."}},{"@type":"Question","name":"Учитываются ли неактивные тестировщики?","acceptedAnswer":{"@type":"Answer","text":"Если они остаются в тесте, они учитываются в 12. Но низкая вовлечённость — частая причина, по которой Google просит продолжить тестирование."}},{"@type":"Question","name":"Сколько запасных тестировщиков нужно иметь?","acceptedAnswer":{"@type":"Answer","text":"Ориентируйтесь на 15 в общей сложности, то есть на три больше минимума Google."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=ru">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Язык" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/does-14-day-closed-test-reset/">English</option><option value="https://testerexchange.com/es/does-14-day-closed-test-reset/">Español</option><option value="https://testerexchange.com/id/does-14-day-closed-test-reset/">Bahasa Indonesia</option><option value="https://testerexchange.com/pt/does-14-day-closed-test-reset/">Português</option><option value="https://testerexchange.com/ru/does-14-day-closed-test-reset/" selected>Русский</option><option value="https://testerexchange.com/tr/does-14-day-closed-test-reset/">Türkçe</option><option value="https://testerexchange.com/vi/does-14-day-closed-test-reset/">Tiếng Việt</option>
+</select>
+<a href="https://testerexchange.com/?lang=ru">Открыть Tester Exchange</a></header>
+<main>
+
+<h1>Сбрасываются ли 14 дней закрытого теста, если тестировщики выбывают?</h1>
+<p class="muted">Обновлено в ноябре 2026 г.</p>
+<p class="lede">Коротко: уход одного тестировщика сам по себе ничего не сбрасывает, но падение ниже 12 тестировщиков, участвующих в тесте, ломает ваш прогресс. Google считает тестировщиков, которые участвуют в тесте непрерывно, поэтому те, кто уходит, и те, кто их заменяет, меняют расчёт. В этом руководстве объясняется, как работает подсчёт по Справочному центру Google, что делать посреди теста и почему стоит ориентироваться на 15.</p>
+<div class="cta"><span>Реальные люди открывают ваше приложение на своих телефонах 14 дней. Заплатите один раз или бесплатно тестируйте чужие приложения.</span><a class="btn" href="https://testerexchange.com/?lang=ru#buy">Получить 12 тестировщиков</a></div>
+<nav class="toc"><b>Содержание</b><ul><li><a href="#rule">Что именно считает Google</a></li><li><a href="#scenarios">Типичные ситуации</a></li><li><a href="#fifteen">Почему просить 15 тестировщиков, а не 12</a></li><li><a href="#during">Что делать посреди теста</a></li><li><a href="#track">Что не сбрасывает ваш прогресс</a></li><li><a href="#te">Как Tester Exchange справляется с выбыванием</a></li><li><a href="#faq">Частые вопросы</a></li></ul></nav>
+
+<section id="rule">
+<h2>Что именно считает Google</h2>
+<p>Требование Google для личных аккаунтов, созданных после 13 ноября 2023 г., — закрытый тест как минимум с 12 тестировщиками, непрерывно участвующими в нём не менее 14 дней. Важны три детали в формулировке Google:</p>
+<ul><li><b>14 дней должны идти подряд.</b> Приостановить и возобновить нельзя.</li><li><b>Тестировщики, которые вступили, тестировали меньше 14 дней и вышли, не засчитываются</b> в требование.</li><li><b>В момент подачи заявки на доступ к рабочей версии</b> в тесте должно участвовать не менее 12 тестировщиков.</li></ul>
+
+<p>Считайте по каждому тестировщику: у каждого свой отсчёт, который начинается, когда он вступает в тест. Вы проходите требование, когда не менее 12 человек участвуют в тесте 14 дней подряд и всё ещё остаются в нём.</p>
+</section>
+
+<section id="scenarios">
+<h2>Типичные ситуации</h2>
+
+<ul><li><b>Было 15, один ушёл на 8-й день.</b> Остальные 14 продолжают считаться. На 14-й день у вас по-прежнему 14 подходящих тестировщиков. Проблемы нет.</li><li><b>Было ровно 12, один ушёл на 8-й день.</b> Теперь 14 дней могут набрать только 11 человек. Нужна замена, и её 14 дней начинаются в день вступления. Самая ранняя дата подачи заявки сдвигается примерно на неделю.</li><li><b>Тестировщик вышел из теста и вошёл снова.</b> Google сообщает, что выход и повторный вход перезапускают непрерывный счёт этого тестировщика.</li><li><b>Тестировщик остаётся в тесте, но перестал открывать приложение.</b> Он по-прежнему учитывается в 12 по правилу участия, но вредит вам по вовлечённости, о которой Google спрашивает в форме доступа к рабочей версии.</li><li><b>Тестировщик удалил приложение, но не вышел из теста.</b> Скорее всего, он по-прежнему участвует в тесте, но не тестирует. Относитесь к нему так же, как к предыдущему случаю.</li></ul>
+
+
+</section>
+
+<section id="fifteen">
+<h2>Почему просить 15 тестировщиков, а не 12</h2>
+<p>Выбытие — это нормально. Люди меняют телефоны, забывают, у них заканчивается память или пропадает интерес. Если ровно 12, любое выбытие до 14-го дня сдвигает дату подачи. Если 15, можно потерять троих и всё равно подать вовремя.</p>
+<p>Это помогает и с вовлечённостью. Google смотрит, как тестировщики пользовались приложением. Если из пятнадцати трое молчат, остальные двенадцать всё равно показывают стабильное использование. Если трое молчат из двенадцати, четверть вашего теста выглядит неактивной.</p>
+
+
+<p>В Tester Exchange 15 тестировщиков стоят 14,99 доллара против 12,99 за 12 — это недорогая страховка от лишней недели ожидания.</p>
+</section>
+
+<section id="during">
+<h2>Что делать посреди теста</h2>
+
+
+<ol><li>Проверяйте число тестировщиков в тесте в Play Console каждые два-три дня.</li><li>Если заметили падение, сразу добавляйте замену. Каждый день ожидания прибавляется к её 14 дням.</li><li>Пишите молчащим тестировщикам с одной конкретной задачей («попробуйте новый экран поиска в сборке 1.0.3»), а не с общим напоминанием.</li><li>Выпустите обновление во время теста. Свежая сборка даёт тестировщикам повод снова открыть приложение.</li><li>Не подавайте заявку, пока у вас нет как минимум 12 тестировщиков, каждый из которых прошёл 14 дней подряд и всё ещё участвует в тесте. Запас в два-три человека надёжнее.</li></ol>
+
+</section>
+
+<section id="track">
+<h2>Что не сбрасывает ваш прогресс</h2>
+
+<ul><li>Загрузка новых сборок на тот же закрытый трек. Тестировщики остаются в тесте и получают обновление.</li><li>Добавление новых тестировщиков. Новые люди начинают свои 14 дней; у прежних они продолжаются.</li><li>Редактирование страницы приложения в магазине или примечаний к релизу.</li></ul>
+
+<p>Чего стоит избегать: удаления списка адресов или Google Group с трека, а также удаления самого трека. Тестировщики могут потерять доступ, и неясно, как Google тогда отнесётся к их участию в тесте, так что не рискуйте.</p>
+</section>
+
+<section id="te">
+<h2>Как Tester Exchange справляется с выбыванием</h2>
+<p>В Tester Exchange тестировщики — настоящие люди на собственных Android-телефонах, и вы видите ежедневное использование по каждому. Если тестировщик перестаёт тестировать, его место занимает новый, а платите вы только за дни, когда тестировщики действительно открывают ваше приложение. Неиспользованные кредиты остаются на вашем балансе. Можно один раз заплатить за 12, 15 или 25 тестировщиков либо получить тестировщиков бесплатно, тестируя чужие приложения на https://testerexchange.com/earn в браузере телефона.</p>
+
+
+
+</section>
+<section id="faq"><h2>Частые вопросы</h2>
+<details><summary>Если один тестировщик ушёл, мои 14 дней начинаются заново?</summary><p>Не для остальных. У каждого тестировщика свой отсчёт. Вы теряете время, только если опускаетесь ниже 12 тестировщиков, которые могут завершить 14 дней подряд.</p></details>
+<details><summary>Начинает ли тестировщик-замена с первого дня?</summary><p>Да. Его 14 дней подряд начинаются, когда он вступает в тест.</p></details>
+<details><summary>Что, если тестировщик случайно вышел из теста и вернулся?</summary><p>Google сообщает, что выход и повторный вход перезапускают его непрерывный счёт.</p></details>
+<details><summary>Учитываются ли неактивные тестировщики?</summary><p>Если они остаются в тесте, они учитываются в 12. Но низкая вовлечённость — частая причина, по которой Google просит продолжить тестирование.</p></details>
+<details><summary>Сколько запасных тестировщиков нужно иметь?</summary><p>Ориентируйтесь на 15 в общей сложности, то есть на три больше минимума Google.</p></details>
+</section>
+<div class="cta"><span>Реальные люди открывают ваше приложение на своих телефонах 14 дней. Заплатите один раз или бесплатно тестируйте чужие приложения.</span><a class="btn" href="https://testerexchange.com/?lang=ru#buy">Получить 12 тестировщиков</a></div>
+<section><h2>Другие руководства</h2><ul class="related"><li><a href="https://testerexchange.com/ru/" hreflang="ru">Как найти 12 тестировщиков для закрытого тестирования в Google Play</a></li><li><a href="https://testerexchange.com/ru/12-testers-app-builders/" hreflang="ru">12 тестировщиков Google Play для приложений на App Inventor, Kodular, Flutter, Unity и других конструкторах</a></li><li><a href="https://testerexchange.com/ru/app-not-available-for-testers/" hreflang="ru">Как исправить «app not available» у тестировщиков закрытого теста Google Play</a></li><li><a href="https://testerexchange.com/ru/automate-closed-testing-with-ai-agents/" hreflang="ru">Автоматизация закрытого тестирования Google Play с ИИ-агентами</a></li><li><a href="https://testerexchange.com/ru/best-way-to-get-12-testers/" hreflang="ru">Лучший способ найти 12 тестировщиков для закрытого тестирования Google Play</a></li><li><a href="https://testerexchange.com/ru/closed-testing-for-games/" hreflang="ru">Закрытое тестирование игр в Google Play: руководство для Unity, Unreal и Godot</a></li><li><a href="https://testerexchange.com/ru/earn-money-testing-android-apps/" hreflang="ru">Заработок на тестировании Android-приложений: честное руководство</a></li><li><a href="https://testerexchange.com/ru/free-closed-testing-testers/" hreflang="ru">Как бесплатно найти 12 тестировщиков для закрытого теста Google Play</a></li><li><a href="https://testerexchange.com/ru/friends-family-closed-testers/" hreflang="ru">Друзья и семья в роли 12 тестировщиков Google Play</a></li><li><a href="https://testerexchange.com/ru/google-group-vs-email-list/" hreflang="ru">Google Group или список адресов для закрытого тестирования?</a></li><li><a href="https://testerexchange.com/ru/google-play-closed-testing-requirements/" hreflang="ru">Требования к закрытому тестированию Google Play: полное руководство на 2026 год</a></li><li><a href="https://testerexchange.com/ru/google-play-review-time-after-closed-testing/" hreflang="ru">После 14 дней: срок проверки доступа к рабочей версии и первый релиз</a></li><li><a href="https://testerexchange.com/ru/insufficient-testing-engagement/" hreflang="ru">Отказ после закрытого тестирования? Как исправить «требуется больше тестирования»</a></li><li><a href="https://testerexchange.com/ru/keep-testers-active-14-days/" hreflang="ru">Как сохранить активность тестировщиков все 14 дней закрытого теста</a></li><li><a href="https://testerexchange.com/ru/organization-vs-personal-developer-account/" hreflang="ru">Аккаунт организации или личный аккаунт разработчика Google Play</a></li><li><a href="https://testerexchange.com/ru/paid-closed-testers-checklist/" hreflang="ru">Что проверить, прежде чем платить за тестеров закрытого тестирования Google Play</a></li><li><a href="https://testerexchange.com/ru/production-access-questions/" hreflang="ru">Как ответить на вопросы Google Play о доступе к рабочей версии</a></li><li><a href="https://testerexchange.com/ru/production-access-rejected/" hreflang="ru">Отказ в доступе к рабочей версии: что делать дальше</a></li><li><a href="https://testerexchange.com/ru/set-up-closed-testing-track/" hreflang="ru">Как настроить закрытый трек тестирования в Play Console: пошаговое руководство</a></li><li><a href="https://testerexchange.com/ru/tools/production-answers/" hreflang="ru">Генератор ответов для доступа к рабочей версии</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

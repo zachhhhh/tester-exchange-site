@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Uji tertutup Google Play untuk game: Unity, Unreal, Godot</title>
+<meta name="description" content="Cara developer game lolos uji tertutup Google Play 12 tester × 14 hari: pengaturan build Unity, Unreal, dan Godot, kompatibilitas perangkat, apa yang diminta dimainkan tester, dan cara menunjukkan keterlibatan.">
+<link rel="canonical" href="https://testerexchange.com/id/closed-testing-for-games/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/closed-testing-for-games/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/closed-testing-for-games/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/closed-testing-for-games/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/closed-testing-for-games/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/closed-testing-for-games/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/closed-testing-for-games/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/closed-testing-for-games/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/closed-testing-for-games/">
+<meta property="og:type" content="article"><meta property="og:title" content="Uji tertutup Google Play untuk game: Unity, Unreal, Godot">
+<meta property="og:description" content="Cara developer game lolos uji tertutup Google Play 12 tester × 14 hari: pengaturan build Unity, Unreal, dan Godot, kompatibilitas perangkat, apa yang diminta dimainkan tester, dan cara menunjukkan keterlibatan."><meta property="og:url" content="https://testerexchange.com/id/closed-testing-for-games/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Uji tertutup untuk game di Google Play: panduan untuk Unity, Unreal, dan Godot","description":"Cara developer game lolos uji tertutup Google Play 12 tester × 14 hari: pengaturan build Unity, Unreal, dan Godot, kompatibilitas perangkat, apa yang diminta dimainkan tester, dan cara menunjukkan keterlibatan.","inLanguage":"id","dateModified":"2026-11-05","url":"https://testerexchange.com/id/closed-testing-for-games/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/id/"},{"@type":"ListItem","position":3,"name":"Uji tertutup untuk game di Google Play: panduan untuk Unity, Unreal, dan Godot","item":"https://testerexchange.com/id/closed-testing-for-games/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Apakah game juga perlu uji tertutup?","acceptedAnswer":{"@type":"Answer","text":"Ya. Persyaratan ini berlaku untuk semua aplikasi dari akun pribadi yang dibuat setelah 13 November 2023, termasuk game."}},{"@type":"Question","name":"Bolehkah game saya belum selesai selama uji tertutup?","acceptedAnswer":{"@type":"Answer","text":"Boleh, uji tertutup memang untuk pekerjaan yang masih berjalan. Namun tester membutuhkan konten yang cukup untuk dimainkan selama dua minggu, dan Anda harus terus memperbaikinya selama pengujian."}},{"@type":"Question","name":"Mengapa sebagian tester tidak bisa menginstal game saya?","acceptedAnswer":{"@type":"Answer","text":"Biasanya karena kompatibilitas perangkat: versi Android minimum yang tinggi, tidak ada dukungan 64-bit, atau fitur perangkat keras yang diwajibkan. Periksa Device catalog di Play Console."}},{"@type":"Question","name":"Berapa lama tester harus bermain setiap hari?","acceptedAnswer":{"@type":"Answer","text":"Google tidak menetapkan angkanya. Sesi singkat yang nyata setiap hari lebih baik daripada satu sesi panjang lalu tidak ada lagi."}},{"@type":"Question","name":"Haruskah saya memakai Play Asset Delivery untuk pengujian?","acceptedAnswer":{"@type":"Answer","text":"Jika game Anda besar, ya. Unduhan pertama yang lebih kecil berarti lebih banyak tester yang benar-benar menginstal dan mulai bermain."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=id">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Bahasa" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/closed-testing-for-games/">English</option><option value="https://testerexchange.com/es/closed-testing-for-games/">Español</option><option value="https://testerexchange.com/id/closed-testing-for-games/" selected>Bahasa Indonesia</option><option value="https://testerexchange.com/pt/closed-testing-for-games/">Português</option><option value="https://testerexchange.com/ru/closed-testing-for-games/">Русский</option><option value="https://testerexchange.com/tr/closed-testing-for-games/">Türkçe</option><option value="https://testerexchange.com/vi/closed-testing-for-games/">Tiếng Việt</option>
+</select>
+<a href="https://testerexchange.com/?lang=id">Buka Tester Exchange</a></header>
+<main>
+
+<h1>Uji tertutup untuk game di Google Play: panduan untuk Unity, Unreal, dan Godot</h1>
+<p class="muted">Diperbarui November 2026</p>
+<p class="lede">Game melewati persyaratan uji tertutup yang sama seperti aplikasi lain: jika akun developer pribadi Anda dibuat setelah 13 November 2023, Anda memerlukan minimal 12 tester yang ikut serta selama 14 hari berturut-turut sebelum bisa mengajukan akses produksi. Namun game punya jebakan tersendiri: unduhan besar, perangkat yang tidak bisa menjalankan build, dan tester yang membuka game sekali lalu tidak pernah kembali. Panduan ini membahas apa yang perlu disiapkan developer game dan apa yang perlu diminta dari tester.</p>
+<div class="cta"><span>Orang sungguhan membuka aplikasimu di ponsel mereka selama 14 hari. Bayar sekali, atau uji aplikasi lain secara gratis.</span><a class="btn" href="https://testerexchange.com/?lang=id#buy">Dapatkan 12 penguji</a></div>
+<nav class="toc"><b>Di halaman ini</b><ul><li><a href="#same">Aturan yang sama, dengan risiko khusus game</a></li><li><a href="#build">Pengaturan build yang perlu diperiksa lebih dulu</a></li><li><a href="#setup">Siapkan pengujian</a></li><li><a href="#players">Apa yang diminta dimainkan tester</a></li><li><a href="#engage">Tunjukkan keterlibatan</a></li><li><a href="#online">Game multiplayer dan online</a></li><li><a href="#testers">Mendapatkan cukup pemain</a></li><li><a href="#faq">Pertanyaan yang sering diajukan</a></li></ul></nav>
+
+<section id="same">
+<h2>Aturan yang sama, dengan risiko khusus game</h2>
+<p>Dalam hal ini Google memperlakukan game dan aplikasi sama. Jalankan uji tertutup dengan minimal 12 tester yang tetap ikut serta tanpa putus selama 14 hari, lalu ajukan akses produksi. Formulir produksi menanyakan keterlibatan tester, umpan balik, dan apa yang Anda ubah, jadi pengujian di mana tidak ada yang bermain melewati tutorial akan menghasilkan jawaban yang lemah.</p>
+<p>Risiko yang lebih sering menimpa game dibanding aplikasi lain:</p>
+<ul><li><b>Kompatibilitas perangkat:</b> tester melihat &quot;your device isn't compatible&quot; dan tidak bisa menginstal.</li><li><b>Ukuran unduhan:</b> unduhan pertama yang besar lewat data seluler membuat tester mundur.</li><li><b>Durasi sesi:</b> orang tidak mau memainkan level 20 menit setiap hari selama dua minggu.</li><li><b>Konten kurang:</b> vertical slice dengan satu level kehabisan hal untuk dilakukan pada hari ketiga.</li></ul>
+
+
+</section>
+
+<section id="build">
+<h2>Pengaturan build yang perlu diperiksa lebih dulu</h2>
+
+<ul><li><b>Unity:</b> buat Android App Bundle (.aab), gunakan IL2CPP dengan ARM64 diaktifkan (Google Play mewajibkan dukungan 64-bit), dan tetapkan API level minimum yang tidak mengecualikan lebih banyak ponsel dari yang perlu. Jika build Anda besar, gunakan Play Asset Delivery, bukan satu unduhan raksasa.</li><li><b>Unreal Engine:</b> kemas untuk Android sebagai App Bundle dengan arm64, periksa level SDK target dan minimum di Project Settings, dan jaga unduhan pertama tetap kecil dengan memindahkan konten opsional ke asset pack.</li><li><b>Godot:</b> gunakan template ekspor Android dengan build Gradle diaktifkan dan ekspor sebagai AAB. Pastikan arm64-v8a disertakan, dan uji renderer di ponsel kelas bawah, karena sebagian perangkat menangani renderer Compatibility lebih baik daripada Forward+ atau Mobile.</li><li><b>Semua engine:</b> targetkan API level yang saat ini diwajibkan Google Play untuk aplikasi baru, dan tanda tangani dengan Play App Signing.</li></ul>
+
+<p>Setelah mengunggah, buka Device catalog di Play Console untuk melihat berapa banyak perangkat yang didukung build Anda. Jika sebagian besar dikecualikan, perbaiki sebelum tester datang.</p>
+</section>
+
+<section id="setup">
+<h2>Siapkan pengujian</h2>
+
+
+<ol><li>Buat atau buka track uji tertutup: Test and release, lalu Testing, lalu Closed testing.</li><li>Tambahkan negara tempat tester Anda tinggal.</li><li>Tambahkan tester dengan daftar email atau Google Group. Dengan Tester Exchange, tambahkan testerexchange-testers@googlegroups.com.</li><li>Unggah .aab, kirim rilis untuk review, dan tunggu sampai berstatus Published.</li><li>Bagikan tautan opt-in. Pada awalnya, tautan ini bisa butuh beberapa jam sebelum berfungsi.</li></ol>
+<p>Jika tester melaporkan &quot;app not available&quot;, lihat panduan untuk mengatasinya. Panduan itu membahas akun yang salah, negara, dan track yang belum dipublikasikan.</p>
+</section>
+
+<section id="players">
+<h2>Apa yang diminta dimainkan tester</h2>
+<p>Beri tester target harian kecil yang muat dalam beberapa menit. Permainan yang nyata dan bervariasi inilah yang membantu Anda, dan itulah yang akan Anda jelaskan nanti di formulir produksi.</p>
+<ul><li><b>Hari 1 sampai 3:</b> selesaikan tutorial dan level pertama. Laporkan apa pun yang membingungkan.</li><li><b>Hari 4 sampai 7:</b> mainkan satu sesi singkat per hari; coba pengaturan, suara, kontrol, dan fitur jeda.</li><li><b>Hari 8 sampai 11:</b> coba build baru dengan perbaikan; mainkan ulang satu level untuk melihat apakah terasa lebih baik.</li><li><b>Hari 12 sampai 14:</b> mainkan konten tersulit yang tersedia dan laporkan crash, lag, atau baterai yang boros.</li></ul>
+
+<p>Jika game Anda punya hadiah harian, tantangan harian singkat, atau mode cepat, arahkan tester ke sana. Itu cocok secara alami dengan ritme harian.</p>
+</section>
+
+<section id="engage">
+<h2>Tunjukkan keterlibatan</h2>
+
+<ul><li>Rilis minimal satu pembaruan selama pengujian, idealnya dua. Memperbaiki crash yang dilaporkan adalah cerita terbaik untuk formulir produksi.</li><li>Gunakan Android vitals dan pre-launch report di Play Console untuk menemukan crash dan ANR di perangkat nyata.</li><li>Kumpulkan umpan balik tertulis lewat formulir sederhana: model perangkat, apa yang dilakukan, apa yang terjadi.</li><li>Simpan catatan jumlah tester aktif harian, sesi, bug yang ditemukan, dan build yang dirilis.</li></ul>
+
+
+</section>
+
+<section id="online">
+<h2>Game multiplayer dan online</h2>
+<p>Jika game Anda membutuhkan server, jaga agar tetap berjalan selama 14 hari penuh, dan pastikan game tetap bisa dimainkan saat tester sendirian. Lobi yang tidak pernah terisi terlihat seperti pengujian yang kosong. Tambahkan bot atau mode solo selama masa pengujian jika bisa.</p>
+<p>Jika perlu login, berikan tester mode tamu yang berfungsi atau petunjuk yang jelas. Tembok login membuat tester pergi pada hari pertama.</p>
+
+
+
+</section>
+
+<section id="testers">
+<h2>Mendapatkan cukup pemain</h2>
+<p>Minta 15 tester, bukan 12, karena sebagian pemain cepat berhenti dari game. Tester Exchange mengirim orang sungguhan yang bermain di ponsel Android mereka sendiri dan menampilkan penggunaan harian setiap tester: $12.99 untuk 12, $14.99 untuk 15, atau $22.99 untuk 25, dibayar sekali. Anda juga bisa mendapatkan tester secara gratis dengan menguji aplikasi dan game developer lain di https://testerexchange.com/earn.</p>
+
+
+
+</section>
+<section id="faq"><h2>Pertanyaan yang sering diajukan</h2>
+<details><summary>Apakah game juga perlu uji tertutup?</summary><p>Ya. Persyaratan ini berlaku untuk semua aplikasi dari akun pribadi yang dibuat setelah 13 November 2023, termasuk game.</p></details>
+<details><summary>Bolehkah game saya belum selesai selama uji tertutup?</summary><p>Boleh, uji tertutup memang untuk pekerjaan yang masih berjalan. Namun tester membutuhkan konten yang cukup untuk dimainkan selama dua minggu, dan Anda harus terus memperbaikinya selama pengujian.</p></details>
+<details><summary>Mengapa sebagian tester tidak bisa menginstal game saya?</summary><p>Biasanya karena kompatibilitas perangkat: versi Android minimum yang tinggi, tidak ada dukungan 64-bit, atau fitur perangkat keras yang diwajibkan. Periksa Device catalog di Play Console.</p></details>
+<details><summary>Berapa lama tester harus bermain setiap hari?</summary><p>Google tidak menetapkan angkanya. Sesi singkat yang nyata setiap hari lebih baik daripada satu sesi panjang lalu tidak ada lagi.</p></details>
+<details><summary>Haruskah saya memakai Play Asset Delivery untuk pengujian?</summary><p>Jika game Anda besar, ya. Unduhan pertama yang lebih kecil berarti lebih banyak tester yang benar-benar menginstal dan mulai bermain.</p></details>
+</section>
+<div class="cta"><span>Orang sungguhan membuka aplikasimu di ponsel mereka selama 14 hari. Bayar sekali, atau uji aplikasi lain secara gratis.</span><a class="btn" href="https://testerexchange.com/?lang=id#buy">Dapatkan 12 penguji</a></div>
+<section><h2>Panduan lainnya</h2><ul class="related"><li><a href="https://testerexchange.com/id/" hreflang="id">Cara mendapatkan 12 penguji untuk pengujian tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/12-testers-app-builders/" hreflang="id">12 penguji Google Play untuk aplikasi buatan App Inventor, Kodular, Flutter, Unity, dan builder lainnya</a></li><li><a href="https://testerexchange.com/id/app-not-available-for-testers/" hreflang="id">Atasi &quot;app not available&quot; untuk tester uji tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/automate-closed-testing-with-ai-agents/" hreflang="id">Otomatiskan uji tertutup Google Play dengan agen AI</a></li><li><a href="https://testerexchange.com/id/best-way-to-get-12-testers/" hreflang="id">Cara terbaik mendapatkan 12 tester untuk uji tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/does-14-day-closed-test-reset/" hreflang="id">Apakah uji tertutup 14 hari diulang saat tester berhenti?</a></li><li><a href="https://testerexchange.com/id/earn-money-testing-android-apps/" hreflang="id">Dapat uang dari menguji aplikasi Android: panduan jujur</a></li><li><a href="https://testerexchange.com/id/free-closed-testing-testers/" hreflang="id">Cara mendapatkan 12 penguji gratis untuk pengujian tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/friends-family-closed-testers/" hreflang="id">Teman dan keluarga sebagai 12 penguji Google Play Anda</a></li><li><a href="https://testerexchange.com/id/google-group-vs-email-list/" hreflang="id">Google Group atau daftar email untuk pengujian tertutup Anda?</a></li><li><a href="https://testerexchange.com/id/google-play-closed-testing-requirements/" hreflang="id">Persyaratan uji tertutup Google Play: panduan lengkap 2026</a></li><li><a href="https://testerexchange.com/id/google-play-review-time-after-closed-testing/" hreflang="id">Setelah 14 hari: waktu review akses produksi dan rilis pertama Anda</a></li><li><a href="https://testerexchange.com/id/insufficient-testing-engagement/" hreflang="id">Ditolak setelah pengujian tertutup? Cara mengatasi &quot;perlu pengujian lebih lanjut&quot;</a></li><li><a href="https://testerexchange.com/id/keep-testers-active-14-days/" hreflang="id">Cara menjaga penguji tertutup tetap aktif selama 14 hari penuh</a></li><li><a href="https://testerexchange.com/id/organization-vs-personal-developer-account/" hreflang="id">Akun developer Google Play organisasi vs pribadi</a></li><li><a href="https://testerexchange.com/id/paid-closed-testers-checklist/" hreflang="id">Apa yang perlu dicek sebelum membayar tester uji tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/production-access-questions/" hreflang="id">Cara menjawab pertanyaan akses produksi Google Play</a></li><li><a href="https://testerexchange.com/id/production-access-rejected/" hreflang="id">Akses produksi ditolak: apa yang harus dilakukan selanjutnya</a></li><li><a href="https://testerexchange.com/id/set-up-closed-testing-track/" hreflang="id">Cara menyiapkan track uji tertutup di Play Console, langkah demi langkah</a></li><li><a href="https://testerexchange.com/id/tools/production-answers/" hreflang="id">Generator jawaban akses produksi</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

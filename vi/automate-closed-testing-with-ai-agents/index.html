@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tự động hóa thử nghiệm kín Google Play bằng AI agent</title>
+<meta name="description" content="Để Claude, ChatGPT hoặc Cursor lo phần giấy tờ của thử nghiệm kín 12 người trên Google Play: MCP server, HTTP API và A2A agent của Tester Exchange, kèm lệnh cài đặt và phần vẫn cần con người.">
+<link rel="canonical" href="https://testerexchange.com/vi/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/">
+<meta property="og:type" content="article"><meta property="og:title" content="Tự động hóa thử nghiệm kín Google Play bằng AI agent">
+<meta property="og:description" content="Để Claude, ChatGPT hoặc Cursor lo phần giấy tờ của thử nghiệm kín 12 người trên Google Play: MCP server, HTTP API và A2A agent của Tester Exchange, kèm lệnh cài đặt và phần vẫn cần con người."><meta property="og:url" content="https://testerexchange.com/vi/automate-closed-testing-with-ai-agents/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Tự động hóa thử nghiệm kín Google Play bằng AI agent","description":"Để Claude, ChatGPT hoặc Cursor lo phần giấy tờ của thử nghiệm kín 12 người trên Google Play: MCP server, HTTP API và A2A agent của Tester Exchange, kèm lệnh cài đặt và phần vẫn cần con người.","inLanguage":"vi","dateModified":"2026-11-05","url":"https://testerexchange.com/vi/automate-closed-testing-with-ai-agents/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/vi/"},{"@type":"ListItem","position":3,"name":"Tự động hóa thử nghiệm kín Google Play bằng AI agent","item":"https://testerexchange.com/vi/automate-closed-testing-with-ai-agents/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"AI agent có thể hoàn thành bài thử nghiệm 14 ngày thay tôi không?","acceptedAnswer":{"@type":"Answer","text":"Không. 14 ngày đó cần người thật dùng ứng dụng của bạn trên điện thoại của chính họ. Agent lo phần thiết lập, giám sát và báo cáo."}},{"@type":"Question","name":"Agent có thể trả tiền cho người thử nghiệm không?","acceptedAnswer":{"@type":"Answer","text":"Không. Nó có thể trả về liên kết thanh toán, nhưng việc thanh toán luôn diễn ra trong trình duyệt của một con người."}},{"@type":"Question","name":"Những client nào dùng được với MCP server?","acceptedAnswer":{"@type":"Answer","text":"Mọi client hỗ trợ MCP từ xa qua Streamable HTTP với header tùy chỉnh, gồm Claude Code, Claude Desktop, Cursor và VS Code. Các client khác có thể dùng HTTP API."}},{"@type":"Question","name":"Tôi lấy token ở đâu?","acceptedAnswer":{"@type":"Answer","text":"Tại https://testerexchange.com/api sau khi đăng nhập. Token bắt đầu bằng tx_ và có thể thu hồi bất cứ lúc nào."}},{"@type":"Question","name":"Agent có thay đổi gì trong Play Console của tôi không?","acceptedAnswer":{"@type":"Answer","text":"Không. Nó không có quyền truy cập Play Console của bạn. Nó chỉ cho bạn biết các bước cần làm ở đó."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=vi">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Ngôn ngữ" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/">English</option><option value="https://testerexchange.com/es/automate-closed-testing-with-ai-agents/">Español</option><option value="https://testerexchange.com/id/automate-closed-testing-with-ai-agents/">Bahasa Indonesia</option><option value="https://testerexchange.com/pt/automate-closed-testing-with-ai-agents/">Português</option><option value="https://testerexchange.com/ru/automate-closed-testing-with-ai-agents/">Русский</option><option value="https://testerexchange.com/tr/automate-closed-testing-with-ai-agents/">Türkçe</option><option value="https://testerexchange.com/vi/automate-closed-testing-with-ai-agents/" selected>Tiếng Việt</option>
+</select>
+<a href="https://testerexchange.com/?lang=vi">Mở Tester Exchange</a></header>
+<main>
+
+<h1>Tự động hóa thử nghiệm kín Google Play bằng AI agent</h1>
+<p class="muted">Cập nhật tháng 11/2026</p>
+<p class="lede">Nếu bạn đã ship code cùng một AI agent, bạn cũng có thể giao cho nó phần lớn việc vặt của yêu cầu thử nghiệm kín trên Google Play: đăng ứng dụng, tuyển người thử nghiệm, theo dõi tiến độ và lấy số liệu cho biểu mẫu xin quyền truy cập production. Tester Exchange có MCP server, HTTP API một endpoint và A2A agent card cho việc này. Hướng dẫn này chỉ cách kết nối Claude Code, Claude Desktop, Cursor và các client khác, nên yêu cầu gì, và những phần không agent nào làm thay bạn được.</p>
+<div class="cta"><span>Người thật mở ứng dụng của bạn trên điện thoại của họ trong 14 ngày. Trả một lần, hoặc kiểm thử ứng dụng khác miễn phí.</span><a class="btn" href="https://testerexchange.com/?lang=vi#buy">Nhận 12 người kiểm thử</a></div>
+<nav class="toc"><b>Trên trang này</b><ul><li><a href="#what">Agent làm được và không làm được gì</a></li><li><a href="#token">1. Tạo token</a></li><li><a href="#mcp">2. Kết nối MCP server</a></li><li><a href="#tool">3. Công cụ đầu tiên nên dùng: get_testers</a></li><li><a href="#prompts">Những prompt hiệu quả</a></li><li><a href="#http">HTTP API cho script và CI</a></li><li><a href="#a2a">A2A agent card</a></li><li><a href="#flow">Một lượt chạy trọn vẹn, từ đầu đến cuối</a></li><li><a href="#safety">Lưu ý an toàn</a></li><li><a href="#faq">Câu hỏi thường gặp</a></li></ul></nav>
+
+<section id="what">
+<h2>Agent làm được và không làm được gì</h2>
+<p>Google yêu cầu tài khoản nhà phát triển cá nhân tạo sau ngày 13 tháng 11 năm 2023 phải chạy thử nghiệm kín với ít nhất 12 người thử nghiệm tham gia liên tục 14 ngày trước khi xin lên production. Phần lớn công việc xoay quanh đó là điều phối, và agent làm rất tốt việc này.</p>
+<ul><li><b>Agent có thể:</b> thêm ứng dụng của bạn, mở chiến dịch tìm người thử nghiệm, áp dụng credit, kiểm tra có bao nhiêu người thử nghiệm đang hoạt động, tạm dừng hoặc đóng chiến dịch, lấy báo cáo hoạt động hằng ngày và giúp soạn câu trả lời xin quyền truy cập production dựa trên báo cáo đó.</li><li><b>Con người phải làm:</b> thêm Google Group của người thử nghiệm vào track thử nghiệm kín trong Play Console, xuất bản bản phát hành, thanh toán credit (việc thanh toán luôn diễn ra trong trình duyệt của một con người) và bấm Apply for production.</li><li><b>Không ai tự động hóa được:</b> 14 ngày sử dụng thật. Việc đó do người thật làm trên điện thoại Android của chính họ, và đó chính là mục đích của quy định Google.</li></ul>
+
+
+</section>
+
+<section id="token">
+<h2>1. Tạo token</h2>
+
+
+<ol><li>Đăng nhập tại https://testerexchange.com/api.</li><li>Tạo một token cá nhân. Token bắt đầu bằng tx_. Hãy sao chép ngay và cất như một mật khẩu.</li><li>Token có thể bị thu hồi bất cứ lúc nào. Token có thể dùng credit cho các chiến dịch, nhưng không thể thanh toán, rút tiền hay xóa tài khoản của bạn.</li></ol>
+
+</section>
+
+<section id="mcp">
+<h2>2. Kết nối MCP server</h2>
+<p>MCP server dùng Streamable HTTP tại https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp. Gửi token của bạn trong header Authorization: Bearer tx_YOUR_TOKEN.</p>
+<p><b>Claude Code:</b> chạy lệnh này một lần trong terminal.</p>
+<p>claude mcp add --transport http tester-exchange https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp --header &quot;Authorization: Bearer tx_YOUR_TOKEN&quot;</p>
+<p><b>Claude Desktop, Cursor, VS Code và các client khác dùng cấu hình JSON:</b> thêm một server tên tester-exchange với type là http, URL ở trên, và một mục headers với Authorization đặt là Bearer tx_YOUR_TOKEN. Vị trí chính xác của tệp cấu hình tùy client; hãy xem tài liệu MCP của client đó.</p>
+<p><b>Các client chỉ nhận URL</b> (một số connector ChatGPT và web): tài liệu tại https://testerexchange.com/agents/ có dạng URL dành cho chúng. Khi chưa có token, các công cụ công khai (Tester Exchange là gì, bảng giá, thống kê nền tảng) vẫn dùng được.</p>
+
+
+
+</section>
+
+<section id="tool">
+<h2>3. Công cụ đầu tiên nên dùng: get_testers</h2>
+<p>Bạn không cần học hết danh sách công cụ. Công cụ chính là <b>get_testers(package_name, name?)</b>. Một lệnh gọi sẽ thêm ứng dụng, mở bài thử nghiệm, áp dụng credit và trả về tiến độ của bạn cùng các bước chỉ con người làm được, chẳng hạn thêm Google Group trong Play Console. Hãy gọi lại bất cứ lúc nào để kiểm tra tiến độ.</p>
+<p>Các công cụ khác lo phần chi tiết: my_apps, campaign_report (người thử nghiệm, hoạt động hằng ngày, phản hồi và dữ liệu xin quyền truy cập production), add_testers, set_campaign_status (tạm dừng, tiếp tục hoặc đóng; credit chưa dùng được trả lại số dư của bạn), share_kit và buy_credits_links, công cụ trả về liên kết thanh toán để con người trả tiền.</p>
+
+
+
+</section>
+
+<section id="prompts">
+<h2>Những prompt hiệu quả</h2>
+
+<ul><li>&quot;Get 15 testers for com.example.app and tell me what I need to do in Play Console.&quot;</li><li>&quot;Check my Tester Exchange campaign for com.example.app. How many testers were active each day this week?&quot;</li><li>&quot;Pull the campaign report and draft my production access answers. Use only the real numbers.&quot;</li><li>&quot;Close the campaign for com.example.app now that production access is approved.&quot;</li></ul>
+
+<p>Hãy yêu cầu 15 người thử nghiệm thay vì 12, để một người bỏ cuộc không kéo bạn xuống dưới mức tối thiểu của Google.</p>
+</section>
+
+<section id="http">
+<h2>HTTP API cho script và CI</h2>
+<p>Nếu công cụ của bạn không hỗ trợ MCP, hãy dùng endpoint HTTP: POST https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/agent_call. Body là JSON gồm p_token (token tx_ của bạn), p_action (ví dụ help, my_apps hoặc start_campaign) và p_args (ví dụ package_name và số lượng người thử nghiệm). Hãy gửi kèm header apikey công khai ghi trong tài liệu.</p>
+<p>Hãy gọi action help trước: nó trả về mọi action và tham số của chúng. Lược đồ đầy đủ nằm tại https://testerexchange.com/openapi.json, dùng được với action của custom GPT trong ChatGPT và các công cụ OpenAPI khác.</p>
+
+
+
+</section>
+
+<section id="a2a">
+<h2>A2A agent card</h2>
+<p>Cho các mô hình agent giao tiếp với agent, Tester Exchange công bố một A2A agent card tại https://testerexchange.com/.well-known/agent-card.json. Các orchestrator hỗ trợ giao thức A2A có thể khám phá agent cung cấp gì và cách gọi nó. Hãy dùng cùng token tx_ cho mọi thứ gắn với tài khoản của bạn.</p>
+
+
+
+</section>
+
+<section id="flow">
+<h2>Một lượt chạy trọn vẹn, từ đầu đến cuối</h2>
+
+
+<ol><li>Bạn tải tệp .aab đầu tiên lên track thử nghiệm kín trong Play Console.</li><li>Agent của bạn gọi get_testers với package name của bạn và bảo bạn thêm testerexchange-testers@googlegroups.com vào mục Google Groups trên track thử nghiệm kín.</li><li>Bạn thêm nhóm, lưu lại, và đảm bảo bản phát hành đã được xuất bản.</li><li>Nếu bạn thiếu credit, agent đưa cho bạn liên kết thanh toán. Bạn trả tiền ($12.99 cho 12 người thử nghiệm, $14.99 cho 15, $22.99 cho 25) hoặc kiếm credit miễn phí bằng cách thử nghiệm ứng dụng khác tại https://testerexchange.com/earn.</li><li>Người thử nghiệm thật cài đặt và dùng ứng dụng của bạn trong 14 ngày. Agent của bạn kiểm tra tiến độ mỗi ngày và cảnh báo nếu số người hoạt động giảm.</li><li>Vào ngày thứ 15, agent lấy báo cáo chiến dịch và soạn câu trả lời xin quyền truy cập production. Bạn xem lại và bấm Apply for production.</li></ol>
+
+</section>
+
+<section id="safety">
+<h2>Lưu ý an toàn</h2>
+
+<ul><li>Đừng đưa token vào git. Hãy để chúng trong kho bí mật của client hoặc trong biến môi trường.</li><li>Phía chúng tôi chỉ lưu token dưới dạng hash và giới hạn tối đa 10 token cho mỗi tài khoản. Hãy thu hồi mọi token bạn không còn dùng.</li><li>Hãy đọc những gì agent viết trong biểu mẫu production trước khi gửi. Google yêu cầu bạn mô tả bài thử nghiệm một cách trung thực.</li></ul>
+
+
+</section>
+<section id="faq"><h2>Câu hỏi thường gặp</h2>
+<details><summary>AI agent có thể hoàn thành bài thử nghiệm 14 ngày thay tôi không?</summary><p>Không. 14 ngày đó cần người thật dùng ứng dụng của bạn trên điện thoại của chính họ. Agent lo phần thiết lập, giám sát và báo cáo.</p></details>
+<details><summary>Agent có thể trả tiền cho người thử nghiệm không?</summary><p>Không. Nó có thể trả về liên kết thanh toán, nhưng việc thanh toán luôn diễn ra trong trình duyệt của một con người.</p></details>
+<details><summary>Những client nào dùng được với MCP server?</summary><p>Mọi client hỗ trợ MCP từ xa qua Streamable HTTP với header tùy chỉnh, gồm Claude Code, Claude Desktop, Cursor và VS Code. Các client khác có thể dùng HTTP API.</p></details>
+<details><summary>Tôi lấy token ở đâu?</summary><p>Tại https://testerexchange.com/api sau khi đăng nhập. Token bắt đầu bằng tx_ và có thể thu hồi bất cứ lúc nào.</p></details>
+<details><summary>Agent có thay đổi gì trong Play Console của tôi không?</summary><p>Không. Nó không có quyền truy cập Play Console của bạn. Nó chỉ cho bạn biết các bước cần làm ở đó.</p></details>
+</section>
+<div class="cta"><span>Người thật mở ứng dụng của bạn trên điện thoại của họ trong 14 ngày. Trả một lần, hoặc kiểm thử ứng dụng khác miễn phí.</span><a class="btn" href="https://testerexchange.com/?lang=vi#buy">Nhận 12 người kiểm thử</a></div>
+<section><h2>Hướng dẫn khác</h2><ul class="related"><li><a href="https://testerexchange.com/vi/" hreflang="vi">Cách có 12 người kiểm thử cho thử nghiệm kín trên Google Play</a></li><li><a href="https://testerexchange.com/vi/12-testers-app-builders/" hreflang="vi">12 người thử nghiệm Google Play cho ứng dụng làm bằng App Inventor, Kodular, Flutter, Unity và các công cụ khác</a></li><li><a href="https://testerexchange.com/vi/app-not-available-for-testers/" hreflang="vi">Cách sửa lỗi &quot;app not available&quot; cho người thử nghiệm kín trên Google Play</a></li><li><a href="https://testerexchange.com/vi/best-way-to-get-12-testers/" hreflang="vi">Cách tốt nhất để có 12 người thử nghiệm cho thử nghiệm kín Google Play</a></li><li><a href="https://testerexchange.com/vi/closed-testing-for-games/" hreflang="vi">Thử nghiệm kín cho game trên Google Play: hướng dẫn cho Unity, Unreal và Godot</a></li><li><a href="https://testerexchange.com/vi/does-14-day-closed-test-reset/" hreflang="vi">14 ngày thử nghiệm kín có bị tính lại khi người thử nghiệm bỏ cuộc không?</a></li><li><a href="https://testerexchange.com/vi/earn-money-testing-android-apps/" hreflang="vi">Kiếm tiền bằng cách thử nghiệm ứng dụng Android: hướng dẫn trung thực</a></li><li><a href="https://testerexchange.com/vi/free-closed-testing-testers/" hreflang="vi">Cách tìm 12 người thử nghiệm miễn phí cho thử nghiệm kín Google Play</a></li><li><a href="https://testerexchange.com/vi/friends-family-closed-testers/" hreflang="vi">Nhờ bạn bè, người thân làm 12 người thử nghiệm Google Play</a></li><li><a href="https://testerexchange.com/vi/google-group-vs-email-list/" hreflang="vi">Google Group hay danh sách email cho thử nghiệm kín?</a></li><li><a href="https://testerexchange.com/vi/google-play-closed-testing-requirements/" hreflang="vi">Yêu cầu thử nghiệm kín của Google Play: hướng dẫn đầy đủ 2026</a></li><li><a href="https://testerexchange.com/vi/google-play-review-time-after-closed-testing/" hreflang="vi">Sau 14 ngày: thời gian duyệt quyền truy cập production và bản phát hành đầu tiên</a></li><li><a href="https://testerexchange.com/vi/insufficient-testing-engagement/" hreflang="vi">Bị từ chối sau thử nghiệm kín? Cách khắc phục “cần thử nghiệm thêm”</a></li><li><a href="https://testerexchange.com/vi/keep-testers-active-14-days/" hreflang="vi">Cách giữ người thử nghiệm kín hoạt động suốt 14 ngày</a></li><li><a href="https://testerexchange.com/vi/organization-vs-personal-developer-account/" hreflang="vi">Tài khoản nhà phát triển Google Play: tổ chức hay cá nhân</a></li><li><a href="https://testerexchange.com/vi/paid-closed-testers-checklist/" hreflang="vi">Cần kiểm tra gì trước khi trả tiền cho người thử nghiệm kín Google Play</a></li><li><a href="https://testerexchange.com/vi/production-access-questions/" hreflang="vi">Cách trả lời các câu hỏi xin quyền phát hành chính thức của Google Play</a></li><li><a href="https://testerexchange.com/vi/production-access-rejected/" hreflang="vi">Bị từ chối quyền truy cập production: làm gì tiếp theo</a></li><li><a href="https://testerexchange.com/vi/set-up-closed-testing-track/" hreflang="vi">Cách thiết lập track thử nghiệm kín trong Play Console, từng bước</a></li><li><a href="https://testerexchange.com/vi/tools/production-answers/" hreflang="vi">Công cụ tạo câu trả lời xin quyền phát hành chính thức</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

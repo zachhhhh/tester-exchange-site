@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Как настроить закрытый трек тестирования в Google Play Console</title>
+<meta name="description" content="Пошагово: создайте закрытый трек в Play Console, добавьте тестировщиков списком адресов или Google Group, опубликуйте релиз и поделитесь ссылкой-приглашением, чтобы начались 14 дней.">
+<link rel="canonical" href="https://testerexchange.com/ru/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<meta property="og:type" content="article"><meta property="og:title" content="Как настроить закрытый трек тестирования в Google Play Console">
+<meta property="og:description" content="Пошагово: создайте закрытый трек в Play Console, добавьте тестировщиков списком адресов или Google Group, опубликуйте релиз и поделитесь ссылкой-приглашением, чтобы начались 14 дней."><meta property="og:url" content="https://testerexchange.com/ru/set-up-closed-testing-track/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Как настроить закрытый трек тестирования в Play Console: пошаговое руководство","description":"Пошагово: создайте закрытый трек в Play Console, добавьте тестировщиков списком адресов или Google Group, опубликуйте релиз и поделитесь ссылкой-приглашением, чтобы начались 14 дней.","inLanguage":"ru","dateModified":"2026-11-05","url":"https://testerexchange.com/ru/set-up-closed-testing-track/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/ru/"},{"@type":"ListItem","position":3,"name":"Как настроить закрытый трек тестирования в Play Console: пошаговое руководство","item":"https://testerexchange.com/ru/set-up-closed-testing-track/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Можно ли использовать вместо этого внутреннее тестирование?","acceptedAnswer":{"@type":"Answer","text":"Нет. Для требования нужен закрытый тест. Google также сообщает, что люди, вступившие в ваш внутренний тест, не могут участвовать в закрытом, пока не выйдут из внутреннего."}},{"@type":"Question","name":"Что выбрать: список адресов или Google Group?","acceptedAnswer":{"@type":"Answer","text":"Google Group удобнее, когда тестировщики приходят и уходят, потому что трек вообще не нужно редактировать. Список адресов подходит для постоянной группы друзей. Можно использовать оба."}},{"@type":"Question","name":"Почему я не вижу ссылку-приглашение?","acceptedAnswer":{"@type":"Answer","text":"Она показывается только после публикации релиза на закрытом треке. Проверьте в Publishing overview, нет ли ожидающей проверки или неотправленных изменений."}},{"@type":"Question","name":"Нужен ли тестировщику аккаунт Google?","acceptedAnswer":{"@type":"Answer","text":"Да. Google сообщает, что для участия в тесте пользователям нужен аккаунт Google или Google Workspace, и это должен быть аккаунт, используемый в Play Маркете на телефоне."}},{"@type":"Question","name":"Можно ли сделать приложение для закрытого теста платным?","acceptedAnswer":{"@type":"Answer","text":"Можно, но Google сообщает, что тестировщики должны покупать платные приложения в закрытых тестах. Оставьте тестовое приложение бесплатным, чтобы не терять тестировщиков."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=ru">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Язык" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/set-up-closed-testing-track/">English</option><option value="https://testerexchange.com/es/set-up-closed-testing-track/">Español</option><option value="https://testerexchange.com/id/set-up-closed-testing-track/">Bahasa Indonesia</option><option value="https://testerexchange.com/pt/set-up-closed-testing-track/">Português</option><option value="https://testerexchange.com/ru/set-up-closed-testing-track/" selected>Русский</option><option value="https://testerexchange.com/tr/set-up-closed-testing-track/">Türkçe</option><option value="https://testerexchange.com/vi/set-up-closed-testing-track/">Tiếng Việt</option>
+</select>
+<a href="https://testerexchange.com/?lang=ru">Открыть Tester Exchange</a></header>
+<main>
+
+<h1>Как настроить закрытый трек тестирования в Play Console: пошаговое руководство</h1>
+<p class="muted">Обновлено в ноябре 2026 г.</p>
+<p class="lede">Чтобы пошёл ваш 14-дневный отсчёт, нужен закрытый трек тестирования, который опубликован, к которому привязаны тестировщики и который даёт работающую ссылку-приглашение. Большинство последующих проблем, например «app not available» у тестировщиков, возникает из-за пропущенного здесь шага. Это руководство следует нынешнему меню Play Console (Test and release, затем Testing, затем Closed testing) и Справочному центру Google.</p>
+<div class="cta"><span>Реальные люди открывают ваше приложение на своих телефонах 14 дней. Заплатите один раз или бесплатно тестируйте чужие приложения.</span><a class="btn" href="https://testerexchange.com/?lang=ru#buy">Получить 12 тестировщиков</a></div>
+<nav class="toc"><b>Содержание</b><ul><li><a href="#before">Прежде чем начать</a></li><li><a href="#track">1. Откройте или создайте закрытый трек</a></li><li><a href="#countries">2. Выберите страны и регионы</a></li><li><a href="#testers">3. Добавьте тестировщиков: список адресов или Google Group</a></li><li><a href="#feedback">4. Добавьте канал обратной связи</a></li><li><a href="#release">5. Создайте релиз и отправьте его на проверку</a></li><li><a href="#link">6. Поделитесь ссылкой-приглашением</a></li><li><a href="#check">7. Проверьте, что 14 дней идут</a></li><li><a href="#faq">Частые вопросы</a></li></ul></nav>
+
+<section id="before">
+<h2>Прежде чем начать</h2>
+
+<ul><li>Аккаунт разработчика Play Console с завершённой проверкой личности.</li><li>Созданное в Play Console приложение с заполненными страницей в магазине, возрастным рейтингом, целевой аудиторией, безопасностью данных и другими декларациями App content. Play Console не даст отправить релиз на проверку, пока не хватает обязательных пунктов.</li><li>Подписанный Android App Bundle (.aab) с именем пакета, которое вас устраивает навсегда. Позже изменить его нельзя.</li><li>План по тестировщикам: не менее 12, а лучше 15 настоящих людей с Android-телефонами и аккаунтами Google.</li></ul>
+
+
+</section>
+
+<section id="track">
+<h2>1. Откройте или создайте закрытый трек</h2>
+
+
+<ol><li>В Play Console выберите своё приложение.</li><li>Перейдите в Test and release, затем Testing, затем Closed testing.</li><li>Play Console предлагает закрытый трек по умолчанию (часто называется Alpha). Используйте его. Можно создать дополнительные закрытые треки, но для выполнения требования достаточно одного.</li><li>Нажмите Manage track.</li></ol>
+
+</section>
+
+<section id="countries">
+<h2>2. Выберите страны и регионы</h2>
+<p>Откройте вкладку Countries / regions и добавьте страны, где живут ваши тестировщики. Тестировщик из страны, которую вы не выбрали, не сможет установить приложение.</p>
+<p>Google отмечает, что изменения стран распространения применяются ко всем трекам и что дополнительные закрытые треки не поддерживают собственный выбор стран. Если тестировщики разбросаны по миру, проще всего добавить все страны, в которые вы можете законно распространять приложение.</p>
+
+
+
+</section>
+
+<section id="testers">
+<h2>3. Добавьте тестировщиков: список адресов или Google Group</h2>
+<p>Откройте вкладку Testers. Есть два варианта, и на одном треке можно использовать оба.</p>
+<ul><li><b>Список адресов:</b> нажмите Create email list, назовите его, затем введите адреса или загрузите CSV. Google разрешает до 2000 пользователей в списке. Загрузка CSV перезаписывает адреса, уже имеющиеся в этом списке. Каждый адрес должен быть аккаунтом Google, который тестировщик использует в Play Маркете на телефоне.</li><li><b>Google Group:</b> введите адрес группы, например yourgroup@googlegroups.com. Присоединиться к тесту могут только участники группы, и они должны вступить в группу до того, как примут участие в тесте. Вам нужно лишь добавить человека в группу; в Play Console больше ничего трогать не надо.</li></ul>
+
+<p>Если вы используете Tester Exchange, добавьте группу testerexchange-testers@googlegroups.com в разделе Google Groups и сохраните. Этот один адрес позволяет установить ваше приложение каждому присланному нами тестировщику. Смотрите также руководство о Google Group и списке адресов.</p>
+</section>
+
+<section id="feedback">
+<h2>4. Добавьте канал обратной связи</h2>
+<p>На той же вкладке Testers добавьте URL для отзывов или адрес электронной почты. Тестировщики видят его при вступлении. В форме доступа к рабочей версии вам нужно будет обобщить отзывы тестировщиков, поэтому упростите себе задачу: подойдёт короткая Google Form или отдельный адрес электронной почты.</p>
+
+
+
+</section>
+
+<section id="release">
+<h2>5. Создайте релиз и отправьте его на проверку</h2>
+
+
+<ol><li>На закрытом треке нажмите Create new release.</li><li>Загрузите свой .aab. Доверьте управление ключом Play App Signing, если нет причин поступить иначе.</li><li>Добавьте название релиза и короткие примечания к релизу, например «First closed test build».</li><li>Нажмите Next, исправьте ошибки, затем Save.</li><li>Перейдите в Publishing overview и отправьте изменения на проверку. Если включено управляемое размещение (managed publishing), после одобрения нужно также нажать Publish.</li></ol>
+<p>Релизы закрытого теста на новых аккаунтах проверяются перед публикацией. Время различается: от нескольких часов до нескольких дней.</p>
+</section>
+
+<section id="link">
+<h2>6. Поделитесь ссылкой-приглашением</h2>
+<p>Google сообщает, что ссылка-приглашение появляется только после того, как статус приложения станет Published. Скопируйте её на вкладке Testers. Она выглядит как https://play.google.com/apps/testing/your.package.name.</p>
+<p>При первой публикации ссылка может заработать только через несколько часов. Закрытые тесты нельзя найти через поиск в Google Play, поэтому тестировщикам нужна либо эта ссылка, либо ссылка на ваше приложение в Play Маркете.</p>
+
+<ol><li>Тестировщик входит в тот же аккаунт Google, который вы добавили (или который состоит в вашей Google Group).</li><li>Он открывает ссылку-приглашение и нажимает, чтобы стать тестировщиком.</li><li>Он устанавливает ваше приложение из Google Play по ссылке на этой странице.</li><li>Он открывает его и продолжает открывать в течение 14 дней.</li></ol>
+
+</section>
+
+<section id="check">
+<h2>7. Проверьте, что 14 дней идут</h2>
+<p>На Dashboard показаны требование закрытого тестирования и число тестировщиков в тесте. Проверяйте его раз в пару дней. Если число падает ниже 12, сразу набирайте замену, потому что требование считает 12 тестировщиков, непрерывно участвующих в тесте.</p>
+<p>Во время теста загрузите хотя бы одну новую сборку на тот же трек. Это показывает Google, что вы учли отзывы, а тестировщики на треке получают обновление автоматически.</p>
+
+
+
+</section>
+<section id="faq"><h2>Частые вопросы</h2>
+<details><summary>Можно ли использовать вместо этого внутреннее тестирование?</summary><p>Нет. Для требования нужен закрытый тест. Google также сообщает, что люди, вступившие в ваш внутренний тест, не могут участвовать в закрытом, пока не выйдут из внутреннего.</p></details>
+<details><summary>Что выбрать: список адресов или Google Group?</summary><p>Google Group удобнее, когда тестировщики приходят и уходят, потому что трек вообще не нужно редактировать. Список адресов подходит для постоянной группы друзей. Можно использовать оба.</p></details>
+<details><summary>Почему я не вижу ссылку-приглашение?</summary><p>Она показывается только после публикации релиза на закрытом треке. Проверьте в Publishing overview, нет ли ожидающей проверки или неотправленных изменений.</p></details>
+<details><summary>Нужен ли тестировщику аккаунт Google?</summary><p>Да. Google сообщает, что для участия в тесте пользователям нужен аккаунт Google или Google Workspace, и это должен быть аккаунт, используемый в Play Маркете на телефоне.</p></details>
+<details><summary>Можно ли сделать приложение для закрытого теста платным?</summary><p>Можно, но Google сообщает, что тестировщики должны покупать платные приложения в закрытых тестах. Оставьте тестовое приложение бесплатным, чтобы не терять тестировщиков.</p></details>
+</section>
+<div class="cta"><span>Реальные люди открывают ваше приложение на своих телефонах 14 дней. Заплатите один раз или бесплатно тестируйте чужие приложения.</span><a class="btn" href="https://testerexchange.com/?lang=ru#buy">Получить 12 тестировщиков</a></div>
+<section><h2>Другие руководства</h2><ul class="related"><li><a href="https://testerexchange.com/ru/" hreflang="ru">Как найти 12 тестировщиков для закрытого тестирования в Google Play</a></li><li><a href="https://testerexchange.com/ru/12-testers-app-builders/" hreflang="ru">12 тестировщиков Google Play для приложений на App Inventor, Kodular, Flutter, Unity и других конструкторах</a></li><li><a href="https://testerexchange.com/ru/app-not-available-for-testers/" hreflang="ru">Как исправить «app not available» у тестировщиков закрытого теста Google Play</a></li><li><a href="https://testerexchange.com/ru/automate-closed-testing-with-ai-agents/" hreflang="ru">Автоматизация закрытого тестирования Google Play с ИИ-агентами</a></li><li><a href="https://testerexchange.com/ru/best-way-to-get-12-testers/" hreflang="ru">Лучший способ найти 12 тестировщиков для закрытого тестирования Google Play</a></li><li><a href="https://testerexchange.com/ru/closed-testing-for-games/" hreflang="ru">Закрытое тестирование игр в Google Play: руководство для Unity, Unreal и Godot</a></li><li><a href="https://testerexchange.com/ru/does-14-day-closed-test-reset/" hreflang="ru">Сбрасываются ли 14 дней закрытого теста, если тестировщики выбывают?</a></li><li><a href="https://testerexchange.com/ru/earn-money-testing-android-apps/" hreflang="ru">Заработок на тестировании Android-приложений: честное руководство</a></li><li><a href="https://testerexchange.com/ru/free-closed-testing-testers/" hreflang="ru">Как бесплатно найти 12 тестировщиков для закрытого теста Google Play</a></li><li><a href="https://testerexchange.com/ru/friends-family-closed-testers/" hreflang="ru">Друзья и семья в роли 12 тестировщиков Google Play</a></li><li><a href="https://testerexchange.com/ru/google-group-vs-email-list/" hreflang="ru">Google Group или список адресов для закрытого тестирования?</a></li><li><a href="https://testerexchange.com/ru/google-play-closed-testing-requirements/" hreflang="ru">Требования к закрытому тестированию Google Play: полное руководство на 2026 год</a></li><li><a href="https://testerexchange.com/ru/google-play-review-time-after-closed-testing/" hreflang="ru">После 14 дней: срок проверки доступа к рабочей версии и первый релиз</a></li><li><a href="https://testerexchange.com/ru/insufficient-testing-engagement/" hreflang="ru">Отказ после закрытого тестирования? Как исправить «требуется больше тестирования»</a></li><li><a href="https://testerexchange.com/ru/keep-testers-active-14-days/" hreflang="ru">Как сохранить активность тестировщиков все 14 дней закрытого теста</a></li><li><a href="https://testerexchange.com/ru/organization-vs-personal-developer-account/" hreflang="ru">Аккаунт организации или личный аккаунт разработчика Google Play</a></li><li><a href="https://testerexchange.com/ru/paid-closed-testers-checklist/" hreflang="ru">Что проверить, прежде чем платить за тестеров закрытого тестирования Google Play</a></li><li><a href="https://testerexchange.com/ru/production-access-questions/" hreflang="ru">Как ответить на вопросы Google Play о доступе к рабочей версии</a></li><li><a href="https://testerexchange.com/ru/production-access-rejected/" hreflang="ru">Отказ в доступе к рабочей версии: что делать дальше</a></li><li><a href="https://testerexchange.com/ru/tools/production-answers/" hreflang="ru">Генератор ответов для доступа к рабочей версии</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thử nghiệm kín Google Play cho game: Unity, Unreal, Godot</title>
+<meta name="description" content="Cách nhà phát triển game vượt qua bài thử nghiệm kín 12 người × 14 ngày của Google Play: cài đặt build cho Unity, Unreal và Godot, tương thích thiết bị, nên nhờ người thử nghiệm chơi gì và cách thể hiện mức độ tương tác.">
+<link rel="canonical" href="https://testerexchange.com/vi/closed-testing-for-games/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/closed-testing-for-games/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/closed-testing-for-games/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/closed-testing-for-games/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/closed-testing-for-games/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/closed-testing-for-games/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/closed-testing-for-games/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/closed-testing-for-games/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/closed-testing-for-games/">
+<meta property="og:type" content="article"><meta property="og:title" content="Thử nghiệm kín Google Play cho game: Unity, Unreal, Godot">
+<meta property="og:description" content="Cách nhà phát triển game vượt qua bài thử nghiệm kín 12 người × 14 ngày của Google Play: cài đặt build cho Unity, Unreal và Godot, tương thích thiết bị, nên nhờ người thử nghiệm chơi gì và cách thể hiện mức độ tương tác."><meta property="og:url" content="https://testerexchange.com/vi/closed-testing-for-games/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Thử nghiệm kín cho game trên Google Play: hướng dẫn cho Unity, Unreal và Godot","description":"Cách nhà phát triển game vượt qua bài thử nghiệm kín 12 người × 14 ngày của Google Play: cài đặt build cho Unity, Unreal và Godot, tương thích thiết bị, nên nhờ người thử nghiệm chơi gì và cách thể hiện mức độ tương tác.","inLanguage":"vi","dateModified":"2026-11-05","url":"https://testerexchange.com/vi/closed-testing-for-games/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/vi/"},{"@type":"ListItem","position":3,"name":"Thử nghiệm kín cho game trên Google Play: hướng dẫn cho Unity, Unreal và Godot","item":"https://testerexchange.com/vi/closed-testing-for-games/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Game cũng cần thử nghiệm kín sao?","acceptedAnswer":{"@type":"Answer","text":"Có. Yêu cầu áp dụng cho mọi ứng dụng từ tài khoản cá nhân tạo sau ngày 13 tháng 11 năm 2023, kể cả game."}},{"@type":"Question","name":"Game của tôi có thể chưa hoàn thiện trong lúc thử nghiệm kín không?","acceptedAnswer":{"@type":"Answer","text":"Có, thử nghiệm kín dành cho sản phẩm đang phát triển. Nhưng người thử nghiệm cần đủ nội dung để chơi trong hai tuần, và bạn nên tiếp tục cải thiện game trong lúc thử nghiệm."}},{"@type":"Question","name":"Vì sao một số người thử nghiệm không cài được game của tôi?","acceptedAnswer":{"@type":"Answer","text":"Thường là do tương thích thiết bị: phiên bản Android tối thiểu cao, thiếu hỗ trợ 64-bit, hoặc yêu cầu tính năng phần cứng. Hãy kiểm tra Device catalog trong Play Console."}},{"@type":"Question","name":"Người thử nghiệm nên chơi bao lâu mỗi ngày?","acceptedAnswer":{"@type":"Answer","text":"Google không đặt con số cụ thể. Một phiên chơi thật ngắn mỗi ngày tốt hơn một phiên dài rồi sau đó không chơi nữa."}},{"@type":"Question","name":"Tôi có nên dùng Play Asset Delivery cho bài thử nghiệm không?","acceptedAnswer":{"@type":"Answer","text":"Nếu game của bạn lớn thì có. Lượt tải đầu tiên nhỏ hơn nghĩa là nhiều người thử nghiệm thực sự cài và bắt đầu chơi."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=vi">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Ngôn ngữ" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/closed-testing-for-games/">English</option><option value="https://testerexchange.com/es/closed-testing-for-games/">Español</option><option value="https://testerexchange.com/id/closed-testing-for-games/">Bahasa Indonesia</option><option value="https://testerexchange.com/pt/closed-testing-for-games/">Português</option><option value="https://testerexchange.com/ru/closed-testing-for-games/">Русский</option><option value="https://testerexchange.com/tr/closed-testing-for-games/">Türkçe</option><option value="https://testerexchange.com/vi/closed-testing-for-games/" selected>Tiếng Việt</option>
+</select>
+<a href="https://testerexchange.com/?lang=vi">Mở Tester Exchange</a></header>
+<main>
+
+<h1>Thử nghiệm kín cho game trên Google Play: hướng dẫn cho Unity, Unreal và Godot</h1>
+<p class="muted">Cập nhật tháng 11/2026</p>
+<p class="lede">Game phải qua cùng yêu cầu thử nghiệm kín như mọi ứng dụng khác: nếu tài khoản nhà phát triển cá nhân của bạn được tạo sau ngày 13 tháng 11 năm 2023, bạn cần ít nhất 12 người thử nghiệm tham gia liên tục 14 ngày trước khi xin lên production. Tuy nhiên game có những cạm bẫy riêng: dung lượng tải lớn, thiết bị không chạy được bản build, và người thử nghiệm mở game một lần rồi không quay lại. Hướng dẫn này nêu những gì nhà phát triển game nên thiết lập và nên nhờ người thử nghiệm làm gì.</p>
+<div class="cta"><span>Người thật mở ứng dụng của bạn trên điện thoại của họ trong 14 ngày. Trả một lần, hoặc kiểm thử ứng dụng khác miễn phí.</span><a class="btn" href="https://testerexchange.com/?lang=vi#buy">Nhận 12 người kiểm thử</a></div>
+<nav class="toc"><b>Trên trang này</b><ul><li><a href="#same">Cùng một quy tắc, nhưng game có rủi ro riêng</a></li><li><a href="#build">Cài đặt build cần kiểm tra đầu tiên</a></li><li><a href="#setup">Thiết lập bài thử nghiệm</a></li><li><a href="#players">Nên nhờ người thử nghiệm chơi gì</a></li><li><a href="#engage">Thể hiện mức độ tương tác</a></li><li><a href="#online">Game nhiều người chơi và game online</a></li><li><a href="#testers">Có đủ người chơi</a></li><li><a href="#faq">Câu hỏi thường gặp</a></li></ul></nav>
+
+<section id="same">
+<h2>Cùng một quy tắc, nhưng game có rủi ro riêng</h2>
+<p>Google đối xử với game và ứng dụng như nhau ở điểm này. Chạy thử nghiệm kín với ít nhất 12 người thử nghiệm giữ trạng thái tham gia liên tục trong 14 ngày, rồi xin lên production. Biểu mẫu production hỏi về mức độ tương tác của người thử nghiệm, phản hồi và những gì bạn đã thay đổi, nên một bài thử nghiệm mà không ai chơi quá phần hướng dẫn sẽ cho câu trả lời yếu.</p>
+<p>Những rủi ro ảnh hưởng đến game nhiều hơn các ứng dụng khác:</p>
+<ul><li><b>Tương thích thiết bị:</b> người thử nghiệm thấy &quot;your device isn't compatible&quot; và không cài được.</li><li><b>Dung lượng tải:</b> lượt tải đầu tiên lớn qua dữ liệu di động khiến người thử nghiệm nản.</li><li><b>Độ dài phiên chơi:</b> không ai chơi một màn 20 phút mỗi ngày trong hai tuần.</li><li><b>Thiếu nội dung:</b> một bản vertical slice chỉ có một màn sẽ hết thứ để làm vào ngày thứ ba.</li></ul>
+
+
+</section>
+
+<section id="build">
+<h2>Cài đặt build cần kiểm tra đầu tiên</h2>
+
+<ul><li><b>Unity:</b> build Android App Bundle (.aab), dùng IL2CPP với ARM64 được bật (Google Play yêu cầu hỗ trợ 64-bit), và đặt mức API tối thiểu sao cho không loại bỏ nhiều điện thoại hơn mức cần thiết. Nếu build của bạn lớn, hãy dùng Play Asset Delivery thay vì một lượt tải khổng lồ.</li><li><b>Unreal Engine:</b> đóng gói cho Android dưới dạng App Bundle với arm64, kiểm tra mức SDK mục tiêu và tối thiểu trong Project Settings, và giữ lượt tải đầu tiên nhỏ bằng cách chuyển nội dung tùy chọn vào các asset pack.</li><li><b>Godot:</b> dùng Android export template với Gradle build được bật và xuất ra AAB. Đảm bảo có arm64-v8a, và thử renderer trên một điện thoại cấu hình thấp, vì một số thiết bị xử lý renderer Compatibility tốt hơn Forward+ hoặc Mobile.</li><li><b>Mọi engine:</b> nhắm đến mức API mà Google Play hiện yêu cầu cho ứng dụng mới, và ký bằng Play App Signing.</li></ul>
+
+<p>Sau khi tải lên, mở Device catalog trong Play Console để xem bản build của bạn hỗ trợ bao nhiêu thiết bị. Nếu một phần lớn bị loại trừ, hãy sửa trước khi người thử nghiệm đến.</p>
+</section>
+
+<section id="setup">
+<h2>Thiết lập bài thử nghiệm</h2>
+
+
+<ol><li>Tạo hoặc mở track thử nghiệm kín: Test and release, rồi Testing, rồi Closed testing.</li><li>Thêm các quốc gia nơi người thử nghiệm của bạn sinh sống.</li><li>Thêm người thử nghiệm bằng danh sách email hoặc Google Group. Với Tester Exchange, hãy thêm testerexchange-testers@googlegroups.com.</li><li>Tải lên tệp .aab, gửi bản phát hành đi duyệt và chờ đến khi nó hiển thị Published.</li><li>Chia sẻ liên kết tham gia. Lần đầu tiên, liên kết có thể mất vài giờ mới hoạt động.</li></ol>
+<p>Nếu người thử nghiệm báo &quot;app not available&quot;, hãy xem hướng dẫn cách sửa lỗi đó. Hướng dẫn nói về sai tài khoản, quốc gia và track chưa xuất bản.</p>
+</section>
+
+<section id="players">
+<h2>Nên nhờ người thử nghiệm chơi gì</h2>
+<p>Hãy cho người thử nghiệm những mục tiêu nhỏ mỗi ngày, vừa trong vài phút. Việc chơi thật, đa dạng mới là thứ giúp bạn, và đó cũng là điều bạn sẽ mô tả sau này trong biểu mẫu production.</p>
+<ul><li><b>Ngày 1 đến 3:</b> hoàn thành phần hướng dẫn và màn đầu tiên. Báo cáo bất cứ điều gì gây khó hiểu.</li><li><b>Ngày 4 đến 7:</b> chơi một phiên ngắn mỗi ngày; thử cài đặt, âm thanh, điều khiển và tạm dừng.</li><li><b>Ngày 8 đến 11:</b> thử bản build mới đã sửa lỗi; chơi lại một màn xem có cảm thấy tốt hơn không.</li><li><b>Ngày 12 đến 14:</b> chơi nội dung khó nhất hiện có và báo cáo crash, giật lag hoặc hao pin.</li></ul>
+
+<p>Nếu game của bạn có phần thưởng hằng ngày, thử thách ngắn mỗi ngày hoặc chế độ chơi nhanh, hãy hướng người thử nghiệm đến đó. Nó rất hợp với nhịp chơi hằng ngày.</p>
+</section>
+
+<section id="engage">
+<h2>Thể hiện mức độ tương tác</h2>
+
+<ul><li>Phát hành ít nhất một bản cập nhật trong lúc thử nghiệm, tốt nhất là hai. Sửa một lỗi crash đã được báo cáo là câu chuyện hay nhất cho biểu mẫu production.</li><li>Dùng Android vitals và pre-launch report trong Play Console để tìm crash và ANR trên thiết bị thật.</li><li>Thu thập phản hồi bằng văn bản qua một biểu mẫu đơn giản: mẫu thiết bị, họ đã làm gì, điều gì đã xảy ra.</li><li>Ghi nhật ký số người thử nghiệm hoạt động mỗi ngày, số phiên chơi, lỗi tìm được và số bản build đã phát hành.</li></ul>
+
+
+</section>
+
+<section id="online">
+<h2>Game nhiều người chơi và game online</h2>
+<p>Nếu game của bạn cần máy chủ, hãy giữ nó chạy suốt 14 ngày, và đảm bảo game vẫn chơi được khi người thử nghiệm chơi một mình. Một sảnh chờ không bao giờ đầy trông như một bài thử nghiệm trống rỗng. Hãy thêm bot hoặc chế độ chơi đơn trong thời gian thử nghiệm nếu có thể.</p>
+<p>Nếu cần đăng nhập, hãy cho người thử nghiệm một chế độ khách hoạt động được hoặc hướng dẫn rõ ràng. Bắt đăng nhập sẽ làm mất người thử nghiệm ngay ngày đầu.</p>
+
+
+
+</section>
+
+<section id="testers">
+<h2>Có đủ người chơi</h2>
+<p>Hãy yêu cầu 15 người thử nghiệm thay vì 12, vì một số người chơi bỏ game rất nhanh. Tester Exchange gửi người thật chơi trên điện thoại Android của chính họ và hiển thị mức sử dụng hằng ngày của từng người thử nghiệm: $12.99 cho 12, $14.99 cho 15 hoặc $22.99 cho 25, trả một lần. Bạn cũng có thể kiếm người thử nghiệm miễn phí bằng cách thử nghiệm ứng dụng và game của các nhà phát triển khác tại https://testerexchange.com/earn.</p>
+
+
+
+</section>
+<section id="faq"><h2>Câu hỏi thường gặp</h2>
+<details><summary>Game cũng cần thử nghiệm kín sao?</summary><p>Có. Yêu cầu áp dụng cho mọi ứng dụng từ tài khoản cá nhân tạo sau ngày 13 tháng 11 năm 2023, kể cả game.</p></details>
+<details><summary>Game của tôi có thể chưa hoàn thiện trong lúc thử nghiệm kín không?</summary><p>Có, thử nghiệm kín dành cho sản phẩm đang phát triển. Nhưng người thử nghiệm cần đủ nội dung để chơi trong hai tuần, và bạn nên tiếp tục cải thiện game trong lúc thử nghiệm.</p></details>
+<details><summary>Vì sao một số người thử nghiệm không cài được game của tôi?</summary><p>Thường là do tương thích thiết bị: phiên bản Android tối thiểu cao, thiếu hỗ trợ 64-bit, hoặc yêu cầu tính năng phần cứng. Hãy kiểm tra Device catalog trong Play Console.</p></details>
+<details><summary>Người thử nghiệm nên chơi bao lâu mỗi ngày?</summary><p>Google không đặt con số cụ thể. Một phiên chơi thật ngắn mỗi ngày tốt hơn một phiên dài rồi sau đó không chơi nữa.</p></details>
+<details><summary>Tôi có nên dùng Play Asset Delivery cho bài thử nghiệm không?</summary><p>Nếu game của bạn lớn thì có. Lượt tải đầu tiên nhỏ hơn nghĩa là nhiều người thử nghiệm thực sự cài và bắt đầu chơi.</p></details>
+</section>
+<div class="cta"><span>Người thật mở ứng dụng của bạn trên điện thoại của họ trong 14 ngày. Trả một lần, hoặc kiểm thử ứng dụng khác miễn phí.</span><a class="btn" href="https://testerexchange.com/?lang=vi#buy">Nhận 12 người kiểm thử</a></div>
+<section><h2>Hướng dẫn khác</h2><ul class="related"><li><a href="https://testerexchange.com/vi/" hreflang="vi">Cách có 12 người kiểm thử cho thử nghiệm kín trên Google Play</a></li><li><a href="https://testerexchange.com/vi/12-testers-app-builders/" hreflang="vi">12 người thử nghiệm Google Play cho ứng dụng làm bằng App Inventor, Kodular, Flutter, Unity và các công cụ khác</a></li><li><a href="https://testerexchange.com/vi/app-not-available-for-testers/" hreflang="vi">Cách sửa lỗi &quot;app not available&quot; cho người thử nghiệm kín trên Google Play</a></li><li><a href="https://testerexchange.com/vi/automate-closed-testing-with-ai-agents/" hreflang="vi">Tự động hóa thử nghiệm kín Google Play bằng AI agent</a></li><li><a href="https://testerexchange.com/vi/best-way-to-get-12-testers/" hreflang="vi">Cách tốt nhất để có 12 người thử nghiệm cho thử nghiệm kín Google Play</a></li><li><a href="https://testerexchange.com/vi/does-14-day-closed-test-reset/" hreflang="vi">14 ngày thử nghiệm kín có bị tính lại khi người thử nghiệm bỏ cuộc không?</a></li><li><a href="https://testerexchange.com/vi/earn-money-testing-android-apps/" hreflang="vi">Kiếm tiền bằng cách thử nghiệm ứng dụng Android: hướng dẫn trung thực</a></li><li><a href="https://testerexchange.com/vi/free-closed-testing-testers/" hreflang="vi">Cách tìm 12 người thử nghiệm miễn phí cho thử nghiệm kín Google Play</a></li><li><a href="https://testerexchange.com/vi/friends-family-closed-testers/" hreflang="vi">Nhờ bạn bè, người thân làm 12 người thử nghiệm Google Play</a></li><li><a href="https://testerexchange.com/vi/google-group-vs-email-list/" hreflang="vi">Google Group hay danh sách email cho thử nghiệm kín?</a></li><li><a href="https://testerexchange.com/vi/google-play-closed-testing-requirements/" hreflang="vi">Yêu cầu thử nghiệm kín của Google Play: hướng dẫn đầy đủ 2026</a></li><li><a href="https://testerexchange.com/vi/google-play-review-time-after-closed-testing/" hreflang="vi">Sau 14 ngày: thời gian duyệt quyền truy cập production và bản phát hành đầu tiên</a></li><li><a href="https://testerexchange.com/vi/insufficient-testing-engagement/" hreflang="vi">Bị từ chối sau thử nghiệm kín? Cách khắc phục “cần thử nghiệm thêm”</a></li><li><a href="https://testerexchange.com/vi/keep-testers-active-14-days/" hreflang="vi">Cách giữ người thử nghiệm kín hoạt động suốt 14 ngày</a></li><li><a href="https://testerexchange.com/vi/organization-vs-personal-developer-account/" hreflang="vi">Tài khoản nhà phát triển Google Play: tổ chức hay cá nhân</a></li><li><a href="https://testerexchange.com/vi/paid-closed-testers-checklist/" hreflang="vi">Cần kiểm tra gì trước khi trả tiền cho người thử nghiệm kín Google Play</a></li><li><a href="https://testerexchange.com/vi/production-access-questions/" hreflang="vi">Cách trả lời các câu hỏi xin quyền phát hành chính thức của Google Play</a></li><li><a href="https://testerexchange.com/vi/production-access-rejected/" hreflang="vi">Bị từ chối quyền truy cập production: làm gì tiếp theo</a></li><li><a href="https://testerexchange.com/vi/set-up-closed-testing-track/" hreflang="vi">Cách thiết lập track thử nghiệm kín trong Play Console, từng bước</a></li><li><a href="https://testerexchange.com/vi/tools/production-answers/" hreflang="vi">Công cụ tạo câu trả lời xin quyền phát hành chính thức</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

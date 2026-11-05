@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Como configurar uma faixa de teste fechado no Google Play Console</title>
+<meta name="description" content="Passo a passo: crie uma faixa de teste fechado no Play Console, adicione testadores com lista de e-mails ou Google Group, publique a versão e compartilhe o link de adesão para os 14 dias começarem.">
+<link rel="canonical" href="https://testerexchange.com/pt/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<meta property="og:type" content="article"><meta property="og:title" content="Como configurar uma faixa de teste fechado no Google Play Console">
+<meta property="og:description" content="Passo a passo: crie uma faixa de teste fechado no Play Console, adicione testadores com lista de e-mails ou Google Group, publique a versão e compartilhe o link de adesão para os 14 dias começarem."><meta property="og:url" content="https://testerexchange.com/pt/set-up-closed-testing-track/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Como configurar uma faixa de teste fechado no Play Console, passo a passo","description":"Passo a passo: crie uma faixa de teste fechado no Play Console, adicione testadores com lista de e-mails ou Google Group, publique a versão e compartilhe o link de adesão para os 14 dias começarem.","inLanguage":"pt","dateModified":"2026-11-05","url":"https://testerexchange.com/pt/set-up-closed-testing-track/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/pt/"},{"@type":"ListItem","position":3,"name":"Como configurar uma faixa de teste fechado no Play Console, passo a passo","item":"https://testerexchange.com/pt/set-up-closed-testing-track/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Posso usar o teste interno no lugar?","acceptedAnswer":{"@type":"Answer","text":"Não. A exigência pede um teste fechado. O Google também diz que pessoas inscritas no seu teste interno não podem entrar em um teste fechado até saírem do interno."}},{"@type":"Question","name":"Devo usar uma lista de e-mails ou um Google Group?","acceptedAnswer":{"@type":"Answer","text":"O Google Group é mais fácil quando testadores entram e saem, porque você nunca edita a faixa. A lista de e-mails serve para um grupo fixo de amigos. Você pode usar os dois."}},{"@type":"Question","name":"Por que não vejo o link de adesão?","acceptedAnswer":{"@type":"Answer","text":"Ele só aparece quando a versão na faixa fechada está publicada. Verifique na Visão geral da publicação se há análise pendente ou alterações ainda não enviadas."}},{"@type":"Question","name":"O testador precisa de uma Conta do Google?","acceptedAnswer":{"@type":"Answer","text":"Sim. O Google diz que os usuários precisam de uma Conta do Google ou do Google Workspace para entrar em um teste, e ela deve ser a conta da Play Store do celular deles."}},{"@type":"Question","name":"Posso tornar o app do teste fechado pago?","acceptedAnswer":{"@type":"Answer","text":"Pode, mas o Google diz que os testadores precisam comprar apps pagos em testes fechados. Mantenha o app do teste gratuito para não perder testadores."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=pt">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Idioma" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/set-up-closed-testing-track/">English</option><option value="https://testerexchange.com/es/set-up-closed-testing-track/">Español</option><option value="https://testerexchange.com/id/set-up-closed-testing-track/">Bahasa Indonesia</option><option value="https://testerexchange.com/pt/set-up-closed-testing-track/" selected>Português</option><option value="https://testerexchange.com/ru/set-up-closed-testing-track/">Русский</option><option value="https://testerexchange.com/tr/set-up-closed-testing-track/">Türkçe</option><option value="https://testerexchange.com/vi/set-up-closed-testing-track/">Tiếng Việt</option>
+</select>
+<a href="https://testerexchange.com/?lang=pt">Abrir o Tester Exchange</a></header>
+<main>
+
+<h1>Como configurar uma faixa de teste fechado no Play Console, passo a passo</h1>
+<p class="muted">Atualizado em novembro de 2026</p>
+<p class="lede">Antes de seus 14 dias começarem a contar, você precisa de uma faixa de teste fechado que esteja publicada, tenha testadores vinculados e ofereça um link de adesão que funcione. A maioria dos problemas depois, como testadores vendo &quot;app indisponível&quot;, vem de uma etapa esquecida aqui. Este guia segue os menus atuais do Play Console (Teste e lançamento, depois Testes, depois Teste fechado) e a Central de Ajuda do Google.</p>
+<div class="cta"><span>Pessoas reais abrem seu app no próprio celular por 14 dias. Pague uma vez ou teste outros apps de graça.</span><a class="btn" href="https://testerexchange.com/?lang=pt#buy">Quero 12 testadores</a></div>
+<nav class="toc"><b>Nesta página</b><ul><li><a href="#before">Antes de começar</a></li><li><a href="#track">1. Abra ou crie a faixa fechada</a></li><li><a href="#countries">2. Escolha países e regiões</a></li><li><a href="#testers">3. Adicione testadores: lista de e-mails ou Google Group</a></li><li><a href="#feedback">4. Adicione um canal de feedback</a></li><li><a href="#release">5. Crie a versão e envie para análise</a></li><li><a href="#link">6. Compartilhe o link de adesão</a></li><li><a href="#check">7. Confira se os 14 dias estão contando</a></li><li><a href="#faq">Perguntas frequentes</a></li></ul></nav>
+
+<section id="before">
+<h2>Antes de começar</h2>
+
+<ul><li>Uma conta de desenvolvedor do Play Console com a verificação de identidade concluída.</li><li>Seu app criado no Play Console, com a página da loja, a classificação de conteúdo, o público-alvo, a segurança dos dados e as demais declarações de Conteúdo do app preenchidos. O Play Console não deixa você enviar uma versão para análise enquanto houver itens obrigatórios faltando.</li><li>Um Android App Bundle (.aab) assinado, com um nome de pacote que você aceite manter para sempre. Não é possível alterá-lo depois.</li><li>Um plano para seus testadores: pelo menos 12, de preferência 15, pessoas reais com celulares Android e Contas do Google.</li></ul>
+
+
+</section>
+
+<section id="track">
+<h2>1. Abra ou crie a faixa fechada</h2>
+
+
+<ol><li>No Play Console, escolha seu app.</li><li>Vá a Teste e lançamento, depois Testes, depois Teste fechado.</li><li>O Play Console oferece uma faixa fechada padrão (muitas vezes chamada de Alpha). Use-a. Você pode criar faixas fechadas extras, mas uma só basta para a exigência.</li><li>Clique em Gerenciar faixa.</li></ol>
+
+</section>
+
+<section id="countries">
+<h2>2. Escolha países e regiões</h2>
+<p>Abra a aba Países / regiões e adicione os países onde seus testadores moram. Um testador em um país que você não selecionou não conseguirá instalar o app.</p>
+<p>O Google observa que as alterações nos países de distribuição valem para todas as faixas e que faixas fechadas adicionais não suportam segmentação de países própria. Se seus testadores estão espalhados pelo mundo, a opção mais simples é adicionar todos os países para os quais você pode legalmente distribuir.</p>
+
+
+
+</section>
+
+<section id="testers">
+<h2>3. Adicione testadores: lista de e-mails ou Google Group</h2>
+<p>Abra a aba Testadores. Você tem duas opções, e pode usar as duas na mesma faixa.</p>
+<ul><li><b>Lista de e-mails:</b> clique em Criar lista de e-mails, dê um nome e digite os endereços ou envie um CSV. O Google permite até 2.000 usuários por lista. Enviar um CSV sobrescreve os endereços já presentes na lista. Cada endereço precisa ser a Conta do Google que o testador usa na Play Store do celular.</li><li><b>Google Group:</b> insira o endereço do grupo, como seugrupo@googlegroups.com. Somente membros do grupo podem entrar no seu teste, e eles precisam entrar no grupo antes de aderir. Adicionar alguém ao grupo é tudo o que você faz; você não precisa mexer no Play Console de novo.</li></ul>
+
+<p>Se você usa o Tester Exchange, adicione o grupo testerexchange-testers@googlegroups.com em Google Groups e salve. Esse único endereço permite que todos os testadores que enviamos instalem seu app. Veja também o guia sobre Google Group vs lista de e-mails.</p>
+</section>
+
+<section id="feedback">
+<h2>4. Adicione um canal de feedback</h2>
+<p>Na mesma aba Testadores, adicione uma URL de feedback ou um endereço de e-mail. Os testadores o veem quando entram. Você vai precisar resumir o feedback dos testadores no formulário de acesso à produção, então facilite: um Google Forms curto ou um e-mail dedicado funciona.</p>
+
+
+
+</section>
+
+<section id="release">
+<h2>5. Crie a versão e envie para análise</h2>
+
+
+<ol><li>Na faixa fechada, clique em Criar nova versão.</li><li>Envie seu .aab. Deixe o Play App Signing gerenciar sua chave, a menos que você tenha um motivo para não fazer isso.</li><li>Adicione um nome de versão e notas de versão curtas, por exemplo &quot;Primeiro build do teste fechado&quot;.</li><li>Clique em Próxima, corrija os erros e depois em Salvar.</li><li>Vá à Visão geral da publicação e envie as alterações para análise. Se a publicação gerenciada estiver ativada, você também precisa clicar em Publicar após a aprovação.</li></ol>
+<p>Versões de teste fechado em contas novas são analisadas antes de entrar no ar. Os prazos variam de horas a vários dias.</p>
+</section>
+
+<section id="link">
+<h2>6. Compartilhe o link de adesão</h2>
+<p>O Google diz que o link de adesão só aparece quando o status do app é Publicado. Copie-o da aba Testadores. Ele se parece com https://play.google.com/apps/testing/your.package.name.</p>
+<p>Na primeira vez que você publica, o link pode levar várias horas para começar a funcionar. Os testadores não encontram testes fechados pesquisando no Google Play, então precisam deste link ou do link da Play Store para o seu app.</p>
+
+<ol><li>O testador entra na mesma Conta do Google que você adicionou (ou que está no seu Google Group).</li><li>Ele abre o link de adesão e toca para se tornar testador.</li><li>Ele instala seu app pelo Google Play usando o link dessa página.</li><li>Ele abre o app e continua abrindo durante os 14 dias.</li></ol>
+
+</section>
+
+<section id="check">
+<h2>7. Confira se os 14 dias estão contando</h2>
+<p>Seu Painel mostra a exigência de teste fechado e quantos testadores estão inscritos. Confira a cada dois dias. Se o número cair abaixo de 12, recrute substitutos imediatamente, porque a exigência conta 12 testadores inscritos continuamente.</p>
+<p>Durante o teste, envie pelo menos um novo build para a mesma faixa. Isso mostra ao Google que você agiu com base no feedback, e os testadores da faixa recebem a atualização automaticamente.</p>
+
+
+
+</section>
+<section id="faq"><h2>Perguntas frequentes</h2>
+<details><summary>Posso usar o teste interno no lugar?</summary><p>Não. A exigência pede um teste fechado. O Google também diz que pessoas inscritas no seu teste interno não podem entrar em um teste fechado até saírem do interno.</p></details>
+<details><summary>Devo usar uma lista de e-mails ou um Google Group?</summary><p>O Google Group é mais fácil quando testadores entram e saem, porque você nunca edita a faixa. A lista de e-mails serve para um grupo fixo de amigos. Você pode usar os dois.</p></details>
+<details><summary>Por que não vejo o link de adesão?</summary><p>Ele só aparece quando a versão na faixa fechada está publicada. Verifique na Visão geral da publicação se há análise pendente ou alterações ainda não enviadas.</p></details>
+<details><summary>O testador precisa de uma Conta do Google?</summary><p>Sim. O Google diz que os usuários precisam de uma Conta do Google ou do Google Workspace para entrar em um teste, e ela deve ser a conta da Play Store do celular deles.</p></details>
+<details><summary>Posso tornar o app do teste fechado pago?</summary><p>Pode, mas o Google diz que os testadores precisam comprar apps pagos em testes fechados. Mantenha o app do teste gratuito para não perder testadores.</p></details>
+</section>
+<div class="cta"><span>Pessoas reais abrem seu app no próprio celular por 14 dias. Pague uma vez ou teste outros apps de graça.</span><a class="btn" href="https://testerexchange.com/?lang=pt#buy">Quero 12 testadores</a></div>
+<section><h2>Mais guias</h2><ul class="related"><li><a href="https://testerexchange.com/pt/" hreflang="pt">Como conseguir 12 testadores para o teste fechado do Google Play</a></li><li><a href="https://testerexchange.com/pt/12-testers-app-builders/" hreflang="pt">12 testadores do Google Play para apps feitos com App Inventor, Kodular, Flutter, Unity e outras ferramentas</a></li><li><a href="https://testerexchange.com/pt/app-not-available-for-testers/" hreflang="pt">Como corrigir &quot;app indisponível&quot; para testadores do teste fechado do Google Play</a></li><li><a href="https://testerexchange.com/pt/automate-closed-testing-with-ai-agents/" hreflang="pt">Automatize o teste fechado do Google Play com agentes de IA</a></li><li><a href="https://testerexchange.com/pt/best-way-to-get-12-testers/" hreflang="pt">A melhor forma de conseguir 12 testadores para o teste fechado do Google Play</a></li><li><a href="https://testerexchange.com/pt/closed-testing-for-games/" hreflang="pt">Teste fechado para jogos no Google Play: guia para Unity, Unreal e Godot</a></li><li><a href="https://testerexchange.com/pt/does-14-day-closed-test-reset/" hreflang="pt">O teste fechado de 14 dias reinicia quando testadores desistem?</a></li><li><a href="https://testerexchange.com/pt/earn-money-testing-android-apps/" hreflang="pt">Ganhe dinheiro testando apps Android: um guia honesto</a></li><li><a href="https://testerexchange.com/pt/free-closed-testing-testers/" hreflang="pt">Como conseguir 12 testadores grátis para o teste fechado do Google Play</a></li><li><a href="https://testerexchange.com/pt/friends-family-closed-testers/" hreflang="pt">Amigos e família como seus 12 testadores do Google Play</a></li><li><a href="https://testerexchange.com/pt/google-group-vs-email-list/" hreflang="pt">Google Group ou lista de e-mails para o seu teste fechado?</a></li><li><a href="https://testerexchange.com/pt/google-play-closed-testing-requirements/" hreflang="pt">Requisitos do teste fechado do Google Play: o guia completo de 2026</a></li><li><a href="https://testerexchange.com/pt/google-play-review-time-after-closed-testing/" hreflang="pt">Depois dos 14 dias: tempo de análise do acesso à produção e sua primeira versão</a></li><li><a href="https://testerexchange.com/pt/insufficient-testing-engagement/" hreflang="pt">Rejeitado após o teste fechado? Como resolver &quot;mais testes necessários&quot;</a></li><li><a href="https://testerexchange.com/pt/keep-testers-active-14-days/" hreflang="pt">Como manter os testadores do teste fechado ativos pelos 14 dias</a></li><li><a href="https://testerexchange.com/pt/organization-vs-personal-developer-account/" hreflang="pt">Conta de desenvolvedor de organização vs pessoal no Google Play</a></li><li><a href="https://testerexchange.com/pt/paid-closed-testers-checklist/" hreflang="pt">O que verificar antes de pagar testers para o teste fechado do Google Play</a></li><li><a href="https://testerexchange.com/pt/production-access-questions/" hreflang="pt">Como responder às perguntas de acesso à produção do Google Play</a></li><li><a href="https://testerexchange.com/pt/production-access-rejected/" hreflang="pt">Acesso à produção rejeitado: o que fazer agora</a></li><li><a href="https://testerexchange.com/pt/tools/production-answers/" hreflang="pt">Gerador de respostas para o acesso à produção</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Play kapalı testini yapay zeka ajanlarıyla otomatikleştirin</title>
+<meta name="description" content="Claude, ChatGPT veya Cursor, Google Play'in 12 test kullanıcılı kapalı testinin işlerini üstlensin: Tester Exchange'in MCP sunucusu, HTTP API'si ve A2A ajanı, kurulum komutları ve insanın yapması gerekenler.">
+<link rel="canonical" href="https://testerexchange.com/tr/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/">
+<meta property="og:type" content="article"><meta property="og:title" content="Google Play kapalı testini yapay zeka ajanlarıyla otomatikleştirin">
+<meta property="og:description" content="Claude, ChatGPT veya Cursor, Google Play'in 12 test kullanıcılı kapalı testinin işlerini üstlensin: Tester Exchange'in MCP sunucusu, HTTP API'si ve A2A ajanı, kurulum komutları ve insanın yapması gerekenler."><meta property="og:url" content="https://testerexchange.com/tr/automate-closed-testing-with-ai-agents/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Google Play kapalı testini yapay zeka ajanlarıyla otomatikleştirin","description":"Claude, ChatGPT veya Cursor, Google Play'in 12 test kullanıcılı kapalı testinin işlerini üstlensin: Tester Exchange'in MCP sunucusu, HTTP API'si ve A2A ajanı, kurulum komutları ve insanın yapması gerekenler.","inLanguage":"tr","dateModified":"2026-11-05","url":"https://testerexchange.com/tr/automate-closed-testing-with-ai-agents/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/tr/"},{"@type":"ListItem","position":3,"name":"Google Play kapalı testini yapay zeka ajanlarıyla otomatikleştirin","item":"https://testerexchange.com/tr/automate-closed-testing-with-ai-agents/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Bir yapay zeka ajanı 14 günlük testi benim yerime tamamlayabilir mi?","acceptedAnswer":{"@type":"Answer","text":"Hayır. 14 gün, uygulamanızı kendi telefonlarında kullanan gerçek insanlar gerektirir. Ajanlar kurulumu, izlemeyi ve raporlamayı üstlenir."}},{"@type":"Question","name":"Ajan test kullanıcıları için ödeme yapabilir mi?","acceptedAnswer":{"@type":"Answer","text":"Hayır. Ödeme bağlantıları döndürebilir ama ödeme her zaman bir insanın tarayıcısında yapılır."}},{"@type":"Question","name":"MCP sunucusuyla hangi istemciler çalışır?","acceptedAnswer":{"@type":"Answer","text":"Özel başlıkla Streamable HTTP üzerinden uzak MCP'yi destekleyen her istemci; Claude Code, Claude Desktop, Cursor ve VS Code dahil. Diğerleri HTTP API'yi kullanabilir."}},{"@type":"Question","name":"Token'ı nereden alırım?","acceptedAnswer":{"@type":"Answer","text":"Oturum açtıktan sonra https://testerexchange.com/api adresinden. Token'lar tx_ ile başlar ve istediğiniz zaman iptal edilebilir."}},{"@type":"Question","name":"Ajan Play Console'umda bir şeyi değiştirir mi?","acceptedAnswer":{"@type":"Answer","text":"Hayır. Play Console'unuza erişimi yoktur. Orada yapmanız gereken adımları size söyler."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=tr">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Dil" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/">English</option><option value="https://testerexchange.com/es/automate-closed-testing-with-ai-agents/">Español</option><option value="https://testerexchange.com/id/automate-closed-testing-with-ai-agents/">Bahasa Indonesia</option><option value="https://testerexchange.com/pt/automate-closed-testing-with-ai-agents/">Português</option><option value="https://testerexchange.com/ru/automate-closed-testing-with-ai-agents/">Русский</option><option value="https://testerexchange.com/tr/automate-closed-testing-with-ai-agents/" selected>Türkçe</option><option value="https://testerexchange.com/vi/automate-closed-testing-with-ai-agents/">Tiếng Việt</option>
+</select>
+<a href="https://testerexchange.com/?lang=tr">Tester Exchange'i aç</a></header>
+<main>
+
+<h1>Google Play kapalı testini yapay zeka ajanlarıyla otomatikleştirin</h1>
+<p class="muted">Kasım 2026'da güncellendi</p>
+<p class="lede">Kodunuzu zaten bir yapay zeka ajanıyla yazıyorsanız, Google Play'in kapalı test şartının angarya işlerinin çoğunu da ona devredebilirsiniz: uygulamanızı eklemek, test kullanıcısı bulmak, ilerlemeyi kontrol etmek ve üretim erişimi formu için rakamları çekmek. Tester Exchange bunun için bir MCP sunucusu, tek uç noktalı bir HTTP API ve bir A2A ajan kartı sunar. Bu rehber Claude Code, Claude Desktop, Cursor ve diğer istemcileri nasıl bağlayacağınızı, ne isteyeceğinizi ve hiçbir ajanın sizin yerinize yapamayacağı kısımları gösterir.</p>
+<div class="cta"><span>Gerçek insanlar 14 gün boyunca uygulamanızı kendi telefonlarında açar. Bir kez ödeyin ya da başka uygulamaları ücretsiz test edin.</span><a class="btn" href="https://testerexchange.com/?lang=tr#buy">12 test kullanıcısı al</a></div>
+<nav class="toc"><b>Bu sayfada</b><ul><li><a href="#what">Bir ajan neleri yapabilir, neleri yapamaz</a></li><li><a href="#token">1. Token oluşturun</a></li><li><a href="#mcp">2. MCP sunucusunu bağlayın</a></li><li><a href="#tool">3. Başlamak için tek araç: get_testers</a></li><li><a href="#prompts">İşe yarayan istemler</a></li><li><a href="#http">Betikler ve CI için HTTP API</a></li><li><a href="#a2a">A2A ajan kartı</a></li><li><a href="#flow">Baştan sona tam bir akış</a></li><li><a href="#safety">Güvenlik notları</a></li><li><a href="#faq">Sık sorulan sorular</a></li></ul></nav>
+
+<section id="what">
+<h2>Bir ajan neleri yapabilir, neleri yapamaz</h2>
+<p>Google, 13 Kasım 2023'ten sonra oluşturulan kişisel geliştirici hesaplarından, üretime başvurmadan önce 14 gün kesintisiz katılmış en az 12 test kullanıcısıyla kapalı test yapmasını şart koşuyor. Bu işin çevresindeki işlerin çoğu koordinasyondur ve ajanlar bunu iyi yapar.</p>
+<ul><li><b>Bir ajan şunları yapabilir:</b> uygulamanızı eklemek, bir test kullanıcısı kampanyası açmak, kredilerinizi uygulamak, kaç test kullanıcısının aktif olduğunu kontrol etmek, kampanyayı duraklatmak veya kapatmak, günlük etkinlik raporunu çekmek ve ondan yola çıkarak üretim erişimi cevaplarını taslak hâline getirmeye yardımcı olmak.</li><li><b>Bir insan şunları yapmalıdır:</b> test kullanıcılarının Google Group'unu Play Console'da kapalı test kanalına eklemek, sürümü yayınlamak, kredileri satın almak (ödeme her zaman bir kişinin tarayıcısında yapılır) ve Apply for production'a tıklamak.</li><li><b>Hiç kimsenin otomatikleştiremeyeceği şey:</b> 14 günlük gerçek kullanım. Bunu gerçek insanlar kendi Android telefonlarında yapar ve Google'ın kuralının tüm amacı da budur.</li></ul>
+
+
+</section>
+
+<section id="token">
+<h2>1. Token oluşturun</h2>
+
+
+<ol><li>https://testerexchange.com/api adresinde oturum açın.</li><li>Kişisel bir token oluşturun. tx_ ile başlar. Hemen kopyalayın ve bir parola gibi saklayın.</li><li>Token'lar istediğiniz zaman iptal edilebilir. Bir token kampanyalar için kredi harcayabilir ama ödeme yapamaz, para çekemez veya hesabınızı silemez.</li></ol>
+
+</section>
+
+<section id="mcp">
+<h2>2. MCP sunucusunu bağlayın</h2>
+<p>MCP sunucusu, https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp adresinde Streamable HTTP kullanır. Token'ınızı Authorization: Bearer tx_YOUR_TOKEN başlığıyla gönderin.</p>
+<p><b>Claude Code:</b> terminalinizde bir kez şunu çalıştırın.</p>
+<p>claude mcp add --transport http tester-exchange https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp --header &quot;Authorization: Bearer tx_YOUR_TOKEN&quot;</p>
+<p><b>Claude Desktop, Cursor, VS Code ve JSON yapılandırması kullanan diğer istemciler:</b> tester-exchange adında, türü http olan, yukarıdaki URL'ye sahip ve Authorization değeri Bearer tx_YOUR_TOKEN olan bir headers girdisi içeren bir sunucu ekleyin. Yapılandırma dosyasının tam konumu istemcinize göre değişir; MCP belgelerine bakın.</p>
+<p><b>Yalnızca URL kabul eden istemciler</b> (bazı ChatGPT ve web bağlayıcıları): https://testerexchange.com/agents/ adresindeki belgelerde bunlar için bir URL biçimi listelenir. Token olmadan da herkese açık araçlar (Tester Exchange nedir, fiyatlandırma, platform istatistikleri) çalışır.</p>
+
+
+
+</section>
+
+<section id="tool">
+<h2>3. Başlamak için tek araç: get_testers</h2>
+<p>Araç listesinin tamamını öğrenmeniz gerekmez. Ana araç <b>get_testers(package_name, name?)</b> aracıdır. Tek bir çağrı uygulamanızı ekler, testini açar, kredilerinizi uygular ve ilerlemenizi, bir de yalnızca insanın yapabileceği adımları (örneğin Play Console'da Google Group'u eklemek) döndürür. İlerlemeyi kontrol etmek için istediğiniz zaman yeniden çağırın.</p>
+<p>Diğer araçlar ayrıntıları kapsar: my_apps, campaign_report (test kullanıcıları, günlük etkinlik, geri bildirim ve üretim erişimi verileri), add_testers, set_campaign_status (duraklat, sürdür veya kapat; kullanılmayan krediler bakiyenize döner), share_kit ve bir insanın ödemesi için ödeme bağlantıları döndüren buy_credits_links.</p>
+
+
+
+</section>
+
+<section id="prompts">
+<h2>İşe yarayan istemler</h2>
+
+<ul><li>“com.example.app için 15 test kullanıcısı bul ve Play Console'da ne yapmam gerektiğini söyle.”</li><li>“com.example.app için Tester Exchange kampanyamı kontrol et. Bu hafta her gün kaç test kullanıcısı aktifti?”</li><li>“Kampanya raporunu çek ve üretim erişimi cevaplarımın taslağını yaz. Yalnızca gerçek rakamları kullan.”</li><li>“Üretim erişimi onaylandığına göre com.example.app kampanyasını kapat.”</li></ul>
+
+<p>12 yerine 15 test kullanıcısı isteyin ki bir ayrılma sizi Google'ın asgari sayısının altına düşürmesin.</p>
+</section>
+
+<section id="http">
+<h2>Betikler ve CI için HTTP API</h2>
+<p>Aracınız MCP konuşmuyorsa HTTP uç noktasını kullanın: POST https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/agent_call. Gövde, p_token (tx_ token'ınız), p_action (örneğin help, my_apps veya start_campaign) ve p_args (örneğin bir package_name ve test kullanıcısı sayısı) içeren bir JSON'dur. Belgelerde gösterilen herkese açık apikey başlığını gönderin.</p>
+<p>Önce help eylemini çağırın: tüm eylemleri ve argümanlarını döndürür. Tam şema https://testerexchange.com/openapi.json adresindedir ve ChatGPT özel GPT eylemleri ile diğer OpenAPI araçlarıyla çalışır.</p>
+
+
+
+</section>
+
+<section id="a2a">
+<h2>A2A ajan kartı</h2>
+<p>Ajandan ajana kurulumlar için Tester Exchange, https://testerexchange.com/.well-known/agent-card.json adresinde bir A2A ajan kartı yayınlar. A2A protokolünü destekleyen orkestratörler, ajanın neler sunduğunu ve nasıl çağrılacağını keşfedebilir. Hesabınıza bağlı her şey için aynı tx_ token'ını kullanın.</p>
+
+
+
+</section>
+
+<section id="flow">
+<h2>Baştan sona tam bir akış</h2>
+
+
+<ol><li>İlk .aab dosyanızı Play Console'da kapalı test kanalına yüklersiniz.</li><li>Ajanınız paket adınız için get_testers'ı çağırır ve kapalı test kanalında Google Groups altına testerexchange-testers@googlegroups.com adresini eklemenizi söyler.</li><li>Grubu eklersiniz, kaydedersiniz ve sürümün yayınlandığından emin olursunuz.</li><li>Krediniz yoksa ajan size bir ödeme bağlantısı verir. Ödersiniz (12 test kullanıcısı için 12,99 dolar, 15 için 14,99 dolar, 25 için 22,99 dolar) ya da https://testerexchange.com/earn adresinde başka uygulamaları test ederek ücretsiz kredi kazanırsınız.</li><li>Gerçek test kullanıcıları 14 gün boyunca uygulamanızı yükler ve kullanır. Ajanınız ilerlemeyi her gün kontrol eder ve aktif test kullanıcıları azalırsa sizi uyarır.</li><li>15. günde ajan kampanya raporunu çeker ve üretim erişimi cevaplarınızın taslağını yazar. Siz gözden geçirir ve Apply for production'a tıklarsınız.</li></ol>
+
+</section>
+
+<section id="safety">
+<h2>Güvenlik notları</h2>
+
+<ul><li>Token'ları git dışında tutun. İstemcinizin gizli bilgi deposuna veya bir ortam değişkenine koyun.</li><li>Token'lar bizim tarafımızda yalnızca karma (hash) olarak saklanır ve hesap başına 10 ile sınırlıdır. Artık kullanmadığınız token'ları iptal edin.</li><li>Göndermeden önce ajanın üretim formunuza yazdıklarını okuyun. Google, testinizi dürüstçe anlatmanızı ister.</li></ul>
+
+
+</section>
+<section id="faq"><h2>Sık sorulan sorular</h2>
+<details><summary>Bir yapay zeka ajanı 14 günlük testi benim yerime tamamlayabilir mi?</summary><p>Hayır. 14 gün, uygulamanızı kendi telefonlarında kullanan gerçek insanlar gerektirir. Ajanlar kurulumu, izlemeyi ve raporlamayı üstlenir.</p></details>
+<details><summary>Ajan test kullanıcıları için ödeme yapabilir mi?</summary><p>Hayır. Ödeme bağlantıları döndürebilir ama ödeme her zaman bir insanın tarayıcısında yapılır.</p></details>
+<details><summary>MCP sunucusuyla hangi istemciler çalışır?</summary><p>Özel başlıkla Streamable HTTP üzerinden uzak MCP'yi destekleyen her istemci; Claude Code, Claude Desktop, Cursor ve VS Code dahil. Diğerleri HTTP API'yi kullanabilir.</p></details>
+<details><summary>Token'ı nereden alırım?</summary><p>Oturum açtıktan sonra https://testerexchange.com/api adresinden. Token'lar tx_ ile başlar ve istediğiniz zaman iptal edilebilir.</p></details>
+<details><summary>Ajan Play Console'umda bir şeyi değiştirir mi?</summary><p>Hayır. Play Console'unuza erişimi yoktur. Orada yapmanız gereken adımları size söyler.</p></details>
+</section>
+<div class="cta"><span>Gerçek insanlar 14 gün boyunca uygulamanızı kendi telefonlarında açar. Bir kez ödeyin ya da başka uygulamaları ücretsiz test edin.</span><a class="btn" href="https://testerexchange.com/?lang=tr#buy">12 test kullanıcısı al</a></div>
+<section><h2>Diğer rehberler</h2><ul class="related"><li><a href="https://testerexchange.com/tr/" hreflang="tr">Google Play kapalı testi için 12 test kullanıcısı nasıl bulunur</a></li><li><a href="https://testerexchange.com/tr/12-testers-app-builders/" hreflang="tr">App Inventor, Kodular, Flutter, Unity ve diğer araçlarla yapılan uygulamalar için Google Play 12 test kullanıcısı</a></li><li><a href="https://testerexchange.com/tr/app-not-available-for-testers/" hreflang="tr">Google Play kapalı test kullanıcıları için “app not available” hatasını giderme</a></li><li><a href="https://testerexchange.com/tr/best-way-to-get-12-testers/" hreflang="tr">Google Play kapalı testi için 12 test kullanıcısı bulmanın en iyi yolu</a></li><li><a href="https://testerexchange.com/tr/closed-testing-for-games/" hreflang="tr">Google Play'de oyunlar için kapalı test: Unity, Unreal ve Godot rehberi</a></li><li><a href="https://testerexchange.com/tr/does-14-day-closed-test-reset/" hreflang="tr">Test kullanıcıları ayrılınca 14 günlük kapalı test sıfırlanır mı?</a></li><li><a href="https://testerexchange.com/tr/earn-money-testing-android-apps/" hreflang="tr">Android uygulamaları test ederek para kazanın: dürüst bir rehber</a></li><li><a href="https://testerexchange.com/tr/free-closed-testing-testers/" hreflang="tr">Google Play kapalı testi için 12 test kullanıcısını ücretsiz bulma</a></li><li><a href="https://testerexchange.com/tr/friends-family-closed-testers/" hreflang="tr">Arkadaşlarınızı ve ailenizi 12 Google Play test kullanıcınız yapmak</a></li><li><a href="https://testerexchange.com/tr/google-group-vs-email-list/" hreflang="tr">Kapalı testiniz için Google Group mu, e-posta listesi mi?</a></li><li><a href="https://testerexchange.com/tr/google-play-closed-testing-requirements/" hreflang="tr">Google Play kapalı test şartları: eksiksiz 2026 rehberi</a></li><li><a href="https://testerexchange.com/tr/google-play-review-time-after-closed-testing/" hreflang="tr">14 günden sonra: üretim erişimi inceleme süresi ve ilk sürümünüz</a></li><li><a href="https://testerexchange.com/tr/insufficient-testing-engagement/" hreflang="tr">Kapalı testten sonra reddedildiniz mi? “Daha fazla test gerekli” hatası nasıl düzeltilir</a></li><li><a href="https://testerexchange.com/tr/keep-testers-active-14-days/" hreflang="tr">Kapalı test kullanıcılarını 14 gün boyunca aktif tutma</a></li><li><a href="https://testerexchange.com/tr/organization-vs-personal-developer-account/" hreflang="tr">Kurumsal ve kişisel Google Play geliştirici hesabı</a></li><li><a href="https://testerexchange.com/tr/paid-closed-testers-checklist/" hreflang="tr">Google Play kapalı test için test kullanıcısı satın almadan önce neleri kontrol etmeli</a></li><li><a href="https://testerexchange.com/tr/production-access-questions/" hreflang="tr">Google Play üretim erişimi sorularına nasıl yanıt verilir</a></li><li><a href="https://testerexchange.com/tr/production-access-rejected/" hreflang="tr">Üretim erişimi reddedildi: sonra ne yapmalı</a></li><li><a href="https://testerexchange.com/tr/set-up-closed-testing-track/" hreflang="tr">Play Console'da kapalı test kanalı adım adım nasıl kurulur</a></li><li><a href="https://testerexchange.com/tr/tools/production-answers/" hreflang="tr">Üretim erişimi yanıt oluşturucu</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

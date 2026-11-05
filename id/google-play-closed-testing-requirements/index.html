@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Persyaratan uji tertutup Google Play 2026: 12 tester, 14 hari</title>
+<meta name="description" content="Panduan lengkap 2026 untuk persyaratan uji tertutup Google Play bagi akun developer pribadi baru: siapa yang terkena, 12 tester selama 14 hari berturut-turut, apa yang dihitung, dan cara mengajukan akses produksi.">
+<link rel="canonical" href="https://testerexchange.com/id/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/google-play-closed-testing-requirements/">
+<meta property="og:type" content="article"><meta property="og:title" content="Persyaratan uji tertutup Google Play 2026: 12 tester, 14 hari">
+<meta property="og:description" content="Panduan lengkap 2026 untuk persyaratan uji tertutup Google Play bagi akun developer pribadi baru: siapa yang terkena, 12 tester selama 14 hari berturut-turut, apa yang dihitung, dan cara mengajukan akses produksi."><meta property="og:url" content="https://testerexchange.com/id/google-play-closed-testing-requirements/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Persyaratan uji tertutup Google Play: panduan lengkap 2026","description":"Panduan lengkap 2026 untuk persyaratan uji tertutup Google Play bagi akun developer pribadi baru: siapa yang terkena, 12 tester selama 14 hari berturut-turut, apa yang dihitung, dan cara mengajukan akses produksi.","inLanguage":"id","dateModified":"2026-11-05","url":"https://testerexchange.com/id/google-play-closed-testing-requirements/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/id/"},{"@type":"ListItem","position":3,"name":"Persyaratan uji tertutup Google Play: panduan lengkap 2026","item":"https://testerexchange.com/id/google-play-closed-testing-requirements/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Apakah 12 atau 20 tester?","acceptedAnswer":{"@type":"Answer","text":"12. Google menurunkannya dari 20 menjadi 12 pada Desember 2024. 14 hari berturut-turut tidak berubah."}},{"@type":"Question","name":"Apakah persyaratan ini berlaku untuk akun lama saya?","acceptedAnswer":{"@type":"Answer","text":"Hanya akun pribadi yang dibuat setelah 13 November 2023 yang harus menjalankan uji tertutup. Akun pribadi yang lebih lama dan akun organisasi tidak tercakup."}},{"@type":"Question","name":"Apakah saya harus mengulang uji tertutup untuk setiap aplikasi?","acceptedAnswer":{"@type":"Answer","text":"Akses produksi diberikan per aplikasi pada akun pribadi yang terkena, jadi rencanakan uji tertutup untuk setiap aplikasi baru."}},{"@type":"Question","name":"Apakah uji internal dihitung?","acceptedAnswer":{"@type":"Answer","text":"Tidak. Harus uji tertutup. Google juga menyatakan orang yang opt-in ke uji internal Anda tidak bisa bergabung ke uji tertutup sampai mereka keluar dari uji internal."}},{"@type":"Question","name":"Apakah tester harus memakai aplikasi setiap hari?","acceptedAnswer":{"@type":"Answer","text":"Google tidak mempublikasikan minimumnya. Google menanyakan keterlibatan di formulir produksi, jadi penggunaan nyata secara rutin oleh sebagian besar tester adalah pola yang paling aman."}},{"@type":"Question","name":"Berapa lama Google mereview akses produksi?","acceptedAnswer":{"@type":"Answer","text":"Google menyatakan biasanya tujuh hari atau kurang, tetapi kadang bisa lebih lama."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=id">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Bahasa" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/google-play-closed-testing-requirements/">English</option><option value="https://testerexchange.com/es/google-play-closed-testing-requirements/">Español</option><option value="https://testerexchange.com/id/google-play-closed-testing-requirements/" selected>Bahasa Indonesia</option><option value="https://testerexchange.com/pt/google-play-closed-testing-requirements/">Português</option><option value="https://testerexchange.com/ru/google-play-closed-testing-requirements/">Русский</option><option value="https://testerexchange.com/tr/google-play-closed-testing-requirements/">Türkçe</option><option value="https://testerexchange.com/vi/google-play-closed-testing-requirements/">Tiếng Việt</option>
+</select>
+<a href="https://testerexchange.com/?lang=id">Buka Tester Exchange</a></header>
+<main>
+
+<h1>Persyaratan uji tertutup Google Play: panduan lengkap 2026</h1>
+<p class="muted">Diperbarui November 2026</p>
+<p class="lede">Jika Anda membuka akun developer pribadi Google Play setelah 13 November 2023, Anda tidak bisa langsung merilis ke produksi. Google lebih dulu meminta uji tertutup dengan minimal 12 tester yang tetap opt-in selama minimal 14 hari berturut-turut. Setelah itu Anda mengisi formulir singkat akses produksi dan menunggu review Google. Panduan ini menjelaskan setiap bagian aturan seperti yang dinyatakan Google di Help Center Play Console, apa yang sebenarnya membuat developer tersandung, dan jadwal realistis dari unggahan pertama sampai rilis publik.</p>
+<div class="cta"><span>Orang sungguhan membuka aplikasimu di ponsel mereka selama 14 hari. Bayar sekali, atau uji aplikasi lain secara gratis.</span><a class="btn" href="https://testerexchange.com/?lang=id#buy">Dapatkan 12 penguji</a></div>
+<nav class="toc"><b>Di halaman ini</b><ul><li><a href="#who">Siapa yang harus menjalankan uji tertutup</a></li><li><a href="#rule">Aturannya dalam satu kalimat</a></li><li><a href="#counts">Apa yang dihitung sebagai tester</a></li><li><a href="#timeline">Jadwal yang realistis</a></li><li><a href="#form">Formulir akses produksi</a></li><li><a href="#fail">Mengapa aplikasi tidak lolos</a></li><li><a href="#testers">Di mana mendapatkan 12 tester</a></li><li><a href="#faq">Pertanyaan yang sering diajukan</a></li></ul></nav>
+
+<section id="who">
+<h2>Siapa yang harus menjalankan uji tertutup</h2>
+<p>Help Center Google menyatakan persyaratan ini berlaku untuk akun developer pribadi yang dibuat setelah 13 November 2023. Sampai lolos, aplikasi tersebut tidak memenuhi syarat untuk didistribusikan di Google Play.</p>
+<p>Jika akun Anda dibuat sebelum tanggal itu, atau merupakan akun organisasi (bisnis yang terverifikasi dengan nomor D-U-N-S), persyaratan uji tertutup tidak berlaku untuk Anda. Setiap aplikasi di akun pribadi yang terkena melewati proses ini sebelum mendapat akses produksi.</p>
+<ul><li><b>Akun pribadi, dibuat setelah 13 Nov 2023:</b> uji tertutup wajib.</li><li><b>Akun pribadi, dibuat sebelum 13 Nov 2023:</b> tidak wajib.</li><li><b>Akun organisasi:</b> tidak wajib, tetapi Anda memerlukan nomor D-U-N-S dan situs web organisasi yang terverifikasi. Lihat panduan tentang akun organisasi vs pribadi.</li></ul>
+
+
+</section>
+
+<section id="rule">
+<h2>Aturannya dalam satu kalimat</h2>
+<p>Jalankan uji tertutup dengan <b>minimal 12 tester yang opt-in tanpa putus selama minimal 14 hari</b>, lalu ajukan akses produksi dari Dashboard Play Console.</p>
+<p>Redaksi Google penting. 14 hari harus berturut-turut. Tester yang opt-in, menguji kurang dari 14 hari, lalu opt-out tidak dihitung. Dan minimal 12 tester harus masih opt-in pada hari Anda mengajukan.</p>
+
+
+<p>Jumlahnya dulu 20 tester sampai Desember 2024, ketika Google menurunkannya menjadi 12. Durasi 14 hari tidak berubah.</p>
+</section>
+
+<section id="counts">
+<h2>Apa yang dihitung sebagai tester</h2>
+
+<ul><li><b>Akun Google asli yang sudah opt-in.</b> Ada di daftar email atau Google Group Anda saja tidak cukup. Setiap orang harus membuka tautan opt-in dan mengetuk untuk menjadi tester.</li><li><b>Di track uji tertutup.</b> Orang yang opt-in ke uji internal Anda tidak memenuhi syarat untuk uji tertutup sampai mereka keluar dari uji internal. Uji internal tidak dihitung untuk persyaratan ini.</li><li><b>Opt-in selama seluruh waktu.</b> Jika seseorang keluar lalu bergabung lagi, hitungan berturut-turutnya dimulai dari awal.</li><li><b>Memakai aplikasi.</b> Google tidak mempublikasikan jumlah minimum pembukaan aplikasi, tetapi formulir produksi menanyakan bagaimana tester terlibat dan apakah penggunaannya sesuai dengan yang Anda harapkan di produksi. Tester yang menginstal sekali lalu menghilang adalah alasan utama pengajuan gagal.</li></ul>
+
+
+</section>
+
+<section id="timeline">
+<h2>Jadwal yang realistis</h2>
+
+
+<ol><li><b>Hari ke-0:</b> buat track uji tertutup, tambahkan tester (daftar email atau Google Group), unggah app bundle, dan kirim rilis untuk review.</li><li><b>Beberapa jam sampai beberapa hari kemudian:</b> rilis dipublikasikan dan tautan opt-in berfungsi. Google mencatat tautan uji pertama bisa butuh beberapa jam sebelum tersedia.</li><li><b>Hari ke-1 sampai 14:</b> minimal 12 tester tetap opt-in dan memakai aplikasi. Rilis minimal satu pembaruan berdasarkan umpan balik mereka.</li><li><b>Hari ke-15 atau setelahnya:</b> klik Apply for production di Dashboard dan jawab pertanyaannya.</li><li><b>Sekitar seminggu kemudian:</b> Google menyatakan review biasanya memakan waktu tujuh hari atau kurang, tetapi kadang bisa lebih lama. Anda mendapat email saat selesai.</li><li><b>Setelah disetujui:</b> halaman Production terbuka. Rilis produksi pertama Anda tetap melewati review aplikasi yang normal.</li></ol>
+<p>Rencanakan sekitar tiga sampai empat minggu dari unggahan uji tertutup pertama sampai listing publik, jika tidak ada masalah.</p>
+</section>
+
+<section id="form">
+<h2>Formulir akses produksi</h2>
+<p>Formulir Google terdiri dari tiga bagian. Bagian pertama tentang uji tertutup Anda: seberapa mudah merekrut tester, bagaimana keterlibatan mereka, serta ringkasan umpan balik mereka dan cara Anda mengumpulkannya. Bagian kedua tentang aplikasi Anda: target audiens, nilai yang diberikan kepada pengguna, dan berapa banyak instalasi yang Anda harapkan di tahun pertama. Bagian ketiga tentang kesiapan produksi: apa yang Anda ubah setelah pengujian dan bagaimana Anda memutuskan aplikasi sudah siap.</p>
+<p>Tulis jawabannya sebelum membuka formulir. Google memperingatkan bahwa jawaban Anda hilang jika Anda meninggalkan halaman sebelum mengklik Next atau Apply. Panduan kami tentang pertanyaan akses produksi dan alat jawaban gratis di https://testerexchange.com/tools/production-answers/ membantu Anda menyusun draf dari angka yang nyata.</p>
+
+
+
+</section>
+
+<section id="fail">
+<h2>Mengapa aplikasi tidak lolos</h2>
+<p>Help Center Google menyebut dua alasan Anda mungkin perlu melanjutkan uji tertutup: kurang dari 12 tester yang opt-in, atau keterlibatan tester yang kurang. Dalam praktiknya, developer mengalami masalah berikut:</p>
+<ul><li>Hanya meminta tepat 12 orang. Satu orang berhenti pada hari ke-10 dan Anda jadi 11.</li><li>Tester yang menginstal dan tidak pernah membuka aplikasi lagi.</li><li>Banyak akun di satu ponsel, atau akun yang bukan orang sungguhan.</li><li>Tidak ada pembaruan dan tidak ada umpan balik selama 14 hari, sehingga tidak ada yang bisa dijelaskan di formulir.</li><li>Jawaban yang singkat dan generik di kuesioner.</li></ul>
+
+<p>Jika Anda sudah menerima balasan &quot;more testing required&quot;, baca panduan tentang keterlibatan pengujian yang kurang dan panduan tentang apa yang harus dilakukan saat akses produksi ditolak.</p>
+</section>
+
+<section id="testers">
+<h2>Di mana mendapatkan 12 tester</h2>
+<p>Google tidak menyebutkan dari mana tester harus berasal. Teman dan keluarga bisa, jika Anda mengenal cukup banyak pengguna Android yang mau membuka aplikasi Anda setiap hari selama dua minggu. Komunitas saling uji itu gratis tetapi butuh waktu Anda. Layanan berbayar lebih cepat.</p>
+<p>Tester Exchange menyediakan keduanya. Bayar sekali ($12.99 untuk 12 tester, $14.99 untuk 15, $22.99 untuk 25), atau dapatkan tester gratis dengan menguji aplikasi developer lain di https://testerexchange.com/earn lewat browser ponsel Android Anda. Setiap tester adalah orang sungguhan di ponselnya sendiri, dan Anda melihat penggunaan harian setiap tester. Kami menyarankan 15 tester agar satu atau dua tester yang berhenti tidak membuat Anda di bawah 12.</p>
+
+
+
+</section>
+<section id="faq"><h2>Pertanyaan yang sering diajukan</h2>
+<details><summary>Apakah 12 atau 20 tester?</summary><p>12. Google menurunkannya dari 20 menjadi 12 pada Desember 2024. 14 hari berturut-turut tidak berubah.</p></details>
+<details><summary>Apakah persyaratan ini berlaku untuk akun lama saya?</summary><p>Hanya akun pribadi yang dibuat setelah 13 November 2023 yang harus menjalankan uji tertutup. Akun pribadi yang lebih lama dan akun organisasi tidak tercakup.</p></details>
+<details><summary>Apakah saya harus mengulang uji tertutup untuk setiap aplikasi?</summary><p>Akses produksi diberikan per aplikasi pada akun pribadi yang terkena, jadi rencanakan uji tertutup untuk setiap aplikasi baru.</p></details>
+<details><summary>Apakah uji internal dihitung?</summary><p>Tidak. Harus uji tertutup. Google juga menyatakan orang yang opt-in ke uji internal Anda tidak bisa bergabung ke uji tertutup sampai mereka keluar dari uji internal.</p></details>
+<details><summary>Apakah tester harus memakai aplikasi setiap hari?</summary><p>Google tidak mempublikasikan minimumnya. Google menanyakan keterlibatan di formulir produksi, jadi penggunaan nyata secara rutin oleh sebagian besar tester adalah pola yang paling aman.</p></details>
+<details><summary>Berapa lama Google mereview akses produksi?</summary><p>Google menyatakan biasanya tujuh hari atau kurang, tetapi kadang bisa lebih lama.</p></details>
+</section>
+<div class="cta"><span>Orang sungguhan membuka aplikasimu di ponsel mereka selama 14 hari. Bayar sekali, atau uji aplikasi lain secara gratis.</span><a class="btn" href="https://testerexchange.com/?lang=id#buy">Dapatkan 12 penguji</a></div>
+<section><h2>Panduan lainnya</h2><ul class="related"><li><a href="https://testerexchange.com/id/" hreflang="id">Cara mendapatkan 12 penguji untuk pengujian tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/12-testers-app-builders/" hreflang="id">12 penguji Google Play untuk aplikasi buatan App Inventor, Kodular, Flutter, Unity, dan builder lainnya</a></li><li><a href="https://testerexchange.com/id/app-not-available-for-testers/" hreflang="id">Atasi &quot;app not available&quot; untuk tester uji tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/automate-closed-testing-with-ai-agents/" hreflang="id">Otomatiskan uji tertutup Google Play dengan agen AI</a></li><li><a href="https://testerexchange.com/id/best-way-to-get-12-testers/" hreflang="id">Cara terbaik mendapatkan 12 tester untuk uji tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/closed-testing-for-games/" hreflang="id">Uji tertutup untuk game di Google Play: panduan untuk Unity, Unreal, dan Godot</a></li><li><a href="https://testerexchange.com/id/does-14-day-closed-test-reset/" hreflang="id">Apakah uji tertutup 14 hari diulang saat tester berhenti?</a></li><li><a href="https://testerexchange.com/id/earn-money-testing-android-apps/" hreflang="id">Dapat uang dari menguji aplikasi Android: panduan jujur</a></li><li><a href="https://testerexchange.com/id/free-closed-testing-testers/" hreflang="id">Cara mendapatkan 12 penguji gratis untuk pengujian tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/friends-family-closed-testers/" hreflang="id">Teman dan keluarga sebagai 12 penguji Google Play Anda</a></li><li><a href="https://testerexchange.com/id/google-group-vs-email-list/" hreflang="id">Google Group atau daftar email untuk pengujian tertutup Anda?</a></li><li><a href="https://testerexchange.com/id/google-play-review-time-after-closed-testing/" hreflang="id">Setelah 14 hari: waktu review akses produksi dan rilis pertama Anda</a></li><li><a href="https://testerexchange.com/id/insufficient-testing-engagement/" hreflang="id">Ditolak setelah pengujian tertutup? Cara mengatasi &quot;perlu pengujian lebih lanjut&quot;</a></li><li><a href="https://testerexchange.com/id/keep-testers-active-14-days/" hreflang="id">Cara menjaga penguji tertutup tetap aktif selama 14 hari penuh</a></li><li><a href="https://testerexchange.com/id/organization-vs-personal-developer-account/" hreflang="id">Akun developer Google Play organisasi vs pribadi</a></li><li><a href="https://testerexchange.com/id/paid-closed-testers-checklist/" hreflang="id">Apa yang perlu dicek sebelum membayar tester uji tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/production-access-questions/" hreflang="id">Cara menjawab pertanyaan akses produksi Google Play</a></li><li><a href="https://testerexchange.com/id/production-access-rejected/" hreflang="id">Akses produksi ditolak: apa yang harus dilakukan selanjutnya</a></li><li><a href="https://testerexchange.com/id/set-up-closed-testing-track/" hreflang="id">Cara menyiapkan track uji tertutup di Play Console, langkah demi langkah</a></li><li><a href="https://testerexchange.com/id/tools/production-answers/" hreflang="id">Generator jawaban akses produksi</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

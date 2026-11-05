@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Teste fechado no Google Play para jogos: Unity, Unreal, Godot</title>
+<meta name="description" content="Como desenvolvedores de jogos passam no teste fechado de 12 testadores × 14 dias do Google Play: build no Unity, Unreal e Godot, compatibilidade de dispositivos, o que pedir aos testadores e como mostrar engajamento.">
+<link rel="canonical" href="https://testerexchange.com/pt/closed-testing-for-games/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/closed-testing-for-games/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/closed-testing-for-games/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/closed-testing-for-games/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/closed-testing-for-games/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/closed-testing-for-games/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/closed-testing-for-games/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/closed-testing-for-games/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/closed-testing-for-games/">
+<meta property="og:type" content="article"><meta property="og:title" content="Teste fechado no Google Play para jogos: Unity, Unreal, Godot">
+<meta property="og:description" content="Como desenvolvedores de jogos passam no teste fechado de 12 testadores × 14 dias do Google Play: build no Unity, Unreal e Godot, compatibilidade de dispositivos, o que pedir aos testadores e como mostrar engajamento."><meta property="og:url" content="https://testerexchange.com/pt/closed-testing-for-games/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Teste fechado para jogos no Google Play: guia para Unity, Unreal e Godot","description":"Como desenvolvedores de jogos passam no teste fechado de 12 testadores × 14 dias do Google Play: build no Unity, Unreal e Godot, compatibilidade de dispositivos, o que pedir aos testadores e como mostrar engajamento.","inLanguage":"pt","dateModified":"2026-11-05","url":"https://testerexchange.com/pt/closed-testing-for-games/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/pt/"},{"@type":"ListItem","position":3,"name":"Teste fechado para jogos no Google Play: guia para Unity, Unreal e Godot","item":"https://testerexchange.com/pt/closed-testing-for-games/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Jogos também precisam de teste fechado?","acceptedAnswer":{"@type":"Answer","text":"Sim. A exigência vale para todos os apps de contas pessoais criadas depois de 13 de novembro de 2023, inclusive jogos."}},{"@type":"Question","name":"Meu jogo pode estar inacabado durante o teste fechado?","acceptedAnswer":{"@type":"Answer","text":"Sim, um teste fechado serve para um trabalho em andamento. Mas os testadores precisam de conteúdo suficiente para jogar por duas semanas, e você deve continuar melhorando o jogo durante o teste."}},{"@type":"Question","name":"Por que alguns testadores não conseguem instalar meu jogo?","acceptedAnswer":{"@type":"Answer","text":"Geralmente é compatibilidade de dispositivo: versão mínima alta do Android, falta de suporte a 64 bits ou recursos de hardware obrigatórios. Confira o Catálogo de dispositivos no Play Console."}},{"@type":"Question","name":"Quanto tempo os testadores devem jogar por dia?","acceptedAnswer":{"@type":"Answer","text":"O Google não define um número. Uma sessão curta e real todos os dias é melhor do que uma sessão longa e depois nada."}},{"@type":"Question","name":"Devo usar o Play Asset Delivery no teste?","acceptedAnswer":{"@type":"Answer","text":"Se o seu jogo for grande, sim. Primeiros downloads menores significam que mais testadores realmente instalam e começam a jogar."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=pt">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Idioma" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/closed-testing-for-games/">English</option><option value="https://testerexchange.com/es/closed-testing-for-games/">Español</option><option value="https://testerexchange.com/id/closed-testing-for-games/">Bahasa Indonesia</option><option value="https://testerexchange.com/pt/closed-testing-for-games/" selected>Português</option><option value="https://testerexchange.com/ru/closed-testing-for-games/">Русский</option><option value="https://testerexchange.com/tr/closed-testing-for-games/">Türkçe</option><option value="https://testerexchange.com/vi/closed-testing-for-games/">Tiếng Việt</option>
+</select>
+<a href="https://testerexchange.com/?lang=pt">Abrir o Tester Exchange</a></header>
+<main>
+
+<h1>Teste fechado para jogos no Google Play: guia para Unity, Unreal e Godot</h1>
+<p class="muted">Atualizado em novembro de 2026</p>
+<p class="lede">Jogos passam pela mesma exigência de teste fechado que qualquer outro app: se sua conta de desenvolvedor pessoal foi criada depois de 13 de novembro de 2023, você precisa de pelo menos 12 testadores inscritos por 14 dias seguidos antes de solicitar acesso à produção. Mas jogos têm armadilhas próprias: downloads grandes, dispositivos que não rodam o build e testadores que abrem o jogo uma vez e nunca mais voltam. Este guia mostra o que desenvolvedores de jogos devem configurar e o que pedir aos testadores.</p>
+<div class="cta"><span>Pessoas reais abrem seu app no próprio celular por 14 dias. Pague uma vez ou teste outros apps de graça.</span><a class="btn" href="https://testerexchange.com/?lang=pt#buy">Quero 12 testadores</a></div>
+<nav class="toc"><b>Nesta página</b><ul><li><a href="#same">A mesma regra, com riscos específicos de jogos</a></li><li><a href="#build">Configurações de build para conferir primeiro</a></li><li><a href="#setup">Configure o teste</a></li><li><a href="#players">O que pedir aos testadores para jogar</a></li><li><a href="#engage">Mostre engajamento</a></li><li><a href="#online">Jogos multiplayer e online</a></li><li><a href="#testers">Como conseguir jogadores suficientes</a></li><li><a href="#faq">Perguntas frequentes</a></li></ul></nav>
+
+<section id="same">
+<h2>A mesma regra, com riscos específicos de jogos</h2>
+<p>O Google trata jogos e apps da mesma forma aqui. Faça um teste fechado com pelo menos 12 testadores que continuem inscritos por 14 dias seguidos e depois solicite a produção. O formulário de produção pergunta sobre o engajamento dos testadores, o feedback e o que você mudou, então um teste em que ninguém passou do tutorial rende respostas fracas.</p>
+<p>Os riscos que afetam jogos mais do que outros apps:</p>
+<ul><li><b>Compatibilidade de dispositivos:</b> os testadores veem &quot;seu dispositivo não é compatível&quot; e não conseguem instalar.</li><li><b>Tamanho do download:</b> um primeiro download grande no plano de dados móveis afasta os testadores.</li><li><b>Duração da sessão:</b> ninguém vai jogar uma fase de 20 minutos todo dia por duas semanas.</li><li><b>Falta de conteúdo:</b> uma fatia vertical com uma única fase fica sem o que fazer por volta do terceiro dia.</li></ul>
+
+
+</section>
+
+<section id="build">
+<h2>Configurações de build para conferir primeiro</h2>
+
+<ul><li><b>Unity:</b> gere um Android App Bundle (.aab), use IL2CPP com ARM64 ativado (o Google Play exige suporte a 64 bits) e defina um nível mínimo de API que não exclua mais celulares do que o necessário. Se o seu build for grande, use o Play Asset Delivery em vez de um único download enorme.</li><li><b>Unreal Engine:</b> empacote para Android como App Bundle com arm64, confira os níveis de SDK de destino e mínimo em Project Settings e mantenha o primeiro download pequeno movendo o conteúdo opcional para asset packs.</li><li><b>Godot:</b> use o modelo de exportação do Android com o build do Gradle ativado e exporte como AAB. Confirme que o arm64-v8a está incluído e teste o renderizador em um celular de entrada, porque alguns dispositivos lidam melhor com o renderizador Compatibility do que com o Forward+ ou o Mobile.</li><li><b>Todas as engines:</b> use como alvo o nível de API que o Google Play exige atualmente para apps novos e assine com o Play App Signing.</li></ul>
+
+<p>Depois de enviar, abra o Catálogo de dispositivos no Play Console para ver quantos dispositivos seu build suporta. Se uma parcela grande estiver excluída, corrija antes de os testadores chegarem.</p>
+</section>
+
+<section id="setup">
+<h2>Configure o teste</h2>
+
+
+<ol><li>Crie ou abra a faixa fechada: Teste e lançamento, depois Testes, depois Teste fechado.</li><li>Adicione os países onde seus testadores moram.</li><li>Adicione os testadores com uma lista de e-mails ou um Google Group. Com o Tester Exchange, adicione testerexchange-testers@googlegroups.com.</li><li>Envie o .aab, mande a versão para análise e espere até aparecer como Publicada.</li><li>Compartilhe o link de adesão. Na primeira vez, pode levar várias horas para começar a funcionar.</li></ol>
+<p>Se os testadores relatarem &quot;app indisponível&quot;, veja o guia para corrigir isso. Ele cobre contas erradas, países e faixas não publicadas.</p>
+</section>
+
+<section id="players">
+<h2>O que pedir aos testadores para jogar</h2>
+<p>Dê aos testadores metas diárias pequenas, que caibam em alguns minutos. O que ajuda você é um jogo real e variado, e é isso que você descreverá depois no formulário de produção.</p>
+<ul><li><b>Dias 1 a 3:</b> terminar o tutorial e a primeira fase. Relatar qualquer coisa confusa.</li><li><b>Dias 4 a 7:</b> jogar uma sessão curta por dia; testar configurações, som, controles e pausa.</li><li><b>Dias 8 a 11:</b> testar um novo build com correções; rejogar uma fase para ver se a sensação melhorou.</li><li><b>Dias 12 a 14:</b> jogar o conteúdo mais difícil disponível e relatar travamentos, lag ou consumo de bateria.</li></ul>
+
+<p>Se o seu jogo tem recompensas diárias, um desafio diário curto ou um modo rápido, indique-o aos testadores. Ele se encaixa naturalmente no ritmo diário.</p>
+</section>
+
+<section id="engage">
+<h2>Mostre engajamento</h2>
+
+<ul><li>Publique pelo menos uma atualização durante o teste, de preferência duas. Corrigir um travamento relatado é a melhor história para o formulário de produção.</li><li>Use o Android vitals e o relatório de pré-lançamento no Play Console para encontrar travamentos e ANRs em dispositivos reais.</li><li>Colete feedback por escrito em um formulário simples: modelo do dispositivo, o que fizeram, o que aconteceu.</li><li>Mantenha um registro de testadores ativos por dia, sessões, bugs encontrados e builds publicados.</li></ul>
+
+
+</section>
+
+<section id="online">
+<h2>Jogos multiplayer e online</h2>
+<p>Se o seu jogo precisa de servidor, mantenha-o no ar durante os 14 dias e garanta que o jogo continue jogável quando os testadores estiverem sozinhos. Um lobby que nunca enche parece um teste vazio. Se puder, adicione bots ou um modo solo durante o período de teste.</p>
+<p>Se for preciso fazer login, ofereça aos testadores um modo convidado que funcione ou instruções claras. Telas de login fazem você perder testadores já no primeiro dia.</p>
+
+
+
+</section>
+
+<section id="testers">
+<h2>Como conseguir jogadores suficientes</h2>
+<p>Peça 15 testadores em vez de 12, porque alguns jogadores abandonam jogos rapidamente. O Tester Exchange envia pessoas reais que jogam nos próprios celulares Android e mostra o uso diário de cada testador: US$ 12,99 por 12, US$ 14,99 por 15 ou US$ 22,99 por 25, pagos uma única vez. Você também pode ganhar testadores de graça testando apps e jogos de outros desenvolvedores em https://testerexchange.com/earn.</p>
+
+
+
+</section>
+<section id="faq"><h2>Perguntas frequentes</h2>
+<details><summary>Jogos também precisam de teste fechado?</summary><p>Sim. A exigência vale para todos os apps de contas pessoais criadas depois de 13 de novembro de 2023, inclusive jogos.</p></details>
+<details><summary>Meu jogo pode estar inacabado durante o teste fechado?</summary><p>Sim, um teste fechado serve para um trabalho em andamento. Mas os testadores precisam de conteúdo suficiente para jogar por duas semanas, e você deve continuar melhorando o jogo durante o teste.</p></details>
+<details><summary>Por que alguns testadores não conseguem instalar meu jogo?</summary><p>Geralmente é compatibilidade de dispositivo: versão mínima alta do Android, falta de suporte a 64 bits ou recursos de hardware obrigatórios. Confira o Catálogo de dispositivos no Play Console.</p></details>
+<details><summary>Quanto tempo os testadores devem jogar por dia?</summary><p>O Google não define um número. Uma sessão curta e real todos os dias é melhor do que uma sessão longa e depois nada.</p></details>
+<details><summary>Devo usar o Play Asset Delivery no teste?</summary><p>Se o seu jogo for grande, sim. Primeiros downloads menores significam que mais testadores realmente instalam e começam a jogar.</p></details>
+</section>
+<div class="cta"><span>Pessoas reais abrem seu app no próprio celular por 14 dias. Pague uma vez ou teste outros apps de graça.</span><a class="btn" href="https://testerexchange.com/?lang=pt#buy">Quero 12 testadores</a></div>
+<section><h2>Mais guias</h2><ul class="related"><li><a href="https://testerexchange.com/pt/" hreflang="pt">Como conseguir 12 testadores para o teste fechado do Google Play</a></li><li><a href="https://testerexchange.com/pt/12-testers-app-builders/" hreflang="pt">12 testadores do Google Play para apps feitos com App Inventor, Kodular, Flutter, Unity e outras ferramentas</a></li><li><a href="https://testerexchange.com/pt/app-not-available-for-testers/" hreflang="pt">Como corrigir &quot;app indisponível&quot; para testadores do teste fechado do Google Play</a></li><li><a href="https://testerexchange.com/pt/automate-closed-testing-with-ai-agents/" hreflang="pt">Automatize o teste fechado do Google Play com agentes de IA</a></li><li><a href="https://testerexchange.com/pt/best-way-to-get-12-testers/" hreflang="pt">A melhor forma de conseguir 12 testadores para o teste fechado do Google Play</a></li><li><a href="https://testerexchange.com/pt/does-14-day-closed-test-reset/" hreflang="pt">O teste fechado de 14 dias reinicia quando testadores desistem?</a></li><li><a href="https://testerexchange.com/pt/earn-money-testing-android-apps/" hreflang="pt">Ganhe dinheiro testando apps Android: um guia honesto</a></li><li><a href="https://testerexchange.com/pt/free-closed-testing-testers/" hreflang="pt">Como conseguir 12 testadores grátis para o teste fechado do Google Play</a></li><li><a href="https://testerexchange.com/pt/friends-family-closed-testers/" hreflang="pt">Amigos e família como seus 12 testadores do Google Play</a></li><li><a href="https://testerexchange.com/pt/google-group-vs-email-list/" hreflang="pt">Google Group ou lista de e-mails para o seu teste fechado?</a></li><li><a href="https://testerexchange.com/pt/google-play-closed-testing-requirements/" hreflang="pt">Requisitos do teste fechado do Google Play: o guia completo de 2026</a></li><li><a href="https://testerexchange.com/pt/google-play-review-time-after-closed-testing/" hreflang="pt">Depois dos 14 dias: tempo de análise do acesso à produção e sua primeira versão</a></li><li><a href="https://testerexchange.com/pt/insufficient-testing-engagement/" hreflang="pt">Rejeitado após o teste fechado? Como resolver &quot;mais testes necessários&quot;</a></li><li><a href="https://testerexchange.com/pt/keep-testers-active-14-days/" hreflang="pt">Como manter os testadores do teste fechado ativos pelos 14 dias</a></li><li><a href="https://testerexchange.com/pt/organization-vs-personal-developer-account/" hreflang="pt">Conta de desenvolvedor de organização vs pessoal no Google Play</a></li><li><a href="https://testerexchange.com/pt/paid-closed-testers-checklist/" hreflang="pt">O que verificar antes de pagar testers para o teste fechado do Google Play</a></li><li><a href="https://testerexchange.com/pt/production-access-questions/" hreflang="pt">Como responder às perguntas de acesso à produção do Google Play</a></li><li><a href="https://testerexchange.com/pt/production-access-rejected/" hreflang="pt">Acesso à produção rejeitado: o que fazer agora</a></li><li><a href="https://testerexchange.com/pt/set-up-closed-testing-track/" hreflang="pt">Como configurar uma faixa de teste fechado no Play Console, passo a passo</a></li><li><a href="https://testerexchange.com/pt/tools/production-answers/" hreflang="pt">Gerador de respostas para o acesso à produção</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

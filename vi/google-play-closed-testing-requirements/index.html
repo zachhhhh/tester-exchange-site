@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yêu cầu thử nghiệm kín Google Play 2026: 12 người, 14 ngày</title>
+<meta name="description" content="Hướng dẫn đầy đủ 2026 về yêu cầu thử nghiệm kín của Google Play cho tài khoản nhà phát triển cá nhân mới: áp dụng cho ai, 12 người thử nghiệm trong 14 ngày liên tiếp, cái gì được tính và cách xin lên production.">
+<link rel="canonical" href="https://testerexchange.com/vi/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/google-play-closed-testing-requirements/">
+<meta property="og:type" content="article"><meta property="og:title" content="Yêu cầu thử nghiệm kín Google Play 2026: 12 người, 14 ngày">
+<meta property="og:description" content="Hướng dẫn đầy đủ 2026 về yêu cầu thử nghiệm kín của Google Play cho tài khoản nhà phát triển cá nhân mới: áp dụng cho ai, 12 người thử nghiệm trong 14 ngày liên tiếp, cái gì được tính và cách xin lên production."><meta property="og:url" content="https://testerexchange.com/vi/google-play-closed-testing-requirements/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Yêu cầu thử nghiệm kín của Google Play: hướng dẫn đầy đủ 2026","description":"Hướng dẫn đầy đủ 2026 về yêu cầu thử nghiệm kín của Google Play cho tài khoản nhà phát triển cá nhân mới: áp dụng cho ai, 12 người thử nghiệm trong 14 ngày liên tiếp, cái gì được tính và cách xin lên production.","inLanguage":"vi","dateModified":"2026-11-05","url":"https://testerexchange.com/vi/google-play-closed-testing-requirements/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/vi/"},{"@type":"ListItem","position":3,"name":"Yêu cầu thử nghiệm kín của Google Play: hướng dẫn đầy đủ 2026","item":"https://testerexchange.com/vi/google-play-closed-testing-requirements/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Là 12 hay 20 người thử nghiệm?","acceptedAnswer":{"@type":"Answer","text":"12. Google đã hạ từ 20 xuống 12 vào tháng 12/2024. 14 ngày liên tiếp vẫn giữ nguyên."}},{"@type":"Question","name":"Yêu cầu này có áp dụng cho tài khoản cũ của tôi không?","acceptedAnswer":{"@type":"Answer","text":"Chỉ các tài khoản cá nhân tạo sau ngày 13 tháng 11 năm 2023 mới phải chạy thử nghiệm kín. Tài khoản cá nhân cũ hơn và tài khoản tổ chức không thuộc diện này."}},{"@type":"Question","name":"Tôi có phải lặp lại thử nghiệm kín cho từng ứng dụng không?","acceptedAnswer":{"@type":"Answer","text":"Với các tài khoản cá nhân bị ảnh hưởng, quyền truy cập production được cấp cho từng ứng dụng, nên hãy lên kế hoạch thử nghiệm kín cho mỗi ứng dụng mới."}},{"@type":"Question","name":"Thử nghiệm nội bộ có được tính không?","acceptedAnswer":{"@type":"Answer","text":"Không. Phải là thử nghiệm kín. Google cũng cho biết những người đã tham gia thử nghiệm nội bộ của bạn không thể tham gia thử nghiệm kín cho đến khi họ rời thử nghiệm nội bộ."}},{"@type":"Question","name":"Người thử nghiệm có phải dùng ứng dụng mỗi ngày không?","acceptedAnswer":{"@type":"Answer","text":"Google không công bố mức tối thiểu. Google hỏi về mức tương tác trong biểu mẫu production, nên việc phần lớn người thử nghiệm dùng thật đều đặn là mô hình an toàn nhất."}},{"@type":"Question","name":"Google mất bao lâu để xét duyệt quyền truy cập production?","acceptedAnswer":{"@type":"Answer","text":"Google cho biết thường là bảy ngày hoặc ít hơn, nhưng đôi khi có thể lâu hơn."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=vi">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Ngôn ngữ" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/google-play-closed-testing-requirements/">English</option><option value="https://testerexchange.com/es/google-play-closed-testing-requirements/">Español</option><option value="https://testerexchange.com/id/google-play-closed-testing-requirements/">Bahasa Indonesia</option><option value="https://testerexchange.com/pt/google-play-closed-testing-requirements/">Português</option><option value="https://testerexchange.com/ru/google-play-closed-testing-requirements/">Русский</option><option value="https://testerexchange.com/tr/google-play-closed-testing-requirements/">Türkçe</option><option value="https://testerexchange.com/vi/google-play-closed-testing-requirements/" selected>Tiếng Việt</option>
+</select>
+<a href="https://testerexchange.com/?lang=vi">Mở Tester Exchange</a></header>
+<main>
+
+<h1>Yêu cầu thử nghiệm kín của Google Play: hướng dẫn đầy đủ 2026</h1>
+<p class="muted">Cập nhật tháng 11/2026</p>
+<p class="lede">Nếu bạn mở tài khoản nhà phát triển cá nhân trên Google Play sau ngày 13 tháng 11 năm 2023, bạn không thể xuất bản thẳng lên production. Trước tiên Google muốn một bài thử nghiệm kín với ít nhất 12 người thử nghiệm giữ trạng thái tham gia ít nhất 14 ngày liên tiếp. Sau đó bạn điền một biểu mẫu xin quyền truy cập production ngắn và chờ Google xét duyệt. Hướng dẫn này giải thích từng phần của quy tắc đúng như Google nêu trong Trung tâm trợ giúp Play Console, những điều thực sự làm nhà phát triển vấp ngã, và một lộ trình thực tế từ lần tải lên đầu tiên đến khi phát hành công khai.</p>
+<div class="cta"><span>Người thật mở ứng dụng của bạn trên điện thoại của họ trong 14 ngày. Trả một lần, hoặc kiểm thử ứng dụng khác miễn phí.</span><a class="btn" href="https://testerexchange.com/?lang=vi#buy">Nhận 12 người kiểm thử</a></div>
+<nav class="toc"><b>Trên trang này</b><ul><li><a href="#who">Ai phải thử nghiệm kín</a></li><li><a href="#rule">Quy tắc trong một câu</a></li><li><a href="#counts">Cái gì được tính là người thử nghiệm</a></li><li><a href="#timeline">Một lộ trình thực tế</a></li><li><a href="#form">Biểu mẫu xin quyền truy cập production</a></li><li><a href="#fail">Vì sao ứng dụng không qua được</a></li><li><a href="#testers">Tìm 12 người thử nghiệm ở đâu</a></li><li><a href="#faq">Câu hỏi thường gặp</a></li></ul></nav>
+
+<section id="who">
+<h2>Ai phải thử nghiệm kín</h2>
+<p>Trung tâm trợ giúp của Google nêu rằng yêu cầu áp dụng cho các tài khoản nhà phát triển cá nhân tạo sau ngày 13 tháng 11 năm 2023. Cho đến khi các ứng dụng đó vượt qua yêu cầu này, chúng không đủ điều kiện phân phối trên Google Play.</p>
+<p>Nếu tài khoản của bạn được tạo trước ngày đó, hoặc là tài khoản tổ chức (doanh nghiệp được xác minh bằng số D-U-N-S), yêu cầu thử nghiệm kín không áp dụng cho bạn. Mỗi ứng dụng trên một tài khoản cá nhân bị ảnh hưởng đều phải qua quy trình này trước khi được quyền truy cập production.</p>
+<ul><li><b>Tài khoản cá nhân, tạo sau 13/11/2023:</b> bắt buộc thử nghiệm kín.</li><li><b>Tài khoản cá nhân, tạo trước 13/11/2023:</b> không bắt buộc.</li><li><b>Tài khoản tổ chức:</b> không bắt buộc, nhưng bạn cần số D-U-N-S và một website tổ chức đã được xác minh. Xem hướng dẫn về tài khoản tổ chức so với tài khoản cá nhân.</li></ul>
+
+
+</section>
+
+<section id="rule">
+<h2>Quy tắc trong một câu</h2>
+<p>Chạy một bài thử nghiệm kín với <b>ít nhất 12 người thử nghiệm đã tham gia liên tục ít nhất 14 ngày</b>, rồi xin quyền truy cập production từ Dashboard của Play Console.</p>
+<p>Cách diễn đạt của Google rất quan trọng. 14 ngày phải liên tiếp. Người thử nghiệm tham gia, thử nghiệm chưa đủ 14 ngày rồi hủy tham gia thì không được tính. Và phải còn ít nhất 12 người thử nghiệm đang tham gia vào ngày bạn nộp đơn.</p>
+
+
+<p>Con số này từng là 20 người thử nghiệm cho đến tháng 12/2024, khi Google hạ xuống 12. 14 ngày không thay đổi.</p>
+</section>
+
+<section id="counts">
+<h2>Cái gì được tính là người thử nghiệm</h2>
+
+<ul><li><b>Một tài khoản Google thật đã tham gia.</b> Có tên trong danh sách email hay trong Google Group của bạn là chưa đủ. Mỗi người phải mở liên kết tham gia và bấm để trở thành người thử nghiệm.</li><li><b>Trên track thử nghiệm kín.</b> Những người đã tham gia thử nghiệm nội bộ của bạn không đủ điều kiện tham gia thử nghiệm kín cho đến khi họ rời thử nghiệm nội bộ. Thử nghiệm nội bộ không được tính vào yêu cầu.</li><li><b>Tham gia suốt thời gian.</b> Nếu ai đó rời đi rồi tham gia lại, số ngày liên tiếp của họ bắt đầu lại.</li><li><b>Có dùng ứng dụng.</b> Google không công bố số lần mở tối thiểu, nhưng biểu mẫu production hỏi người thử nghiệm đã tương tác thế nào và việc sử dụng có khớp với những gì bạn kỳ vọng ở production không. Người thử nghiệm cài một lần rồi biến mất là lý do chính khiến đơn bị trượt.</li></ul>
+
+
+</section>
+
+<section id="timeline">
+<h2>Một lộ trình thực tế</h2>
+
+
+<ol><li><b>Ngày 0:</b> tạo track thử nghiệm kín, thêm người thử nghiệm (danh sách email hoặc Google Group), tải lên app bundle và gửi bản phát hành đi duyệt.</li><li><b>Vài giờ đến vài ngày sau:</b> bản phát hành được xuất bản và liên kết tham gia hoạt động. Google lưu ý liên kết thử nghiệm đầu tiên có thể mất vài giờ mới dùng được.</li><li><b>Ngày 1 đến 14:</b> ít nhất 12 người thử nghiệm giữ trạng thái tham gia và dùng ứng dụng. Phát hành ít nhất một bản cập nhật dựa trên phản hồi của họ.</li><li><b>Ngày 15 trở đi:</b> bấm Apply for production trên Dashboard và trả lời các câu hỏi.</li><li><b>Khoảng một tuần sau:</b> Google cho biết việc xét duyệt thường mất bảy ngày hoặc ít hơn, nhưng đôi khi có thể lâu hơn. Bạn sẽ nhận được email khi xong.</li><li><b>Sau khi được duyệt:</b> trang Production được mở khóa. Bản phát hành production đầu tiên của bạn vẫn phải qua xét duyệt ứng dụng thông thường.</li></ol>
+<p>Hãy dự tính khoảng ba đến bốn tuần từ lần tải lên thử nghiệm kín đầu tiên đến khi có trang công khai, nếu không có gì trục trặc.</p>
+</section>
+
+<section id="form">
+<h2>Biểu mẫu xin quyền truy cập production</h2>
+<p>Biểu mẫu của Google có ba phần. Phần một nói về bài thử nghiệm kín của bạn: việc tuyển người thử nghiệm dễ hay khó, họ tương tác thế nào, và tóm tắt phản hồi của họ cùng cách bạn thu thập. Phần hai nói về ứng dụng của bạn: đối tượng mục tiêu, giá trị nó mang lại cho người dùng, và số lượt cài bạn kỳ vọng trong năm đầu. Phần ba nói về mức sẵn sàng cho production: bạn đã thay đổi gì sau bài thử nghiệm và bạn quyết định ứng dụng đã sẵn sàng bằng cách nào.</p>
+<p>Hãy viết sẵn các câu trả lời trước khi mở biểu mẫu. Google cảnh báo rằng câu trả lời của bạn sẽ mất nếu bạn rời trang trước khi bấm Next hoặc Apply. Hướng dẫn của chúng tôi về các câu hỏi xin quyền truy cập production và công cụ tạo câu trả lời miễn phí tại https://testerexchange.com/tools/production-answers/ giúp bạn soạn câu trả lời từ số liệu thật.</p>
+
+
+
+</section>
+
+<section id="fail">
+<h2>Vì sao ứng dụng không qua được</h2>
+<p>Trung tâm trợ giúp của Google liệt kê hai lý do bạn có thể phải tiếp tục chạy thử nghiệm kín: có ít hơn 12 người thử nghiệm đang tham gia, hoặc người thử nghiệm tương tác chưa đủ. Trên thực tế nhà phát triển gặp những vấn đề này:</p>
+<ul><li>Chỉ nhờ đúng 12 người. Một người bỏ vào ngày 10 là bạn còn 11.</li><li>Người thử nghiệm cài rồi không bao giờ mở lại ứng dụng.</li><li>Nhiều tài khoản trên một điện thoại, hoặc tài khoản không phải người thật.</li><li>Không có bản cập nhật và không có phản hồi trong 14 ngày, nên không có gì để mô tả trong biểu mẫu.</li><li>Câu trả lời ngắn, chung chung trong bảng câu hỏi.</li></ul>
+
+<p>Nếu bạn đã nhận phản hồi &quot;more testing required&quot;, hãy đọc hướng dẫn về mức tương tác thử nghiệm chưa đủ và hướng dẫn về việc cần làm khi quyền truy cập production bị từ chối.</p>
+</section>
+
+<section id="testers">
+<h2>Tìm 12 người thử nghiệm ở đâu</h2>
+<p>Google không nói người thử nghiệm phải đến từ đâu. Bạn bè và người thân dùng được nếu bạn quen đủ người dùng Android chịu mở ứng dụng của bạn mỗi ngày trong hai tuần. Các cộng đồng thử nghiệm đổi chéo thì miễn phí nhưng tốn thời gian của bạn. Dịch vụ trả phí thì nhanh hơn.</p>
+<p>Tester Exchange làm được cả hai. Trả một lần ($12.99 cho 12 người thử nghiệm, $14.99 cho 15, $22.99 cho 25), hoặc nhận người thử nghiệm miễn phí bằng cách thử nghiệm ứng dụng của các nhà phát triển khác tại https://testerexchange.com/earn trong trình duyệt trên điện thoại Android của bạn. Mỗi người thử nghiệm là người thật dùng điện thoại của chính họ, và bạn thấy mức sử dụng hằng ngày của từng người. Chúng tôi khuyên dùng 15 người thử nghiệm để một hai người bỏ cuộc không kéo bạn xuống dưới 12.</p>
+
+
+
+</section>
+<section id="faq"><h2>Câu hỏi thường gặp</h2>
+<details><summary>Là 12 hay 20 người thử nghiệm?</summary><p>12. Google đã hạ từ 20 xuống 12 vào tháng 12/2024. 14 ngày liên tiếp vẫn giữ nguyên.</p></details>
+<details><summary>Yêu cầu này có áp dụng cho tài khoản cũ của tôi không?</summary><p>Chỉ các tài khoản cá nhân tạo sau ngày 13 tháng 11 năm 2023 mới phải chạy thử nghiệm kín. Tài khoản cá nhân cũ hơn và tài khoản tổ chức không thuộc diện này.</p></details>
+<details><summary>Tôi có phải lặp lại thử nghiệm kín cho từng ứng dụng không?</summary><p>Với các tài khoản cá nhân bị ảnh hưởng, quyền truy cập production được cấp cho từng ứng dụng, nên hãy lên kế hoạch thử nghiệm kín cho mỗi ứng dụng mới.</p></details>
+<details><summary>Thử nghiệm nội bộ có được tính không?</summary><p>Không. Phải là thử nghiệm kín. Google cũng cho biết những người đã tham gia thử nghiệm nội bộ của bạn không thể tham gia thử nghiệm kín cho đến khi họ rời thử nghiệm nội bộ.</p></details>
+<details><summary>Người thử nghiệm có phải dùng ứng dụng mỗi ngày không?</summary><p>Google không công bố mức tối thiểu. Google hỏi về mức tương tác trong biểu mẫu production, nên việc phần lớn người thử nghiệm dùng thật đều đặn là mô hình an toàn nhất.</p></details>
+<details><summary>Google mất bao lâu để xét duyệt quyền truy cập production?</summary><p>Google cho biết thường là bảy ngày hoặc ít hơn, nhưng đôi khi có thể lâu hơn.</p></details>
+</section>
+<div class="cta"><span>Người thật mở ứng dụng của bạn trên điện thoại của họ trong 14 ngày. Trả một lần, hoặc kiểm thử ứng dụng khác miễn phí.</span><a class="btn" href="https://testerexchange.com/?lang=vi#buy">Nhận 12 người kiểm thử</a></div>
+<section><h2>Hướng dẫn khác</h2><ul class="related"><li><a href="https://testerexchange.com/vi/" hreflang="vi">Cách có 12 người kiểm thử cho thử nghiệm kín trên Google Play</a></li><li><a href="https://testerexchange.com/vi/12-testers-app-builders/" hreflang="vi">12 người thử nghiệm Google Play cho ứng dụng làm bằng App Inventor, Kodular, Flutter, Unity và các công cụ khác</a></li><li><a href="https://testerexchange.com/vi/app-not-available-for-testers/" hreflang="vi">Cách sửa lỗi &quot;app not available&quot; cho người thử nghiệm kín trên Google Play</a></li><li><a href="https://testerexchange.com/vi/automate-closed-testing-with-ai-agents/" hreflang="vi">Tự động hóa thử nghiệm kín Google Play bằng AI agent</a></li><li><a href="https://testerexchange.com/vi/best-way-to-get-12-testers/" hreflang="vi">Cách tốt nhất để có 12 người thử nghiệm cho thử nghiệm kín Google Play</a></li><li><a href="https://testerexchange.com/vi/closed-testing-for-games/" hreflang="vi">Thử nghiệm kín cho game trên Google Play: hướng dẫn cho Unity, Unreal và Godot</a></li><li><a href="https://testerexchange.com/vi/does-14-day-closed-test-reset/" hreflang="vi">14 ngày thử nghiệm kín có bị tính lại khi người thử nghiệm bỏ cuộc không?</a></li><li><a href="https://testerexchange.com/vi/earn-money-testing-android-apps/" hreflang="vi">Kiếm tiền bằng cách thử nghiệm ứng dụng Android: hướng dẫn trung thực</a></li><li><a href="https://testerexchange.com/vi/free-closed-testing-testers/" hreflang="vi">Cách tìm 12 người thử nghiệm miễn phí cho thử nghiệm kín Google Play</a></li><li><a href="https://testerexchange.com/vi/friends-family-closed-testers/" hreflang="vi">Nhờ bạn bè, người thân làm 12 người thử nghiệm Google Play</a></li><li><a href="https://testerexchange.com/vi/google-group-vs-email-list/" hreflang="vi">Google Group hay danh sách email cho thử nghiệm kín?</a></li><li><a href="https://testerexchange.com/vi/google-play-review-time-after-closed-testing/" hreflang="vi">Sau 14 ngày: thời gian duyệt quyền truy cập production và bản phát hành đầu tiên</a></li><li><a href="https://testerexchange.com/vi/insufficient-testing-engagement/" hreflang="vi">Bị từ chối sau thử nghiệm kín? Cách khắc phục “cần thử nghiệm thêm”</a></li><li><a href="https://testerexchange.com/vi/keep-testers-active-14-days/" hreflang="vi">Cách giữ người thử nghiệm kín hoạt động suốt 14 ngày</a></li><li><a href="https://testerexchange.com/vi/organization-vs-personal-developer-account/" hreflang="vi">Tài khoản nhà phát triển Google Play: tổ chức hay cá nhân</a></li><li><a href="https://testerexchange.com/vi/paid-closed-testers-checklist/" hreflang="vi">Cần kiểm tra gì trước khi trả tiền cho người thử nghiệm kín Google Play</a></li><li><a href="https://testerexchange.com/vi/production-access-questions/" hreflang="vi">Cách trả lời các câu hỏi xin quyền phát hành chính thức của Google Play</a></li><li><a href="https://testerexchange.com/vi/production-access-rejected/" hreflang="vi">Bị từ chối quyền truy cập production: làm gì tiếp theo</a></li><li><a href="https://testerexchange.com/vi/set-up-closed-testing-track/" hreflang="vi">Cách thiết lập track thử nghiệm kín trong Play Console, từng bước</a></li><li><a href="https://testerexchange.com/vi/tools/production-answers/" hreflang="vi">Công cụ tạo câu trả lời xin quyền phát hành chính thức</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

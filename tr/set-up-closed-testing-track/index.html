@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Play Console'da kapalı test kanalı nasıl kurulur (2026)</title>
+<meta name="description" content="Adım adım: Play Console'da kapalı test kanalı oluşturun, e-posta listesi veya Google Group ile test kullanıcısı ekleyin, sürümü yayınlayın ve 14 günün başlayabilmesi için katılım bağlantısını paylaşın.">
+<link rel="canonical" href="https://testerexchange.com/tr/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<meta property="og:type" content="article"><meta property="og:title" content="Google Play Console'da kapalı test kanalı nasıl kurulur (2026)">
+<meta property="og:description" content="Adım adım: Play Console'da kapalı test kanalı oluşturun, e-posta listesi veya Google Group ile test kullanıcısı ekleyin, sürümü yayınlayın ve 14 günün başlayabilmesi için katılım bağlantısını paylaşın."><meta property="og:url" content="https://testerexchange.com/tr/set-up-closed-testing-track/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Play Console'da kapalı test kanalı adım adım nasıl kurulur","description":"Adım adım: Play Console'da kapalı test kanalı oluşturun, e-posta listesi veya Google Group ile test kullanıcısı ekleyin, sürümü yayınlayın ve 14 günün başlayabilmesi için katılım bağlantısını paylaşın.","inLanguage":"tr","dateModified":"2026-11-05","url":"https://testerexchange.com/tr/set-up-closed-testing-track/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/tr/"},{"@type":"ListItem","position":3,"name":"Play Console'da kapalı test kanalı adım adım nasıl kurulur","item":"https://testerexchange.com/tr/set-up-closed-testing-track/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Bunun yerine dahili testi kullanabilir miyim?","acceptedAnswer":{"@type":"Answer","text":"Hayır. Şart kapalı test gerektirir. Google ayrıca, dahili testinize katılanların dahili testten ayrılana kadar kapalı teste katılamayacağını söylüyor."}},{"@type":"Question","name":"E-posta listesi mi, Google Group mu kullanmalıyım?","acceptedAnswer":{"@type":"Answer","text":"Test kullanıcıları gelip gittiğinde Google Group daha kolaydır, çünkü kanalı hiç düzenlemezsiniz. Sabit bir arkadaş grubu için e-posta listesi yeterlidir. İkisini birlikte de kullanabilirsiniz."}},{"@type":"Question","name":"Katılım bağlantısını neden görmüyorum?","acceptedAnswer":{"@type":"Answer","text":"Yalnızca kapalı kanaldaki sürüm yayınlandığında görünür. Bekleyen inceleme veya henüz gönderilmemiş değişiklikler için Publishing overview'a bakın."}},{"@type":"Question","name":"Test kullanıcısının Google Hesabı olması gerekir mi?","acceptedAnswer":{"@type":"Answer","text":"Evet. Google, kullanıcıların teste katılmak için bir Google Hesabına veya Google Workspace hesabına ihtiyaç duyduğunu ve bunun telefonlarındaki Play Store'daki hesap olması gerektiğini söylüyor."}},{"@type":"Question","name":"Kapalı test uygulamasını ücretli yapabilir miyim?","acceptedAnswer":{"@type":"Answer","text":"Yapabilirsiniz, ama Google, test kullanıcılarının kapalı testlerdeki ücretli uygulamaları satın almak zorunda olduğunu söylüyor. Test kullanıcısı kaybetmemek için test uygulamasını ücretsiz tutun."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=tr">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Dil" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/set-up-closed-testing-track/">English</option><option value="https://testerexchange.com/es/set-up-closed-testing-track/">Español</option><option value="https://testerexchange.com/id/set-up-closed-testing-track/">Bahasa Indonesia</option><option value="https://testerexchange.com/pt/set-up-closed-testing-track/">Português</option><option value="https://testerexchange.com/ru/set-up-closed-testing-track/">Русский</option><option value="https://testerexchange.com/tr/set-up-closed-testing-track/" selected>Türkçe</option><option value="https://testerexchange.com/vi/set-up-closed-testing-track/">Tiếng Việt</option>
+</select>
+<a href="https://testerexchange.com/?lang=tr">Tester Exchange'i aç</a></header>
+<main>
+
+<h1>Play Console'da kapalı test kanalı adım adım nasıl kurulur</h1>
+<p class="muted">Kasım 2026'da güncellendi</p>
+<p class="lede">14 günlük sayacınızın başlayabilmesi için yayınlanmış, test kullanıcıları eklenmiş ve çalışan bir katılım bağlantısı veren bir kapalı test kanalına ihtiyacınız var. Sonradan yaşanan sorunların çoğu, örneğin test kullanıcılarının “app not available” görmesi, burada atlanan bir adımdan kaynaklanır. Bu rehber güncel Play Console menülerini (Test and release, ardından Testing, Closed testing) ve Google Yardım Merkezi'ni izler.</p>
+<div class="cta"><span>Gerçek insanlar 14 gün boyunca uygulamanızı kendi telefonlarında açar. Bir kez ödeyin ya da başka uygulamaları ücretsiz test edin.</span><a class="btn" href="https://testerexchange.com/?lang=tr#buy">12 test kullanıcısı al</a></div>
+<nav class="toc"><b>Bu sayfada</b><ul><li><a href="#before">Başlamadan önce</a></li><li><a href="#track">1. Kapalı kanalı açın veya oluşturun</a></li><li><a href="#countries">2. Ülkeleri ve bölgeleri seçin</a></li><li><a href="#testers">3. Test kullanıcılarını ekleyin: e-posta listesi veya Google Group</a></li><li><a href="#feedback">4. Bir geri bildirim kanalı ekleyin</a></li><li><a href="#release">5. Sürümü oluşturun ve incelemeye gönderin</a></li><li><a href="#link">6. Katılım bağlantısını paylaşın</a></li><li><a href="#check">7. 14 günün sayıldığından emin olun</a></li><li><a href="#faq">Sık sorulan sorular</a></li></ul></nav>
+
+<section id="before">
+<h2>Başlamadan önce</h2>
+
+<ul><li>Kimlik doğrulaması tamamlanmış bir Play Console geliştirici hesabı.</li><li>Play Console'da oluşturulmuş, mağaza sayfası, içerik derecelendirmesi, hedef kitle, veri güvenliği ve diğer App content beyanları doldurulmuş uygulamanız. Gerekli öğeler eksikken Play Console sürümü incelemeye göndermenize izin vermez.</li><li>Sonsuza kadar tutmaktan memnun olacağınız bir paket adına sahip imzalı bir Android App Bundle (.aab). Sonradan değiştiremezsiniz.</li><li>Test kullanıcıları için bir plan: Android telefonu ve Google Hesabı olan en az 12, ideal olarak 15 gerçek kişi.</li></ul>
+
+
+</section>
+
+<section id="track">
+<h2>1. Kapalı kanalı açın veya oluşturun</h2>
+
+
+<ol><li>Play Console'da uygulamanızı seçin.</li><li>Test and release, ardından Testing, Closed testing yolunu izleyin.</li><li>Play Console size varsayılan bir kapalı kanal verir (çoğunlukla Alpha olarak adlandırılır). Onu kullanın. Ek kapalı kanallar oluşturabilirsiniz ama şart için bir tanesi yeter.</li><li>Manage track'e tıklayın.</li></ol>
+
+</section>
+
+<section id="countries">
+<h2>2. Ülkeleri ve bölgeleri seçin</h2>
+<p>Countries / regions sekmesini açın ve test kullanıcılarınızın yaşadığı ülkeleri ekleyin. Seçmediğiniz bir ülkedeki test kullanıcısı uygulamayı yükleyemez.</p>
+<p>Google, dağıtım ülkelerindeki değişikliklerin kanallar arasında uygulandığını ve ek kapalı kanalların kendi ülke hedeflemesini desteklemediğini belirtiyor. Test kullanıcılarınız dünyanın dört bir yanındaysa en basit seçim, yasal olarak gönderebildiğiniz her ülkeyi eklemektir.</p>
+
+
+
+</section>
+
+<section id="testers">
+<h2>3. Test kullanıcılarını ekleyin: e-posta listesi veya Google Group</h2>
+<p>Testers sekmesini açın. İki seçeneğiniz var ve aynı kanalda ikisini birlikte kullanabilirsiniz.</p>
+<ul><li><b>E-posta listesi:</b> Create email list'e tıklayın, ad verin, sonra adresleri yazın veya bir CSV yükleyin. Google, liste başına 2.000 kullanıcıya izin veriyor. CSV yüklemek, o listede zaten olan adreslerin üzerine yazar. Her adres, test kullanıcısının telefonundaki Play Store'da kullandığı Google Hesabı olmalıdır.</li><li><b>Google Group:</b> grubun adresini girin, örneğin yourgroup@googlegroups.com. Teste yalnızca grubun üyeleri katılabilir ve katılım öncesinde gruba katılmış olmaları gerekir. Yapmanız gereken tek şey kişiyi gruba eklemektir; Play Console'a bir daha dokunmazsınız.</li></ul>
+
+<p>Tester Exchange kullanıyorsanız Google Groups altına testerexchange-testers@googlegroups.com grubunu ekleyin ve kaydedin. Bu tek adres, gönderdiğimiz her test kullanıcısının uygulamanızı yüklemesini sağlar. Google Group ile e-posta listesi karşılaştırması rehberine de bakın.</p>
+</section>
+
+<section id="feedback">
+<h2>4. Bir geri bildirim kanalı ekleyin</h2>
+<p>Aynı Testers sekmesinde bir geri bildirim URL'si veya e-posta adresi ekleyin. Test kullanıcıları katılırken bunu görür. Üretim erişimi formunda test kullanıcısı geri bildirimini özetlemeniz gerekecek; bu yüzden işi kolaylaştırın: kısa bir Google Formu veya ayrılmış bir e-posta adresi işe yarar.</p>
+
+
+
+</section>
+
+<section id="release">
+<h2>5. Sürümü oluşturun ve incelemeye gönderin</h2>
+
+
+<ol><li>Kapalı kanalda Create new release'e tıklayın.</li><li>.aab dosyanızı yükleyin. Aksini gerektiren bir nedeniniz yoksa anahtarınızı Play App Signing'in yönetmesine izin verin.</li><li>Bir sürüm adı ve kısa sürüm notları ekleyin; örneğin “İlk kapalı test derlemesi”.</li><li>Next'e tıklayın, hataları düzeltin, sonra Save'e tıklayın.</li><li>Publishing overview sayfasına gidin ve değişiklikleri incelemeye gönderin. Managed publishing açıksa onaydan sonra ayrıca Publish'e tıklamanız gerekir.</li></ol>
+<p>Yeni hesaplardaki kapalı test sürümleri yayına girmeden önce incelenir. Süreler birkaç saatten birkaç güne kadar değişir.</p>
+</section>
+
+<section id="link">
+<h2>6. Katılım bağlantısını paylaşın</h2>
+<p>Google, katılım bağlantısının yalnızca uygulama durumu Published olduğunda göründüğünü söylüyor. Testers sekmesinden kopyalayın. https://play.google.com/apps/testing/your.package.name gibi görünür.</p>
+<p>İlk yayınladığınızda bağlantının çalışmaya başlaması birkaç saat sürebilir. Test kullanıcıları kapalı testleri Google Play'de arayarak bulamaz; bu yüzden bu bağlantıya veya uygulamanızın Play Store bağlantısına ihtiyaçları vardır.</p>
+
+<ol><li>Test kullanıcısı, eklediğiniz (veya Google Group'unuzdaki) aynı Google Hesabıyla oturum açar.</li><li>Katılım bağlantısını açar ve test kullanıcısı olmak için dokunur.</li><li>O sayfadaki bağlantıyı kullanarak uygulamanızı Google Play'den yükler.</li><li>Uygulamayı açar ve 14 gün boyunca açmaya devam eder.</li></ol>
+
+</section>
+
+<section id="check">
+<h2>7. 14 günün sayıldığından emin olun</h2>
+<p>Dashboard'unuz kapalı test şartını ve kaç test kullanıcısının katıldığını gösterir. Birkaç günde bir kontrol edin. Sayı 12'nin altına düşerse hemen yedek bulun; çünkü şart, kesintisiz katılmış 12 test kullanıcısını sayar.</p>
+<p>Test sırasında aynı kanala en az bir yeni derleme yükleyin. Bu, Google'a geri bildirime göre harekete geçtiğinizi gösterir ve kanaldaki test kullanıcıları güncellemeyi otomatik alır.</p>
+
+
+
+</section>
+<section id="faq"><h2>Sık sorulan sorular</h2>
+<details><summary>Bunun yerine dahili testi kullanabilir miyim?</summary><p>Hayır. Şart kapalı test gerektirir. Google ayrıca, dahili testinize katılanların dahili testten ayrılana kadar kapalı teste katılamayacağını söylüyor.</p></details>
+<details><summary>E-posta listesi mi, Google Group mu kullanmalıyım?</summary><p>Test kullanıcıları gelip gittiğinde Google Group daha kolaydır, çünkü kanalı hiç düzenlemezsiniz. Sabit bir arkadaş grubu için e-posta listesi yeterlidir. İkisini birlikte de kullanabilirsiniz.</p></details>
+<details><summary>Katılım bağlantısını neden görmüyorum?</summary><p>Yalnızca kapalı kanaldaki sürüm yayınlandığında görünür. Bekleyen inceleme veya henüz gönderilmemiş değişiklikler için Publishing overview'a bakın.</p></details>
+<details><summary>Test kullanıcısının Google Hesabı olması gerekir mi?</summary><p>Evet. Google, kullanıcıların teste katılmak için bir Google Hesabına veya Google Workspace hesabına ihtiyaç duyduğunu ve bunun telefonlarındaki Play Store'daki hesap olması gerektiğini söylüyor.</p></details>
+<details><summary>Kapalı test uygulamasını ücretli yapabilir miyim?</summary><p>Yapabilirsiniz, ama Google, test kullanıcılarının kapalı testlerdeki ücretli uygulamaları satın almak zorunda olduğunu söylüyor. Test kullanıcısı kaybetmemek için test uygulamasını ücretsiz tutun.</p></details>
+</section>
+<div class="cta"><span>Gerçek insanlar 14 gün boyunca uygulamanızı kendi telefonlarında açar. Bir kez ödeyin ya da başka uygulamaları ücretsiz test edin.</span><a class="btn" href="https://testerexchange.com/?lang=tr#buy">12 test kullanıcısı al</a></div>
+<section><h2>Diğer rehberler</h2><ul class="related"><li><a href="https://testerexchange.com/tr/" hreflang="tr">Google Play kapalı testi için 12 test kullanıcısı nasıl bulunur</a></li><li><a href="https://testerexchange.com/tr/12-testers-app-builders/" hreflang="tr">App Inventor, Kodular, Flutter, Unity ve diğer araçlarla yapılan uygulamalar için Google Play 12 test kullanıcısı</a></li><li><a href="https://testerexchange.com/tr/app-not-available-for-testers/" hreflang="tr">Google Play kapalı test kullanıcıları için “app not available” hatasını giderme</a></li><li><a href="https://testerexchange.com/tr/automate-closed-testing-with-ai-agents/" hreflang="tr">Google Play kapalı testini yapay zeka ajanlarıyla otomatikleştirin</a></li><li><a href="https://testerexchange.com/tr/best-way-to-get-12-testers/" hreflang="tr">Google Play kapalı testi için 12 test kullanıcısı bulmanın en iyi yolu</a></li><li><a href="https://testerexchange.com/tr/closed-testing-for-games/" hreflang="tr">Google Play'de oyunlar için kapalı test: Unity, Unreal ve Godot rehberi</a></li><li><a href="https://testerexchange.com/tr/does-14-day-closed-test-reset/" hreflang="tr">Test kullanıcıları ayrılınca 14 günlük kapalı test sıfırlanır mı?</a></li><li><a href="https://testerexchange.com/tr/earn-money-testing-android-apps/" hreflang="tr">Android uygulamaları test ederek para kazanın: dürüst bir rehber</a></li><li><a href="https://testerexchange.com/tr/free-closed-testing-testers/" hreflang="tr">Google Play kapalı testi için 12 test kullanıcısını ücretsiz bulma</a></li><li><a href="https://testerexchange.com/tr/friends-family-closed-testers/" hreflang="tr">Arkadaşlarınızı ve ailenizi 12 Google Play test kullanıcınız yapmak</a></li><li><a href="https://testerexchange.com/tr/google-group-vs-email-list/" hreflang="tr">Kapalı testiniz için Google Group mu, e-posta listesi mi?</a></li><li><a href="https://testerexchange.com/tr/google-play-closed-testing-requirements/" hreflang="tr">Google Play kapalı test şartları: eksiksiz 2026 rehberi</a></li><li><a href="https://testerexchange.com/tr/google-play-review-time-after-closed-testing/" hreflang="tr">14 günden sonra: üretim erişimi inceleme süresi ve ilk sürümünüz</a></li><li><a href="https://testerexchange.com/tr/insufficient-testing-engagement/" hreflang="tr">Kapalı testten sonra reddedildiniz mi? “Daha fazla test gerekli” hatası nasıl düzeltilir</a></li><li><a href="https://testerexchange.com/tr/keep-testers-active-14-days/" hreflang="tr">Kapalı test kullanıcılarını 14 gün boyunca aktif tutma</a></li><li><a href="https://testerexchange.com/tr/organization-vs-personal-developer-account/" hreflang="tr">Kurumsal ve kişisel Google Play geliştirici hesabı</a></li><li><a href="https://testerexchange.com/tr/paid-closed-testers-checklist/" hreflang="tr">Google Play kapalı test için test kullanıcısı satın almadan önce neleri kontrol etmeli</a></li><li><a href="https://testerexchange.com/tr/production-access-questions/" hreflang="tr">Google Play üretim erişimi sorularına nasıl yanıt verilir</a></li><li><a href="https://testerexchange.com/tr/production-access-rejected/" hreflang="tr">Üretim erişimi reddedildi: sonra ne yapmalı</a></li><li><a href="https://testerexchange.com/tr/tools/production-answers/" hreflang="tr">Üretim erişimi yanıt oluşturucu</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

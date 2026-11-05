@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cara menyiapkan track uji tertutup di Google Play Console</title>
+<meta name="description" content="Langkah demi langkah: buat track uji tertutup di Play Console, tambahkan tester dengan daftar email atau Google Group, publikasikan rilis, dan bagikan tautan opt-in agar 14 hari bisa dimulai.">
+<link rel="canonical" href="https://testerexchange.com/id/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<meta property="og:type" content="article"><meta property="og:title" content="Cara menyiapkan track uji tertutup di Google Play Console">
+<meta property="og:description" content="Langkah demi langkah: buat track uji tertutup di Play Console, tambahkan tester dengan daftar email atau Google Group, publikasikan rilis, dan bagikan tautan opt-in agar 14 hari bisa dimulai."><meta property="og:url" content="https://testerexchange.com/id/set-up-closed-testing-track/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Cara menyiapkan track uji tertutup di Play Console, langkah demi langkah","description":"Langkah demi langkah: buat track uji tertutup di Play Console, tambahkan tester dengan daftar email atau Google Group, publikasikan rilis, dan bagikan tautan opt-in agar 14 hari bisa dimulai.","inLanguage":"id","dateModified":"2026-11-05","url":"https://testerexchange.com/id/set-up-closed-testing-track/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/id/"},{"@type":"ListItem","position":3,"name":"Cara menyiapkan track uji tertutup di Play Console, langkah demi langkah","item":"https://testerexchange.com/id/set-up-closed-testing-track/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Bisakah saya memakai uji internal saja?","acceptedAnswer":{"@type":"Answer","text":"Tidak. Persyaratannya membutuhkan uji tertutup. Google juga menyatakan orang yang opt-in ke uji internal Anda tidak bisa bergabung ke uji tertutup sampai mereka keluar dari uji internal."}},{"@type":"Question","name":"Sebaiknya pakai daftar email atau Google Group?","acceptedAnswer":{"@type":"Answer","text":"Google Group lebih mudah saat tester datang dan pergi, karena Anda tidak perlu mengedit track. Daftar email cukup untuk kelompok teman yang tetap. Anda bisa memakai keduanya."}},{"@type":"Question","name":"Mengapa saya tidak melihat tautan opt-in?","acceptedAnswer":{"@type":"Answer","text":"Tautan hanya muncul setelah rilis di track uji tertutup dipublikasikan. Periksa Publishing overview untuk review yang tertunda atau perubahan yang belum dikirim."}},{"@type":"Question","name":"Apakah tester memerlukan Akun Google?","acceptedAnswer":{"@type":"Answer","text":"Ya. Google menyatakan pengguna memerlukan akun Google atau Google Workspace untuk bergabung dalam uji, dan harus akun yang ada di Play Store ponsel mereka."}},{"@type":"Question","name":"Bisakah aplikasi uji tertutup dibuat berbayar?","acceptedAnswer":{"@type":"Answer","text":"Bisa, tetapi Google menyatakan tester harus membeli aplikasi berbayar dalam uji tertutup. Jaga aplikasi uji tetap gratis agar tidak kehilangan tester."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=id">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Bahasa" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/set-up-closed-testing-track/">English</option><option value="https://testerexchange.com/es/set-up-closed-testing-track/">Español</option><option value="https://testerexchange.com/id/set-up-closed-testing-track/" selected>Bahasa Indonesia</option><option value="https://testerexchange.com/pt/set-up-closed-testing-track/">Português</option><option value="https://testerexchange.com/ru/set-up-closed-testing-track/">Русский</option><option value="https://testerexchange.com/tr/set-up-closed-testing-track/">Türkçe</option><option value="https://testerexchange.com/vi/set-up-closed-testing-track/">Tiếng Việt</option>
+</select>
+<a href="https://testerexchange.com/?lang=id">Buka Tester Exchange</a></header>
+<main>
+
+<h1>Cara menyiapkan track uji tertutup di Play Console, langkah demi langkah</h1>
+<p class="muted">Diperbarui November 2026</p>
+<p class="lede">Sebelum hitungan 14 hari Anda bisa dimulai, Anda memerlukan track uji tertutup yang sudah dipublikasikan, memiliki tester yang terhubung, dan menyediakan tautan opt-in yang berfungsi. Sebagian besar masalah di kemudian hari, seperti tester melihat &quot;app not available&quot;, berasal dari langkah yang terlewat di sini. Panduan ini mengikuti menu Play Console saat ini (Test and release, lalu Testing, lalu Closed testing) dan Help Center Google.</p>
+<div class="cta"><span>Orang sungguhan membuka aplikasimu di ponsel mereka selama 14 hari. Bayar sekali, atau uji aplikasi lain secara gratis.</span><a class="btn" href="https://testerexchange.com/?lang=id#buy">Dapatkan 12 penguji</a></div>
+<nav class="toc"><b>Di halaman ini</b><ul><li><a href="#before">Sebelum memulai</a></li><li><a href="#track">1. Buka atau buat track uji tertutup</a></li><li><a href="#countries">2. Pilih negara dan wilayah</a></li><li><a href="#testers">3. Tambahkan tester: daftar email atau Google Group</a></li><li><a href="#feedback">4. Tambahkan kanal umpan balik</a></li><li><a href="#release">5. Buat rilis dan kirim untuk review</a></li><li><a href="#link">6. Bagikan tautan opt-in</a></li><li><a href="#check">7. Pastikan 14 hari sedang terhitung</a></li><li><a href="#faq">Pertanyaan yang sering diajukan</a></li></ul></nav>
+
+<section id="before">
+<h2>Sebelum memulai</h2>
+
+<ul><li>Akun developer Play Console dengan verifikasi identitas yang sudah selesai.</li><li>Aplikasi Anda sudah dibuat di Play Console, dengan listingan toko, rating konten, target audiens, data safety, dan deklarasi App content lainnya sudah diisi. Play Console tidak akan mengizinkan Anda mengirim rilis untuk review selama ada item wajib yang belum lengkap.</li><li>Android App Bundle (.aab) yang sudah ditandatangani dengan nama paket yang Anda puas untuk dipertahankan selamanya. Anda tidak bisa mengubahnya nanti.</li><li>Rencana untuk tester Anda: minimal 12, idealnya 15, orang sungguhan dengan ponsel Android dan Akun Google.</li></ul>
+
+
+</section>
+
+<section id="track">
+<h2>1. Buka atau buat track uji tertutup</h2>
+
+
+<ol><li>Di Play Console, pilih aplikasi Anda.</li><li>Buka Test and release, lalu Testing, lalu Closed testing.</li><li>Play Console memberi Anda track uji tertutup bawaan (sering disebut Alpha). Gunakan itu. Anda bisa membuat track uji tertutup tambahan, tetapi satu sudah cukup untuk persyaratan ini.</li><li>Klik Manage track.</li></ol>
+
+</section>
+
+<section id="countries">
+<h2>2. Pilih negara dan wilayah</h2>
+<p>Buka tab Countries / regions dan tambahkan negara tempat tester Anda tinggal. Tester di negara yang tidak Anda pilih tidak akan bisa menginstal aplikasi.</p>
+<p>Google mencatat bahwa perubahan negara distribusi berlaku di semua track, dan bahwa track uji tertutup tambahan tidak mendukung penargetan negara sendiri. Jika tester Anda tersebar di seluruh dunia, pilihan paling sederhana adalah menambahkan setiap negara yang secara hukum boleh Anda jangkau.</p>
+
+
+
+</section>
+
+<section id="testers">
+<h2>3. Tambahkan tester: daftar email atau Google Group</h2>
+<p>Buka tab Testers. Anda punya dua opsi, dan keduanya bisa dipakai dalam satu track.</p>
+<ul><li><b>Daftar email:</b> klik Create email list, beri nama, lalu ketik alamat atau unggah CSV. Google mengizinkan hingga 2.000 pengguna per daftar. Mengunggah CSV menimpa alamat yang sudah ada di daftar itu. Setiap alamat harus berupa Akun Google yang dipakai tester di Play Store ponselnya.</li><li><b>Google Group:</b> masukkan alamat grup, seperti yourgroup@googlegroups.com. Hanya anggota grup yang bisa bergabung dalam uji Anda, dan mereka harus bergabung ke grup sebelum opt-in. Menambahkan seseorang ke grup adalah satu-satunya yang Anda lakukan; Anda tidak perlu menyentuh Play Console lagi.</li></ul>
+
+<p>Jika Anda memakai Tester Exchange, tambahkan grup testerexchange-testers@googlegroups.com di bagian Google Groups dan simpan. Satu alamat itu memungkinkan setiap tester yang kami kirim menginstal aplikasi Anda. Lihat juga panduan tentang Google Group vs daftar email.</p>
+</section>
+
+<section id="feedback">
+<h2>4. Tambahkan kanal umpan balik</h2>
+<p>Di tab Testers yang sama, tambahkan URL umpan balik atau alamat email. Tester melihatnya saat bergabung. Anda perlu merangkum umpan balik tester di formulir akses produksi, jadi permudah: Google Form singkat atau alamat email khusus sudah cukup.</p>
+
+
+
+</section>
+
+<section id="release">
+<h2>5. Buat rilis dan kirim untuk review</h2>
+
+
+<ol><li>Di track uji tertutup, klik Create new release.</li><li>Unggah .aab Anda. Biarkan Play App Signing mengelola kunci Anda kecuali Anda punya alasan untuk tidak melakukannya.</li><li>Tambahkan nama rilis dan catatan rilis singkat, misalnya &quot;First closed test build&quot;.</li><li>Klik Next, perbaiki error apa pun, lalu Save.</li><li>Buka Publishing overview dan kirim perubahan untuk review. Jika managed publishing aktif, Anda juga harus mengklik Publish setelah disetujui.</li></ol>
+<p>Rilis uji tertutup pada akun baru direview sebelum tayang. Waktunya bervariasi dari beberapa jam sampai beberapa hari.</p>
+</section>
+
+<section id="link">
+<h2>6. Bagikan tautan opt-in</h2>
+<p>Google menyatakan tautan opt-in baru muncul setelah status aplikasi Published. Salin dari tab Testers. Bentuknya seperti https://play.google.com/apps/testing/your.package.name.</p>
+<p>Saat pertama kali Anda mempublikasikan, tautan ini bisa butuh beberapa jam sebelum berfungsi. Tester tidak bisa menemukan uji tertutup lewat pencarian Google Play, jadi mereka memerlukan tautan ini atau tautan Play Store ke aplikasi Anda.</p>
+
+<ol><li>Tester masuk dengan Akun Google yang sama dengan yang Anda tambahkan (atau yang ada di Google Group Anda).</li><li>Mereka membuka tautan opt-in dan mengetuk untuk menjadi tester.</li><li>Mereka menginstal aplikasi Anda dari Google Play lewat tautan di halaman itu.</li><li>Mereka membukanya, dan terus membukanya selama 14 hari.</li></ol>
+
+</section>
+
+<section id="check">
+<h2>7. Pastikan 14 hari sedang terhitung</h2>
+<p>Dashboard Anda menampilkan persyaratan uji tertutup dan berapa tester yang sudah opt-in. Periksa setiap beberapa hari. Jika angkanya turun di bawah 12, segera rekrut pengganti, karena persyaratan ini menghitung 12 tester yang opt-in tanpa putus.</p>
+<p>Selama pengujian, unggah minimal satu build baru ke track yang sama. Ini menunjukkan kepada Google bahwa Anda menindaklanjuti umpan balik, dan tester di track menerima pembaruannya secara otomatis.</p>
+
+
+
+</section>
+<section id="faq"><h2>Pertanyaan yang sering diajukan</h2>
+<details><summary>Bisakah saya memakai uji internal saja?</summary><p>Tidak. Persyaratannya membutuhkan uji tertutup. Google juga menyatakan orang yang opt-in ke uji internal Anda tidak bisa bergabung ke uji tertutup sampai mereka keluar dari uji internal.</p></details>
+<details><summary>Sebaiknya pakai daftar email atau Google Group?</summary><p>Google Group lebih mudah saat tester datang dan pergi, karena Anda tidak perlu mengedit track. Daftar email cukup untuk kelompok teman yang tetap. Anda bisa memakai keduanya.</p></details>
+<details><summary>Mengapa saya tidak melihat tautan opt-in?</summary><p>Tautan hanya muncul setelah rilis di track uji tertutup dipublikasikan. Periksa Publishing overview untuk review yang tertunda atau perubahan yang belum dikirim.</p></details>
+<details><summary>Apakah tester memerlukan Akun Google?</summary><p>Ya. Google menyatakan pengguna memerlukan akun Google atau Google Workspace untuk bergabung dalam uji, dan harus akun yang ada di Play Store ponsel mereka.</p></details>
+<details><summary>Bisakah aplikasi uji tertutup dibuat berbayar?</summary><p>Bisa, tetapi Google menyatakan tester harus membeli aplikasi berbayar dalam uji tertutup. Jaga aplikasi uji tetap gratis agar tidak kehilangan tester.</p></details>
+</section>
+<div class="cta"><span>Orang sungguhan membuka aplikasimu di ponsel mereka selama 14 hari. Bayar sekali, atau uji aplikasi lain secara gratis.</span><a class="btn" href="https://testerexchange.com/?lang=id#buy">Dapatkan 12 penguji</a></div>
+<section><h2>Panduan lainnya</h2><ul class="related"><li><a href="https://testerexchange.com/id/" hreflang="id">Cara mendapatkan 12 penguji untuk pengujian tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/12-testers-app-builders/" hreflang="id">12 penguji Google Play untuk aplikasi buatan App Inventor, Kodular, Flutter, Unity, dan builder lainnya</a></li><li><a href="https://testerexchange.com/id/app-not-available-for-testers/" hreflang="id">Atasi &quot;app not available&quot; untuk tester uji tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/automate-closed-testing-with-ai-agents/" hreflang="id">Otomatiskan uji tertutup Google Play dengan agen AI</a></li><li><a href="https://testerexchange.com/id/best-way-to-get-12-testers/" hreflang="id">Cara terbaik mendapatkan 12 tester untuk uji tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/closed-testing-for-games/" hreflang="id">Uji tertutup untuk game di Google Play: panduan untuk Unity, Unreal, dan Godot</a></li><li><a href="https://testerexchange.com/id/does-14-day-closed-test-reset/" hreflang="id">Apakah uji tertutup 14 hari diulang saat tester berhenti?</a></li><li><a href="https://testerexchange.com/id/earn-money-testing-android-apps/" hreflang="id">Dapat uang dari menguji aplikasi Android: panduan jujur</a></li><li><a href="https://testerexchange.com/id/free-closed-testing-testers/" hreflang="id">Cara mendapatkan 12 penguji gratis untuk pengujian tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/friends-family-closed-testers/" hreflang="id">Teman dan keluarga sebagai 12 penguji Google Play Anda</a></li><li><a href="https://testerexchange.com/id/google-group-vs-email-list/" hreflang="id">Google Group atau daftar email untuk pengujian tertutup Anda?</a></li><li><a href="https://testerexchange.com/id/google-play-closed-testing-requirements/" hreflang="id">Persyaratan uji tertutup Google Play: panduan lengkap 2026</a></li><li><a href="https://testerexchange.com/id/google-play-review-time-after-closed-testing/" hreflang="id">Setelah 14 hari: waktu review akses produksi dan rilis pertama Anda</a></li><li><a href="https://testerexchange.com/id/insufficient-testing-engagement/" hreflang="id">Ditolak setelah pengujian tertutup? Cara mengatasi &quot;perlu pengujian lebih lanjut&quot;</a></li><li><a href="https://testerexchange.com/id/keep-testers-active-14-days/" hreflang="id">Cara menjaga penguji tertutup tetap aktif selama 14 hari penuh</a></li><li><a href="https://testerexchange.com/id/organization-vs-personal-developer-account/" hreflang="id">Akun developer Google Play organisasi vs pribadi</a></li><li><a href="https://testerexchange.com/id/paid-closed-testers-checklist/" hreflang="id">Apa yang perlu dicek sebelum membayar tester uji tertutup Google Play</a></li><li><a href="https://testerexchange.com/id/production-access-questions/" hreflang="id">Cara menjawab pertanyaan akses produksi Google Play</a></li><li><a href="https://testerexchange.com/id/production-access-rejected/" hreflang="id">Akses produksi ditolak: apa yang harus dilakukan selanjutnya</a></li><li><a href="https://testerexchange.com/id/tools/production-answers/" hreflang="id">Generator jawaban akses produksi</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>
