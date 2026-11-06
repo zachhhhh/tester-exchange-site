@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Czy 14-dniowy test zamknięty się zeruje, gdy tester odejdzie?</title>
+<meta name="description" content="Co dzieje się z licznikiem 14 dni testu zamkniętego Google Play, gdy testerzy się wypisują, odchodzą lub przestają używać aplikacji, i dlaczego warto zrekrutować 15 testerów zamiast 12.">
+<link rel="canonical" href="https://testerexchange.com/pl/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="am" href="https://testerexchange.com/am/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="ar" href="https://testerexchange.com/ar/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="az" href="https://testerexchange.com/az/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="bg" href="https://testerexchange.com/bg/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="bn" href="https://testerexchange.com/bn/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="cs" href="https://testerexchange.com/cs/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="de" href="https://testerexchange.com/de/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="el" href="https://testerexchange.com/el/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="fa" href="https://testerexchange.com/fa/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="fil" href="https://testerexchange.com/fil/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="gu" href="https://testerexchange.com/gu/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="ha" href="https://testerexchange.com/ha/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="he" href="https://testerexchange.com/he/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="hi" href="https://testerexchange.com/hi/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="hr" href="https://testerexchange.com/hr/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="hu" href="https://testerexchange.com/hu/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="ig" href="https://testerexchange.com/ig/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="it" href="https://testerexchange.com/it/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="ja" href="https://testerexchange.com/ja/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="kk" href="https://testerexchange.com/kk/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="km" href="https://testerexchange.com/km/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="kn" href="https://testerexchange.com/kn/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="ko" href="https://testerexchange.com/ko/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="ml" href="https://testerexchange.com/ml/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="mr" href="https://testerexchange.com/mr/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="ms" href="https://testerexchange.com/ms/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="my" href="https://testerexchange.com/my/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="ne" href="https://testerexchange.com/ne/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="nl" href="https://testerexchange.com/nl/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="pa" href="https://testerexchange.com/pa/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="pl" href="https://testerexchange.com/pl/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="ro" href="https://testerexchange.com/ro/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="si" href="https://testerexchange.com/si/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="sk" href="https://testerexchange.com/sk/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="sr" href="https://testerexchange.com/sr/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="sv" href="https://testerexchange.com/sv/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="sw" href="https://testerexchange.com/sw/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="ta" href="https://testerexchange.com/ta/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="te" href="https://testerexchange.com/te/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="th" href="https://testerexchange.com/th/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="uk" href="https://testerexchange.com/uk/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="ur" href="https://testerexchange.com/ur/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="uz" href="https://testerexchange.com/uz/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="yo" href="https://testerexchange.com/yo/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="zh-Hans" href="https://testerexchange.com/zh-cn/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="zh-Hant" href="https://testerexchange.com/zh-tw/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/does-14-day-closed-test-reset/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/does-14-day-closed-test-reset/">
+<meta property="og:type" content="article"><meta property="og:title" content="Czy 14-dniowy test zamknięty się zeruje, gdy tester odejdzie?">
+<meta property="og:description" content="Co dzieje się z licznikiem 14 dni testu zamkniętego Google Play, gdy testerzy się wypisują, odchodzą lub przestają używać aplikacji, i dlaczego warto zrekrutować 15 testerów zamiast 12."><meta property="og:url" content="https://testerexchange.com/pl/does-14-day-closed-test-reset/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Czy 14-dniowy test zamknięty się zeruje, gdy testerzy odpadają?","description":"Co dzieje się z licznikiem 14 dni testu zamkniętego Google Play, gdy testerzy się wypisują, odchodzą lub przestają używać aplikacji, i dlaczego warto zrekrutować 15 testerów zamiast 12.","inLanguage":"pl","datePublished":"2026-11-06","dateModified":"2026-11-06","author":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"},"url":"https://testerexchange.com/pl/does-14-day-closed-test-reset/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/pl/"},{"@type":"ListItem","position":3,"name":"Czy 14-dniowy test zamknięty się zeruje, gdy testerzy odpadają?","item":"https://testerexchange.com/pl/does-14-day-closed-test-reset/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Jeśli jeden tester odejdzie, czy moje 14 dni zaczyna się od nowa?","acceptedAnswer":{"@type":"Answer","text":"Nie dla pozostałych. Zegar każdego testera jest osobny. Tracisz czas tylko wtedy, gdy spadniesz poniżej 12 testerów, którzy mogą ukończyć 14 kolejnych dni."}},{"@type":"Question","name":"Czy tester zastępczy zaczyna od dnia 1?","acceptedAnswer":{"@type":"Answer","text":"Tak. Jego 14 kolejnych dni zaczyna się w dniu zapisu."}},{"@type":"Question","name":"Co jeśli tester przez pomyłkę się wypisze i wróci?","acceptedAnswer":{"@type":"Answer","text":"Google podaje, że wypisanie i ponowny zapis restartuje jego licznik kolejnych dni."}},{"@type":"Question","name":"Czy nieaktywni testerzy się liczą?","acceptedAnswer":{"@type":"Answer","text":"Jeśli pozostają zapisani, liczą się do 12. Ale niskie zaangażowanie to częsty powód, dla którego Google prosi o dalsze testy."}},{"@type":"Question","name":"Ilu zapasowych testerów powinienem mieć?","acceptedAnswer":{"@type":"Answer","text":"Celuj w 15 łącznie, czyli trzech powyżej minimum Google."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=pl">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Język" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/does-14-day-closed-test-reset/">English</option><option value="https://testerexchange.com/am/does-14-day-closed-test-reset/">አማርኛ</option><option value="https://testerexchange.com/ar/does-14-day-closed-test-reset/">العربية</option><option value="https://testerexchange.com/az/does-14-day-closed-test-reset/">Azərbaycanca</option><option value="https://testerexchange.com/bg/does-14-day-closed-test-reset/">Български</option><option value="https://testerexchange.com/bn/does-14-day-closed-test-reset/">বাংলা</option><option value="https://testerexchange.com/cs/does-14-day-closed-test-reset/">Čeština</option><option value="https://testerexchange.com/de/does-14-day-closed-test-reset/">Deutsch</option><option value="https://testerexchange.com/el/does-14-day-closed-test-reset/">Ελληνικά</option><option value="https://testerexchange.com/es/does-14-day-closed-test-reset/">Español</option><option value="https://testerexchange.com/fa/does-14-day-closed-test-reset/">فارسی</option><option value="https://testerexchange.com/fil/does-14-day-closed-test-reset/">Filipino</option><option value="https://testerexchange.com/fr/does-14-day-closed-test-reset/">Français</option><option value="https://testerexchange.com/gu/does-14-day-closed-test-reset/">ગુજરાતી</option><option value="https://testerexchange.com/ha/does-14-day-closed-test-reset/">Hausa</option><option value="https://testerexchange.com/he/does-14-day-closed-test-reset/">עברית</option><option value="https://testerexchange.com/hi/does-14-day-closed-test-reset/">हिन्दी</option><option value="https://testerexchange.com/hr/does-14-day-closed-test-reset/">Hrvatski</option><option value="https://testerexchange.com/hu/does-14-day-closed-test-reset/">Magyar</option><option value="https://testerexchange.com/id/does-14-day-closed-test-reset/">Bahasa Indonesia</option><option value="https://testerexchange.com/ig/does-14-day-closed-test-reset/">Igbo</option><option value="https://testerexchange.com/it/does-14-day-closed-test-reset/">Italiano</option><option value="https://testerexchange.com/ja/does-14-day-closed-test-reset/">日本語</option><option value="https://testerexchange.com/kk/does-14-day-closed-test-reset/">Қазақша</option><option value="https://testerexchange.com/km/does-14-day-closed-test-reset/">ខ្មែរ</option><option value="https://testerexchange.com/kn/does-14-day-closed-test-reset/">ಕನ್ನಡ</option><option value="https://testerexchange.com/ko/does-14-day-closed-test-reset/">한국어</option><option value="https://testerexchange.com/ml/does-14-day-closed-test-reset/">മലയാളം</option><option value="https://testerexchange.com/mr/does-14-day-closed-test-reset/">मराठी</option><option value="https://testerexchange.com/ms/does-14-day-closed-test-reset/">Bahasa Melayu</option><option value="https://testerexchange.com/my/does-14-day-closed-test-reset/">မြန်မာ</option><option value="https://testerexchange.com/ne/does-14-day-closed-test-reset/">नेपाली</option><option value="https://testerexchange.com/nl/does-14-day-closed-test-reset/">Nederlands</option><option value="https://testerexchange.com/pa/does-14-day-closed-test-reset/">ਪੰਜਾਬੀ</option><option value="https://testerexchange.com/pl/does-14-day-closed-test-reset/" selected>Polski</option><option value="https://testerexchange.com/pt/does-14-day-closed-test-reset/">Português</option><option value="https://testerexchange.com/ro/does-14-day-closed-test-reset/">Română</option><option value="https://testerexchange.com/ru/does-14-day-closed-test-reset/">Русский</option><option value="https://testerexchange.com/si/does-14-day-closed-test-reset/">සිංහල</option><option value="https://testerexchange.com/sk/does-14-day-closed-test-reset/">Slovenčina</option><option value="https://testerexchange.com/sr/does-14-day-closed-test-reset/">Српски</option><option value="https://testerexchange.com/sv/does-14-day-closed-test-reset/">Svenska</option><option value="https://testerexchange.com/sw/does-14-day-closed-test-reset/">Kiswahili</option><option value="https://testerexchange.com/ta/does-14-day-closed-test-reset/">தமிழ்</option><option value="https://testerexchange.com/te/does-14-day-closed-test-reset/">తెలుగు</option><option value="https://testerexchange.com/th/does-14-day-closed-test-reset/">ไทย</option><option value="https://testerexchange.com/tr/does-14-day-closed-test-reset/">Türkçe</option><option value="https://testerexchange.com/uk/does-14-day-closed-test-reset/">Українська</option><option value="https://testerexchange.com/ur/does-14-day-closed-test-reset/">اردو</option><option value="https://testerexchange.com/uz/does-14-day-closed-test-reset/">Oʻzbekcha</option><option value="https://testerexchange.com/vi/does-14-day-closed-test-reset/">Tiếng Việt</option><option value="https://testerexchange.com/yo/does-14-day-closed-test-reset/">Yorùbá</option><option value="https://testerexchange.com/zh-cn/does-14-day-closed-test-reset/">简体中文</option><option value="https://testerexchange.com/zh-tw/does-14-day-closed-test-reset/">繁體中文</option><option value="https://testerexchange.com/zu/does-14-day-closed-test-reset/">isiZulu</option>
+</select>
+<a href="https://testerexchange.com/?lang=pl">Otwórz Tester Exchange</a></header>
+<main>
+
+<h1>Czy 14-dniowy test zamknięty się zeruje, gdy testerzy odpadają?</h1>
+<p class="muted">Zaktualizowano w listopadzie 2026</p>
+<p class="lede">Krótko: odejście jednego testera samo w sobie niczego nie zeruje, ale spadek poniżej 12 zapisanych testerów przerywa Twój postęp. Google liczy testerów zapisanych nieprzerwanie, więc osoby, które odchodzą, i te, które je zastępują, zmieniają rachunek. Ten poradnik wyjaśnia, jak działa licznik według Centrum pomocy Google, co robić w trakcie testu i dlaczego warto celować w 15.</p>
+<div class="cta"><span>Prawdziwi ludzie otwierają Twoją aplikację na własnych telefonach przez 14 dni. Zapłać raz albo testuj inne aplikacje za darmo.</span><a class="btn" href="https://testerexchange.com/?lang=pl#buy">Zdobądź 12 testerów</a></div>
+<nav class="toc"><b>Na tej stronie</b><ul><li><a href="#rule">Co dokładnie liczy Google</a></li><li><a href="#scenarios">Typowe scenariusze</a></li><li><a href="#fifteen">Dlaczego prosić o 15 testerów, a nie 12</a></li><li><a href="#during">Co robić w trakcie testu</a></li><li><a href="#track">Co nie zeruje Twojego postępu</a></li><li><a href="#te">Jak Tester Exchange radzi sobie z odpadaniem</a></li><li><a href="#faq">Najczęściej zadawane pytania</a></li></ul></nav>
+
+<section id="rule">
+<h2>Co dokładnie liczy Google</h2>
+<p>Wymóg Google dla kont osobistych założonych po 13 listopada 2023 r. to test zamknięty z co najmniej 12 testerami zapisanymi nieprzerwanie przez co najmniej 14 dni. Trzy szczegóły sformułowania Google mają tu znaczenie:</p>
+<ul><li><b>14 dni musi być kolejnych.</b> Nie można wstrzymać i wznowić.</li><li><b>Testerzy, którzy się zapiszą, testują krócej niż 14 dni, a potem się wypiszą, nie liczą się</b> do wymogu.</li><li><b>W dniu składania wniosku o dostęp do wersji produkcyjnej musi być zapisanych co najmniej 12 testerów.</b></li></ul>
+
+<p>Myśl o tym osobno dla każdego testera: każda osoba ma własny zegar, który rusza, gdy się zapisze. Spełniasz wymóg, gdy co najmniej 12 osób jest zapisanych od 14 dni z rzędu i nadal jest zapisanych.</p>
+</section>
+
+<section id="scenarios">
+<h2>Typowe scenariusze</h2>
+
+<ul><li><b>Miałeś 15 testerów, jeden odchodzi w 8. dniu.</b> Pozostałych 14 nadal się liczy. W 14. dniu masz 14 kwalifikujących się testerów. Bez problemu.</li><li><b>Miałeś dokładnie 12, jeden odchodzi w 8. dniu.</b> Teraz tylko 11 osób może dojść do 14 dni. Potrzebujesz zastępstwa, a jego 14 dni zaczyna się w dniu zapisu. Najwcześniejszy termin wniosku przesuwa się o około tydzień.</li><li><b>Tester wypisuje się i zapisuje ponownie.</b> Google podaje, że wypisanie i ponowny zapis restartuje licznik kolejnych dni tego testera.</li><li><b>Tester pozostaje zapisany, ale przestaje otwierać aplikację.</b> Nadal liczy się do 12 w kwestii zapisu, ale szkodzi Ci w zaangażowaniu, o które Google pyta w formularzu dostępu do wersji produkcyjnej.</li><li><b>Tester odinstalowuje aplikację, ale się nie wypisuje.</b> Prawdopodobnie nadal jest zapisany, ale nie testuje. Traktuj go jak w poprzednim przypadku.</li></ul>
+
+
+</section>
+
+<section id="fifteen">
+<h2>Dlaczego prosić o 15 testerów, a nie 12</h2>
+<p>Odpadanie jest normalne. Ludzie zmieniają telefony, zapominają, brakuje im miejsca albo tracą zainteresowanie. Przy dokładnie 12 każda rezygnacja przed 14. dniem przesuwa termin wniosku. Przy 15 możesz stracić trzy osoby i nadal złożyć wniosek na czas.</p>
+<p>Pomaga to też w zaangażowaniu. Google patrzy, jak testerzy używali aplikacji. Jeśli trzech z piętnastu jest cichych, pozostałych dwunastu nadal pokazuje stałe użycie. Jeśli trzech z dwunastu jest cichych, ćwierć Twojego testu wygląda na nieaktywną.</p>
+
+
+<p>W Tester Exchange 15 testerów kosztuje 14,99 USD wobec 12,99 USD za 12, co jest tanim ubezpieczeniem od dodatkowego tygodnia czekania.</p>
+</section>
+
+<section id="during">
+<h2>Co robić w trakcie testu</h2>
+
+
+<ol><li>Sprawdzaj liczbę zapisanych testerów w Play Console co dwa lub trzy dni.</li><li>Jeśli widzisz spadek, od razu dodaj zastępców. Każdy dzień zwłoki to dzień dodany do ich 14.</li><li>Pisz do cichych testerów z jednym konkretnym zadaniem („wypróbuj nowy ekran wyszukiwania w buildzie 1.0.3”), a nie z ogólnym przypomnieniem.</li><li>Wydaj aktualizację w trakcie testu. Nowy build daje testerom powód, by znów otworzyć aplikację.</li><li>Nie składaj wniosku, dopóki nie masz co najmniej 12 testerów, którzy przeszli po 14 kolejnych dni i nadal są zapisani. Zapas dwóch lub trzech jest bezpieczniejszy.</li></ol>
+
+</section>
+
+<section id="track">
+<h2>Co nie zeruje Twojego postępu</h2>
+
+<ul><li>Wgrywanie nowych buildów na tę samą ścieżkę testu zamkniętego. Testerzy pozostają zapisani i dostają aktualizację.</li><li>Dodawanie kolejnych testerów. Nowe osoby zaczynają własne 14 dni; obecni zachowują swoje.</li><li>Edycja strony aplikacji w sklepie lub informacji o wersji.</li></ul>
+
+<p>Czego unikać: usuwania listy e-mail lub grupy Google ze ścieżki albo usuwania samej ścieżki. Testerzy mogą stracić dostęp i nie wiadomo, jak Google potraktuje wtedy ich zapis, więc nie ryzykuj.</p>
+</section>
+
+<section id="te">
+<h2>Jak Tester Exchange radzi sobie z odpadaniem</h2>
+<p>W Tester Exchange testerzy to prawdziwi ludzie na własnych telefonach z Androidem i widzisz codzienne użycie każdego z nich. Jeśli tester przestaje, jego miejsce zajmuje nowy, a płacisz tylko za dni, w których testerzy faktycznie otwierają Twoją aplikację. Niewykorzystane kredyty zostają na Twoim saldzie. Możesz zapłacić raz za 12, 15 lub 25 testerów albo zdobyć testerów za darmo, testując aplikacje innych deweloperów na https://testerexchange.com/earn w przeglądarce telefonu.</p>
+
+
+
+</section>
+<section id="faq"><h2>Najczęściej zadawane pytania</h2>
+<details><summary>Jeśli jeden tester odejdzie, czy moje 14 dni zaczyna się od nowa?</summary><p>Nie dla pozostałych. Zegar każdego testera jest osobny. Tracisz czas tylko wtedy, gdy spadniesz poniżej 12 testerów, którzy mogą ukończyć 14 kolejnych dni.</p></details>
+<details><summary>Czy tester zastępczy zaczyna od dnia 1?</summary><p>Tak. Jego 14 kolejnych dni zaczyna się w dniu zapisu.</p></details>
+<details><summary>Co jeśli tester przez pomyłkę się wypisze i wróci?</summary><p>Google podaje, że wypisanie i ponowny zapis restartuje jego licznik kolejnych dni.</p></details>
+<details><summary>Czy nieaktywni testerzy się liczą?</summary><p>Jeśli pozostają zapisani, liczą się do 12. Ale niskie zaangażowanie to częsty powód, dla którego Google prosi o dalsze testy.</p></details>
+<details><summary>Ilu zapasowych testerów powinienem mieć?</summary><p>Celuj w 15 łącznie, czyli trzech powyżej minimum Google.</p></details>
+</section>
+<div class="cta"><span>Prawdziwi ludzie otwierają Twoją aplikację na własnych telefonach przez 14 dni. Zapłać raz albo testuj inne aplikacje za darmo.</span><a class="btn" href="https://testerexchange.com/?lang=pl#buy">Zdobądź 12 testerów</a></div>
+<section><h2>Więcej poradników</h2><ul class="related"><li><a href="https://testerexchange.com/pl/" hreflang="pl">Jak zdobyć 12 testerów do testów zamkniętych w Google Play</a></li><li><a href="https://testerexchange.com/pl/12-testers-app-builders/" hreflang="pl">12 testerów Google Play dla aplikacji z App Inventor, Kodular, Flutter, Unity i innych kreatorów</a></li><li><a href="https://testerexchange.com/pl/app-not-available-for-testers/" hreflang="pl">Jak naprawić „aplikacja niedostępna” u testerów testu zamkniętego w Google Play</a></li><li><a href="https://testerexchange.com/pl/automate-closed-testing-with-ai-agents/" hreflang="pl">Automatyzacja testów zamkniętych Google Play z agentami AI</a></li><li><a href="https://testerexchange.com/pl/best-way-to-get-12-testers/" hreflang="pl">Najlepszy sposób na 12 testerów do testu zamkniętego w Google Play</a></li><li><a href="https://testerexchange.com/pl/closed-testing-for-games/" hreflang="pl">Test zamknięty gier w Google Play: poradnik dla Unity, Unreal i Godot</a></li><li><a href="https://testerexchange.com/pl/earn-money-testing-android-apps/" hreflang="pl">Zarabiaj na testowaniu aplikacji na Androida: uczciwy poradnik</a></li><li><a href="https://testerexchange.com/pl/free-closed-testing-testers/" hreflang="pl">Jak za darmo zdobyć 12 testerów do testu zamkniętego w Google Play</a></li><li><a href="https://testerexchange.com/pl/friends-family-closed-testers/" hreflang="pl">Znajomi i rodzina jako Twoich 12 testerów w Google Play</a></li><li><a href="https://testerexchange.com/pl/google-group-vs-email-list/" hreflang="pl">Google Group czy lista e-mailowa w teście zamkniętym?</a></li><li><a href="https://testerexchange.com/pl/google-play-closed-testing-requirements/" hreflang="pl">Wymagania testu zamkniętego Google Play: kompletny poradnik 2026</a></li><li><a href="https://testerexchange.com/pl/google-play-review-time-after-closed-testing/" hreflang="pl">Po 14 dniach: czas oceny dostępu do wersji produkcyjnej i Twoja pierwsza premiera</a></li><li><a href="https://testerexchange.com/pl/insufficient-testing-engagement/" hreflang="pl">Odrzucenie po teście zamkniętym? Jak naprawić „wymagane są dodatkowe testy”</a></li><li><a href="https://testerexchange.com/pl/keep-testers-active-14-days/" hreflang="pl">Jak utrzymać aktywność testerów testu zamkniętego przez wszystkie 14 dni</a></li><li><a href="https://testerexchange.com/pl/organization-vs-personal-developer-account/" hreflang="pl">Konto dewelopera Google Play: organizacji czy osobiste</a></li><li><a href="https://testerexchange.com/pl/paid-closed-testers-checklist/" hreflang="pl">Co sprawdzić, zanim zapłacisz za testerów testu zamkniętego w Google Play</a></li><li><a href="https://testerexchange.com/pl/production-access-questions/" hreflang="pl">Jak odpowiedzieć na pytania Google Play o dostęp do wersji produkcyjnej</a></li><li><a href="https://testerexchange.com/pl/production-access-rejected/" hreflang="pl">Odrzucony dostęp do wersji produkcyjnej: co robić dalej</a></li><li><a href="https://testerexchange.com/pl/set-up-closed-testing-track/" hreflang="pl">Jak skonfigurować ścieżkę testu zamkniętego w Play Console, krok po kroku</a></li><li><a href="https://testerexchange.com/pl/tools/production-answers/" hreflang="pl">Generator odpowiedzi do wniosku o dostęp do wersji produkcyjnej</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

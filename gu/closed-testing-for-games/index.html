@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="gu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ગેમ્સ માટે Google Play closed testing: Unity, Unreal, Godot</title>
+<meta name="description" content="ગેમ developers Google Play ના 12 testers × 14 દિવસના closed test માં કેવી રીતે પાસ થાય: Unity, Unreal અને Godot ના build સેટિંગ, ડિવાઇસ સુસંગતતા, testers ને શું રમવા કહેવું અને engagement કેવી રીતે બતાવવું.">
+<link rel="canonical" href="https://testerexchange.com/gu/closed-testing-for-games/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/closed-testing-for-games/">
+<link rel="alternate" hreflang="am" href="https://testerexchange.com/am/closed-testing-for-games/">
+<link rel="alternate" hreflang="ar" href="https://testerexchange.com/ar/closed-testing-for-games/">
+<link rel="alternate" hreflang="az" href="https://testerexchange.com/az/closed-testing-for-games/">
+<link rel="alternate" hreflang="bg" href="https://testerexchange.com/bg/closed-testing-for-games/">
+<link rel="alternate" hreflang="bn" href="https://testerexchange.com/bn/closed-testing-for-games/">
+<link rel="alternate" hreflang="cs" href="https://testerexchange.com/cs/closed-testing-for-games/">
+<link rel="alternate" hreflang="de" href="https://testerexchange.com/de/closed-testing-for-games/">
+<link rel="alternate" hreflang="el" href="https://testerexchange.com/el/closed-testing-for-games/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/closed-testing-for-games/">
+<link rel="alternate" hreflang="fa" href="https://testerexchange.com/fa/closed-testing-for-games/">
+<link rel="alternate" hreflang="fil" href="https://testerexchange.com/fil/closed-testing-for-games/">
+<link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/closed-testing-for-games/">
+<link rel="alternate" hreflang="gu" href="https://testerexchange.com/gu/closed-testing-for-games/">
+<link rel="alternate" hreflang="ha" href="https://testerexchange.com/ha/closed-testing-for-games/">
+<link rel="alternate" hreflang="he" href="https://testerexchange.com/he/closed-testing-for-games/">
+<link rel="alternate" hreflang="hi" href="https://testerexchange.com/hi/closed-testing-for-games/">
+<link rel="alternate" hreflang="hr" href="https://testerexchange.com/hr/closed-testing-for-games/">
+<link rel="alternate" hreflang="hu" href="https://testerexchange.com/hu/closed-testing-for-games/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/closed-testing-for-games/">
+<link rel="alternate" hreflang="ig" href="https://testerexchange.com/ig/closed-testing-for-games/">
+<link rel="alternate" hreflang="it" href="https://testerexchange.com/it/closed-testing-for-games/">
+<link rel="alternate" hreflang="ja" href="https://testerexchange.com/ja/closed-testing-for-games/">
+<link rel="alternate" hreflang="kk" href="https://testerexchange.com/kk/closed-testing-for-games/">
+<link rel="alternate" hreflang="km" href="https://testerexchange.com/km/closed-testing-for-games/">
+<link rel="alternate" hreflang="kn" href="https://testerexchange.com/kn/closed-testing-for-games/">
+<link rel="alternate" hreflang="ko" href="https://testerexchange.com/ko/closed-testing-for-games/">
+<link rel="alternate" hreflang="ml" href="https://testerexchange.com/ml/closed-testing-for-games/">
+<link rel="alternate" hreflang="mr" href="https://testerexchange.com/mr/closed-testing-for-games/">
+<link rel="alternate" hreflang="ms" href="https://testerexchange.com/ms/closed-testing-for-games/">
+<link rel="alternate" hreflang="my" href="https://testerexchange.com/my/closed-testing-for-games/">
+<link rel="alternate" hreflang="ne" href="https://testerexchange.com/ne/closed-testing-for-games/">
+<link rel="alternate" hreflang="nl" href="https://testerexchange.com/nl/closed-testing-for-games/">
+<link rel="alternate" hreflang="pa" href="https://testerexchange.com/pa/closed-testing-for-games/">
+<link rel="alternate" hreflang="pl" href="https://testerexchange.com/pl/closed-testing-for-games/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/closed-testing-for-games/">
+<link rel="alternate" hreflang="ro" href="https://testerexchange.com/ro/closed-testing-for-games/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/closed-testing-for-games/">
+<link rel="alternate" hreflang="si" href="https://testerexchange.com/si/closed-testing-for-games/">
+<link rel="alternate" hreflang="sk" href="https://testerexchange.com/sk/closed-testing-for-games/">
+<link rel="alternate" hreflang="sr" href="https://testerexchange.com/sr/closed-testing-for-games/">
+<link rel="alternate" hreflang="sv" href="https://testerexchange.com/sv/closed-testing-for-games/">
+<link rel="alternate" hreflang="sw" href="https://testerexchange.com/sw/closed-testing-for-games/">
+<link rel="alternate" hreflang="ta" href="https://testerexchange.com/ta/closed-testing-for-games/">
+<link rel="alternate" hreflang="te" href="https://testerexchange.com/te/closed-testing-for-games/">
+<link rel="alternate" hreflang="th" href="https://testerexchange.com/th/closed-testing-for-games/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/closed-testing-for-games/">
+<link rel="alternate" hreflang="uk" href="https://testerexchange.com/uk/closed-testing-for-games/">
+<link rel="alternate" hreflang="ur" href="https://testerexchange.com/ur/closed-testing-for-games/">
+<link rel="alternate" hreflang="uz" href="https://testerexchange.com/uz/closed-testing-for-games/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/closed-testing-for-games/">
+<link rel="alternate" hreflang="yo" href="https://testerexchange.com/yo/closed-testing-for-games/">
+<link rel="alternate" hreflang="zh-Hans" href="https://testerexchange.com/zh-cn/closed-testing-for-games/">
+<link rel="alternate" hreflang="zh-Hant" href="https://testerexchange.com/zh-tw/closed-testing-for-games/">
+<link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/closed-testing-for-games/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/closed-testing-for-games/">
+<meta property="og:type" content="article"><meta property="og:title" content="ગેમ્સ માટે Google Play closed testing: Unity, Unreal, Godot">
+<meta property="og:description" content="ગેમ developers Google Play ના 12 testers × 14 દિવસના closed test માં કેવી રીતે પાસ થાય: Unity, Unreal અને Godot ના build સેટિંગ, ડિવાઇસ સુસંગતતા, testers ને શું રમવા કહેવું અને engagement કેવી રીતે બતાવવું."><meta property="og:url" content="https://testerexchange.com/gu/closed-testing-for-games/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Google Play પર ગેમ્સ માટે closed testing: Unity, Unreal અને Godot ગાઇડ","description":"ગેમ developers Google Play ના 12 testers × 14 દિવસના closed test માં કેવી રીતે પાસ થાય: Unity, Unreal અને Godot ના build સેટિંગ, ડિવાઇસ સુસંગતતા, testers ને શું રમવા કહેવું અને engagement કેવી રીતે બતાવવું.","inLanguage":"gu","datePublished":"2026-11-06","dateModified":"2026-11-06","author":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"},"url":"https://testerexchange.com/gu/closed-testing-for-games/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/gu/"},{"@type":"ListItem","position":3,"name":"Google Play પર ગેમ્સ માટે closed testing: Unity, Unreal અને Godot ગાઇડ","item":"https://testerexchange.com/gu/closed-testing-for-games/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ગેમ્સને પણ closed testing જોઈએ?","acceptedAnswer":{"@type":"Answer","text":"હા. 13 નવેમ્બર 2023 પછી બનેલા personal એકાઉન્ટની બધી ઍપ્સને, ગેમ્સ સહિત, આ જરૂરિયાત લાગુ પડે છે."}},{"@type":"Question","name":"Closed testing દરમિયાન મારી ગેમ અધૂરી હોઈ શકે?","acceptedAnswer":{"@type":"Answer","text":"હા, closed test ચાલુ કામ માટે છે. પણ testers ને બે અઠવાડિયા રમવા જેટલી content જોઈએ, અને test દરમિયાન તમારે તેને સુધારતા રહેવું જોઈએ."}},{"@type":"Question","name":"કેટલાક testers મારી ગેમ ઇન્સ્ટોલ કેમ કરી શકતા નથી?","acceptedAnswer":{"@type":"Answer","text":"સામાન્ય રીતે ડિવાઇસ સુસંગતતા: ઊંચી minimum Android આવૃત્તિ, 64-bit સપોર્ટનો અભાવ, કે જરૂરી હાર્ડવેર features. Play Console માં Device catalog તપાસો."}},{"@type":"Question","name":"Testers એ રોજ કેટલું રમવું જોઈએ?","acceptedAnswer":{"@type":"Answer","text":"Google કોઈ સંખ્યા નક્કી કરતું નથી. એક લાંબા session પછી કંઈ નહીં, તેના કરતાં દરરોજ ટૂંકું સાચું session વધુ સારું."}},{"@type":"Question","name":"Test માટે Play Asset Delivery વાપરવી જોઈએ?","acceptedAnswer":{"@type":"Answer","text":"તમારી ગેમ મોટી હોય તો હા. નાનાં પહેલાં ડાઉનલોડથી વધુ testers ખરેખર ઇન્સ્ટોલ કરીને રમવાનું શરૂ કરે છે."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=gu">Tester Exchange</a><span class="grow"></span>
+<select aria-label="ભાષા" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/closed-testing-for-games/">English</option><option value="https://testerexchange.com/am/closed-testing-for-games/">አማርኛ</option><option value="https://testerexchange.com/ar/closed-testing-for-games/">العربية</option><option value="https://testerexchange.com/az/closed-testing-for-games/">Azərbaycanca</option><option value="https://testerexchange.com/bg/closed-testing-for-games/">Български</option><option value="https://testerexchange.com/bn/closed-testing-for-games/">বাংলা</option><option value="https://testerexchange.com/cs/closed-testing-for-games/">Čeština</option><option value="https://testerexchange.com/de/closed-testing-for-games/">Deutsch</option><option value="https://testerexchange.com/el/closed-testing-for-games/">Ελληνικά</option><option value="https://testerexchange.com/es/closed-testing-for-games/">Español</option><option value="https://testerexchange.com/fa/closed-testing-for-games/">فارسی</option><option value="https://testerexchange.com/fil/closed-testing-for-games/">Filipino</option><option value="https://testerexchange.com/fr/closed-testing-for-games/">Français</option><option value="https://testerexchange.com/gu/closed-testing-for-games/" selected>ગુજરાતી</option><option value="https://testerexchange.com/ha/closed-testing-for-games/">Hausa</option><option value="https://testerexchange.com/he/closed-testing-for-games/">עברית</option><option value="https://testerexchange.com/hi/closed-testing-for-games/">हिन्दी</option><option value="https://testerexchange.com/hr/closed-testing-for-games/">Hrvatski</option><option value="https://testerexchange.com/hu/closed-testing-for-games/">Magyar</option><option value="https://testerexchange.com/id/closed-testing-for-games/">Bahasa Indonesia</option><option value="https://testerexchange.com/ig/closed-testing-for-games/">Igbo</option><option value="https://testerexchange.com/it/closed-testing-for-games/">Italiano</option><option value="https://testerexchange.com/ja/closed-testing-for-games/">日本語</option><option value="https://testerexchange.com/kk/closed-testing-for-games/">Қазақша</option><option value="https://testerexchange.com/km/closed-testing-for-games/">ខ្មែរ</option><option value="https://testerexchange.com/kn/closed-testing-for-games/">ಕನ್ನಡ</option><option value="https://testerexchange.com/ko/closed-testing-for-games/">한국어</option><option value="https://testerexchange.com/ml/closed-testing-for-games/">മലയാളം</option><option value="https://testerexchange.com/mr/closed-testing-for-games/">मराठी</option><option value="https://testerexchange.com/ms/closed-testing-for-games/">Bahasa Melayu</option><option value="https://testerexchange.com/my/closed-testing-for-games/">မြန်မာ</option><option value="https://testerexchange.com/ne/closed-testing-for-games/">नेपाली</option><option value="https://testerexchange.com/nl/closed-testing-for-games/">Nederlands</option><option value="https://testerexchange.com/pa/closed-testing-for-games/">ਪੰਜਾਬੀ</option><option value="https://testerexchange.com/pl/closed-testing-for-games/">Polski</option><option value="https://testerexchange.com/pt/closed-testing-for-games/">Português</option><option value="https://testerexchange.com/ro/closed-testing-for-games/">Română</option><option value="https://testerexchange.com/ru/closed-testing-for-games/">Русский</option><option value="https://testerexchange.com/si/closed-testing-for-games/">සිංහල</option><option value="https://testerexchange.com/sk/closed-testing-for-games/">Slovenčina</option><option value="https://testerexchange.com/sr/closed-testing-for-games/">Српски</option><option value="https://testerexchange.com/sv/closed-testing-for-games/">Svenska</option><option value="https://testerexchange.com/sw/closed-testing-for-games/">Kiswahili</option><option value="https://testerexchange.com/ta/closed-testing-for-games/">தமிழ்</option><option value="https://testerexchange.com/te/closed-testing-for-games/">తెలుగు</option><option value="https://testerexchange.com/th/closed-testing-for-games/">ไทย</option><option value="https://testerexchange.com/tr/closed-testing-for-games/">Türkçe</option><option value="https://testerexchange.com/uk/closed-testing-for-games/">Українська</option><option value="https://testerexchange.com/ur/closed-testing-for-games/">اردو</option><option value="https://testerexchange.com/uz/closed-testing-for-games/">Oʻzbekcha</option><option value="https://testerexchange.com/vi/closed-testing-for-games/">Tiếng Việt</option><option value="https://testerexchange.com/yo/closed-testing-for-games/">Yorùbá</option><option value="https://testerexchange.com/zh-cn/closed-testing-for-games/">简体中文</option><option value="https://testerexchange.com/zh-tw/closed-testing-for-games/">繁體中文</option><option value="https://testerexchange.com/zu/closed-testing-for-games/">isiZulu</option>
+</select>
+<a href="https://testerexchange.com/?lang=gu">Tester Exchange ખોલો</a></header>
+<main>
+
+<h1>Google Play પર ગેમ્સ માટે closed testing: Unity, Unreal અને Godot ગાઇડ</h1>
+<p class="muted">નવેમ્બર 2026 માં અપડેટ</p>
+<p class="lede">ગેમ્સ પણ બીજી કોઈપણ ઍપની જેમ એ જ closed testing જરૂરિયાતમાંથી પસાર થાય છે: તમારું personal developer એકાઉન્ટ 13 નવેમ્બર 2023 પછી બન્યું હોય, તો production માટે અરજી કરતાં પહેલાં સતત 14 દિવસ opt-in રહેલા ઓછામાં ઓછા 12 testers જોઈએ. પણ ગેમ્સની પોતાની મુશ્કેલીઓ છે: મોટા ડાઉનલોડ, build ચલાવી ન શકતા ડિવાઇસ, અને ગેમ એક વાર ખોલીને ફરી ન આવતા testers. આ ગાઇડ ગેમ developers એ શું સેટ કરવું અને testers ને શું કરવા કહેવું તે સમજાવે છે.</p>
+<div class="cta"><span>સાચા લોકો 14 દિવસ સુધી પોતાના ફોન પર તમારી ઍપ ખોલે છે. એક વાર ચૂકવો, અથવા બીજી ઍપ્સ ટેસ્ટ કરીને મફત મેળવો.</span><a class="btn" href="https://testerexchange.com/?lang=gu#buy">12 testers મેળવો</a></div>
+<nav class="toc"><b>આ પેજ પર</b><ul><li><a href="#same">એ જ નિયમ, ગેમ-વિશિષ્ટ જોખમો સાથે</a></li><li><a href="#build">પહેલાં તપાસવાના build સેટિંગ</a></li><li><a href="#setup">Test સેટ કરો</a></li><li><a href="#players">Testers ને શું રમવા કહેવું</a></li><li><a href="#engage">Engagement બતાવો</a></li><li><a href="#online">Multiplayer અને ઑનલાઇન ગેમ્સ</a></li><li><a href="#testers">પૂરતા ખેલાડીઓ મેળવવા</a></li><li><a href="#faq">વારંવાર પૂછાતા પ્રશ્નો</a></li></ul></nav>
+
+<section id="same">
+<h2>એ જ નિયમ, ગેમ-વિશિષ્ટ જોખમો સાથે</h2>
+<p>અહીં Google ગેમ્સ અને ઍપ્સને સરખા ગણે છે. સતત 14 દિવસ opt-in રહેલા ઓછામાં ઓછા 12 testers સાથે closed test ચલાવો, પછી production માટે અરજી કરો. Production ફોર્મ tester engagement, feedback અને તમે શું બદલ્યું એ પૂછે છે, એટલે જે test માં કોઈ tutorial થી આગળ રમ્યું નહીં તેના જવાબો નબળા બને છે.</p>
+<p>ગેમ્સને બીજી ઍપ્સ કરતાં વધુ નડતાં જોખમો:</p>
+<ul><li><b>ડિવાઇસ સુસંગતતા:</b> testers ને &quot;your device isn't compatible&quot; દેખાય છે અને ઇન્સ્ટોલ થતું નથી.</li><li><b>ડાઉનલોડનું કદ:</b> મોબાઇલ ડેટા પર મોટું પહેલું ડાઉનલોડ testers ને અટકાવે છે.</li><li><b>Session ની લંબાઈ:</b> બે અઠવાડિયા સુધી રોજ 20 મિનિટનો level કોઈ રમશે નહીં.</li><li><b>Content ની ખોટ:</b> એક level વાળા vertical slice માં ત્રીજા દિવસ સુધીમાં કરવા જેવું કંઈ બચતું નથી.</li></ul>
+
+
+</section>
+
+<section id="build">
+<h2>પહેલાં તપાસવાના build સેટિંગ</h2>
+
+<ul><li><b>Unity:</b> Android App Bundle (.aab) બનાવો, ARM64 ચાલુ કરીને IL2CPP વાપરો (Google Play ને 64-bit સપોર્ટ જોઈએ), અને જરૂર કરતાં વધુ ફોનને બાકાત ન રાખે એવું minimum API level રાખો. Build મોટી હોય તો એક વિશાળ ડાઉનલોડને બદલે Play Asset Delivery વાપરો.</li><li><b>Unreal Engine:</b> arm64 સાથે App Bundle તરીકે Android માટે package કરો, Project Settings માં target અને minimum SDK level તપાસો, અને વૈકલ્પિક content ને asset packs માં મૂકીને પહેલું ડાઉનલોડ નાનું રાખો.</li><li><b>Godot:</b> Gradle build ચાલુ કરીને Android export template વાપરો અને AAB તરીકે export કરો. arm64-v8a સામેલ છે તેની ખાતરી કરો, અને ઓછી ક્ષમતાવાળા ફોન પર renderer ચકાસો, કારણ કે કેટલાક ડિવાઇસ Forward+ કે Mobile કરતાં Compatibility renderer સારું ચલાવે છે.</li><li><b>બધા engines:</b> નવી ઍપ્સ માટે Google Play જે API level હાલ માગે છે તે target કરો, અને Play App Signing વડે sign કરો.</li></ul>
+
+<p>અપલોડ પછી Play Console માં Device catalog ખોલીને જુઓ કે તમારી build કેટલા ડિવાઇસને સપોર્ટ કરે છે. મોટો હિસ્સો બાકાત હોય તો testers આવે તે પહેલાં સુધારો.</p>
+</section>
+
+<section id="setup">
+<h2>Test સેટ કરો</h2>
+
+
+<ol><li>Closed track બનાવો કે ખોલો: Test and release, પછી Testing, પછી Closed testing.</li><li>તમારા testers જ્યાં રહે છે તે દેશો ઉમેરો.</li><li>ઇમેઇલ લિસ્ટ કે Google Group થી testers ઉમેરો. Tester Exchange સાથે testerexchange-testers@googlegroups.com ઉમેરો.</li><li>.aab અપલોડ કરો, release review માટે મોકલો અને તે Published દેખાય ત્યાં સુધી રાહ જુઓ.</li><li>Opt-in લિંક શેર કરો. પહેલી વાર તે ચાલુ થવામાં કેટલાક કલાક લાગી શકે છે.</li></ol>
+<p>Testers &quot;app not available&quot; કહે તો તે સુધારવાની ગાઇડ જુઓ. તેમાં ખોટાં એકાઉન્ટ, દેશો અને publish ન થયેલા tracks આવરી લીધાં છે.</p>
+</section>
+
+<section id="players">
+<h2>Testers ને શું રમવા કહેવું</h2>
+<p>Testers ને થોડી મિનિટોમાં સમાઈ જાય એવા નાના રોજના લક્ષ્યો આપો. સાચું, વૈવિધ્યસભર રમવું તમારા માટે ઉપયોગી છે, અને પછી production ફોર્મમાં તમે એ જ વર્ણવશો.</p>
+<ul><li><b>દિવસ 1 થી 3:</b> tutorial અને પહેલો level પૂરો કરો. ગૂંચવણભર્યું કંઈ હોય તો જણાવો.</li><li><b>દિવસ 4 થી 7:</b> રોજ એક ટૂંકું session રમો; settings, અવાજ, controls અને pause અજમાવો.</li><li><b>દિવસ 8 થી 11:</b> સુધારા સાથેની નવી build અજમાવો; level ફરી રમીને જુઓ કે સારું લાગે છે કે નહીં.</li><li><b>દિવસ 12 થી 14:</b> ઉપલબ્ધ સૌથી અઘરી content રમો અને crashes, lag કે battery ખાલી થવાની ફરિયાદ કરો.</li></ul>
+
+<p>તમારી ગેમમાં daily rewards, ટૂંકી daily challenge કે quick mode હોય તો testers ને તે તરફ દોરો. તે રોજના લયમાં સ્વાભાવિક બેસે છે.</p>
+</section>
+
+<section id="engage">
+<h2>Engagement બતાવો</h2>
+
+<ul><li>Test દરમિયાન ઓછામાં ઓછું એક, ઉત્તમ તો બે અપડેટ મોકલો. જણાવેલા crash ને સુધારવો એ production ફોર્મ માટે સૌથી સારી વાત છે.</li><li>સાચા ડિવાઇસ પર crashes અને ANRs શોધવા Play Console માં Android vitals અને pre-launch report વાપરો.</li><li>સરળ ફોર્મમાં લેખિત feedback એકઠો કરો: ડિવાઇસ મૉડલ, તેમણે શું કર્યું, શું થયું.</li><li>રોજના સક્રિય testers, sessions, મળેલા bugs અને મોકલેલી builds નો લૉગ રાખો.</li></ul>
+
+
+</section>
+
+<section id="online">
+<h2>Multiplayer અને ઑનલાઇન ગેમ્સ</h2>
+<p>તમારી ગેમને server જોઈએ તો તે બધા 14 દિવસ ચાલુ રાખો, અને testers એકલા હોય ત્યારે પણ ગેમ રમી શકાય તેની ખાતરી કરો. ક્યારેય ન ભરાતું lobby ખાલી test જેવું લાગે છે. શક્ય હોય તો test ના સમય માટે bots કે solo mode ઉમેરો.</p>
+<p>સાઇન ઇન જરૂરી હોય તો testers ને ચાલતો guest mode કે સ્પષ્ટ સૂચનાઓ આપો. સાઇન-ઇન ની દીવાલ પહેલા જ દિવસે testers ને ગુમાવે છે.</p>
+
+
+
+</section>
+
+<section id="testers">
+<h2>પૂરતા ખેલાડીઓ મેળવવા</h2>
+<p>12 ને બદલે 15 testers માગો, કારણ કે ગેમ્સમાં કેટલાક ખેલાડીઓ ઝડપથી છોડી જાય છે. Tester Exchange પોતાના Android ફોન પર રમતા સાચા લોકોને મોકલે છે અને દરેક tester નો રોજનો ઉપયોગ બતાવે છે: 12 માટે $12.99, 15 માટે $14.99 કે 25 માટે $22.99, એક વાર ચૂકવણી. https://testerexchange.com/earn પર બીજા developers ની ઍપ્સ અને ગેમ્સ ટેસ્ટ કરીને તમે મફતમાં testers પણ કમાઈ શકો.</p>
+
+
+
+</section>
+<section id="faq"><h2>વારંવાર પૂછાતા પ્રશ્નો</h2>
+<details><summary>ગેમ્સને પણ closed testing જોઈએ?</summary><p>હા. 13 નવેમ્બર 2023 પછી બનેલા personal એકાઉન્ટની બધી ઍપ્સને, ગેમ્સ સહિત, આ જરૂરિયાત લાગુ પડે છે.</p></details>
+<details><summary>Closed testing દરમિયાન મારી ગેમ અધૂરી હોઈ શકે?</summary><p>હા, closed test ચાલુ કામ માટે છે. પણ testers ને બે અઠવાડિયા રમવા જેટલી content જોઈએ, અને test દરમિયાન તમારે તેને સુધારતા રહેવું જોઈએ.</p></details>
+<details><summary>કેટલાક testers મારી ગેમ ઇન્સ્ટોલ કેમ કરી શકતા નથી?</summary><p>સામાન્ય રીતે ડિવાઇસ સુસંગતતા: ઊંચી minimum Android આવૃત્તિ, 64-bit સપોર્ટનો અભાવ, કે જરૂરી હાર્ડવેર features. Play Console માં Device catalog તપાસો.</p></details>
+<details><summary>Testers એ રોજ કેટલું રમવું જોઈએ?</summary><p>Google કોઈ સંખ્યા નક્કી કરતું નથી. એક લાંબા session પછી કંઈ નહીં, તેના કરતાં દરરોજ ટૂંકું સાચું session વધુ સારું.</p></details>
+<details><summary>Test માટે Play Asset Delivery વાપરવી જોઈએ?</summary><p>તમારી ગેમ મોટી હોય તો હા. નાનાં પહેલાં ડાઉનલોડથી વધુ testers ખરેખર ઇન્સ્ટોલ કરીને રમવાનું શરૂ કરે છે.</p></details>
+</section>
+<div class="cta"><span>સાચા લોકો 14 દિવસ સુધી પોતાના ફોન પર તમારી ઍપ ખોલે છે. એક વાર ચૂકવો, અથવા બીજી ઍપ્સ ટેસ્ટ કરીને મફત મેળવો.</span><a class="btn" href="https://testerexchange.com/?lang=gu#buy">12 testers મેળવો</a></div>
+<section><h2>વધુ ગાઇડ</h2><ul class="related"><li><a href="https://testerexchange.com/gu/" hreflang="gu">Google Play closed testing માટે 12 testers કેવી રીતે મેળવવા</a></li><li><a href="https://testerexchange.com/gu/12-testers-app-builders/" hreflang="gu">App Inventor, Kodular, Flutter, Unity અને બીજા builders થી બનેલી ઍપ્સ માટે Google Play ના 12 testers</a></li><li><a href="https://testerexchange.com/gu/app-not-available-for-testers/" hreflang="gu">Google Play closed testers માટે &quot;app not available&quot; કેવી રીતે સુધારવું</a></li><li><a href="https://testerexchange.com/gu/automate-closed-testing-with-ai-agents/" hreflang="gu">AI agents થી Google Play closed testing ઓટોમેટ કરો</a></li><li><a href="https://testerexchange.com/gu/best-way-to-get-12-testers/" hreflang="gu">Google Play closed testing માટે 12 testers મેળવવાની શ્રેષ્ઠ રીત</a></li><li><a href="https://testerexchange.com/gu/does-14-day-closed-test-reset/" hreflang="gu">Testers છોડી જાય ત્યારે 14 દિવસનો closed test ફરી શરૂ થાય?</a></li><li><a href="https://testerexchange.com/gu/earn-money-testing-android-apps/" hreflang="gu">Android ઍપ્સ ટેસ્ટ કરીને કમાઓ: પ્રામાણિક ગાઇડ</a></li><li><a href="https://testerexchange.com/gu/free-closed-testing-testers/" hreflang="gu">Google Play closed testing માટે 12 testers મફતમાં કેવી રીતે મેળવવા</a></li><li><a href="https://testerexchange.com/gu/friends-family-closed-testers/" hreflang="gu">તમારા 12 Google Play testers તરીકે મિત્રો અને પરિવારનો ઉપયોગ</a></li><li><a href="https://testerexchange.com/gu/google-group-vs-email-list/" hreflang="gu">તમારા closed test માટે Google Group કે ઇમેઇલ લિસ્ટ?</a></li><li><a href="https://testerexchange.com/gu/google-play-closed-testing-requirements/" hreflang="gu">Google Play closed testing જરૂરિયાતો: સંપૂર્ણ 2026 ગાઇડ</a></li><li><a href="https://testerexchange.com/gu/google-play-review-time-after-closed-testing/" hreflang="gu">14 દિવસ પછી: production access review સમય અને તમારી પહેલી release</a></li><li><a href="https://testerexchange.com/gu/insufficient-testing-engagement/" hreflang="gu">closed testing પછી રિજેક્ટ થયા? &quot;more testing required&quot; કેવી રીતે સુધારવું</a></li><li><a href="https://testerexchange.com/gu/keep-testers-active-14-days/" hreflang="gu">closed testers ને પૂરા 14 દિવસ કેવી રીતે સક્રિય રાખવા</a></li><li><a href="https://testerexchange.com/gu/organization-vs-personal-developer-account/" hreflang="gu">Organization vs personal Google Play developer એકાઉન્ટ</a></li><li><a href="https://testerexchange.com/gu/paid-closed-testers-checklist/" hreflang="gu">Google Play closed testers માટે ચૂકવતાં પહેલાં શું તપાસવું</a></li><li><a href="https://testerexchange.com/gu/production-access-questions/" hreflang="gu">Google Play ના production access પ્રશ્નોના જવાબ કેવી રીતે આપવા</a></li><li><a href="https://testerexchange.com/gu/production-access-rejected/" hreflang="gu">Production access રિજેક્ટ: હવે શું કરવું</a></li><li><a href="https://testerexchange.com/gu/set-up-closed-testing-track/" hreflang="gu">Play Console માં closed testing track કેવી રીતે સેટ કરવો, પગલું-દર-પગલું</a></li><li><a href="https://testerexchange.com/gu/tools/production-answers/" hreflang="gu">Production access જવાબ જનરેટર</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

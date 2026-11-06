@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>วิธีตั้งค่าแทร็กการทดสอบแบบปิดใน Google Play Console (2026)</title>
+<meta name="description" content="ทีละขั้นตอน: สร้างแทร็กการทดสอบแบบปิดใน Play Console เพิ่มผู้ทดสอบด้วยรายชื่ออีเมลหรือ Google Group เผยแพร่รุ่น และแชร์ลิงก์เข้าร่วม เพื่อให้การนับ 14 วันเริ่มได้">
+<link rel="canonical" href="https://testerexchange.com/th/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="am" href="https://testerexchange.com/am/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ar" href="https://testerexchange.com/ar/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="az" href="https://testerexchange.com/az/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="bg" href="https://testerexchange.com/bg/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="bn" href="https://testerexchange.com/bn/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="cs" href="https://testerexchange.com/cs/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="de" href="https://testerexchange.com/de/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="el" href="https://testerexchange.com/el/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="fa" href="https://testerexchange.com/fa/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="fil" href="https://testerexchange.com/fil/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="gu" href="https://testerexchange.com/gu/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ha" href="https://testerexchange.com/ha/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="he" href="https://testerexchange.com/he/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="hi" href="https://testerexchange.com/hi/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="hr" href="https://testerexchange.com/hr/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="hu" href="https://testerexchange.com/hu/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ig" href="https://testerexchange.com/ig/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="it" href="https://testerexchange.com/it/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ja" href="https://testerexchange.com/ja/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="kk" href="https://testerexchange.com/kk/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="km" href="https://testerexchange.com/km/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="kn" href="https://testerexchange.com/kn/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ko" href="https://testerexchange.com/ko/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ml" href="https://testerexchange.com/ml/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="mr" href="https://testerexchange.com/mr/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ms" href="https://testerexchange.com/ms/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="my" href="https://testerexchange.com/my/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ne" href="https://testerexchange.com/ne/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="nl" href="https://testerexchange.com/nl/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="pa" href="https://testerexchange.com/pa/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="pl" href="https://testerexchange.com/pl/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ro" href="https://testerexchange.com/ro/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="si" href="https://testerexchange.com/si/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="sk" href="https://testerexchange.com/sk/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="sr" href="https://testerexchange.com/sr/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="sv" href="https://testerexchange.com/sv/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="sw" href="https://testerexchange.com/sw/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ta" href="https://testerexchange.com/ta/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="te" href="https://testerexchange.com/te/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="th" href="https://testerexchange.com/th/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="uk" href="https://testerexchange.com/uk/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ur" href="https://testerexchange.com/ur/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="uz" href="https://testerexchange.com/uz/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="yo" href="https://testerexchange.com/yo/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="zh-Hans" href="https://testerexchange.com/zh-cn/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="zh-Hant" href="https://testerexchange.com/zh-tw/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<meta property="og:type" content="article"><meta property="og:title" content="วิธีตั้งค่าแทร็กการทดสอบแบบปิดใน Google Play Console (2026)">
+<meta property="og:description" content="ทีละขั้นตอน: สร้างแทร็กการทดสอบแบบปิดใน Play Console เพิ่มผู้ทดสอบด้วยรายชื่ออีเมลหรือ Google Group เผยแพร่รุ่น และแชร์ลิงก์เข้าร่วม เพื่อให้การนับ 14 วันเริ่มได้"><meta property="og:url" content="https://testerexchange.com/th/set-up-closed-testing-track/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"วิธีตั้งค่าแทร็กการทดสอบแบบปิดใน Play Console ทีละขั้นตอน","description":"ทีละขั้นตอน: สร้างแทร็กการทดสอบแบบปิดใน Play Console เพิ่มผู้ทดสอบด้วยรายชื่ออีเมลหรือ Google Group เผยแพร่รุ่น และแชร์ลิงก์เข้าร่วม เพื่อให้การนับ 14 วันเริ่มได้","inLanguage":"th","datePublished":"2026-11-06","dateModified":"2026-11-06","author":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"},"url":"https://testerexchange.com/th/set-up-closed-testing-track/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/th/"},{"@type":"ListItem","position":3,"name":"วิธีตั้งค่าแทร็กการทดสอบแบบปิดใน Play Console ทีละขั้นตอน","item":"https://testerexchange.com/th/set-up-closed-testing-track/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ใช้การทดสอบภายในแทนได้ไหม?","acceptedAnswer":{"@type":"Answer","text":"ไม่ได้ ข้อกำหนดต้องเป็นการทดสอบแบบปิด Google ยังระบุว่าคนที่เข้าร่วมการทดสอบภายในของคุณจะเข้าร่วมการทดสอบแบบปิดไม่ได้จนกว่าจะออกจากการทดสอบภายใน"}},{"@type":"Question","name":"ควรใช้รายชื่ออีเมลหรือ Google Group?","acceptedAnswer":{"@type":"Answer","text":"Google Group สะดวกกว่าเมื่อมีผู้ทดสอบเข้าออกบ่อย เพราะคุณไม่ต้องแก้แทร็กเลย รายชื่ออีเมลเหมาะกับกลุ่มเพื่อนที่แน่นอน ใช้ทั้งสองอย่างได้"}},{"@type":"Question","name":"ทำไมฉันไม่เห็นลิงก์เข้าร่วม?","acceptedAnswer":{"@type":"Answer","text":"ลิงก์จะแสดงเมื่อรุ่นบนแทร็กการทดสอบแบบปิดเผยแพร่แล้วเท่านั้น ตรวจภาพรวมการเผยแพร่ว่ามีการตรวจสอบที่รออยู่หรือการเปลี่ยนแปลงที่ยังไม่ได้ส่งหรือไม่"}},{"@type":"Question","name":"ผู้ทดสอบต้องมีบัญชี Google ไหม?","acceptedAnswer":{"@type":"Answer","text":"ต้องมี Google ระบุว่าผู้ใช้ต้องมีบัญชี Google หรือบัญชี Google Workspace เพื่อเข้าร่วมการทดสอบ และต้องเป็นบัญชีที่ใช้ใน Play Store บนโทรศัพท์ของเขา"}},{"@type":"Question","name":"ตั้งแอปทดสอบแบบปิดเป็นแอปเสียเงินได้ไหม?","acceptedAnswer":{"@type":"Answer","text":"ได้ แต่ Google ระบุว่าผู้ทดสอบต้องซื้อแอปเสียเงินในการทดสอบแบบปิด ควรให้แอปทดสอบฟรีเพื่อไม่ให้เสียผู้ทดสอบ"}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=th">Tester Exchange</a><span class="grow"></span>
+<select aria-label="ภาษา" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/set-up-closed-testing-track/">English</option><option value="https://testerexchange.com/am/set-up-closed-testing-track/">አማርኛ</option><option value="https://testerexchange.com/ar/set-up-closed-testing-track/">العربية</option><option value="https://testerexchange.com/az/set-up-closed-testing-track/">Azərbaycanca</option><option value="https://testerexchange.com/bg/set-up-closed-testing-track/">Български</option><option value="https://testerexchange.com/bn/set-up-closed-testing-track/">বাংলা</option><option value="https://testerexchange.com/cs/set-up-closed-testing-track/">Čeština</option><option value="https://testerexchange.com/de/set-up-closed-testing-track/">Deutsch</option><option value="https://testerexchange.com/el/set-up-closed-testing-track/">Ελληνικά</option><option value="https://testerexchange.com/es/set-up-closed-testing-track/">Español</option><option value="https://testerexchange.com/fa/set-up-closed-testing-track/">فارسی</option><option value="https://testerexchange.com/fil/set-up-closed-testing-track/">Filipino</option><option value="https://testerexchange.com/fr/set-up-closed-testing-track/">Français</option><option value="https://testerexchange.com/gu/set-up-closed-testing-track/">ગુજરાતી</option><option value="https://testerexchange.com/ha/set-up-closed-testing-track/">Hausa</option><option value="https://testerexchange.com/he/set-up-closed-testing-track/">עברית</option><option value="https://testerexchange.com/hi/set-up-closed-testing-track/">हिन्दी</option><option value="https://testerexchange.com/hr/set-up-closed-testing-track/">Hrvatski</option><option value="https://testerexchange.com/hu/set-up-closed-testing-track/">Magyar</option><option value="https://testerexchange.com/id/set-up-closed-testing-track/">Bahasa Indonesia</option><option value="https://testerexchange.com/ig/set-up-closed-testing-track/">Igbo</option><option value="https://testerexchange.com/it/set-up-closed-testing-track/">Italiano</option><option value="https://testerexchange.com/ja/set-up-closed-testing-track/">日本語</option><option value="https://testerexchange.com/kk/set-up-closed-testing-track/">Қазақша</option><option value="https://testerexchange.com/km/set-up-closed-testing-track/">ខ្មែរ</option><option value="https://testerexchange.com/kn/set-up-closed-testing-track/">ಕನ್ನಡ</option><option value="https://testerexchange.com/ko/set-up-closed-testing-track/">한국어</option><option value="https://testerexchange.com/ml/set-up-closed-testing-track/">മലയാളം</option><option value="https://testerexchange.com/mr/set-up-closed-testing-track/">मराठी</option><option value="https://testerexchange.com/ms/set-up-closed-testing-track/">Bahasa Melayu</option><option value="https://testerexchange.com/my/set-up-closed-testing-track/">မြန်မာ</option><option value="https://testerexchange.com/ne/set-up-closed-testing-track/">नेपाली</option><option value="https://testerexchange.com/nl/set-up-closed-testing-track/">Nederlands</option><option value="https://testerexchange.com/pa/set-up-closed-testing-track/">ਪੰਜਾਬੀ</option><option value="https://testerexchange.com/pl/set-up-closed-testing-track/">Polski</option><option value="https://testerexchange.com/pt/set-up-closed-testing-track/">Português</option><option value="https://testerexchange.com/ro/set-up-closed-testing-track/">Română</option><option value="https://testerexchange.com/ru/set-up-closed-testing-track/">Русский</option><option value="https://testerexchange.com/si/set-up-closed-testing-track/">සිංහල</option><option value="https://testerexchange.com/sk/set-up-closed-testing-track/">Slovenčina</option><option value="https://testerexchange.com/sr/set-up-closed-testing-track/">Српски</option><option value="https://testerexchange.com/sv/set-up-closed-testing-track/">Svenska</option><option value="https://testerexchange.com/sw/set-up-closed-testing-track/">Kiswahili</option><option value="https://testerexchange.com/ta/set-up-closed-testing-track/">தமிழ்</option><option value="https://testerexchange.com/te/set-up-closed-testing-track/">తెలుగు</option><option value="https://testerexchange.com/th/set-up-closed-testing-track/" selected>ไทย</option><option value="https://testerexchange.com/tr/set-up-closed-testing-track/">Türkçe</option><option value="https://testerexchange.com/uk/set-up-closed-testing-track/">Українська</option><option value="https://testerexchange.com/ur/set-up-closed-testing-track/">اردو</option><option value="https://testerexchange.com/uz/set-up-closed-testing-track/">Oʻzbekcha</option><option value="https://testerexchange.com/vi/set-up-closed-testing-track/">Tiếng Việt</option><option value="https://testerexchange.com/yo/set-up-closed-testing-track/">Yorùbá</option><option value="https://testerexchange.com/zh-cn/set-up-closed-testing-track/">简体中文</option><option value="https://testerexchange.com/zh-tw/set-up-closed-testing-track/">繁體中文</option><option value="https://testerexchange.com/zu/set-up-closed-testing-track/">isiZulu</option>
+</select>
+<a href="https://testerexchange.com/?lang=th">เปิด Tester Exchange</a></header>
+<main>
+
+<h1>วิธีตั้งค่าแทร็กการทดสอบแบบปิดใน Play Console ทีละขั้นตอน</h1>
+<p class="muted">อัปเดตพฤศจิกายน 2026</p>
+<p class="lede">ก่อนที่การนับ 14 วันจะเริ่มได้ คุณต้องมีแทร็กการทดสอบแบบปิดที่เผยแพร่แล้ว มีผู้ทดสอบผูกอยู่ และมีลิงก์เข้าร่วมที่ใช้งานได้ ปัญหาส่วนใหญ่ที่ตามมา เช่น ผู้ทดสอบเห็น &quot;app not available&quot; มาจากขั้นตอนที่ข้ามไปตรงนี้ คู่มือนี้ทำตามเมนูปัจจุบันของ Play Console (ทดสอบและเผยแพร่ → การทดสอบ → การทดสอบแบบปิด) และศูนย์ช่วยเหลือของ Google</p>
+<div class="cta"><span>คนจริงเปิดแอปของคุณบนโทรศัพท์ของตัวเองนาน 14 วัน จ่ายครั้งเดียว หรือทดสอบแอปอื่นฟรี</span><a class="btn" href="https://testerexchange.com/?lang=th#buy">รับผู้ทดสอบ 12 คน</a></div>
+<nav class="toc"><b>ในหน้านี้</b><ul><li><a href="#before">ก่อนเริ่ม</a></li><li><a href="#track">1. เปิดหรือสร้างแทร็กการทดสอบแบบปิด</a></li><li><a href="#countries">2. เลือกประเทศและภูมิภาค</a></li><li><a href="#testers">3. เพิ่มผู้ทดสอบ: รายชื่ออีเมลหรือ Google Group</a></li><li><a href="#feedback">4. เพิ่มช่องทางรับฟีดแบ็ก</a></li><li><a href="#release">5. สร้างรุ่นและส่งให้ตรวจสอบ</a></li><li><a href="#link">6. แชร์ลิงก์เข้าร่วม</a></li><li><a href="#check">7. ตรวจว่า 14 วันกำลังนับอยู่</a></li><li><a href="#faq">คำถามที่พบบ่อย</a></li></ul></nav>
+
+<section id="before">
+<h2>ก่อนเริ่ม</h2>
+
+<ul><li>บัญชีนักพัฒนา Play Console ที่ยืนยันตัวตนเสร็จแล้ว</li><li>สร้างแอปของคุณใน Play Console แล้ว และกรอกหน้ารายการร้านค้า การจัดเรตเนื้อหา กลุ่มเป้าหมาย ความปลอดภัยของข้อมูล (data safety) และการประกาศเนื้อหาแอป (App content) อื่น ๆ ครบ Play Console จะไม่ให้ส่งรุ่นเพื่อตรวจสอบหากยังขาดรายการที่จำเป็น</li><li>Android App Bundle (.aab) ที่ลงนามแล้ว พร้อม package name ที่คุณพอใจจะใช้ตลอดไป เปลี่ยนภายหลังไม่ได้</li><li>แผนสำหรับผู้ทดสอบ: อย่างน้อย 12 คน ควรเป็น 15 คน เป็นคนจริงที่มีโทรศัพท์ Android และบัญชี Google</li></ul>
+
+
+</section>
+
+<section id="track">
+<h2>1. เปิดหรือสร้างแทร็กการทดสอบแบบปิด</h2>
+
+
+<ol><li>ใน Play Console เลือกแอปของคุณ</li><li>ไปที่ทดสอบและเผยแพร่ → การทดสอบ → การทดสอบแบบปิด</li><li>Play Console มีแทร็กการทดสอบแบบปิดเริ่มต้นให้ (มักชื่อ Alpha) ใช้อันนี้ได้เลย คุณสร้างแทร็กแบบปิดเพิ่มได้ แต่ตามข้อกำหนดมีอันเดียวก็พอ</li><li>กดจัดการแทร็ก (Manage track)</li></ol>
+
+</section>
+
+<section id="countries">
+<h2>2. เลือกประเทศและภูมิภาค</h2>
+<p>เปิดแท็บประเทศ/ภูมิภาค (Countries / regions) แล้วเพิ่มประเทศที่ผู้ทดสอบของคุณอาศัยอยู่ ผู้ทดสอบในประเทศที่คุณไม่ได้เลือกจะติดตั้งแอปไม่ได้</p>
+<p>Google ระบุว่าการเปลี่ยนประเทศที่เผยแพร่มีผลกับทุกแทร็ก และแทร็กแบบปิดที่เพิ่มเข้ามาไม่รองรับการกำหนดประเทศแยกต่างหาก ถ้าผู้ทดสอบของคุณกระจายอยู่ทั่วโลก ตัวเลือกที่ง่ายที่สุดคือเพิ่มทุกประเทศที่คุณจัดส่งได้ตามกฎหมาย</p>
+
+
+
+</section>
+
+<section id="testers">
+<h2>3. เพิ่มผู้ทดสอบ: รายชื่ออีเมลหรือ Google Group</h2>
+<p>เปิดแท็บผู้ทดสอบ (Testers) คุณมีสองตัวเลือก และใช้ทั้งสองอย่างในแทร็กเดียวได้</p>
+<ul><li><b>รายชื่ออีเมล:</b> กดสร้างรายชื่ออีเมล (Create email list) ตั้งชื่อ แล้วพิมพ์ที่อยู่หรืออัปโหลด CSV Google อนุญาตสูงสุด 2,000 ผู้ใช้ต่อรายชื่อ การอัปโหลด CSV จะเขียนทับที่อยู่ที่มีอยู่ในรายชื่อนั้น ทุกที่อยู่ต้องเป็นบัญชี Google ที่ผู้ทดสอบใช้ใน Play Store บนโทรศัพท์ของเขา</li><li><b>Google Group:</b> ใส่ที่อยู่ของกลุ่ม เช่น yourgroup@googlegroups.com มีเพียงสมาชิกของกลุ่มเท่านั้นที่เข้าร่วมการทดสอบของคุณได้ และต้องเข้ากลุ่มก่อนจึงจะเข้าร่วมทดสอบ คุณแค่เพิ่มคนเข้ากลุ่ม ไม่ต้องกลับไปแตะ Play Console อีก</li></ul>
+
+<p>ถ้าใช้ Tester Exchange ให้เพิ่มกลุ่ม testerexchange-testers@googlegroups.com ในส่วน Google Groups แล้วบันทึก ที่อยู่เดียวนี้ทำให้ผู้ทดสอบทุกคนที่เราส่งไปติดตั้งแอปของคุณได้ ดูคู่มือเรื่อง Google Group เทียบกับรายชื่ออีเมลด้วย</p>
+</section>
+
+<section id="feedback">
+<h2>4. เพิ่มช่องทางรับฟีดแบ็ก</h2>
+<p>ในแท็บผู้ทดสอบเดียวกัน ให้เพิ่ม URL สำหรับฟีดแบ็กหรือที่อยู่อีเมล ผู้ทดสอบจะเห็นเมื่อเข้าร่วม คุณต้องสรุปฟีดแบ็กของผู้ทดสอบในแบบฟอร์มขอสิทธิ์ Production จึงควรทำให้ง่าย: Google Form สั้น ๆ หรืออีเมลเฉพาะก็ใช้ได้</p>
+
+
+
+</section>
+
+<section id="release">
+<h2>5. สร้างรุ่นและส่งให้ตรวจสอบ</h2>
+
+
+<ol><li>บนแทร็กการทดสอบแบบปิด กดสร้างรุ่นใหม่ (Create new release)</li><li>อัปโหลดไฟล์ .aab ให้ Play App Signing จัดการคีย์ของคุณ เว้นแต่คุณมีเหตุผลที่จะไม่ทำ</li><li>ใส่ชื่อรุ่นและบันทึกประจำรุ่นสั้น ๆ เช่น &quot;First closed test build&quot;</li><li>กดถัดไป แก้ข้อผิดพลาดที่พบ แล้วบันทึก</li><li>ไปที่ภาพรวมการเผยแพร่ (Publishing overview) แล้วส่งการเปลี่ยนแปลงให้ตรวจสอบ ถ้าเปิดการเผยแพร่ที่จัดการเอง (managed publishing) ไว้ คุณต้องกดเผยแพร่หลังได้รับอนุมัติด้วย</li></ol>
+<p>รุ่นการทดสอบแบบปิดของบัญชีใหม่จะถูกตรวจสอบก่อนขึ้นระบบ เวลาแตกต่างกันตั้งแต่ไม่กี่ชั่วโมงถึงหลายวัน</p>
+</section>
+
+<section id="link">
+<h2>6. แชร์ลิงก์เข้าร่วม</h2>
+<p>Google ระบุว่าลิงก์เข้าร่วมจะปรากฏเมื่อสถานะแอปเป็นเผยแพร่แล้ว (Published) เท่านั้น คัดลอกจากแท็บผู้ทดสอบ หน้าตาจะเป็นแบบ https://play.google.com/apps/testing/your.package.name</p>
+<p>ในการเผยแพร่ครั้งแรก ลิงก์อาจใช้เวลาหลายชั่วโมงกว่าจะใช้งานได้ ผู้ทดสอบค้นหาการทดสอบแบบปิดใน Google Play ไม่ได้ จึงต้องใช้ลิงก์นี้หรือลิงก์ Play Store ของแอปคุณ</p>
+
+<ol><li>ผู้ทดสอบลงชื่อเข้าใช้ด้วยบัญชี Google เดียวกับที่คุณเพิ่มไว้ (หรืออยู่ใน Google Group ของคุณ)</li><li>เปิดลิงก์เข้าร่วมและแตะเพื่อเป็นผู้ทดสอบ</li><li>ติดตั้งแอปของคุณจาก Google Play โดยใช้ลิงก์ในหน้านั้น</li><li>เปิดแอป และเปิดต่อเนื่องตลอด 14 วัน</li></ol>
+
+</section>
+
+<section id="check">
+<h2>7. ตรวจว่า 14 วันกำลังนับอยู่</h2>
+<p>แดชบอร์ดของคุณแสดงข้อกำหนดการทดสอบแบบปิดและจำนวนผู้ทดสอบที่เข้าร่วม ตรวจทุกสองสามวัน ถ้าตัวเลขต่ำกว่า 12 ให้หาคนมาแทนทันที เพราะข้อกำหนดนับผู้ทดสอบ 12 คนที่เข้าร่วมต่อเนื่อง</p>
+<p>ระหว่างการทดสอบ ให้อัปโหลดบิลด์ใหม่อย่างน้อยหนึ่งรุ่นไปยังแทร็กเดียวกัน เพื่อแสดงให้ Google เห็นว่าคุณลงมือตามฟีดแบ็ก และผู้ทดสอบบนแทร็กจะได้รับอัปเดตโดยอัตโนมัติ</p>
+
+
+
+</section>
+<section id="faq"><h2>คำถามที่พบบ่อย</h2>
+<details><summary>ใช้การทดสอบภายในแทนได้ไหม?</summary><p>ไม่ได้ ข้อกำหนดต้องเป็นการทดสอบแบบปิด Google ยังระบุว่าคนที่เข้าร่วมการทดสอบภายในของคุณจะเข้าร่วมการทดสอบแบบปิดไม่ได้จนกว่าจะออกจากการทดสอบภายใน</p></details>
+<details><summary>ควรใช้รายชื่ออีเมลหรือ Google Group?</summary><p>Google Group สะดวกกว่าเมื่อมีผู้ทดสอบเข้าออกบ่อย เพราะคุณไม่ต้องแก้แทร็กเลย รายชื่ออีเมลเหมาะกับกลุ่มเพื่อนที่แน่นอน ใช้ทั้งสองอย่างได้</p></details>
+<details><summary>ทำไมฉันไม่เห็นลิงก์เข้าร่วม?</summary><p>ลิงก์จะแสดงเมื่อรุ่นบนแทร็กการทดสอบแบบปิดเผยแพร่แล้วเท่านั้น ตรวจภาพรวมการเผยแพร่ว่ามีการตรวจสอบที่รออยู่หรือการเปลี่ยนแปลงที่ยังไม่ได้ส่งหรือไม่</p></details>
+<details><summary>ผู้ทดสอบต้องมีบัญชี Google ไหม?</summary><p>ต้องมี Google ระบุว่าผู้ใช้ต้องมีบัญชี Google หรือบัญชี Google Workspace เพื่อเข้าร่วมการทดสอบ และต้องเป็นบัญชีที่ใช้ใน Play Store บนโทรศัพท์ของเขา</p></details>
+<details><summary>ตั้งแอปทดสอบแบบปิดเป็นแอปเสียเงินได้ไหม?</summary><p>ได้ แต่ Google ระบุว่าผู้ทดสอบต้องซื้อแอปเสียเงินในการทดสอบแบบปิด ควรให้แอปทดสอบฟรีเพื่อไม่ให้เสียผู้ทดสอบ</p></details>
+</section>
+<div class="cta"><span>คนจริงเปิดแอปของคุณบนโทรศัพท์ของตัวเองนาน 14 วัน จ่ายครั้งเดียว หรือทดสอบแอปอื่นฟรี</span><a class="btn" href="https://testerexchange.com/?lang=th#buy">รับผู้ทดสอบ 12 คน</a></div>
+<section><h2>คู่มืออื่น ๆ</h2><ul class="related"><li><a href="https://testerexchange.com/th/" hreflang="th">วิธีหาผู้ทดสอบ 12 คนสำหรับการทดสอบแบบปิดบน Google Play</a></li><li><a href="https://testerexchange.com/th/12-testers-app-builders/" hreflang="th">ผู้ทดสอบ 12 คนของ Google Play สำหรับแอปที่สร้างด้วย App Inventor, Kodular, Flutter, Unity และเครื่องมืออื่น ๆ</a></li><li><a href="https://testerexchange.com/th/app-not-available-for-testers/" hreflang="th">แก้ปัญหา &quot;แอปไม่พร้อมใช้งาน&quot; สำหรับผู้ทดสอบแบบปิดบน Google Play</a></li><li><a href="https://testerexchange.com/th/automate-closed-testing-with-ai-agents/" hreflang="th">ทำการทดสอบแบบปิดบน Google Play อัตโนมัติด้วย AI Agent</a></li><li><a href="https://testerexchange.com/th/best-way-to-get-12-testers/" hreflang="th">วิธีที่ดีที่สุดในการหาผู้ทดสอบ 12 คนสำหรับการทดสอบแบบปิดของ Google Play</a></li><li><a href="https://testerexchange.com/th/closed-testing-for-games/" hreflang="th">การทดสอบแบบปิดสำหรับเกมบน Google Play: คู่มือ Unity, Unreal และ Godot</a></li><li><a href="https://testerexchange.com/th/does-14-day-closed-test-reset/" hreflang="th">การทดสอบแบบปิด 14 วันจะรีเซ็ตไหมเมื่อมีผู้ทดสอบออก?</a></li><li><a href="https://testerexchange.com/th/earn-money-testing-android-apps/" hreflang="th">หาเงินจากการทดสอบแอป Android: คู่มือตรงไปตรงมา</a></li><li><a href="https://testerexchange.com/th/free-closed-testing-testers/" hreflang="th">วิธีหาผู้ทดสอบ 12 คนสำหรับการทดสอบแบบปิดบน Google Play แบบฟรี</a></li><li><a href="https://testerexchange.com/th/friends-family-closed-testers/" hreflang="th">ใช้เพื่อนและครอบครัวเป็นผู้ทดสอบ Google Play 12 คนของคุณ</a></li><li><a href="https://testerexchange.com/th/google-group-vs-email-list/" hreflang="th">ใช้ Google Group หรือรายชื่ออีเมลสำหรับการทดสอบแบบปิด?</a></li><li><a href="https://testerexchange.com/th/google-play-closed-testing-requirements/" hreflang="th">ข้อกำหนดการทดสอบแบบปิดของ Google Play: คู่มือฉบับสมบูรณ์ปี 2026</a></li><li><a href="https://testerexchange.com/th/google-play-review-time-after-closed-testing/" hreflang="th">หลังครบ 14 วัน: เวลาตรวจสอบสิทธิ์ Production และการเผยแพร่ครั้งแรก</a></li><li><a href="https://testerexchange.com/th/insufficient-testing-engagement/" hreflang="th">ถูกปฏิเสธหลังทดสอบแบบปิด? วิธีแก้ “ต้องทดสอบเพิ่มเติม”</a></li><li><a href="https://testerexchange.com/th/keep-testers-active-14-days/" hreflang="th">วิธีทำให้ผู้ทดสอบแบบปิดใช้งานต่อเนื่องครบทั้ง 14 วัน</a></li><li><a href="https://testerexchange.com/th/organization-vs-personal-developer-account/" hreflang="th">บัญชีนักพัฒนา Google Play แบบองค์กรเทียบกับแบบส่วนตัว</a></li><li><a href="https://testerexchange.com/th/paid-closed-testers-checklist/" hreflang="th">สิ่งที่ต้องตรวจก่อนจ่ายเงินซื้อผู้ทดสอบแบบปิดของ Google Play</a></li><li><a href="https://testerexchange.com/th/production-access-questions/" hreflang="th">วิธีตอบคำถามขอสิทธิ์ Production ของ Google Play</a></li><li><a href="https://testerexchange.com/th/production-access-rejected/" hreflang="th">ถูกปฏิเสธสิทธิ์เข้าถึง Production: ต้องทำอย่างไรต่อ</a></li><li><a href="https://testerexchange.com/th/tools/production-answers/" hreflang="th">ตัวช่วยร่างคำตอบขอสิทธิ์ Production</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

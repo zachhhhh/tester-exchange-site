@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="mr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI एजंट्सने Google Play क्लोज्ड टेस्टिंग ऑटोमेट करा</title>
+<meta name="description" content="Google Play च्या 12 टेस्टर्सच्या क्लोज्ड टेस्टची कागदी कामे Claude, ChatGPT किंवा Cursor कडे सोपवा: Tester Exchange चा MCP सर्व्हर, HTTP API आणि A2A एजंट, सेटअप कमांड्ससह, आणि माणसालाच काय करावे लागते.">
+<link rel="canonical" href="https://testerexchange.com/mr/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="am" href="https://testerexchange.com/am/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="ar" href="https://testerexchange.com/ar/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="az" href="https://testerexchange.com/az/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="bg" href="https://testerexchange.com/bg/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="bn" href="https://testerexchange.com/bn/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="cs" href="https://testerexchange.com/cs/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="de" href="https://testerexchange.com/de/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="el" href="https://testerexchange.com/el/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="fa" href="https://testerexchange.com/fa/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="fil" href="https://testerexchange.com/fil/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="gu" href="https://testerexchange.com/gu/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="ha" href="https://testerexchange.com/ha/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="he" href="https://testerexchange.com/he/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="hi" href="https://testerexchange.com/hi/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="hr" href="https://testerexchange.com/hr/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="hu" href="https://testerexchange.com/hu/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="ig" href="https://testerexchange.com/ig/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="it" href="https://testerexchange.com/it/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="ja" href="https://testerexchange.com/ja/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="kk" href="https://testerexchange.com/kk/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="km" href="https://testerexchange.com/km/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="kn" href="https://testerexchange.com/kn/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="ko" href="https://testerexchange.com/ko/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="ml" href="https://testerexchange.com/ml/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="mr" href="https://testerexchange.com/mr/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="ms" href="https://testerexchange.com/ms/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="my" href="https://testerexchange.com/my/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="ne" href="https://testerexchange.com/ne/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="nl" href="https://testerexchange.com/nl/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="pa" href="https://testerexchange.com/pa/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="pl" href="https://testerexchange.com/pl/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="ro" href="https://testerexchange.com/ro/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="si" href="https://testerexchange.com/si/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="sk" href="https://testerexchange.com/sk/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="sr" href="https://testerexchange.com/sr/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="sv" href="https://testerexchange.com/sv/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="sw" href="https://testerexchange.com/sw/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="ta" href="https://testerexchange.com/ta/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="te" href="https://testerexchange.com/te/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="th" href="https://testerexchange.com/th/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="uk" href="https://testerexchange.com/uk/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="ur" href="https://testerexchange.com/ur/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="uz" href="https://testerexchange.com/uz/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="yo" href="https://testerexchange.com/yo/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="zh-Hans" href="https://testerexchange.com/zh-cn/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="zh-Hant" href="https://testerexchange.com/zh-tw/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/automate-closed-testing-with-ai-agents/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/">
+<meta property="og:type" content="article"><meta property="og:title" content="AI एजंट्सने Google Play क्लोज्ड टेस्टिंग ऑटोमेट करा">
+<meta property="og:description" content="Google Play च्या 12 टेस्टर्सच्या क्लोज्ड टेस्टची कागदी कामे Claude, ChatGPT किंवा Cursor कडे सोपवा: Tester Exchange चा MCP सर्व्हर, HTTP API आणि A2A एजंट, सेटअप कमांड्ससह, आणि माणसालाच काय करावे लागते."><meta property="og:url" content="https://testerexchange.com/mr/automate-closed-testing-with-ai-agents/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"AI एजंट्सने Google Play क्लोज्ड टेस्टिंग ऑटोमेट करा","description":"Google Play च्या 12 टेस्टर्सच्या क्लोज्ड टेस्टची कागदी कामे Claude, ChatGPT किंवा Cursor कडे सोपवा: Tester Exchange चा MCP सर्व्हर, HTTP API आणि A2A एजंट, सेटअप कमांड्ससह, आणि माणसालाच काय करावे लागते.","inLanguage":"mr","datePublished":"2026-11-06","dateModified":"2026-11-06","author":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"},"url":"https://testerexchange.com/mr/automate-closed-testing-with-ai-agents/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/mr/"},{"@type":"ListItem","position":3,"name":"AI एजंट्सने Google Play क्लोज्ड टेस्टिंग ऑटोमेट करा","item":"https://testerexchange.com/mr/automate-closed-testing-with-ai-agents/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"AI एजंट माझ्यासाठी 14 दिवसांची टेस्ट पूर्ण करू शकतो का?","acceptedAnswer":{"@type":"Answer","text":"नाही. 14 दिवसांसाठी खऱ्या लोकांनी स्वतःच्या फोनवर तुमचे ॲप वापरणे आवश्यक आहे. एजंट्स सेटअप, देखरेख आणि रिपोर्टिंग सांभाळतात."}},{"@type":"Question","name":"एजंट टेस्टर्ससाठी पैसे देऊ शकतो का?","acceptedAnswer":{"@type":"Answer","text":"नाही. तो चेकआउट लिंक्स देऊ शकतो, पण पेमेंट नेहमी माणसाच्या ब्राउझरमध्येच होते."}},{"@type":"Question","name":"कोणते क्लायंट्स MCP सर्व्हरसोबत चालतात?","acceptedAnswer":{"@type":"Answer","text":"कस्टम हेडरसह Streamable HTTP वरील रिमोट MCP सपोर्ट करणारा कोणताही क्लायंट, ज्यात Claude Code, Claude Desktop, Cursor आणि VS Code येतात. इतर क्लायंट्स HTTP API वापरू शकतात."}},{"@type":"Question","name":"टोकन कुठून मिळते?","acceptedAnswer":{"@type":"Answer","text":"साइन इन केल्यानंतर https://testerexchange.com/api वर. टोकन्स tx_ ने सुरू होतात आणि कधीही रद्द करता येतात."}},{"@type":"Question","name":"एजंट माझ्या Play Console मध्ये काही बदलतो का?","acceptedAnswer":{"@type":"Answer","text":"नाही. त्याला तुमच्या Play Console चा ॲक्सेस नसतो. तिथे कोणत्या पायऱ्या कराव्यात ते तो तुम्हाला सांगतो."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=mr">Tester Exchange</a><span class="grow"></span>
+<select aria-label="भाषा" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/">English</option><option value="https://testerexchange.com/am/automate-closed-testing-with-ai-agents/">አማርኛ</option><option value="https://testerexchange.com/ar/automate-closed-testing-with-ai-agents/">العربية</option><option value="https://testerexchange.com/az/automate-closed-testing-with-ai-agents/">Azərbaycanca</option><option value="https://testerexchange.com/bg/automate-closed-testing-with-ai-agents/">Български</option><option value="https://testerexchange.com/bn/automate-closed-testing-with-ai-agents/">বাংলা</option><option value="https://testerexchange.com/cs/automate-closed-testing-with-ai-agents/">Čeština</option><option value="https://testerexchange.com/de/automate-closed-testing-with-ai-agents/">Deutsch</option><option value="https://testerexchange.com/el/automate-closed-testing-with-ai-agents/">Ελληνικά</option><option value="https://testerexchange.com/es/automate-closed-testing-with-ai-agents/">Español</option><option value="https://testerexchange.com/fa/automate-closed-testing-with-ai-agents/">فارسی</option><option value="https://testerexchange.com/fil/automate-closed-testing-with-ai-agents/">Filipino</option><option value="https://testerexchange.com/fr/automate-closed-testing-with-ai-agents/">Français</option><option value="https://testerexchange.com/gu/automate-closed-testing-with-ai-agents/">ગુજરાતી</option><option value="https://testerexchange.com/ha/automate-closed-testing-with-ai-agents/">Hausa</option><option value="https://testerexchange.com/he/automate-closed-testing-with-ai-agents/">עברית</option><option value="https://testerexchange.com/hi/automate-closed-testing-with-ai-agents/">हिन्दी</option><option value="https://testerexchange.com/hr/automate-closed-testing-with-ai-agents/">Hrvatski</option><option value="https://testerexchange.com/hu/automate-closed-testing-with-ai-agents/">Magyar</option><option value="https://testerexchange.com/id/automate-closed-testing-with-ai-agents/">Bahasa Indonesia</option><option value="https://testerexchange.com/ig/automate-closed-testing-with-ai-agents/">Igbo</option><option value="https://testerexchange.com/it/automate-closed-testing-with-ai-agents/">Italiano</option><option value="https://testerexchange.com/ja/automate-closed-testing-with-ai-agents/">日本語</option><option value="https://testerexchange.com/kk/automate-closed-testing-with-ai-agents/">Қазақша</option><option value="https://testerexchange.com/km/automate-closed-testing-with-ai-agents/">ខ្មែរ</option><option value="https://testerexchange.com/kn/automate-closed-testing-with-ai-agents/">ಕನ್ನಡ</option><option value="https://testerexchange.com/ko/automate-closed-testing-with-ai-agents/">한국어</option><option value="https://testerexchange.com/ml/automate-closed-testing-with-ai-agents/">മലയാളം</option><option value="https://testerexchange.com/mr/automate-closed-testing-with-ai-agents/" selected>मराठी</option><option value="https://testerexchange.com/ms/automate-closed-testing-with-ai-agents/">Bahasa Melayu</option><option value="https://testerexchange.com/my/automate-closed-testing-with-ai-agents/">မြန်မာ</option><option value="https://testerexchange.com/ne/automate-closed-testing-with-ai-agents/">नेपाली</option><option value="https://testerexchange.com/nl/automate-closed-testing-with-ai-agents/">Nederlands</option><option value="https://testerexchange.com/pa/automate-closed-testing-with-ai-agents/">ਪੰਜਾਬੀ</option><option value="https://testerexchange.com/pl/automate-closed-testing-with-ai-agents/">Polski</option><option value="https://testerexchange.com/pt/automate-closed-testing-with-ai-agents/">Português</option><option value="https://testerexchange.com/ro/automate-closed-testing-with-ai-agents/">Română</option><option value="https://testerexchange.com/ru/automate-closed-testing-with-ai-agents/">Русский</option><option value="https://testerexchange.com/si/automate-closed-testing-with-ai-agents/">සිංහල</option><option value="https://testerexchange.com/sk/automate-closed-testing-with-ai-agents/">Slovenčina</option><option value="https://testerexchange.com/sr/automate-closed-testing-with-ai-agents/">Српски</option><option value="https://testerexchange.com/sv/automate-closed-testing-with-ai-agents/">Svenska</option><option value="https://testerexchange.com/sw/automate-closed-testing-with-ai-agents/">Kiswahili</option><option value="https://testerexchange.com/ta/automate-closed-testing-with-ai-agents/">தமிழ்</option><option value="https://testerexchange.com/te/automate-closed-testing-with-ai-agents/">తెలుగు</option><option value="https://testerexchange.com/th/automate-closed-testing-with-ai-agents/">ไทย</option><option value="https://testerexchange.com/tr/automate-closed-testing-with-ai-agents/">Türkçe</option><option value="https://testerexchange.com/uk/automate-closed-testing-with-ai-agents/">Українська</option><option value="https://testerexchange.com/ur/automate-closed-testing-with-ai-agents/">اردو</option><option value="https://testerexchange.com/uz/automate-closed-testing-with-ai-agents/">Oʻzbekcha</option><option value="https://testerexchange.com/vi/automate-closed-testing-with-ai-agents/">Tiếng Việt</option><option value="https://testerexchange.com/yo/automate-closed-testing-with-ai-agents/">Yorùbá</option><option value="https://testerexchange.com/zh-cn/automate-closed-testing-with-ai-agents/">简体中文</option><option value="https://testerexchange.com/zh-tw/automate-closed-testing-with-ai-agents/">繁體中文</option><option value="https://testerexchange.com/zu/automate-closed-testing-with-ai-agents/">isiZulu</option>
+</select>
+<a href="https://testerexchange.com/?lang=mr">Tester Exchange उघडा</a></header>
+<main>
+
+<h1>AI एजंट्सने Google Play क्लोज्ड टेस्टिंग ऑटोमेट करा</h1>
+<p class="muted">नोव्हेंबर 2026 मध्ये अपडेट केले</p>
+<p class="lede">तुम्ही आधीच AI एजंटसोबत कोड शिप करत असाल, तर Google Play च्या क्लोज्ड टेस्टिंग अटीची बहुतेक कटकटीची कामेही त्याला सोपवता येतात: ॲप लिस्ट करणे, टेस्टर्स मिळवणे, प्रगती तपासणे आणि प्रोडक्शन ॲक्सेस फॉर्मसाठी आकडे काढणे. यासाठी Tester Exchange कडे MCP सर्व्हर, एका एंडपॉइंटचा HTTP API आणि A2A एजंट कार्ड आहे. हे मार्गदर्शक Claude Code, Claude Desktop, Cursor आणि इतर क्लायंट्स कसे जोडायचे, काय विचारायचे आणि कोणताही एजंट तुमच्यासाठी करू शकत नाही असे भाग कोणते ते सांगते.</p>
+<div class="cta"><span>खरी माणसे त्यांच्या स्वतःच्या फोनवर 14 दिवस तुमचे ॲप उघडतात. एकदाच पैसे द्या, किंवा इतर ॲप्स टेस्ट करून मोफत मिळवा.</span><a class="btn" href="https://testerexchange.com/?lang=mr#buy">12 टेस्टर्स मिळवा</a></div>
+<nav class="toc"><b>या पेजवर</b><ul><li><a href="#what">एजंट काय करू शकतो आणि काय नाही</a></li><li><a href="#token">1. टोकन तयार करा</a></li><li><a href="#mcp">2. MCP सर्व्हर जोडा</a></li><li><a href="#tool">3. सुरुवात करण्यासाठी एक टूल: get_testers</a></li><li><a href="#prompts">चालणारे प्रॉम्प्ट्स</a></li><li><a href="#http">स्क्रिप्ट्स आणि CI साठी HTTP API</a></li><li><a href="#a2a">A2A एजंट कार्ड</a></li><li><a href="#flow">सुरुवातीपासून शेवटपर्यंत पूर्ण प्रवास</a></li><li><a href="#safety">सुरक्षेच्या सूचना</a></li><li><a href="#faq">वारंवार विचारले जाणारे प्रश्न</a></li></ul></nav>
+
+<section id="what">
+<h2>एजंट काय करू शकतो आणि काय नाही</h2>
+<p>13 नोव्हेंबर 2023 नंतर तयार झालेल्या पर्सनल डेव्हलपर अकाउंट्सनी प्रोडक्शनसाठी अर्ज करण्यापूर्वी किमान 12 टेस्टर्स सलग 14 दिवस opt-in असलेली क्लोज्ड टेस्ट चालवणे Google ला हवे आहे. याभोवतीचे बहुतेक काम समन्वयाचे आहे, आणि ते एजंट्स चांगले करतात.</p>
+<ul><li><b>एजंट हे करू शकतो:</b> तुमचे ॲप जोडणे, टेस्टर कॅम्पेन सुरू करणे, तुमची क्रेडिट्स लावणे, किती टेस्टर्स सक्रिय आहेत ते तपासणे, कॅम्पेन थांबवणे किंवा बंद करणे, रोजच्या ॲक्टिव्हिटीचा रिपोर्ट आणणे आणि त्यावरून प्रोडक्शन ॲक्सेसची उत्तरे लिहायला मदत करणे.</li><li><b>माणसाने करायलाच हवे:</b> टेस्टर्सचा Google Group Play Console मधील क्लोज्ड ट्रॅकवर जोडणे, रिलीज पब्लिश करणे, क्रेडिट्ससाठी पैसे देणे (चेकआउट नेहमी माणसाच्या ब्राउझरमध्ये होते) आणि Apply for production वर क्लिक करणे.</li><li><b>कोणीही ऑटोमेट करू शकत नाही:</b> 14 दिवसांचा खरा वापर. तो खरे लोक त्यांच्या स्वतःच्या Android फोनवर करतात, आणि Google च्या नियमाचा तोच मूळ हेतू आहे.</li></ul>
+
+
+</section>
+
+<section id="token">
+<h2>1. टोकन तयार करा</h2>
+
+
+<ol><li>https://testerexchange.com/api वर साइन इन करा.</li><li>पर्सनल टोकन तयार करा. ते tx_ ने सुरू होते. ते आत्ताच कॉपी करा आणि पासवर्डप्रमाणे जपून ठेवा.</li><li>टोकन कधीही रद्द करता येतात. टोकन कॅम्पेन्सवर क्रेडिट्स खर्च करू शकते, पण ते पेमेंट करू शकत नाही, पैसे काढू शकत नाही किंवा तुमचे अकाउंट डिलीट करू शकत नाही.</li></ol>
+
+</section>
+
+<section id="mcp">
+<h2>2. MCP सर्व्हर जोडा</h2>
+<p>MCP सर्व्हर https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp येथे Streamable HTTP वापरतो. तुमचे टोकन हेडरमध्ये पाठवा: Authorization: Bearer tx_YOUR_TOKEN.</p>
+<p><b>Claude Code:</b> तुमच्या टर्मिनलमध्ये ही कमांड एकदा चालवा.</p>
+<p>claude mcp add --transport http tester-exchange https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp --header &quot;Authorization: Bearer tx_YOUR_TOKEN&quot;</p>
+<p><b>Claude Desktop, Cursor, VS Code आणि JSON कॉन्फिग असलेले इतर क्लायंट्स:</b> tester-exchange नावाचा सर्व्हर जोडा, type http ठेवा, वरील URL द्या आणि headers मध्ये Authorization ला Bearer tx_YOUR_TOKEN असे सेट करा. कॉन्फिग फाइल नेमकी कुठे असते ते तुमच्या क्लायंटवर अवलंबून आहे; त्याचे MCP डॉक्युमेंटेशन पाहा.</p>
+<p><b>फक्त URL घेणारे क्लायंट्स</b> (काही ChatGPT आणि वेब कनेक्टर्स): https://testerexchange.com/agents/ वरील डॉक्स त्यांच्यासाठी URL स्वरूप देतात. टोकनशिवाय पब्लिक टूल्स (Tester Exchange काय आहे, किंमत, प्लॅटफॉर्म आकडेवारी) तरीही चालतात.</p>
+
+
+
+</section>
+
+<section id="tool">
+<h2>3. सुरुवात करण्यासाठी एक टूल: get_testers</h2>
+<p>संपूर्ण टूल यादी शिकण्याची गरज नाही. मुख्य टूल आहे <b>get_testers(package_name, name?)</b>. एका कॉलमध्ये तुमचे ॲप जोडले जाते, त्याची टेस्ट सुरू होते, तुमची क्रेडिट्स लागू होतात आणि तुमची प्रगती, तसेच फक्त माणसाने करायच्या पायऱ्या (उदा. Play Console मध्ये Google Group जोडणे) परत मिळतात. प्रगती तपासायला हा कॉल कधीही पुन्हा करा.</p>
+<p>इतर टूल्स तपशील सांभाळतात: my_apps, campaign_report (टेस्टर्स, रोजची ॲक्टिव्हिटी, फीडबॅक आणि प्रोडक्शन ॲक्सेसचा डेटा), add_testers, set_campaign_status (थांबवा, पुन्हा सुरू करा किंवा बंद करा; न वापरलेली क्रेडिट्स तुमच्या बॅलन्समध्ये परत जातात), share_kit आणि buy_credits_links, जे माणसाने पैसे द्यायच्या चेकआउट लिंक्स देते.</p>
+
+
+
+</section>
+
+<section id="prompts">
+<h2>चालणारे प्रॉम्प्ट्स</h2>
+
+<ul><li>&quot;com.example.app साठी 15 टेस्टर्स मिळवा आणि मला Play Console मध्ये काय करायचे ते सांग.&quot;</li><li>&quot;com.example.app साठी माझे Tester Exchange कॅम्पेन तपास. या आठवड्यात दर दिवशी किती टेस्टर्स सक्रिय होते?&quot;</li><li>&quot;कॅम्पेन रिपोर्ट काढ आणि माझी प्रोडक्शन ॲक्सेसची उत्तरे लिही. फक्त खरे आकडे वापर.&quot;</li><li>&quot;प्रोडक्शन ॲक्सेस मंजूर झाला आहे, त्यामुळे com.example.app चे कॅम्पेन आता बंद कर.&quot;</li></ul>
+
+<p>12 ऐवजी 15 टेस्टर्स मागा, म्हणजे एखादा गळल्यास तुम्ही Google च्या किमानच्या खाली जाणार नाही.</p>
+</section>
+
+<section id="http">
+<h2>स्क्रिप्ट्स आणि CI साठी HTTP API</h2>
+<p>तुमचे टूल MCP बोलत नसेल, तर HTTP एंडपॉइंट वापरा: POST https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/agent_call. बॉडी JSON असते आणि त्यात p_token (तुमचे tx_ टोकन), p_action (उदा. help, my_apps किंवा start_campaign) आणि p_args (उदा. package_name आणि टेस्टर्सची संख्या) असतात. डॉक्समध्ये दाखवलेले पब्लिक apikey हेडर पाठवा.</p>
+<p>आधी help ॲक्शन कॉल करा: ती प्रत्येक ॲक्शन आणि तिचे आर्ग्युमेंट्स परत देते. संपूर्ण स्कीमा https://testerexchange.com/openapi.json वर आहे, जो ChatGPT custom GPT actions आणि इतर OpenAPI टूल्ससोबत चालतो.</p>
+
+
+
+</section>
+
+<section id="a2a">
+<h2>A2A एजंट कार्ड</h2>
+<p>एजंट-टू-एजंट सेटअपसाठी Tester Exchange https://testerexchange.com/.well-known/agent-card.json येथे A2A एजंट कार्ड प्रकाशित करते. A2A प्रोटोकॉल सपोर्ट करणारे ऑर्केस्ट्रेटर्स एजंट काय देतो आणि त्याला कसे कॉल करायचे ते शोधू शकतात. तुमच्या अकाउंटशी जोडलेल्या कोणत्याही गोष्टीसाठी तेच tx_ टोकन वापरा.</p>
+
+
+
+</section>
+
+<section id="flow">
+<h2>सुरुवातीपासून शेवटपर्यंत पूर्ण प्रवास</h2>
+
+
+<ol><li>तुम्ही Play Console मधील क्लोज्ड ट्रॅकवर तुमचे पहिले .aab अपलोड करता.</li><li>तुमचा एजंट तुमच्या पॅकेज नावासाठी get_testers कॉल करतो आणि क्लोज्ड ट्रॅकवर Google Groups खाली testerexchange-testers@googlegroups.com जोडायला सांगतो.</li><li>तुम्ही ग्रुप जोडता, सेव्ह करता आणि रिलीज पब्लिश झाले आहे याची खात्री करता.</li><li>क्रेडिट्स कमी असतील, तर एजंट तुम्हाला चेकआउट लिंक देतो. तुम्ही पैसे देता (12 टेस्टर्सचे $12.99, 15 चे $14.99, 25 चे $22.99) किंवा https://testerexchange.com/earn वर इतर ॲप्स टेस्ट करून क्रेडिट्स मोफत कमावता.</li><li>खरे टेस्टर्स 14 दिवस तुमचे ॲप इन्स्टॉल करून वापरतात. तुमचा एजंट रोज प्रगती तपासतो आणि सक्रिय टेस्टर्स कमी झाले तर तुम्हाला सावध करतो.</li><li>दिवस 15 ला एजंट कॅम्पेन रिपोर्ट काढतो आणि तुमची प्रोडक्शन ॲक्सेसची उत्तरे लिहून देतो. तुम्ही ती तपासता आणि Apply for production वर क्लिक करता.</li></ol>
+
+</section>
+
+<section id="safety">
+<h2>सुरक्षेच्या सूचना</h2>
+
+<ul><li>टोकन्स git मध्ये ठेवू नका. ती तुमच्या क्लायंटच्या सीक्रेट स्टोअरमध्ये किंवा एनव्हायर्नमेंट व्हेरिएबलमध्ये ठेवा.</li><li>आमच्याकडे टोकन्स फक्त हॅश स्वरूपात साठवली जातात आणि प्रत्येक अकाउंटला 10 ची मर्यादा आहे. वापरात नसलेली टोकन्स रद्द करा.</li><li>फॉर्म सबमिट करण्यापूर्वी एजंटने तुमच्या प्रोडक्शन फॉर्मसाठी काय लिहिले आहे ते वाचा. तुमची टेस्ट खरेपणाने सांगावी अशी Google ची अपेक्षा आहे.</li></ul>
+
+
+</section>
+<section id="faq"><h2>वारंवार विचारले जाणारे प्रश्न</h2>
+<details><summary>AI एजंट माझ्यासाठी 14 दिवसांची टेस्ट पूर्ण करू शकतो का?</summary><p>नाही. 14 दिवसांसाठी खऱ्या लोकांनी स्वतःच्या फोनवर तुमचे ॲप वापरणे आवश्यक आहे. एजंट्स सेटअप, देखरेख आणि रिपोर्टिंग सांभाळतात.</p></details>
+<details><summary>एजंट टेस्टर्ससाठी पैसे देऊ शकतो का?</summary><p>नाही. तो चेकआउट लिंक्स देऊ शकतो, पण पेमेंट नेहमी माणसाच्या ब्राउझरमध्येच होते.</p></details>
+<details><summary>कोणते क्लायंट्स MCP सर्व्हरसोबत चालतात?</summary><p>कस्टम हेडरसह Streamable HTTP वरील रिमोट MCP सपोर्ट करणारा कोणताही क्लायंट, ज्यात Claude Code, Claude Desktop, Cursor आणि VS Code येतात. इतर क्लायंट्स HTTP API वापरू शकतात.</p></details>
+<details><summary>टोकन कुठून मिळते?</summary><p>साइन इन केल्यानंतर https://testerexchange.com/api वर. टोकन्स tx_ ने सुरू होतात आणि कधीही रद्द करता येतात.</p></details>
+<details><summary>एजंट माझ्या Play Console मध्ये काही बदलतो का?</summary><p>नाही. त्याला तुमच्या Play Console चा ॲक्सेस नसतो. तिथे कोणत्या पायऱ्या कराव्यात ते तो तुम्हाला सांगतो.</p></details>
+</section>
+<div class="cta"><span>खरी माणसे त्यांच्या स्वतःच्या फोनवर 14 दिवस तुमचे ॲप उघडतात. एकदाच पैसे द्या, किंवा इतर ॲप्स टेस्ट करून मोफत मिळवा.</span><a class="btn" href="https://testerexchange.com/?lang=mr#buy">12 टेस्टर्स मिळवा</a></div>
+<section><h2>आणखी मार्गदर्शक</h2><ul class="related"><li><a href="https://testerexchange.com/mr/" hreflang="mr">Google Play क्लोज्ड टेस्टिंगसाठी 12 टेस्टर्स कसे मिळवायचे</a></li><li><a href="https://testerexchange.com/mr/12-testers-app-builders/" hreflang="mr">App Inventor, Kodular, Flutter, Unity आणि इतर बिल्डर्सनी बनवलेल्या ॲप्ससाठी Google Play 12 टेस्टर्स</a></li><li><a href="https://testerexchange.com/mr/app-not-available-for-testers/" hreflang="mr">Google Play क्लोज्ड टेस्टर्ससाठी &quot;app not available&quot; कसे दुरुस्त करायचे</a></li><li><a href="https://testerexchange.com/mr/best-way-to-get-12-testers/" hreflang="mr">Google Play क्लोज्ड टेस्टिंगसाठी 12 टेस्टर्स मिळवण्याचा सर्वोत्तम मार्ग</a></li><li><a href="https://testerexchange.com/mr/closed-testing-for-games/" hreflang="mr">Google Play वर गेम्ससाठी क्लोज्ड टेस्टिंग: Unity, Unreal आणि Godot साठी मार्गदर्शक</a></li><li><a href="https://testerexchange.com/mr/does-14-day-closed-test-reset/" hreflang="mr">टेस्टर्स गळले तर 14 दिवसांची क्लोज्ड टेस्ट रीसेट होते का?</a></li><li><a href="https://testerexchange.com/mr/earn-money-testing-android-apps/" hreflang="mr">Android ॲप्स टेस्ट करून पैसे कमवा: प्रामाणिक मार्गदर्शक</a></li><li><a href="https://testerexchange.com/mr/free-closed-testing-testers/" hreflang="mr">Google Play क्लोज्ड टेस्टिंगसाठी 12 टेस्टर्स मोफत कसे मिळवायचे</a></li><li><a href="https://testerexchange.com/mr/friends-family-closed-testers/" hreflang="mr">मित्र आणि कुटुंबीयांना तुमचे 12 Google Play टेस्टर्स म्हणून वापरणे</a></li><li><a href="https://testerexchange.com/mr/google-group-vs-email-list/" hreflang="mr">तुमच्या क्लोज्ड टेस्टसाठी Google Group की ईमेल लिस्ट?</a></li><li><a href="https://testerexchange.com/mr/google-play-closed-testing-requirements/" hreflang="mr">Google Play क्लोज्ड टेस्टिंग अटी: संपूर्ण 2026 मार्गदर्शक</a></li><li><a href="https://testerexchange.com/mr/google-play-review-time-after-closed-testing/" hreflang="mr">14 दिवसांनंतर: प्रोडक्शन ॲक्सेस रिव्ह्यू वेळ आणि तुमचे पहिले रिलीज</a></li><li><a href="https://testerexchange.com/mr/insufficient-testing-engagement/" hreflang="mr">क्लोज्ड टेस्टिंगनंतर रिजेक्ट झाले? “more testing required” कसे दुरुस्त करायचे</a></li><li><a href="https://testerexchange.com/mr/keep-testers-active-14-days/" hreflang="mr">क्लोज्ड टेस्टर्सना सर्व 14 दिवस सक्रिय कसे ठेवायचे</a></li><li><a href="https://testerexchange.com/mr/organization-vs-personal-developer-account/" hreflang="mr">ऑर्गनायझेशन विरुद्ध पर्सनल Google Play डेव्हलपर अकाउंट</a></li><li><a href="https://testerexchange.com/mr/paid-closed-testers-checklist/" hreflang="mr">Google Play क्लोज्ड टेस्टर्ससाठी पैसे देण्यापूर्वी काय तपासावे</a></li><li><a href="https://testerexchange.com/mr/production-access-questions/" hreflang="mr">Google Play च्या प्रोडक्शन ॲक्सेस प्रश्नांची उत्तरे कशी द्यायची</a></li><li><a href="https://testerexchange.com/mr/production-access-rejected/" hreflang="mr">प्रोडक्शन ॲक्सेस नाकारला: पुढे काय करायचे</a></li><li><a href="https://testerexchange.com/mr/set-up-closed-testing-track/" hreflang="mr">Play Console मध्ये क्लोज्ड टेस्टिंग ट्रॅक सेट करा, पायरी-पायरीने</a></li><li><a href="https://testerexchange.com/mr/tools/production-answers/" hreflang="mr">प्रोडक्शन ॲक्सेस उत्तर जनरेटर</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

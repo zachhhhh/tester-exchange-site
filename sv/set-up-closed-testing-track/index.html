@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Så ställer du in ett slutet testspår i Google Play Console</title>
+<meta name="description" content="Steg för steg: skapa ett slutet testspår i Play Console, lägg till testare med e-postlista eller Google Group, publicera utgåvan och dela anmälningslänken så att de 14 dagarna kan börja.">
+<link rel="canonical" href="https://testerexchange.com/sv/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="am" href="https://testerexchange.com/am/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ar" href="https://testerexchange.com/ar/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="az" href="https://testerexchange.com/az/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="bg" href="https://testerexchange.com/bg/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="bn" href="https://testerexchange.com/bn/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="cs" href="https://testerexchange.com/cs/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="de" href="https://testerexchange.com/de/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="el" href="https://testerexchange.com/el/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="fa" href="https://testerexchange.com/fa/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="fil" href="https://testerexchange.com/fil/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="gu" href="https://testerexchange.com/gu/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ha" href="https://testerexchange.com/ha/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="he" href="https://testerexchange.com/he/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="hi" href="https://testerexchange.com/hi/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="hr" href="https://testerexchange.com/hr/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="hu" href="https://testerexchange.com/hu/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ig" href="https://testerexchange.com/ig/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="it" href="https://testerexchange.com/it/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ja" href="https://testerexchange.com/ja/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="kk" href="https://testerexchange.com/kk/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="km" href="https://testerexchange.com/km/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="kn" href="https://testerexchange.com/kn/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ko" href="https://testerexchange.com/ko/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ml" href="https://testerexchange.com/ml/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="mr" href="https://testerexchange.com/mr/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ms" href="https://testerexchange.com/ms/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="my" href="https://testerexchange.com/my/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ne" href="https://testerexchange.com/ne/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="nl" href="https://testerexchange.com/nl/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="pa" href="https://testerexchange.com/pa/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="pl" href="https://testerexchange.com/pl/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ro" href="https://testerexchange.com/ro/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="si" href="https://testerexchange.com/si/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="sk" href="https://testerexchange.com/sk/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="sr" href="https://testerexchange.com/sr/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="sv" href="https://testerexchange.com/sv/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="sw" href="https://testerexchange.com/sw/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ta" href="https://testerexchange.com/ta/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="te" href="https://testerexchange.com/te/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="th" href="https://testerexchange.com/th/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="uk" href="https://testerexchange.com/uk/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="ur" href="https://testerexchange.com/ur/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="uz" href="https://testerexchange.com/uz/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="yo" href="https://testerexchange.com/yo/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="zh-Hans" href="https://testerexchange.com/zh-cn/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="zh-Hant" href="https://testerexchange.com/zh-tw/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/set-up-closed-testing-track/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/set-up-closed-testing-track/">
+<meta property="og:type" content="article"><meta property="og:title" content="Så ställer du in ett slutet testspår i Google Play Console">
+<meta property="og:description" content="Steg för steg: skapa ett slutet testspår i Play Console, lägg till testare med e-postlista eller Google Group, publicera utgåvan och dela anmälningslänken så att de 14 dagarna kan börja."><meta property="og:url" content="https://testerexchange.com/sv/set-up-closed-testing-track/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Så ställer du in ett slutet testspår i Play Console, steg för steg","description":"Steg för steg: skapa ett slutet testspår i Play Console, lägg till testare med e-postlista eller Google Group, publicera utgåvan och dela anmälningslänken så att de 14 dagarna kan börja.","inLanguage":"sv","datePublished":"2026-11-06","dateModified":"2026-11-06","author":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"},"url":"https://testerexchange.com/sv/set-up-closed-testing-track/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/sv/"},{"@type":"ListItem","position":3,"name":"Så ställer du in ett slutet testspår i Play Console, steg för steg","item":"https://testerexchange.com/sv/set-up-closed-testing-track/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kan jag använda internt test i stället?","acceptedAnswer":{"@type":"Answer","text":"Nej. Kravet gäller ett slutet test. Google säger också att personer som anmält sig till ditt interna test inte kan gå med i ett slutet test förrän de lämnat det interna."}},{"@type":"Question","name":"Ska jag använda en e-postlista eller en Google Group?","acceptedAnswer":{"@type":"Answer","text":"En Google Group är enklare när testare kommer och går, eftersom du aldrig behöver redigera spåret. En e-postlista fungerar bra för en fast grupp vänner. Du kan använda båda."}},{"@type":"Question","name":"Varför ser jag inte anmälningslänken?","acceptedAnswer":{"@type":"Answer","text":"Den visas först när utgåvan i det slutna spåret är publicerad. Kontrollera i Publiceringsöversikt om det finns en väntande granskning eller ändringar som inte skickats."}},{"@type":"Question","name":"Behöver en testare ett Google-konto?","acceptedAnswer":{"@type":"Answer","text":"Ja. Google säger att användare behöver ett Google-konto eller Google Workspace-konto för att gå med i ett test, och det måste vara kontot i telefonens Play Butik."}},{"@type":"Question","name":"Kan jag göra testappen betald?","acceptedAnswer":{"@type":"Answer","text":"Du kan, men Google säger att testare måste köpa betalda appar i slutna tester. Håll testappen gratis så att du inte förlorar testare."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=sv">Tester Exchange</a><span class="grow"></span>
+<select aria-label="Språk" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/set-up-closed-testing-track/">English</option><option value="https://testerexchange.com/am/set-up-closed-testing-track/">አማርኛ</option><option value="https://testerexchange.com/ar/set-up-closed-testing-track/">العربية</option><option value="https://testerexchange.com/az/set-up-closed-testing-track/">Azərbaycanca</option><option value="https://testerexchange.com/bg/set-up-closed-testing-track/">Български</option><option value="https://testerexchange.com/bn/set-up-closed-testing-track/">বাংলা</option><option value="https://testerexchange.com/cs/set-up-closed-testing-track/">Čeština</option><option value="https://testerexchange.com/de/set-up-closed-testing-track/">Deutsch</option><option value="https://testerexchange.com/el/set-up-closed-testing-track/">Ελληνικά</option><option value="https://testerexchange.com/es/set-up-closed-testing-track/">Español</option><option value="https://testerexchange.com/fa/set-up-closed-testing-track/">فارسی</option><option value="https://testerexchange.com/fil/set-up-closed-testing-track/">Filipino</option><option value="https://testerexchange.com/fr/set-up-closed-testing-track/">Français</option><option value="https://testerexchange.com/gu/set-up-closed-testing-track/">ગુજરાતી</option><option value="https://testerexchange.com/ha/set-up-closed-testing-track/">Hausa</option><option value="https://testerexchange.com/he/set-up-closed-testing-track/">עברית</option><option value="https://testerexchange.com/hi/set-up-closed-testing-track/">हिन्दी</option><option value="https://testerexchange.com/hr/set-up-closed-testing-track/">Hrvatski</option><option value="https://testerexchange.com/hu/set-up-closed-testing-track/">Magyar</option><option value="https://testerexchange.com/id/set-up-closed-testing-track/">Bahasa Indonesia</option><option value="https://testerexchange.com/ig/set-up-closed-testing-track/">Igbo</option><option value="https://testerexchange.com/it/set-up-closed-testing-track/">Italiano</option><option value="https://testerexchange.com/ja/set-up-closed-testing-track/">日本語</option><option value="https://testerexchange.com/kk/set-up-closed-testing-track/">Қазақша</option><option value="https://testerexchange.com/km/set-up-closed-testing-track/">ខ្មែរ</option><option value="https://testerexchange.com/kn/set-up-closed-testing-track/">ಕನ್ನಡ</option><option value="https://testerexchange.com/ko/set-up-closed-testing-track/">한국어</option><option value="https://testerexchange.com/ml/set-up-closed-testing-track/">മലയാളം</option><option value="https://testerexchange.com/mr/set-up-closed-testing-track/">मराठी</option><option value="https://testerexchange.com/ms/set-up-closed-testing-track/">Bahasa Melayu</option><option value="https://testerexchange.com/my/set-up-closed-testing-track/">မြန်မာ</option><option value="https://testerexchange.com/ne/set-up-closed-testing-track/">नेपाली</option><option value="https://testerexchange.com/nl/set-up-closed-testing-track/">Nederlands</option><option value="https://testerexchange.com/pa/set-up-closed-testing-track/">ਪੰਜਾਬੀ</option><option value="https://testerexchange.com/pl/set-up-closed-testing-track/">Polski</option><option value="https://testerexchange.com/pt/set-up-closed-testing-track/">Português</option><option value="https://testerexchange.com/ro/set-up-closed-testing-track/">Română</option><option value="https://testerexchange.com/ru/set-up-closed-testing-track/">Русский</option><option value="https://testerexchange.com/si/set-up-closed-testing-track/">සිංහල</option><option value="https://testerexchange.com/sk/set-up-closed-testing-track/">Slovenčina</option><option value="https://testerexchange.com/sr/set-up-closed-testing-track/">Српски</option><option value="https://testerexchange.com/sv/set-up-closed-testing-track/" selected>Svenska</option><option value="https://testerexchange.com/sw/set-up-closed-testing-track/">Kiswahili</option><option value="https://testerexchange.com/ta/set-up-closed-testing-track/">தமிழ்</option><option value="https://testerexchange.com/te/set-up-closed-testing-track/">తెలుగు</option><option value="https://testerexchange.com/th/set-up-closed-testing-track/">ไทย</option><option value="https://testerexchange.com/tr/set-up-closed-testing-track/">Türkçe</option><option value="https://testerexchange.com/uk/set-up-closed-testing-track/">Українська</option><option value="https://testerexchange.com/ur/set-up-closed-testing-track/">اردو</option><option value="https://testerexchange.com/uz/set-up-closed-testing-track/">Oʻzbekcha</option><option value="https://testerexchange.com/vi/set-up-closed-testing-track/">Tiếng Việt</option><option value="https://testerexchange.com/yo/set-up-closed-testing-track/">Yorùbá</option><option value="https://testerexchange.com/zh-cn/set-up-closed-testing-track/">简体中文</option><option value="https://testerexchange.com/zh-tw/set-up-closed-testing-track/">繁體中文</option><option value="https://testerexchange.com/zu/set-up-closed-testing-track/">isiZulu</option>
+</select>
+<a href="https://testerexchange.com/?lang=sv">Öppna Tester Exchange</a></header>
+<main>
+
+<h1>Så ställer du in ett slutet testspår i Play Console, steg för steg</h1>
+<p class="muted">Uppdaterad november 2026</p>
+<p class="lede">Innan din 14-dagarsklocka kan starta behöver du ett slutet testspår som är publicerat, har testare kopplade och ger dig en fungerande anmälningslänk. De flesta problem längre fram, till exempel att testare ser ”appen är inte tillgänglig”, beror på ett steg som missades här. Den här guiden följer de aktuella menyerna i Play Console (Testa och släpp, sedan Testning, sedan Sluten testning) och Googles hjälpcenter.</p>
+<div class="cta"><span>Riktiga människor öppnar din app på sina egna telefoner i 14 dagar. Betala en gång, eller testa andra appar gratis.</span><a class="btn" href="https://testerexchange.com/?lang=sv#buy">Skaffa 12 testare</a></div>
+<nav class="toc"><b>På den här sidan</b><ul><li><a href="#before">Innan du börjar</a></li><li><a href="#track">1. Öppna eller skapa det slutna spåret</a></li><li><a href="#countries">2. Välj länder och regioner</a></li><li><a href="#testers">3. Lägg till testare: e-postlista eller Google Group</a></li><li><a href="#feedback">4. Lägg till en feedbackkanal</a></li><li><a href="#release">5. Skapa utgåvan och skicka den för granskning</a></li><li><a href="#link">6. Dela anmälningslänken</a></li><li><a href="#check">7. Kontrollera att de 14 dagarna räknas</a></li><li><a href="#faq">Vanliga frågor</a></li></ul></nav>
+
+<section id="before">
+<h2>Innan du börjar</h2>
+
+<ul><li>Ett utvecklarkonto i Play Console med slutförd identitetsverifiering.</li><li>Din app skapad i Play Console, med butiksinformation, innehållsklassificering, målgrupp, datasäkerhet och övriga deklarationer under Appinnehåll ifyllda. Play Console låter dig inte skicka en utgåva för granskning medan obligatoriska delar saknas.</li><li>Ett signerat Android App Bundle (.aab) med ett paketnamn du är nöjd med för all framtid. Du kan inte ändra det senare.</li><li>En plan för dina testare: minst 12, helst 15, riktiga människor med Android-telefoner och Google-konton.</li></ul>
+
+
+</section>
+
+<section id="track">
+<h2>1. Öppna eller skapa det slutna spåret</h2>
+
+
+<ol><li>Välj din app i Play Console.</li><li>Gå till Testa och släpp, sedan Testning, sedan Sluten testning.</li><li>Play Console ger dig ett standardspår för sluten testning (ofta kallat Alpha). Använd det. Du kan skapa fler slutna spår, men ett räcker för kravet.</li><li>Klicka på Hantera spår.</li></ol>
+
+</section>
+
+<section id="countries">
+<h2>2. Välj länder och regioner</h2>
+<p>Öppna fliken Länder / regioner och lägg till länderna där dina testare bor. En testare i ett land du inte valde kan inte installera appen.</p>
+<p>Google anger att ändringar av distributionsländer gäller för alla spår, och att ytterligare slutna spår inte stöder egen landsinriktning. Om dina testare finns över hela världen är det enklaste valet att lägga till alla länder du lagligt kan leverera till.</p>
+
+
+
+</section>
+
+<section id="testers">
+<h2>3. Lägg till testare: e-postlista eller Google Group</h2>
+<p>Öppna fliken Testare. Du har två alternativ, och du kan använda båda i ett spår.</p>
+<ul><li><b>E-postlista:</b> klicka på Skapa e-postlista, ge den ett namn och skriv in adresser eller ladda upp en CSV. Google tillåter upp till 2 000 användare per lista. Att ladda upp en CSV skriver över adresserna som redan finns i listan. Varje adress måste vara det Google-konto testaren använder i Play Butiken på sin telefon.</li><li><b>Google Group:</b> ange gruppens adress, till exempel yourgroup@googlegroups.com. Bara medlemmar i gruppen kan gå med i ditt test, och de måste gå med i gruppen innan de anmäler sig. Att lägga till någon i gruppen är allt du gör; du behöver inte röra Play Console igen.</li></ul>
+
+<p>Om du använder Tester Exchange, lägg till gruppen testerexchange-testers@googlegroups.com under Google Groups och spara. Den adressen låter alla testare vi skickar installera din app. Se också guiden om Google Group jämfört med e-postlista.</p>
+</section>
+
+<section id="feedback">
+<h2>4. Lägg till en feedbackkanal</h2>
+<p>På samma flik Testare lägger du till en feedback-URL eller en e-postadress. Testarna ser den när de går med. Du behöver sammanfatta testarnas feedback i formuläret för produktionsåtkomst, så gör det enkelt: ett kort Google-formulär eller en egen e-postadress fungerar.</p>
+
+
+
+</section>
+
+<section id="release">
+<h2>5. Skapa utgåvan och skicka den för granskning</h2>
+
+
+<ol><li>Klicka på Skapa ny utgåva i det slutna spåret.</li><li>Ladda upp din .aab. Låt Play App Signing hantera din nyckel om du inte har ett skäl att inte göra det.</li><li>Lägg till ett utgåvenamn och korta versionsanteckningar, till exempel ”Första bygget för slutet test”.</li><li>Klicka på Nästa, åtgärda eventuella fel och klicka sedan på Spara.</li><li>Gå till Publiceringsöversikt och skicka ändringarna för granskning. Om hanterad publicering är på måste du också klicka på Publicera efter godkännande.</li></ol>
+<p>Utgåvor i slutna tester på nya konton granskas innan de går live. Tiderna varierar från timmar till flera dagar.</p>
+</section>
+
+<section id="link">
+<h2>6. Dela anmälningslänken</h2>
+<p>Google säger att anmälningslänken bara visas när appens status är Publicerad. Kopiera den från fliken Testare. Den ser ut så här: https://play.google.com/apps/testing/your.package.name.</p>
+<p>Första gången du publicerar kan det ta flera timmar innan länken fungerar. Testare kan inte hitta slutna tester genom att söka i Google Play, så de behöver antingen den här länken eller Play Butikens länk till din app.</p>
+
+<ol><li>Testaren loggar in med samma Google-konto som du lade till (eller som finns i din Google Group).</li><li>Hen öppnar anmälningslänken och trycker för att bli testare.</li><li>Hen installerar din app från Google Play via länken på sidan.</li><li>Hen öppnar den och fortsätter öppna den under de 14 dagarna.</li></ol>
+
+</section>
+
+<section id="check">
+<h2>7. Kontrollera att de 14 dagarna räknas</h2>
+<p>Din instrumentpanel visar kravet på sluten testning och hur många testare som är anmälda. Kontrollera den med ett par dagars mellanrum. Om antalet faller under 12, rekrytera ersättare direkt, eftersom kravet räknar 12 testare anmälda utan avbrott.</p>
+<p>Ladda upp minst ett nytt bygge till samma spår under testet. Det visar Google att du agerade på feedback, och testare i spåret får uppdateringen automatiskt.</p>
+
+
+
+</section>
+<section id="faq"><h2>Vanliga frågor</h2>
+<details><summary>Kan jag använda internt test i stället?</summary><p>Nej. Kravet gäller ett slutet test. Google säger också att personer som anmält sig till ditt interna test inte kan gå med i ett slutet test förrän de lämnat det interna.</p></details>
+<details><summary>Ska jag använda en e-postlista eller en Google Group?</summary><p>En Google Group är enklare när testare kommer och går, eftersom du aldrig behöver redigera spåret. En e-postlista fungerar bra för en fast grupp vänner. Du kan använda båda.</p></details>
+<details><summary>Varför ser jag inte anmälningslänken?</summary><p>Den visas först när utgåvan i det slutna spåret är publicerad. Kontrollera i Publiceringsöversikt om det finns en väntande granskning eller ändringar som inte skickats.</p></details>
+<details><summary>Behöver en testare ett Google-konto?</summary><p>Ja. Google säger att användare behöver ett Google-konto eller Google Workspace-konto för att gå med i ett test, och det måste vara kontot i telefonens Play Butik.</p></details>
+<details><summary>Kan jag göra testappen betald?</summary><p>Du kan, men Google säger att testare måste köpa betalda appar i slutna tester. Håll testappen gratis så att du inte förlorar testare.</p></details>
+</section>
+<div class="cta"><span>Riktiga människor öppnar din app på sina egna telefoner i 14 dagar. Betala en gång, eller testa andra appar gratis.</span><a class="btn" href="https://testerexchange.com/?lang=sv#buy">Skaffa 12 testare</a></div>
+<section><h2>Fler guider</h2><ul class="related"><li><a href="https://testerexchange.com/sv/" hreflang="sv">Så får du 12 testare för sluten testning på Google Play</a></li><li><a href="https://testerexchange.com/sv/12-testers-app-builders/" hreflang="sv">Google Play 12 testare för appar byggda med App Inventor, Kodular, Flutter, Unity och andra verktyg</a></li><li><a href="https://testerexchange.com/sv/app-not-available-for-testers/" hreflang="sv">Lös ”appen är inte tillgänglig” för testare i sluten testning på Google Play</a></li><li><a href="https://testerexchange.com/sv/automate-closed-testing-with-ai-agents/" hreflang="sv">Automatisera sluten testning på Google Play med AI-agenter</a></li><li><a href="https://testerexchange.com/sv/best-way-to-get-12-testers/" hreflang="sv">Bästa sättet att få 12 testare för sluten testning på Google Play</a></li><li><a href="https://testerexchange.com/sv/closed-testing-for-games/" hreflang="sv">Sluten testning av spel på Google Play: en guide för Unity, Unreal och Godot</a></li><li><a href="https://testerexchange.com/sv/does-14-day-closed-test-reset/" hreflang="sv">Nollställs det slutna 14-dagarstestet när testare hoppar av?</a></li><li><a href="https://testerexchange.com/sv/earn-money-testing-android-apps/" hreflang="sv">Tjäna pengar på att testa Android-appar: en ärlig guide</a></li><li><a href="https://testerexchange.com/sv/free-closed-testing-testers/" hreflang="sv">Så får du 12 testare för sluten testning på Google Play gratis</a></li><li><a href="https://testerexchange.com/sv/friends-family-closed-testers/" hreflang="sv">Använd vänner och familj som dina 12 testare på Google Play</a></li><li><a href="https://testerexchange.com/sv/google-group-vs-email-list/" hreflang="sv">Google Group eller e-postlista för ditt slutna test?</a></li><li><a href="https://testerexchange.com/sv/google-play-closed-testing-requirements/" hreflang="sv">Krav för sluten testning på Google Play: den kompletta guiden för 2026</a></li><li><a href="https://testerexchange.com/sv/google-play-review-time-after-closed-testing/" hreflang="sv">Efter de 14 dagarna: granskningstid för produktionsåtkomst och din första utgåva</a></li><li><a href="https://testerexchange.com/sv/insufficient-testing-engagement/" hreflang="sv">Avslag efter sluten testning? Så åtgärdar du ”mer testning krävs”</a></li><li><a href="https://testerexchange.com/sv/keep-testers-active-14-days/" hreflang="sv">Så håller du slutna testare aktiva alla 14 dagar</a></li><li><a href="https://testerexchange.com/sv/organization-vs-personal-developer-account/" hreflang="sv">Organisationskonto eller personligt utvecklarkonto på Google Play</a></li><li><a href="https://testerexchange.com/sv/paid-closed-testers-checklist/" hreflang="sv">Det här bör du kontrollera innan du betalar för testare i sluten testning på Google Play</a></li><li><a href="https://testerexchange.com/sv/production-access-questions/" hreflang="sv">Så svarar du på Google Plays frågor om produktionsåtkomst</a></li><li><a href="https://testerexchange.com/sv/production-access-rejected/" hreflang="sv">Produktionsåtkomst avslagen: det här gör du härnäst</a></li><li><a href="https://testerexchange.com/sv/tools/production-answers/" hreflang="sv">Svarsgenerator för produktionsåtkomst</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

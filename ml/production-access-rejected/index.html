@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ml">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Play production access നിരസിച്ചോ? അടുത്തതായി എന്തു ചെയ്യണം</title>
+<meta name="description" content="Closed testing കഴിഞ്ഞ് Google നിങ്ങളുടെ production access അപേക്ഷ നിരസിച്ചോ? നിരസിക്കൽ എന്താണ് അർത്ഥമാക്കുന്നത്, Google-ന്റെ ഇമെയിൽ എങ്ങനെ വായിക്കാം, ശക്തമായ test-ഓടെ വീണ്ടും അപേക്ഷിക്കാനുള്ള ഘട്ടങ്ങൾ.">
+<link rel="canonical" href="https://testerexchange.com/ml/production-access-rejected/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/production-access-rejected/">
+<link rel="alternate" hreflang="am" href="https://testerexchange.com/am/production-access-rejected/">
+<link rel="alternate" hreflang="ar" href="https://testerexchange.com/ar/production-access-rejected/">
+<link rel="alternate" hreflang="az" href="https://testerexchange.com/az/production-access-rejected/">
+<link rel="alternate" hreflang="bg" href="https://testerexchange.com/bg/production-access-rejected/">
+<link rel="alternate" hreflang="bn" href="https://testerexchange.com/bn/production-access-rejected/">
+<link rel="alternate" hreflang="cs" href="https://testerexchange.com/cs/production-access-rejected/">
+<link rel="alternate" hreflang="de" href="https://testerexchange.com/de/production-access-rejected/">
+<link rel="alternate" hreflang="el" href="https://testerexchange.com/el/production-access-rejected/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/production-access-rejected/">
+<link rel="alternate" hreflang="fa" href="https://testerexchange.com/fa/production-access-rejected/">
+<link rel="alternate" hreflang="fil" href="https://testerexchange.com/fil/production-access-rejected/">
+<link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/production-access-rejected/">
+<link rel="alternate" hreflang="gu" href="https://testerexchange.com/gu/production-access-rejected/">
+<link rel="alternate" hreflang="ha" href="https://testerexchange.com/ha/production-access-rejected/">
+<link rel="alternate" hreflang="he" href="https://testerexchange.com/he/production-access-rejected/">
+<link rel="alternate" hreflang="hi" href="https://testerexchange.com/hi/production-access-rejected/">
+<link rel="alternate" hreflang="hr" href="https://testerexchange.com/hr/production-access-rejected/">
+<link rel="alternate" hreflang="hu" href="https://testerexchange.com/hu/production-access-rejected/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/production-access-rejected/">
+<link rel="alternate" hreflang="ig" href="https://testerexchange.com/ig/production-access-rejected/">
+<link rel="alternate" hreflang="it" href="https://testerexchange.com/it/production-access-rejected/">
+<link rel="alternate" hreflang="ja" href="https://testerexchange.com/ja/production-access-rejected/">
+<link rel="alternate" hreflang="kk" href="https://testerexchange.com/kk/production-access-rejected/">
+<link rel="alternate" hreflang="km" href="https://testerexchange.com/km/production-access-rejected/">
+<link rel="alternate" hreflang="kn" href="https://testerexchange.com/kn/production-access-rejected/">
+<link rel="alternate" hreflang="ko" href="https://testerexchange.com/ko/production-access-rejected/">
+<link rel="alternate" hreflang="ml" href="https://testerexchange.com/ml/production-access-rejected/">
+<link rel="alternate" hreflang="mr" href="https://testerexchange.com/mr/production-access-rejected/">
+<link rel="alternate" hreflang="ms" href="https://testerexchange.com/ms/production-access-rejected/">
+<link rel="alternate" hreflang="my" href="https://testerexchange.com/my/production-access-rejected/">
+<link rel="alternate" hreflang="ne" href="https://testerexchange.com/ne/production-access-rejected/">
+<link rel="alternate" hreflang="nl" href="https://testerexchange.com/nl/production-access-rejected/">
+<link rel="alternate" hreflang="pa" href="https://testerexchange.com/pa/production-access-rejected/">
+<link rel="alternate" hreflang="pl" href="https://testerexchange.com/pl/production-access-rejected/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/production-access-rejected/">
+<link rel="alternate" hreflang="ro" href="https://testerexchange.com/ro/production-access-rejected/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/production-access-rejected/">
+<link rel="alternate" hreflang="si" href="https://testerexchange.com/si/production-access-rejected/">
+<link rel="alternate" hreflang="sk" href="https://testerexchange.com/sk/production-access-rejected/">
+<link rel="alternate" hreflang="sr" href="https://testerexchange.com/sr/production-access-rejected/">
+<link rel="alternate" hreflang="sv" href="https://testerexchange.com/sv/production-access-rejected/">
+<link rel="alternate" hreflang="sw" href="https://testerexchange.com/sw/production-access-rejected/">
+<link rel="alternate" hreflang="ta" href="https://testerexchange.com/ta/production-access-rejected/">
+<link rel="alternate" hreflang="te" href="https://testerexchange.com/te/production-access-rejected/">
+<link rel="alternate" hreflang="th" href="https://testerexchange.com/th/production-access-rejected/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/production-access-rejected/">
+<link rel="alternate" hreflang="uk" href="https://testerexchange.com/uk/production-access-rejected/">
+<link rel="alternate" hreflang="ur" href="https://testerexchange.com/ur/production-access-rejected/">
+<link rel="alternate" hreflang="uz" href="https://testerexchange.com/uz/production-access-rejected/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/production-access-rejected/">
+<link rel="alternate" hreflang="yo" href="https://testerexchange.com/yo/production-access-rejected/">
+<link rel="alternate" hreflang="zh-Hans" href="https://testerexchange.com/zh-cn/production-access-rejected/">
+<link rel="alternate" hreflang="zh-Hant" href="https://testerexchange.com/zh-tw/production-access-rejected/">
+<link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/production-access-rejected/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/production-access-rejected/">
+<meta property="og:type" content="article"><meta property="og:title" content="Google Play production access നിരസിച്ചോ? അടുത്തതായി എന്തു ചെയ്യണം">
+<meta property="og:description" content="Closed testing കഴിഞ്ഞ് Google നിങ്ങളുടെ production access അപേക്ഷ നിരസിച്ചോ? നിരസിക്കൽ എന്താണ് അർത്ഥമാക്കുന്നത്, Google-ന്റെ ഇമെയിൽ എങ്ങനെ വായിക്കാം, ശക്തമായ test-ഓടെ വീണ്ടും അപേക്ഷിക്കാനുള്ള ഘട്ടങ്ങൾ."><meta property="og:url" content="https://testerexchange.com/ml/production-access-rejected/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Production access നിരസിച്ചു: അടുത്തതായി എന്തു ചെയ്യണം","description":"Closed testing കഴിഞ്ഞ് Google നിങ്ങളുടെ production access അപേക്ഷ നിരസിച്ചോ? നിരസിക്കൽ എന്താണ് അർത്ഥമാക്കുന്നത്, Google-ന്റെ ഇമെയിൽ എങ്ങനെ വായിക്കാം, ശക്തമായ test-ഓടെ വീണ്ടും അപേക്ഷിക്കാനുള്ള ഘട്ടങ്ങൾ.","inLanguage":"ml","datePublished":"2026-11-06","dateModified":"2026-11-06","author":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"},"url":"https://testerexchange.com/ml/production-access-rejected/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/ml/"},{"@type":"ListItem","position":3,"name":"Production access നിരസിച്ചു: അടുത്തതായി എന്തു ചെയ്യണം","item":"https://testerexchange.com/ml/production-access-rejected/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"14 ദിവസം പൂജ്യത്തിൽ നിന്ന് വീണ്ടും തുടങ്ങണോ?","acceptedAnswer":{"@type":"Answer","text":"നിങ്ങളുടെ closed test തുടരേണ്ടി വരാമെന്ന് Google പറയുന്നു. നിലവിലുള്ള track-ഉം testers-ഉം നിലനിർത്തൂ, വീണ്ടും അപേക്ഷിക്കുന്നതിന് മുമ്പ് കുറഞ്ഞത് രണ്ടാഴ്ച കൂടി യഥാർത്ഥ ഉപയോഗം ഉണ്ടാകാൻ പ്ലാൻ ചെയ്യൂ."}},{"@type":"Question","name":"വീണ്ടും അപേക്ഷിക്കാൻ എത്ര നാൾ കാത്തിരിക്കണം?","acceptedAnswer":{"@type":"Answer","text":"Google-ന്റെ Help Center നിശ്ചിത കാത്തിരിപ്പ് കാലയളവ് പറയുന്നില്ല. കാണിക്കാൻ വ്യക്തമായി കൂടുതലും മെച്ചപ്പെട്ടതുമായ testing ഉള്ളപ്പോൾ വീണ്ടും അപേക്ഷിക്കൂ."}},{"@type":"Question","name":"നിരസിക്കൽ എന്റെ ഡെവലപ്പർ അക്കൗണ്ടിനെ ബാധിക്കുമോ?","acceptedAnswer":{"@type":"Answer","text":"Testing സംബന്ധിച്ച production access തീരുമാനം policy ലംഘനത്തിന് തുല്യമല്ല. Policy പ്രശ്നങ്ങൾ Policy status പേജിൽ വെവ്വേറെ കാണിക്കും."}},{"@type":"Question","name":"പകരം അപ്പീൽ ചെയ്യാമോ?","acceptedAnswer":{"@type":"Answer","text":"Testing സംബന്ധിച്ച തീരുമാനത്തിന് പ്രായോഗിക വഴി കൂടുതൽ testing-ഉം ശക്തമായ അപേക്ഷയുമാണ്. Policy നടപടിക്ക് ആ പ്രത്യേക ഇമെയിലിലെ അപ്പീൽ ലിങ്ക് പിന്തുടരൂ."}},{"@type":"Question","name":"Organization അക്കൗണ്ടിലേക്ക് മാറണോ?","acceptedAnswer":{"@type":"Answer","text":"D-U-N-S നമ്പറുള്ള യഥാർത്ഥ ബിസിനസ് ആണെങ്കിൽ മാത്രം. Organization അക്കൗണ്ടുകൾക്ക് closed testing നിബന്ധന ബാധകമല്ല, പക്ഷേ മാറ്റത്തിന് പരിശോധനയും സമയവും വേണം. organization vs personal അക്കൗണ്ടുകളെക്കുറിച്ചുള്ള ഗൈഡ് കാണൂ."}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=ml">Tester Exchange</a><span class="grow"></span>
+<select aria-label="ഭാഷ" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/production-access-rejected/">English</option><option value="https://testerexchange.com/am/production-access-rejected/">አማርኛ</option><option value="https://testerexchange.com/ar/production-access-rejected/">العربية</option><option value="https://testerexchange.com/az/production-access-rejected/">Azərbaycanca</option><option value="https://testerexchange.com/bg/production-access-rejected/">Български</option><option value="https://testerexchange.com/bn/production-access-rejected/">বাংলা</option><option value="https://testerexchange.com/cs/production-access-rejected/">Čeština</option><option value="https://testerexchange.com/de/production-access-rejected/">Deutsch</option><option value="https://testerexchange.com/el/production-access-rejected/">Ελληνικά</option><option value="https://testerexchange.com/es/production-access-rejected/">Español</option><option value="https://testerexchange.com/fa/production-access-rejected/">فارسی</option><option value="https://testerexchange.com/fil/production-access-rejected/">Filipino</option><option value="https://testerexchange.com/fr/production-access-rejected/">Français</option><option value="https://testerexchange.com/gu/production-access-rejected/">ગુજરાતી</option><option value="https://testerexchange.com/ha/production-access-rejected/">Hausa</option><option value="https://testerexchange.com/he/production-access-rejected/">עברית</option><option value="https://testerexchange.com/hi/production-access-rejected/">हिन्दी</option><option value="https://testerexchange.com/hr/production-access-rejected/">Hrvatski</option><option value="https://testerexchange.com/hu/production-access-rejected/">Magyar</option><option value="https://testerexchange.com/id/production-access-rejected/">Bahasa Indonesia</option><option value="https://testerexchange.com/ig/production-access-rejected/">Igbo</option><option value="https://testerexchange.com/it/production-access-rejected/">Italiano</option><option value="https://testerexchange.com/ja/production-access-rejected/">日本語</option><option value="https://testerexchange.com/kk/production-access-rejected/">Қазақша</option><option value="https://testerexchange.com/km/production-access-rejected/">ខ្មែរ</option><option value="https://testerexchange.com/kn/production-access-rejected/">ಕನ್ನಡ</option><option value="https://testerexchange.com/ko/production-access-rejected/">한국어</option><option value="https://testerexchange.com/ml/production-access-rejected/" selected>മലയാളം</option><option value="https://testerexchange.com/mr/production-access-rejected/">मराठी</option><option value="https://testerexchange.com/ms/production-access-rejected/">Bahasa Melayu</option><option value="https://testerexchange.com/my/production-access-rejected/">မြန်မာ</option><option value="https://testerexchange.com/ne/production-access-rejected/">नेपाली</option><option value="https://testerexchange.com/nl/production-access-rejected/">Nederlands</option><option value="https://testerexchange.com/pa/production-access-rejected/">ਪੰਜਾਬੀ</option><option value="https://testerexchange.com/pl/production-access-rejected/">Polski</option><option value="https://testerexchange.com/pt/production-access-rejected/">Português</option><option value="https://testerexchange.com/ro/production-access-rejected/">Română</option><option value="https://testerexchange.com/ru/production-access-rejected/">Русский</option><option value="https://testerexchange.com/si/production-access-rejected/">සිංහල</option><option value="https://testerexchange.com/sk/production-access-rejected/">Slovenčina</option><option value="https://testerexchange.com/sr/production-access-rejected/">Српски</option><option value="https://testerexchange.com/sv/production-access-rejected/">Svenska</option><option value="https://testerexchange.com/sw/production-access-rejected/">Kiswahili</option><option value="https://testerexchange.com/ta/production-access-rejected/">தமிழ்</option><option value="https://testerexchange.com/te/production-access-rejected/">తెలుగు</option><option value="https://testerexchange.com/th/production-access-rejected/">ไทย</option><option value="https://testerexchange.com/tr/production-access-rejected/">Türkçe</option><option value="https://testerexchange.com/uk/production-access-rejected/">Українська</option><option value="https://testerexchange.com/ur/production-access-rejected/">اردو</option><option value="https://testerexchange.com/uz/production-access-rejected/">Oʻzbekcha</option><option value="https://testerexchange.com/vi/production-access-rejected/">Tiếng Việt</option><option value="https://testerexchange.com/yo/production-access-rejected/">Yorùbá</option><option value="https://testerexchange.com/zh-cn/production-access-rejected/">简体中文</option><option value="https://testerexchange.com/zh-tw/production-access-rejected/">繁體中文</option><option value="https://testerexchange.com/zu/production-access-rejected/">isiZulu</option>
+</select>
+<a href="https://testerexchange.com/?lang=ml">Tester Exchange തുറക്കുക</a></header>
+<main>
+
+<h1>Production access നിരസിച്ചു: അടുത്തതായി എന്തു ചെയ്യണം</h1>
+<p class="muted">2026 നവംബറിൽ അപ്ഡേറ്റ് ചെയ്തത്</p>
+<p class="lede">നിങ്ങൾ closed test നടത്തി, production-ന് അപേക്ഷിച്ച്, ഏകദേശം ഒരാഴ്ച കാത്തിരുന്നു, Google ഇല്ല എന്ന് പറഞ്ഞു. എല്ലാം ആദ്യം മുതൽ തുടങ്ങണം എന്ന് തോന്നും, പക്ഷേ സാധാരണ അങ്ങനെയല്ല. മിക്ക കേസുകളിലും നിങ്ങളുടെ closed track, testers, ആപ്പ് എന്നിവയെല്ലാം അതേപടി നിലനിൽക്കും, ആപ്പ് പൊതുവായി പോകാൻ അനുവദിക്കുന്നതിന് മുമ്പ് കൂടുതലോ മെച്ചപ്പെട്ടതോ ആയ testing കാണണമെന്നേ Google ആഗ്രഹിക്കുന്നുള്ളൂ. ഈ തീരുമാനം എന്താണ് അർത്ഥമാക്കുന്നതെന്നും അടുത്ത അപേക്ഷയ്ക്കുള്ള പദ്ധതിയും ഈ ഗൈഡ് നൽകുന്നു.</p>
+<div class="cta"><span>യഥാർത്ഥ ആളുകൾ 14 ദിവസം സ്വന്തം ഫോണുകളിൽ നിങ്ങളുടെ ആപ്പ് തുറക്കുന്നു. ഒരിക്കൽ പണമടയ്ക്കൂ, അല്ലെങ്കിൽ മറ്റ് ആപ്പുകൾ ടെസ്റ്റ് ചെയ്ത് സൗജന്യമായി നേടൂ.</span><a class="btn" href="https://testerexchange.com/?lang=ml#buy">12 testers-നെ നേടൂ</a></div>
+<nav class="toc"><b>ഈ പേജിൽ</b><ul><li><a href="#means">നിരസിക്കൽ എന്താണ് അർത്ഥമാക്കുന്നത്</a></li><li><a href="#dont">ആദ്യം, ഇവ ചെയ്യരുത്</a></li><li><a href="#diagnose">ദുർബലമായ ഭാഗം കണ്ടെത്തുക</a></li><li><a href="#plan">അടുത്ത അപേക്ഷയ്ക്കുള്ള പദ്ധതി</a></li><li><a href="#answers">മെച്ചപ്പെട്ട ഉത്തരങ്ങൾ എഴുതുക</a></li><li><a href="#testers">Testers ആയിരുന്നു പ്രശ്നമെങ്കിൽ</a></li><li><a href="#faq">പതിവ് ചോദ്യങ്ങൾ</a></li></ul></nav>
+
+<section id="means">
+<h2>നിരസിക്കൽ എന്താണ് അർത്ഥമാക്കുന്നത്</h2>
+<p>Production access ലഭിക്കുന്നതിന് മുമ്പ് നിങ്ങളുടെ closed test തുടരേണ്ടി വന്നേക്കാമെന്ന് Google-ന്റെ Help Center പറയുന്നു. അത് പറയുന്ന കാരണങ്ങളിൽ opt-in ആയ testers 12-ൽ താഴെ ആയതും, test സമയത്ത് testers ആപ്പുമായി മതിയായ രീതിയിൽ ഇടപഴകാത്തതും ഉൾപ്പെടുന്നു.</p>
+<p>അതിനാൽ നിരസിക്കൽ സാധാരണയായി നിങ്ങളുടെ അക്കൗണ്ടിനെതിരായ ഒരു policy സ്ട്രൈക്ക് അല്ല. നിങ്ങളുടെ test-ൽ നിന്നുള്ള തെളിവ് ഇതുവരെ ബോധ്യപ്പെടുത്തുന്നില്ല എന്നാണ് Google പറയുന്നത്. ഇമെയിലും Play Console-ലെ സന്ദേശവും ശ്രദ്ധയോടെ വായിക്കൂ: അത് സാധാരണ testing, ഉപയോഗം, അല്ലെങ്കിൽ നിങ്ങൾ നൽകിയ ഉത്തരങ്ങൾ എന്നിവയിലേക്കാണ് വിരൽ ചൂണ്ടുന്നത്.</p>
+<ul><li><b>&quot;More testing required&quot; അല്ലെങ്കിൽ സമാനമായത്:</b> closed test തുടരുക, കൂടുതൽ യഥാർത്ഥ ഉപയോഗം ശേഖരിക്കുക.</li><li><b>Opt-in ആയ testers 12-ൽ താഴെ:</b> ചില testers പോയി. വീണ്ടും അപേക്ഷിക്കുന്നതിന് മുമ്പ് കൂടുതൽ പേരെ കണ്ടെത്തുക.</li><li><b>Policy അല്ലെങ്കിൽ ഉള്ളടക്ക പ്രശ്നങ്ങൾ:</b> അത് വേറെ വിഷയമാണ്. Policy status പേജ് പരിശോധിച്ച് ആദ്യം അവ പരിഹരിക്കുക, അല്ലെങ്കിൽ പുതിയ അപേക്ഷ ഗുണം ചെയ്യില്ല.</li></ul>
+
+
+</section>
+
+<section id="dont">
+<h2>ആദ്യം, ഇവ ചെയ്യരുത്</h2>
+
+<ul><li>Closed track ഇല്ലാതാക്കുകയോ ഇപ്പോഴും സജീവമായ testers-നെ നീക്കുകയോ ചെയ്യരുത്. അവരെ നിങ്ങൾക്ക് വേണം.</li><li>&quot;പുതുതായി തുടങ്ങാൻ&quot; പുതിയ package name ഉള്ള പുതിയ ആപ്പ് ഉണ്ടാക്കരുത്. എന്തായാലും മുഴുവൻ closed test വീണ്ടും നടത്തേണ്ടി വരും.</li><li>അതേ ഉത്തരങ്ങളുമായി പിറ്റേന്ന് വീണ്ടും അപേക്ഷിക്കരുത്. ഒന്നും മാറിയിട്ടില്ല, അതിനാൽ ഫലവും അതുതന്നെ പ്രതീക്ഷിക്കാം.</li><li>നിങ്ങളുടെ സ്വന്തം അധിക ഫോണുകളോ വ്യാജ അക്കൗണ്ടുകളോ ഉപയോഗിച്ച് സീറ്റുകൾ നിറയ്ക്കരുത്. ഒരു ഡിവൈസിൽ പല അക്കൗണ്ടുകൾ ഉള്ളത് Google-ന് കാണാനാകും.</li></ul>
+
+
+</section>
+
+<section id="diagnose">
+<h2>ദുർബലമായ ഭാഗം കണ്ടെത്തുക</h2>
+<p>Play Console-ൽ നിങ്ങളുടെ closed track-ഉം test കാലയളവിലെ സ്ഥിതിവിവരക്കണക്കുകളും തുറക്കൂ. സത്യസന്ധമായി സ്വയം ചോദിക്കൂ:</p>
+<ul><li>നിങ്ങൾ അപേക്ഷിച്ച ദിവസം എത്ര testers ഇപ്പോഴും opt-in ആയിരുന്നു? 12-ന് സുഖമായി മുകളിലായിരുന്നോ?</li><li>അവരിൽ എത്ര പേർ ഒന്നാം ദിവസം മാത്രമല്ല, മിക്ക ദിവസങ്ങളിലും ആപ്പ് തുറന്നു?</li><li>Test സമയത്ത് കുറഞ്ഞത് ഒരു പുതിയ ബിൽഡ് അപ്‌ലോഡ് ചെയ്തോ?</li><li>Testers-ന്റെ യഥാർത്ഥ ഫീഡ്ബാക്ക് ഉദ്ധരിക്കാനും അതിന്റെ പേരിൽ നിങ്ങൾ എന്ത് മാറ്റി എന്ന് പറയാനും കഴിയുമോ?</li><li>ഫോമിലെ ഉത്തരങ്ങളിൽ കണക്കുകൾ ഉണ്ടായിരുന്നോ, അതോ പൊതുവായ ഒന്നോ രണ്ടോ വാചകങ്ങൾ മാത്രമായിരുന്നോ?</li></ul>
+
+<p>നിരസിക്കപ്പെടുന്ന മിക്ക അപേക്ഷകളും പരാജയപ്പെടുന്നത് ഉപയോഗത്തിലും അവ്യക്തമായ ഉത്തരങ്ങളിലുമാണ്. രണ്ടും രണ്ടാഴ്ചയ്ക്കുള്ളിൽ പരിഹരിക്കാം.</p>
+</section>
+
+<section id="plan">
+<h2>അടുത്ത അപേക്ഷയ്ക്കുള്ള പദ്ധതി</h2>
+
+
+<ol><li>ഇമെയിലിൽ policy പ്രശ്നങ്ങൾ പരാമർശിച്ചിരുന്നെങ്കിൽ ആദ്യം അവ പരിഹരിക്കുക.</li><li>Tester എണ്ണം പരിശോധിക്കുക. പിൻവാങ്ങലുകൾ നിങ്ങളെ 12-ൽ താഴെയാക്കാതിരിക്കാൻ, 15 അല്ലെങ്കിൽ അതിലധികം യഥാർത്ഥ testers opt-in ആകുന്നതുവരെ കണ്ടെത്തുക.</li><li>ഓരോ ആഴ്ചയും testers-ന് കൃത്യമായ ജോലികൾ നൽകുക, ഉദാഹരണത്തിന് &quot;സൈൻ അപ്പ് ചെയ്യുക, ആദ്യ ഇനം ഉണ്ടാക്കുക, സെറ്റിംഗ്സ് സ്ക്രീൻ പരീക്ഷിക്കുക&quot;. അവ്യക്തമായ അഭ്യർത്ഥനകൾ അവ്യക്തമായ ഉപയോഗമേ ഉണ്ടാക്കൂ.</li><li>ലളിതമായ ഒരു ഫോമോ ഇമെയിൽ വിലാസമോ വഴി എഴുതിയ ഫീഡ്ബാക്ക് ശേഖരിച്ച് ഒരു ലോഗ് സൂക്ഷിക്കുക.</li><li>Test സമയത്ത് റിപ്പോർട്ട് ചെയ്ത പല പ്രശ്നങ്ങളും പരിഹരിച്ച് പുതിയ ബിൽഡുകൾ closed track-ലേക്ക് അപ്‌ലോഡ് ചെയ്യുക.</li><li>യഥാർത്ഥ ദൈനംദിന ഉപയോഗത്തോടെ കുറഞ്ഞത് ഒരു 14 ദിവസം കൂടി test നടത്തുക. Google നിശ്ചിത കാത്തിരിപ്പ് കാലയളവ് പ്രസിദ്ധീകരിക്കുന്നില്ല, അതിനാൽ കലണ്ടർ നോക്കിയിരിക്കാതെ തെളിവുകൾ കൂടിവരട്ടെ.</li><li>കണക്കുകളോടെ ഉത്തരങ്ങൾ വീണ്ടും എഴുതുക: opt-in ആയ testers, പതിവായി ആപ്പ് ഉപയോഗിച്ചവർ എത്ര, tester-days, കണ്ടെത്തി പരിഹരിച്ച ബഗുകൾ, പുറത്തിറക്കിയ ബിൽഡുകൾ.</li><li>Dashboard-ൽ നിന്ന് വീണ്ടും അപേക്ഷിക്കുക. Review സാധാരണ ഏഴ് ദിവസമോ കുറവോ എടുക്കുമെന്ന് Google പറയുന്നു.</li></ol>
+
+</section>
+
+<section id="answers">
+<h2>മെച്ചപ്പെട്ട ഉത്തരങ്ങൾ എഴുതുക</h2>
+<p>Google-ന്റെ ഫോം ചോദിക്കുന്നത്: testers-നെ കണ്ടെത്തുന്നത് എത്ര എളുപ്പമായിരുന്നു, അവർ എങ്ങനെ ഇടപഴകി, എന്ത് ഫീഡ്ബാക്ക് ലഭിച്ചു, അത് എങ്ങനെ ശേഖരിച്ചു, ആപ്പ് ആർക്കുള്ളതാണ്, അതിന്റെ മൂല്യം, പ്രതീക്ഷിക്കുന്ന ഇൻസ്റ്റാളുകൾ, testing-ന് ശേഷം നിങ്ങൾ എന്ത് മാറ്റി, തയ്യാറാണെന്ന് എങ്ങനെ അറിയാം.</p>
+<p>ഇതൊരു ചെറിയ test റിപ്പോർട്ട് പോലെ കാണൂ. &quot;15 testers, 13 പേർ 14-ൽ കുറഞ്ഞത് 10 ദിവസം ആപ്പ് ഉപയോഗിച്ചു, 21 ഫീഡ്ബാക്ക് സന്ദേശങ്ങൾ, 1.0.2, 1.0.3 ബിൽഡുകളിൽ 3 ക്രാഷുകൾ പരിഹരിച്ചു, onboarding 4 സ്ക്രീനിൽ നിന്ന് 2 ആക്കി&quot; എന്നത് &quot;testers-ന് ആപ്പ് ഇഷ്ടപ്പെട്ടു&quot; എന്നതിനേക്കാൾ വളരെ ശക്തമാണ്. https://testerexchange.com/tools/production-answers/-ലെ ഞങ്ങളുടെ സൗജന്യ ടൂൾ നിങ്ങളുടെ കണക്കുകളെ ഉത്തരങ്ങളുടെ ഡ്രാഫ്റ്റാക്കി മാറ്റും, production access ചോദ്യങ്ങളുടെ ഗൈഡ് ഓരോ ചോദ്യവും വിശദീകരിക്കുന്നു.</p>
+
+
+
+</section>
+
+<section id="testers">
+<h2>Testers ആയിരുന്നു പ്രശ്നമെങ്കിൽ</h2>
+<p>നിങ്ങളുടെ ആദ്യ testers-ൽ മിക്കവരും ഒരിക്കൽ ഇൻസ്റ്റാൾ ചെയ്ത് അപ്രത്യക്ഷരായെങ്കിൽ, അതേ ആളുകളുമായുള്ള രണ്ടാം റൗണ്ടും അതേപോലെ ആയിരിക്കും. ദിവസവും ആപ്പ് തുറക്കുന്ന ആളുകളെ പകരം കൊണ്ടുവരൂ.</p>
+<p>Tester Exchange സ്വന്തം Android ഫോണുകളിൽ നിങ്ങളുടെ ആപ്പ് ഉപയോഗിക്കുന്ന യഥാർത്ഥ ആളുകളെ അയക്കുകയും ഓരോ tester-ന്റെയും ദൈനംദിന ഉപയോഗം കാണിക്കുകയും ചെയ്യുന്നു, അതിനാൽ നിരസിക്കലിലൂടെ അറിയുന്നതിന് പകരം test നടക്കുമ്പോൾ തന്നെ ഉപയോഗം കാണാം. ഒരിക്കൽ പണമടയ്ക്കാം (12 testers-ന് $12.99, 15-ന് $14.99, 25-ന് $22.99), അല്ലെങ്കിൽ https://testerexchange.com/earn-ൽ മറ്റ് ആപ്പുകൾ ടെസ്റ്റ് ചെയ്ത് സൗജന്യമായി testers-നെ നേടാം. ഒരു tester നിർത്തിയാൽ പുതിയൊരാൾ ആ സീറ്റ് ഏറ്റെടുക്കും.</p>
+
+
+
+</section>
+<section id="faq"><h2>പതിവ് ചോദ്യങ്ങൾ</h2>
+<details><summary>14 ദിവസം പൂജ്യത്തിൽ നിന്ന് വീണ്ടും തുടങ്ങണോ?</summary><p>നിങ്ങളുടെ closed test തുടരേണ്ടി വരാമെന്ന് Google പറയുന്നു. നിലവിലുള്ള track-ഉം testers-ഉം നിലനിർത്തൂ, വീണ്ടും അപേക്ഷിക്കുന്നതിന് മുമ്പ് കുറഞ്ഞത് രണ്ടാഴ്ച കൂടി യഥാർത്ഥ ഉപയോഗം ഉണ്ടാകാൻ പ്ലാൻ ചെയ്യൂ.</p></details>
+<details><summary>വീണ്ടും അപേക്ഷിക്കാൻ എത്ര നാൾ കാത്തിരിക്കണം?</summary><p>Google-ന്റെ Help Center നിശ്ചിത കാത്തിരിപ്പ് കാലയളവ് പറയുന്നില്ല. കാണിക്കാൻ വ്യക്തമായി കൂടുതലും മെച്ചപ്പെട്ടതുമായ testing ഉള്ളപ്പോൾ വീണ്ടും അപേക്ഷിക്കൂ.</p></details>
+<details><summary>നിരസിക്കൽ എന്റെ ഡെവലപ്പർ അക്കൗണ്ടിനെ ബാധിക്കുമോ?</summary><p>Testing സംബന്ധിച്ച production access തീരുമാനം policy ലംഘനത്തിന് തുല്യമല്ല. Policy പ്രശ്നങ്ങൾ Policy status പേജിൽ വെവ്വേറെ കാണിക്കും.</p></details>
+<details><summary>പകരം അപ്പീൽ ചെയ്യാമോ?</summary><p>Testing സംബന്ധിച്ച തീരുമാനത്തിന് പ്രായോഗിക വഴി കൂടുതൽ testing-ഉം ശക്തമായ അപേക്ഷയുമാണ്. Policy നടപടിക്ക് ആ പ്രത്യേക ഇമെയിലിലെ അപ്പീൽ ലിങ്ക് പിന്തുടരൂ.</p></details>
+<details><summary>Organization അക്കൗണ്ടിലേക്ക് മാറണോ?</summary><p>D-U-N-S നമ്പറുള്ള യഥാർത്ഥ ബിസിനസ് ആണെങ്കിൽ മാത്രം. Organization അക്കൗണ്ടുകൾക്ക് closed testing നിബന്ധന ബാധകമല്ല, പക്ഷേ മാറ്റത്തിന് പരിശോധനയും സമയവും വേണം. organization vs personal അക്കൗണ്ടുകളെക്കുറിച്ചുള്ള ഗൈഡ് കാണൂ.</p></details>
+</section>
+<div class="cta"><span>യഥാർത്ഥ ആളുകൾ 14 ദിവസം സ്വന്തം ഫോണുകളിൽ നിങ്ങളുടെ ആപ്പ് തുറക്കുന്നു. ഒരിക്കൽ പണമടയ്ക്കൂ, അല്ലെങ്കിൽ മറ്റ് ആപ്പുകൾ ടെസ്റ്റ് ചെയ്ത് സൗജന്യമായി നേടൂ.</span><a class="btn" href="https://testerexchange.com/?lang=ml#buy">12 testers-നെ നേടൂ</a></div>
+<section><h2>കൂടുതൽ ഗൈഡുകൾ</h2><ul class="related"><li><a href="https://testerexchange.com/ml/" hreflang="ml">Google Play closed testing-ന് 12 testers-നെ എങ്ങനെ നേടാം</a></li><li><a href="https://testerexchange.com/ml/12-testers-app-builders/" hreflang="ml">App Inventor, Kodular, Flutter, Unity തുടങ്ങിയ builders ഉപയോഗിച്ച് ഉണ്ടാക്കിയ ആപ്പുകൾക്ക് Google Play 12 testers</a></li><li><a href="https://testerexchange.com/ml/app-not-available-for-testers/" hreflang="ml">Google Play closed testers-ന്റെ &quot;app not available&quot; പ്രശ്നം പരിഹരിക്കാം</a></li><li><a href="https://testerexchange.com/ml/automate-closed-testing-with-ai-agents/" hreflang="ml">AI agents ഉപയോഗിച്ച് Google Play closed testing ഓട്ടോമേറ്റ് ചെയ്യാം</a></li><li><a href="https://testerexchange.com/ml/best-way-to-get-12-testers/" hreflang="ml">Google Play closed testing-ന് 12 testers-നെ നേടാനുള്ള ഏറ്റവും നല്ല വഴി</a></li><li><a href="https://testerexchange.com/ml/closed-testing-for-games/" hreflang="ml">Google Play-യിലെ ഗെയിമുകൾക്കുള്ള closed testing: Unity, Unreal, Godot ഗൈഡ്</a></li><li><a href="https://testerexchange.com/ml/does-14-day-closed-test-reset/" hreflang="ml">Testers പിൻവാങ്ങുമ്പോൾ 14 ദിവസത്തെ closed test റീസെറ്റ് ആകുമോ?</a></li><li><a href="https://testerexchange.com/ml/earn-money-testing-android-apps/" hreflang="ml">Android ആപ്പുകൾ ടെസ്റ്റ് ചെയ്ത് പണം സമ്പാദിക്കാം: ഒരു സത്യസന്ധ ഗൈഡ്</a></li><li><a href="https://testerexchange.com/ml/free-closed-testing-testers/" hreflang="ml">Google Play closed testing-ന് 12 testers-നെ സൗജന്യമായി എങ്ങനെ നേടാം</a></li><li><a href="https://testerexchange.com/ml/friends-family-closed-testers/" hreflang="ml">സുഹൃത്തുക്കളെയും കുടുംബത്തെയും നിങ്ങളുടെ 12 Google Play testers ആയി ഉപയോഗിക്കൽ</a></li><li><a href="https://testerexchange.com/ml/google-group-vs-email-list/" hreflang="ml">നിങ്ങളുടെ closed test-ന് Google Group-ഓ ഇമെയിൽ ലിസ്റ്റോ?</a></li><li><a href="https://testerexchange.com/ml/google-play-closed-testing-requirements/" hreflang="ml">Google Play closed testing നിബന്ധനകൾ: പൂർണ്ണ 2026 ഗൈഡ്</a></li><li><a href="https://testerexchange.com/ml/google-play-review-time-after-closed-testing/" hreflang="ml">14 ദിവസത്തിന് ശേഷം: production access review സമയവും ആദ്യ റിലീസും</a></li><li><a href="https://testerexchange.com/ml/insufficient-testing-engagement/" hreflang="ml">closed testing-ന് ശേഷം റിജക്റ്റ് ആയോ? &quot;more testing required&quot; എങ്ങനെ പരിഹരിക്കാം</a></li><li><a href="https://testerexchange.com/ml/keep-testers-active-14-days/" hreflang="ml">closed testers-നെ 14 ദിവസവും എങ്ങനെ സജീവമാക്കി നിർത്താം</a></li><li><a href="https://testerexchange.com/ml/organization-vs-personal-developer-account/" hreflang="ml">Organization vs personal Google Play developer അക്കൗണ്ട്</a></li><li><a href="https://testerexchange.com/ml/paid-closed-testers-checklist/" hreflang="ml">Google Play closed testers-ന് പണം നൽകുന്നതിന് മുമ്പ് എന്ത് പരിശോധിക്കണം</a></li><li><a href="https://testerexchange.com/ml/production-access-questions/" hreflang="ml">Google Play-യുടെ production access ചോദ്യങ്ങൾക്ക് എങ്ങനെ ഉത്തരം നൽകാം</a></li><li><a href="https://testerexchange.com/ml/set-up-closed-testing-track/" hreflang="ml">Play Console-ൽ closed testing track സെറ്റ് ചെയ്യുന്നത് ഘട്ടം ഘട്ടമായി</a></li><li><a href="https://testerexchange.com/ml/tools/production-answers/" hreflang="ml">Production access ഉത്തര ജനറേറ്റർ</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

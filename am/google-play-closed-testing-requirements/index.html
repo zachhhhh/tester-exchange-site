@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="am">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>የGoogle Play closed testing መስፈርቶች 2026፦ 12 ሞካሪዎች፣ 14 ቀናት</title>
+<meta name="description" content="ለአዲስ የግል developer accounts የGoogle Play closed testing መስፈርት ሙሉ የ2026 መመሪያ፦ ማንን እንደሚመለከት፣ ለ14 ተከታታይ ቀናት 12 ሞካሪዎች፣ ምን እንደሚቆጠር እና ለproduction እንዴት ማመልከት እንደሚቻል።">
+<link rel="canonical" href="https://testerexchange.com/am/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="am" href="https://testerexchange.com/am/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="ar" href="https://testerexchange.com/ar/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="az" href="https://testerexchange.com/az/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="bg" href="https://testerexchange.com/bg/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="bn" href="https://testerexchange.com/bn/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="cs" href="https://testerexchange.com/cs/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="de" href="https://testerexchange.com/de/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="el" href="https://testerexchange.com/el/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="es" href="https://testerexchange.com/es/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="fa" href="https://testerexchange.com/fa/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="fil" href="https://testerexchange.com/fil/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="gu" href="https://testerexchange.com/gu/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="ha" href="https://testerexchange.com/ha/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="he" href="https://testerexchange.com/he/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="hi" href="https://testerexchange.com/hi/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="hr" href="https://testerexchange.com/hr/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="hu" href="https://testerexchange.com/hu/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="id" href="https://testerexchange.com/id/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="ig" href="https://testerexchange.com/ig/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="it" href="https://testerexchange.com/it/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="ja" href="https://testerexchange.com/ja/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="kk" href="https://testerexchange.com/kk/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="km" href="https://testerexchange.com/km/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="kn" href="https://testerexchange.com/kn/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="ko" href="https://testerexchange.com/ko/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="ml" href="https://testerexchange.com/ml/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="mr" href="https://testerexchange.com/mr/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="ms" href="https://testerexchange.com/ms/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="my" href="https://testerexchange.com/my/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="ne" href="https://testerexchange.com/ne/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="nl" href="https://testerexchange.com/nl/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="pa" href="https://testerexchange.com/pa/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="pl" href="https://testerexchange.com/pl/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="pt" href="https://testerexchange.com/pt/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="ro" href="https://testerexchange.com/ro/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="ru" href="https://testerexchange.com/ru/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="si" href="https://testerexchange.com/si/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="sk" href="https://testerexchange.com/sk/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="sr" href="https://testerexchange.com/sr/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="sv" href="https://testerexchange.com/sv/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="sw" href="https://testerexchange.com/sw/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="ta" href="https://testerexchange.com/ta/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="te" href="https://testerexchange.com/te/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="th" href="https://testerexchange.com/th/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="tr" href="https://testerexchange.com/tr/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="uk" href="https://testerexchange.com/uk/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="ur" href="https://testerexchange.com/ur/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="uz" href="https://testerexchange.com/uz/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="vi" href="https://testerexchange.com/vi/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="yo" href="https://testerexchange.com/yo/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="zh-Hans" href="https://testerexchange.com/zh-cn/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="zh-Hant" href="https://testerexchange.com/zh-tw/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/google-play-closed-testing-requirements/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/google-play-closed-testing-requirements/">
+<meta property="og:type" content="article"><meta property="og:title" content="የGoogle Play closed testing መስፈርቶች 2026፦ 12 ሞካሪዎች፣ 14 ቀናት">
+<meta property="og:description" content="ለአዲስ የግል developer accounts የGoogle Play closed testing መስፈርት ሙሉ የ2026 መመሪያ፦ ማንን እንደሚመለከት፣ ለ14 ተከታታይ ቀናት 12 ሞካሪዎች፣ ምን እንደሚቆጠር እና ለproduction እንዴት ማመልከት እንደሚቻል።"><meta property="og:url" content="https://testerexchange.com/am/google-play-closed-testing-requirements/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"የGoogle Play closed testing መስፈርቶች፦ ሙሉ የ2026 መመሪያ","description":"ለአዲስ የግል developer accounts የGoogle Play closed testing መስፈርት ሙሉ የ2026 መመሪያ፦ ማንን እንደሚመለከት፣ ለ14 ተከታታይ ቀናት 12 ሞካሪዎች፣ ምን እንደሚቆጠር እና ለproduction እንዴት ማመልከት እንደሚቻል።","inLanguage":"am","datePublished":"2026-11-06","dateModified":"2026-11-06","author":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"},"url":"https://testerexchange.com/am/google-play-closed-testing-requirements/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/am/"},{"@type":"ListItem","position":3,"name":"የGoogle Play closed testing መስፈርቶች፦ ሙሉ የ2026 መመሪያ","item":"https://testerexchange.com/am/google-play-closed-testing-requirements/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"12 ነው ወይስ 20 ሞካሪዎች?","acceptedAnswer":{"@type":"Answer","text":"12። Google በዲሴምበር 2024 ከ20 ወደ 12 ዝቅ አድርጓል። 14ቱ ተከታታይ ቀናት ተመሳሳይ ሆነዋል።"}},{"@type":"Question","name":"መስፈርቱ የድሮው accountዬን ይመለከታል?","acceptedAnswer":{"@type":"Answer","text":"closed testን ማካሄድ ያለባቸው ከ13 ኖቬምበር 2023 በኋላ የተፈጠሩ የግል accounts ብቻ ናቸው። የቆዩ የግል accounts እና የድርጅት accounts በእሱ አይሸፈኑም።"}},{"@type":"Question","name":"ለእያንዳንዱ መተግበሪያ closed testingን መድገም አለብኝ?","acceptedAnswer":{"@type":"Answer","text":"production access በተጎዱ የግል accounts ላይ በየመተግበሪያው ይሰጣል፣ ስለዚህ ለእያንዳንዱ አዲስ መተግበሪያ closed test ያቅዱ።"}},{"@type":"Question","name":"internal testing ይቆጠራል?","acceptedAnswer":{"@type":"Answer","text":"አይቆጠርም። closed test መሆን አለበት። Google በinternal testዎ opt in ያደረጉ ሰዎች የinternal testን እስኪለቁ ድረስ closed testዎን መቀላቀል እንደማይችሉም ይናገራል።"}},{"@type":"Question","name":"ሞካሪዎች መተግበሪያውን በየቀኑ መጠቀም አለባቸው?","acceptedAnswer":{"@type":"Answer","text":"Google ዝቅተኛ ቁጥር አያትምም። በproduction ቅጹ ውስጥ ስለ ተሳትፎ ይጠይቃል፣ ስለዚህ አብዛኞቹ ሞካሪዎች በመደበኛነት እውነተኛ አጠቃቀም ማድረጋቸው ደህንነቱ የተሻለው ዘይቤ ነው።"}},{"@type":"Question","name":"Google production accessን ለመገምገም ምን ያህል ጊዜ ይወስዳል?","acceptedAnswer":{"@type":"Answer","text":"Google እንደሚለው ብዙውን ጊዜ ሰባት ቀናት ወይም ከዚያ ያነሰ፣ አልፎ አልፎ ግን ሊረዝም ይችላል።"}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=am">Tester Exchange</a><span class="grow"></span>
+<select aria-label="ቋንቋ" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/google-play-closed-testing-requirements/">English</option><option value="https://testerexchange.com/am/google-play-closed-testing-requirements/" selected>አማርኛ</option><option value="https://testerexchange.com/ar/google-play-closed-testing-requirements/">العربية</option><option value="https://testerexchange.com/az/google-play-closed-testing-requirements/">Azərbaycanca</option><option value="https://testerexchange.com/bg/google-play-closed-testing-requirements/">Български</option><option value="https://testerexchange.com/bn/google-play-closed-testing-requirements/">বাংলা</option><option value="https://testerexchange.com/cs/google-play-closed-testing-requirements/">Čeština</option><option value="https://testerexchange.com/de/google-play-closed-testing-requirements/">Deutsch</option><option value="https://testerexchange.com/el/google-play-closed-testing-requirements/">Ελληνικά</option><option value="https://testerexchange.com/es/google-play-closed-testing-requirements/">Español</option><option value="https://testerexchange.com/fa/google-play-closed-testing-requirements/">فارسی</option><option value="https://testerexchange.com/fil/google-play-closed-testing-requirements/">Filipino</option><option value="https://testerexchange.com/fr/google-play-closed-testing-requirements/">Français</option><option value="https://testerexchange.com/gu/google-play-closed-testing-requirements/">ગુજરાતી</option><option value="https://testerexchange.com/ha/google-play-closed-testing-requirements/">Hausa</option><option value="https://testerexchange.com/he/google-play-closed-testing-requirements/">עברית</option><option value="https://testerexchange.com/hi/google-play-closed-testing-requirements/">हिन्दी</option><option value="https://testerexchange.com/hr/google-play-closed-testing-requirements/">Hrvatski</option><option value="https://testerexchange.com/hu/google-play-closed-testing-requirements/">Magyar</option><option value="https://testerexchange.com/id/google-play-closed-testing-requirements/">Bahasa Indonesia</option><option value="https://testerexchange.com/ig/google-play-closed-testing-requirements/">Igbo</option><option value="https://testerexchange.com/it/google-play-closed-testing-requirements/">Italiano</option><option value="https://testerexchange.com/ja/google-play-closed-testing-requirements/">日本語</option><option value="https://testerexchange.com/kk/google-play-closed-testing-requirements/">Қазақша</option><option value="https://testerexchange.com/km/google-play-closed-testing-requirements/">ខ្មែរ</option><option value="https://testerexchange.com/kn/google-play-closed-testing-requirements/">ಕನ್ನಡ</option><option value="https://testerexchange.com/ko/google-play-closed-testing-requirements/">한국어</option><option value="https://testerexchange.com/ml/google-play-closed-testing-requirements/">മലയാളം</option><option value="https://testerexchange.com/mr/google-play-closed-testing-requirements/">मराठी</option><option value="https://testerexchange.com/ms/google-play-closed-testing-requirements/">Bahasa Melayu</option><option value="https://testerexchange.com/my/google-play-closed-testing-requirements/">မြန်မာ</option><option value="https://testerexchange.com/ne/google-play-closed-testing-requirements/">नेपाली</option><option value="https://testerexchange.com/nl/google-play-closed-testing-requirements/">Nederlands</option><option value="https://testerexchange.com/pa/google-play-closed-testing-requirements/">ਪੰਜਾਬੀ</option><option value="https://testerexchange.com/pl/google-play-closed-testing-requirements/">Polski</option><option value="https://testerexchange.com/pt/google-play-closed-testing-requirements/">Português</option><option value="https://testerexchange.com/ro/google-play-closed-testing-requirements/">Română</option><option value="https://testerexchange.com/ru/google-play-closed-testing-requirements/">Русский</option><option value="https://testerexchange.com/si/google-play-closed-testing-requirements/">සිංහල</option><option value="https://testerexchange.com/sk/google-play-closed-testing-requirements/">Slovenčina</option><option value="https://testerexchange.com/sr/google-play-closed-testing-requirements/">Српски</option><option value="https://testerexchange.com/sv/google-play-closed-testing-requirements/">Svenska</option><option value="https://testerexchange.com/sw/google-play-closed-testing-requirements/">Kiswahili</option><option value="https://testerexchange.com/ta/google-play-closed-testing-requirements/">தமிழ்</option><option value="https://testerexchange.com/te/google-play-closed-testing-requirements/">తెలుగు</option><option value="https://testerexchange.com/th/google-play-closed-testing-requirements/">ไทย</option><option value="https://testerexchange.com/tr/google-play-closed-testing-requirements/">Türkçe</option><option value="https://testerexchange.com/uk/google-play-closed-testing-requirements/">Українська</option><option value="https://testerexchange.com/ur/google-play-closed-testing-requirements/">اردو</option><option value="https://testerexchange.com/uz/google-play-closed-testing-requirements/">Oʻzbekcha</option><option value="https://testerexchange.com/vi/google-play-closed-testing-requirements/">Tiếng Việt</option><option value="https://testerexchange.com/yo/google-play-closed-testing-requirements/">Yorùbá</option><option value="https://testerexchange.com/zh-cn/google-play-closed-testing-requirements/">简体中文</option><option value="https://testerexchange.com/zh-tw/google-play-closed-testing-requirements/">繁體中文</option><option value="https://testerexchange.com/zu/google-play-closed-testing-requirements/">isiZulu</option>
+</select>
+<a href="https://testerexchange.com/?lang=am">Tester Exchangeን ክፈት</a></header>
+<main>
+
+<h1>የGoogle Play closed testing መስፈርቶች፦ ሙሉ የ2026 መመሪያ</h1>
+<p class="muted">ኅዳር 2026 የተዘመነ</p>
+<p class="lede">የግል Google Play developer account ከ13 ኖቬምበር 2023 በኋላ ከከፈቱ በቀጥታ ወደ production ማተም አይችሉም። Google መጀመሪያ ቢያንስ ለ14 ቀናት በተከታታይ opt in የሚቆዩ ቢያንስ 12 ሞካሪዎች ያሉት closed test ይፈልጋል። ከዚያ አጭር የproduction access ቅጽ ይሞላሉ፣ የGoogleንም ግምገማ ይጠብቃሉ። ይህ መመሪያ የደንቡን እያንዳንዱን ክፍል Google በPlay Console Help Center ውስጥ እንደሚገልጸው፣ developers በእርግጥ የሚሰናከሉበትን ነገር፣ እንዲሁም ከመጀመሪያው ሰቀላ እስከ ሕዝባዊ ልቀት ድረስ ተጨባጭ የጊዜ ሰሌዳ ያብራራል።</p>
+<div class="cta"><span>እውነተኛ ሰዎች መተግበሪያዎን በራሳቸው ስልኮች ለ14 ቀናት ይከፍታሉ። አንድ ጊዜ ይክፈሉ፣ ወይም ሌሎች መተግበሪያዎችን በነፃ ይሞክሩ።</span><a class="btn" href="https://testerexchange.com/?lang=am#buy">12 ሞካሪዎችን ያግኙ</a></div>
+<nav class="toc"><b>በዚህ ገጽ ላይ</b><ul><li><a href="#who">closed testing ማን ማድረግ አለበት</a></li><li><a href="#rule">ደንቡ በአንድ ዓረፍተ ነገር</a></li><li><a href="#counts">ምን እንደ ሞካሪ ይቆጠራል</a></li><li><a href="#timeline">ተጨባጭ የጊዜ ሰሌዳ</a></li><li><a href="#form">የproduction access ቅጽ</a></li><li><a href="#fail">መተግበሪያዎች ለምን አያልፉም</a></li><li><a href="#testers">12 ሞካሪዎችን ከየት ማግኘት</a></li><li><a href="#faq">በተደጋጋሚ የሚጠየቁ ጥያቄዎች</a></li></ul></nav>
+
+<section id="who">
+<h2>closed testing ማን ማድረግ አለበት</h2>
+<p>Google Help Center እንደሚለው መስፈርቱ ከ13 ኖቬምበር 2023 በኋላ በተከፈቱ የግል developer accounts ላይ ይሠራል። እነዚህ መተግበሪያዎች እስካላለፉት ድረስ በGoogle Play ላይ ለማሰራጨት ብቁ አይደሉም።</p>
+<p>accountዎ ከዚያ ቀን በፊት ከተፈጠረ፣ ወይም የድርጅት account ከሆነ (በD-U-N-S ቁጥር የተረጋገጠ ንግድ)፣ የclosed testing መስፈርት አይመለከትዎትም። በተጎዳ የግል account ላይ ያለ እያንዳንዱ መተግበሪያ production access ከማግኘቱ በፊት በሂደቱ ያልፋል።</p>
+<ul><li><b>ከ13 ኖቬምበር 2023 በኋላ የተፈጠረ የግል account፦</b> closed test ያስፈልጋል።</li><li><b>ከ13 ኖቬምበር 2023 በፊት የተፈጠረ የግል account፦</b> አያስፈልግም።</li><li><b>የድርጅት account፦</b> አያስፈልግም፣ ነገር ግን D-U-N-S ቁጥርና የተረጋገጠ የድርጅት ድር ጣቢያ ያስፈልግዎታል። ስለ ድርጅትና የግል accounts የተጻፈውን መመሪያ ይመልከቱ።</li></ul>
+
+
+</section>
+
+<section id="rule">
+<h2>ደንቡ በአንድ ዓረፍተ ነገር</h2>
+<p><b>ቢያንስ ለ14 ቀናት ያለማቋረጥ opt in ያደረጉ ቢያንስ 12 ሞካሪዎች</b> ያሉት closed test ያካሂዱ፣ ከዚያ ከPlay Console Dashboard ለproduction access ያመልክቱ።</p>
+<p>የGoogle አገላለጽ አስፈላጊ ነው። 14ቱ ቀናት ተከታታይ መሆን አለባቸው። opt in አድርገው ከ14 ቀናት ባነሰ ጊዜ ሞክረው opt out የሚያደርጉ ሞካሪዎች አይቆጠሩም። ደግሞም ቢያንስ 12 ሞካሪዎች ባመለከቱበት ቀን አሁንም opt in ላይ መሆን አለባቸው።</p>
+
+
+<p>ቁጥሩ እስከ ዲሴምበር 2024 ድረስ 20 ሞካሪዎች ነበር፣ ከዚያ Google ወደ 12 ዝቅ አደረገው። 14ቱ ቀናት አልተለወጡም።</p>
+</section>
+
+<section id="counts">
+<h2>ምን እንደ ሞካሪ ይቆጠራል</h2>
+
+<ul><li><b>opt in ያደረገ እውነተኛ Google መለያ።</b> በኢሜይል ዝርዝርዎ ወይም በGoogle Groupዎ ውስጥ መሆን በቂ አይደለም። እያንዳንዱ ሰው የopt-in አገናኙን ከፍቶ ሞካሪ ለመሆን መንካት አለበት።</li><li><b>በclosed track ላይ።</b> በinternal testዎ opt in ያደረጉ ሰዎች የinternal testን እስኪለቁ ድረስ ለclosed tests ብቁ አይደሉም። internal testing ለመስፈርቱ አይቆጠርም።</li><li><b>ሁልጊዜ opt in ሆኖ መቆየት።</b> አንድ ሰው ቢለቅና እንደገና ቢቀላቀል ተከታታይ ቆጠራው እንደገና ይጀምራል።</li><li><b>መተግበሪያውን መጠቀም።</b> Google ዝቅተኛ የመክፈቻ ቁጥር አያትምም፣ ነገር ግን የproduction ቅጹ ሞካሪዎች እንዴት እንደተሳተፉና አጠቃቀማቸው በproduction ከሚጠብቁት ጋር እንደሚመሳሰል ይጠይቃል። አንድ ጊዜ ጭነው የሚጠፉ ሞካሪዎች ማመልከቻዎች የሚወድቁበት ዋና ምክንያት ናቸው።</li></ul>
+
+
+</section>
+
+<section id="timeline">
+<h2>ተጨባጭ የጊዜ ሰሌዳ</h2>
+
+
+<ol><li><b>ቀን 0፦</b> closed trackን ይፍጠሩ፣ ሞካሪዎችን ይጨምሩ (የኢሜይል ዝርዝር ወይም Google Group)፣ app bundle ይስቀሉና releaseውን ለግምገማ ይላኩ።</li><li><b>ከሰዓታት እስከ ጥቂት ቀናት በኋላ፦</b> releaseው ይታተማል፣ የopt-in አገናኙም ይሠራል። Google እንደሚገልጸው የመጀመሪያው የሙከራ አገናኝ እስኪገኝ ብዙ ሰዓታት ሊወስድ ይችላል።</li><li><b>ቀን 1 እስከ 14፦</b> ቢያንስ 12 ሞካሪዎች opt in ሆነው መተግበሪያውን ይጠቀማሉ። በአስተያየታቸው መሠረት ቢያንስ አንድ ማሻሻያ ይልቀቁ።</li><li><b>ቀን 15 ወይም ከዚያ በኋላ፦</b> በDashboard ላይ Apply for production ን ጠቅ ያድርጉና ጥያቄዎቹን ይመልሱ።</li><li><b>ከአንድ ሳምንት ገደማ በኋላ፦</b> Google እንደሚለው ግምገማው ብዙውን ጊዜ ሰባት ቀናት ወይም ከዚያ ያነሰ ይወስዳል፣ አልፎ አልፎ ግን ሊረዝም ይችላል። ሲጠናቀቅ ኢሜይል ይደርስዎታል።</li><li><b>ከፈቃድ በኋላ፦</b> የProduction ገጽ ይከፈታል። የመጀመሪያው production releaseዎ አሁንም በተለመደው የመተግበሪያ ግምገማ ያልፋል።</li></ol>
+<p>ምንም ችግር ካልተፈጠረ ከመጀመሪያው closed-test ሰቀላ እስከ ሕዝባዊ ዝርዝር ድረስ በግምት ከሦስት እስከ አራት ሳምንታት እንደሚወስድ ያቅዱ።</p>
+</section>
+
+<section id="form">
+<h2>የproduction access ቅጽ</h2>
+<p>የGoogle ቅጽ ሦስት ክፍሎች አሉት። ክፍል አንድ ስለ closed testዎ ነው፦ ሞካሪዎችን መመልመል ምን ያህል ቀላል ነበር፣ እንዴት እንደተሳተፉ፣ እንዲሁም የአስተያየታቸው ማጠቃለያና እንዴት እንደሰበሰቡት። ክፍል ሁለት ስለ መተግበሪያዎ ነው፦ የታለመ ተጠቃሚ፣ ለተጠቃሚዎች የሚሰጠው ጥቅም፣ እና በመጀመሪያው ዓመት ስንት ጭነቶች እንደሚጠብቁ። ክፍል ሦስት ስለ production ዝግጁነት ነው፦ ከሙከራው በኋላ ምን እንደቀየሩና መተግበሪያው ዝግጁ መሆኑን እንዴት እንደወሰኑ።</p>
+<p>ቅጹን ከመክፈትዎ በፊት መልሶቹን ይጻፉ። Google Next ወይም Apply ከመጫንዎ በፊት ገጹን ከለቀቁ መልሶችዎ እንደሚጠፉ ያስጠነቅቃል። ስለ production access ጥያቄዎች የተጻፈው መመሪያችንና በ https://testerexchange.com/tools/production-answers/ ላይ ያለው ነፃ የመልስ መሣሪያ ከእውነተኛ ቁጥሮች እንዲቀርጹ ይረዱዎታል።</p>
+
+
+
+</section>
+
+<section id="fail">
+<h2>መተግበሪያዎች ለምን አያልፉም</h2>
+<p>የGoogle Help Center closed testዎን ማስቀጠል የሚያስፈልግበት ሁለት ምክንያቶችን ይዘረዝራል፦ ከ12 ያነሱ opt in ያደረጉ ሞካሪዎች፣ ወይም ከሞካሪዎች በቂ ተሳትፎ አለመኖር። በተግባር developers የሚያጋጥሟቸው ችግሮች፦</p>
+<ul><li>በትክክል 12 ሰዎችን መጠየቅ። በ10ኛው ቀን አንድ ሰው ቢለቅ 11 ላይ ይሆናሉ።</li><li>ጭነው መተግበሪያውን ዳግመኛ የማይከፍቱ ሞካሪዎች።</li><li>በአንድ ስልክ ላይ ብዙ መለያዎች፣ ወይም እውነተኛ ሰዎች ያልሆኑ መለያዎች።</li><li>በ14ቱ ቀናት ውስጥ ማሻሻያም ሆነ አስተያየት የለም፣ ስለዚህ በቅጹ ውስጥ የሚገልጹት ምንም የለም።</li><li>በመጠይቁ ውስጥ አጭር፣ አጠቃላይ መልሶች።</li></ul>
+
+<p>ቀድሞውኑ «ተጨማሪ ሙከራ ያስፈልጋል» የሚል መልስ ከደረስዎት፣ ስለ በቂ ያልሆነ የሙከራ ተሳትፎ የተጻፈውን መመሪያ እና production access ውድቅ ሲሆን ምን ማድረግ እንዳለብዎ የሚገልጸውን መመሪያ ያንብቡ።</p>
+</section>
+
+<section id="testers">
+<h2>12 ሞካሪዎችን ከየት ማግኘት</h2>
+<p>Google ሞካሪዎች ከየት መምጣት እንዳለባቸው አይናገርም። ለሁለት ሳምንት በየቀኑ መተግበሪያዎን የሚከፍቱ በቂ Android ተጠቃሚዎችን የሚያውቁ ከሆነ ጓደኞችና ቤተሰብ ይሠራሉ። የሙከራ-ለሙከራ ማኅበረሰቦች ነፃ ናቸው ግን ጊዜዎን ይጠይቃሉ። የሚከፈልባቸው አገልግሎቶች ፈጣን ናቸው።</p>
+<p>Tester Exchange ሁለቱንም ያደርጋል። አንድ ጊዜ ይክፈሉ (ለ12 ሞካሪዎች $12.99፣ ለ15 $14.99፣ ለ25 $22.99)፣ ወይም በAndroid ስልክዎ browser ውስጥ በ https://testerexchange.com/earn ላይ የሌሎች developers መተግበሪያዎችን በመሞከር ሞካሪዎችን በነፃ ያግኙ። እያንዳንዱ ሞካሪ በራሱ ስልክ ላይ ያለ እውነተኛ ሰው ነው፣ የእያንዳንዳቸውንም የዕለት አጠቃቀም ያያሉ። አንድ ወይም ሁለት ሰው ቢለቅ ከ12 በታች እንዳይወርዱ 15 ሞካሪዎችን እንመክራለን።</p>
+
+
+
+</section>
+<section id="faq"><h2>በተደጋጋሚ የሚጠየቁ ጥያቄዎች</h2>
+<details><summary>12 ነው ወይስ 20 ሞካሪዎች?</summary><p>12። Google በዲሴምበር 2024 ከ20 ወደ 12 ዝቅ አድርጓል። 14ቱ ተከታታይ ቀናት ተመሳሳይ ሆነዋል።</p></details>
+<details><summary>መስፈርቱ የድሮው accountዬን ይመለከታል?</summary><p>closed testን ማካሄድ ያለባቸው ከ13 ኖቬምበር 2023 በኋላ የተፈጠሩ የግል accounts ብቻ ናቸው። የቆዩ የግል accounts እና የድርጅት accounts በእሱ አይሸፈኑም።</p></details>
+<details><summary>ለእያንዳንዱ መተግበሪያ closed testingን መድገም አለብኝ?</summary><p>production access በተጎዱ የግል accounts ላይ በየመተግበሪያው ይሰጣል፣ ስለዚህ ለእያንዳንዱ አዲስ መተግበሪያ closed test ያቅዱ።</p></details>
+<details><summary>internal testing ይቆጠራል?</summary><p>አይቆጠርም። closed test መሆን አለበት። Google በinternal testዎ opt in ያደረጉ ሰዎች የinternal testን እስኪለቁ ድረስ closed testዎን መቀላቀል እንደማይችሉም ይናገራል።</p></details>
+<details><summary>ሞካሪዎች መተግበሪያውን በየቀኑ መጠቀም አለባቸው?</summary><p>Google ዝቅተኛ ቁጥር አያትምም። በproduction ቅጹ ውስጥ ስለ ተሳትፎ ይጠይቃል፣ ስለዚህ አብዛኞቹ ሞካሪዎች በመደበኛነት እውነተኛ አጠቃቀም ማድረጋቸው ደህንነቱ የተሻለው ዘይቤ ነው።</p></details>
+<details><summary>Google production accessን ለመገምገም ምን ያህል ጊዜ ይወስዳል?</summary><p>Google እንደሚለው ብዙውን ጊዜ ሰባት ቀናት ወይም ከዚያ ያነሰ፣ አልፎ አልፎ ግን ሊረዝም ይችላል።</p></details>
+</section>
+<div class="cta"><span>እውነተኛ ሰዎች መተግበሪያዎን በራሳቸው ስልኮች ለ14 ቀናት ይከፍታሉ። አንድ ጊዜ ይክፈሉ፣ ወይም ሌሎች መተግበሪያዎችን በነፃ ይሞክሩ።</span><a class="btn" href="https://testerexchange.com/?lang=am#buy">12 ሞካሪዎችን ያግኙ</a></div>
+<section><h2>ተጨማሪ መመሪያዎች</h2><ul class="related"><li><a href="https://testerexchange.com/am/" hreflang="am">ለGoogle Play closed testing 12 ሞካሪዎችን እንዴት ማግኘት እንደሚቻል</a></li><li><a href="https://testerexchange.com/am/12-testers-app-builders/" hreflang="am">በApp Inventor፣ Kodular፣ Flutter፣ Unity እና በሌሎች መሣሪያዎች ለተሠሩ መተግበሪያዎች የGoogle Play 12 ሞካሪዎች</a></li><li><a href="https://testerexchange.com/am/app-not-available-for-testers/" hreflang="am">ለGoogle Play closed ሞካሪዎች «መተግበሪያው አይገኝም» የሚለውን ችግር ማስተካከል</a></li><li><a href="https://testerexchange.com/am/automate-closed-testing-with-ai-agents/" hreflang="am">Google Play closed testingን በAI agents ማስኬድ</a></li><li><a href="https://testerexchange.com/am/best-way-to-get-12-testers/" hreflang="am">ለGoogle Play closed testing 12 ሞካሪዎችን ለማግኘት ምርጡ መንገድ</a></li><li><a href="https://testerexchange.com/am/closed-testing-for-games/" hreflang="am">ለጨዋታዎች በGoogle Play ላይ closed testing፦ ለUnity፣ Unreal እና Godot መመሪያ</a></li><li><a href="https://testerexchange.com/am/does-14-day-closed-test-reset/" hreflang="am">ሞካሪዎች ሲለቁ የ14 ቀን closed test እንደገና ይጀምራል?</a></li><li><a href="https://testerexchange.com/am/earn-money-testing-android-apps/" hreflang="am">የAndroid መተግበሪያዎችን በመሞከር ገንዘብ ማግኘት፦ ሐቀኛ መመሪያ</a></li><li><a href="https://testerexchange.com/am/free-closed-testing-testers/" hreflang="am">ለGoogle Play closed testing 12 ሞካሪዎችን በነፃ እንዴት ማግኘት እንደሚቻል</a></li><li><a href="https://testerexchange.com/am/friends-family-closed-testers/" hreflang="am">ጓደኞችንና ቤተሰብን እንደ 12 የGoogle Play ሞካሪዎችዎ መጠቀም</a></li><li><a href="https://testerexchange.com/am/google-group-vs-email-list/" hreflang="am">ለclosed testዎ Google Group ወይስ የኢሜይል ዝርዝር?</a></li><li><a href="https://testerexchange.com/am/google-play-review-time-after-closed-testing/" hreflang="am">ከ14 ቀናት በኋላ፦ የproduction access ግምገማ ጊዜ እና የመጀመሪያው ልቀትዎ</a></li><li><a href="https://testerexchange.com/am/insufficient-testing-engagement/" hreflang="am">ከclosed testing በኋላ ውድቅ ሆኗል? &quot;more testing required&quot;ን እንዴት ማስተካከል እንደሚቻል</a></li><li><a href="https://testerexchange.com/am/keep-testers-active-14-days/" hreflang="am">closed ሞካሪዎችን ለ14ቱም ቀናት እንዴት ንቁ ማድረግ እንደሚቻል</a></li><li><a href="https://testerexchange.com/am/organization-vs-personal-developer-account/" hreflang="am">የድርጅት እና የግል Google Play developer account</a></li><li><a href="https://testerexchange.com/am/paid-closed-testers-checklist/" hreflang="am">ለGoogle Play closed ሞካሪዎች ከመክፈልዎ በፊት ምን ማረጋገጥ አለብዎት</a></li><li><a href="https://testerexchange.com/am/production-access-questions/" hreflang="am">የGoogle Play production access ጥያቄዎችን እንዴት መመለስ እንደሚቻል</a></li><li><a href="https://testerexchange.com/am/production-access-rejected/" hreflang="am">production access ውድቅ ሆነ፦ ቀጥሎ ምን ማድረግ</a></li><li><a href="https://testerexchange.com/am/set-up-closed-testing-track/" hreflang="am">በPlay Console ውስጥ closed testing trackን ደረጃ በደረጃ ማዋቀር</a></li><li><a href="https://testerexchange.com/am/tools/production-answers/" hreflang="am">የproduction access መልስ አመንጪ</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>
