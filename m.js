@@ -7,6 +7,25 @@
     if (navigator.webdriver || /bot|crawl|spider|headless|lighthouse/i.test(navigator.userAgent)) return;
     var S = document.currentScript;
     var site = (S && S.getAttribute('data-site')) || location.hostname.replace(/^www\./, '');
+    // PostHog (Norynta account, admin@norynta.com, free tier): product analytics, funnels, heatmaps,
+    // session replay (inputs masked) and error tracking for every business, tagged by site/business.
+    var BIZ = { '64types.app': '64 Types', 'testerexchange.com': 'Tester Exchange', 'norynta.com': 'Norynta',
+      'collect.norynta.com': 'Norynta', 'sourcing.norynta.com': 'Norynta Sourcing', 'comms.norynta.com': 'Norynta' }[site] || site;
+    if (!(window.posthog && window.posthog.__loaded) && !(window.posthog && window.posthog._i)) {
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister identify reset get_distinct_id get_session_id get_session_replay_url set_config startSessionRecording stopSessionRecording captureException opt_out_capturing".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      window.posthog.init('phc_CA3uKzi1BEtOhvpLxgVpWOkFk6oZYQqFnDAuYHftwVG', {
+        api_host: 'https://us.i.posthog.com',
+        person_profiles: 'identified_only',
+        persistence: 'localStorage',
+        capture_pageview: 'history_change',
+        capture_pageleave: true,
+        autocapture: true,
+        enable_heatmaps: true,
+        capture_exceptions: true,
+        session_recording: { maskAllInputs: true }
+      });
+      window.posthog.register({ site: site, business: BIZ });
+    }
     var EP = 'https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/mon_track';
     var K = 'sb_publishable_OwXT7OfwIGkuIn420mavVA_MsAkzZGf';
     var sid;
@@ -87,6 +106,9 @@
     addEventListener('pagehide', flush);
     setTimeout(send, 5000);
 
-    window.mon = function (name, props) { add('event', name, null, props && typeof props === 'object' ? props : null); send(); };
+    window.mon = function (name, props) {
+      add('event', name, null, props && typeof props === 'object' ? props : null); send();
+      try { window.posthog && window.posthog.capture(name, props && typeof props === 'object' ? props : {}); } catch (e) {}
+    };
   } catch (e) {}
 })();
