@@ -11,6 +11,14 @@
     // session replay (inputs masked) and error tracking for every business, tagged by site/business.
     var BIZ = { '64types.app': '64 Types', 'testerexchange.com': 'Tester Exchange', 'norynta.com': 'Norynta',
       'collect.norynta.com': 'Norynta', 'sourcing.norynta.com': 'Norynta Sourcing', 'comms.norynta.com': 'Norynta', 'getrankroot.com': 'RankRoot' }[site] || site;
+    // Email link scanners (e.g. Microsoft Safe Links) open links from our emails and throw this rejection.
+    // They are not people: stop recording that visit so visitor counts and error reports stay real.
+    var SCAN = /Object Not Found Matching Id/;
+    var scanner = false;
+    addEventListener('unhandledrejection', function (e) {
+      var r = e && e.reason; if (scanner || !SCAN.test(String((r && r.message) || r))) return;
+      scanner = true; try { e.preventDefault(); window.posthog && window.posthog.opt_out_capturing(); } catch (x) {}
+    });
     if (!(window.posthog && window.posthog.__loaded) && !(window.posthog && window.posthog._i)) {
       !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister identify reset get_distinct_id get_session_id get_session_replay_url set_config startSessionRecording stopSessionRecording captureException opt_out_capturing".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
       window.posthog.init('phc_wEUxRVQa93MbnxvrA78bd2KpZ9RGVqESJ8Xeete9NPTE', {
@@ -22,7 +30,8 @@
         autocapture: true,
         enable_heatmaps: true,
         capture_exceptions: true,
-        session_recording: { maskAllInputs: true }
+        session_recording: { maskAllInputs: true },
+        before_send: function (ev) { return scanner ? null : ev; }
       });
       window.posthog.register({ site: site, business: BIZ });
     }
@@ -39,7 +48,7 @@
       q.push({ k: k, n: String(n == null ? '' : n).slice(0, 200), v: (typeof v === 'number' && isFinite(v)) ? v : null, p: p || null, path: path });
     }
     function send() {
-      if (!q.length) return;
+      if (!q.length || scanner) return;
       var body = JSON.stringify({ e: { site: site, sid: sid, lang: navigator.language || '', ref: (document.referrer || '').slice(0, 300),
         mobile: /Mobi|Android|iPhone/i.test(navigator.userAgent), events: q.splice(0, 60) } });
       try { fetch(EP, { method: 'POST', keepalive: true, headers: { 'Content-Type': 'application/json', apikey: K, Authorization: 'Bearer ' + K }, body: body }).catch(function () {}); } catch (e) {}
@@ -84,7 +93,7 @@
       if (e && e.message) add('error', e.message, null, { src: String(e.filename || '').slice(0, 150), line: e.lineno || 0 });
       else if (e && e.target && (e.target.src || e.target.href)) add('error', 'failed to load ' + e.target.tagName.toLowerCase(), null, { src: String(e.target.src || e.target.href).slice(0, 150) });
     }, true);
-    addEventListener('unhandledrejection', function (e) { var r = e && e.reason; add('error', 'promise: ' + String((r && r.message) || r).slice(0, 180)); });
+    addEventListener('unhandledrejection', function (e) { var r = e && e.reason; if (SCAN.test(String((r && r.message) || r))) return; add('error', 'promise: ' + String((r && r.message) || r).slice(0, 180)); });
 
     try { new PerformanceObserver(function (l) { var es = l.getEntries(); if (es.length) lcp = es[es.length - 1].startTime; }).observe({ type: 'largest-contentful-paint', buffered: true }); } catch (e) {}
     try { new PerformanceObserver(function (l) { l.getEntries().forEach(function (x) { if (!x.hadRecentInput) cls += x.value; }); }).observe({ type: 'layout-shift', buffered: true }); } catch (e) {}
