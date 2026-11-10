@@ -91,11 +91,15 @@
 
     addEventListener('error', function (e) {
       if (e && e.message) add('error', e.message, null, { src: String(e.filename || '').slice(0, 150), line: e.lineno || 0 });
-      else if (e && e.target && (e.target.src || e.target.href)) add('error', 'failed to load ' + e.target.tagName.toLowerCase(), null, { src: String(e.target.src || e.target.href).slice(0, 150) });
+      // Skip analytics scripts that ad blockers stop (Cloudflare beacon, PostHog): not a user-facing failure, only noise.
+      else if (e && e.target && (e.target.src || e.target.href) && !/cloudflareinsights\.com|posthog\.com/.test(e.target.src || e.target.href)) add('error', 'failed to load ' + e.target.tagName.toLowerCase(), null, { src: String(e.target.src || e.target.href).slice(0, 150) });
     }, true);
     addEventListener('unhandledrejection', function (e) { var r = e && e.reason; if (SCAN.test(String((r && r.message) || r))) return; add('error', 'promise: ' + String((r && r.message) || r).slice(0, 180)); });
 
-    try { new PerformanceObserver(function (l) { var es = l.getEntries(); if (es.length) lcp = es[es.length - 1].startTime; }).observe({ type: 'largest-contentful-paint', buffered: true }); } catch (e) {}
+    // LCP only counts while the tab was visible (as in Google's web-vitals): pages opened in a background tab reported hours.
+    var firstHidden = document.visibilityState === 'hidden' ? 0 : Infinity;
+    addEventListener('visibilitychange', function (e) { if (document.visibilityState === 'hidden') firstHidden = Math.min(firstHidden, e.timeStamp); }, true);
+    try { new PerformanceObserver(function (l) { l.getEntries().forEach(function (x) { if (x.startTime < firstHidden) lcp = x.startTime; }); }).observe({ type: 'largest-contentful-paint', buffered: true }); } catch (e) {}
     try { new PerformanceObserver(function (l) { l.getEntries().forEach(function (x) { if (!x.hadRecentInput) cls += x.value; }); }).observe({ type: 'layout-shift', buffered: true }); } catch (e) {}
     try { new PerformanceObserver(function (l) { l.getEntries().forEach(function (x) { if (x.interactionId && x.duration > inp) inp = x.duration; }); }).observe({ type: 'event', buffered: true, durationThreshold: 40 }); } catch (e) {}
 
