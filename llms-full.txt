@@ -287,6 +287,70 @@ For agent-to-agent setups, Tester Exchange publishes an A2A agent card at https:
 
 ---
 
+## How to become an Android app tester
+URL: https://testerexchange.com/guide/become-an-android-app-tester/
+
+You don't need a job title or a special device to test apps. Any Android phone with a Google Account can join tests of apps that aren't public yet. There are three ways in: early access apps in the Play Store, beta versions of apps you already use, and closed tests that developers need real testers for. The last one is where testers are needed most, and you can join those from your phone's browser at https://testerexchange.com/earn.
+
+### 1. Early access and beta apps in the Play Store
+
+Google Play's own help page explains two public programs (https://support.google.com/googleplay/answer/7003180). Early access apps haven't been released yet; beta apps are newer, more experimental versions of apps that are already out. Both can be less stable than normal apps.
+
+- Unreleased apps: open the Play Store, go to the “For you” tab and look under “Apps in development”.
+- Unreleased games: open the “New” tab and look under “Be the first to play”.
+- Betas of apps you have: tap your profile icon, then Manage apps & devices, open an installed app's page and tap “Join” under “Join the beta”. If you don't see it, that app has no public beta right now.
+
+These programs are open to everyone and some fill up, so they are a nice way to try new things, but nobody is waiting on you to show up.
+
+### 2. Closed tests: where testers are actually needed
+
+Google Play requires personal developer accounts created after 13 November 2023 to run a closed test with at least 12 testers who stay opted in for 14 days in a row before the app can go public (https://support.google.com/googleplay/android-developer/answer/14151465).
+
+Closed tests don't appear in the Play Store. You join through an opt-in link from the developer, so solo developers have to find testers themselves, and many don't know 12 Android users who will help. That's the gap a tester fills.
+
+### 3. Test closed-test apps with Tester Exchange
+
+- No extra app: open https://testerexchange.com/earn in your Android phone's browser and sign in with the Google Account your Play Store uses. Your list of apps fills itself.
+- About a minute a day per app: join the test, install the app from Google Play, open it and use it for real.
+- Credits: you earn 1 credit for each day you open an app you're testing. Credits get testers for your own app, if you ever build one.
+- Cash on some apps: apps marked 💵 belong to paying customers and pay US$0.50 for each finished 14-day test. Cash out from US$3 to PayPal, Binance Pay or Payoneer.
+
+This is pocket money, not an income: how many cash apps you get depends on how many paying customers need testers that week.
+
+### Step by step
+
+1. On your Android phone, open https://testerexchange.com/earn and sign in.
+2. Tap the green button. The first time, it asks you to join the testers group (once), then to become a tester on Google Play.
+3. Install the app from Google Play through the test link and open it.
+4. Use it for a minute or two every day for 14 days, on a different screen each day.
+5. Send short feedback when something breaks or confuses you: what you did, what you expected, what happened.
+6. Stay opted in and keep the app installed until day 14.
+
+### Giving feedback the developer can use
+
+For early access and beta apps, Google Play has a “Private feedback to developer” box on the app's page (profile icon, Manage apps & devices, Beta). Only the developer sees it. Google also shares some usage data from test apps with the developer, such as device information and in-app events, to help them fix problems.
+
+### The rules
+
+- Your own real phone. No emulators, cloud phones or device farms.
+- One account per person. Extra accounts are removed.
+- Really use the app. Opening and closing it instantly isn't testing.
+- Finish what you start. Google counts testers who stay opted in for 14 continuous days, so leaving early hurts the developer.
+
+### Frequently asked questions
+
+**Do I need experience to become an app tester?** No. Developers need ordinary users who open the app every day and say when something doesn't work.
+
+**Do app testers get paid?** Play Store early access and betas don't pay. On Tester Exchange, apps marked 💵 pay US$0.50 per finished 14-day test, and every test day earns credits.
+
+**Can I test apps on an iPhone?** Not these. Google Play tests need an Android phone with a Google Account.
+
+**Is it safe to install test apps?** You install them from Google Play, so they go through Google's normal protections. Test versions can be unstable, so don't enter payment details or sensitive information into them.
+
+**How many apps can I test at once?** Several. Each one takes about a minute a day, so set a daily reminder and go through your list.
+
+---
+
 ## The best way to get 12 testers for Google Play closed testing
 URL: https://testerexchange.com/guide/best-way-to-get-12-testers/
 

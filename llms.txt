@@ -67,6 +67,8 @@ Every guide below is also in all 54 other site languages at /<lang>/<slug>/ (lan
 - [Automate Google Play closed testing with AI agents](https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/)
 - [Does the 14-day closed test reset when testers drop out?](https://testerexchange.com/guide/does-14-day-closed-test-reset/)
 - [Earn money testing Android apps: an honest guide](https://testerexchange.com/guide/earn-money-testing-android-apps/)
+- [How to become an Android app tester (Play Store early access, betas, closed tests)](https://testerexchange.com/guide/become-an-android-app-tester/)
+- [Get 12 free Google Play testers by testing other apps (credit math)](https://testerexchange.com/guide/get-free-testers-by-testing-apps/)
 - [Closed testing for games on Google Play: a guide for Unity, Unreal and Godot](https://testerexchange.com/guide/closed-testing-for-games/)
 - [After the 14 days: production access review time and your first release](https://testerexchange.com/guide/google-play-review-time-after-closed-testing/)
 - [Free production-access answer generator](https://testerexchange.com/tools/production-answers/)
