@@ -662,6 +662,71 @@ Most developers have three to eight people they can ask. You don't need to find 
 
 ---
 
+## Get free Google Play testers by testing other developers' apps
+URL: https://testerexchange.com/guide/get-free-testers-by-testing-apps/
+
+Google Play makes new personal developer accounts run a closed test with at least 12 testers who stay opted in for 14 days in a row. If you can't pay for testers, you can earn them: test other developers' apps from your Android phone, and they test yours. This guide shows exactly how the credits add up, how long it takes, and how to get your testers sooner.
+
+### The rule you need to meet
+
+Google's Play Console Help says personal developer accounts created after 13 November 2023 must run a closed test with at least 12 testers who have been opted in continuously for at least 14 days before they can apply for production access (https://support.google.com/googleplay/android-developer/answer/14151465).
+
+Other developers have the same problem, so testing each other's apps works: every developer on Tester Exchange needs testers, and every one of them can be a tester.
+
+### How the credits work
+
+- You earn 1 credit for each day you open an app you're testing for at least 30 seconds.
+- One tester costs 15 credits: 14 tester-days plus a feedback bonus.
+- 12 testers cost 180 credits, 15 testers cost 225. Asking for 14–15 is safer, because some testers drop out.
+- New members start with 14 credits (the first 100 members get 90).
+- Credits are held, not spent upfront: a tester is paid only for the days they open your app, and unused credits go back to your balance.
+
+### How long it takes
+
+Each app takes about a minute a day, and you can test several apps at the same time. If you open 12 apps a day, you earn 12 credits a day: with the 14 credits you start with, that's 180 credits, enough for 12 testers, in about 14 days. Open fewer apps and it takes longer; how many apps you get each day depends on how many need testers.
+
+You don't have to wait until you have 180: testers you bring yourself through your app's share page don't cost credits, so you only need credits for the seats they don't fill.
+
+### Get your testers sooner: keep testing
+
+- Owners who test go first. Apps whose owners opened at least 3 other apps today or yesterday get testers before apps whose owners don't test.
+- Free apps get new testers only while their owner is testing. If you stop opening other apps, your app stops moving up the queue.
+- A minute a day is enough. Open the apps on your list, keep each one open for 30 seconds, and come back tomorrow.
+
+### Earn faster: invite people
+
+Every app has a share page. Post its link where you already ask for testers. Each person who joins through your link and completes a test day earns you 30 bonus credits, which is two testers, and they can test your app right away.
+
+### Step by step
+
+1. Set up your closed test in Play Console and keep the opt-in link handy.
+2. On your Android phone, open https://testerexchange.com/earn in the browser and sign in with the Google Account your Play Store uses.
+3. Tap the green button to join the first app's test, install it from Google Play, and open it for 30 seconds. Come back and repeat for the next app.
+4. Add your own app and share its page with anyone who might help.
+5. Do this every day. When you have enough credits, start your campaign; keep testing so your app stays near the front.
+6. After 14 days with 12 or more testers opted in, apply for production access in Play Console.
+
+### Fair-play rules
+
+- Your own real phone. No emulators, cloud phones or device farms.
+- One account per person. Extra accounts are removed.
+- Really use the app. Look at a different screen each day and send feedback if something breaks.
+- Stay for the full 14 days. Leaving early hurts the developer, the same way it would hurt you.
+
+### Frequently asked questions
+
+**Is it really free?** Yes. You pay with your time: about a minute a day per app you test. Paying is optional and only makes it faster.
+
+**How many credits do I need for 12 testers?** 180 credits: 15 per tester (14 days plus a feedback bonus). 15 testers need 225.
+
+**How long does it take to earn them?** About 14 days if you open 12 apps a day, counting the 14 credits you start with. Invites make it faster: each invited person who completes a test day earns you 30 credits.
+
+**Do I need an Android phone?** Yes. These are Google Play closed tests, so you test on an Android phone signed in to the Google Account your Play Store uses.
+
+**What if I stop testing?** You keep the credits you earned, but a free app gets new testers only while its owner is testing, so your test slows down.
+
+---
+
 ## Google Group or email list for your closed test?
 URL: https://testerexchange.com/guide/google-group-vs-email-list/
 
