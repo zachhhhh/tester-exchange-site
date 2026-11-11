@@ -742,7 +742,7 @@ Other developers have the same problem, so testing each other's apps works: ever
 - You earn 1 credit for each day you open an app you're testing for at least 30 seconds.
 - One tester costs 15 credits: 14 tester-days plus a feedback bonus.
 - 12 testers cost 180 credits, 15 testers cost 225. Asking for 14–15 is safer, because some testers drop out.
-- New members start with 14 credits (the first 100 members get 90).
+- New members start with 14 credits (the first 500 members get 90).
 - Credits are held, not spent upfront: a tester is paid only for the days they open your app, and unused credits go back to your balance.
 
 ### How long it takes
