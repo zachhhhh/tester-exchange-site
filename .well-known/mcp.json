@@ -1,0 +1,61 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.testerexchange/tester-exchange",
+  "title": "Tester Exchange",
+  "description": "Gets Android developers the 12 testers × 14 days Google Play requires for closed testing. Real people test on their own phones; pay once or test other apps for free. Start with get_testers.",
+  "version": "1.3.0",
+  "url": "https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp",
+  "transport": "streamable-http",
+  "websiteUrl": "https://testerexchange.com/",
+  "documentationUrl": "https://testerexchange.com/agents/",
+  "iconUrl": "https://testerexchange.com/favicon.svg",
+  "provider": {
+    "organization": "Tester Exchange",
+    "url": "https://testerexchange.com/"
+  },
+  "authentication": {
+    "type": "bearer",
+    "required": false,
+    "header": "Authorization",
+    "format": "Bearer tx_...",
+    "description": "API key from https://testerexchange.com/api. Without it only about, platform_stats and pricing work; get_testers needs a key. No OAuth."
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. 'Bearer tx_...' API key from https://testerexchange.com/api. Without it only about, platform_stats and pricing work; get_testers needs a key.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "tools": [
+    "get_testers",
+    "about",
+    "platform_stats",
+    "pricing",
+    "my_account",
+    "my_apps",
+    "add_app",
+    "start_campaign",
+    "campaign_report",
+    "add_testers",
+    "set_campaign_status",
+    "my_tests",
+    "share_kit",
+    "buy_credits_links",
+    "friends_status",
+    "start_friends_test",
+    "fill_from_exchange"
+  ],
+  "related": {
+    "a2aAgentCard": "https://testerexchange.com/.well-known/agent-card.json",
+    "openapi": "https://testerexchange.com/openapi.json",
+    "llms": "https://testerexchange.com/llms.txt"
+  }
+}

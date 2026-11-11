@@ -33,7 +33,7 @@
   apps free at https://testerexchange.com/earn). Call it again any time to check progress.
 - MCP server (Streamable HTTP, no OAuth): https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp
   Auth: header `Authorization: Bearer tx_…` or `?token=tx_…`. Public tools (about, platform_stats, pricing) work
-  without a key.
+  without a key. Server card: https://testerexchange.com/.well-known/mcp.json
   Claude Code: `claude mcp add --transport http tester-exchange https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp --header "Authorization: Bearer tx_…"`
 - A2A (Agent2Agent 0.3, JSON-RPC): agent card https://testerexchange.com/.well-known/agent-card.json, endpoint
   https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/a2a. `message/send` with text ("get 12 testers for
