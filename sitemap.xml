@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://testerexchange.com/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/agents/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://testerexchange.com/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/agents/</loc><lastmod>2026-11-11</lastmod></url>
   <url><loc>https://testerexchange.com/guide/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://testerexchange.com/am/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://testerexchange.com/ar/</loc><lastmod>2026-11-06</lastmod></url>
@@ -223,10 +223,14 @@
   <url><loc>https://testerexchange.com/zh-tw/automate-closed-testing-with-ai-agents/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://testerexchange.com/zu/automate-closed-testing-with-ai-agents/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://testerexchange.com/guide/become-an-android-app-tester/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://testerexchange.com/ar/become-an-android-app-tester/</loc><lastmod>2026-11-11</lastmod></url>
   <url><loc>https://testerexchange.com/es/become-an-android-app-tester/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://testerexchange.com/fil/become-an-android-app-tester/</loc><lastmod>2026-11-11</lastmod></url>
   <url><loc>https://testerexchange.com/hi/become-an-android-app-tester/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://testerexchange.com/id/become-an-android-app-tester/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://testerexchange.com/pt/become-an-android-app-tester/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://testerexchange.com/ru/become-an-android-app-tester/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/tr/become-an-android-app-tester/</loc><lastmod>2026-11-11</lastmod></url>
   <url><loc>https://testerexchange.com/vi/become-an-android-app-tester/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://testerexchange.com/guide/best-way-to-get-12-testers/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://testerexchange.com/am/best-way-to-get-12-testers/</loc><lastmod>2026-11-06</lastmod></url>
@@ -1182,52 +1186,53 @@
   <url><loc>https://testerexchange.com/zh-cn/tools/production-answers/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://testerexchange.com/zh-tw/tools/production-answers/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://testerexchange.com/zu/tools/production-answers/</loc><lastmod>2026-11-06</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.ydplan.touchthemahjongtiles/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.sneakypigeonstudios.calmoku/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/kr.velchat.app/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/dev.dlook.tumbly/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.joypuzzlestudio.colormemory/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.joypuzzlestudio.thunderstrike/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/social.letsbe.app/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/app.odisy/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.kzics.mobile/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/store.lintika.radardesuerte/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.paperforest.escape/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.itztime.reminder/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.theusual.vendor/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/ru.aerogrill.recipes/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.base6a96efc4269d63520626aa2a.app/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.puzzlejoy.jigsaw/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/io.hamdijomaa.kiji/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.dorianstudiobv.checklist/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.dorianstudiobv.checlist/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.scrolo.app/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.shopright.app/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/it.librettoanimali.app/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.dadoujia.tally60/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.quicksnap.app/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.control53.mobile/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.whatsapp/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.cityerands.sunyani/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.veeplaymobile/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.skyrumble.game/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.ezzaroual.foodpilot/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/no.madsnielsen.samspill/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/app.contendo/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.h4soft.mruu/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/info.praydigital.app/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/de.rvs.energymonitor/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/az.yunote.app/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.leonardo.verdancehub/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/kz.murdasoft.avtobusspeak/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.bayocard/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.maksabtasreef.app/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.smartstay.app/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.romeris.app/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.hezarfen.ekrankapat/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.hezarfen.ekranuyandir/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/app.testerexchange/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.sixtyfourtypes.app/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.sixty4.app/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://testerexchange.com/t/com.kerslide.game/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.SunflowerGames.Lumberjack/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.ydplan.touchthemahjongtiles/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.sneakypigeonstudios.calmoku/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/kr.velchat.app/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/dev.dlook.tumbly/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.joypuzzlestudio.colormemory/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.joypuzzlestudio.thunderstrike/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/social.letsbe.app/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/app.odisy/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.kzics.mobile/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/store.lintika.radardesuerte/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.paperforest.escape/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.itztime.reminder/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.theusual.vendor/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/ru.aerogrill.recipes/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.base6a96efc4269d63520626aa2a.app/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.puzzlejoy.jigsaw/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/io.hamdijomaa.kiji/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.dorianstudiobv.checklist/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.dorianstudiobv.checlist/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.scrolo.app/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.shopright.app/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/it.librettoanimali.app/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.dadoujia.tally60/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.quicksnap.app/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.control53.mobile/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.whatsapp/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.cityerands.sunyani/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.veeplaymobile/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.skyrumble.game/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.ezzaroual.foodpilot/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/no.madsnielsen.samspill/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/app.contendo/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.h4soft.mruu/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/info.praydigital.app/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/de.rvs.energymonitor/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/az.yunote.app/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.leonardo.verdancehub/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/kz.murdasoft.avtobusspeak/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.bayocard/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.maksabtasreef.app/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.smartstay.app/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.romeris.app/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.hezarfen.ekrankapat/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.hezarfen.ekranuyandir/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/app.testerexchange/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.sixtyfourtypes.app/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.sixty4.app/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/t/com.kerslide.game/</loc><lastmod>2026-11-11</lastmod></url>
 </urlset>

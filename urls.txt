@@ -221,10 +221,14 @@ https://testerexchange.com/zh-cn/automate-closed-testing-with-ai-agents/
 https://testerexchange.com/zh-tw/automate-closed-testing-with-ai-agents/
 https://testerexchange.com/zu/automate-closed-testing-with-ai-agents/
 https://testerexchange.com/guide/become-an-android-app-tester/
+https://testerexchange.com/ar/become-an-android-app-tester/
 https://testerexchange.com/es/become-an-android-app-tester/
+https://testerexchange.com/fil/become-an-android-app-tester/
 https://testerexchange.com/hi/become-an-android-app-tester/
 https://testerexchange.com/id/become-an-android-app-tester/
 https://testerexchange.com/pt/become-an-android-app-tester/
+https://testerexchange.com/ru/become-an-android-app-tester/
+https://testerexchange.com/tr/become-an-android-app-tester/
 https://testerexchange.com/vi/become-an-android-app-tester/
 https://testerexchange.com/guide/best-way-to-get-12-testers/
 https://testerexchange.com/am/best-way-to-get-12-testers/
