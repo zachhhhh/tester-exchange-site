@@ -1392,3 +1392,54 @@ During the test, upload at least one new build to the same track. It shows Googl
 
 **Can I make the closed test app paid?** You can, but Google says testers must buy paid apps in closed tests. Keep the test app free to avoid losing testers.
 
+---
+
+## Test for test: how to get 12 closed-test testers without paying
+URL: https://testerexchange.com/guide/test-for-test-closed-testing/
+
+"Test for test" is the most common way solo developers pass Google Play's closed-testing rule: you install and use other developers' apps, and they do the same for yours. It works when every tester really opens the app for 14 days in a row. This guide explains what makes test-for-test succeed or fail, and how Tester Exchange tracks the days for you.
+
+### The rule you are solving
+
+Google's Play Console Help says personal developer accounts created after 13 November 2023 must run a closed test with at least 12 testers who have been opted in continuously for at least 14 days before applying for production access (https://support.google.com/googleplay/android-developer/answer/14151465).
+
+Test for test is simply two developers meeting that rule for each other.
+
+### Why informal test-for-test often fails
+
+- Nobody tracks the days. In a chat group you only find out on day 12 that a tester opted out on day 5.
+- Testers join and vanish. When one leaves, you are back under 12.
+- Uneven effort. You test five apps, and two of them never open yours.
+- Too few spare testers. Exactly 12 leaves no room for one drop-out.
+
+### How Tester Exchange makes it fair
+
+- Credits keep it even. You earn 1 credit for each day you open an app for at least 30 seconds; one tester costs 15 credits, so 12 testers cost 180.
+- Days are counted for you. A tester is paid only for the days they open your app, and unused credits return to your balance.
+- Owners who test go first. Apps whose owners opened at least 3 other apps today or yesterday get testers before apps whose owners do not.
+- Ask for 14–15 testers, not 12, so one drop-out does not stop your test.
+
+### Step by step
+
+1. Set up your closed test in Play Console and keep the opt-in link handy.
+2. On your Android phone, open https://testerexchange.com/earn and sign in with the Google Account your Play Store uses.
+3. Join the first app's test, install it from Google Play and open it for 30 seconds. Repeat for the next apps.
+4. Add your own app and share its page with anyone who might help.
+5. Test a little every day. After 14 days with 12 or more testers opted in, apply for production access.
+
+### Fair-play rules
+
+- Your own real phone. No emulators, cloud phones or device farms.
+- One account per person.
+- Stay for the full 14 days. Leaving early hurts the developer the same way it would hurt you.
+
+### Frequently asked questions
+
+**Is test for test allowed?** Google's rule is about having at least 12 opted-in testers for 14 days; it does not say where the testers come from. Use real people on real phones.
+
+**How many credits do I need?** 180 credits for 12 testers (15 each). Asking for 15 testers needs 225.
+
+**Do I have to pay?** No. You pay with about a minute a day per app you test. Paying is optional and only makes it faster.
+
+**Do I need an Android phone?** Yes. These are Google Play closed tests, tested on an Android phone signed in to the account your Play Store uses.
+

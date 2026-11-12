@@ -1150,6 +1150,11 @@ https://testerexchange.com/yo/set-up-closed-testing-track/
 https://testerexchange.com/zh-cn/set-up-closed-testing-track/
 https://testerexchange.com/zh-tw/set-up-closed-testing-track/
 https://testerexchange.com/zu/set-up-closed-testing-track/
+https://testerexchange.com/guide/test-for-test-closed-testing/
+https://testerexchange.com/de/test-for-test-closed-testing/
+https://testerexchange.com/es/test-for-test-closed-testing/
+https://testerexchange.com/fr/test-for-test-closed-testing/
+https://testerexchange.com/it/test-for-test-closed-testing/
 https://testerexchange.com/tools/production-answers/
 https://testerexchange.com/am/tools/production-answers/
 https://testerexchange.com/ar/tools/production-answers/

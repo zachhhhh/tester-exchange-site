@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://testerexchange.com/</loc><lastmod>2026-11-11</lastmod>
+  <url><loc>https://testerexchange.com/</loc><lastmod>2026-11-12</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://testerexchange.com/"/>
     <xhtml:link rel="alternate" hreflang="am" href="https://testerexchange.com/am/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://testerexchange.com/ar/"/>
@@ -58,7 +58,7 @@
     <xhtml:link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://testerexchange.com/"/>
   </url>
-  <url><loc>https://testerexchange.com/agents/</loc><lastmod>2026-11-11</lastmod></url>
+  <url><loc>https://testerexchange.com/agents/</loc><lastmod>2026-11-12</lastmod></url>
   <url><loc>https://testerexchange.com/guide/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://testerexchange.com/am/</loc><lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://testerexchange.com/"/>
@@ -65233,6 +65233,46 @@
     <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://testerexchange.com/zh-tw/set-up-closed-testing-track/"/>
     <xhtml:link rel="alternate" hreflang="zu" href="https://testerexchange.com/zu/set-up-closed-testing-track/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/set-up-closed-testing-track/"/>
+  </url>
+  <url><loc>https://testerexchange.com/guide/test-for-test-closed-testing/</loc><lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://testerexchange.com/de/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://testerexchange.com/es/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://testerexchange.com/it/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/test-for-test-closed-testing/"/>
+  </url>
+  <url><loc>https://testerexchange.com/de/test-for-test-closed-testing/</loc><lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://testerexchange.com/de/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://testerexchange.com/es/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://testerexchange.com/it/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/test-for-test-closed-testing/"/>
+  </url>
+  <url><loc>https://testerexchange.com/es/test-for-test-closed-testing/</loc><lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://testerexchange.com/de/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://testerexchange.com/es/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://testerexchange.com/it/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/test-for-test-closed-testing/"/>
+  </url>
+  <url><loc>https://testerexchange.com/fr/test-for-test-closed-testing/</loc><lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://testerexchange.com/de/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://testerexchange.com/es/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://testerexchange.com/it/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/test-for-test-closed-testing/"/>
+  </url>
+  <url><loc>https://testerexchange.com/it/test-for-test-closed-testing/</loc><lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://testerexchange.com/de/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://testerexchange.com/es/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://testerexchange.com/fr/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://testerexchange.com/it/test-for-test-closed-testing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/test-for-test-closed-testing/"/>
   </url>
   <url><loc>https://testerexchange.com/tools/production-answers/</loc><lastmod>2026-11-06</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://testerexchange.com/tools/production-answers/"/>
