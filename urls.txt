@@ -1155,6 +1155,9 @@ https://testerexchange.com/de/test-for-test-closed-testing/
 https://testerexchange.com/es/test-for-test-closed-testing/
 https://testerexchange.com/fr/test-for-test-closed-testing/
 https://testerexchange.com/it/test-for-test-closed-testing/
+https://testerexchange.com/nl/test-for-test-closed-testing/
+https://testerexchange.com/pl/test-for-test-closed-testing/
+https://testerexchange.com/pt/test-for-test-closed-testing/
 https://testerexchange.com/tools/production-answers/
 https://testerexchange.com/am/tools/production-answers/
 https://testerexchange.com/ar/tools/production-answers/
