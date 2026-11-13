@@ -1443,3 +1443,61 @@ Test for test is simply two developers meeting that rule for each other.
 
 **Do I need an Android phone?** Yes. These are Google Play closed tests, tested on an Android phone signed in to the account your Play Store uses.
 
+---
+
+## When can I apply for production access on Google Play?
+URL: https://testerexchange.com/guide/when-can-i-apply-for-production-access/
+
+Short answer: you can apply once at least 12 testers have each been opted in to your closed test for 14 days in a row and are still opted in. Count 14 days from the day your 12th tester joined, not from the day you published the test. Then Google's review usually takes seven days or less. This page is a day-by-day timeline from Google Play Console Help, with the mistakes that push the date back.
+
+### The rule in one paragraph
+
+Google Play Console Help says personal developer accounts created after 13 November 2023 must run a closed test with a minimum of 12 testers who have been opted in continuously for at least 14 days before they can apply for production. When you meet the criteria, the Apply for production button appears on the Dashboard in Play Console.
+
+The clock is per tester. Your earliest apply date is the day the 12th tester completes 14 consecutive opted-in days.
+
+### Day-by-day timeline
+
+1. Day 0: upload a build to a closed testing track and publish the release. Add testers through a Google Group or an email list.
+2. Day 0 to 2: testers accept the invite and opt in on the opt-in page, then install the app. Each person's 14 days start when they opt in, so slow joiners move your date back.
+3. Day 3 to 13: keep all 12 opted in and using the app. Check the opted-in count every two or three days and replace anyone who leaves at once.
+4. Day 14 after the last of your 12 testers joined: every one of the 12 has now been opted in for 14 consecutive days. This is your earliest apply date.
+5. Apply day: open the Dashboard, click Apply for production and fill in the three parts: About your closed test, About your app/game, and About your production readiness. Summarize the tester feedback you collected and how you collected it.
+6. After applying: Google says review usually takes seven days or less, but can occasionally take longer. If Google decides the app needs more testing, keep the closed test running and fix the cause.
+
+### Worked example
+
+You publish the closed test on 1 December. Ten testers opt in on 1 December and two more opt in on 4 December. The twelfth person reaches 14 consecutive days on 18 December, so that is your earliest apply date, not 15 December. If one of the first ten leaves on 10 December and a replacement opts in on 11 December, the replacement reaches day 14 on 25 December and your date moves to 25 December, unless you had spare testers. With 15 testers, the same dropout changes nothing.
+
+### What pushes the date back
+
+- Slow opt-ins. A tester who is invited but does not opt in has no clock running.
+- Opting out and back in. Google says the 14 days must be consecutive, so a tester who opts out and rejoins starts again.
+- Falling below 12. Testers who opt in, test for fewer than 14 days and then opt out do not count.
+- Low engagement. Google lists fewer than 12 opted-in testers or insufficient tester engagement as reasons you may need to continue the closed test.
+- Applying too early. Apply only when 12 testers have each passed 14 consecutive days.
+
+### How to make the date as early as possible
+
+1. Recruit 15 testers, not 12, so a dropout does not move your date.
+2. Get all testers to opt in on day 0 or day 1. Send the opt-in link with one clear instruction.
+3. Ask testers to open the app on most days and to try a feature, so engagement looks like real use.
+4. Ship a small update during the test to give testers a reason to open the app again.
+5. Prepare your answers for the production form while the test runs: what you tested, the feedback you got and what you changed.
+
+### Finding the 12 testers
+
+If you have no friends with Android phones, you can get testers on Tester Exchange. Testers are real people on their own phones and each day they open your app is recorded. You can test other developers' apps free at https://testerexchange.com/earn in your phone's browser, and each app you test brings a tester to yours, or pay once for 12, 15 or 25 testers. Dropouts are replaced automatically, so your count stays above 12.
+
+### Frequently asked questions
+
+**Can I apply on day 14 of the closed test?** Only if all 12 testers opted in on day 0. Each tester needs 14 consecutive days from their own opt-in date.
+
+**How long does Google take to review a production access application?** Google says review usually takes seven days or less, but can occasionally take longer.
+
+**Does this rule apply to my account?** Google's help page applies it to personal developer accounts created after 13 November 2023.
+
+**What if a tester leaves before day 14?** Testers who opt in, test for fewer than 14 days and then opt out do not count, so replace them quickly.
+
+**Where is the Apply for production button?** On the Dashboard in Play Console, once the criteria are met.
+
