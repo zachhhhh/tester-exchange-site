@@ -347,9 +347,9 @@ Closed tests don't appear in the Play Store. You join through an opt-in link fro
 - No extra app: open https://testerexchange.com/earn in your Android phone's browser and sign in with the Google Account your Play Store uses. Your list of apps fills itself.
 - About a minute a day per app: join the test, install the app from Google Play, open it and use it for real.
 - Credits: you earn 1 credit for each day you open an app you're testing. Credits get testers for your own app, if you ever build one.
-- Cash on some apps: apps marked 💵 belong to paying customers and pay US$0.50 for each finished 14-day test. Cash out from US$3 to PayPal, Binance Pay or Payoneer.
+- Cash for testing every day: you also earn US$0.02 for each day you open every app on your list (at least 3 apps that day). Cash out from US$3 to PayPal, Binance Pay or Payoneer.
 
-This is pocket money, not an income: how many cash apps you get depends on how many paying customers need testers that week.
+This is pocket money, not an income: testing every day comes to about US$0.60 a month.
 
 ### Step by step
 
@@ -375,7 +375,7 @@ For early access and beta apps, Google Play has a “Private feedback to develop
 
 **Do I need experience to become an app tester?** No. Developers need ordinary users who open the app every day and say when something doesn't work.
 
-**Do app testers get paid?** Play Store early access and betas don't pay. On Tester Exchange, apps marked 💵 pay US$0.50 per finished 14-day test, and every test day earns credits.
+**Do app testers get paid?** Play Store early access and betas don't pay. On Tester Exchange, you earn US$0.02 for each day you open every app on your list (at least 3 apps), and every test day earns credits too.
 
 **Can I test apps on an iPhone?** Not these. Google Play tests need an Android phone with a Google Account.
 
@@ -587,7 +587,7 @@ On Tester Exchange, testers are real people on their own Android phones and you 
 ## Earn money testing Android apps: an honest guide
 URL: https://testerexchange.com/guide/earn-money-testing-android-apps/
 
-Developers with new Google Play accounts need real people to test their apps for 14 days before they can publish. You can be one of those people from your Android phone's browser at https://testerexchange.com/earn, with no extra app to install. You get paid a small amount for each test you finish. Let's be clear up front: this is pocket money, not an income. This guide explains how it works, what you have to do, and how much you can realistically expect.
+Developers with new Google Play accounts need real people to test their apps for 14 days before they can publish. You can be one of those people from your Android phone's browser at https://testerexchange.com/earn, with no extra app to install. You get paid a small amount for each day you test. Let's be clear up front: this is pocket money, not an income. This guide explains how it works, what you have to do, and how much you can realistically expect.
 
 ### Why developers need testers
 
@@ -597,11 +597,11 @@ Google also checks whether testers actually used the app. That's why the work is
 
 ### What you earn
 
-- US$0.50 for each finished 14-day test on an app marked 💵. These are paying customers' apps that still need testers. Other apps earn credits, which get testers for your own app.
-- Cash out from US$3. That's six finished tests.
+- US$0.02 for each day you open every app on your list (at least 3 apps that day). Every test day also earns credits, which get testers for your own app.
+- Cash out from US$3. That's about five months of daily testing.
 - Payout methods: PayPal, Binance Pay or Payoneer.
 
-You can be in several tests at the same time, because each one only takes a minute or two a day. How many cash apps you get depends on how many paying customers need testers that week. If five of your tests pay cash, you might earn US$2.50 in about two weeks. Treat it as a small bonus for a few minutes a day, not a job.
+Each app takes only a minute or two a day, so you can be in several tests at once. If you test every day, you earn about US$0.60 a month. That's small pocket money, not a job.
 
 ### How it works, step by step
 
@@ -610,7 +610,7 @@ You can be in several tests at the same time, because each one only takes a minu
 3. Install the app from Google Play through the test link.
 4. Open the app and actually use it for a minute or two every day for 14 days. Try the main features, and send feedback if something breaks or confuses you.
 5. Stay in the test for all 14 days. Don't leave the test or uninstall the app early.
-6. When a test on a 💵 app is finished, US$0.50 is added to your balance. Cash out once you reach US$3.
+6. Each day you open all the apps on your list, US$0.02 is added to your balance. Cash out once you reach US$3.
 
 ### The rules
 
@@ -637,11 +637,11 @@ You install apps from Google Play, not from random files, so they go through Goo
 
 It suits people who already spend time on their phone and like trying new apps, students who want a little extra, and developers who want testers for their own app. Developers can test other apps free in exchange for testers on theirs, which is often worth more than the cash.
 
-If you need real income, this isn't it. The pay is small and depends on how many tests are open. But it's honest, flexible and takes very little time.
+If you need real income, this isn't it. The pay is small: about US$0.60 a month if you test every day. But it's honest, flexible and takes very little time.
 
 ### Frequently asked questions
 
-**How much can I earn testing apps?** US$0.50 for each finished 14-day test on an app marked 💵, and credits on the others. Running several tests at once, most people earn a few dollars a month.
+**How much can I earn testing apps?** US$0.02 for each day you open every app on your list (at least 3 apps), plus credits for every test day. If you test every day, that's about US$0.60 a month: small pocket money, not an income.
 
 **What is the minimum payout?** US$3, paid to PayPal, Binance Pay or Payoneer.
 
@@ -651,7 +651,7 @@ If you need real income, this isn't it. The pay is small and depends on how many
 
 **Can I have two accounts?** No. One account per person, on a real phone.
 
-**What if I stop before day 14?** The test isn't finished, so it doesn't pay. It also hurts the developer, so only join tests you plan to finish.
+**What if I stop before day 14?** You keep the cash and credits from the days you tested. But leaving early hurts the developer, so only join tests you plan to finish.
 
 ---
 
