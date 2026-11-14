@@ -835,6 +835,11 @@ https://testerexchange.com/pt/google-play-12-testers-africa/
 https://testerexchange.com/sw/google-play-12-testers-africa/
 https://testerexchange.com/yo/google-play-12-testers-africa/
 https://testerexchange.com/zu/google-play-12-testers-africa/
+https://testerexchange.com/guide/google-play-12-testers-brazil/
+https://testerexchange.com/pt/google-play-12-testers-brazil/
+https://testerexchange.com/guide/google-play-12-testers-china/
+https://testerexchange.com/zh-cn/google-play-12-testers-china/
+https://testerexchange.com/zh-tw/google-play-12-testers-china/
 https://testerexchange.com/guide/google-play-12-testers-india/
 https://testerexchange.com/bn/google-play-12-testers-india/
 https://testerexchange.com/gu/google-play-12-testers-india/
@@ -846,6 +851,13 @@ https://testerexchange.com/pa/google-play-12-testers-india/
 https://testerexchange.com/ta/google-play-12-testers-india/
 https://testerexchange.com/te/google-play-12-testers-india/
 https://testerexchange.com/ur/google-play-12-testers-india/
+https://testerexchange.com/guide/google-play-12-testers-indonesia/
+https://testerexchange.com/id/google-play-12-testers-indonesia/
+https://testerexchange.com/guide/google-play-12-testers-pakistan-bangladesh/
+https://testerexchange.com/bn/google-play-12-testers-pakistan-bangladesh/
+https://testerexchange.com/ur/google-play-12-testers-pakistan-bangladesh/
+https://testerexchange.com/guide/google-play-12-testers-philippines/
+https://testerexchange.com/fil/google-play-12-testers-philippines/
 https://testerexchange.com/guide/google-play-closed-testing-requirements/
 https://testerexchange.com/am/google-play-closed-testing-requirements/
 https://testerexchange.com/ar/google-play-closed-testing-requirements/

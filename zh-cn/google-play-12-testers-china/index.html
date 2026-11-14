@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中国开发者如何凑齐 Google Play 12 位测试者：通过 14 天封闭测试</title>
+<meta name="description" content="写给中国 Android 开发者的指南：Google 的 12 位测试者 x 14 天规则、用手机浏览器就能完成的免费互测方式、国内可用的付款方式，以及如何申请正式版发布权限。">
+<link rel="canonical" href="https://testerexchange.com/zh-cn/google-play-12-testers-china/">
+<link rel="alternate" hreflang="en" href="https://testerexchange.com/guide/google-play-12-testers-china/">
+<link rel="alternate" hreflang="zh-Hans" href="https://testerexchange.com/zh-cn/google-play-12-testers-china/">
+<link rel="alternate" hreflang="zh-Hant" href="https://testerexchange.com/zh-tw/google-play-12-testers-china/">
+<link rel="alternate" hreflang="x-default" href="https://testerexchange.com/guide/google-play-12-testers-china/">
+<meta property="og:type" content="article"><meta property="og:title" content="中国开发者如何凑齐 Google Play 12 位测试者：通过 14 天封闭测试">
+<meta property="og:description" content="写给中国 Android 开发者的指南：Google 的 12 位测试者 x 14 天规则、用手机浏览器就能完成的免费互测方式、国内可用的付款方式，以及如何申请正式版发布权限。"><meta property="og:url" content="https://testerexchange.com/zh-cn/google-play-12-testers-china/">
+<meta property="og:image" content="https://testerexchange.com/store/social/og-1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://testerexchange.com/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="https://testerexchange.com/manifest.webmanifest">
+<link rel="apple-touch-icon" href="https://testerexchange.com/apple-touch-icon.png">
+<meta name="theme-color" content="#1f7a4d">
+<link rel="stylesheet" href="/static.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"在中国为 Google Play 凑齐 12 位测试者","description":"写给中国 Android 开发者的指南：Google 的 12 位测试者 x 14 天规则、用手机浏览器就能完成的免费互测方式、国内可用的付款方式，以及如何申请正式版发布权限。","inLanguage":"zh-Hans","datePublished":"2026-11-14","dateModified":"2026-11-14","author":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"},"url":"https://testerexchange.com/zh-cn/google-play-12-testers-china/","publisher":{"@type":"Organization","name":"Tester Exchange","url":"https://testerexchange.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tester Exchange","item":"https://testerexchange.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://testerexchange.com/zh-cn/"},{"@type":"ListItem","position":3,"name":"在中国为 Google Play 凑齐 12 位测试者","item":"https://testerexchange.com/zh-cn/google-play-12-testers-china/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"12 位测试者的规则在中国有区别吗？","acceptedAnswer":{"@type":"Answer","text":"没有。Google 对所有国家/地区在 2023 年 11 月 13 日之后创建的个人开发者账号都适用同样的规则。"}},{"@type":"Question","name":"可以用支付宝或微信支付吗？","acceptedAnswer":{"@type":"Answer","text":"可以。结账时提供支付宝、微信支付和银联卡。"}},{"@type":"Question","name":"测试者必须在中国吗？","acceptedAnswer":{"@type":"Answer","text":"不需要。测试者可以在任何地方，只要你的封闭测试在他们所在的国家/地区开放，并且应用能正常使用。"}},{"@type":"Question","name":"只用手机能完成吗？","acceptedAnswer":{"@type":"Answer","text":"可以。免费方式在 Android 手机浏览器中打开 https://testerexchange.com/earn 就能使用。"}},{"@type":"Question","name":"多久之后可以发布？","acceptedAnswer":{"@type":"Answer","text":"至少在第 12 位测试者加入满 14 天之后，再加上 Google 的审核，通常需要七天或更短时间。"}}]}]}</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b9db98dae8fd4c5ebe9bcc8ed928623c"}'></script>
+<script defer src="/m.js" data-site="testerexchange.com"></script>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="https://testerexchange.com/?lang=zh-cn">Tester Exchange</a><span class="grow"></span>
+<select aria-label="语言" onchange="location.href=this.value">
+<option value="https://testerexchange.com/guide/google-play-12-testers-china/">English</option><option value="https://testerexchange.com/zh-cn/google-play-12-testers-china/" selected>简体中文</option><option value="https://testerexchange.com/zh-tw/google-play-12-testers-china/">繁體中文</option>
+</select>
+<a href="https://testerexchange.com/?lang=zh-cn">打开 Tester Exchange</a></header>
+<main>
+
+<h1>在中国为 Google Play 凑齐 12 位测试者</h1>
+<p class="muted">2026 年 11 月更新</p>
+<p class="lede">如果你在中国开发 Android 应用，并且在 2023 年 11 月 13 日之后注册了个人 Google Play 开发者账号，Google 要求你先进行封闭测试，至少 12 位测试者连续 14 天保持加入状态，才能发布到正式版。本指南先用简单的话讲清规则，再介绍只需一部 Android 手机和浏览器的免费方式，以及支持国内常用付款方式的付费方式。</p>
+<div class="cta"><span>真人在自己的手机上打开你的应用，持续 14 天。付一次费，或免费测试其他应用。</span><a class="btn" href="https://testerexchange.com/?lang=zh-cn#buy">获取 12 名测试人员</a></div>
+<nav class="toc"><b>本页内容</b><ul><li><a href="#rule">规则，用大白话说</a></li><li><a href="#swap-groups">为什么互测群经常不靠谱</a></li><li><a href="#free">免费方式：测试别人的应用，换回测试者</a></li><li><a href="#paid">付费方式：付一次款，什么都不用测</a></li><li><a href="#apply">申请正式版发布</a></li><li><a href="#tips">省时小技巧</a></li><li><a href="#faq">常见问题</a></li></ul></nav>
+
+<section id="rule">
+<h2>规则，用大白话说</h2>
+<p>Play Console 帮助中心说明：2023 年 11 月 13 日之后创建的个人开发者账号，必须进行封闭测试，且至少有 12 位测试者连续加入至少 14 天，才能申请正式版发布权限。这条规则在中国和其他地方完全一样。</p>
+
+
+<p>每位测试者的 14 天从其加入当天开始计算。如果有人退出后重新加入，计数会从头开始。</p>
+</section>
+
+<section id="swap-groups">
+<h2>为什么互测群经常不靠谱</h2>
+
+<ul><li><b>没人知道谁真的测了。</b>在微信和 QQ 的封闭测试互测群里，大家会发截图，但截图无法证明对方保留了应用 14 天。</li><li><b>有人中途退出。</b>只要有一位测试者离开，你的 14 天就可能往后推。</li><li><b>参与度很重要。</b>Google 把测试者参与度不足列为可能需要继续测试的原因之一，所以光安装是有风险的。</li><li><b>非常耗时。</b>为了换回 12 位测试者，每天手动测试一大堆应用，工作量很大。</li></ul>
+
+
+</section>
+
+<section id="free">
+<h2>免费方式：测试别人的应用，换回测试者</h2>
+
+
+<ol><li>在你的 Android 手机浏览器中打开 https://testerexchange.com/earn，并用 Google 账号登录。无需安装其他应用。</li><li>添加你的应用。Tester Exchange 可以连接 Google Play，把它的测试者 Google Group 加到你的封闭测试轨道；你也可以在 Play Console 的“封闭测试 &gt; 测试者”中手动添加。</li><li>每天点开列表里的应用，逐个打开。每天大约只需一分钟。</li><li>你每测试一个应用，就会有一位测试者来测你的应用。测试者每天打开你的应用都会被记录，中途退出的人会自动补上。</li></ol>
+
+</section>
+
+<section id="paid">
+<h2>付费方式：付一次款，什么都不用测</h2>
+<p>如果你不想测试别人的应用，可以在 https://testerexchange.com/ 一次性付款，付费应用会优先获得测试者。网站上的价格以人民币显示。结账时可以使用支付宝、微信支付或银联卡付款，也支持其他银行卡和 PayPal。购买后不退款。</p>
+
+
+
+</section>
+
+<section id="apply">
+<h2>申请正式版发布</h2>
+
+
+<ol><li>等到 12 位测试者都已连续加入满 14 天。从第 12 位测试者加入的那天开始算。</li><li>打开 Play Console 的信息中心，点击“申请正式版发布权限”。</li><li>回答关于封闭测试、应用本身以及正式版准备情况的问题。说明你收集到的反馈以及做了哪些改动。</li><li>Google 表示审核通常需要七天或更短时间。</li></ol>
+
+</section>
+
+<section id="tips">
+<h2>省时小技巧</h2>
+
+<ul><li>目标定为 15 位测试者而不是 12 位，这样有一个人退出也不会推迟你的日期。</li><li>在这 14 天里发布一个小更新，让测试者有理由再次打开应用。</li><li>如果你的应用需要中国大陆手机号登录，或依赖在中国境外无法使用的服务登录，请在测试说明里提供测试账号，否则海外测试者可能连第一个页面都过不去。</li><li>在正式版发布权限获批之前，保持封闭测试一直运行。</li></ul>
+
+
+</section>
+<section id="faq"><h2>常见问题</h2>
+<details><summary>12 位测试者的规则在中国有区别吗？</summary><p>没有。Google 对所有国家/地区在 2023 年 11 月 13 日之后创建的个人开发者账号都适用同样的规则。</p></details>
+<details><summary>可以用支付宝或微信支付吗？</summary><p>可以。结账时提供支付宝、微信支付和银联卡。</p></details>
+<details><summary>测试者必须在中国吗？</summary><p>不需要。测试者可以在任何地方，只要你的封闭测试在他们所在的国家/地区开放，并且应用能正常使用。</p></details>
+<details><summary>只用手机能完成吗？</summary><p>可以。免费方式在 Android 手机浏览器中打开 https://testerexchange.com/earn 就能使用。</p></details>
+<details><summary>多久之后可以发布？</summary><p>至少在第 12 位测试者加入满 14 天之后，再加上 Google 的审核，通常需要七天或更短时间。</p></details>
+</section>
+<div class="cta"><span>真人在自己的手机上打开你的应用，持续 14 天。付一次费，或免费测试其他应用。</span><a class="btn" href="https://testerexchange.com/?lang=zh-cn#buy">获取 12 名测试人员</a></div>
+<section><h2>更多指南</h2><ul class="related"><li><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">如何为 Google Play 封闭式测试找到 12 名测试人员</a></li><li><a href="https://testerexchange.com/zh-cn/12-testers-app-builders/" hreflang="zh-Hans">用 App Inventor、Kodular、Flutter、Unity 等工具开发的应用，如何满足 Google Play 12 名测试人员要求</a></li><li><a href="https://testerexchange.com/zh-cn/ai-builders/" hreflang="zh-Hans">从你的 AI 编程工具获取 12 名 Google Play 测试员</a></li><li><a href="https://testerexchange.com/zh-cn/app-not-available-for-testers/" hreflang="zh-Hans">解决 Google Play 封闭式测试人员看到“应用不可用”的问题</a></li><li><a href="https://testerexchange.com/zh-cn/automate-closed-testing-with-ai-agents/" hreflang="zh-Hans">用 AI 智能体自动化 Google Play 封闭式测试</a></li><li><a href="https://testerexchange.com/zh-cn/become-an-android-app-tester/" hreflang="zh-Hans">如何成为 Android 应用测试员</a></li><li><a href="https://testerexchange.com/zh-cn/best-way-to-get-12-testers/" hreflang="zh-Hans">Google Play 封闭测试，凑齐 12 位测试人员的最佳方式</a></li><li><a href="https://testerexchange.com/zh-cn/closed-testing-for-games/" hreflang="zh-Hans">Google Play 游戏封闭式测试：Unity、Unreal 和 Godot 指南</a></li><li><a href="https://testerexchange.com/zh-cn/does-14-day-closed-test-reset/" hreflang="zh-Hans">测试人员退出时，14 天封闭式测试会重置吗？</a></li><li><a href="https://testerexchange.com/zh-cn/earn-money-testing-android-apps/" hreflang="zh-Hans">测试 Android 应用赚钱：一份真实的指南</a></li><li><a href="https://testerexchange.com/zh-cn/free-closed-testing-testers/" hreflang="zh-Hans">如何免费找到 Google Play 封闭式测试所需的 12 位测试人员</a></li><li><a href="https://testerexchange.com/zh-cn/friends-family-closed-testers/" hreflang="zh-Hans">让亲友成为你的 12 位 Google Play 测试人员</a></li><li><a href="https://testerexchange.com/zh-cn/get-12-testers-cursor/" hreflang="zh-Hans">用 Cursor 开发了 Android 应用？获取 14 天的 12 名测试员</a></li><li><a href="https://testerexchange.com/zh-cn/get-free-testers-by-testing-apps/" hreflang="zh-Hans">通过测试其他开发者的应用，免费获得 Google Play 测试者</a></li><li><a href="https://testerexchange.com/zh-cn/google-group-vs-email-list/" hreflang="zh-Hans">封闭式测试用 Google Group 还是电子邮件列表？</a></li><li><a href="https://testerexchange.com/guide/google-play-12-testers-africa/" hreflang="en">Getting 12 testers for Google Play in Africa</a></li><li><a href="https://testerexchange.com/guide/google-play-12-testers-brazil/" hreflang="en">Getting 12 testers for Google Play in Brazil</a></li><li><a href="https://testerexchange.com/guide/google-play-12-testers-india/" hreflang="en">Getting 12 testers for Google Play in India</a></li><li><a href="https://testerexchange.com/guide/google-play-12-testers-indonesia/" hreflang="en">Getting 12 testers for Google Play in Indonesia</a></li><li><a href="https://testerexchange.com/guide/google-play-12-testers-pakistan-bangladesh/" hreflang="en">Getting 12 testers for Google Play in Pakistan and Bangladesh</a></li><li><a href="https://testerexchange.com/guide/google-play-12-testers-philippines/" hreflang="en">Getting 12 testers for Google Play in the Philippines</a></li><li><a href="https://testerexchange.com/zh-cn/google-play-closed-testing-requirements/" hreflang="zh-Hans">Google Play 封闭式测试要求：2026 年完整指南</a></li><li><a href="https://testerexchange.com/zh-cn/google-play-review-time-after-closed-testing/" hreflang="zh-Hans">14 天之后：正式版访问权限的审核时间与首次发布</a></li><li><a href="https://testerexchange.com/zh-cn/insufficient-testing-engagement/" hreflang="zh-Hans">封闭式测试后被拒？如何解决“需要更多测试”</a></li><li><a href="https://testerexchange.com/zh-cn/keep-testers-active-14-days/" hreflang="zh-Hans">如何让封闭式测试人员在 14 天内保持活跃</a></li><li><a href="https://testerexchange.com/zh-cn/organization-vs-personal-developer-account/" hreflang="zh-Hans">Google Play 组织开发者账号与个人开发者账号</a></li><li><a href="https://testerexchange.com/zh-cn/paid-closed-testers-checklist/" hreflang="zh-Hans">付费购买 Google Play 封闭式测试人员之前要检查什么</a></li><li><a href="https://testerexchange.com/zh-cn/production-access-questions/" hreflang="zh-Hans">如何回答 Google Play 正式版访问权限问卷</a></li><li><a href="https://testerexchange.com/zh-cn/production-access-rejected/" hreflang="zh-Hans">正式版访问权限被拒：接下来怎么办</a></li><li><a href="https://testerexchange.com/zh-cn/set-up-closed-testing-track/" hreflang="zh-Hans">如何在 Play Console 中设置封闭式测试轨道：分步指南</a></li><li><a href="https://testerexchange.com/guide/test-for-test-closed-testing/" hreflang="en">Test for test: how to get 12 closed-test testers without paying</a></li><li><a href="https://testerexchange.com/zh-cn/when-can-i-apply-for-production-access/" hreflang="zh-Hans">Google Play 什么时候可以申请正式版访问权限？</a></li><li><a href="https://testerexchange.com/zh-cn/tools/production-answers/" hreflang="zh-Hans">正式版访问权限回答生成器</a></li></ul></section>
+</main>
+<footer><a href="https://testerexchange.com/guide/" hreflang="en">English</a><a href="https://testerexchange.com/am/" hreflang="am">አማርኛ</a><a href="https://testerexchange.com/ar/" hreflang="ar">العربية</a><a href="https://testerexchange.com/az/" hreflang="az">Azərbaycanca</a><a href="https://testerexchange.com/bg/" hreflang="bg">Български</a><a href="https://testerexchange.com/bn/" hreflang="bn">বাংলা</a><a href="https://testerexchange.com/cs/" hreflang="cs">Čeština</a><a href="https://testerexchange.com/de/" hreflang="de">Deutsch</a><a href="https://testerexchange.com/el/" hreflang="el">Ελληνικά</a><a href="https://testerexchange.com/es/" hreflang="es">Español</a><a href="https://testerexchange.com/fa/" hreflang="fa">فارسی</a><a href="https://testerexchange.com/fil/" hreflang="fil">Filipino</a><a href="https://testerexchange.com/fr/" hreflang="fr">Français</a><a href="https://testerexchange.com/gu/" hreflang="gu">ગુજરાતી</a><a href="https://testerexchange.com/ha/" hreflang="ha">Hausa</a><a href="https://testerexchange.com/he/" hreflang="he">עברית</a><a href="https://testerexchange.com/hi/" hreflang="hi">हिन्दी</a><a href="https://testerexchange.com/hr/" hreflang="hr">Hrvatski</a><a href="https://testerexchange.com/hu/" hreflang="hu">Magyar</a><a href="https://testerexchange.com/id/" hreflang="id">Bahasa Indonesia</a><a href="https://testerexchange.com/ig/" hreflang="ig">Igbo</a><a href="https://testerexchange.com/it/" hreflang="it">Italiano</a><a href="https://testerexchange.com/ja/" hreflang="ja">日本語</a><a href="https://testerexchange.com/kk/" hreflang="kk">Қазақша</a><a href="https://testerexchange.com/km/" hreflang="km">ខ្មែរ</a><a href="https://testerexchange.com/kn/" hreflang="kn">ಕನ್ನಡ</a><a href="https://testerexchange.com/ko/" hreflang="ko">한국어</a><a href="https://testerexchange.com/ml/" hreflang="ml">മലയാളം</a><a href="https://testerexchange.com/mr/" hreflang="mr">मराठी</a><a href="https://testerexchange.com/ms/" hreflang="ms">Bahasa Melayu</a><a href="https://testerexchange.com/my/" hreflang="my">မြန်မာ</a><a href="https://testerexchange.com/ne/" hreflang="ne">नेपाली</a><a href="https://testerexchange.com/nl/" hreflang="nl">Nederlands</a><a href="https://testerexchange.com/pa/" hreflang="pa">ਪੰਜਾਬੀ</a><a href="https://testerexchange.com/pl/" hreflang="pl">Polski</a><a href="https://testerexchange.com/pt/" hreflang="pt">Português</a><a href="https://testerexchange.com/ro/" hreflang="ro">Română</a><a href="https://testerexchange.com/ru/" hreflang="ru">Русский</a><a href="https://testerexchange.com/si/" hreflang="si">සිංහල</a><a href="https://testerexchange.com/sk/" hreflang="sk">Slovenčina</a><a href="https://testerexchange.com/sr/" hreflang="sr">Српски</a><a href="https://testerexchange.com/sv/" hreflang="sv">Svenska</a><a href="https://testerexchange.com/sw/" hreflang="sw">Kiswahili</a><a href="https://testerexchange.com/ta/" hreflang="ta">தமிழ்</a><a href="https://testerexchange.com/te/" hreflang="te">తెలుగు</a><a href="https://testerexchange.com/th/" hreflang="th">ไทย</a><a href="https://testerexchange.com/tr/" hreflang="tr">Türkçe</a><a href="https://testerexchange.com/uk/" hreflang="uk">Українська</a><a href="https://testerexchange.com/ur/" hreflang="ur">اردو</a><a href="https://testerexchange.com/uz/" hreflang="uz">Oʻzbekcha</a><a href="https://testerexchange.com/vi/" hreflang="vi">Tiếng Việt</a><a href="https://testerexchange.com/yo/" hreflang="yo">Yorùbá</a><a href="https://testerexchange.com/zh-cn/" hreflang="zh-Hans">简体中文</a><a href="https://testerexchange.com/zh-tw/" hreflang="zh-Hant">繁體中文</a><a href="https://testerexchange.com/zu/" hreflang="zu">isiZulu</a>
+<a href="https://testerexchange.com/agents/">API &amp; MCP</a><a href="https://testerexchange.com/privacy.html">Privacy</a></footer>
+</div></body></html>

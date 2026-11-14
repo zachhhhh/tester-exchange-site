@@ -74,6 +74,11 @@ Every guide below is also in all 54 other site languages at /<lang>/<slug>/ (lan
 - [When can I apply for production access? A day-by-day timeline](https://testerexchange.com/guide/when-can-i-apply-for-production-access/)
 - [Google Play 12 testers in Nigeria, Kenya, Ghana and across Africa](https://testerexchange.com/guide/google-play-12-testers-africa/) (also in fr, sw, ha, yo, ig, zu, am, ar, pt; pay by card or USDT/USDC where international cards fail)
 - [Google Play 12 testers in India (free, or pay with UPI)](https://testerexchange.com/guide/google-play-12-testers-india/) (also in hi, bn, ta, te, mr, gu, kn, ml, pa, ur)
+- [Google Play 12 testers in Indonesia](https://testerexchange.com/guide/google-play-12-testers-indonesia/) (also in id; card or USDT/USDC)
+- [Google Play 12 testers in Brazil (pay with Pix)](https://testerexchange.com/guide/google-play-12-testers-brazil/) (also in pt)
+- [Google Play 12 testers in Pakistan and Bangladesh](https://testerexchange.com/guide/google-play-12-testers-pakistan-bangladesh/) (also in ur, bn; card or USDT/USDC)
+- [Google Play 12 testers in the Philippines (pay with GCash)](https://testerexchange.com/guide/google-play-12-testers-philippines/) (also in fil)
+- [Google Play 12 testers in China (pay with Alipay or WeChat Pay)](https://testerexchange.com/guide/google-play-12-testers-china/) (also in zh-cn, zh-tw)
 - [Free production-access answer generator](https://testerexchange.com/tools/production-answers/)
 - Full text of every guide in one file: https://testerexchange.com/llms-full.txt
 
