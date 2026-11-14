@@ -16,10 +16,12 @@
 
 ## How testers are found (autopilot)
 - Nobody browses or picks apps. Free: open https://testerexchange.com/earn in your phone's browser (no app needed);
-  you are given apps to test automatically (paid apps first), one tap per app per day, and each app you test brings a
-  tester to yours. Developers can also join free swap circles where members test each other's apps. Paid: skip testing; paid apps get
+  you are given apps to test automatically (paid apps first). The only required step is becoming a tester and
+  installing each app once (one button walks through the list); keeping it 14 days earns 10 credits and each day you
+  open it adds a bonus credit. Each app you keep installed brings a tester to yours. Developers can also join free swap circles where members test each other's apps. Paid: skip testing; paid apps get
   testers before anyone else. Google's 14 days apply to everyone.
-- Dropouts are replaced automatically; you only pay for days testers actually open the app, and unused credits go back to your credit balance.
+- Each tester stays opted in to your closed test for the 14 days; their opens are recorded and paid as a bonus. Dropouts are
+  replaced automatically, and unused credits go back to your credit balance.
 - Purchases are final: credits don't convert back to money.
 - After 14 days: a test report with daily activity, tester feedback and draft answers for Google's
   production-access questions.
