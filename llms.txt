@@ -96,6 +96,7 @@ Every guide below is also in all 54 other site languages at /<lang>/<slug>/ (lan
 ## Use Tester Exchange from AI tools
 - [Hub: get your 12 Google Play testers from your AI coding tool](https://testerexchange.com/guide/ai-builders/)
 - [Cursor: build the AAB, start closed testing, connect via .cursor/mcp.json](https://testerexchange.com/guide/get-12-testers-cursor/)
+- [Claude Code: build the AAB, start closed testing, connect with one claude mcp add command](https://testerexchange.com/guide/get-12-testers-claude-code/)
 - Config snippets for every supported client (Claude, ChatGPT, VS Code, Windsurf, Cline, Zed, Gemini CLI, Codex and more): https://testerexchange.com/agents/
 
 ## Facts (November 2026)
