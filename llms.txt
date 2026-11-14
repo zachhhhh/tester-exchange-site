@@ -71,6 +71,9 @@ Every guide below is also in all 54 other site languages at /<lang>/<slug>/ (lan
 - [Get 12 free Google Play testers by testing other apps (credit math)](https://testerexchange.com/guide/get-free-testers-by-testing-apps/)
 - [Closed testing for games on Google Play: a guide for Unity, Unreal and Godot](https://testerexchange.com/guide/closed-testing-for-games/)
 - [After the 14 days: production access review time and your first release](https://testerexchange.com/guide/google-play-review-time-after-closed-testing/)
+- [When can I apply for production access? A day-by-day timeline](https://testerexchange.com/guide/when-can-i-apply-for-production-access/)
+- [Google Play 12 testers in Nigeria, Kenya, Ghana and across Africa](https://testerexchange.com/guide/google-play-12-testers-africa/) (also in fr, sw, ha, yo, ig, zu, am, ar, pt; pay by card or USDT/USDC where international cards fail)
+- [Google Play 12 testers in India (free, or pay with UPI)](https://testerexchange.com/guide/google-play-12-testers-india/) (also in hi, bn, ta, te, mr, gu, kn, ml, pa, ur)
 - [Free production-access answer generator](https://testerexchange.com/tools/production-answers/)
 - Full text of every guide in one file: https://testerexchange.com/llms-full.txt
 

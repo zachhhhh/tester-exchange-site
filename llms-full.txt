@@ -831,6 +831,120 @@ Every closed testing track needs a list of who may install the app. Play Console
 
 ---
 
+## Getting 12 testers for Google Play in Africa
+URL: https://testerexchange.com/guide/google-play-12-testers-africa/
+
+If you build Android apps in Nigeria, Kenya, Ghana, South Africa, Egypt, Ethiopia or anywhere else in Africa and opened a personal Google Play developer account after 13 November 2023, Google will not let you publish to production until you run a closed test with at least 12 testers opted in for 14 days in a row. This guide explains the rule in plain words and shows the cheapest ways to meet it, including a free route that needs only an Android phone and a browser.
+
+### The rule, in plain words
+
+Google Play Console Help says personal developer accounts created after 13 November 2023 must run a closed test with a minimum of 12 testers who have been opted in continuously for at least 14 days before they can apply for production access. The rule is the same in every country: there is no different version for Africa.
+
+Each tester's 14 days start when that person opts in. If someone opts out, their count starts again.
+
+### Why it is hard for many developers
+
+- Your circle may not have 12 Android users who will keep going. Friends often install once and forget, or opt out by accident.
+- Testers must have a Google account on an Android phone and join your test through a Google Group or an email list you add in Play Console.
+- Engagement matters. Google lists insufficient tester engagement as a reason you may need to keep testing, so 12 people who never open the app is a risk.
+- Paying abroad can be awkward. If an international card payment does not go through, you need another way to pay, or a free route.
+
+### The free route: test other apps, get testers back
+
+1. On your Android phone, open https://testerexchange.com/earn in the browser and sign in with Google. No extra app is needed.
+2. Add your app and the closed testing group. Tester Exchange can connect to Google Play and add its testers group to your track, or you add it by hand in Play Console under Closed testing, Testers.
+3. Each day, tap the apps on your list and open each one. It takes about a minute a day.
+4. Every app you test brings a tester to yours. Each day testers open your app is recorded, and dropouts are replaced automatically.
+
+### The paid route: pay once, test nothing
+
+If you would rather not test other apps, pay once on https://testerexchange.com/ and paid apps get testers first. Prices are shown in your own currency. You can pay by card, Google Pay, Apple Pay or PayPal, or with USDT or USDC on BNB Chain, Polygon, Arbitrum or Base sent straight to the Tester Exchange wallet with no fee. Purchases are final.
+
+### Applying for production
+
+1. Wait until 12 testers have each passed 14 consecutive opted-in days. Count from the day your 12th tester joined.
+2. Open the Dashboard in Play Console and click Apply for production.
+3. Answer the questions about your closed test, your app and your production readiness. Describe the feedback you collected and what you changed.
+4. Google says review usually takes seven days or less.
+
+### Tips that save time
+
+- Aim for 15 testers, not 12, so one dropout does not push your date back.
+- Ship a small update during the 14 days so testers have a reason to open the app again.
+- If your app needs a local phone number or works only in one country, say so in the app's test notes, or testers elsewhere may not get past the login screen.
+- Keep your closed test running until production access is approved.
+
+### Frequently asked questions
+
+**Is the 12 testers rule different in Nigeria or Kenya?** No. Google applies the same rule to personal developer accounts created after 13 November 2023 in every country.
+
+**Do testers have to live in my country?** No. Testers can be anywhere, as long as your closed test is available in their country and the app works for them.
+
+**Can I do this with only a phone?** Yes. The free route works in your Android phone's browser at https://testerexchange.com/earn.
+
+**Can I earn money testing apps?** Some apps on Tester Exchange pay cash to testers who finish all 14 days. You can cash out to PayPal, Binance Pay or Payoneer.
+
+**How long until I can publish?** At least 14 days after your 12th tester opts in, plus Google's review, which usually takes seven days or less.
+
+---
+
+## Getting 12 testers for Google Play in India
+URL: https://testerexchange.com/guide/google-play-12-testers-india/
+
+If you opened a personal Google Play developer account after 13 November 2023, Google asks for a closed test with at least 12 testers opted in for 14 days in a row before you can publish to production. India has one of the largest Android developer communities in the world, and many first-time developers, students and App Inventor or Kodular builders hit this rule. This guide explains it simply and shows a free route and a paid route.
+
+### The rule, in plain words
+
+Google Play Console Help says personal developer accounts created after 13 November 2023 must run a closed test with a minimum of 12 testers who have been opted in continuously for at least 14 days before they can apply for production access. The rule is the same in India as everywhere else.
+
+Each tester's 14 days start when that person opts in. If someone opts out and rejoins, their count starts again.
+
+### Why WhatsApp and Telegram swap groups often fail
+
+- Nobody can see who really tested. Members post screenshots, but a screenshot does not show that someone kept the app for 14 days.
+- People drop out. When one tester leaves, your 14 days can move back.
+- Engagement matters. Google lists insufficient tester engagement as a reason you may need to keep testing, so installs alone are a risk.
+- It takes hours. Testing 20 apps by hand every day to earn 12 testers back is a lot of work.
+
+### The free route: test other apps, get testers back
+
+1. On your Android phone, open https://testerexchange.com/earn in the browser and sign in with Google. No extra app is needed.
+2. Add your app. Tester Exchange can connect to Google Play and add its testers group to your closed testing track, or you add it by hand in Play Console under Closed testing, Testers.
+3. Each day, tap the apps on your list and open each one. It takes about a minute a day.
+4. Every app you test brings a tester to yours. Each day testers open your app is recorded, and dropouts are replaced automatically.
+
+### The paid route: pay once with UPI or card, test nothing
+
+If you would rather not test other apps, pay once on https://testerexchange.com/ and paid apps get testers first. Prices are shown in your own currency, and you can pay with local methods such as UPI, or with card, Google Pay, Apple Pay, PayPal or USDT/USDC. Purchases are final.
+
+### Applying for production
+
+1. Wait until 12 testers have each passed 14 consecutive opted-in days. Count from the day your 12th tester joined.
+2. Open the Dashboard in Play Console and click Apply for production.
+3. Answer the questions about your closed test, your app and your production readiness. Describe the feedback you collected and what you changed.
+4. Google says review usually takes seven days or less.
+
+### Tips for students and first-time developers
+
+- Aim for 15 testers, not 12, so one dropout does not push your date back.
+- Ship a small update during the 14 days so testers have a reason to open the app again.
+- If your app needs an Indian phone number or OTP to log in, add a test login in the test notes, or testers outside India may not get past the first screen.
+- Keep your closed test running until production access is approved.
+
+### Frequently asked questions
+
+**Is the 12 testers rule different in India?** No. Google applies the same rule to personal developer accounts created after 13 November 2023 in every country.
+
+**Can I pay with UPI?** Yes. Checkout offers local methods such as UPI, and prices are shown in your own currency.
+
+**Do testers have to be in India?** No. Testers can be anywhere, as long as your closed test is available in their country and the app works for them.
+
+**I built my app with App Inventor or Kodular. Does this work?** Yes. The rule and the steps are the same for any Android app published through Play Console.
+
+**How long until I can publish?** At least 14 days after your 12th tester opts in, plus Google's review, which usually takes seven days or less.
+
+---
+
 ## Google Play closed testing requirements: the complete 2026 guide
 URL: https://testerexchange.com/guide/google-play-closed-testing-requirements/
 
