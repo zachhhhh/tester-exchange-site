@@ -128,6 +128,40 @@ After 14 days, apply for production access in the Play Console dashboard. Google
 
 ---
 
+## Get your 12 Google Play testers from your AI coding tool
+URL: https://testerexchange.com/guide/ai-builders/
+
+Whether you vibe-coded your Android app or wrote it by hand with an AI editor, Google Play still wants 12 testers opted in for 14 days before a new personal developer account can publish to production. This hub lists a Tester Exchange guide for each AI tool: how to produce the Android App Bundle, how to start closed testing, and how to get the testers, free by testing other apps first, or paid and faster. Each page also shows the exact copy-paste setup so your AI tool can drive Tester Exchange itself.
+
+### Guides by tool
+
+More tools are added regularly. Today:
+
+- Cursor: https://testerexchange.com/guide/get-12-testers-cursor/ - build the AAB with Gradle, then connect Tester Exchange to Cursor with .cursor/mcp.json.
+
+### The two routes to testers
+
+- Free: test other developers' apps at https://testerexchange.com/earn on your phone. Each app you test brings one tester to your app, so you can fill your 12 seats without paying.
+- Paid and faster: pay once for a pack of testers; current prices are on https://testerexchange.com/llms.txt. Paid apps get testers before anyone else.
+
+### What Google requires
+
+Google's Play Console Help says personal developer accounts created after 13 November 2023 must run a closed test with at least 12 testers opted in continuously for at least 14 days before they can apply for production access (https://support.google.com/googleplay/android-developer/answer/14151465). No AI tool can do those 14 days for you: they must be real people on real phones.
+
+### Let your AI tool do the setup
+
+Tester Exchange has an MCP server, an HTTP API and an A2A agent. The full list of clients and config snippets is at https://testerexchange.com/agents/. The general guide is https://testerexchange.com/guide/automate-closed-testing-with-ai-agents/.
+
+### Frequently asked questions
+
+**Do I need an AI tool to use Tester Exchange?** No. The website works on its own. The MCP server and API are optional shortcuts for people who already work with an AI tool.
+
+**Can the AI tool pay for testers?** No. It can return a checkout link, but payment happens in your browser. The free route is testing other apps at https://testerexchange.com/earn.
+
+**Is Tester Exchange an official integration of these tools?** No. It is an independent service. These pages only show how to connect a tool's standard MCP or HTTP support to Tester Exchange.
+
+---
+
 ## Fix "app not available" for Google Play closed testers
 URL: https://testerexchange.com/guide/app-not-available-for-testers/
 
@@ -723,6 +757,61 @@ Most developers have three to eight people they can ask. You don't need to find 
 **What if only five friends can help?** Use them, then fill the other seats from the exchange. On Tester Exchange friends join free through your share link, and the exchange fills the rest.
 
 **Does a test with friends guarantee production access?** No. Google decides. Real, active testers and honest answers in the production-access questions give you the best chance.
+
+---
+
+## Built your Android app with Cursor? Get your 12 testers for 14 days
+URL: https://testerexchange.com/guide/get-12-testers-cursor/
+
+Cursor can write and build your Android app, but it cannot supply the 12 real testers Google Play requires. If your personal developer account was created after 13 November 2023, you must run a closed test with at least 12 testers opted in for 14 continuous days before applying for production. This guide covers building the bundle, starting closed testing, getting the testers (free first, paid second) and connecting Tester Exchange to Cursor so the agent can do the paperwork.
+
+### 1. Build the release bundle (.aab)
+
+1. Ask Cursor's agent to configure release signing in your module's build.gradle.kts (a signingConfigs block with storeFile, storePassword, keyAlias and keyPassword, set on the release build type). Keep passwords out of git (Android's build docs: https://developer.android.com/build/building-cmdline).
+2. Run ./gradlew bundleRelease in the terminal. Gradle builds and signs the bundle; the .aab normally appears under app/build/outputs/bundle/release/, but check your own build output.
+3. Create a keystore with keytool if you don't have one, and back it up. Google Play App Signing is offered when you upload your first release.
+
+### 2. Start closed testing in Play Console
+
+1. Open Test and release > Testing > Closed testing, then Create track (or Manage track).
+2. Click Create new release, upload the .aab, add a release name and notes, Save as draft, Next, then Start rollout (steps from https://support.google.com/googleplay/android-developer/answer/9859348).
+3. Complete the app setup tasks on the Dashboard first, or the release button stays disabled.
+
+### 3. Get your 12 testers: free first, paid second
+
+- Free route: open https://testerexchange.com/earn on your phone and test the apps you are given. Each app you test brings a tester to yours.
+- Paid route: pay once and testers are assigned automatically. Current prices are listed at https://testerexchange.com/llms.txt.
+- Ask for 15 testers rather than 12 so one dropout can't leave you under Google's minimum.
+
+### 4. Connect Tester Exchange to Cursor (optional)
+
+First create an API key at https://testerexchange.com/api. Then put this in .cursor/mcp.json in your project, or in ~/.cursor/mcp.json to use it everywhere (file locations from Cursor's MCP docs, https://cursor.com/docs/context/mcp). Set TESTER_EXCHANGE_KEY in your shell environment first, so the key is not committed:
+
+{"mcpServers":{"tester-exchange":{"url":"https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp","headers":{"Authorization":"Bearer ${env:TESTER_EXCHANGE_KEY}"}}}}
+
+Cursor resolves ${env:NAME} in the url and headers fields. If a server fails to load, open the Output panel and choose MCP Logs. The server is plain MCP over Streamable HTTP without OAuth; the public tools (about, pricing, platform_stats) work without a key.
+
+### 5. Ask the agent
+
+- "Use Tester Exchange to get 15 testers for com.example.app and tell me what I must do in Play Console."
+- "Check my Tester Exchange campaign for com.example.app and tell me how many testers were active yesterday."
+- "Pull the campaign report and draft my production access answers from the real numbers."
+
+The main tool is get_testers: it adds the app, opens its test and returns the steps only a human can do, such as adding the testers' Google Group in Play Console. The agent cannot pay or click Apply for production for you.
+
+### No MCP? Use the HTTP API
+
+POST https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/agent_call with the public apikey header listed at https://testerexchange.com/agents/ and the body {"p_token":"tx_YOUR_TOKEN","p_action":"get_testers","p_args":{"package_name":"com.example.app"}}. The schema is at https://testerexchange.com/openapi.json. More tools: https://testerexchange.com/guide/ai-builders/.
+
+### Frequently asked questions
+
+**Can Cursor complete the 14-day test for me?** No. The 14 days need real people using your app on their own Android phones. Cursor can build the app and drive the setup.
+
+**Is Tester Exchange an official Cursor integration?** No. It is an independent service that works with any client supporting remote MCP over HTTP, which Cursor does.
+
+**Where does the AAB go?** Upload it to a closed testing release in Play Console, then add your testers' Google Group or email list on that track.
+
+**Is there a free way to get the 12 testers?** Yes. Test other developers' apps at https://testerexchange.com/earn; each app you test brings a tester to yours.
 
 ---
 

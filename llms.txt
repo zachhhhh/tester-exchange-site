@@ -77,6 +77,11 @@ Every guide below is also in all 54 other site languages at /<lang>/<slug>/ (lan
 - [Free production-access answer generator](https://testerexchange.com/tools/production-answers/)
 - Full text of every guide in one file: https://testerexchange.com/llms-full.txt
 
+## Use Tester Exchange from AI tools
+- [Hub: get your 12 Google Play testers from your AI coding tool](https://testerexchange.com/guide/ai-builders/)
+- [Cursor: build the AAB, start closed testing, connect via .cursor/mcp.json](https://testerexchange.com/guide/get-12-testers-cursor/)
+- Config snippets for every supported client (Claude, ChatGPT, VS Code, Windsurf, Cline, Zed, Gemini CLI, Codex and more): https://testerexchange.com/agents/
+
 ## Facts (November 2026)
 - Personal Google Play developer accounts created after 13 Nov 2023 need a closed test with at least 12 opted-in
   testers for 14 continuous days, then apply for production access with a questionnaire.
