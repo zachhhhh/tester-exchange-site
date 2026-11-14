@@ -79,6 +79,15 @@ Every guide below is also in all 54 other site languages at /<lang>/<slug>/ (lan
 - [Google Play 12 testers in Pakistan and Bangladesh](https://testerexchange.com/guide/google-play-12-testers-pakistan-bangladesh/) (also in ur, bn; card or USDT/USDC)
 - [Google Play 12 testers in the Philippines (pay with GCash)](https://testerexchange.com/guide/google-play-12-testers-philippines/) (also in fil)
 - [Google Play 12 testers in China (pay with Alipay or WeChat Pay)](https://testerexchange.com/guide/google-play-12-testers-china/) (also in zh-cn, zh-tw)
+- [Google Play 12 testers in Vietnam](https://testerexchange.com/guide/google-play-12-testers-vietnam/) (also in vi)
+- [Google Play 12 testers in Egypt, Saudi Arabia, the UAE and the Arab world](https://testerexchange.com/guide/google-play-12-testers-arab-countries/) (also in ar)
+- [Google Play 12 testers in Turkey](https://testerexchange.com/guide/google-play-12-testers-turkey/) (also in tr)
+- [Google Play 12 testers in Mexico and Latin America](https://testerexchange.com/guide/google-play-12-testers-mexico-latin-america/) (also in es)
+- [Google Play 12 testers in Japan](https://testerexchange.com/guide/google-play-12-testers-japan/) (also in ja)
+- [Google Play 12 testers in Korea (Kakao Pay, Naver Pay)](https://testerexchange.com/guide/google-play-12-testers-korea/) (also in ko)
+- [Google Play 12 testers in Germany, Austria and Switzerland](https://testerexchange.com/guide/google-play-12-testers-germany/) (also in de)
+- [Google Play 12 testers in France and francophone countries](https://testerexchange.com/guide/google-play-12-testers-france/) (also in fr)
+- [Google Play 12 testers in Italy](https://testerexchange.com/guide/google-play-12-testers-italy/) (also in it)
 - [Free production-access answer generator](https://testerexchange.com/tools/production-answers/)
 - Full text of every guide in one file: https://testerexchange.com/llms-full.txt
 
