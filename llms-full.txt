@@ -139,6 +139,7 @@ More tools are added regularly. Today:
 
 - Cursor: https://testerexchange.com/guide/get-12-testers-cursor/ - build the AAB with Gradle, then connect Tester Exchange to Cursor with .cursor/mcp.json.
 - Claude Code: https://testerexchange.com/guide/get-12-testers-claude-code/ - build the AAB with Gradle, then add Tester Exchange with one claude mcp add command.
+- Windsurf: https://testerexchange.com/guide/get-12-testers-windsurf/ - build the AAB with Gradle, then add Tester Exchange to ~/.codeium/windsurf/mcp_config.json.
 
 ### The two routes to testers
 
@@ -864,6 +865,61 @@ POST https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/agent_call with the pu
 **Can Cursor complete the 14-day test for me?** No. The 14 days need real people using your app on their own Android phones. Cursor can build the app and drive the setup.
 
 **Is Tester Exchange an official Cursor integration?** No. It is an independent service that works with any client supporting remote MCP over HTTP, which Cursor does.
+
+**Where does the AAB go?** Upload it to a closed testing release in Play Console, then add your testers' Google Group or email list on that track.
+
+**Is there a free way to get the 12 testers?** Yes. Test other developers' apps at https://testerexchange.com/earn; each app you test brings a tester to yours.
+
+---
+
+## Built your Android app with Windsurf? Get your 12 testers for 14 days
+URL: https://testerexchange.com/guide/get-12-testers-windsurf/
+
+Windsurf can write and build your Android app, but it cannot supply the 12 real testers Google Play requires. If your personal developer account was created after 13 November 2023, you must run a closed test with at least 12 testers opted in for 14 continuous days before applying for production. This guide covers building the bundle, starting closed testing, getting the testers (free first, paid second) and connecting Tester Exchange to Windsurf so the agent can do the paperwork.
+
+### 1. Build the release bundle (.aab)
+
+1. Ask Windsurf's agent to configure release signing in your module's build.gradle.kts (a signingConfigs block with storeFile, storePassword, keyAlias and keyPassword, set on the release build type). Keep passwords out of git (Android's build docs: https://developer.android.com/build/building-cmdline).
+2. Run ./gradlew bundleRelease in the terminal. Gradle builds and signs the bundle; the .aab normally appears under app/build/outputs/bundle/release/, but check your own build output.
+3. Create a keystore with keytool if you don't have one, and back it up. Google Play App Signing is offered when you upload your first release.
+
+### 2. Start closed testing in Play Console
+
+1. Open Test and release > Testing > Closed testing, then Create track (or Manage track).
+2. Click Create new release, upload the .aab, add a release name and notes, Save as draft, Next, then Start rollout (steps from https://support.google.com/googleplay/android-developer/answer/9859348).
+3. Complete the app setup tasks on the Dashboard first, or the release button stays disabled.
+
+### 3. Get your 12 testers: free first, paid second
+
+- Free route: open https://testerexchange.com/earn on your phone and test the apps you are given. Each app you test brings a tester to yours.
+- Paid route: pay once and testers are assigned automatically. Current prices are listed at https://testerexchange.com/llms.txt.
+- Ask for 15 testers rather than 12 so one dropout can't leave you under Google's minimum.
+
+### 4. Connect Tester Exchange to Windsurf (optional)
+
+First create an API key at https://testerexchange.com/api. Then add this to ~/.codeium/windsurf/mcp_config.json, the global Windsurf MCP config file listed at https://testerexchange.com/agents/. The file sits in your home folder, not in your project, so the key is not committed to git:
+
+{"mcpServers":{"tester-exchange":{"serverUrl":"https://vvrlxzbngxfxddywidoq.supabase.co/functions/v1/mcp","headers":{"Authorization":"Bearer tx_YOUR_TOKEN"}}}}
+
+Replace tx_YOUR_TOKEN with your key and reload Windsurf if the tools do not appear. The server is plain MCP over Streamable HTTP without OAuth; the public tools (about, pricing, platform_stats) work without a key.
+
+### 5. Ask the agent
+
+- "Use Tester Exchange to get 15 testers for com.example.app and tell me what I must do in Play Console."
+- "Check my Tester Exchange campaign for com.example.app and tell me how many testers were active yesterday."
+- "Pull the campaign report and draft my production access answers from the real numbers."
+
+The main tool is get_testers: it adds the app, opens its test and returns the steps only a human can do, such as adding the testers' Google Group in Play Console. The agent cannot pay or click Apply for production for you.
+
+### No MCP? Use the HTTP API
+
+POST https://vvrlxzbngxfxddywidoq.supabase.co/rest/v1/rpc/agent_call with the public apikey header listed at https://testerexchange.com/agents/ and the body {"p_token":"tx_YOUR_TOKEN","p_action":"get_testers","p_args":{"package_name":"com.example.app"}}. The schema is at https://testerexchange.com/openapi.json. More tools: https://testerexchange.com/guide/ai-builders/.
+
+### Frequently asked questions
+
+**Can Windsurf complete the 14-day test for me?** No. The 14 days need real people using your app on their own Android phones. Windsurf can build the app and drive the setup.
+
+**Is Tester Exchange an official Windsurf integration?** No. It is an independent service that works with any client supporting remote MCP over HTTP, which Windsurf does.
 
 **Where does the AAB go?** Upload it to a closed testing release in Play Console, then add your testers' Google Group or email list on that track.
 
